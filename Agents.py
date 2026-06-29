@@ -27,6 +27,10 @@ def _concurrency() -> int:
     return max(int(getattr(Config, "CONCURRENCY", 1)), 1)
 
 
+def _answer_format() -> str:
+    return str(getattr(Config, "ANSWER_FORMAT", "auto") or "auto").lower()
+
+
 def _write_csv_rows(path, fieldnames, rows):
     if not path or not rows:
         return
@@ -41,6 +45,70 @@ def _write_csv_rows(path, fieldnames, rows):
 
 def _normalize_answer(value: str) -> str:
     return str(value).replace(" ", "").lower()
+
+
+def _canonical_answer(value: str, answer_format: str) -> str:
+    text = "" if value is None else str(value).strip()
+    compact = _normalize_answer(text)
+    lowered = text.lower()
+
+    if answer_format == "option_letter":
+        match = re.search(r"\(([A-Z])\)", text, flags=re.IGNORECASE)
+        if match:
+            return f"({match.group(1).upper()})"
+        match = re.search(r"\b([A-Z])\b", text, flags=re.IGNORECASE)
+        if match:
+            return f"({match.group(1).upper()})"
+        return compact
+
+    if answer_format == "boolean":
+        if re.search(r"\btrue\b", lowered):
+            return "true"
+        if re.search(r"\bfalse\b", lowered):
+            return "false"
+        return compact
+
+    if answer_format == "valid_invalid":
+        if re.search(r"\binvalid\b", lowered):
+            return "invalid"
+        if re.search(r"\bvalid\b", lowered):
+            return "valid"
+        return compact
+
+    if answer_format == "yes_no":
+        if re.search(r"\byes\b", lowered):
+            return "yes"
+        if re.search(r"\bno\b", lowered):
+            return "no"
+        return compact
+
+    return compact
+
+
+def _answer_instruction(answer_format: str) -> str:
+    if answer_format == "boolean":
+        return "Output exactly one word: True or False. Do not output an option letter or explanation."
+    if answer_format == "valid_invalid":
+        return "Output exactly one word: valid or invalid. Do not output an option letter or explanation."
+    if answer_format == "yes_no":
+        return "Output exactly one word: yes or no. Do not output an option letter or explanation."
+    if answer_format == "option_letter":
+        return "Output only the answer option as a parenthesized capital letter, such as (A). Do not add any other text."
+    return "Output only the final answer in the same format as the gold label. Do not add any explanation."
+
+
+def _is_valid_canonical(value: str, answer_format: str) -> bool:
+    if not value:
+        return False
+    if answer_format == "option_letter":
+        return bool(re.fullmatch(r"\([A-Z]\)", value))
+    if answer_format == "boolean":
+        return value in {"true", "false"}
+    if answer_format == "valid_invalid":
+        return value in {"valid", "invalid"}
+    if answer_format == "yes_no":
+        return value in {"yes", "no"}
+    return True
 
 
 
@@ -193,11 +261,12 @@ class ChatManagerAgent(BaseChatAgent):
         response_message = TextMessage(content="Everything's over!", source=self.name)
         # Analyzing prompt_history
         analyze_prompt_history(target_agent.prompt_history)
+        await target_agent.close_target_client()
 
         return Response(chat_message=response_message)
 
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
-        pass
+        await self.close_target_client()
 
 
 class UserProxyAgent(BaseChatAgent):
@@ -423,7 +492,7 @@ class TargetAgent(BaseChatAgent):
             file.write(f"Call Count: {self.call_count}, \nPrompt: {prompt}, \nAccuracy: {accuracy}\n")
         _write_csv_rows(
             getattr(Config, "PREDICTIONS_PATH", None),
-            ["iteration", "sample_index", "question", "answer", "prediction", "correct", "error"],
+            ["iteration", "sample_index", "question", "answer", "prediction", "raw_prediction", "answer_format", "correct", "error"],
             prediction_rows,
         )
 
@@ -464,54 +533,64 @@ class TargetAgent(BaseChatAgent):
         question = row['question']
         answer = row['answer']
         generated_answer = ""
+        raw_answer = ""
         error = ""
+        answer_format = _answer_format()
 
         print(f"answer:{answer}")
         try:
             if _is_dry_run():
                 generated_answer = str(answer)
+                raw_answer = str(answer)
             elif self.question_type == "choice":
-                generated_answer = await self.process_choice(prompt, question)
+                generated_answer, raw_answer = await self.process_choice(prompt, question)
             else:
                 generated_answer = await self.process_short_answer(prompt, question)
+                raw_answer = generated_answer
         except Exception as exc:
             error = f"{exc.__class__.__name__}: {exc}"
             print(f"sample_error:{error}")
 
-        is_correct = _normalize_answer(generated_answer) == _normalize_answer(answer)
+        canonical_prediction = _canonical_answer(generated_answer, answer_format)
+        canonical_answer = _canonical_answer(answer, answer_format)
+        is_correct = canonical_prediction == canonical_answer
         print(f'Judge:{is_correct}')
         return {
             "iteration": self.call_count,
             "sample_index": index,
             "question": question,
             "answer": answer,
-            "prediction": generated_answer,
+            "prediction": canonical_prediction,
+            "raw_prediction": raw_answer,
+            "answer_format": answer_format,
             "correct": is_correct,
             "error": error,
         }
 
-    async def process_choice(self, prompt: str, question: str) -> str:
+    async def process_choice(self, prompt: str, question: str):
         # print("process choice question!")
 
         max_retries = 5
         retry_count = 0
+        answer_format = _answer_format()
+        instruction = _answer_instruction(answer_format)
 
         while retry_count < max_retries:
             target_response = await self.call_LLM_test(
-                prompt + '\nQuestion: ' + question + "\n Please don't output the process of doing the question, only the content of the answer. The answer should be a parenthesis containing the capital letter of the chosen answer. Please do not add any other spaces or symbols."
+                prompt + '\nQuestion: ' + question + "\n " + instruction
             )
             print(f"response:{target_response}")
             if target_response is None:
                 retry_count += 1
                 continue  
 
-            match = re.search(r'\(([A-Z])\)', target_response)
-            if match:
-                return "(" + match.group(1) + ")"
+            canonical = _canonical_answer(target_response, answer_format)
+            if _is_valid_canonical(canonical, answer_format):
+                return canonical, target_response
 
             retry_count += 1
 
-        return ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
+        return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
     async def process_short_answer(self, prompt: str, question: str) -> str:
         # print("process short answer question!")
@@ -535,6 +614,13 @@ class TargetAgent(BaseChatAgent):
 
     async def call_LLM_test(self, prompt):
         if _is_dry_run():
+            answer_format = _answer_format()
+            if answer_format == "boolean":
+                return "True"
+            if answer_format == "valid_invalid":
+                return "valid"
+            if answer_format == "yes_no":
+                return "yes"
             return "(A)" if self.question_type == "choice" else "mock-answer"
 
         if self.target_client is None:
@@ -551,6 +637,18 @@ class TargetAgent(BaseChatAgent):
                 stream=False
             )
         return response.choices[0].message.content
+
+    async def close_target_client(self):
+        if self.target_client is None:
+            return
+        client = self.target_client
+        self.target_client = None
+        try:
+            await client.close()
+            await asyncio.sleep(0)
+        except RuntimeError as exc:
+            if "Event loop is closed" not in str(exc):
+                raise
 
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
         pass

@@ -1,6 +1,7 @@
 import argparse
 import csv
 from dataclasses import asdict
+from copy import copy
 import os
 import random
 import time
@@ -198,6 +199,8 @@ def main() -> int:
 
         try:
             from main_MARS import run_mars_task
+            task_config = copy(config)
+            task_config.answer_format = task.answer_format
 
             run_result = run_mars_task(
                 task_id=task.task_id,
@@ -205,7 +208,7 @@ def main() -> int:
                 question_type=task.question_type,
                 user_prompt=user_prompt,
                 planner_prompt=planner_prompt,
-                config=config,
+                config=task_config,
                 output_dir=task_dir,
             )
             history = run_result.get("prompt_history", [])

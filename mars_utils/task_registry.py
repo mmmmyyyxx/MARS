@@ -13,6 +13,7 @@ class MarsTask:
     question_type: str
     user_prompt_key: str
     planner_prompt_key: str
+    answer_format: str = "auto"
     metric: str = "accuracy"
 
 

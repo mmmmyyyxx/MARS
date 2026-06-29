@@ -35,6 +35,7 @@ async def run_agents():
 
     chat_manager_response = await chat_manager_agent.on_messages([task_message], CancellationToken())
     print(chat_manager_response.chat_message.content)
+    await asyncio.sleep(0.1)
 
 
 def run_mars_task(
@@ -51,6 +52,7 @@ def run_mars_task(
 
     Config.DATASET_PATH = dataset_path
     Config.question_type = question_type
+    Config.ANSWER_FORMAT = getattr(config, "answer_format", "auto")
     Config.API_KEY = config.api_key
     Config.BASE_URL = config.base_url
     Config.MODEL = config.model

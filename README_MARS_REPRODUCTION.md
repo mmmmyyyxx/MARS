@@ -58,6 +58,21 @@ Use sample-level concurrency during each prompt evaluation:
 python reproduce_mars.py --tasks geometric_shapes --model deepseek-v2.5-1210 --temperature 0.6 --concurrency 8
 ```
 
+Some BBH datasets use label answers instead of option letters. The runner now records `answer_format` in `configs/mars_tasks.yaml` and evaluates these formats directly:
+
+```text
+boolean_expressions: True / False
+formal_fallacies: valid / invalid
+sports_understanding: yes / no
+option tasks: (A), (B), ...
+```
+
+If an older run shows 0 accuracy for these label-answer tasks, rerun them after this fix:
+
+```bash
+python reproduce_mars.py --tasks "boolean_expressions,formal_fallacies,sports_understanding" --model deepseek-chat --temperature 0.6 --concurrency 8
+```
+
 ## Task Groups
 
 ```bash

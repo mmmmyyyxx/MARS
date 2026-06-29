@@ -13,6 +13,7 @@ TEMPERATURE = 0.6
 
 current_time = None
 question_type = None
+ANSWER_FORMAT = "auto"
 
 # Optional runtime controls used by reproduce_mars.py. The legacy run.sh entry
 # still works with these defaults.

@@ -5,6 +5,7 @@ tasks:
     question_type: choice
     user_prompt_key: boolean_expressions
     planner_prompt_key: boolean_expressions
+    answer_format: boolean
     metric: accuracy
   - task_id: disambiguation_qa
     group: BBH
@@ -12,6 +13,7 @@ tasks:
     question_type: choice
     user_prompt_key: disambiguation_qa
     planner_prompt_key: disambiguation_qa
+    answer_format: option_letter
     metric: accuracy
   - task_id: formal_fallacies
     group: BBH
@@ -19,6 +21,7 @@ tasks:
     question_type: choice
     user_prompt_key: formal_fallacies_syllogisms_negation
     planner_prompt_key: formal_fallacies_syllogisms_negation
+    answer_format: valid_invalid
     metric: accuracy
   - task_id: geometric_shapes
     group: BBH
@@ -26,6 +29,7 @@ tasks:
     question_type: choice
     user_prompt_key: geometric_shapes
     planner_prompt_key: geometric_shapes
+    answer_format: option_letter
     metric: accuracy
   - task_id: ruin_names
     group: BBH
@@ -33,6 +37,7 @@ tasks:
     question_type: choice
     user_prompt_key: ruin_names
     planner_prompt_key: ruin_names
+    answer_format: option_letter
     metric: accuracy
   - task_id: sports_understanding
     group: BBH
@@ -40,6 +45,7 @@ tasks:
     question_type: choice
     user_prompt_key: sports_understanding
     planner_prompt_key: sports_understanding
+    answer_format: yes_no
     metric: accuracy
   - task_id: marketing
     group: MMLU
@@ -47,6 +53,7 @@ tasks:
     question_type: choice
     user_prompt_key: marketing
     planner_prompt_key: marketing
+    answer_format: option_letter
     metric: accuracy
   - task_id: human_aging
     group: MMLU
@@ -54,6 +61,7 @@ tasks:
     question_type: choice
     user_prompt_key: human_aging
     planner_prompt_key: human_aging
+    answer_format: option_letter
     metric: accuracy
   - task_id: high_school_world_history
     group: MMLU
@@ -61,6 +69,7 @@ tasks:
     question_type: choice
     user_prompt_key: high_school_world_history
     planner_prompt_key: high_school_world_history
+    answer_format: option_letter
     metric: accuracy
   - task_id: electrical_engineering
     group: MMLU
@@ -68,6 +77,7 @@ tasks:
     question_type: choice
     user_prompt_key: electrical_engineering
     planner_prompt_key: electrical_engineering
+    answer_format: option_letter
     metric: accuracy
   - task_id: college_medicine
     group: MMLU
@@ -75,6 +85,7 @@ tasks:
     question_type: choice
     user_prompt_key: college_medicine
     planner_prompt_key: college_medicine
+    answer_format: option_letter
     metric: accuracy
   - task_id: college_biology
     group: MMLU
@@ -82,6 +93,7 @@ tasks:
     question_type: choice
     user_prompt_key: college_biology
     planner_prompt_key: college_biology
+    answer_format: option_letter
     metric: accuracy
   - task_id: art_studies
     group: C-EVAL
@@ -89,6 +101,7 @@ tasks:
     question_type: choice
     user_prompt_key: art_studies
     planner_prompt_key: art_studies
+    answer_format: option_letter
     metric: accuracy
   - task_id: clinical_medicine
     group: C-EVAL
@@ -96,6 +109,7 @@ tasks:
     question_type: choice
     user_prompt_key: clinical_medicine
     planner_prompt_key: clinical_medicine
+    answer_format: option_letter
     metric: accuracy
   - task_id: urban_and_rural_planner
     group: C-EVAL
@@ -103,6 +117,7 @@ tasks:
     question_type: choice
     user_prompt_key: urban_and_rural_planner
     planner_prompt_key: urban_and_rural_planner
+    answer_format: option_letter
     metric: accuracy
   - task_id: gsm8k
     group: GSM8K
@@ -110,6 +125,7 @@ tasks:
     question_type: short_answer
     user_prompt_key: gsm8k
     planner_prompt_key: gsm8k
+    answer_format: short_answer
     metric: accuracy
   - task_id: lsat_ar
     group: AGIEval
@@ -117,4 +133,5 @@ tasks:
     question_type: choice
     user_prompt_key: lsat_ar
     planner_prompt_key: lsat_ar
+    answer_format: option_letter
     metric: accuracy
