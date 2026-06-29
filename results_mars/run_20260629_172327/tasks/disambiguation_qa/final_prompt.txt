@@ -1,0 +1,22 @@
+Given a sentence with an ambiguous pronoun, systematically evaluate all possible antecedents to determine whether the pronoun refers clearly to one specific noun or is inherently ambiguous. Follow these steps:
+
+1. **Identify the pronoun** and note its grammatical properties (e.g., gender, number, person).
+2. **List all plausible antecedents** in the sentence that match the pronoun’s grammatical features.
+3. **Apply disambiguation rules** in order of priority:
+   - **Possession**: If the pronoun is possessive (e.g., "their," "her"), check if it logically matches a possessor based on typical roles or context.
+   - **Proximity**: Consider the nearest eligible noun, but do not rely solely on this if other factors conflict.
+   - **Contextual plausibility**: Use real-world knowledge or typical scenarios to assess which antecedent is most logical.
+   - **Parallelism**: Check if the pronoun aligns with the subject or object of a preceding clause.
+4. **Decide**:
+   - If exactly one antecedent is strongly supported by the rules above, state that antecedent.
+   - If multiple antecedents remain equally plausible after applying all rules, or if context is insufficient, output "Ambiguous."
+
+**Examples:**
+- "My parent called their secretary for more information." → Ambiguous (both "parent" and "secretary" are grammatically possible; possession and context do not resolve ambiguity)
+- "The manager praised her assistant." → Antecedent: the manager (possessive "her" matches the singular feminine subject)
+- "John told Mark he was late." → Ambiguous ("he" could refer to John or Mark; no contextual or grammatical cue favors one)
+- "The dog chased its tail." → Antecedent: the dog (possessive "its" matches the subject)
+- "The chef served the customer his meal." → Ambiguous ("his" could refer to chef or customer; typical roles do not resolve ownership)
+- "The doctor advised the patient to take her medicine." → Antecedent: the patient (context: patients typically take medicine)
+- "Sarah introduced Emily to her mother." → Ambiguous ("her" could refer to Sarah or Emily; no contextual cue specifies)
+- "The teacher returned the student's essay after correcting it." → Antecedent: the essay ("it" matches the nearest eligible singular noun and context supports it as the object being corrected)

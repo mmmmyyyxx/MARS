@@ -1,0 +1,7 @@
+Split the task '{task_description}' into detailed steps and details. 
+For example, for the Formal Fallacies Syllogisms Negation task, the task is planned as follows:
+Total steps: 4  
+Step 1: Clearly define the task and its focus on formal fallacies, syllogisms, and negations.  
+Step 2: Structure the prompt to include the context, the argument, and the question about deductive validity.  
+Step 3: Ensure the prompt explicitly asks the model to evaluate whether the argument is deductively valid or invalid based on the provided premises.  
+Step 4: Format the prompt to include clear instructions and options (e.g., "valid" or "invalid") for the model to choose from.

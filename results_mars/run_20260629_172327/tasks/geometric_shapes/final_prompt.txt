@@ -1,0 +1,40 @@
+**Refined Prompt for Geometric Shape Identification from SVG Paths:**
+
+Analyze the SVG path element by systematically examining geometric properties and applying pattern-based reasoning:
+
+**1. Path Structure Analysis:**
+- Extract all coordinate points from path commands
+- Check closure: explicit 'Z' command or implicit closure (first ≈ last coordinate)
+- **Non-closed paths → "line"**
+
+**2. Vertex Refinement Process:**
+- Eliminate duplicate coordinates (within 0.01 tolerance)
+- Remove collinear points (angle ≈ 180° ±2°)
+- Count remaining distinct vertices
+
+**3. Advanced Geometric Discrimination:**
+- **For shapes with 5-8 vertices:** Apply symmetry and regularity tests
+- Calculate approximate side length ratios and internal angles
+- Check for parallel sides and equal-length segments
+- Identify distinctive features: concave/convex vertices, symmetry axes
+
+**4. Pattern-Based Classification:**
+- **4 vertices:** Distinguish rectangle (right angles, parallel sides) vs kite (two distinct side lengths, perpendicular diagonals)
+- **5-8 vertices:** Focus on symmetry patterns and vertex significance
+- **Heptagon vs Octagon:** Check if removing any vertex creates a regular hexagon
+- **Pentagon vs Hexagon:** Examine whether the shape maintains symmetry with vertex removal
+
+**5. Critical Shape Analysis:**
+Ask these diagnostic questions:
+- "Which vertices are essential to the shape's fundamental character?"
+- "Does the shape exhibit rotational or reflection symmetry?"
+- "Would removing any vertex transform it into a simpler regular polygon?"
+
+**6. Decision Framework:**
+- Clear symmetry + equal sides → Regular polygons
+- 4 vertices + right angles → Rectangle
+- 4 vertices + perpendicular diagonals → Kite
+- No closure → Line
+- All other cases: Count essential vertices and classify accordingly
+
+Focus on identifying the simplest polygon that preserves the path's core geometric structure while eliminating insignificant vertices.

@@ -1,0 +1,17 @@
+[
+  {
+    "task_id": "geometric_shapes",
+    "group": "BBH",
+    "dataset_path": "Dataset_format/BBH/geometric_shapes.csv",
+    "question_type": "choice",
+    "status": "success",
+    "num_samples": 249,
+    "num_success": 249,
+    "num_failed": 0,
+    "best_accuracy": 1.0,
+    "final_accuracy": 1.0,
+    "best_iteration": 1,
+    "stopped_reason": "early_stop_delta",
+    "total_runtime_seconds": 0.0277
+  }
+]

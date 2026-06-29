@@ -1,10 +1,12 @@
+import csv
+import asyncio
 import re
 from typing import AsyncGenerator, List, Sequence,Tuple
 from autogen_agentchat.agents import BaseChatAgent
 from autogen_agentchat.base import Response
 from autogen_agentchat.messages import AgentMessage, ChatMessage, TextMessage
 from autogen_core import CancellationToken
-from openai import OpenAI
+from openai import OpenAI, AsyncOpenAI
 import pandas as pd
 import sys
 from datetime import datetime
@@ -12,6 +14,33 @@ import os
 from tqdm import tqdm  
 import Config
 
+
+def _is_dry_run() -> bool:
+    return bool(getattr(Config, "DRY_RUN", False))
+
+
+def _temperature() -> float:
+    return float(getattr(Config, "TEMPERATURE", 0.6))
+
+
+def _concurrency() -> int:
+    return max(int(getattr(Config, "CONCURRENCY", 1)), 1)
+
+
+def _write_csv_rows(path, fieldnames, rows):
+    if not path or not rows:
+        return
+    file_exists = os.path.exists(path)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "a", encoding="utf-8", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        if not file_exists:
+            writer.writeheader()
+        writer.writerows(rows)
+
+
+def _normalize_answer(value: str) -> str:
+    return str(value).replace(" ", "").lower()
 
 
 
@@ -215,6 +244,12 @@ class PlannerAgent(BaseChatAgent):
         return Response(chat_message=response_message)
 
     async def call_LLM(self, prompt):
+        if _is_dry_run():
+            return (
+                "Total steps: 2\n"
+                "Step 1: Read the task definition and identify the required answer format.\n"
+                "Step 2: Produce a concise prompt that asks for only the final answer."
+            )
         
         client = OpenAI(api_key= Config.API_KEY, base_url= Config.BASE_URL)
 
@@ -227,7 +262,8 @@ class PlannerAgent(BaseChatAgent):
             messages=[
                 {"role": "system", "content": system_prompt_planner},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            temperature=_temperature()
         )
         return response.choices[0].message.content
 
@@ -253,6 +289,9 @@ class TeacherAgent(BaseChatAgent):
         return Response(chat_message=response_message)
 
     async def call_LLM(self, prompt):
+        if _is_dry_run():
+            return "What constraints and answer format should the prompt emphasize?"
+
         client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
 
         with open('./Prompt/system_prompt_teacher.txt', 'r', encoding='utf-8') as file:
@@ -263,7 +302,8 @@ class TeacherAgent(BaseChatAgent):
             messages=[
                 {"role": "system", "content": system_prompt_teacher},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            temperature=_temperature()
         )
         return response.choices[0].message.content
 
@@ -286,6 +326,9 @@ class StudentAgent(BaseChatAgent):
         return Response(chat_message=response_message)
 
     async def call_LLM(self, prompt):
+        if _is_dry_run():
+            return "Solve the problem carefully and output only the final answer in the requested format."
+
         client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
 
         response = client.chat.completions.create(
@@ -293,7 +336,8 @@ class StudentAgent(BaseChatAgent):
             messages=[
                 {"role": "system", "content": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\n Note that you should only output the new prompt you generated."},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            temperature=_temperature()
         )
         return response.choices[0].message.content
 
@@ -321,6 +365,9 @@ class CriticAgent(BaseChatAgent):
         return Response(chat_message=response_message)
     
     async def call_LLM(self, prompt):
+        if _is_dry_run():
+            return "True"
+
         client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
 
         with open('./Prompt/system_prompt_critic.txt', 'r', encoding='utf-8') as file:
@@ -331,7 +378,8 @@ class CriticAgent(BaseChatAgent):
             messages=[
                 {"role": "system", "content": system_prompt_critic},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            temperature=_temperature()
         )
         return response.choices[0].message.content
     
@@ -344,7 +392,10 @@ class TargetAgent(BaseChatAgent):
         super().__init__(name, "用于做题和打分的目标 LLM。")
         self.question_type = Config.question_type  # Record the question_type
         self.prompt_history = []
-        self.call_count = 0  
+        self.call_count = 0
+        self.dataset = None
+        self.target_client = None
+        self.semaphore = asyncio.Semaphore(_concurrency())
     
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
@@ -353,42 +404,91 @@ class TargetAgent(BaseChatAgent):
     async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
         print("TargetAgent is called")
         self.call_count += 1
-        dataset = pd.read_csv(Config.DATASET_PATH)
-        # skip the first data
-        dataset = dataset.iloc[1:].reset_index(drop=True)
+        dataset = self.load_dataset()
 
         prompt = messages[0].content
-        correct_count = 0
         total_count = len(dataset)
+        prediction_rows = await self.evaluate_dataset(prompt, dataset)
+        correct_count = sum(1 for row in prediction_rows if row["correct"])
 
-        for index, row in tqdm(dataset.iterrows(), total=total_count, desc="Processing questions"):
-            question = row['question']
-            answer = row['answer']
-
-            print(f"answer:{answer}")
-            
-            # Select the processing function according to the type of question
-            if self.question_type == "choice":
-                generated_answer = await self.process_choice(prompt, question)
-            else:
-                generated_answer = await self.process_short_answer(prompt, question)
-
-            print(f'Judge:{generated_answer.replace(" ", "").lower() == str(answer).replace(" ", "").lower()}')
-
-            if generated_answer.replace(" ", "").lower() == str(answer).replace(" ", "").lower():
-                correct_count += 1
-
-        accuracy = correct_count / total_count
+        accuracy = correct_count / total_count if total_count else 0.0
         print(f"Accuracy: {accuracy}")
 
         # Record to file
         self.prompt_history.append((prompt, accuracy))
+        Config.LAST_PROMPT_HISTORY = list(self.prompt_history)
+        Config.LAST_PREDICTIONS = list(getattr(Config, "LAST_PREDICTIONS", [])) + prediction_rows
         file_name = os.path.join("./Output", f'{Config.current_time}_prompt_accuracy_history.txt')
         with open(file_name, 'a', encoding='utf-8') as file:
             file.write(f"Call Count: {self.call_count}, \nPrompt: {prompt}, \nAccuracy: {accuracy}\n")
+        _write_csv_rows(
+            getattr(Config, "PREDICTIONS_PATH", None),
+            ["iteration", "sample_index", "question", "answer", "prediction", "correct", "error"],
+            prediction_rows,
+        )
 
         response_message = TextMessage(content=str(accuracy), source=self.name)
         return Response(chat_message=response_message)
+
+    def load_dataset(self):
+        if self.dataset is None:
+            dataset = pd.read_csv(Config.DATASET_PATH)
+            # Preserve the legacy behavior of skipping the first data row.
+            self.dataset = dataset.iloc[1:].reset_index(drop=True)
+        return self.dataset
+
+    async def evaluate_dataset(self, prompt: str, dataset):
+        total_count = len(dataset)
+        if total_count == 0:
+            return []
+
+        concurrency = _concurrency()
+        if concurrency == 1:
+            rows = []
+            for index, row in tqdm(dataset.iterrows(), total=total_count, desc="Processing questions"):
+                rows.append(await self.evaluate_row(prompt, index, row))
+            return rows
+
+        tasks = [
+            asyncio.create_task(self.evaluate_row(prompt, index, row))
+            for index, row in dataset.iterrows()
+        ]
+        rows = []
+        with tqdm(total=total_count, desc=f"Processing questions (concurrency={concurrency})") as progress:
+            for completed in asyncio.as_completed(tasks):
+                rows.append(await completed)
+                progress.update(1)
+        return sorted(rows, key=lambda item: item["sample_index"])
+
+    async def evaluate_row(self, prompt: str, index: int, row):
+        question = row['question']
+        answer = row['answer']
+        generated_answer = ""
+        error = ""
+
+        print(f"answer:{answer}")
+        try:
+            if _is_dry_run():
+                generated_answer = str(answer)
+            elif self.question_type == "choice":
+                generated_answer = await self.process_choice(prompt, question)
+            else:
+                generated_answer = await self.process_short_answer(prompt, question)
+        except Exception as exc:
+            error = f"{exc.__class__.__name__}: {exc}"
+            print(f"sample_error:{error}")
+
+        is_correct = _normalize_answer(generated_answer) == _normalize_answer(answer)
+        print(f'Judge:{is_correct}')
+        return {
+            "iteration": self.call_count,
+            "sample_index": index,
+            "question": question,
+            "answer": answer,
+            "prediction": generated_answer,
+            "correct": is_correct,
+            "error": error,
+        }
 
     async def process_choice(self, prompt: str, question: str) -> str:
         # print("process choice question!")
@@ -434,16 +534,22 @@ class TargetAgent(BaseChatAgent):
 
 
     async def call_LLM_test(self, prompt):
-        client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
+        if _is_dry_run():
+            return "(A)" if self.question_type == "choice" else "mock-answer"
 
-        response = client.chat.completions.create(
-            model= Config.MODEL,
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant"},
-                {"role": "user", "content": prompt},
-            ],
-            stream=False
-        )
+        if self.target_client is None:
+            self.target_client = AsyncOpenAI(api_key=Config.API_KEY, base_url=Config.BASE_URL)
+
+        async with self.semaphore:
+            response = await self.target_client.chat.completions.create(
+                model= Config.MODEL,
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant"},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=_temperature(),
+                stream=False
+            )
         return response.choices[0].message.content
 
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
@@ -451,7 +557,8 @@ class TargetAgent(BaseChatAgent):
     
     def check_stop_condition(self) -> bool:
         # condition 1
-        if self.call_count >= 10:
+        if self.call_count >= int(getattr(Config, "MAX_ITERATIONS", 10)):
+            Config.LAST_STOPPED_REASON = "max_iterations"
             return True
         
         # conition2: The recent accuracy change is below the threshold.
@@ -460,7 +567,8 @@ class TargetAgent(BaseChatAgent):
             second_last_accuracy = self.prompt_history[-2][1]
             accuracy_diff = abs(last_accuracy - second_last_accuracy)
             
-            if accuracy_diff < 0.01:
+            if accuracy_diff < float(getattr(Config, "EARLY_STOP_DELTA", 0.01)):
+                Config.LAST_STOPPED_REASON = "early_stop_delta"
                 return True
         
         return False

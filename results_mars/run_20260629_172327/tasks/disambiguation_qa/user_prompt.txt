@@ -1,0 +1,13 @@
+Here is a topic for disambiguation question:
+Given a sentence with an ambigious pronoun, either determine whether the sentence is inherently ambiguous (i.e., the thing that the pronoun refers to cannot be inferred by given information) or, if the pronoun can be implicitly deduced, state the antecedent of the pronoun (i.e., the noun to which the pronoun refers).
+
+For example:
+In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
+Sentence: My parent called their secretary for more information
+Options:
+(A) They were my parent's secretary
+(B) They were the secretary's secretary
+(C) Ambiguous
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. 
+Please generate the most suitable prompt according to the requirements I just mentioned.

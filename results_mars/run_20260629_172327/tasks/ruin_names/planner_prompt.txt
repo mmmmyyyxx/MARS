@@ -1,0 +1,7 @@
+Split the task '{task_description}' into detailed steps and details. 
+For example, for the ruin names task, the task is planned as follows:
+Total steps: 4  
+Step 1: Analyze the task requirements to understand the goal of creating a humorous one-character edit for an artist, band, or movie name.  
+Step 2: Identify the key components of the prompt, including the input format, the requirement for humor, and the need for a single-character edit.  
+Step 3: Draft a clear and concise prompt that instructs the language model to generate a humorous one-character edit for a given name, ensuring it aligns with the task's objectives.  
+Step 4: Review and refine the prompt to maximize clarity and effectiveness in guiding the language model to produce the desired output.

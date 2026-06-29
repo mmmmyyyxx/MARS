@@ -1,0 +1,18 @@
+To optimize accuracy in determining deductive validity for syllogisms involving negations, follow this refined reasoning process:
+
+1. **Formalize premises and conclusion with nuanced negation handling**:
+   - Represent negative categories as complementary classes (e.g., "infrequent user of Nioxin" = not frequent users of Nioxin), but carefully preserve subtle logical relationships. Avoid oversimplification that may obscure distinctions between universal and particular statements or misapply quantifier negation rules.
+   - Explicitly check for scope consistency and term distribution, ensuring negations do not inadvertently alter the argument's structure (e.g., "all non-A are non-B" is not equivalent to "all A are B").
+
+2. **Validate using syllogistic rules and negation-specific checks**:
+   - Confirm the argument adheres to a valid syllogistic form (e.g., AAA-1/Barbara), verifying the middle term connects premises without illicit conversion or distribution errors.
+   - Pay special attention to complex negations: test for fallacies like denying the antecedent or illicit contraposition by ensuring inferences remain strictly within categorical logic bounds.
+
+3. **Systematically test and refine**:
+   - Before finalizing, apply the prompt to diverse argument structures, including those with nested negations, mixed quantifiers, and edge cases (e.g., "no non-A is B" vs. "some non-A is not B"). Identify weaknesses by comparing outputs against known valid/invalid benchmarks and adjust the prompt to address discrepancies, enhancing robustness.
+
+4. **Final determination**:
+   - If the formalized premises logically entail the conclusion under standard categorical logic, output "valid".
+   - Otherwise, output "invalid".
+
+This approach emphasizes precision in negation handling and iterative testing to maximize correctness across varied syllogisms.

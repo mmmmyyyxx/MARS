@@ -1,0 +1,7 @@
+Split the task '{task_description}' into detailed steps and details. 
+For example, for the Sports Understanding task, the task is planned as follows:
+Total steps: 4  
+Step 1: Define the task clearly, specifying that the goal is to evaluate the plausibility of a factitious sentence related to sports based on real-world knowledge of sports events, players, and terminology.  
+Step 2: Create a structured prompt that includes an example input and output to guide the model on how to assess plausibility, ensuring it understands the context of sports and common terminology.  
+Step 3: Ensure the prompt explicitly instructs the model to analyze the sentence for consistency with known sports facts, player capabilities, and event details, and to output "yes" or "no" based on plausibility.  
+Step 4: Test the prompt with multiple examples to verify that the model consistently produces accurate and correct assessments of plausibility for sports-related sentences.

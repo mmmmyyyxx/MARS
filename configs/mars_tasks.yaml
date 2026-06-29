@@ -1,0 +1,120 @@
+tasks:
+  - task_id: boolean_expressions
+    group: BBH
+    dataset_path: Dataset_format/BBH/boolean_expressions.csv
+    question_type: choice
+    user_prompt_key: boolean_expressions
+    planner_prompt_key: boolean_expressions
+    metric: accuracy
+  - task_id: disambiguation_qa
+    group: BBH
+    dataset_path: Dataset_format/BBH/disambiguation_qa.csv
+    question_type: choice
+    user_prompt_key: disambiguation_qa
+    planner_prompt_key: disambiguation_qa
+    metric: accuracy
+  - task_id: formal_fallacies
+    group: BBH
+    dataset_path: Dataset_format/BBH/formal_fallacies.csv
+    question_type: choice
+    user_prompt_key: formal_fallacies_syllogisms_negation
+    planner_prompt_key: formal_fallacies_syllogisms_negation
+    metric: accuracy
+  - task_id: geometric_shapes
+    group: BBH
+    dataset_path: Dataset_format/BBH/geometric_shapes.csv
+    question_type: choice
+    user_prompt_key: geometric_shapes
+    planner_prompt_key: geometric_shapes
+    metric: accuracy
+  - task_id: ruin_names
+    group: BBH
+    dataset_path: Dataset_format/BBH/ruin_names.csv
+    question_type: choice
+    user_prompt_key: ruin_names
+    planner_prompt_key: ruin_names
+    metric: accuracy
+  - task_id: sports_understanding
+    group: BBH
+    dataset_path: Dataset_format/BBH/sports_understanding.csv
+    question_type: choice
+    user_prompt_key: sports_understanding
+    planner_prompt_key: sports_understanding
+    metric: accuracy
+  - task_id: marketing
+    group: MMLU
+    dataset_path: Dataset_format/MMLU/marketing_test.csv
+    question_type: choice
+    user_prompt_key: marketing
+    planner_prompt_key: marketing
+    metric: accuracy
+  - task_id: human_aging
+    group: MMLU
+    dataset_path: Dataset_format/MMLU/human_aging_test.csv
+    question_type: choice
+    user_prompt_key: human_aging
+    planner_prompt_key: human_aging
+    metric: accuracy
+  - task_id: high_school_world_history
+    group: MMLU
+    dataset_path: Dataset_format/MMLU/high_school_world_history_test.csv
+    question_type: choice
+    user_prompt_key: high_school_world_history
+    planner_prompt_key: high_school_world_history
+    metric: accuracy
+  - task_id: electrical_engineering
+    group: MMLU
+    dataset_path: Dataset_format/MMLU/electrical_engineering_test.csv
+    question_type: choice
+    user_prompt_key: electrical_engineering
+    planner_prompt_key: electrical_engineering
+    metric: accuracy
+  - task_id: college_medicine
+    group: MMLU
+    dataset_path: Dataset_format/MMLU/college_medicine_test.csv
+    question_type: choice
+    user_prompt_key: college_medicine
+    planner_prompt_key: college_medicine
+    metric: accuracy
+  - task_id: college_biology
+    group: MMLU
+    dataset_path: Dataset_format/MMLU/college_biology_test.csv
+    question_type: choice
+    user_prompt_key: college_biology
+    planner_prompt_key: college_biology
+    metric: accuracy
+  - task_id: art_studies
+    group: C-EVAL
+    dataset_path: Dataset_format/C-EVAL/art_studies_val.csv
+    question_type: choice
+    user_prompt_key: art_studies
+    planner_prompt_key: art_studies
+    metric: accuracy
+  - task_id: clinical_medicine
+    group: C-EVAL
+    dataset_path: Dataset_format/C-EVAL/clinical_medicine_val.csv
+    question_type: choice
+    user_prompt_key: clinical_medicine
+    planner_prompt_key: clinical_medicine
+    metric: accuracy
+  - task_id: urban_and_rural_planner
+    group: C-EVAL
+    dataset_path: Dataset_format/C-EVAL/urban_and_rural_planner_val.csv
+    question_type: choice
+    user_prompt_key: urban_and_rural_planner
+    planner_prompt_key: urban_and_rural_planner
+    metric: accuracy
+  - task_id: gsm8k
+    group: GSM8K
+    dataset_path: Dataset_format/GSM8K/gsm8k_test.csv
+    question_type: short_answer
+    user_prompt_key: gsm8k
+    planner_prompt_key: gsm8k
+    metric: accuracy
+  - task_id: lsat_ar
+    group: AGIEval
+    dataset_path: Dataset_format/AGIEval/lsat-ar_format.csv
+    question_type: choice
+    user_prompt_key: lsat_ar
+    planner_prompt_key: lsat_ar
+    metric: accuracy
