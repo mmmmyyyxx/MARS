@@ -1,23 +1,27 @@
 origin:
   display_name: Origin
   type: direct
-  exactness: exact_if_origin_prompt_matches
+  exactness_level: exact_official
+  exactness_note: Prompt-dependent; exact only when the local origin prompt matches the original paper prompt.
 cot_zs:
   display_name: CoT(ZS)
   type: direct
-  exactness: best_effort_reimplementation
+  exactness_level: faithful_reimplementation
+  exactness_note: Local zero-shot chain-of-thought template.
 cot_fs:
   display_name: CoT(FS)
   type: direct
   num_shots: 3
-  exactness: best_effort_reimplementation
+  exactness_level: faithful_reimplementation
+  exactness_note: Local few-shot construction.
 ape:
   display_name: APE
   type: optimization
   num_candidates: 20
   candidate_batch_size: 5
   selection_metric: accuracy
-  exactness: APE_reimplementation
+  exactness_level: best_effort_reimplementation
+  exactness_note: Generic candidate-generation search; pending original APE search details.
 protegi:
   display_name: ProTeGi
   type: optimization
@@ -25,45 +29,64 @@ protegi:
   beam_width: 4
   num_gradient_samples: 4
   minibatch_size: 32
-  exactness: ProTeGi_reimplementation
+  exactness_level: best_effort_reimplementation
+  exactness_note: Generic textual-gradient-inspired search; pending full ProTeGi beam protocol.
 opro:
   display_name: OPRO
   type: optimization
   num_iterations: 10
   num_candidates_per_iter: 4
   history_size: 20
-  exactness: OPRO_reimplementation
+  exactness_level: best_effort_reimplementation
+  exactness_note: Generic optimizer-history search; pending full OPRO optimizer protocol.
 pe2:
   display_name: PE2
   type: optimization
   num_candidates: 10
-  exactness: PE2_reimplementation
-mars:
-  display_name: MARS
-  type: mars
+  exactness_level: best_effort_reimplementation
+  exactness_note: Generic meta-prompt search; pending exact PE2 prompt-engineer protocol.
+mars_official:
+  display_name: MARS-official-compatible
+  type: mars_official
+  paper_method_id: mars
+  exactness_level: faithful_reimplementation
+  exactness_note: Official-compatible Manager/UserProxy/Planner/Teacher/Critic/Student/Target flow without Prompt/ mutation.
   planner_enabled: true
   socratic_enabled: true
   critic_enabled: true
-  exactness: best_effort_reimplementation
+mars_light:
+  display_name: MARS-light
+  type: mars_light
+  paper_method_id: mars
+  exactness_level: best_effort_reimplementation
+  exactness_note: Simplified local MARS variant retained for diagnostics.
+  planner_enabled: true
+  socratic_enabled: true
+  critic_enabled: true
 mars_wo_plan:
   display_name: w/oPlan
-  type: mars
+  type: mars_official
+  paper_method_id: mars_wo_plan
+  exactness_level: faithful_reimplementation
+  exactness_note: Official-compatible ablation with Planner disabled.
   planner_enabled: false
   socratic_enabled: true
   critic_enabled: true
-  exactness: best_effort_reimplementation
 mars_wo_soc:
   display_name: w/oSoc
-  type: mars
+  type: mars_official
+  paper_method_id: mars_wo_soc
+  exactness_level: faithful_reimplementation
+  exactness_note: Official-compatible ablation with Socratic Teacher/Critic loop disabled.
   planner_enabled: true
   socratic_enabled: false
   critic_enabled: false
-  exactness: best_effort_reimplementation
 mars_wo_critic:
   display_name: w/oCri
-  type: mars
+  type: mars_official
+  paper_method_id: mars_wo_critic
+  exactness_level: faithful_reimplementation
+  exactness_note: Official-compatible ablation with Critic disabled.
   planner_enabled: true
   socratic_enabled: true
   critic_enabled: false
-  exactness: best_effort_reimplementation
-

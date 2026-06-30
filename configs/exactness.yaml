@@ -1,0 +1,46 @@
+levels:
+  exact_official:
+    description: Uses the original official implementation logic with only engineering wrappers.
+  faithful_reimplementation:
+    description: Reimplements the published algorithm closely, including search strategy and key hyperparameters.
+  best_effort_reimplementation:
+    description: Uses a simplified local approximation; not suitable for claiming exact reproduction.
+  reference_only:
+    description: Paper value used only for comparison, never substituted for local results.
+methods:
+  origin:
+    exactness_level: exact_official
+    notes: Prompt-dependent; exact only when the local origin prompt matches the original paper prompt.
+  cot_zs:
+    exactness_level: faithful_reimplementation
+    notes: Local zero-shot chain-of-thought template.
+  cot_fs:
+    exactness_level: faithful_reimplementation
+    notes: Local few-shot construction.
+  ape:
+    exactness_level: best_effort_reimplementation
+    notes: Generic candidate-generation search; pending original APE search details.
+  protegi:
+    exactness_level: best_effort_reimplementation
+    notes: Generic textual-gradient-inspired search; pending full ProTeGi beam protocol.
+  opro:
+    exactness_level: best_effort_reimplementation
+    notes: Generic optimizer-history search; pending full OPRO optimizer protocol.
+  pe2:
+    exactness_level: best_effort_reimplementation
+    notes: Generic meta-prompt search; pending exact PE2 prompt-engineer protocol.
+  mars_official:
+    exactness_level: faithful_reimplementation
+    notes: Official-compatible Manager/UserProxy/Planner/Teacher/Critic/Student/Target flow without Prompt/ mutation.
+  mars_light:
+    exactness_level: best_effort_reimplementation
+    notes: Simplified local MARS variant retained for diagnostics.
+  mars_wo_plan:
+    exactness_level: faithful_reimplementation
+    notes: Official-compatible ablation with Planner disabled.
+  mars_wo_soc:
+    exactness_level: faithful_reimplementation
+    notes: Official-compatible ablation with Socratic Teacher/Critic loop disabled.
+  mars_wo_critic:
+    exactness_level: faithful_reimplementation
+    notes: Official-compatible ablation with Critic disabled.

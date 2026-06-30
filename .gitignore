@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.cache/
+*.sqlite
+Output/
+results_mars/run_*/
+results_full/run_*/
+logs/
+api_calls.csv

@@ -19,6 +19,7 @@ from .evaluator import (
     compute_final_metrics_from_predictions,
     diagnostics_markdown,
     prediction_row,
+    truthy,
 )
 from .logging_utils import write_csv, write_json, write_jsonl, write_text, write_yaml
 from .prompt_loader import PromptLoader, TaskPrompts
@@ -57,6 +58,7 @@ class RunSettings:
     resume: bool
     force_rerun: bool
     skip_existing: bool
+    reuse_compatible_cache: bool
     dry_run: bool
 
 
@@ -153,6 +155,8 @@ def evaluate_prompt(
                 task_id=task.task_id,
                 iteration=iteration,
                 question=row["question"],
+                agent_name="Target",
+                sample_id=row.get("sample_id", ""),
             )
         except ApiCallError as exc:
             error_type = exc.error_type
@@ -186,10 +190,13 @@ def write_method_outputs(
     best_prompt: str,
     final_prompt: str,
     raw_logs: str = "",
+    run_state: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     metrics = compute_final_metrics_from_predictions(predictions)
+    metrics["num_iterations"] = len(history)
     write_yaml(out_dir / "method_config.yaml", method_config)
+    write_json(out_dir / "metrics.json", metrics)
     write_csv(out_dir / "predictions.csv", predictions, PREDICTION_FIELDS)
     write_csv(
         out_dir / "prompt_accuracy_history.csv",
@@ -203,6 +210,8 @@ def write_method_outputs(
         diagnostics_markdown(task.task_id, method, predictions),
     )
     write_text(out_dir / "raw_logs.txt", raw_logs)
+    if run_state is not None:
+        write_json(out_dir / "run_state.json", run_state)
     return metrics
 
 
@@ -249,9 +258,9 @@ def run_direct_method(
             "prompt": prompt,
             "accuracy": accuracy,
             "num_samples": len(predictions),
-            "num_correct": sum(bool(row["correct"]) for row in predictions),
+            "num_correct": sum(truthy(row["correct"]) for row in predictions),
             "num_failed": len(predictions)
-            - sum(bool(row["correct"]) for row in predictions),
+            - sum(truthy(row["correct"]) for row in predictions),
         }
     ]
     metrics = write_method_outputs(
@@ -295,9 +304,9 @@ def evaluate_fixed_prompt_method(
             "prompt": prompt,
             "accuracy": accuracy,
             "num_samples": len(predictions),
-            "num_correct": sum(bool(row["correct"]) for row in predictions),
+            "num_correct": sum(truthy(row["correct"]) for row in predictions),
             "num_failed": len(predictions)
-            - sum(bool(row["correct"]) for row in predictions),
+            - sum(truthy(row["correct"]) for row in predictions),
         }
     ]
     metrics = write_method_outputs(
@@ -338,6 +347,7 @@ def generate_prompt_candidate(
         task_id=task.task_id,
         iteration=iteration,
         max_tokens=500,
+        agent_name="Student",
     ).strip()
 
 
@@ -416,9 +426,9 @@ def run_candidate_method(
             "prompt": candidate,
             "accuracy": accuracy,
             "num_samples": len(eval_predictions),
-            "num_correct": sum(bool(row["correct"]) for row in eval_predictions),
+            "num_correct": sum(truthy(row["correct"]) for row in eval_predictions),
             "num_failed": len(eval_predictions)
-            - sum(bool(row["correct"]) for row in eval_predictions),
+            - sum(truthy(row["correct"]) for row in eval_predictions),
         }
         history.append(record)
         candidates.append(
@@ -458,7 +468,7 @@ def run_candidate_method(
         history=history,
         best_prompt=best_prompt,
         final_prompt=best_prompt,
-        raw_logs=f"{method_config.get('exactness', 'best_effort_reimplementation')}\nruntime_seconds: {time.time() - start:.4f}\n",
+        raw_logs=f"{method_config.get('exactness_level', 'best_effort_reimplementation')}\nruntime_seconds: {time.time() - start:.4f}\n",
     )
     metrics["runtime_seconds"] = time.time() - start
     return metrics
@@ -498,5 +508,8 @@ def method_table_row(
         "api_calls": client.stats.api_calls,
         "cache_hits": client.stats.cache_hits,
         "num_iterations": metrics.get("num_iterations", ""),
-        "exactness": method_config.get("exactness", ""),
+        "exactness_level": method_config.get(
+            "exactness_level", method_config.get("exactness", "")
+        ),
+        "exactness_note": method_config.get("exactness_note", ""),
     }

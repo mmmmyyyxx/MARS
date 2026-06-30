@@ -1,14 +1,12 @@
 # MARS Full Paper Reproduction
 
-This repository is organized as a one-command reproduction framework for:
+This repository provides a one-command framework for running the full local MARS paper reproduction matrix.
+Some baselines are faithful reimplementations; others are marked as best-effort until their original algorithms are fully matched.
+Paper reference values are used only for comparison and are never substituted for local runs.
 
-**MARS: Multi-Agent Adaptive Reasoning with Socratic Guidance for Automated Prompt Optimization**
+Paper: **MARS: Multi-Agent Adaptive Reasoning with Socratic Guidance for Automated Prompt Optimization**
 
 arXiv: https://arxiv.org/abs/2503.16874
-
-The active workflow is the full-paper reproduction pipeline. It covers the registered
-17 tasks, main baselines, MARS variants, ablations, efficiency logging, convergence
-curves, and cross-model transfer runs.
 
 ## Environment
 
@@ -23,7 +21,7 @@ set OPENAI_API_KEY=...
 set OPENAI_BASE_URL=...
 ```
 
-PowerShell users can set them with:
+PowerShell:
 
 ```powershell
 $env:OPENAI_API_KEY="..."
@@ -35,23 +33,35 @@ $env:OPENAI_BASE_URL="..."
 Use `reproduce_paper.py` as the canonical entrypoint:
 
 ```bash
-# Validate all registered tasks, prompts, parsers, and output schemas.
 python reproduce_paper.py --preset smoke --dry-run
-
-# Run MARS on all 17 registered tasks.
-python reproduce_paper.py --preset mars_full
-
-# Run the full local paper matrix.
-python reproduce_paper.py --preset paper_full --cache-enabled --resume --skip-existing
+python reproduce_paper.py --preset mars_full --resume --cache-enabled
+python reproduce_paper.py --preset paper_full --resume --cache-enabled
 ```
 
 Useful scoped runs:
 
 ```bash
-python reproduce_paper.py --preset paper_full --tasks boolean_expressions,gsm8k
-python reproduce_paper.py --preset paper_full --target-models deepseek-r1,gpt-4o
-python reproduce_paper.py --preset paper_full --max-samples 20 --dry-run
+python reproduce_paper.py --preset smoke --methods mars_official --dry-run
+python reproduce_paper.py --preset smoke --max-samples 2 --dry-run
+python reproduce_paper.py --preset mars_full --eval-protocol strict_mode
+python validate_reproduction_outputs.py --latest
 ```
+
+## Exactness Status
+
+| Method | Status | Notes |
+|---|---|---|
+| Origin | prompt-dependent | exact if original prompt matches |
+| CoT(ZS) | faithful | local prompt template |
+| CoT(FS) | faithful | local few-shot construction |
+| APE | best-effort | pending original search details |
+| ProTeGi | best-effort | pending textual-gradient beam implementation |
+| OPRO | best-effort | pending full optimizer-history protocol |
+| PE2 | best-effort | pending exact meta-prompt |
+| MARS-official | faithful | official-compatible no-file-mutation implementation |
+| MARS-light | best-effort | simplified local variant |
+
+The final report includes an `Exactness` section. Exact numerical reproduction is only claimed for methods marked `exact_official` or `faithful_reimplementation`.
 
 ## Outputs
 
@@ -59,48 +69,38 @@ Runs are written under `results_full/run_<timestamp>/`.
 
 Important files:
 
-- `summary.csv` and `summary.json`: all local result rows.
+- `summary.csv` and `summary.json`: all local result rows with split hashes and exactness metadata.
 - `paper_comparison.csv`: local results compared with paper reference values.
-- `coverage.json`: expected/completed main-suite task-method coverage.
-- `paper_reproduction_report.md`: matrix coverage, errors, and exactness notes.
-- `tables/`: paper-style CSV/Markdown tables.
-- `efficiency/`: accuracy, runtime, token, and cost points.
-- `convergence/`: per-task convergence curves.
-- `figures/`: generated visualizations.
-- `methods/<method>/<task>/api_calls.csv`: per-call token, latency, cache, and error traces.
+- `coverage.json`: completed, partial, failed, skipped, and missing task-method pairs.
+- `paper_reproduction_report.md` and `final_report.md`: coverage, exactness, API usage, costs, latency, and protocol warnings.
+- `api_calls.csv`, `token_summary.csv`, `latency_summary.csv`, `cost_summary.csv`: run-level API accounting.
+- `methods/<method>/<task>/`: per-method outputs, including `metrics.json`, `run_state.json`, prompts, predictions, diagnostics, and local API logs.
+- `tables/`, `figures/`, `efficiency/`, `convergence/`: paper-style derived artifacts.
 
 ## Visualize
 
 ```bash
 python visualize_full_results.py --latest
-python visualize_full_results.py --run-dir results_full/latest
+python visualize_full_results.py --run-dir results_full/run_<timestamp>
 ```
 
 `visualize_full_results.py` is the only visualization entrypoint.
 
 ## Configuration
 
-- `configs/reproduction_matrix.yaml`: `smoke`, `mars_full`, and `paper_full` presets.
+- `configs/reproduction_matrix.yaml`: presets and evaluation protocols.
+- `configs/exactness.yaml`: exactness categories and per-method annotations.
 - `configs/tasks.yaml`: registered paper tasks and datasets.
-- `configs/methods.yaml`: main methods and MARS ablation variants.
+- `configs/methods.yaml`: main methods, MARS official-compatible runner, MARS-light, and ablations.
 - `configs/suites.yaml`: main, ablation, efficiency, convergence, and transfer suites.
 - `configs/models.yaml`: API defaults and pricing metadata.
 - `configs/paper_results.yaml`: paper reference numbers for comparison only.
 
-Paper reference values are never substituted for failed or missing local runs.
+`paper_mode` follows paper-style evaluation and may use identical opt/val/test formatted rows. `strict_mode` splits rows into opt/val/test to avoid prompt-search leakage.
 
-## Entrypoints
+## Legacy Code
 
-Use:
-
-```bash
-python reproduce_paper.py --preset mars_full
-python reproduce_paper.py --preset paper_full
-```
-
-All full-reproduction run logic now lives in `reproduce_paper.py`.
-The original manual scripts (`run.sh`, `main_MARS.py`, `Config.py`) are retained as
-legacy upstream code. They are not the active reproduction path.
+The original manual scripts (`run.sh`, `main_MARS.py`, `Config.py`) are retained as upstream reference code. The active reproduction workflow is `reproduce_paper.py`.
 
 ## Citation
 

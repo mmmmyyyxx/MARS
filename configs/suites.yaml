@@ -8,7 +8,7 @@ main:
     - protegi
     - opro
     - pe2
-    - mars
+    - mars_official
 ablation:
   tasks:
     - boolean_expressions
@@ -18,7 +18,7 @@ ablation:
     - ruin_names
     - sports_understanding
   methods:
-    - mars
+    - mars_official
     - mars_wo_plan
     - mars_wo_soc
     - mars_wo_critic
@@ -35,7 +35,7 @@ efficiency:
     - protegi
     - opro
     - pe2
-    - mars
+    - mars_official
 convergence:
   tasks:
     - boolean_expressions
@@ -43,7 +43,7 @@ convergence:
     - ruin_names
     - sports_understanding
   methods:
-    - mars
+    - mars_official
     - opro
     - protegi
     - ape
@@ -59,7 +59,7 @@ transfer:
   methods:
     - origin
     - cot_zs
-    - mars
+    - mars_official
 all:
   includes:
     - main
@@ -72,4 +72,3 @@ convergence_tasks:
   - geometric_shapes
   - ruin_names
   - sports_understanding
-

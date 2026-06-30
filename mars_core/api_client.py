@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-import os
 import hashlib
+import os
 import time
 from dataclasses import dataclass, field
+from datetime import datetime
 from typing import Any
 
 from openai import OpenAI
@@ -15,6 +16,31 @@ except ImportError:  # pragma: no cover
 
 from .cache import DiskCache
 from .token_counter import estimate_message_tokens, estimate_tokens
+
+API_CALL_COLUMNS = [
+    "timestamp",
+    "run_id",
+    "suite",
+    "method_id",
+    "agent_name",
+    "task_id",
+    "iteration",
+    "sample_id",
+    "model",
+    "temperature",
+    "prompt_hash",
+    "question_hash",
+    "prompt_tokens",
+    "completion_tokens",
+    "total_tokens",
+    "estimated_prompt_tokens",
+    "estimated_completion_tokens",
+    "latency_seconds",
+    "cache_hit",
+    "error_type",
+    "estimated_cost",
+    "method",
+]
 
 
 class ApiCallError(RuntimeError):
@@ -70,6 +96,10 @@ class LLMClient:
         retry_delay: float = 5,
         cache: DiskCache | None = None,
         dry_run: bool = False,
+        run_id: str = "",
+        suite: str = "",
+        method_id: str = "",
+        pricing: dict[str, Any] | None = None,
     ):
         self.model = model
         self.temperature = temperature
@@ -79,6 +109,10 @@ class LLMClient:
         self.retry_delay = retry_delay
         self.cache = cache or DiskCache(".cache/mars_full", enabled=False)
         self.dry_run = dry_run
+        self.run_id = run_id
+        self.suite = suite
+        self.method_id = method_id
+        self.pricing = pricing or {}
         self.stats = ApiStats()
         self.client = None
         if not dry_run:
@@ -117,6 +151,8 @@ class LLMClient:
         iteration: int,
         question: str = "",
         max_tokens: int | None = None,
+        agent_name: str = "",
+        sample_id: Any = "",
     ) -> str:
         started_at = time.time()
         estimated_prompt_tokens = estimate_message_tokens(messages)
@@ -136,12 +172,15 @@ class LLMClient:
                 task_id=task_id,
                 iteration=iteration,
                 question=question,
+                messages=messages,
                 prompt_tokens=0,
                 completion_tokens=0,
                 latency_seconds=time.time() - started_at,
                 cache_hit=True,
                 error_type="",
                 estimated_prompt_tokens=estimated_prompt_tokens,
+                agent_name=agent_name,
+                sample_id=sample_id,
             )
             return content
 
@@ -153,6 +192,7 @@ class LLMClient:
                 task_id=task_id,
                 iteration=iteration,
                 question=question,
+                messages=messages,
                 prompt_tokens=0,
                 completion_tokens=0,
                 latency_seconds=time.time() - started_at,
@@ -160,6 +200,8 @@ class LLMClient:
                 error_type="dry_run",
                 estimated_prompt_tokens=estimated_prompt_tokens,
                 estimated_completion_tokens=estimate_tokens(content),
+                agent_name=agent_name,
+                sample_id=sample_id,
             )
             return content
 
@@ -191,12 +233,16 @@ class LLMClient:
                     task_id=task_id,
                     iteration=iteration,
                     question=question,
+                    messages=messages,
                     prompt_tokens=prompt_tokens,
                     completion_tokens=completion_tokens,
                     latency_seconds=time.time() - started_at,
                     cache_hit=False,
                     error_type="",
                     estimated_prompt_tokens=estimated_prompt_tokens,
+                    estimated_completion_tokens=completion_tokens,
+                    agent_name=agent_name,
+                    sample_id=sample_id,
                 )
                 return content
             except Exception as exc:
@@ -217,12 +263,15 @@ class LLMClient:
                         task_id=task_id,
                         iteration=iteration,
                         question=question,
+                        messages=messages,
                         prompt_tokens=0,
                         completion_tokens=0,
                         latency_seconds=time.time() - started_at,
                         cache_hit=False,
                         error_type=error_type,
                         estimated_prompt_tokens=estimated_prompt_tokens,
+                        agent_name=agent_name,
+                        sample_id=sample_id,
                     )
                     raise ApiCallError(error_type, str(exc)) from exc
                 self.stats.retries += 1
@@ -239,6 +288,8 @@ class LLMClient:
         iteration: int,
         question: str = "",
         max_tokens: int | None = None,
+        agent_name: str = "",
+        sample_id: Any = "",
     ) -> str:
         return self.complete(
             messages=[
@@ -250,6 +301,8 @@ class LLMClient:
             iteration=iteration,
             question=question,
             max_tokens=max_tokens,
+            agent_name=agent_name,
+            sample_id=sample_id,
         )
 
     def _mock_response(self, messages: list[dict[str, str]], task_id: str) -> str:
@@ -283,6 +336,7 @@ class LLMClient:
         task_id: str,
         iteration: int,
         question: str,
+        messages: list[dict[str, str]],
         prompt_tokens: int,
         completion_tokens: int,
         latency_seconds: float,
@@ -290,14 +344,43 @@ class LLMClient:
         error_type: str,
         estimated_prompt_tokens: int,
         estimated_completion_tokens: int | None = None,
+        agent_name: str = "",
+        sample_id: Any = "",
     ) -> None:
         question_hash = hashlib.sha256(question.encode("utf-8")).hexdigest()
+        prompt_hash = hashlib.sha256(
+            "\n".join(message.get("content", "") for message in messages).encode(
+                "utf-8"
+            )
+        ).hexdigest()
+        effective_prompt_tokens = prompt_tokens or estimated_prompt_tokens
+        effective_completion_tokens = (
+            completion_tokens
+            if completion_tokens
+            else int(estimated_completion_tokens or 0)
+        )
+        estimated_cost = (
+            effective_prompt_tokens
+            / 1000
+            * float(self.pricing.get("prompt_per_1k", 0) or 0)
+            + effective_completion_tokens
+            / 1000
+            * float(self.pricing.get("completion_per_1k", 0) or 0)
+        )
         self.stats.call_records.append(
             {
+                "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                "run_id": self.run_id,
+                "suite": self.suite,
+                "method_id": self.method_id or method,
+                "agent_name": agent_name,
                 "model": self.model,
                 "method": method,
                 "task_id": task_id,
                 "iteration": iteration,
+                "sample_id": sample_id,
+                "temperature": self.temperature,
+                "prompt_hash": prompt_hash,
                 "question_hash": question_hash,
                 "prompt_tokens": prompt_tokens,
                 "completion_tokens": completion_tokens,
@@ -309,5 +392,6 @@ class LLMClient:
                 "latency_seconds": round(latency_seconds, 6),
                 "cache_hit": cache_hit,
                 "error_type": error_type,
+                "estimated_cost": estimated_cost,
             }
         )

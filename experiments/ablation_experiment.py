@@ -36,7 +36,7 @@ def run_ablation_suite(
     mars_by_task = {
         row["task_id"]: row.get("accuracy", 0.0)
         for row in rows
-        if row.get("method_id") == "mars"
+        if row.get("paper_method_id") == "mars"
     }
     for row in rows:
         row["delta"] = row.get("accuracy", 0.0) - mars_by_task.get(

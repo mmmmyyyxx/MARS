@@ -154,6 +154,12 @@ def is_correct_prediction(raw_output: Any, gold: Any, answer_format: str) -> boo
     return prediction == canonical_gold
 
 
+def truthy(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in {"true", "1", "yes"}
+
+
 def answer_instruction(answer_format: str) -> str:
     answer_format = (answer_format or "free_text").lower()
     if answer_format == "option_letter":
@@ -206,7 +212,7 @@ def prediction_row(
 
 def compute_accuracy(predictions: Iterable[dict[str, Any]]) -> float:
     rows = list(predictions)
-    return sum(bool(row.get("correct")) for row in rows) / len(rows) if rows else 0.0
+    return sum(truthy(row.get("correct")) for row in rows) / len(rows) if rows else 0.0
 
 
 def compute_final_metrics_from_predictions(
@@ -214,7 +220,7 @@ def compute_final_metrics_from_predictions(
 ) -> dict[str, Any]:
     rows = list(predictions)
     num_samples = len(rows)
-    num_correct = sum(bool(row.get("correct")) for row in rows)
+    num_correct = sum(truthy(row.get("correct")) for row in rows)
     api_errors = sum(str(row.get("error_type", "")).startswith("api_") for row in rows)
     parse_errors = sum(
         row.get("error_type")

@@ -1,10 +1,15 @@
+protocols:
+  paper_mode:
+    description: Uses paper-style evaluation; opt/val/test may share the same formatted paper set.
+  strict_mode:
+    description: Splits data into opt/val/test to avoid prompt-search leakage.
 presets:
   smoke:
     description: Validate all registered tasks, prompts, parsers, and output schemas.
     suite: main
     tasks: all
     methods:
-      - mars
+      - mars_official
     max_samples: 20
     max_iterations: 2
     cache_enabled: true
@@ -13,7 +18,7 @@ presets:
     suite: main
     tasks: all
     methods:
-      - mars
+      - mars_official
     max_samples:
     max_iterations: 10
     cache_enabled: true
@@ -29,7 +34,7 @@ presets:
       - protegi
       - opro
       - pe2
-      - mars
+      - mars_official
     max_samples:
     max_iterations: 10
     cache_enabled: true

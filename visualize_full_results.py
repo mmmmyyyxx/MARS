@@ -117,7 +117,7 @@ def write_report(run_dir: Path, summary: pd.DataFrame, report_path: Path) -> Non
         )
     )
     exactness = (
-        summary.get("exactness", pd.Series(dtype=str))
+        summary.get("exactness_level", pd.Series(dtype=str))
         .fillna("")
         .value_counts()
         .to_dict()

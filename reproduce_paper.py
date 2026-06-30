@@ -61,6 +61,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--cache-enabled", action="store_true")
     parser.add_argument("--no-cache", action="store_true")
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--reuse-compatible-cache", action="store_true")
     parser.add_argument("--force-rerun", action="store_true")
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
@@ -115,6 +116,7 @@ def build_run_args(args: argparse.Namespace, matrix: dict[str, Any]) -> argparse
         results_root=args.results_root,
         cache_enabled=cache_enabled,
         resume=args.resume,
+        reuse_compatible_cache=args.reuse_compatible_cache,
         force_rerun=args.force_rerun,
         skip_existing=args.skip_existing,
         dry_run=args.dry_run,
@@ -254,6 +256,7 @@ def run_from_args(args: argparse.Namespace) -> int:
         resume=args.resume,
         force_rerun=args.force_rerun,
         skip_existing=args.skip_existing,
+        reuse_compatible_cache=args.reuse_compatible_cache,
         dry_run=args.dry_run,
     )
     prompt_loader = PromptLoader()
