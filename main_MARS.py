@@ -91,6 +91,17 @@ def run_mars_task(
         with open(raw_log_path, "w", encoding="utf-8") as log_file:
             with redirect_stdout(log_file):
                 print(f"task_id: {task_id}")
+                print(
+                    f"[TASK_CONFIG] task_id={task_id} "
+                    f"answer_format={Config.ANSWER_FORMAT} "
+                    f"question_type={Config.question_type}"
+                )
+                print(f"question_type: {Config.question_type}")
+                print(f"answer_format: {Config.ANSWER_FORMAT}")
+                print(f"dataset_path: {Config.DATASET_PATH}")
+                print(f"model: {Config.MODEL}")
+                print(f"temperature: {Config.TEMPERATURE}")
+                print(f"max_samples: {Config.MAX_SAMPLES}")
                 print(f"start time: {start_time:.4f} s")
                 asyncio.run(run_agents())
                 end_time = time.time()

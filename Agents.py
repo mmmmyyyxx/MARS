@@ -13,6 +13,12 @@ from datetime import datetime
 import os
 from tqdm import tqdm  
 import Config
+from mars_utils.evaluator import (
+    answer_instruction,
+    canonical_answer,
+    fallback_extract_from_raw,
+    is_valid_canonical,
+)
 
 
 def _is_dry_run() -> bool:
@@ -56,76 +62,6 @@ def _write_csv_rows(path, fieldnames, rows):
         if not file_exists:
             writer.writeheader()
         writer.writerows(rows)
-
-
-def _normalize_answer(value: str) -> str:
-    return str(value).replace(" ", "").lower()
-
-
-def _canonical_answer(value: str, answer_format: str) -> str:
-    text = "" if value is None else str(value).strip()
-    compact = _normalize_answer(text)
-    lowered = text.lower()
-
-    if answer_format == "option_letter":
-        match = re.search(r"\(([A-Z])\)", text, flags=re.IGNORECASE)
-        if match:
-            return f"({match.group(1).upper()})"
-        match = re.search(r"\b([A-Z])\b", text, flags=re.IGNORECASE)
-        if match:
-            return f"({match.group(1).upper()})"
-        return compact
-
-    if answer_format == "boolean":
-        if re.search(r"\btrue\b", lowered):
-            return "true"
-        if re.search(r"\bfalse\b", lowered):
-            return "false"
-        return compact
-
-    if answer_format == "valid_invalid":
-        if re.search(r"\binvalid\b", lowered):
-            return "invalid"
-        if re.search(r"\bvalid\b", lowered):
-            return "valid"
-        return compact
-
-    if answer_format == "yes_no":
-        if re.search(r"\byes\b", lowered):
-            return "yes"
-        if re.search(r"\bno\b", lowered):
-            return "no"
-        return compact
-
-    return compact
-
-
-def _answer_instruction(answer_format: str) -> str:
-    if answer_format == "boolean":
-        return "Output exactly one word: True or False. Do not output an option letter or explanation."
-    if answer_format == "valid_invalid":
-        return "Output exactly one word: valid or invalid. Do not output an option letter or explanation."
-    if answer_format == "yes_no":
-        return "Output exactly one word: yes or no. Do not output an option letter or explanation."
-    if answer_format == "option_letter":
-        return "Output only the answer option as a parenthesized capital letter, such as (A). Do not add any other text."
-    return "Output only the final answer in the same format as the gold label. Do not add any explanation."
-
-
-def _is_valid_canonical(value: str, answer_format: str) -> bool:
-    if not value:
-        return False
-    if answer_format == "option_letter":
-        return bool(re.fullmatch(r"\([A-Z]\)", value))
-    if answer_format == "boolean":
-        return value in {"true", "false"}
-    if answer_format == "valid_invalid":
-        return value in {"valid", "invalid"}
-    if answer_format == "yes_no":
-        return value in {"yes", "no"}
-    return True
-
-
 
 
 def extract_steps(planner_response: str) -> Tuple[int, List[str]]:
@@ -480,6 +416,7 @@ class TargetAgent(BaseChatAgent):
         self.dataset = None
         self.target_client = None
         self.semaphore = asyncio.Semaphore(_concurrency())
+        self._printed_eval_config = False
     
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
@@ -507,7 +444,18 @@ class TargetAgent(BaseChatAgent):
             file.write(f"Call Count: {self.call_count}, \nPrompt: {prompt}, \nAccuracy: {accuracy}\n")
         _write_csv_rows(
             getattr(Config, "PREDICTIONS_PATH", None),
-            ["iteration", "sample_index", "question", "answer", "prediction", "raw_prediction", "answer_format", "correct", "error"],
+            [
+                "iteration",
+                "sample_index",
+                "question",
+                "answer",
+                "raw_prediction",
+                "prediction",
+                "canonical_answer",
+                "answer_format",
+                "correct",
+                "error",
+            ],
             prediction_rows,
         )
 
@@ -517,8 +465,7 @@ class TargetAgent(BaseChatAgent):
     def load_dataset(self):
         if self.dataset is None:
             dataset = pd.read_csv(Config.DATASET_PATH)
-            # Preserve the legacy behavior of skipping the first data row.
-            dataset = dataset.iloc[1:].reset_index(drop=True)
+            dataset = dataset.reset_index(drop=True)
             max_samples = _max_samples()
             if max_samples is not None:
                 dataset = dataset.head(max_samples).reset_index(drop=True)
@@ -556,6 +503,9 @@ class TargetAgent(BaseChatAgent):
         error = ""
         answer_format = _answer_format()
 
+        if not self._printed_eval_config:
+            print(f"[EVAL_CONFIG] task answer_format={answer_format} question_type={self.question_type}")
+            self._printed_eval_config = True
         print(f"answer:{answer}")
         try:
             if _is_dry_run():
@@ -564,15 +514,16 @@ class TargetAgent(BaseChatAgent):
             elif self.question_type == "choice":
                 generated_answer, raw_answer = await self.process_choice(prompt, question)
             else:
-                generated_answer = await self.process_short_answer(prompt, question)
-                raw_answer = generated_answer
+                generated_answer, raw_answer = await self.process_short_answer(prompt, question)
         except Exception as exc:
             error = f"{exc.__class__.__name__}: {exc}"
             print(f"sample_error:{error}")
 
-        canonical_prediction = _canonical_answer(generated_answer, answer_format)
-        canonical_answer = _canonical_answer(answer, answer_format)
-        is_correct = canonical_prediction == canonical_answer
+        canonical_prediction = canonical_answer(generated_answer, answer_format)
+        canonical_gold = canonical_answer(answer, answer_format)
+        if not error and not is_valid_canonical(canonical_prediction, answer_format):
+            error = "answer_parse_failed"
+        is_correct = bool(canonical_prediction) and canonical_prediction == canonical_gold
         print(f'Judge:{is_correct}')
         return {
             "iteration": self.call_count,
@@ -581,6 +532,7 @@ class TargetAgent(BaseChatAgent):
             "answer": answer,
             "prediction": canonical_prediction,
             "raw_prediction": raw_answer,
+            "canonical_answer": canonical_gold,
             "answer_format": answer_format,
             "correct": is_correct,
             "error": error,
@@ -592,7 +544,7 @@ class TargetAgent(BaseChatAgent):
         max_retries = _max_answer_retries()
         retry_count = 0
         answer_format = _answer_format()
-        instruction = _answer_instruction(answer_format)
+        instruction = answer_instruction(answer_format)
 
         while retry_count < max_retries:
             target_response = await self.call_LLM_test(
@@ -603,32 +555,36 @@ class TargetAgent(BaseChatAgent):
                 retry_count += 1
                 continue  
 
-            canonical = _canonical_answer(target_response, answer_format)
-            if _is_valid_canonical(canonical, answer_format):
+            canonical = fallback_extract_from_raw(target_response, answer_format)
+            if is_valid_canonical(canonical, answer_format):
                 return canonical, target_response
 
             retry_count += 1
 
         return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
-    async def process_short_answer(self, prompt: str, question: str) -> str:
+    async def process_short_answer(self, prompt: str, question: str):
         # print("process short answer question!")
 
         max_retries = _max_answer_retries()
         retry_count = 0
+        answer_format = _answer_format()
+        instruction = answer_instruction(answer_format)
 
         while retry_count < max_retries:
             target_response = await self.call_LLM_test(
-                prompt + '\nQuestion: ' + question + "\n Please don't output the process of doing the question, only the content of the answer."
+                prompt + '\nQuestion: ' + question + "\n " + instruction
             )
             print(f"response:{target_response}")
 
             if target_response:
-                return target_response.strip()
+                canonical = fallback_extract_from_raw(target_response, answer_format)
+                if is_valid_canonical(canonical, answer_format):
+                    return canonical, target_response
 
             retry_count += 1
 
-        return ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
+        return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
 
     async def call_LLM_test(self, prompt):

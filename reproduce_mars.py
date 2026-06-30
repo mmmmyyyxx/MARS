@@ -8,6 +8,11 @@ import time
 from typing import Any, Dict, List, Optional
 
 from mars_utils.config_loader import load_config
+from mars_utils.evaluator import (
+    build_diagnostics_markdown,
+    compute_final_metrics_from_predictions,
+    row_is_correct,
+)
 from mars_utils.prompt_manager import PromptManager
 from mars_utils.result_writer import (
     make_run_dir,
@@ -51,8 +56,7 @@ def count_dataset_samples(path: str) -> int:
     try:
         with open(path, "r", encoding="utf-8", newline="") as file:
             row_count = sum(1 for _ in csv.reader(file))
-        # TargetAgent preserves the legacy behavior of skipping the first data row.
-        return max(row_count - 2, 0)
+        return max(row_count - 1, 0)
     except OSError:
         return 0
 
@@ -69,6 +73,7 @@ def failed_summary_row(task, status: str, reason: str, runtime: float, num_sampl
         "group": task.group,
         "dataset_path": task.dataset_path,
         "question_type": task.question_type,
+        "answer_format": task.answer_format,
         "status": status,
         "num_samples": num_samples,
         "num_success": 0,
@@ -76,30 +81,55 @@ def failed_summary_row(task, status: str, reason: str, runtime: float, num_sampl
         "best_accuracy": "",
         "final_accuracy": "",
         "best_iteration": "",
+        "best_num_success": "",
+        "best_num_failed": "",
         "stopped_reason": reason,
         "total_runtime_seconds": round(runtime, 4),
     }
 
 
-def success_summary_row(task, run_result: Dict[str, Any], num_samples: int) -> Dict[str, Any]:
+def _best_counts_for_iteration(predictions: List[Dict[str, Any]], best_iteration: Any) -> Dict[str, Any]:
+    try:
+        iteration = int(best_iteration)
+    except (TypeError, ValueError):
+        return {"best_num_success": "", "best_num_failed": ""}
+    rows = []
+    for row in predictions:
+        try:
+            row_iteration = int(row.get("iteration", 0))
+        except (TypeError, ValueError):
+            row_iteration = 0
+        if row_iteration == iteration:
+            rows.append(row)
+    if not rows:
+        return {"best_num_success": "", "best_num_failed": ""}
+    num_success = sum(1 for row in rows if row_is_correct(row))
+    return {"best_num_success": num_success, "best_num_failed": len(rows) - num_success}
+
+
+def success_summary_row(task, run_result: Dict[str, Any]) -> Dict[str, Any]:
     history = run_result.get("prompt_history", [])
+    predictions = run_result.get("predictions", [])
     accuracies = [item[1] for item in history]
-    final_accuracy = accuracies[-1] if accuracies else 0.0
     best_accuracy = max(accuracies) if accuracies else 0.0
     best_iteration = accuracies.index(best_accuracy) + 1 if accuracies else ""
-    num_success = round(final_accuracy * num_samples)
+    final_metrics = compute_final_metrics_from_predictions(predictions)
+    best_counts = _best_counts_for_iteration(predictions, best_iteration)
     return {
         "task_id": task.task_id,
         "group": task.group,
         "dataset_path": task.dataset_path,
         "question_type": task.question_type,
+        "answer_format": task.answer_format,
         "status": "success",
-        "num_samples": num_samples,
-        "num_success": num_success,
-        "num_failed": max(num_samples - num_success, 0),
+        "num_samples": final_metrics["num_samples"],
+        "num_success": final_metrics["num_success"],
+        "num_failed": final_metrics["num_failed"],
         "best_accuracy": best_accuracy,
-        "final_accuracy": final_accuracy,
+        "final_accuracy": final_metrics["final_accuracy"],
         "best_iteration": best_iteration,
+        "best_num_success": best_counts["best_num_success"],
+        "best_num_failed": best_counts["best_num_failed"],
         "stopped_reason": run_result.get("stopped_reason", "completed"),
         "total_runtime_seconds": round(run_result.get("runtime_seconds", 0.0), 4),
     }
@@ -108,6 +138,10 @@ def success_summary_row(task, run_result: Dict[str, Any], num_samples: int) -> D
 def prepare_task_files(task_dir: str, task, config, user_prompt: Optional[str], planner_prompt: Optional[str]) -> None:
     write_yaml(os.path.join(task_dir, "config.yaml"), {
         "task": asdict(task),
+        "task_id": task.task_id,
+        "question_type": task.question_type,
+        "answer_format": task.answer_format,
+        "dataset_path": task.dataset_path,
         "model": config.model,
         "temperature": config.temperature,
         "max_iterations": config.max_iterations,
@@ -231,7 +265,11 @@ def main() -> int:
             write_prompt_history(os.path.join(task_dir, "prompt_accuracy_history.csv"), history, stopped_reason)
             final_prompt = history[-1][0] if history else ""
             write_text(os.path.join(task_dir, "final_prompt.txt"), final_prompt)
-            summary_rows.append(success_summary_row(task, run_result, num_samples))
+            diagnostics = build_diagnostics_markdown(task.task_id, run_result.get("predictions", []))
+            final_metrics = compute_final_metrics_from_predictions(run_result.get("predictions", []))
+            if final_metrics["num_samples"] and final_metrics["final_accuracy"] == 0:
+                write_text(os.path.join(task_dir, "diagnostics.md"), diagnostics)
+            summary_rows.append(success_summary_row(task, run_result))
         except Exception as exc:
             append_error(task_dir, "task_failed", str(exc), {"exception_class": exc.__class__.__name__})
             write_text(os.path.join(task_dir, "final_prompt.txt"), "")

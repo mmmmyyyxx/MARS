@@ -12,6 +12,7 @@ SUMMARY_FIELDS = [
     "group",
     "dataset_path",
     "question_type",
+    "answer_format",
     "status",
     "num_samples",
     "num_success",
@@ -19,6 +20,8 @@ SUMMARY_FIELDS = [
     "best_accuracy",
     "final_accuracy",
     "best_iteration",
+    "best_num_success",
+    "best_num_failed",
     "stopped_reason",
     "total_runtime_seconds",
 ]

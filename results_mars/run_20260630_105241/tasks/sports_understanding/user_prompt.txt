@@ -1,0 +1,8 @@
+Here is a topic for sports understanding:
+Given a series of events and activities a person has completed in the course of a day, determine what time, during the day, they might have been free to perform another activity.
+
+For example:
+"Is the following sentence plausible? ""Neymar did a maradona on the defender in the Champions Leage Semifinal."
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. 
+Please generate the most suitable prompt according to the requirements I just mentioned.

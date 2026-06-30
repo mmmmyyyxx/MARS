@@ -1,0 +1,16 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"""Here comes a perfectly valid argument: Sophie is an infrequent user of Nioxin shampoo. Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo. In consequence, Sophie is a frequent consumer of Schwarzkopf shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,1,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First, Jonathan is a regular consumer of Eucalyptus soap. Second, being an owner of a Lever soap or not being a regular consumer of Eucalyptus soap is sufficient for being a frequent consumer of Herbal Essences shampoo. We may conclude that Jonathan is not a frequent consumer of Herbal Essences shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,2,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First, being a frequent consumer of Bed Head shampoo is necessary for being an owner of a TRESemmé shampoo. Second, no occasional purchaser of Burt's Bees shampoo is a frequent consumer of Bed Head shampoo. In consequence, no owner of a TRESemmé shampoo is an occasional purchaser of Burt's Bees shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
