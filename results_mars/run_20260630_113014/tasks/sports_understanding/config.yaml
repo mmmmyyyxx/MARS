@@ -1,0 +1,22 @@
+task:
+  task_id: sports_understanding
+  group: BBH
+  dataset_path: Dataset_format/BBH/sports_understanding.csv
+  question_type: choice
+  user_prompt_key: sports_understanding
+  planner_prompt_key: sports_understanding
+  answer_format: yes_no
+  metric: accuracy
+task_id: sports_understanding
+question_type: choice
+answer_format: yes_no
+dataset_path: Dataset_format/BBH/sports_understanding.csv
+model: deepseek-chat
+temperature: 0.6
+max_iterations: 1
+early_stop_delta: 0.01
+concurrency: 1
+max_samples: 1
+max_answer_retries: 3
+request_timeout: 120.0
+dry_run: false

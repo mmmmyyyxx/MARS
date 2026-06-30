@@ -1,0 +1,5 @@
+display_name: CoT(ZS)
+type: direct
+exactness: best_effort_reimplementation
+model: deepseek-chat
+transfer_target_evaluation_only: true

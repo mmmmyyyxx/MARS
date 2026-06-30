@@ -1,0 +1,5 @@
+{"sample_id": 0, "question": "蓝印花布是一种传统的民间纺织印染工艺品。蓝印花布印制方法始于____。\r\nOptions:\r\n(A) 汉代\r\n(B) 魏晋时期\r\n(C) 唐代\r\n(D) 宋代", "answer": "(A)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 1, "question": "程婴、公孙杵臼是____中的人物。\r\nOptions:\r\n(A) 《赵氏孤儿》\r\n(B) 《杀狗记》\r\n(C) 《墙头马上》\r\n(D) 《岳阳楼》", "answer": "(A)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 2, "question": "____不是古典主义戏剧的代表人物。\r\nOptions:\r\n(A) 高乃依\r\n(B) 拉辛\r\n(C) 莎士比\r\n(D) 莫里哀", "answer": "(C)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 3, "question": "____创作的《大卫》是第一件复兴了古代裸体雕像传统的作品。\r\nOptions:\r\n(A) 吉贝尔蒂\r\n(B) 布鲁内莱斯基\r\n(C) 多纳泰罗\r\n(D) 马萨乔", "answer": "(C)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 4, "question": "莎士比亚的《李尔王》是____。\r\nOptions:\r\n(A) 悲剧\r\n(B) 喜剧\r\n(C) 正剧\r\n(D) 农村剧", "answer": "(A)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}

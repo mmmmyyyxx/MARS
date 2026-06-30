@@ -1,0 +1,10 @@
+|task_id|display_name|method|accuracy|num_samples|num_correct|num_failed|api_errors|parse_errors|runtime_seconds|tokens_prompt|tokens_completion|tokens_total|cost_estimate|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|boolean_expressions|Boolean Expressions|Origin|1.0|1|1|0|0|0|0.0019991397857666016|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|CoT(ZS)|1.0|1|1|0|0|0|0.002000570297241211|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|CoT(FS)|1.0|1|1|0|0|0|0.0020020008087158203|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|APE|1.0|1|1|0|0|0|0.002998828887939453|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|ProTeGi|1.0|1|1|0|0|0|0.00400090217590332|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|OPRO|1.0|1|1|0|0|0|0.0031213760375976562|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|PE2|1.0|1|1|0|0|0|0.0019998550415039062|0|0|0|0.0|
+|boolean_expressions|Boolean Expressions|MARS|1.0|1|1|0|0|0|0.004000186920166016|0|0|0|0.0|

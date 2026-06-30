@@ -1,0 +1,3 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?,18,"1. Clarify the answer format.
+2. Solve carefully before giving the final answer.",2,18,False,numeric,,mars_wo_soc,gsm8k,1

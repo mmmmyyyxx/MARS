@@ -1,0 +1,7 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"Which of the following is a humorous edit of this artist or movie name: 'fall out boy'?
+Options:
+(A) faqll out boy
+(B) fall out bot
+(C) falbl out boy
+(D) fall outt boy",(B),Final answer: (A),(A),(B),False,option_letter,,protegi,ruin_names,1

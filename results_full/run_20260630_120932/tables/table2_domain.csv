@@ -1,0 +1,45 @@
+task_id,display_name,method,accuracy,num_samples,num_correct,num_failed,api_errors,parse_errors,runtime_seconds,tokens_prompt,tokens_completion,tokens_total,cost_estimate
+college_biology,College Biology,APE,0.0,1,0,1,0,0,0.003070354461669922,0,0,0,0.0
+college_biology,College Biology,ProTeGi,0.0,1,0,1,0,0,0.003999233245849609,0,0,0,0.0
+college_biology,College Biology,OPRO,0.0,1,0,1,0,0,0.0035004615783691406,0,0,0,0.0
+college_biology,College Biology,PE2,0.0,1,0,1,0,0,0.002998828887939453,0,0,0,0.0
+college_medicine,College Medicine,APE,0.0,1,0,1,0,1,0.004004716873168945,0,0,0,0.0
+college_medicine,College Medicine,ProTeGi,0.0,1,0,1,0,1,0.0035011768341064453,0,0,0,0.0
+college_medicine,College Medicine,OPRO,0.0,1,0,1,0,1,0.003507852554321289,0,0,0,0.0
+college_medicine,College Medicine,PE2,0.0,1,0,1,0,1,0.004000186920166016,0,0,0,0.0
+electrical_engineering,Electrical Engineering,APE,0.0,1,0,1,0,0,0.0029997825622558594,0,0,0,0.0
+electrical_engineering,Electrical Engineering,ProTeGi,0.0,1,0,1,0,0,0.003000497817993164,0,0,0,0.0
+electrical_engineering,Electrical Engineering,OPRO,0.0,1,0,1,0,0,0.003506898880004883,0,0,0,0.0
+electrical_engineering,Electrical Engineering,PE2,0.0,1,0,1,0,0,0.002999544143676758,0,0,0,0.0
+high_school_world_history,High School World History,APE,0.0,1,0,1,0,1,0.004000425338745117,0,0,0,0.0
+high_school_world_history,High School World History,ProTeGi,0.0,1,0,1,0,1,0.003000020980834961,0,0,0,0.0
+high_school_world_history,High School World History,OPRO,0.0,1,0,1,0,1,0.003996133804321289,0,0,0,0.0
+high_school_world_history,High School World History,PE2,0.0,1,0,1,0,1,0.0035567283630371094,0,0,0,0.0
+human_aging,Human Aging,APE,1.0,1,1,0,0,0,0.003000020980834961,0,0,0,0.0
+human_aging,Human Aging,ProTeGi,1.0,1,1,0,0,0,0.003000020980834961,0,0,0,0.0
+human_aging,Human Aging,OPRO,1.0,1,1,0,0,0,0.0030434131622314453,0,0,0,0.0
+human_aging,Human Aging,PE2,1.0,1,1,0,0,0,0.0019996166229248047,0,0,0,0.0
+marketing,Marketing,APE,0.0,1,0,1,0,0,0.002999544143676758,0,0,0,0.0
+marketing,Marketing,ProTeGi,0.0,1,0,1,0,0,0.003507375717163086,0,0,0,0.0
+marketing,Marketing,OPRO,0.0,1,0,1,0,0,0.004000663757324219,0,0,0,0.0
+marketing,Marketing,PE2,0.0,1,0,1,0,0,0.002953052520751953,0,0,0,0.0
+art_studies,Art Studies,APE,1.0,1,1,0,0,0,0.0030002593994140625,0,0,0,0.0
+art_studies,Art Studies,ProTeGi,1.0,1,1,0,0,0,0.003998994827270508,0,0,0,0.0
+art_studies,Art Studies,OPRO,1.0,1,1,0,0,0,0.004094600677490234,0,0,0,0.0
+art_studies,Art Studies,PE2,1.0,1,1,0,0,0,0.004326820373535156,0,0,0,0.0
+urban_and_rural_planner,Urban and Rural Planner,APE,1.0,1,1,0,0,0,0.003000020980834961,0,0,0,0.0
+urban_and_rural_planner,Urban and Rural Planner,ProTeGi,1.0,1,1,0,0,0,0.0031213760375976562,0,0,0,0.0
+urban_and_rural_planner,Urban and Rural Planner,OPRO,1.0,1,1,0,0,0,0.0030002593994140625,0,0,0,0.0
+urban_and_rural_planner,Urban and Rural Planner,PE2,1.0,1,1,0,0,0,0.004388093948364258,0,0,0,0.0
+clinical_medicine,Clinical Medicine,APE,0.0,1,0,1,0,0,0.0029990673065185547,0,0,0,0.0
+clinical_medicine,Clinical Medicine,ProTeGi,0.0,1,0,1,0,0,0.0035588741302490234,0,0,0,0.0
+clinical_medicine,Clinical Medicine,OPRO,0.0,1,0,1,0,0,0.003000020980834961,0,0,0,0.0
+clinical_medicine,Clinical Medicine,PE2,0.0,1,0,1,0,0,0.002999544143676758,0,0,0,0.0
+gsm8k,GSM8K,APE,0.0,1,0,1,0,0,0.0030035972595214844,0,0,0,0.0
+gsm8k,GSM8K,ProTeGi,0.0,1,0,1,0,0,0.004000425338745117,0,0,0,0.0
+gsm8k,GSM8K,OPRO,0.0,1,0,1,0,0,0.003502368927001953,0,0,0,0.0
+gsm8k,GSM8K,PE2,0.0,1,0,1,0,0,0.003003835678100586,0,0,0,0.0
+lsat_ar,LSAT-AR,APE,0.0,1,0,1,0,0,0.0029997825622558594,0,0,0,0.0
+lsat_ar,LSAT-AR,ProTeGi,0.0,1,0,1,0,0,0.0035033226013183594,0,0,0,0.0
+lsat_ar,LSAT-AR,OPRO,0.0,1,0,1,0,0,0.0029997825622558594,0,0,0,0.0
+lsat_ar,LSAT-AR,PE2,0.0,1,0,1,0,0,0.003243684768676758,0,0,0,0.0

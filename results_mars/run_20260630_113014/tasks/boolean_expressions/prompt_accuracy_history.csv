@@ -1,0 +1,20 @@
+iteration,accuracy,delta_accuracy,prompt,stopped_reason
+1,1.0,,"Evaluate the truth value of the given Boolean expression by following these steps carefully:
+
+1. Identify and resolve any parentheses first, starting from the innermost pair.
+2. Apply the `not` operator to the immediate operand(s).
+3. Then evaluate `and` operations from left to right.
+4. Finally, evaluate `or` operations from left to right.
+5. Keep track of intermediate truth values at each step.
+
+After completing the evaluation, state the final truth value as either True or False.
+
+Example:
+Expression: not ( True ) and ( True )
+Step-by-step reasoning:
+- Evaluate inside parentheses: True remains True.
+- Apply not: not True → False.
+- Evaluate and: False and True → False.
+Final answer: False
+
+Now, apply this reasoning to the provided Boolean expression.",max_iterations

@@ -1,0 +1,20 @@
+[
+  {
+    "task_id": "gsm8k",
+    "group": "GSM8K",
+    "dataset_path": "Dataset_format/GSM8K/gsm8k_test.csv",
+    "question_type": "short_answer",
+    "answer_format": "short_answer",
+    "status": "success",
+    "num_samples": 1,
+    "num_success": 1,
+    "num_failed": 0,
+    "best_accuracy": 1.0,
+    "final_accuracy": 1.0,
+    "best_iteration": 1,
+    "best_num_success": 1,
+    "best_num_failed": 0,
+    "stopped_reason": "max_iterations",
+    "total_runtime_seconds": 16.0881
+  }
+]

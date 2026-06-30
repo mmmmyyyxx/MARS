@@ -1,0 +1,3 @@
+Answer BIG-Bench Hard questions for Formal Fallacies.
+Think step by step internally, then provide the final answer.
+End with Final answer: valid or invalid.

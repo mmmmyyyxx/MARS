@@ -1,0 +1,7 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"蓝印花布是一种传统的民间纺织印染工艺品。蓝印花布印制方法始于____。
+Options:
+(A) 汉代
+(B) 魏晋时期
+(C) 唐代
+(D) 宋代",(A),Final answer: (A),(A),(A),True,option_letter,,pe2,art_studies,1

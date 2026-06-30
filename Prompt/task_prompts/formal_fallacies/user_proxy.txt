@@ -1,0 +1,5 @@
+Here is a topic for Formal Fallacies:
+Answer BIG-Bench Hard questions for Formal Fallacies.
+
+The model must output the answer as valid or invalid.
+Generate or refine a prompt that maximizes accuracy for this task.

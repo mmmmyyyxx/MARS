@@ -1,0 +1,12 @@
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+exclude = '''
+/(results_mars|results_full|Dataset|Dataset_format|__pycache__|Output)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip = ["results_mars", "results_full", "Dataset", "Dataset_format", "__pycache__", "Output"]
+

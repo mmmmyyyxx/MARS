@@ -1,0 +1,3 @@
+Answer BIG-Bench Hard questions for Boolean Expressions.
+Read the question carefully. Return only the final answer as true or false.
+Do not include extra commentary after the final answer.

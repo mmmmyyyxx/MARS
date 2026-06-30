@@ -1,0 +1,3 @@
+Call Count: 1, 
+Prompt: You are a clinical medicine expert. Analyze the following multiple-choice question carefully, considering medical knowledge about diagnosis, symptoms, treatment, pharmacology, medical decision making, and patient care. Think through each option systematically, evaluate the evidence, and select the single best answer. Output only the letter of the correct option., 
+Accuracy: 1.0

@@ -1,0 +1,4 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer BIG-Bench Hard questions for Geometric Shapes.
+Think step by step internally, then provide the final answer.
+End with Final answer: a parenthesized option letter such as (A).",0.0,1,0,1

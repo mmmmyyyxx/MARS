@@ -1,0 +1,9 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"The Barkhausen criterion for an oscillator
+
+Options:
+(A)Loop gain should be unity
+(B)Loop gain should be less than unity
+(C)The phase of a feedback signal with respect to input should be 0° or 360°
+(D)Both A and C
+",(D),Final answer: (A),(A),(D),False,option_letter,,mars,electrical_engineering,1

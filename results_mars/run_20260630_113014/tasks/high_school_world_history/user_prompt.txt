@@ -1,0 +1,7 @@
+Here is a topic for high school world history:
+Answer multiple-choice questions about world history, including civilizations, political changes, wars, revolutions, cultural developments, trade, and historical interpretation.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.

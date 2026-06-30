@@ -1,21 +1,30 @@
-import csv
 import asyncio
+import csv
 import re
-from typing import AsyncGenerator, List, Sequence,Tuple
+from typing import AsyncGenerator, List, Sequence, Tuple
+
 from autogen_agentchat.agents import BaseChatAgent
 from autogen_agentchat.base import Response
 from autogen_agentchat.messages import AgentMessage, ChatMessage, TextMessage
 from autogen_core import CancellationToken
-from openai import OpenAI, AsyncOpenAI
+from openai import AsyncOpenAI, OpenAI
+
 try:
-    from openai import APIConnectionError, APIStatusError, APITimeoutError, RateLimitError
+    from openai import (
+        APIConnectionError,
+        APIStatusError,
+        APITimeoutError,
+        RateLimitError,
+    )
 except ImportError:  # Keep compatibility with older OpenAI SDK variants.
     APIConnectionError = APIStatusError = APITimeoutError = RateLimitError = None
-import pandas as pd
+import os
 import sys
 from datetime import datetime
-import os
-from tqdm import tqdm  
+
+import pandas as pd
+from tqdm import tqdm
+
 import Config
 from mars_utils.evaluator import (
     answer_instruction,
@@ -53,7 +62,40 @@ def _request_timeout() -> float:
 
 
 def _retry_delay(attempt: int) -> float:
-    return min(2 ** attempt, 8)
+    return min(2**attempt, 8)
+
+
+def _api_retry_delay_seconds() -> float:
+    return float(getattr(Config, "API_RETRY_DELAY_SECONDS", 5))
+
+
+async def _wait_before_api_retry(exc: Exception, attempt: int) -> None:
+    delay = _api_retry_delay_seconds()
+    print(
+        f"api_call_failed_retrying: attempt={attempt}, "
+        f"wait_seconds={delay}, error={exc.__class__.__name__}: {exc}"
+    )
+    await asyncio.sleep(delay)
+
+
+async def _chat_completion_with_infinite_retry(client, **kwargs):
+    attempt = 1
+    while True:
+        try:
+            return client.chat.completions.create(**kwargs)
+        except Exception as exc:
+            await _wait_before_api_retry(exc, attempt)
+            attempt += 1
+
+
+async def _async_chat_completion_with_infinite_retry(client, **kwargs):
+    attempt = 1
+    while True:
+        try:
+            return await client.chat.completions.create(**kwargs)
+        except Exception as exc:
+            await _wait_before_api_retry(exc, attempt)
+            attempt += 1
 
 
 def _is_retryable_exception(exc: Exception) -> bool:
@@ -93,7 +135,7 @@ def extract_steps(planner_response: str) -> Tuple[int, List[str]]:
     # Extract the description of each step
     steps = []
     for i in range(1, total_steps + 1):
-        step_match = re.search(fr"Step {i}: (.+)", planner_response)
+        step_match = re.search(rf"Step {i}: (.+)", planner_response)
         if step_match:
             steps.append(step_match.group(1).strip())
         else:
@@ -101,15 +143,20 @@ def extract_steps(planner_response: str) -> Tuple[int, List[str]]:
 
     return total_steps, steps
 
+
 class ChatManagerAgent(BaseChatAgent):
     def __init__(self, name: str):
-        super().__init__(name, "ChatManagerAgent is responsible for managing the order of calls")
+        super().__init__(
+            name, "ChatManagerAgent is responsible for managing the order of calls"
+        )
 
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
         print("ChatManagerAgent is called")
 
         #  UserProxyAgent
@@ -121,8 +168,12 @@ class ChatManagerAgent(BaseChatAgent):
 
         #  PlannerAgent
         planner_agent = PlannerAgent("planner_agent")
-        planner_response = await planner_agent.on_messages([input_response.chat_message], cancellation_token)
-        print("-------------------planner_response.chat_message.content--------------------")
+        planner_response = await planner_agent.on_messages(
+            [input_response.chat_message], cancellation_token
+        )
+        print(
+            "-------------------planner_response.chat_message.content--------------------"
+        )
         print(planner_response.chat_message.content)
         print("-----------------------------------------------------------------")
 
@@ -138,31 +189,37 @@ class ChatManagerAgent(BaseChatAgent):
         critic_agent = CriticAgent("critic_agent")
         target_agent = TargetAgent("target_agent")
 
-
         # Teacher Initialization
         teacher_input = TextMessage(
             content=f"Here is the task definition:\n{input_response.chat_message.content}\n",
-            source=self.name
+            source=self.name,
         )
-        teacher_init = await teacher_agent.on_messages([teacher_input], cancellation_token)
+        teacher_init = await teacher_agent.on_messages(
+            [teacher_input], cancellation_token
+        )
 
         # Critic Initialization
-        critic_init = await critic_agent.on_messages([teacher_init.chat_message], cancellation_token)
-
+        critic_init = await critic_agent.on_messages(
+            [teacher_init.chat_message], cancellation_token
+        )
 
         # Student Initialization
         student_input = TextMessage(
             content=f"Here is the task definition:\n{input_response.chat_message.content}\n"
-                    f"Please generate a more appropriate prompt based on the following prompt and task definition: Think step by step and solve the question.",
-            source=self.name
+            f"Please generate a more appropriate prompt based on the following prompt and task definition: Think step by step and solve the question.",
+            source=self.name,
         )
-        student_response = await student_agent.on_messages([student_input], cancellation_token)
+        student_response = await student_agent.on_messages(
+            [student_input], cancellation_token
+        )
         print("----------student_response.chat_message.content--------------------")
         print(student_response.chat_message.content)
         print("-----------------------------------------------------------------")
 
         # TargetAgent Initialization
-        target_response = await target_agent.on_messages([student_response.chat_message], cancellation_token)
+        target_response = await target_agent.on_messages(
+            [student_response.chat_message], cancellation_token
+        )
         target_score = target_response.chat_message.content
         print("-------------target_score----------")
         print(target_score)
@@ -181,49 +238,75 @@ class ChatManagerAgent(BaseChatAgent):
                 # Teacher ask
                 teacher_input = TextMessage(
                     content=f"Here is the task definition:\n{input_response.chat_message.content}\n"
-                            f"Here is the prompt given by the student from the previous round:\n{student_response.chat_message.content}\n"
-                            f"Ask heuristic questions based on the students' historical responses and the current step: {step_description}\n",
-                    source=self.name
+                    f"Here is the prompt given by the student from the previous round:\n{student_response.chat_message.content}\n"
+                    f"Ask heuristic questions based on the students' historical responses and the current step: {step_description}\n",
+                    source=self.name,
                 )
-                teacher_response = await teacher_agent.on_messages([teacher_input], cancellation_token)
-                print("---------teacher_response.chat_message.content-------------------------------------")
+                teacher_response = await teacher_agent.on_messages(
+                    [teacher_input], cancellation_token
+                )
+                print(
+                    "---------teacher_response.chat_message.content-------------------------------------"
+                )
                 print(teacher_response.chat_message.content)
-                print("-----------------------------------------------------------------")
+                print(
+                    "-----------------------------------------------------------------"
+                )
 
                 # critic judge
-                critic_response = await critic_agent.on_messages([teacher_response.chat_message], cancellation_token)
-                print("---------critic_response.chat_message.content-------------------------------------")
+                critic_response = await critic_agent.on_messages(
+                    [teacher_response.chat_message], cancellation_token
+                )
+                print(
+                    "---------critic_response.chat_message.content-------------------------------------"
+                )
                 print(critic_response.chat_message.content)
-                print("-----------------------------------------------------------------")
-                
+                print(
+                    "-----------------------------------------------------------------"
+                )
+
                 if "False" in critic_response.chat_message.content:
                     # re-ask the question
                     teacher_input = TextMessage(
                         content=f"Here is feedback on whether your output matches the Socratic questioning, please refer to the suggestion to regenerate the questioning:\n{critic_response.chat_message.content}\n"
-                                f"Here is the task definition:\n{input_response.chat_message.content}\n"
-                                f"Here is the prompt given by the student from the previous round:\n{student_response.chat_message.content}\n"
-                                f"Ask heuristic questions based on the students' historical responses and the current step: {step_description}\n",
-                        source=self.name
+                        f"Here is the task definition:\n{input_response.chat_message.content}\n"
+                        f"Here is the prompt given by the student from the previous round:\n{student_response.chat_message.content}\n"
+                        f"Ask heuristic questions based on the students' historical responses and the current step: {step_description}\n",
+                        source=self.name,
                     )
-                    teacher_response = await teacher_agent.on_messages([teacher_input], cancellation_token)
-                    print("---------teacher_response.chat_message.content--regenerate-----------------------------------")
+                    teacher_response = await teacher_agent.on_messages(
+                        [teacher_input], cancellation_token
+                    )
+                    print(
+                        "---------teacher_response.chat_message.content--regenerate-----------------------------------"
+                    )
                     print(teacher_response.chat_message.content)
-                    print("-----------------------------------------------------------------")     
+                    print(
+                        "-----------------------------------------------------------------"
+                    )
 
                 # update Student's input
                 student_input = TextMessage(
                     content=f"Here is the task definition:\n{input_response.chat_message.content}\n"
-                            f"Here is your last prompt:\n{student_response.chat_message.content}\n"
-                            f"Please base on the following question update your prompt:\n{teacher_response.chat_message.content}",
-                    source=self.name
+                    f"Here is your last prompt:\n{student_response.chat_message.content}\n"
+                    f"Please base on the following question update your prompt:\n{teacher_response.chat_message.content}",
+                    source=self.name,
                 )
-                student_response = await student_agent.on_messages([student_input], cancellation_token)
-                print("----------student_response.chat_message.content--------------------")
+                student_response = await student_agent.on_messages(
+                    [student_input], cancellation_token
+                )
+                print(
+                    "----------student_response.chat_message.content--------------------"
+                )
                 print(student_response.chat_message.content)
-                print("-----------------------------------------------------------------")
+                print(
+                    "-----------------------------------------------------------------"
+                )
 
             #  update Critic's input
-            target_response = await target_agent.on_messages([student_response.chat_message], cancellation_token)
+            target_response = await target_agent.on_messages(
+                [student_response.chat_message], cancellation_token
+            )
             target_score = target_response.chat_message.content
             print("-------------target_score----------")
             print(target_score)
@@ -247,11 +330,15 @@ class UserProxyAgent(BaseChatAgent):
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
         print("UserProxyAgent is called")
 
-        with open('./Prompt/EDIT_1_userproxy_task_input.txt', 'r', encoding='utf-8') as file:
-            userproxy_task_input= file.read()
+        with open(
+            "./Prompt/EDIT_1_userproxy_task_input.txt", "r", encoding="utf-8"
+        ) as file:
+            userproxy_task_input = file.read()
 
         response_message = TextMessage(content=userproxy_task_input, source=self.name)
         return Response(chat_message=response_message)
@@ -260,22 +347,30 @@ class UserProxyAgent(BaseChatAgent):
         pass
 
 
-
 class PlannerAgent(BaseChatAgent):
     def __init__(self, name: str):
-        super().__init__(name, "Responsible for breaking down optimization tasks into specific steps and details.")
+        super().__init__(
+            name,
+            "Responsible for breaking down optimization tasks into specific steps and details.",
+        )
 
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
         print("PlannerAgent is called")
         task_description = messages[0].content
 
-        with open("./Prompt/EDIT_2_prompt_planner_template.txt", 'r', encoding='utf-8') as file:
-            prompt_planner_template =  file.read()
-        prompt_planner = prompt_planner_template.format(task_description=task_description)
+        with open(
+            "./Prompt/EDIT_2_prompt_planner_template.txt", "r", encoding="utf-8"
+        ) as file:
+            prompt_planner_template = file.read()
+        prompt_planner = prompt_planner_template.format(
+            task_description=task_description
+        )
 
         response_text = await self.call_LLM(prompt_planner)
 
@@ -289,20 +384,22 @@ class PlannerAgent(BaseChatAgent):
                 "Step 1: Read the task definition and identify the required answer format.\n"
                 "Step 2: Produce a concise prompt that asks for only the final answer."
             )
-        
-        client = OpenAI(api_key= Config.API_KEY, base_url= Config.BASE_URL)
 
+        client = OpenAI(
+            api_key=Config.API_KEY, base_url=Config.BASE_URL, timeout=_request_timeout()
+        )
 
-        with open('./Prompt/system_prompt_planner.txt', 'r', encoding='utf-8') as file:
+        with open("./Prompt/system_prompt_planner.txt", "r", encoding="utf-8") as file:
             system_prompt_planner = file.read()
 
-        response = client.chat.completions.create(
-            model= Config.MODEL,
+        response = await _chat_completion_with_infinite_retry(
+            client,
+            model=Config.MODEL,
             messages=[
                 {"role": "system", "content": system_prompt_planner},
-                {"role": "user", "content": prompt}
+                {"role": "user", "content": prompt},
             ],
-            temperature=_temperature()
+            temperature=_temperature(),
         )
         return response.choices[0].message.content
 
@@ -312,13 +409,18 @@ class PlannerAgent(BaseChatAgent):
 
 class TeacherAgent(BaseChatAgent):
     def __init__(self, name: str):
-        super().__init__(name, "Teachers who guide their students' thinking with Socratic questioning.")
+        super().__init__(
+            name,
+            "Teachers who guide their students' thinking with Socratic questioning.",
+        )
 
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
 
         print("TeacherAgent is called")
 
@@ -331,18 +433,21 @@ class TeacherAgent(BaseChatAgent):
         if _is_dry_run():
             return "What constraints and answer format should the prompt emphasize?"
 
-        client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
+        client = OpenAI(
+            api_key=Config.API_KEY, base_url=Config.BASE_URL, timeout=_request_timeout()
+        )
 
-        with open('./Prompt/system_prompt_teacher.txt', 'r', encoding='utf-8') as file:
+        with open("./Prompt/system_prompt_teacher.txt", "r", encoding="utf-8") as file:
             system_prompt_teacher = file.read()
 
-        response = client.chat.completions.create(
-            model= Config.MODEL,
+        response = await _chat_completion_with_infinite_retry(
+            client,
+            model=Config.MODEL,
             messages=[
                 {"role": "system", "content": system_prompt_teacher},
-                {"role": "user", "content": prompt}
+                {"role": "user", "content": prompt},
             ],
-            temperature=_temperature()
+            temperature=_temperature(),
         )
         return response.choices[0].message.content
 
@@ -358,7 +463,9 @@ class StudentAgent(BaseChatAgent):
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
         print("StudentAgent is called")
         response_text = await self.call_LLM(messages[0].content)
         response_message = TextMessage(content=response_text, source=self.name)
@@ -368,15 +475,21 @@ class StudentAgent(BaseChatAgent):
         if _is_dry_run():
             return "Solve the problem carefully and output only the final answer in the requested format."
 
-        client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
+        client = OpenAI(
+            api_key=Config.API_KEY, base_url=Config.BASE_URL, timeout=_request_timeout()
+        )
 
-        response = client.chat.completions.create(
-            model= Config.MODEL,
+        response = await _chat_completion_with_infinite_retry(
+            client,
+            model=Config.MODEL,
             messages=[
-                {"role": "system", "content": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\n Note that you should only output the new prompt you generated."},
-                {"role": "user", "content": prompt}
+                {
+                    "role": "system",
+                    "content": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\n Note that you should only output the new prompt you generated.",
+                },
+                {"role": "user", "content": prompt},
             ],
-            temperature=_temperature()
+            temperature=_temperature(),
         )
         return response.choices[0].message.content
 
@@ -386,13 +499,18 @@ class StudentAgent(BaseChatAgent):
 
 class CriticAgent(BaseChatAgent):
     def __init__(self, name: str):
-        super().__init__(name, "An critic who assesses whether a teacher's questioning is consistent with the Socratic method.")
+        super().__init__(
+            name,
+            "An critic who assesses whether a teacher's questioning is consistent with the Socratic method.",
+        )
 
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
         print("CriticAgent is called")
         teacher_question = messages[0].content
         prompt = (
@@ -402,26 +520,29 @@ class CriticAgent(BaseChatAgent):
         response_text = await self.call_LLM(prompt)
         response_message = TextMessage(content=response_text, source=self.name)
         return Response(chat_message=response_message)
-    
+
     async def call_LLM(self, prompt):
         if _is_dry_run():
             return "True"
 
-        client = OpenAI(api_key=Config.API_KEY, base_url= Config.BASE_URL)
+        client = OpenAI(
+            api_key=Config.API_KEY, base_url=Config.BASE_URL, timeout=_request_timeout()
+        )
 
-        with open('./Prompt/system_prompt_critic.txt', 'r', encoding='utf-8') as file:
+        with open("./Prompt/system_prompt_critic.txt", "r", encoding="utf-8") as file:
             system_prompt_critic = file.read()
 
-        response = client.chat.completions.create(
-            model= Config.MODEL,
+        response = await _chat_completion_with_infinite_retry(
+            client,
+            model=Config.MODEL,
             messages=[
                 {"role": "system", "content": system_prompt_critic},
-                {"role": "user", "content": prompt}
+                {"role": "user", "content": prompt},
             ],
-            temperature=_temperature()
+            temperature=_temperature(),
         )
         return response.choices[0].message.content
-    
+
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
         pass
 
@@ -436,12 +557,14 @@ class TargetAgent(BaseChatAgent):
         self.target_client = None
         self.semaphore = asyncio.Semaphore(_concurrency())
         self._printed_eval_config = False
-    
+
     @property
     def produced_message_types(self) -> List[type[ChatMessage]]:
         return [TextMessage]
 
-    async def on_messages(self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken) -> Response:
+    async def on_messages(
+        self, messages: Sequence[ChatMessage], cancellation_token: CancellationToken
+    ) -> Response:
         print("TargetAgent is called")
         self.call_count += 1
         dataset = self.load_dataset()
@@ -457,14 +580,20 @@ class TargetAgent(BaseChatAgent):
         # Record to file
         self.prompt_history.append((prompt, accuracy))
         Config.LAST_PROMPT_HISTORY = list(self.prompt_history)
-        Config.LAST_PREDICTIONS = list(getattr(Config, "LAST_PREDICTIONS", [])) + prediction_rows
+        Config.LAST_PREDICTIONS = (
+            list(getattr(Config, "LAST_PREDICTIONS", [])) + prediction_rows
+        )
         if accuracy > float(getattr(Config, "BEST_ACCURACY", -1.0)):
             Config.BEST_ACCURACY = accuracy
             Config.BEST_PROMPT = prompt
             Config.BEST_ITERATION = self.call_count
-        file_name = os.path.join("./Output", f'{Config.current_time}_prompt_accuracy_history.txt')
-        with open(file_name, 'a', encoding='utf-8') as file:
-            file.write(f"Call Count: {self.call_count}, \nPrompt: {prompt}, \nAccuracy: {accuracy}\n")
+        file_name = os.path.join(
+            "./Output", f"{Config.current_time}_prompt_accuracy_history.txt"
+        )
+        with open(file_name, "a", encoding="utf-8") as file:
+            file.write(
+                f"Call Count: {self.call_count}, \nPrompt: {prompt}, \nAccuracy: {accuracy}\n"
+            )
         _write_csv_rows(
             getattr(Config, "PREDICTIONS_PATH", None),
             [
@@ -503,7 +632,9 @@ class TargetAgent(BaseChatAgent):
         concurrency = _concurrency()
         if concurrency == 1:
             rows = []
-            for index, row in tqdm(dataset.iterrows(), total=total_count, desc="Processing questions"):
+            for index, row in tqdm(
+                dataset.iterrows(), total=total_count, desc="Processing questions"
+            ):
                 rows.append(await self.evaluate_row(prompt, index, row))
             return rows
 
@@ -512,22 +643,26 @@ class TargetAgent(BaseChatAgent):
             for index, row in dataset.iterrows()
         ]
         rows = []
-        with tqdm(total=total_count, desc=f"Processing questions (concurrency={concurrency})") as progress:
+        with tqdm(
+            total=total_count, desc=f"Processing questions (concurrency={concurrency})"
+        ) as progress:
             for completed in asyncio.as_completed(tasks):
                 rows.append(await completed)
                 progress.update(1)
         return sorted(rows, key=lambda item: item["sample_index"])
 
     async def evaluate_row(self, prompt: str, index: int, row):
-        question = row['question']
-        answer = row['answer']
+        question = row["question"]
+        answer = row["answer"]
         generated_answer = ""
         raw_answer = ""
         error = ""
         answer_format = _answer_format()
 
         if not self._printed_eval_config:
-            print(f"[EVAL_CONFIG] task answer_format={answer_format} question_type={self.question_type}")
+            print(
+                f"[EVAL_CONFIG] task answer_format={answer_format} question_type={self.question_type}"
+            )
             self._printed_eval_config = True
         print(f"answer:{answer}")
         try:
@@ -535,9 +670,13 @@ class TargetAgent(BaseChatAgent):
                 generated_answer = str(answer)
                 raw_answer = str(answer)
             elif self.question_type == "choice":
-                generated_answer, raw_answer = await self.process_choice(prompt, question)
+                generated_answer, raw_answer = await self.process_choice(
+                    prompt, question
+                )
             else:
-                generated_answer, raw_answer = await self.process_short_answer(prompt, question)
+                generated_answer, raw_answer = await self.process_short_answer(
+                    prompt, question
+                )
         except Exception as exc:
             error = f"{exc.__class__.__name__}: {exc}"
             print(f"sample_error:{error}")
@@ -546,8 +685,10 @@ class TargetAgent(BaseChatAgent):
         canonical_gold = canonical_answer(answer, answer_format)
         if not error and not is_valid_canonical(canonical_prediction, answer_format):
             error = "answer_parse_failed"
-        is_correct = bool(canonical_prediction) and canonical_prediction == canonical_gold
-        print(f'Judge:{is_correct}')
+        is_correct = (
+            bool(canonical_prediction) and canonical_prediction == canonical_gold
+        )
+        print(f"Judge:{is_correct}")
         return {
             "iteration": self.call_count,
             "sample_index": index,
@@ -572,7 +713,7 @@ class TargetAgent(BaseChatAgent):
         while retry_count < max_retries:
             try:
                 target_response = await self.call_LLM_test(
-                    prompt + '\nQuestion: ' + question + "\n " + instruction
+                    prompt + "\nQuestion: " + question + "\n " + instruction
                 )
                 print(f"response:{target_response}")
                 if target_response is None:
@@ -591,7 +732,10 @@ class TargetAgent(BaseChatAgent):
             if retry_count < max_retries:
                 await asyncio.sleep(_retry_delay(retry_count - 1))
 
-        return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
+        return (
+            "",
+            "",
+        )  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
     async def process_short_answer(self, prompt: str, question: str):
         # print("process short answer question!")
@@ -604,12 +748,14 @@ class TargetAgent(BaseChatAgent):
         while retry_count < max_retries:
             try:
                 target_response = await self.call_LLM_test(
-                    prompt + '\nQuestion: ' + question + "\n " + instruction
+                    prompt + "\nQuestion: " + question + "\n " + instruction
                 )
                 print(f"response:{target_response}")
 
                 if target_response:
-                    canonical = fallback_extract_from_raw(target_response, answer_format)
+                    canonical = fallback_extract_from_raw(
+                        target_response, answer_format
+                    )
                     if is_valid_canonical(canonical, answer_format):
                         return canonical, target_response
             except Exception as exc:
@@ -621,8 +767,10 @@ class TargetAgent(BaseChatAgent):
             if retry_count < max_retries:
                 await asyncio.sleep(_retry_delay(retry_count - 1))
 
-        return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
-
+        return (
+            "",
+            "",
+        )  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
     async def call_LLM_test(self, prompt):
         if _is_dry_run():
@@ -643,14 +791,15 @@ class TargetAgent(BaseChatAgent):
             )
 
         async with self.semaphore:
-            response = await self.target_client.chat.completions.create(
-                model= Config.MODEL,
+            response = await _async_chat_completion_with_infinite_retry(
+                self.target_client,
+                model=Config.MODEL,
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant"},
                     {"role": "user", "content": prompt},
                 ],
                 temperature=_temperature(),
-                stream=False
+                stream=False,
             )
         return response.choices[0].message.content
 
@@ -668,25 +817,24 @@ class TargetAgent(BaseChatAgent):
 
     async def on_reset(self, cancellation_token: CancellationToken) -> None:
         pass
-    
+
     def check_stop_condition(self) -> bool:
         # condition 1
         if self.call_count >= int(getattr(Config, "MAX_ITERATIONS", 10)):
             Config.LAST_STOPPED_REASON = "max_iterations"
             return True
-        
+
         # condition 2: stop when the current gain is below the paper's threshold.
         if len(self.prompt_history) >= 2:
             last_accuracy = self.prompt_history[-1][1]
             second_last_accuracy = self.prompt_history[-2][1]
             accuracy_gain = last_accuracy - second_last_accuracy
-            
+
             if accuracy_gain < float(getattr(Config, "EARLY_STOP_DELTA", 0.01)):
                 Config.LAST_STOPPED_REASON = "early_stop_delta"
                 return True
-        
-        return False
 
+        return False
 
 
 # At the end of the program run, analyze TargetAgent's history and write it to a file.
@@ -708,8 +856,11 @@ def analyze_prompt_history(prompt_history):
     max_prompt, max_accuracy = max_accuracy_record
     max_index = prompt_history.index(max_accuracy_record) + 1  # Iteration number
 
-
     print("\n\n--- Prompt History Analysis ---\n")
     print(f"First Prompt Accuracy: {first_accuracy}\n")
-    print(f"Lowest Accuracy: {min_accuracy} (Iteration: {min_index}, Prompt: {min_prompt})\n")
-    print(f"Highest Accuracy: {max_accuracy} (Iteration: {max_index}, Prompt: {max_prompt})\n")
+    print(
+        f"Lowest Accuracy: {min_accuracy} (Iteration: {min_index}, Prompt: {min_prompt})\n"
+    )
+    print(
+        f"Highest Accuracy: {max_accuracy} (Iteration: {max_index}, Prompt: {max_prompt})\n"
+    )

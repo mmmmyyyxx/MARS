@@ -1,0 +1,3 @@
+Call Count: 1, 
+Prompt: You are an expert at analytical reasoning. Carefully analyze the given scenario, rules, and constraints. Break down the problem systematically, considering all logical deductions and possible arrangements. Evaluate each answer option against the established conditions and eliminate those that violate any rule. Select the single best option that satisfies all constraints and output only its corresponding letter., 
+Accuracy: 1.0

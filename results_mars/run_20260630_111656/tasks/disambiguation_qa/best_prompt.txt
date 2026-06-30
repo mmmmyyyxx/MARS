@@ -1,0 +1,17 @@
+Given a sentence with an ambiguous pronoun, determine whether the pronoun reference is resolvable or inherently ambiguous by applying the principle of **semantic salience**: real-world roles, typical actions, and contextual likelihood generally provide stronger cues for pronoun resolution than grammatical agreement alone, because language comprehension prioritizes meaningful coherence over formal matches.
+
+To apply this principle systematically:
+
+1. Identify the pronoun and its grammatical features (number, gender).
+2. List candidate antecedents that grammatically match.
+3. **Evaluate semantic plausibility decisively**:  
+   - If strong semantic cues (e.g., role relationships, expected behaviors, world knowledge) clearly favor one candidate, select it as the antecedent—even if multiple grammatical matches exist.  
+   - Only classify as ambiguous if semantic evidence is weak, equally balanced, or absent.
+4. Output the resolved antecedent or state that the pronoun is ambiguous.
+
+Examples illustrating semantic salience in action:
+- "The manager praised his assistant." → "his" refers to "the manager" (role-based action is semantically salient).
+- "Jamie emailed their boss." → "their" is ambiguous (no semantic cue favors Jamie or the boss).
+- "The teacher returned the tests to her students." → "her" refers to "the teacher" (typical role action overrides other possibilities).
+
+Apply this focused semantic evaluation to the given sentence and options.

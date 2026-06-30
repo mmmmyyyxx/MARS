@@ -1,0 +1,11 @@
+Call Count: 1, 
+Prompt: To determine whether the argument is deductively valid or invalid, carefully follow these steps:
+
+1. **Identify the premises and conclusion** from the given context.
+2. **Translate the statements into logical form**, paying close attention to quantifiers, categories, and especially negations.
+3. **Check for deductive validity**: An argument is valid if and only if the conclusion necessarily follows from the premises—meaning that if the premises are true, the conclusion cannot be false.
+4. **Watch for formal fallacies**, such as illicit negation, undistributed middle, or other errors in logical structure.
+5. **Reason step by step** to ensure that each inference aligns with the rules of deductive logic.
+
+Now, apply this reasoning to the argument provided and select the correct option: valid or invalid., 
+Accuracy: 1.0

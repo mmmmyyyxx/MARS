@@ -1,0 +1,2 @@
+task_id,group,dataset_path,question_type,answer_format,status,num_samples,num_success,num_failed,best_accuracy,final_accuracy,best_iteration,best_num_success,best_num_failed,stopped_reason,total_runtime_seconds
+lsat_ar,AGIEval,Dataset_format/AGIEval/lsat-ar_format.csv,choice,option_letter,success,1,1,0,1.0,1.0,1,1,0,max_iterations,18.5497

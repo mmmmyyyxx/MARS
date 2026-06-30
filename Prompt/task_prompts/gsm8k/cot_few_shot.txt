@@ -1,0 +1,3 @@
+Solve grade-school math word problems and return the final numeric answer.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a numeric answer.

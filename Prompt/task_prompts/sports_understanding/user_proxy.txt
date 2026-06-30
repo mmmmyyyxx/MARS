@@ -1,0 +1,5 @@
+Here is a topic for Sports Understanding:
+Answer BIG-Bench Hard questions for Sports Understanding.
+
+The model must output the answer as yes or no.
+Generate or refine a prompt that maximizes accuracy for this task.

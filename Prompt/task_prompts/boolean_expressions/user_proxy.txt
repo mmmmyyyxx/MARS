@@ -1,0 +1,5 @@
+Here is a topic for Boolean Expressions:
+Answer BIG-Bench Hard questions for Boolean Expressions.
+
+The model must output the answer as true or false.
+Generate or refine a prompt that maximizes accuracy for this task.

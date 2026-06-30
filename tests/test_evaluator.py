@@ -17,7 +17,9 @@ class EvaluatorTest(unittest.TestCase):
         self.assertEqual(canonical_answer("(C)", "option_letter"), "(C)")
 
     def test_invalid_is_not_parsed_as_valid(self):
-        self.assertEqual(canonical_answer("This argument is invalid.", "valid_invalid"), "invalid")
+        self.assertEqual(
+            canonical_answer("This argument is invalid.", "valid_invalid"), "invalid"
+        )
 
     def test_option_letter_is_only_valid_for_option_format(self):
         self.assertFalse(is_valid_canonical("(A)", "yes_no"))

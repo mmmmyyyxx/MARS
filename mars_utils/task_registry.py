@@ -1,5 +1,5 @@
-from dataclasses import dataclass
 import os
+from dataclasses import dataclass
 from typing import Callable, Iterable, List, Optional
 
 from .config_loader import load_yaml
@@ -38,13 +38,19 @@ def resolve_tasks(
         if lowered == "all":
             selected.extend(all_tasks)
         elif lowered == "runnable":
-            selected.extend(task for task in all_tasks if is_runnable and is_runnable(task))
+            selected.extend(
+                task for task in all_tasks if is_runnable and is_runnable(task)
+            )
         elif lowered == "bbh":
             selected.extend(task for task in all_tasks if task.group.upper() == "BBH")
         elif lowered == "mmlu":
             selected.extend(task for task in all_tasks if task.group.upper() == "MMLU")
         elif lowered == "domain":
-            selected.extend(task for task in all_tasks if task.group.upper() in {"C-EVAL", "GSM8K", "AGIEVAL"})
+            selected.extend(
+                task
+                for task in all_tasks
+                if task.group.upper() in {"C-EVAL", "GSM8K", "AGIEVAL"}
+            )
         else:
             selected.extend(task for task in all_tasks if task.task_id == lowered)
 

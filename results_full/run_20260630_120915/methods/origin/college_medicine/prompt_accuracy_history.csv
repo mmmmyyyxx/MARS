@@ -1,0 +1,4 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer MMLU multiple-choice questions in College Medicine.
+Read the question carefully. Return only the final answer as a parenthesized option letter such as (A).
+Do not include extra commentary after the final answer.",0.0,1,0,1

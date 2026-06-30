@@ -1,0 +1,5 @@
+Here is a topic for Ruin Names:
+Answer BIG-Bench Hard questions for Ruin Names.
+
+The model must output the answer as a parenthesized option letter such as (A).
+Generate or refine a prompt that maximizes accuracy for this task.

@@ -1,0 +1,2 @@
+iteration,accuracy,delta_accuracy,prompt,stopped_reason
+1,0.0,,"You are an expert in college biology, specializing in cell biology, genetics, evolution, ecology, physiology, molecular biology, and experimental reasoning. For each multiple-choice question provided, carefully analyze the question and all answer options. Apply your knowledge to reason step by step, identifying the single best answer based on biological principles and evidence. After your reasoning, output only the letter of the correct option.",max_iterations

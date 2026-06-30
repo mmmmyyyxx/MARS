@@ -1,0 +1,6 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"""Here comes a perfectly valid argument: Sophie is an infrequent user of Nioxin shampoo. Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo. In consequence, Sophie is a frequent consumer of Schwarzkopf shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,Final answer: valid,valid,valid,True,valid_invalid,,protegi,formal_fallacies,1

@@ -1,0 +1,201 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"""Here comes a perfectly valid argument: Sophie is an infrequent user of Nioxin shampoo. Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo. In consequence, Sophie is a frequent consumer of Schwarzkopf shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,1,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First, Jonathan is a regular consumer of Eucalyptus soap. Second, being an owner of a Lever soap or not being a regular consumer of Eucalyptus soap is sufficient for being a frequent consumer of Herbal Essences shampoo. We may conclude that Jonathan is not a frequent consumer of Herbal Essences shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,2,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First, being a frequent consumer of Bed Head shampoo is necessary for being an owner of a TRESemmé shampoo. Second, no occasional purchaser of Burt's Bees shampoo is a frequent consumer of Bed Head shampoo. In consequence, no owner of a TRESemmé shampoo is an occasional purchaser of Burt's Bees shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,3,"""Here comes a perfectly valid argument: First of all, being an ingredient of Gorgeous is necessary for not being an ingredient of Baked Eyeshadow. Next, something is not an ingredient of Gorgeous and, in addition, not an ingredient of Coverage Duo or not an ingredient of Deternined. Hence, there is something that is an ingredient of Baked Eyeshadow and not both an ingredient of Coverage Duo and an ingredient of Deternined.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,invalid,invalid,valid,valid_invalid,False,
+1,4,"""Here comes a perfectly valid argument: First premise: No son of Alexander who is an ancestor of Ahmed is a great-grandfather of Ronny. It follows that no great-grandfather of Ronny is an ancestor of Ahmed or a son of Alexander.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,5,"""Here comes a perfectly valid argument: First premise: Being an ancestor of Ana is sufficient for being a sister of Margie. Second premise: Every schoolmate of Guadalupe is an ancestor of Ana or an aunt of Peggy or a cousin of Diane. Third premise: Everyone who is an aunt of Peggy is a sister of Margie, too. Hence, to be a sister of Margie or a cousin of Diane is necessary for being a schoolmate of Guadalupe.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,6,"""It is not always easy to see who is related to whom -- and in which ways. The following argument pertains to this question: First, being a daughter of Marjorie is sufficient for not being a cousin of Carole. Second, not every aunt of Tracey is a cousin of Carole. Therefore, some aunt of Tracey is a daughter of Marjorie.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,7,"""Consumer research aims at understanding whether users of some products also tend to consume other ones, or not. The following argument seeks to clarify some such relations: To start with, being a regular consumer of Lever soap is necessary for being a frequent consumer of Nubian Heritage soap. Now, every regular consumer of Lever soap is not a regular user of Biolage shampoo or not a loyal buyer of Lush soap. We may conclude: Everyone who is a frequent consumer of Nubian Heritage soap is also a loyal buyer of Lush soap and a regular user of Biolage shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,8,"""Some football fans admire various clubs, others love only a single team. But who is a fan of whom precisely? The following argument pertains to this question: First, every expert of PFC Ludogorets 1945 is an ex-fan of KF Skënderbeu. Second, every expert of PFC Ludogorets 1945 is an opponent to OGC Nice. Third, some fan of Burnley FC is an opponent to OGC Nice and an ex-fan of KF Skënderbeu. It follows that some fan of Burnley FC is an expert of PFC Ludogorets 1945.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,9,"""Here comes a perfectly valid argument: First of all, whoever is a schoolmate of Sondra is not a stepsister of Pricilla. In consequence, whoever is not a stepsister of Pricilla is a schoolmate of Sondra.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,10,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First of all, every regular consumer of Bumble and bumble shampoo is a rare consumer of Vaseline soap. Next, whoever is not an occasional purchaser of Organic Fiji soap is a regular consumer of Bumble and bumble shampoo. From this follows: Being a rare consumer of Vaseline soap is necessary for not being an occasional purchaser of Organic Fiji soap.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,11,"""Some football fans admire various clubs, others love only a single team. But who is a fan of whom precisely? The following argument pertains to this question: Every expert of AS Saint-Étienne is an admirer of FC Krasnodar. Every ex-fan of FC Sion is not an expert of AS Saint-Étienne or not an ex-fan of Osmanlıspor. Being an admirer of FC Krasnodar is necessary for being an ex-fan of Osmanlıspor. We may conclude: Being an ex-fan of FC Sion is sufficient for being an admirer of FC Krasnodar.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,12,"""Here comes a perfectly valid argument: First premise: Whoever is an occasional purchaser of Suave shampoo is not a regular user of Ivory soap. We may conclude that being a regular user of Ivory soap is sufficient for not being an occasional purchaser of Suave shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,13,"""Here comes a perfectly valid argument: To start with, everyone who is both a rare consumer of Pantene shampoo and an occasional purchaser of Herbal Essences shampoo is a frequent consumer of Tom's of Maine soap or a regular user of Mysore soap. Now, every frequent consumer of Tom's of Maine soap is neither a rare consumer of Pantene shampoo nor an occasional purchaser of Herbal Essences shampoo. We may conclude that everyone who is not both a rare consumer of Pantene shampoo and an occasional purchaser of Herbal Essences shampoo is however a regular user of Mysore soap.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,14,"""Here comes a perfectly valid argument: First, being an ex-supporter of FC Sion is necessary for being a devotee of FK Kukësi. Second, it is not the case that Kylie is an ex-supporter of FC Sion. So, necessarily, it is false that Kylie is a devotee of FK Kukësi.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,15,"""Here comes a perfectly valid argument: First of all, every frequent consumer of Pre De Provence soap is not a rare consumer of Aussie shampoo and not a frequent consumer of Bio Ionic shampoo. From this follows: No frequent consumer of Bio Ionic shampoo and no rare consumer of Aussie shampoo is a frequent consumer of Pre De Provence soap.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,16,"""Is Titanium oxide an ingredient of my washing power? Which chemicals does my perfume contain? It is really difficult to keep track of all chemicals one is regularly exposed to. The following argument seeks to clarify some such relations: To start with, some ingredient of The Eraser is an ingredient of Lip pencil. Now, everything that is not both an ingredient of Full-On Lipstick and an ingredient of Lollibalm is however an ingredient of Lip pencil. We may conclude: Some ingredient of The Eraser is not both an ingredient of Full-On Lipstick and an ingredient of Lollibalm.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,valid,valid,invalid,valid_invalid,False,
+1,17,"""Here comes a perfectly valid argument: First of all, nobody is neither a classmate of Marisa nor a schoolmate of Karen. Next, not every sister of Ruth is a schoolmate of Karen. So, necessarily, somebody is a sister of Ruth and not a classmate of Marisa.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+1,18,"""Here comes a perfectly valid argument: To start with, if something is not an ingredient of Skin Tint FX, then that thing is not an ingredient of NYC Nail Glossies or not an ingredient of Eyebrow Kit. Now, being an ingredient of Eyebrow Kit is necessary for not being an ingredient of EYE SHADOW No 101. Moreover, whatever is not an ingredient of EYE SHADOW No 101 is an ingredient of NYC Nail Glossies. So, necessarily, nothing is neither an ingredient of EYE SHADOW No 101 nor an ingredient of Skin Tint FX.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+1,19,"""Here comes a perfectly valid argument: First premise: Whatever is ingredient of Concealer is at least one of these: an ingredient of HEART SHAPED BALM, an ingredient of Goth Fairy or an ingredient of Love Me Like A Wimp. Second premise: Being an ingredient of Clarifying Mask is necessary for being an ingredient of Goth Fairy. Third premise: Being an ingredient of HEART SHAPED BALM is sufficient for being an ingredient of Clarifying Mask. Fourth premise: Every ingredient of Love Me Like A Wimp is an ingredient of Clarifying Mask. So, necessarily, being an ingredient of Concealer is sufficient for being an ingredient of Clarifying Mask.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,0,"""Here comes a perfectly valid argument: Sophie is an infrequent user of Nioxin shampoo. Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo. In consequence, Sophie is a frequent consumer of Schwarzkopf shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,1,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First, Jonathan is a regular consumer of Eucalyptus soap. Second, being an owner of a Lever soap or not being a regular consumer of Eucalyptus soap is sufficient for being a frequent consumer of Herbal Essences shampoo. We may conclude that Jonathan is not a frequent consumer of Herbal Essences shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,2,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First, being a frequent consumer of Bed Head shampoo is necessary for being an owner of a TRESemmé shampoo. Second, no occasional purchaser of Burt's Bees shampoo is a frequent consumer of Bed Head shampoo. In consequence, no owner of a TRESemmé shampoo is an occasional purchaser of Burt's Bees shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,3,"""Here comes a perfectly valid argument: First of all, being an ingredient of Gorgeous is necessary for not being an ingredient of Baked Eyeshadow. Next, something is not an ingredient of Gorgeous and, in addition, not an ingredient of Coverage Duo or not an ingredient of Deternined. Hence, there is something that is an ingredient of Baked Eyeshadow and not both an ingredient of Coverage Duo and an ingredient of Deternined.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,invalid,invalid,valid,valid_invalid,False,
+2,4,"""Here comes a perfectly valid argument: First premise: No son of Alexander who is an ancestor of Ahmed is a great-grandfather of Ronny. It follows that no great-grandfather of Ronny is an ancestor of Ahmed or a son of Alexander.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,5,"""Here comes a perfectly valid argument: First premise: Being an ancestor of Ana is sufficient for being a sister of Margie. Second premise: Every schoolmate of Guadalupe is an ancestor of Ana or an aunt of Peggy or a cousin of Diane. Third premise: Everyone who is an aunt of Peggy is a sister of Margie, too. Hence, to be a sister of Margie or a cousin of Diane is necessary for being a schoolmate of Guadalupe.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,6,"""It is not always easy to see who is related to whom -- and in which ways. The following argument pertains to this question: First, being a daughter of Marjorie is sufficient for not being a cousin of Carole. Second, not every aunt of Tracey is a cousin of Carole. Therefore, some aunt of Tracey is a daughter of Marjorie.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,7,"""Consumer research aims at understanding whether users of some products also tend to consume other ones, or not. The following argument seeks to clarify some such relations: To start with, being a regular consumer of Lever soap is necessary for being a frequent consumer of Nubian Heritage soap. Now, every regular consumer of Lever soap is not a regular user of Biolage shampoo or not a loyal buyer of Lush soap. We may conclude: Everyone who is a frequent consumer of Nubian Heritage soap is also a loyal buyer of Lush soap and a regular user of Biolage shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,8,"""Some football fans admire various clubs, others love only a single team. But who is a fan of whom precisely? The following argument pertains to this question: First, every expert of PFC Ludogorets 1945 is an ex-fan of KF Skënderbeu. Second, every expert of PFC Ludogorets 1945 is an opponent to OGC Nice. Third, some fan of Burnley FC is an opponent to OGC Nice and an ex-fan of KF Skënderbeu. It follows that some fan of Burnley FC is an expert of PFC Ludogorets 1945.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,9,"""Here comes a perfectly valid argument: First of all, whoever is a schoolmate of Sondra is not a stepsister of Pricilla. In consequence, whoever is not a stepsister of Pricilla is a schoolmate of Sondra.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,10,"""It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First of all, every regular consumer of Bumble and bumble shampoo is a rare consumer of Vaseline soap. Next, whoever is not an occasional purchaser of Organic Fiji soap is a regular consumer of Bumble and bumble shampoo. From this follows: Being a rare consumer of Vaseline soap is necessary for not being an occasional purchaser of Organic Fiji soap.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,11,"""Some football fans admire various clubs, others love only a single team. But who is a fan of whom precisely? The following argument pertains to this question: Every expert of AS Saint-Étienne is an admirer of FC Krasnodar. Every ex-fan of FC Sion is not an expert of AS Saint-Étienne or not an ex-fan of Osmanlıspor. Being an admirer of FC Krasnodar is necessary for being an ex-fan of Osmanlıspor. We may conclude: Being an ex-fan of FC Sion is sufficient for being an admirer of FC Krasnodar.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,12,"""Here comes a perfectly valid argument: First premise: Whoever is an occasional purchaser of Suave shampoo is not a regular user of Ivory soap. We may conclude that being a regular user of Ivory soap is sufficient for not being an occasional purchaser of Suave shampoo.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,13,"""Here comes a perfectly valid argument: To start with, everyone who is both a rare consumer of Pantene shampoo and an occasional purchaser of Herbal Essences shampoo is a frequent consumer of Tom's of Maine soap or a regular user of Mysore soap. Now, every frequent consumer of Tom's of Maine soap is neither a rare consumer of Pantene shampoo nor an occasional purchaser of Herbal Essences shampoo. We may conclude that everyone who is not both a rare consumer of Pantene shampoo and an occasional purchaser of Herbal Essences shampoo is however a regular user of Mysore soap.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,14,"""Here comes a perfectly valid argument: First, being an ex-supporter of FC Sion is necessary for being a devotee of FK Kukësi. Second, it is not the case that Kylie is an ex-supporter of FC Sion. So, necessarily, it is false that Kylie is a devotee of FK Kukësi.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,15,"""Here comes a perfectly valid argument: First of all, every frequent consumer of Pre De Provence soap is not a rare consumer of Aussie shampoo and not a frequent consumer of Bio Ionic shampoo. From this follows: No frequent consumer of Bio Ionic shampoo and no rare consumer of Aussie shampoo is a frequent consumer of Pre De Provence soap.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,16,"""Is Titanium oxide an ingredient of my washing power? Which chemicals does my perfume contain? It is really difficult to keep track of all chemicals one is regularly exposed to. The following argument seeks to clarify some such relations: To start with, some ingredient of The Eraser is an ingredient of Lip pencil. Now, everything that is not both an ingredient of Full-On Lipstick and an ingredient of Lollibalm is however an ingredient of Lip pencil. We may conclude: Some ingredient of The Eraser is not both an ingredient of Full-On Lipstick and an ingredient of Lollibalm.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,valid,valid,invalid,valid_invalid,False,
+2,17,"""Here comes a perfectly valid argument: First of all, nobody is neither a classmate of Marisa nor a schoolmate of Karen. Next, not every sister of Ruth is a schoolmate of Karen. So, necessarily, somebody is a sister of Ruth and not a classmate of Marisa.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",invalid,invalid,invalid,invalid,valid_invalid,True,
+2,18,"""Here comes a perfectly valid argument: To start with, if something is not an ingredient of Skin Tint FX, then that thing is not an ingredient of NYC Nail Glossies or not an ingredient of Eyebrow Kit. Now, being an ingredient of Eyebrow Kit is necessary for not being an ingredient of EYE SHADOW No 101. Moreover, whatever is not an ingredient of EYE SHADOW No 101 is an ingredient of NYC Nail Glossies. So, necessarily, nothing is neither an ingredient of EYE SHADOW No 101 nor an ingredient of Skin Tint FX.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,
+2,19,"""Here comes a perfectly valid argument: First premise: Whatever is ingredient of Concealer is at least one of these: an ingredient of HEART SHAPED BALM, an ingredient of Goth Fairy or an ingredient of Love Me Like A Wimp. Second premise: Being an ingredient of Clarifying Mask is necessary for being an ingredient of Goth Fairy. Third premise: Being an ingredient of HEART SHAPED BALM is sufficient for being an ingredient of Clarifying Mask. Fourth premise: Every ingredient of Love Me Like A Wimp is an ingredient of Clarifying Mask. So, necessarily, being an ingredient of Concealer is sufficient for being an ingredient of Clarifying Mask.""
+Is the argument, given the explicitly stated premises, deductively valid or invalid?
+Options:
+- valid 
+- invalid",valid,valid,valid,valid,valid_invalid,True,

@@ -1,0 +1,4 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer BIG-Bench Hard questions for Formal Fallacies.
+Read the question carefully. Return only the final answer as valid or invalid.
+Do not include extra commentary after the final answer.",1.0,1,1,0

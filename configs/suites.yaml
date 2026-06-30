@@ -1,0 +1,75 @@
+main:
+  tasks: all
+  methods:
+    - origin
+    - cot_zs
+    - cot_fs
+    - ape
+    - protegi
+    - opro
+    - pe2
+    - mars
+ablation:
+  tasks:
+    - boolean_expressions
+    - disambiguation_qa
+    - formal_fallacies
+    - geometric_shapes
+    - ruin_names
+    - sports_understanding
+  methods:
+    - mars
+    - mars_wo_plan
+    - mars_wo_soc
+    - mars_wo_critic
+efficiency:
+  tasks:
+    - boolean_expressions
+    - geometric_shapes
+    - ruin_names
+    - sports_understanding
+  methods:
+    - origin
+    - cot_zs
+    - ape
+    - protegi
+    - opro
+    - pe2
+    - mars
+convergence:
+  tasks:
+    - boolean_expressions
+    - geometric_shapes
+    - ruin_names
+    - sports_understanding
+  methods:
+    - mars
+    - opro
+    - protegi
+    - ape
+    - pe2
+transfer:
+  tasks:
+    - boolean_expressions
+    - disambiguation_qa
+    - formal_fallacies
+    - geometric_shapes
+    - ruin_names
+    - sports_understanding
+  methods:
+    - origin
+    - cot_zs
+    - mars
+all:
+  includes:
+    - main
+    - ablation
+    - efficiency
+    - convergence
+    - transfer
+convergence_tasks:
+  - boolean_expressions
+  - geometric_shapes
+  - ruin_names
+  - sports_understanding
+

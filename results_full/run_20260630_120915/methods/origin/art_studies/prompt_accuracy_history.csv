@@ -1,0 +1,4 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer Chinese C-Eval multiple-choice questions in Art Studies.
+Read the question carefully. Return only the final answer as a parenthesized option letter such as (A).
+Do not include extra commentary after the final answer.",1.0,1,1,0

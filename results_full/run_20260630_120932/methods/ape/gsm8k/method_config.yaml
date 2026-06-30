@@ -1,0 +1,11 @@
+display_name: APE
+type: optimization
+num_candidates: 20
+candidate_batch_size: 5
+selection_metric: accuracy
+exactness: APE_reimplementation
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0

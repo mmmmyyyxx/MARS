@@ -1,0 +1,2 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,not False and not not True and True is,True,True,true,true,boolean,True,

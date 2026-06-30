@@ -25,8 +25,12 @@ def parse_prompt_sections(path: str) -> Dict[str, str]:
 class PromptManager:
     def __init__(self, prompt_dir: str):
         self.prompt_dir = prompt_dir
-        self.user_sections = parse_prompt_sections(os.path.join(prompt_dir, "ALL_userproxy_task_input.md"))
-        self.planner_sections = parse_prompt_sections(os.path.join(prompt_dir, "ALL_prompt_planner_template.md"))
+        self.user_sections = parse_prompt_sections(
+            os.path.join(prompt_dir, "ALL_userproxy_task_input.md")
+        )
+        self.planner_sections = parse_prompt_sections(
+            os.path.join(prompt_dir, "ALL_prompt_planner_template.md")
+        )
 
     def get_user_prompt(self, key: str) -> str:
         normalized = normalize_key(key)

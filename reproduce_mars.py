@@ -1,10 +1,10 @@
 import argparse
 import csv
-from dataclasses import asdict
-from copy import copy
 import os
 import random
 import time
+from copy import copy
+from dataclasses import asdict
 from typing import Any, Dict, List, Optional
 
 from mars_utils.config_loader import load_config
@@ -25,13 +25,18 @@ from mars_utils.result_writer import (
 from mars_utils.run_logger import append_error
 from mars_utils.task_registry import dataset_exists, load_tasks, resolve_tasks
 
-
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run one-command MARS reproduction tasks.")
-    parser.add_argument("--tasks", default="all", help="Task id, comma list, or group: all, bbh, mmlu, domain.")
+    parser = argparse.ArgumentParser(
+        description="Run one-command MARS reproduction tasks."
+    )
+    parser.add_argument(
+        "--tasks",
+        default="all",
+        help="Task id, comma list, or group: all, bbh, mmlu, domain.",
+    )
     parser.add_argument("--config", default="configs/mars_default.yaml")
     parser.add_argument("--task-config", default="configs/mars_tasks.yaml")
     parser.add_argument("--api-key-env")
@@ -42,14 +47,36 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--early-stop-delta", type=float)
     parser.add_argument("--max-critic-revisions", type=int)
     parser.add_argument("--concurrency", type=int)
-    parser.add_argument("--max-samples", type=int, help="Limit samples per task for quick debugging runs.")
-    parser.add_argument("--max-answer-retries", type=int, help="Retries for extracting a valid answer from each sample.")
-    parser.add_argument("--request-timeout", type=float, help="Per-request timeout in seconds.")
+    parser.add_argument(
+        "--max-samples",
+        type=int,
+        help="Limit samples per task for quick debugging runs.",
+    )
+    parser.add_argument(
+        "--max-answer-retries",
+        type=int,
+        help="Retries for extracting a valid answer from each sample.",
+    )
+    parser.add_argument(
+        "--request-timeout", type=float, help="Per-request timeout in seconds."
+    )
     parser.add_argument("--output-dir")
     parser.add_argument("--seed", type=int)
-    parser.add_argument("--runnable-only", action="store_true", help="Run only registered tasks whose dataset and prompts are available.")
-    parser.add_argument("--preflight", action="store_true", help="Only report task readiness without running MARS.")
-    parser.add_argument("--smoke-test", action="store_true", help="Run all selected tasks with max_samples=20 unless already set.")
+    parser.add_argument(
+        "--runnable-only",
+        action="store_true",
+        help="Run only registered tasks whose dataset and prompts are available.",
+    )
+    parser.add_argument(
+        "--preflight",
+        action="store_true",
+        help="Only report task readiness without running MARS.",
+    )
+    parser.add_argument(
+        "--smoke-test",
+        action="store_true",
+        help="Run all selected tasks with max_samples=20 unless already set.",
+    )
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
@@ -69,7 +96,9 @@ def effective_num_samples(total_samples: int, max_samples: Optional[int]) -> int
     return min(total_samples, max(int(max_samples), 1))
 
 
-def failed_summary_row(task, status: str, reason: str, runtime: float, num_samples: int = 0) -> Dict[str, Any]:
+def failed_summary_row(
+    task, status: str, reason: str, runtime: float, num_samples: int = 0
+) -> Dict[str, Any]:
     return {
         "task_id": task.task_id,
         "group": task.group,
@@ -90,7 +119,9 @@ def failed_summary_row(task, status: str, reason: str, runtime: float, num_sampl
     }
 
 
-def _best_counts_for_iteration(predictions: List[Dict[str, Any]], best_iteration: Any) -> Dict[str, Any]:
+def _best_counts_for_iteration(
+    predictions: List[Dict[str, Any]], best_iteration: Any
+) -> Dict[str, Any]:
     try:
         iteration = int(best_iteration)
     except (TypeError, ValueError):
@@ -137,28 +168,43 @@ def success_summary_row(task, run_result: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def prepare_task_files(task_dir: str, task, config, user_prompt: Optional[str], planner_prompt: Optional[str]) -> None:
-    write_yaml(os.path.join(task_dir, "config.yaml"), {
-        "task": asdict(task),
-        "task_id": task.task_id,
-        "question_type": task.question_type,
-        "answer_format": task.answer_format,
-        "dataset_path": task.dataset_path,
-        "model": config.model,
-        "temperature": config.temperature,
-        "max_iterations": config.max_iterations,
-        "early_stop_delta": config.early_stop_delta,
-        "concurrency": config.concurrency,
-        "max_samples": config.max_samples,
-        "max_answer_retries": config.max_answer_retries,
-        "request_timeout": config.request_timeout,
-        "dry_run": config.dry_run,
-    })
+def prepare_task_files(
+    task_dir: str,
+    task,
+    config,
+    user_prompt: Optional[str],
+    planner_prompt: Optional[str],
+) -> None:
+    write_yaml(
+        os.path.join(task_dir, "config.yaml"),
+        {
+            "task": asdict(task),
+            "task_id": task.task_id,
+            "question_type": task.question_type,
+            "answer_format": task.answer_format,
+            "dataset_path": task.dataset_path,
+            "model": config.model,
+            "temperature": config.temperature,
+            "max_iterations": config.max_iterations,
+            "early_stop_delta": config.early_stop_delta,
+            "concurrency": config.concurrency,
+            "max_samples": config.max_samples,
+            "max_answer_retries": config.max_answer_retries,
+            "request_timeout": config.request_timeout,
+            "dry_run": config.dry_run,
+        },
+    )
     if user_prompt is not None:
         write_text(os.path.join(task_dir, "user_prompt.txt"), user_prompt)
     if planner_prompt is not None:
         write_text(os.path.join(task_dir, "planner_prompt.txt"), planner_prompt)
-    for filename in ("errors.jsonl", "raw_logs.txt", "final_prompt.txt", "best_prompt.txt", "diagnostics.md"):
+    for filename in (
+        "errors.jsonl",
+        "raw_logs.txt",
+        "final_prompt.txt",
+        "best_prompt.txt",
+        "diagnostics.md",
+    ):
         path = os.path.join(task_dir, filename)
         if not os.path.exists(path):
             write_text(path, "")
@@ -178,20 +224,30 @@ def preflight_rows(tasks, prompt_manager: PromptManager) -> List[Dict[str, Any]]
             prompt_manager.get_planner_prompt(task.planner_prompt_key)
         except KeyError:
             planner_prompt_ok = False
-        rows.append({
-            "task_id": task.task_id,
-            "group": task.group,
-            "dataset_exists": dataset_ok,
-            "user_prompt_exists": user_prompt_ok,
-            "planner_prompt_exists": planner_prompt_ok,
-            "answer_format": task.answer_format,
-            "runnable": dataset_ok and user_prompt_ok and planner_prompt_ok,
-        })
+        rows.append(
+            {
+                "task_id": task.task_id,
+                "group": task.group,
+                "dataset_exists": dataset_ok,
+                "user_prompt_exists": user_prompt_ok,
+                "planner_prompt_exists": planner_prompt_ok,
+                "answer_format": task.answer_format,
+                "runnable": dataset_ok and user_prompt_ok and planner_prompt_ok,
+            }
+        )
     return rows
 
 
 def print_preflight(rows: List[Dict[str, Any]]) -> None:
-    fieldnames = ["task_id", "group", "dataset_exists", "user_prompt_exists", "planner_prompt_exists", "answer_format", "runnable"]
+    fieldnames = [
+        "task_id",
+        "group",
+        "dataset_exists",
+        "user_prompt_exists",
+        "planner_prompt_exists",
+        "answer_format",
+        "runnable",
+    ]
     print(",".join(fieldnames))
     for row in rows:
         print(",".join(str(row[field]) for field in fieldnames))
@@ -247,7 +303,9 @@ def main() -> int:
     run_dir = make_run_dir(os.path.join(ROOT_DIR, config.output_dir))
     config_to_write = asdict(config)
     config_to_write["api_key_value"] = "<from environment>" if config.api_key else None
-    config_to_write["base_url_value"] = "<from environment>" if config.base_url else None
+    config_to_write["base_url_value"] = (
+        "<from environment>" if config.base_url else None
+    )
     write_yaml(os.path.join(run_dir, "config.yaml"), config_to_write)
 
     summary_rows: List[Dict[str, Any]] = []
@@ -257,37 +315,71 @@ def main() -> int:
         task_dir = os.path.join(run_dir, "tasks", task.task_id)
         os.makedirs(task_dir, exist_ok=True)
         dataset_path = os.path.join(ROOT_DIR, task.dataset_path)
-        num_samples = effective_num_samples(count_dataset_samples(dataset_path), config.max_samples)
+        num_samples = effective_num_samples(
+            count_dataset_samples(dataset_path), config.max_samples
+        )
         user_prompt = None
         planner_prompt = None
 
         if not dataset_exists(task, ROOT_DIR):
-            append_error(task_dir, "missing_dataset", f"Dataset not found: {task.dataset_path}")
+            append_error(
+                task_dir, "missing_dataset", f"Dataset not found: {task.dataset_path}"
+            )
             prepare_task_files(task_dir, task, config, user_prompt, planner_prompt)
-            summary_rows.append(failed_summary_row(task, "missing_dataset", "missing_dataset", time.time() - task_start))
+            summary_rows.append(
+                failed_summary_row(
+                    task, "missing_dataset", "missing_dataset", time.time() - task_start
+                )
+            )
             continue
 
         try:
             user_prompt = prompt_manager.get_user_prompt(task.user_prompt_key)
             planner_prompt = prompt_manager.get_planner_prompt(task.planner_prompt_key)
         except KeyError as exc:
-            append_error(task_dir, "missing_prompt", str(exc), {
-                "user_prompt_key": task.user_prompt_key,
-                "planner_prompt_key": task.planner_prompt_key,
-            })
+            append_error(
+                task_dir,
+                "missing_prompt",
+                str(exc),
+                {
+                    "user_prompt_key": task.user_prompt_key,
+                    "planner_prompt_key": task.planner_prompt_key,
+                },
+            )
             prepare_task_files(task_dir, task, config, user_prompt, planner_prompt)
-            summary_rows.append(failed_summary_row(task, "failed", "missing_prompt", time.time() - task_start, num_samples))
+            summary_rows.append(
+                failed_summary_row(
+                    task,
+                    "failed",
+                    "missing_prompt",
+                    time.time() - task_start,
+                    num_samples,
+                )
+            )
             continue
 
         prepare_task_files(task_dir, task, config, user_prompt, planner_prompt)
 
         if not config.dry_run and not config.api_key:
-            append_error(task_dir, "missing_api_key", f"Environment variable {config.api_key_env} is not set.")
-            summary_rows.append(failed_summary_row(task, "failed", "missing_api_key", time.time() - task_start, num_samples))
+            append_error(
+                task_dir,
+                "missing_api_key",
+                f"Environment variable {config.api_key_env} is not set.",
+            )
+            summary_rows.append(
+                failed_summary_row(
+                    task,
+                    "failed",
+                    "missing_api_key",
+                    time.time() - task_start,
+                    num_samples,
+                )
+            )
             continue
 
         try:
             from main_MARS import run_mars_task
+
             task_config = copy(config)
             task_config.answer_format = task.answer_format
 
@@ -302,22 +394,39 @@ def main() -> int:
             )
             history = run_result.get("prompt_history", [])
             stopped_reason = run_result.get("stopped_reason", "completed")
-            write_prompt_history(os.path.join(task_dir, "prompt_accuracy_history.csv"), history, stopped_reason)
+            write_prompt_history(
+                os.path.join(task_dir, "prompt_accuracy_history.csv"),
+                history,
+                stopped_reason,
+            )
             final_prompt = history[-1][0] if history else ""
             best_prompt = run_result.get("best_prompt", "")
             if not best_prompt and history:
                 best_prompt = max(history, key=lambda item: item[1])[0]
             write_text(os.path.join(task_dir, "final_prompt.txt"), final_prompt)
             write_text(os.path.join(task_dir, "best_prompt.txt"), best_prompt)
-            diagnostics = build_diagnostics_markdown(task.task_id, run_result.get("predictions", []))
-            final_metrics = compute_final_metrics_from_predictions(run_result.get("predictions", []))
+            diagnostics = build_diagnostics_markdown(
+                task.task_id, run_result.get("predictions", [])
+            )
+            final_metrics = compute_final_metrics_from_predictions(
+                run_result.get("predictions", [])
+            )
             write_text(os.path.join(task_dir, "diagnostics.md"), diagnostics)
             summary_rows.append(success_summary_row(task, run_result))
         except Exception as exc:
-            append_error(task_dir, "task_failed", str(exc), {"exception_class": exc.__class__.__name__})
+            append_error(
+                task_dir,
+                "task_failed",
+                str(exc),
+                {"exception_class": exc.__class__.__name__},
+            )
             write_text(os.path.join(task_dir, "final_prompt.txt"), "")
             write_text(os.path.join(task_dir, "best_prompt.txt"), "")
-            summary_rows.append(failed_summary_row(task, "failed", "task_failed", time.time() - task_start, num_samples))
+            summary_rows.append(
+                failed_summary_row(
+                    task, "failed", "task_failed", time.time() - task_start, num_samples
+                )
+            )
             continue
 
     write_summary(run_dir, summary_rows)

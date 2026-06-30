@@ -1,0 +1,3 @@
+Answer BIG-Bench Hard questions for Sports Understanding.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: yes or no.

@@ -1,0 +1,18 @@
+Given a sentence with an ambiguous pronoun, determine whether the pronoun reference is clear or ambiguous by following these structured reasoning steps:
+
+1. **Identify the pronoun** and its grammatical features (number, gender, person).
+2. **List candidate antecedents** that match the pronoun grammatically.
+3. **Evaluate each candidate** using two key criteria:
+   - **Semantic plausibility**: Does the antecedent logically fit the action or description in the sentence, based only on explicit information in the sentence?
+   - **Contextual likelihood**: Based on explicit roles, relationships, or discourse coherence *stated or clearly implied within the sentence*, is one candidate more likely than others? (Avoid relying on external world knowledge not present in the sentence.)
+4. **Weigh evidence**:
+   - If one candidate is strongly supported by both semantic plausibility and contextual likelihood, select it as the antecedent.
+   - If semantic plausibility alone is insufficient (i.e., multiple candidates are semantically plausible) and contextual likelihood does not strongly favor one candidate based on sentence-internal evidence, classify as ambiguous.
+5. **Final decision**: Only if contextual likelihood provides a strong, sentence-internal preference (e.g., explicit role relationships like "the teacher" for "her students" where the sentence explicitly mentions both) should you resolve the ambiguity; otherwise, default to ambiguous.
+
+Examples:
+- "The manager praised his assistant." → "his" refers to "manager" (semantic and contextual support from explicit role relationship in the sentence).
+- "Jamie emailed their boss." → Ambiguous (both Jamie and boss are semantically plausible, no strong contextual cue within the sentence).
+- "The teacher returned the tests to her students." → "her" refers to "teacher" (explicit role relationship stated in the sentence).
+
+Apply this reasoning to the given sentence and options, focusing only on information present in the sentence.

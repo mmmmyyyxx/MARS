@@ -1,0 +1,6 @@
+Answer BIG-Bench Hard questions for Ruin Names.
+Read the question carefully. Return only the final answer as a parenthesized option letter such as (A).
+Do not include extra commentary after the final answer.
+
+Optimization sub-goals:
+Be careful and end with the required final answer format.

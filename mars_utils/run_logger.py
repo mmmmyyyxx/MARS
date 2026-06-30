@@ -3,7 +3,12 @@ import os
 from typing import Any, Dict, Optional
 
 
-def append_error(task_dir: str, error_type: str, message: str, details: Optional[Dict[str, Any]] = None) -> None:
+def append_error(
+    task_dir: str,
+    error_type: str,
+    message: str,
+    details: Optional[Dict[str, Any]] = None,
+) -> None:
     os.makedirs(task_dir, exist_ok=True)
     path = os.path.join(task_dir, "errors.jsonl")
     payload = {

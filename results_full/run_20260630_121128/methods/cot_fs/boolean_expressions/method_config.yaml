@@ -1,0 +1,9 @@
+display_name: CoT(FS)
+type: direct
+num_shots: 3
+exactness: best_effort_reimplementation
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0

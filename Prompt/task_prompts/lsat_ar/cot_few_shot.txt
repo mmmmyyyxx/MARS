@@ -1,0 +1,3 @@
+Solve LSAT analytical reasoning questions by applying the stated logical constraints.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).

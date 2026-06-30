@@ -1,0 +1,9 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"The study of older adults and aging is referred to as
+
+Options:
+(A)Gerontology
+(B)Geropsychiatry
+(C)Geriatrics
+(D)Gero-education
+",(A),(A),(A),(A),option_letter,True,

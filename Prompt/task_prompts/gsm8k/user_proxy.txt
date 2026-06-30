@@ -1,0 +1,5 @@
+Here is a topic for GSM8K:
+Solve grade-school math word problems and return the final numeric answer.
+
+The model must output the answer as a numeric answer.
+Generate or refine a prompt that maximizes accuracy for this task.

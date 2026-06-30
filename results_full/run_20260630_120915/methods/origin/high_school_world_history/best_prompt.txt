@@ -1,0 +1,3 @@
+Answer MMLU multiple-choice questions in High School World History.
+Read the question carefully. Return only the final answer as a parenthesized option letter such as (A).
+Do not include extra commentary after the final answer.

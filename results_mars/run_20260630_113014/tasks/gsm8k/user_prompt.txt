@@ -1,0 +1,7 @@
+Here is a topic for GSM8K:
+Solve grade-school math word problems. The model should reason carefully and return the final numeric answer.
+
+The input question is a math word problem. The model should output only the final answer value, without explanation.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.

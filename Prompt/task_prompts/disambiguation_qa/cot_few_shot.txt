@@ -1,0 +1,3 @@
+Answer BIG-Bench Hard questions for Disambiguation QA.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).

@@ -2,7 +2,6 @@ import re
 from collections import Counter
 from typing import Any, Dict, Iterable, List, Tuple
 
-
 TRUTHY_VALUES = {"true", "1", "yes"}
 
 
@@ -84,7 +83,9 @@ def is_valid_canonical(value: str, answer_format: str) -> bool:
     return True
 
 
-def is_correct_prediction(prediction: Any, gold: Any, answer_format: str) -> Tuple[bool, str, str]:
+def is_correct_prediction(
+    prediction: Any, gold: Any, answer_format: str
+) -> Tuple[bool, str, str]:
     canonical_prediction = canonical_answer(prediction, answer_format)
     canonical_gold = canonical_answer(gold, answer_format)
     return canonical_prediction == canonical_gold, canonical_prediction, canonical_gold
@@ -94,7 +95,9 @@ def row_is_correct(row: Dict[str, Any]) -> bool:
     return str(row.get("correct", "")).strip().lower() in TRUTHY_VALUES
 
 
-def final_prediction_rows(predictions: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def final_prediction_rows(
+    predictions: Iterable[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
     rows = list(predictions or [])
     if not rows:
         return []
@@ -109,7 +112,9 @@ def final_prediction_rows(predictions: Iterable[Dict[str, Any]]) -> List[Dict[st
     return [row for row in rows if iteration_value(row) == last_iteration]
 
 
-def compute_final_metrics_from_predictions(predictions: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
+def compute_final_metrics_from_predictions(
+    predictions: Iterable[Dict[str, Any]],
+) -> Dict[str, Any]:
     final_rows = final_prediction_rows(predictions)
     num_samples = len(final_rows)
     num_success = sum(1 for row in final_rows if row_is_correct(row))
@@ -136,9 +141,13 @@ def _counter_lines(title: str, values: Iterable[Any], limit: int = 20) -> List[s
     return lines
 
 
-def build_diagnostics_markdown(task_id: str, predictions: Iterable[Dict[str, Any]]) -> str:
+def build_diagnostics_markdown(
+    task_id: str, predictions: Iterable[Dict[str, Any]]
+) -> str:
     rows = final_prediction_rows(predictions)
-    answer_formats = sorted({str(row.get("answer_format", "")) for row in rows if row.get("answer_format")})
+    answer_formats = sorted(
+        {str(row.get("answer_format", "")) for row in rows if row.get("answer_format")}
+    )
     metrics = compute_final_metrics_from_predictions(rows)
     parse_failed = sum(
         1
@@ -158,9 +167,20 @@ def build_diagnostics_markdown(task_id: str, predictions: Iterable[Dict[str, Any
         f"- parse_failed: {parse_failed}",
         "",
     ]
-    lines.extend(_counter_lines("Gold Label Distribution", (row.get("answer") for row in rows)))
-    lines.extend(_counter_lines("Canonical Answer Distribution", (row.get("canonical_answer") for row in rows)))
-    lines.extend(_counter_lines("Canonical Prediction Distribution", (row.get("prediction") for row in rows)))
+    lines.extend(
+        _counter_lines("Gold Label Distribution", (row.get("answer") for row in rows))
+    )
+    lines.extend(
+        _counter_lines(
+            "Canonical Answer Distribution",
+            (row.get("canonical_answer") for row in rows),
+        )
+    )
+    lines.extend(
+        _counter_lines(
+            "Canonical Prediction Distribution", (row.get("prediction") for row in rows)
+        )
+    )
 
     lines.extend(["## Raw Prediction Examples", ""])
     if rows:
@@ -181,11 +201,13 @@ def build_diagnostics_markdown(task_id: str, predictions: Iterable[Dict[str, Any
     lines.append("")
 
     if metrics["num_samples"] and metrics["final_accuracy"] == 0:
-        lines.extend([
-            "## Warning",
-            "",
-            "Final accuracy is 0. Inspect whether predictions are empty, parsed into the wrong answer format, or genuinely incorrect.",
-            "",
-        ])
+        lines.extend(
+            [
+                "## Warning",
+                "",
+                "Final accuracy is 0. Inspect whether predictions are empty, parsed into the wrong answer format, or genuinely incorrect.",
+                "",
+            ]
+        )
 
     return "\n".join(lines)

@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import yaml
 
-
 PAPER_MARS_GENERAL = {
     "boolean_expressions": 93.17,
     "disambiguation_qa": 71.89,
@@ -101,7 +100,11 @@ def normalize_accuracy(value) -> Optional[float]:
 def find_latest_run(results_root: Path) -> Optional[Path]:
     if not results_root.exists():
         return None
-    runs = [path for path in results_root.iterdir() if path.is_dir() and path.name.startswith("run_")]
+    runs = [
+        path
+        for path in results_root.iterdir()
+        if path.is_dir() and path.name.startswith("run_")
+    ]
     if not runs:
         return None
     return max(runs, key=lambda path: path.stat().st_mtime)
@@ -155,15 +158,19 @@ def attach_paper_results(summary_df: pd.DataFrame) -> pd.DataFrame:
     df["our_best_accuracy"] = df["best_accuracy"].apply(normalize_accuracy)
     df["our_final_accuracy"] = df["final_accuracy"].apply(normalize_accuracy)
     df["delta_best_minus_paper"] = df.apply(
-        lambda row: None
-        if row["paper_mars_accuracy"] is None or row["our_best_accuracy"] is None
-        else round(row["our_best_accuracy"] - row["paper_mars_accuracy"], 2),
+        lambda row: (
+            None
+            if row["paper_mars_accuracy"] is None or row["our_best_accuracy"] is None
+            else round(row["our_best_accuracy"] - row["paper_mars_accuracy"], 2)
+        ),
         axis=1,
     )
     df["delta_final_minus_paper"] = df.apply(
-        lambda row: None
-        if row["paper_mars_accuracy"] is None or row["our_final_accuracy"] is None
-        else round(row["our_final_accuracy"] - row["paper_mars_accuracy"], 2),
+        lambda row: (
+            None
+            if row["paper_mars_accuracy"] is None or row["our_final_accuracy"] is None
+            else round(row["our_final_accuracy"] - row["paper_mars_accuracy"], 2)
+        ),
         axis=1,
     )
     return df
@@ -182,7 +189,9 @@ def _save(fig, out_path: Path, dpi: int, fmt: str):
     plt.close(fig)
 
 
-def plot_summary_overview(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png") -> None:
+def plot_summary_overview(
+    df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png"
+) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
     total = len(df)
     success = int((df["status"] == "success").sum())
@@ -201,8 +210,16 @@ def plot_summary_overview(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt:
 
     axes[1].axis("off")
     text_lines = [
-        f"Average best accuracy: {avg_best:.2f}%" if pd.notna(avg_best) else "Average best accuracy: unknown",
-        f"Average final accuracy: {avg_final:.2f}%" if pd.notna(avg_final) else "Average final accuracy: unknown",
+        (
+            f"Average best accuracy: {avg_best:.2f}%"
+            if pd.notna(avg_best)
+            else "Average best accuracy: unknown"
+        ),
+        (
+            f"Average final accuracy: {avg_final:.2f}%"
+            if pd.notna(avg_final)
+            else "Average final accuracy: unknown"
+        ),
         f"Total runtime: {total_runtime:.2f}s",
     ]
     axes[1].text(0.02, 0.98, "\n".join(text_lines), va="top", ha="left", fontsize=12)
@@ -210,17 +227,33 @@ def plot_summary_overview(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt:
     _save(fig, out_path, dpi, fmt)
 
 
-def plot_task_accuracy_vs_paper(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png") -> None:
+def plot_task_accuracy_vs_paper(
+    df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png"
+) -> None:
     ordered = df.copy()
-    ordered["task_display"] = ordered["task_id"].map(lambda x: TASK_DISPLAY_NAMES.get(x, x))
+    ordered["task_display"] = ordered["task_id"].map(
+        lambda x: TASK_DISPLAY_NAMES.get(x, x)
+    )
     ordered = ordered.sort_values(["group", "task_id"])
     x = range(len(ordered))
     fig, ax = plt.subplots(figsize=(14, 6))
     width = 0.36
     paper = ordered["paper_mars_accuracy"].fillna(0)
     our = ordered["our_best_accuracy"].fillna(0)
-    ax.bar([i - width / 2 for i in x], paper, width=width, label="Paper MARS", color="#4c78a8")
-    ax.bar([i + width / 2 for i in x], our, width=width, label="Our run MARS", color="#f58518")
+    ax.bar(
+        [i - width / 2 for i in x],
+        paper,
+        width=width,
+        label="Paper MARS",
+        color="#4c78a8",
+    )
+    ax.bar(
+        [i + width / 2 for i in x],
+        our,
+        width=width,
+        label="Our run MARS",
+        color="#f58518",
+    )
     ax.set_xticks(list(x))
     ax.set_xticklabels(ordered["task_display"], rotation=45, ha="right")
     _prep_axes(ax, "Task accuracy vs paper", "Accuracy (%)")
@@ -228,9 +261,13 @@ def plot_task_accuracy_vs_paper(df: pd.DataFrame, out_path: Path, dpi: int = 300
     _save(fig, out_path, dpi, fmt)
 
 
-def plot_task_delta_vs_paper(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png") -> None:
+def plot_task_delta_vs_paper(
+    df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png"
+) -> None:
     ordered = df.copy()
-    ordered["task_display"] = ordered["task_id"].map(lambda x: TASK_DISPLAY_NAMES.get(x, x))
+    ordered["task_display"] = ordered["task_id"].map(
+        lambda x: TASK_DISPLAY_NAMES.get(x, x)
+    )
     ordered = ordered.sort_values(["group", "task_id"])
     deltas = ordered["delta_best_minus_paper"].fillna(0)
     fig, ax = plt.subplots(figsize=(12, 7))
@@ -244,30 +281,49 @@ def plot_task_delta_vs_paper(df: pd.DataFrame, out_path: Path, dpi: int = 300, f
     _save(fig, out_path, dpi, fmt)
 
 
-def plot_group_average_vs_paper(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png") -> None:
+def plot_group_average_vs_paper(
+    df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png"
+) -> None:
     records = []
     for group in GROUP_ORDER:
         tasks = GROUP_TASKS.get(group, [])
         group_df = df[df["task_id"].isin(tasks)]
         if group == "Domain":
-            group_df = group_df[group_df["paper_mars_accuracy"].notna() & group_df["our_best_accuracy"].notna()]
+            group_df = group_df[
+                group_df["paper_mars_accuracy"].notna()
+                & group_df["our_best_accuracy"].notna()
+            ]
         if group_df.empty:
             continue
-        records.append({
-            "group": group,
-            "paper": group_df["paper_mars_accuracy"].mean(),
-            "our_best": group_df["our_best_accuracy"].mean(),
-            "our_final": group_df["our_final_accuracy"].mean(),
-        })
+        records.append(
+            {
+                "group": group,
+                "paper": group_df["paper_mars_accuracy"].mean(),
+                "our_best": group_df["our_best_accuracy"].mean(),
+                "our_final": group_df["our_final_accuracy"].mean(),
+            }
+        )
     if not records:
         return
     group_df = pd.DataFrame(records)
     fig, ax = plt.subplots(figsize=(10, 6))
     x = range(len(group_df))
     width = 0.25
-    ax.bar([i - width for i in x], group_df["paper"], width=width, label="Paper MARS", color="#4c78a8")
+    ax.bar(
+        [i - width for i in x],
+        group_df["paper"],
+        width=width,
+        label="Paper MARS",
+        color="#4c78a8",
+    )
     ax.bar(x, group_df["our_best"], width=width, label="Our best", color="#f58518")
-    ax.bar([i + width for i in x], group_df["our_final"], width=width, label="Our final", color="#54a24b")
+    ax.bar(
+        [i + width for i in x],
+        group_df["our_final"],
+        width=width,
+        label="Our final",
+        color="#54a24b",
+    )
     ax.set_xticks(list(x))
     ax.set_xticklabels(group_df["group"])
     _prep_axes(ax, "Group average comparison", "Accuracy (%)")
@@ -291,7 +347,12 @@ def _history_to_xy(history: pd.DataFrame) -> Tuple[List[int], List[float]]:
             break
     if iteration_col is None or accuracy_col is None:
         return [], []
-    x = pd.to_numeric(history[iteration_col], errors="coerce").fillna(0).astype(int).tolist()
+    x = (
+        pd.to_numeric(history[iteration_col], errors="coerce")
+        .fillna(0)
+        .astype(int)
+        .tolist()
+    )
     y = []
     for value in history[accuracy_col].tolist():
         normalized = normalize_accuracy(value)
@@ -318,7 +379,13 @@ def plot_convergence_curves(
         x, y = _history_to_xy(history)
         if not x or not y:
             continue
-        ax.plot(x, y, marker="o", linewidth=1.5, label=TASK_DISPLAY_NAMES.get(task_id, task_id))
+        ax.plot(
+            x,
+            y,
+            marker="o",
+            linewidth=1.5,
+            label=TASK_DISPLAY_NAMES.get(task_id, task_id),
+        )
         plotted += 1
     if plotted == 0:
         plt.close(fig)
@@ -367,7 +434,9 @@ def plot_best_iteration_distribution(
     _save(fig, out_path, dpi, fmt)
 
 
-def plot_status_overview(df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png") -> None:
+def plot_status_overview(
+    df: pd.DataFrame, out_path: Path, dpi: int = 300, fmt: str = "png"
+) -> None:
     counts = df["status"].fillna("missing").value_counts()
     fig, ax = plt.subplots(figsize=(6, 4))
     ax.pie(counts.values, labels=counts.index, autopct="%1.0f%%", startangle=90)
@@ -399,7 +468,13 @@ def write_paper_comparison_table(df: pd.DataFrame, out_path: Path) -> None:
     table.to_csv(out_path, index=False)
 
 
-def write_report(run_dir: Path, df: pd.DataFrame, histories: Dict[str, pd.DataFrame], out_dir: Path, generated_files: Sequence[Path]) -> None:
+def write_report(
+    run_dir: Path,
+    df: pd.DataFrame,
+    histories: Dict[str, pd.DataFrame],
+    out_dir: Path,
+    generated_files: Sequence[Path],
+) -> None:
     config_path = run_dir / "config.yaml"
     config = {}
     if config_path.exists():
@@ -433,9 +508,21 @@ def write_report(run_dir: Path, df: pd.DataFrame, histories: Dict[str, pd.DataFr
         f"- number of tasks: {total_tasks}",
         f"- number of successful tasks: {success_tasks}",
         f"- number of failed tasks: {failed_tasks}",
-        f"- average best accuracy: {avg_best:.2f}%" if pd.notna(avg_best) else "- average best accuracy: unknown",
-        f"- average final accuracy: {avg_final:.2f}%" if pd.notna(avg_final) else "- average final accuracy: unknown",
-        f"- average delta vs paper: {avg_delta:.2f}%" if avg_delta is not None and pd.notna(avg_delta) else "- average delta vs paper: unknown",
+        (
+            f"- average best accuracy: {avg_best:.2f}%"
+            if pd.notna(avg_best)
+            else "- average best accuracy: unknown"
+        ),
+        (
+            f"- average final accuracy: {avg_final:.2f}%"
+            if pd.notna(avg_final)
+            else "- average final accuracy: unknown"
+        ),
+        (
+            f"- average delta vs paper: {avg_delta:.2f}%"
+            if avg_delta is not None and pd.notna(avg_delta)
+            else "- average delta vs paper: unknown"
+        ),
         f"- total runtime: {total_runtime:.2f}s",
         "",
         "## Caveats",
@@ -461,4 +548,6 @@ def write_report(run_dir: Path, df: pd.DataFrame, histories: Dict[str, pd.DataFr
         lines.append("- missing prompt history for: " + ", ".join(missing_histories))
     else:
         lines.append("- none")
-    (out_dir / "visualization_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (out_dir / "visualization_report.md").write_text(
+        "\n".join(lines) + "\n", encoding="utf-8"
+    )

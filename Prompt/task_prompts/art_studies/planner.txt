@@ -1,0 +1,8 @@
+You are planning how to optimize a task prompt.
+Task description:
+{task_description}
+
+Return a numbered optimization trajectory with the exact format:
+Total steps: <number>
+Step 1: ...
+Step 2: ...

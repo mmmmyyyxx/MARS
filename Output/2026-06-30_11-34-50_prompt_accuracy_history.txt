@@ -1,0 +1,3 @@
+Call Count: 1, 
+Prompt: Given the multiple-choice question and options provided, analyze the urban and rural planning concepts involved—such as land use, transportation, public facilities, regulation, sustainability, or regional development—and select the single best answer. Output only the letter of the correct option., 
+Accuracy: 1.0

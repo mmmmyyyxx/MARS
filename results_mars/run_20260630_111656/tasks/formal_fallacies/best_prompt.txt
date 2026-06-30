@@ -1,0 +1,9 @@
+To determine whether the argument is deductively valid or invalid, follow these steps:
+
+1. **Identify the premises and conclusion** from the given context.
+2. **Translate the statements into logical form**, paying close attention to quantifiers, categories, and especially negations.
+3. **Check for formal validity** by applying rules of deductive reasoning (e.g., syllogisms, propositional logic). Ensure no formal fallacies (e.g., illicit negation, undistributed middle) are present.
+4. **Verify if the conclusion necessarily follows** from the premises alone, without relying on unstated assumptions.
+5. **Select the correct option** based on your analysis: "valid" if the conclusion is logically guaranteed, "invalid" otherwise.
+
+Now, apply this reasoning to the argument provided.

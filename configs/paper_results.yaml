@@ -1,0 +1,7 @@
+# Paper numbers are stored only for comparison/visualization.
+# Local experiment runners must never substitute these values for failed runs.
+table1: {}
+table2: {}
+table3: {}
+table4: {}
+

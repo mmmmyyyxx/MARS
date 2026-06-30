@@ -1,0 +1,12 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"This question refers to the following information.
+No task is more urgent than that of preserving peace. Without peace our independence means little. The rehabilitation and upbuilding of our countries will have little meaning. Our revolutions will not be allowed to run their course. What can we do? We can do much! We can inject the voice of reason into world affairs. We can mobilize all the spiritual, all the moral, all the political strength of Asia and Africa on the side of peace. Yes, we! We, the peoples of Asia and Africa, 1.4 billion strong.
+Indonesian leader Sukarno, keynote address to the Bandung Conference, 1955
+The passage above is most associated with which of the following developments?
+
+Options:
+(A)The formation of the non-aligned movement
+(B)Global disarmanent and nuclear non-proliferation
+(C)The Green Revolution in agriculture
+(D)Mobilization of pan-Asian ideology
+",(A),Final answer: yes,,(A),False,option_letter,invalid_answer_format,opro,high_school_world_history,1

@@ -1,13 +1,12 @@
 # config.py
 import os
 
-
-DATASET_PATH = './Dataset_format/BBH/geometric_shapes.csv'
+DATASET_PATH = "./Dataset_format/BBH/geometric_shapes.csv"
 
 # put your API
 API_KEY = os.getenv("OPENAI_API_KEY")
 BASE_URL = os.getenv("OPENAI_BASE_URL")
-MODEL = "deepseek-chat" # anyone you want
+MODEL = "deepseek-chat"  # anyone you want
 TEMPERATURE = 0.6
 
 

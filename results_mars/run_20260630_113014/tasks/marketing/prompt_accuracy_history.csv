@@ -1,0 +1,2 @@
+iteration,accuracy,delta_accuracy,prompt,stopped_reason
+1,1.0,,"Given the multiple-choice question about marketing concepts, consumer behavior, advertising, market research, segmentation, branding, pricing, distribution, or strategy, analyze each option carefully. Identify the key marketing principles involved, eliminate incorrect choices based on established theories or common misconceptions, and select the single best answer. Output only the letter of the correct option.",max_iterations

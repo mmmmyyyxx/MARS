@@ -1,0 +1,20 @@
+[
+  {
+    "task_id": "boolean_expressions",
+    "group": "BBH",
+    "dataset_path": "Dataset_format/BBH/boolean_expressions.csv",
+    "question_type": "choice",
+    "answer_format": "boolean",
+    "status": "success",
+    "num_samples": 1,
+    "num_success": 1,
+    "num_failed": 0,
+    "best_accuracy": 1.0,
+    "final_accuracy": 1.0,
+    "best_iteration": 1,
+    "best_num_success": 1,
+    "best_num_failed": 0,
+    "stopped_reason": "max_iterations",
+    "total_runtime_seconds": 0.121
+  }
+]

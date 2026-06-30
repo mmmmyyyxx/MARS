@@ -1,0 +1,1 @@
+{"iteration": 1, "prompt": "Answer BIG-Bench Hard questions for Boolean Expressions.\nRead the question carefully. Return only the final answer as true or false.\nDo not include extra commentary after the final answer.\n\nOptimization sub-goals:\nBe careful and end with the required final answer format."}

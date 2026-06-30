@@ -7,6 +7,7 @@ from typing import Optional
 import pandas as pd
 
 from mars_utils.visualization import (
+    GROUP_TASKS,
     attach_paper_results,
     find_latest_run,
     load_histories,
@@ -20,18 +21,25 @@ from mars_utils.visualization import (
     plot_task_delta_vs_paper,
     write_paper_comparison_table,
     write_report,
-    GROUP_TASKS,
 )
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Visualize MARS reproduction results.")
-    parser.add_argument("--run-dir", type=str, help="Specific run directory under results_mars.")
+    parser.add_argument(
+        "--run-dir", type=str, help="Specific run directory under results_mars."
+    )
     parser.add_argument("--results-root", type=str, default="results_mars")
-    parser.add_argument("--latest", action="store_true", help="Automatically select the latest run_* directory.")
+    parser.add_argument(
+        "--latest",
+        action="store_true",
+        help="Automatically select the latest run_* directory.",
+    )
     parser.add_argument("--out-dir-name", type=str, default="visualizations")
     parser.add_argument("--dpi", type=int, default=300)
-    parser.add_argument("--format", type=str, default="png", choices=["png", "pdf", "svg"])
+    parser.add_argument(
+        "--format", type=str, default="png", choices=["png", "pdf", "svg"]
+    )
     return parser.parse_args()
 
 
@@ -41,7 +49,9 @@ def resolve_run_dir(args: argparse.Namespace) -> Path:
         if run_dir.name == "latest":
             latest = find_latest_run(Path(args.results_root).resolve())
             if latest is None:
-                raise FileNotFoundError(f"No run_* directory found under {args.results_root}")
+                raise FileNotFoundError(
+                    f"No run_* directory found under {args.results_root}"
+                )
             return latest
         return run_dir.resolve()
     results_root = Path(args.results_root).resolve()
@@ -64,30 +74,89 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     generated = []
-    plot_summary_overview(merged_df, out_dir / f"summary_overview.{args.format}", dpi=args.dpi, fmt=args.format)
+    plot_summary_overview(
+        merged_df,
+        out_dir / f"summary_overview.{args.format}",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"summary_overview.{args.format}")
-    plot_task_accuracy_vs_paper(merged_df, out_dir / f"task_accuracy_vs_paper.{args.format}", dpi=args.dpi, fmt=args.format)
+    plot_task_accuracy_vs_paper(
+        merged_df,
+        out_dir / f"task_accuracy_vs_paper.{args.format}",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"task_accuracy_vs_paper.{args.format}")
-    plot_task_delta_vs_paper(merged_df, out_dir / f"task_delta_vs_paper.{args.format}", dpi=args.dpi, fmt=args.format)
+    plot_task_delta_vs_paper(
+        merged_df,
+        out_dir / f"task_delta_vs_paper.{args.format}",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"task_delta_vs_paper.{args.format}")
-    plot_group_average_vs_paper(merged_df, out_dir / f"group_average_vs_paper.{args.format}", dpi=args.dpi, fmt=args.format)
+    plot_group_average_vs_paper(
+        merged_df,
+        out_dir / f"group_average_vs_paper.{args.format}",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"group_average_vs_paper.{args.format}")
-    plot_status_overview(merged_df, out_dir / f"status_overview.{args.format}", dpi=args.dpi, fmt=args.format)
+    plot_status_overview(
+        merged_df,
+        out_dir / f"status_overview.{args.format}",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"status_overview.{args.format}")
-    plot_best_iteration_distribution(merged_df, histories, out_dir / f"best_iteration_distribution.{args.format}", dpi=args.dpi, fmt=args.format)
+    plot_best_iteration_distribution(
+        merged_df,
+        histories,
+        out_dir / f"best_iteration_distribution.{args.format}",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"best_iteration_distribution.{args.format}")
 
     all_tasks = merged_df["task_id"].tolist()
     bbh_tasks = GROUP_TASKS["BBH"]
     mmlu_tasks = GROUP_TASKS["MMLU"]
     domain_tasks = GROUP_TASKS["Domain"]
-    plot_convergence_curves(histories, all_tasks, out_dir / f"convergence_curves_all.{args.format}", "MARS optimization trajectories across runnable tasks", dpi=args.dpi, fmt=args.format)
+    plot_convergence_curves(
+        histories,
+        all_tasks,
+        out_dir / f"convergence_curves_all.{args.format}",
+        "MARS optimization trajectories across runnable tasks",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"convergence_curves_all.{args.format}")
-    plot_convergence_curves(histories, bbh_tasks, out_dir / f"convergence_curves_bbh.{args.format}", "BBH convergence curves", dpi=args.dpi, fmt=args.format)
+    plot_convergence_curves(
+        histories,
+        bbh_tasks,
+        out_dir / f"convergence_curves_bbh.{args.format}",
+        "BBH convergence curves",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"convergence_curves_bbh.{args.format}")
-    plot_convergence_curves(histories, mmlu_tasks, out_dir / f"convergence_curves_mmlu.{args.format}", "MMLU convergence curves", dpi=args.dpi, fmt=args.format)
+    plot_convergence_curves(
+        histories,
+        mmlu_tasks,
+        out_dir / f"convergence_curves_mmlu.{args.format}",
+        "MMLU convergence curves",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"convergence_curves_mmlu.{args.format}")
-    plot_convergence_curves(histories, domain_tasks, out_dir / f"convergence_curves_domain.{args.format}", "Domain convergence curves", dpi=args.dpi, fmt=args.format)
+    plot_convergence_curves(
+        histories,
+        domain_tasks,
+        out_dir / f"convergence_curves_domain.{args.format}",
+        "Domain convergence curves",
+        dpi=args.dpi,
+        fmt=args.format,
+    )
     generated.append(out_dir / f"convergence_curves_domain.{args.format}")
 
     write_paper_comparison_table(merged_df, out_dir / "paper_comparison_table.csv")

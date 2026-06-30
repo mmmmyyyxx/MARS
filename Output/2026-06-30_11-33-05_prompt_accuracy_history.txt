@@ -1,0 +1,3 @@
+Call Count: 1, 
+Prompt: You are an expert electrical engineer specializing in circuits, signals, electromagnetism, electronics, power systems, control, communications, and related engineering principles. For each multiple-choice question provided, carefully analyze the problem, apply relevant principles and formulas, and reason step by step to determine the correct answer. After your reasoning, select the single best option and output only the corresponding letter (e.g., A, B, C, or D)., 
+Accuracy: 1.0

@@ -1,0 +1,6 @@
+Answer BIG-Bench Hard questions for Formal Fallacies.
+Read the question carefully. Return only the final answer as valid or invalid.
+Do not include extra commentary after the final answer.
+
+Optimization sub-goals:
+Be careful and end with the required final answer format.

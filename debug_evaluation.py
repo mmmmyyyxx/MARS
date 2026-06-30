@@ -15,10 +15,23 @@ from mars_utils.evaluator import (
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Diagnose MARS prediction parsing and summary consistency.")
-    parser.add_argument("--run-dir", help="Specific results_mars/run_* directory, or results_mars/latest.")
-    parser.add_argument("--results-root", default="results_mars", help="Root directory containing run_* folders.")
-    parser.add_argument("--latest", action="store_true", help="Use the newest run_* directory under --results-root.")
+    parser = argparse.ArgumentParser(
+        description="Diagnose MARS prediction parsing and summary consistency."
+    )
+    parser.add_argument(
+        "--run-dir",
+        help="Specific results_mars/run_* directory, or results_mars/latest.",
+    )
+    parser.add_argument(
+        "--results-root",
+        default="results_mars",
+        help="Root directory containing run_* folders.",
+    )
+    parser.add_argument(
+        "--latest",
+        action="store_true",
+        help="Use the newest run_* directory under --results-root.",
+    )
     return parser.parse_args()
 
 
@@ -85,8 +98,12 @@ def task_report(task_dir: Path, summary_row: Dict[str, str]) -> List[str]:
     final_rows = final_prediction_rows(predictions)
     metrics = compute_final_metrics_from_predictions(predictions)
     config = read_yaml(task_dir / "config.yaml")
-    answer_formats = sorted({row.get("answer_format", "") for row in final_rows if row.get("answer_format")})
-    answer_format = ", ".join(answer_formats) or str(config.get("answer_format") or "unknown")
+    answer_formats = sorted(
+        {row.get("answer_format", "") for row in final_rows if row.get("answer_format")}
+    )
+    answer_format = ", ".join(answer_formats) or str(
+        config.get("answer_format") or "unknown"
+    )
     parse_failed = sum(
         1
         for row in final_rows

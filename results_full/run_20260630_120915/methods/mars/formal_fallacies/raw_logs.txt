@@ -1,0 +1,4 @@
+planner_enabled: True
+socratic_enabled: True
+critic_enabled: True
+runtime_seconds: 0.0057

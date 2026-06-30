@@ -1,0 +1,22 @@
+task:
+  task_id: formal_fallacies
+  group: BBH
+  dataset_path: Dataset_format/BBH/formal_fallacies.csv
+  question_type: choice
+  user_prompt_key: formal_fallacies_syllogisms_negation
+  planner_prompt_key: formal_fallacies_syllogisms_negation
+  answer_format: valid_invalid
+  metric: accuracy
+task_id: formal_fallacies
+question_type: choice
+answer_format: valid_invalid
+dataset_path: Dataset_format/BBH/formal_fallacies.csv
+model: deepseek-chat
+temperature: 0.6
+max_iterations: 10
+early_stop_delta: 0.01
+concurrency: 2
+max_samples: 20
+max_answer_retries: 3
+request_timeout: 120.0
+dry_run: false

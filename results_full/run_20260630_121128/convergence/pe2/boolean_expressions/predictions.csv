@@ -1,0 +1,2 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,not False and not not True and True is,True,Final answer: true,true,true,True,boolean,,pe2,boolean_expressions,1

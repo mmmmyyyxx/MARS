@@ -1,0 +1,9 @@
+accuracy,api_calls,api_errors,cache_hits,cost_estimate,delta,display_name,exactness,method,method_id,model,num_correct,num_failed,num_iterations,num_samples,parse_errors,runtime_seconds,suite,task_id,tokens_completion,tokens_prompt,tokens_total
+1.0,0,0,1,0.0,0.0,Boolean Expressions,best_effort_reimplementation,MARS,mars,deepseek-chat,1,0,1,1,0,0.003952503204345703,ablation,boolean_expressions,0,0,0
+1.0,0,0,1,0.0,0.0,Boolean Expressions,best_effort_reimplementation,w/oPlan,mars_wo_plan,deepseek-chat,1,0,1,1,0,0.0035037994384765625,ablation,boolean_expressions,0,0,0
+0.0,0,0,0,0.0,-1.0,Boolean Expressions,best_effort_reimplementation,w/oSoc,mars_wo_soc,deepseek-chat,0,1,1,1,1,0.0019998550415039062,ablation,boolean_expressions,0,0,0
+1.0,0,0,1,0.0,0.0,Boolean Expressions,best_effort_reimplementation,w/oCri,mars_wo_critic,deepseek-chat,1,0,1,1,0,0.004002571105957031,ablation,boolean_expressions,0,0,0
+0.0,0,0,1,0.0,0.0,GSM8K,best_effort_reimplementation,MARS,mars,deepseek-chat,0,1,1,1,0,0.004506349563598633,ablation,gsm8k,0,0,0
+0.0,0,0,1,0.0,0.0,GSM8K,best_effort_reimplementation,w/oPlan,mars_wo_plan,deepseek-chat,0,1,1,1,0,0.004000425338745117,ablation,gsm8k,0,0,0
+0.0,0,0,0,0.0,0.0,GSM8K,best_effort_reimplementation,w/oSoc,mars_wo_soc,deepseek-chat,0,1,1,1,0,0.0025014877319335938,ablation,gsm8k,0,0,0
+0.0,0,0,1,0.0,0.0,GSM8K,best_effort_reimplementation,w/oCri,mars_wo_critic,deepseek-chat,0,1,1,1,0,0.004000186920166016,ablation,gsm8k,0,0,0

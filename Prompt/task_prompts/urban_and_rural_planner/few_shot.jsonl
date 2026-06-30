@@ -1,0 +1,5 @@
+{"sample_id": 0, "question": "对于固体污染物的控制规划内容，不够突出的是____。\r\nOptions:\r\n(A) 电子污染物\r\n(B) 生活垃圾\r\n(C) 医疗废物\r\n(D) 工业固体废物", "answer": "(A)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 1, "question": "竖向设计设计标高中，当建筑物无进车道时，一般室内地坪比室外地坪面高出____\r\nOptions:\r\n(A) 0.30～0.90m\r\n(B) 0.45～0.60m\r\n(C) 0.25～0.30m\r\n(D) 0.25～0.35m", "answer": "(B)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 2, "question": "城市总体规划的强制性内容，在防灾方面没涉及的灾害是____。\r\nOptions:\r\n(A) 洪灾\r\n(B) 震灾\r\n(C) 涝灾\r\n(D) 火灾", "answer": "(C)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 3, "question": "地下电力缆保护区的宽度为地下电力电缆线路地面标桩两侧各____所形成两平行线内区域。\r\nOptions:\r\n(A) 0.5m\r\n(B) 0.75m\r\n(C) 1.0m\r\n(D) 1.5m", "answer": "(B)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 4, "question": "下列城市全部由国务院公布为历史文化名城的是____\r\nOptions:\r\n(A) 延安、淮安、泰安、瑞安、雅安\r\n(B) 金华、银川、同仁、铁岭、无锡\r\n(C) 韩城、聊城、邹城、晋城、塔城\r\n(D) 歙县、寿县、祁县、浚县、代县", "answer": "(D)", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}

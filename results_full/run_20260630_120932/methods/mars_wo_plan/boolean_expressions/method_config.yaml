@@ -1,0 +1,11 @@
+display_name: w/oPlan
+type: mars
+planner_enabled: false
+socratic_enabled: true
+critic_enabled: true
+exactness: best_effort_reimplementation
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0

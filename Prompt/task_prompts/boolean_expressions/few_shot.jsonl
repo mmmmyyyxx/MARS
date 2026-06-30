@@ -1,0 +1,5 @@
+{"sample_id": 0, "question": "not False and not not True and True is", "answer": "True", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 1, "question": "False and ( not False ) or False is", "answer": "False", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 2, "question": "not False and False and False or False is", "answer": "False", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 3, "question": "not False and False or True or False is", "answer": "True", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 4, "question": "False and not ( not not True ) is", "answer": "False", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}

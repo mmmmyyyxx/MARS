@@ -1,0 +1,7 @@
+{
+  "subgoals": [
+    "Clarify the required answer format.",
+    "Solve the input question carefully before returning the final answer."
+  ],
+  "planner_enabled": false
+}

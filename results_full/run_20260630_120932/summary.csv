@@ -1,0 +1,69 @@
+accuracy,api_calls,api_errors,cache_hits,cost_estimate,display_name,exactness,method,method_id,model,num_correct,num_failed,num_iterations,num_samples,parse_errors,runtime_seconds,suite,task_id,tokens_completion,tokens_prompt,tokens_total
+1.0,0,0,1,0.0,Boolean Expressions,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.002999544143676758,main,boolean_expressions,0,0,0
+1.0,0,0,1,0.0,Boolean Expressions,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.003998756408691406,main,boolean_expressions,0,0,0
+1.0,0,0,1,0.0,Boolean Expressions,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.002947092056274414,main,boolean_expressions,0,0,0
+1.0,0,0,1,0.0,Boolean Expressions,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.0029990673065185547,main,boolean_expressions,0,0,0
+1.0,0,0,1,0.0,Disambiguation QA,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.0050127506256103516,main,disambiguation_qa,0,0,0
+1.0,0,0,1,0.0,Disambiguation QA,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.002999544143676758,main,disambiguation_qa,0,0,0
+1.0,0,0,1,0.0,Disambiguation QA,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.003425121307373047,main,disambiguation_qa,0,0,0
+1.0,0,0,1,0.0,Disambiguation QA,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.003130197525024414,main,disambiguation_qa,0,0,0
+1.0,0,0,1,0.0,Formal Fallacies,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.0036132335662841797,main,formal_fallacies,0,0,0
+1.0,0,0,1,0.0,Formal Fallacies,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.0045888423919677734,main,formal_fallacies,0,0,0
+1.0,0,0,1,0.0,Formal Fallacies,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.0031070709228515625,main,formal_fallacies,0,0,0
+1.0,0,0,1,0.0,Formal Fallacies,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.003000497817993164,main,formal_fallacies,0,0,0
+0.0,0,0,1,0.0,Geometric Shapes,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.003507375717163086,main,geometric_shapes,0,0,0
+0.0,0,0,1,0.0,Geometric Shapes,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.003999233245849609,main,geometric_shapes,0,0,0
+0.0,0,0,1,0.0,Geometric Shapes,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.002969026565551758,main,geometric_shapes,0,0,0
+0.0,0,0,1,0.0,Geometric Shapes,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.0029997825622558594,main,geometric_shapes,0,0,0
+0.0,0,0,1,0.0,Ruin Names,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.0035071372985839844,main,ruin_names,0,0,0
+0.0,0,0,1,0.0,Ruin Names,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.003999471664428711,main,ruin_names,0,0,0
+0.0,0,0,1,0.0,Ruin Names,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.004508018493652344,main,ruin_names,0,0,0
+0.0,0,0,1,0.0,Ruin Names,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.0029997825622558594,main,ruin_names,0,0,0
+1.0,0,0,1,0.0,Sports Understanding,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.0027718544006347656,main,sports_understanding,0,0,0
+1.0,0,0,1,0.0,Sports Understanding,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.003000020980834961,main,sports_understanding,0,0,0
+1.0,0,0,1,0.0,Sports Understanding,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.003507852554321289,main,sports_understanding,0,0,0
+1.0,0,0,1,0.0,Sports Understanding,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.0035071372985839844,main,sports_understanding,0,0,0
+0.0,0,0,1,0.0,College Biology,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.003070354461669922,main,college_biology,0,0,0
+0.0,0,0,1,0.0,College Biology,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.003999233245849609,main,college_biology,0,0,0
+0.0,0,0,1,0.0,College Biology,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.0035004615783691406,main,college_biology,0,0,0
+0.0,0,0,1,0.0,College Biology,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.002998828887939453,main,college_biology,0,0,0
+0.0,0,0,1,0.0,College Medicine,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,1,0.004004716873168945,main,college_medicine,0,0,0
+0.0,0,0,1,0.0,College Medicine,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,1,0.0035011768341064453,main,college_medicine,0,0,0
+0.0,0,0,1,0.0,College Medicine,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,1,0.003507852554321289,main,college_medicine,0,0,0
+0.0,0,0,1,0.0,College Medicine,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,1,0.004000186920166016,main,college_medicine,0,0,0
+0.0,0,0,1,0.0,Electrical Engineering,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.0029997825622558594,main,electrical_engineering,0,0,0
+0.0,0,0,1,0.0,Electrical Engineering,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.003000497817993164,main,electrical_engineering,0,0,0
+0.0,0,0,1,0.0,Electrical Engineering,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.003506898880004883,main,electrical_engineering,0,0,0
+0.0,0,0,1,0.0,Electrical Engineering,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.002999544143676758,main,electrical_engineering,0,0,0
+0.0,0,0,1,0.0,High School World History,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,1,0.004000425338745117,main,high_school_world_history,0,0,0
+0.0,0,0,1,0.0,High School World History,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,1,0.003000020980834961,main,high_school_world_history,0,0,0
+0.0,0,0,1,0.0,High School World History,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,1,0.003996133804321289,main,high_school_world_history,0,0,0
+0.0,0,0,1,0.0,High School World History,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,1,0.0035567283630371094,main,high_school_world_history,0,0,0
+1.0,0,0,1,0.0,Human Aging,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.003000020980834961,main,human_aging,0,0,0
+1.0,0,0,1,0.0,Human Aging,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.003000020980834961,main,human_aging,0,0,0
+1.0,0,0,1,0.0,Human Aging,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.0030434131622314453,main,human_aging,0,0,0
+1.0,0,0,1,0.0,Human Aging,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.0019996166229248047,main,human_aging,0,0,0
+0.0,0,0,1,0.0,Marketing,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.002999544143676758,main,marketing,0,0,0
+0.0,0,0,1,0.0,Marketing,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.003507375717163086,main,marketing,0,0,0
+0.0,0,0,1,0.0,Marketing,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.004000663757324219,main,marketing,0,0,0
+0.0,0,0,1,0.0,Marketing,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.002953052520751953,main,marketing,0,0,0
+1.0,0,0,1,0.0,Art Studies,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.0030002593994140625,main,art_studies,0,0,0
+1.0,0,0,1,0.0,Art Studies,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.003998994827270508,main,art_studies,0,0,0
+1.0,0,0,1,0.0,Art Studies,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.004094600677490234,main,art_studies,0,0,0
+1.0,0,0,1,0.0,Art Studies,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.004326820373535156,main,art_studies,0,0,0
+1.0,0,0,1,0.0,Urban and Rural Planner,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.003000020980834961,main,urban_and_rural_planner,0,0,0
+1.0,0,0,1,0.0,Urban and Rural Planner,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.0031213760375976562,main,urban_and_rural_planner,0,0,0
+1.0,0,0,1,0.0,Urban and Rural Planner,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.0030002593994140625,main,urban_and_rural_planner,0,0,0
+1.0,0,0,1,0.0,Urban and Rural Planner,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.004388093948364258,main,urban_and_rural_planner,0,0,0
+0.0,0,0,1,0.0,Clinical Medicine,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.0029990673065185547,main,clinical_medicine,0,0,0
+0.0,0,0,1,0.0,Clinical Medicine,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.0035588741302490234,main,clinical_medicine,0,0,0
+0.0,0,0,1,0.0,Clinical Medicine,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.003000020980834961,main,clinical_medicine,0,0,0
+0.0,0,0,1,0.0,Clinical Medicine,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.002999544143676758,main,clinical_medicine,0,0,0
+0.0,0,0,1,0.0,GSM8K,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.0030035972595214844,main,gsm8k,0,0,0
+0.0,0,0,1,0.0,GSM8K,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.004000425338745117,main,gsm8k,0,0,0
+0.0,0,0,1,0.0,GSM8K,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.003502368927001953,main,gsm8k,0,0,0
+0.0,0,0,1,0.0,GSM8K,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.003003835678100586,main,gsm8k,0,0,0
+0.0,0,0,1,0.0,LSAT-AR,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.0029997825622558594,main,lsat_ar,0,0,0
+0.0,0,0,1,0.0,LSAT-AR,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.0035033226013183594,main,lsat_ar,0,0,0
+0.0,0,0,1,0.0,LSAT-AR,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.0029997825622558594,main,lsat_ar,0,0,0
+0.0,0,0,1,0.0,LSAT-AR,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.003243684768676758,main,lsat_ar,0,0,0

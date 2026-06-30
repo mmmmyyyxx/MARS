@@ -1,0 +1,18 @@
+{
+  "protocol": "paper_mode",
+  "split_seed": 42,
+  "splits": {
+    "opt": {
+      "num_samples": 1,
+      "hash": "9c485b7132475465b0081f51f5c859ecafff615f47c8ccf8ca91a2531f8c1752"
+    },
+    "val": {
+      "num_samples": 1,
+      "hash": "9c485b7132475465b0081f51f5c859ecafff615f47c8ccf8ca91a2531f8c1752"
+    },
+    "test": {
+      "num_samples": 1,
+      "hash": "9c485b7132475465b0081f51f5c859ecafff615f47c8ccf8ca91a2531f8c1752"
+    }
+  }
+}

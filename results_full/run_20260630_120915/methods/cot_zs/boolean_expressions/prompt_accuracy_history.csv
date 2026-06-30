@@ -1,0 +1,4 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer BIG-Bench Hard questions for Boolean Expressions.
+Think step by step internally, then provide the final answer.
+End with Final answer: true or false.",1.0,1,1,0

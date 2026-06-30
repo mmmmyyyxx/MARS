@@ -1,0 +1,208 @@
+boolean_expressions:
+  group: BBH
+  paper_table: table1
+  dataset_path: Dataset_format/BBH/boolean_expressions.csv
+  test_path: Dataset_format/BBH/boolean_expressions.csv
+  question_type: choice
+  answer_format: boolean
+  metric: accuracy
+  user_prompt_key: boolean_expressions
+  planner_prompt_key: boolean_expressions
+  few_shot_key: boolean_expressions
+  paper_display_name: Boolean Expressions
+disambiguation_qa:
+  group: BBH
+  paper_table: table1
+  dataset_path: Dataset_format/BBH/disambiguation_qa.csv
+  test_path: Dataset_format/BBH/disambiguation_qa.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: disambiguation_qa
+  planner_prompt_key: disambiguation_qa
+  few_shot_key: disambiguation_qa
+  paper_display_name: Disambiguation QA
+formal_fallacies:
+  group: BBH
+  paper_table: table1
+  dataset_path: Dataset_format/BBH/formal_fallacies.csv
+  test_path: Dataset_format/BBH/formal_fallacies.csv
+  question_type: choice
+  answer_format: valid_invalid
+  metric: accuracy
+  user_prompt_key: formal_fallacies_syllogisms_negation
+  planner_prompt_key: formal_fallacies_syllogisms_negation
+  few_shot_key: formal_fallacies
+  paper_display_name: Formal Fallacies
+geometric_shapes:
+  group: BBH
+  paper_table: table1
+  dataset_path: Dataset_format/BBH/geometric_shapes.csv
+  test_path: Dataset_format/BBH/geometric_shapes.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: geometric_shapes
+  planner_prompt_key: geometric_shapes
+  few_shot_key: geometric_shapes
+  paper_display_name: Geometric Shapes
+ruin_names:
+  group: BBH
+  paper_table: table1
+  dataset_path: Dataset_format/BBH/ruin_names.csv
+  test_path: Dataset_format/BBH/ruin_names.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: ruin_names
+  planner_prompt_key: ruin_names
+  few_shot_key: ruin_names
+  paper_display_name: Ruin Names
+sports_understanding:
+  group: BBH
+  paper_table: table1
+  dataset_path: Dataset_format/BBH/sports_understanding.csv
+  test_path: Dataset_format/BBH/sports_understanding.csv
+  question_type: choice
+  answer_format: yes_no
+  metric: accuracy
+  user_prompt_key: sports_understanding
+  planner_prompt_key: sports_understanding
+  few_shot_key: sports_understanding
+  paper_display_name: Sports Understanding
+college_biology:
+  group: MMLU
+  paper_table: table2
+  dataset_path: Dataset_format/MMLU/college_biology_test.csv
+  test_path: Dataset_format/MMLU/college_biology_test.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: college_biology
+  planner_prompt_key: college_biology
+  few_shot_key: college_biology
+  paper_display_name: College Biology
+college_medicine:
+  group: MMLU
+  paper_table: table2
+  dataset_path: Dataset_format/MMLU/college_medicine_test.csv
+  test_path: Dataset_format/MMLU/college_medicine_test.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: college_medicine
+  planner_prompt_key: college_medicine
+  few_shot_key: college_medicine
+  paper_display_name: College Medicine
+electrical_engineering:
+  group: MMLU
+  paper_table: table2
+  dataset_path: Dataset_format/MMLU/electrical_engineering_test.csv
+  test_path: Dataset_format/MMLU/electrical_engineering_test.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: electrical_engineering
+  planner_prompt_key: electrical_engineering
+  few_shot_key: electrical_engineering
+  paper_display_name: Electrical Engineering
+high_school_world_history:
+  group: MMLU
+  paper_table: table2
+  dataset_path: Dataset_format/MMLU/high_school_world_history_test.csv
+  test_path: Dataset_format/MMLU/high_school_world_history_test.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: high_school_world_history
+  planner_prompt_key: high_school_world_history
+  few_shot_key: high_school_world_history
+  paper_display_name: High School World History
+human_aging:
+  group: MMLU
+  paper_table: table2
+  dataset_path: Dataset_format/MMLU/human_aging_test.csv
+  test_path: Dataset_format/MMLU/human_aging_test.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: human_aging
+  planner_prompt_key: human_aging
+  few_shot_key: human_aging
+  paper_display_name: Human Aging
+marketing:
+  group: MMLU
+  paper_table: table2
+  dataset_path: Dataset_format/MMLU/marketing_test.csv
+  test_path: Dataset_format/MMLU/marketing_test.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: marketing
+  planner_prompt_key: marketing
+  few_shot_key: marketing
+  paper_display_name: Marketing
+art_studies:
+  group: C-EVAL
+  paper_table: table2
+  dataset_path: Dataset_format/C-EVAL/art_studies_val.csv
+  val_path: Dataset_format/C-EVAL/art_studies_val.csv
+  test_path: Dataset_format/C-EVAL/art_studies_val.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: art_studies
+  planner_prompt_key: art_studies
+  few_shot_key: art_studies
+  paper_display_name: Art Studies
+urban_and_rural_planner:
+  group: C-EVAL
+  paper_table: table2
+  dataset_path: Dataset_format/C-EVAL/urban_and_rural_planner_val.csv
+  val_path: Dataset_format/C-EVAL/urban_and_rural_planner_val.csv
+  test_path: Dataset_format/C-EVAL/urban_and_rural_planner_val.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: urban_and_rural_planner
+  planner_prompt_key: urban_and_rural_planner
+  few_shot_key: urban_and_rural_planner
+  paper_display_name: Urban and Rural Planner
+clinical_medicine:
+  group: C-EVAL
+  paper_table: table2
+  dataset_path: Dataset_format/C-EVAL/clinical_medicine_val.csv
+  val_path: Dataset_format/C-EVAL/clinical_medicine_val.csv
+  test_path: Dataset_format/C-EVAL/clinical_medicine_val.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: clinical_medicine
+  planner_prompt_key: clinical_medicine
+  few_shot_key: clinical_medicine
+  paper_display_name: Clinical Medicine
+gsm8k:
+  group: GSM8K
+  paper_table: table2
+  dataset_path: Dataset_format/GSM8K/gsm8k_test.csv
+  test_path: Dataset_format/GSM8K/gsm8k_test.csv
+  question_type: short_answer
+  answer_format: numeric
+  metric: accuracy
+  user_prompt_key: gsm8k
+  planner_prompt_key: gsm8k
+  few_shot_key: gsm8k
+  paper_display_name: GSM8K
+lsat_ar:
+  group: AGIEval
+  paper_table: table2
+  dataset_path: Dataset_format/AGIEval/lsat-ar_format.csv
+  test_path: Dataset_format/AGIEval/lsat-ar_format.csv
+  question_type: choice
+  answer_format: option_letter
+  metric: accuracy
+  user_prompt_key: lsat_ar
+  planner_prompt_key: lsat_ar
+  few_shot_key: lsat_ar
+  paper_display_name: LSAT-AR
+

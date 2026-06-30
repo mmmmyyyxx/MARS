@@ -1,0 +1,28 @@
+default:
+  api_key_env: OPENAI_API_KEY
+  base_url_env: OPENAI_BASE_URL
+  request_timeout: 120
+  max_api_retries: 5
+  retry_backoff: exponential
+  concurrency: 2
+  retry_delay: 5
+pricing:
+  deepseek-chat:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+  deepseek-v2.5-1210:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+  deepseek-r1:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+  gpt-3.5:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+  gpt-4:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+  gpt-4o:
+    prompt_per_1k: 0.0
+    completion_per_1k: 0.0
+

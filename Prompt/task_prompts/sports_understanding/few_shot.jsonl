@@ -1,0 +1,5 @@
+{"sample_id": 0, "question": "Is the following sentence plausible? \"Neymar did a maradona on the defender in the Champions Leage Semifinal.\"", "answer": "yes", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 1, "question": "Is the following sentence plausible? \"Dejounte Murray took a side-step three.\"", "answer": "yes", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 2, "question": "Is the following sentence plausible? \"Giorgio Chiellini committed a handball in the FA Cup.\"", "answer": "yes", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 3, "question": "Is the following sentence plausible? \"Paulinho earned an indirect kick in the FA Cup.\"", "answer": "yes", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}
+{"sample_id": 4, "question": "Is the following sentence plausible? \"Zach LaVine  shot the puck.\"", "answer": "no", "source": "checked_in_dataset_for_smoke_or_strict_split_seeded_selection"}

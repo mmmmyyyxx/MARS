@@ -1,39 +1,53 @@
+import asyncio
+import os
 import re
-from typing import AsyncGenerator, List, Sequence,Tuple
+import sys
+import time
+from contextlib import redirect_stdout
+from datetime import datetime
+from typing import AsyncGenerator, List, Sequence, Tuple
+
+import pandas as pd
 from autogen_agentchat.agents import BaseChatAgent
 from autogen_agentchat.base import Response
 from autogen_agentchat.messages import AgentMessage, ChatMessage, TextMessage
 from autogen_core import CancellationToken
 from openai import OpenAI
-import pandas as pd
-import sys
-from datetime import datetime
-import os
-from tqdm import tqdm 
-from Agents import TargetAgent,TeacherAgent,StudentAgent,PlannerAgent,CriticAgent,analyze_prompt_history
-from Agents import ChatManagerAgent,UserProxyAgent
+from tqdm import tqdm
+
 import Config
-import asyncio
-import time
-from contextlib import redirect_stdout
+from Agents import (
+    ChatManagerAgent,
+    CriticAgent,
+    PlannerAgent,
+    StudentAgent,
+    TargetAgent,
+    TeacherAgent,
+    UserProxyAgent,
+    analyze_prompt_history,
+)
+
 
 def get_question_type():
-    """ Read command line arguments and return the question type """
+    """Read command line arguments and return the question type"""
     if len(sys.argv) > 1:
         return sys.argv[1]
     return "choice"  # Default Choice Questions
 
+
 async def run_agents():
-    """ Run Agents, passing the question type """
+    """Run Agents, passing the question type"""
     chat_manager_agent = ChatManagerAgent("chat_manager")
-    target_agent = TargetAgent("target_agent") 
+    target_agent = TargetAgent("target_agent")
 
     task_message = TextMessage(
         content="Here is a topic for geometric graph generation, I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.",
-        source="user"
+        source="user",
     )
 
-    chat_manager_response = await chat_manager_agent.on_messages([task_message], CancellationToken())
+    chat_manager_response = await chat_manager_agent.on_messages(
+        [task_message], CancellationToken()
+    )
     print(chat_manager_response.chat_message.content)
     await asyncio.sleep(0.1)
 
@@ -74,7 +88,7 @@ def run_mars_task(
     Config.BEST_PROMPT = ""
     Config.BEST_ACCURACY = -1.0
     Config.BEST_ITERATION = None
-    Config.current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    Config.current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
     user_prompt_path = "./Prompt/EDIT_1_userproxy_task_input.txt"
     planner_prompt_path = "./Prompt/EDIT_2_prompt_planner_template.txt"
@@ -132,13 +146,14 @@ def run_mars_task(
         "raw_log_path": raw_log_path,
     }
 
+
 if __name__ == "__main__":
 
-    Config.current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    os.makedirs('./Output', exist_ok=True)
-    file_name = os.path.join('./Output', f'{Config.current_time}_output.txt')
-    sys.stdout = open(file_name, 'w', encoding='utf-8')
-    
+    Config.current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    os.makedirs("./Output", exist_ok=True)
+    file_name = os.path.join("./Output", f"{Config.current_time}_output.txt")
+    sys.stdout = open(file_name, "w", encoding="utf-8")
+
     Config.question_type = get_question_type()
     start_time = time.time()
     print(f"start time: {start_time:.4f} s")

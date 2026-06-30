@@ -1,0 +1,5 @@
+Here is a topic for College Medicine:
+Answer MMLU multiple-choice questions in College Medicine.
+
+The model must output the answer as a parenthesized option letter such as (A).
+Generate or refine a prompt that maximizes accuracy for this task.
