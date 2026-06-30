@@ -1,0 +1,22 @@
+task:
+  task_id: high_school_world_history
+  group: MMLU
+  dataset_path: Dataset_format/MMLU/high_school_world_history_test.csv
+  question_type: choice
+  user_prompt_key: high_school_world_history
+  planner_prompt_key: high_school_world_history
+  answer_format: option_letter
+  metric: accuracy
+task_id: high_school_world_history
+question_type: choice
+answer_format: option_letter
+dataset_path: Dataset_format/MMLU/high_school_world_history_test.csv
+model: deepseek-v2.5-1210
+temperature: 0.6
+max_iterations: 1
+early_stop_delta: 0.01
+concurrency: 2
+max_samples: 2
+max_answer_retries: 1
+request_timeout: 60
+dry_run: true

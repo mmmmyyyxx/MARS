@@ -1,0 +1,8 @@
+Split the task '{task_description}' into detailed steps and details.
+For example, for the LSAT Analytical Reasoning task, the task is planned as follows:
+Total steps: 5
+Step 1: Identify the entities, positions, groups, and constraints in the setup.
+Step 2: Translate each rule into explicit logical constraints.
+Step 3: Apply the constraints to the specific question being asked.
+Step 4: Compare every answer option against the valid arrangements or deductions.
+Step 5: Instruct the model to output only the final option letter in the required format.

@@ -7,6 +7,10 @@ from autogen_agentchat.base import Response
 from autogen_agentchat.messages import AgentMessage, ChatMessage, TextMessage
 from autogen_core import CancellationToken
 from openai import OpenAI, AsyncOpenAI
+try:
+    from openai import APIConnectionError, APIStatusError, APITimeoutError, RateLimitError
+except ImportError:  # Keep compatibility with older OpenAI SDK variants.
+    APIConnectionError = APIStatusError = APITimeoutError = RateLimitError = None
 import pandas as pd
 import sys
 from datetime import datetime
@@ -46,6 +50,21 @@ def _max_answer_retries() -> int:
 
 def _request_timeout() -> float:
     return float(getattr(Config, "REQUEST_TIMEOUT", 60))
+
+
+def _retry_delay(attempt: int) -> float:
+    return min(2 ** attempt, 8)
+
+
+def _is_retryable_exception(exc: Exception) -> bool:
+    retryable_transport_types = tuple(
+        item
+        for item in (APIConnectionError, APITimeoutError, RateLimitError)
+        if item is not None
+    )
+    if retryable_transport_types and isinstance(exc, retryable_transport_types):
+        return True
+    return getattr(exc, "status_code", None) in {408, 409, 429, 500, 502, 503, 504}
 
 
 def _answer_format() -> str:
@@ -439,6 +458,10 @@ class TargetAgent(BaseChatAgent):
         self.prompt_history.append((prompt, accuracy))
         Config.LAST_PROMPT_HISTORY = list(self.prompt_history)
         Config.LAST_PREDICTIONS = list(getattr(Config, "LAST_PREDICTIONS", [])) + prediction_rows
+        if accuracy > float(getattr(Config, "BEST_ACCURACY", -1.0)):
+            Config.BEST_ACCURACY = accuracy
+            Config.BEST_PROMPT = prompt
+            Config.BEST_ITERATION = self.call_count
         file_name = os.path.join("./Output", f'{Config.current_time}_prompt_accuracy_history.txt')
         with open(file_name, 'a', encoding='utf-8') as file:
             file.write(f"Call Count: {self.call_count}, \nPrompt: {prompt}, \nAccuracy: {accuracy}\n")
@@ -547,19 +570,26 @@ class TargetAgent(BaseChatAgent):
         instruction = answer_instruction(answer_format)
 
         while retry_count < max_retries:
-            target_response = await self.call_LLM_test(
-                prompt + '\nQuestion: ' + question + "\n " + instruction
-            )
-            print(f"response:{target_response}")
-            if target_response is None:
-                retry_count += 1
-                continue  
+            try:
+                target_response = await self.call_LLM_test(
+                    prompt + '\nQuestion: ' + question + "\n " + instruction
+                )
+                print(f"response:{target_response}")
+                if target_response is None:
+                    retry_count += 1
+                    continue
 
-            canonical = fallback_extract_from_raw(target_response, answer_format)
-            if is_valid_canonical(canonical, answer_format):
-                return canonical, target_response
+                canonical = fallback_extract_from_raw(target_response, answer_format)
+                if is_valid_canonical(canonical, answer_format):
+                    return canonical, target_response
+            except Exception as exc:
+                if not _is_retryable_exception(exc):
+                    raise
+                print(f"retryable_api_error:{exc.__class__.__name__}: {exc}")
 
             retry_count += 1
+            if retry_count < max_retries:
+                await asyncio.sleep(_retry_delay(retry_count - 1))
 
         return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
@@ -572,17 +602,24 @@ class TargetAgent(BaseChatAgent):
         instruction = answer_instruction(answer_format)
 
         while retry_count < max_retries:
-            target_response = await self.call_LLM_test(
-                prompt + '\nQuestion: ' + question + "\n " + instruction
-            )
-            print(f"response:{target_response}")
+            try:
+                target_response = await self.call_LLM_test(
+                    prompt + '\nQuestion: ' + question + "\n " + instruction
+                )
+                print(f"response:{target_response}")
 
-            if target_response:
-                canonical = fallback_extract_from_raw(target_response, answer_format)
-                if is_valid_canonical(canonical, answer_format):
-                    return canonical, target_response
+                if target_response:
+                    canonical = fallback_extract_from_raw(target_response, answer_format)
+                    if is_valid_canonical(canonical, answer_format):
+                        return canonical, target_response
+            except Exception as exc:
+                if not _is_retryable_exception(exc):
+                    raise
+                print(f"retryable_api_error:{exc.__class__.__name__}: {exc}")
 
             retry_count += 1
+            if retry_count < max_retries:
+                await asyncio.sleep(_retry_delay(retry_count - 1))
 
         return "", ""  # If the maximum number of retries is reached and no result is obtained, the empty string is returned.
 
@@ -638,13 +675,13 @@ class TargetAgent(BaseChatAgent):
             Config.LAST_STOPPED_REASON = "max_iterations"
             return True
         
-        # conition2: The recent accuracy change is below the threshold.
+        # condition 2: stop when the current gain is below the paper's threshold.
         if len(self.prompt_history) >= 2:
             last_accuracy = self.prompt_history[-1][1]
             second_last_accuracy = self.prompt_history[-2][1]
-            accuracy_diff = abs(last_accuracy - second_last_accuracy)
+            accuracy_gain = last_accuracy - second_last_accuracy
             
-            if accuracy_diff < float(getattr(Config, "EARLY_STOP_DELTA", 0.01)):
+            if accuracy_gain < float(getattr(Config, "EARLY_STOP_DELTA", 0.01)):
                 Config.LAST_STOPPED_REASON = "early_stop_delta"
                 return True
         

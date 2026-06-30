@@ -106,3 +106,135 @@ For example:
 
 I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. 
 Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## Marketing
+
+Here is a topic for marketing:
+Answer multiple-choice questions about marketing concepts, consumer behavior, advertising, market research, segmentation, branding, pricing, distribution, and strategy.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## Human Aging
+
+Here is a topic for human aging:
+Answer multiple-choice questions about human aging, gerontology, age-related physiology, health, disease, cognition, social factors, and care.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## High School World History
+
+Here is a topic for high school world history:
+Answer multiple-choice questions about world history, including civilizations, political changes, wars, revolutions, cultural developments, trade, and historical interpretation.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## Electrical Engineering
+
+Here is a topic for electrical engineering:
+Answer multiple-choice questions about circuits, signals, electromagnetism, electronics, power systems, control, communications, and related engineering principles.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## College Medicine
+
+Here is a topic for college medicine:
+Answer multiple-choice questions about medicine, anatomy, physiology, pathology, diagnosis, treatment, pharmacology, and clinical reasoning.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## College Biology
+
+Here is a topic for college biology:
+Answer multiple-choice questions about biology, including cell biology, genetics, evolution, ecology, physiology, molecular biology, and experimental reasoning.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## Art Studies
+
+Here is a topic for art studies:
+Answer multiple-choice questions about art theory, art history, aesthetics, artists, styles, works, techniques, and cultural context.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## Clinical Medicine
+
+Here is a topic for clinical medicine:
+Answer multiple-choice questions about clinical medicine, diagnosis, symptoms, treatment, pharmacology, medical decision making, and patient care.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## Urban and Rural Planner
+
+Here is a topic for urban and rural planning:
+Answer multiple-choice questions about urban planning, rural planning, land use, transportation, public facilities, regulation, sustainability, and regional development.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## GSM8K
+
+Here is a topic for GSM8K:
+Solve grade-school math word problems. The model should reason carefully and return the final numeric answer.
+
+The input question is a math word problem. The model should output only the final answer value, without explanation.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.
+
+
+
+## LSAT AR
+
+Here is a topic for LSAT analytical reasoning:
+Answer multiple-choice analytical reasoning questions involving rules, ordering, grouping, assignments, constraints, and logical deductions.
+
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.

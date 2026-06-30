@@ -1,0 +1,7 @@
+Split the task '{task_description}' into detailed steps and details.
+For example, for the Clinical Medicine task, the task is planned as follows:
+Total steps: 4
+Step 1: Identify the clinical condition, diagnostic clue, treatment decision, or medical principle.
+Step 2: Reason from the provided symptoms, findings, and context.
+Step 3: Compare options and choose the most clinically appropriate answer.
+Step 4: Instruct the model to output only the final option letter in the required format.

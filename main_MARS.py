@@ -71,6 +71,9 @@ def run_mars_task(
     Config.LAST_PROMPT_HISTORY = []
     Config.LAST_PREDICTIONS = []
     Config.LAST_STOPPED_REASON = None
+    Config.BEST_PROMPT = ""
+    Config.BEST_ACCURACY = -1.0
+    Config.BEST_ITERATION = None
     Config.current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 
     user_prompt_path = "./Prompt/EDIT_1_userproxy_task_input.txt"
@@ -102,6 +105,8 @@ def run_mars_task(
                 print(f"model: {Config.MODEL}")
                 print(f"temperature: {Config.TEMPERATURE}")
                 print(f"max_samples: {Config.MAX_SAMPLES}")
+                print(f"request_timeout: {Config.REQUEST_TIMEOUT}")
+                print(f"max_answer_retries: {Config.MAX_ANSWER_RETRIES}")
                 print(f"start time: {start_time:.4f} s")
                 asyncio.run(run_agents())
                 end_time = time.time()
@@ -120,6 +125,9 @@ def run_mars_task(
         "prompt_history": history,
         "predictions": list(getattr(Config, "LAST_PREDICTIONS", [])),
         "stopped_reason": getattr(Config, "LAST_STOPPED_REASON", None) or "completed",
+        "best_prompt": getattr(Config, "BEST_PROMPT", ""),
+        "best_accuracy": getattr(Config, "BEST_ACCURACY", -1.0),
+        "best_iteration": getattr(Config, "BEST_ITERATION", None),
         "runtime_seconds": end_time - start_time,
         "raw_log_path": raw_log_path,
     }

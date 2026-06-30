@@ -48,6 +48,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir")
     parser.add_argument("--seed", type=int)
     parser.add_argument("--runnable-only", action="store_true", help="Run only registered tasks whose dataset and prompts are available.")
+    parser.add_argument("--preflight", action="store_true", help="Only report task readiness without running MARS.")
+    parser.add_argument("--smoke-test", action="store_true", help="Run all selected tasks with max_samples=20 unless already set.")
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
@@ -156,10 +158,43 @@ def prepare_task_files(task_dir: str, task, config, user_prompt: Optional[str], 
         write_text(os.path.join(task_dir, "user_prompt.txt"), user_prompt)
     if planner_prompt is not None:
         write_text(os.path.join(task_dir, "planner_prompt.txt"), planner_prompt)
-    for filename in ("errors.jsonl", "raw_logs.txt", "final_prompt.txt"):
+    for filename in ("errors.jsonl", "raw_logs.txt", "final_prompt.txt", "best_prompt.txt", "diagnostics.md"):
         path = os.path.join(task_dir, filename)
         if not os.path.exists(path):
             write_text(path, "")
+
+
+def preflight_rows(tasks, prompt_manager: PromptManager) -> List[Dict[str, Any]]:
+    rows = []
+    for task in tasks:
+        dataset_ok = dataset_exists(task, ROOT_DIR)
+        user_prompt_ok = True
+        planner_prompt_ok = True
+        try:
+            prompt_manager.get_user_prompt(task.user_prompt_key)
+        except KeyError:
+            user_prompt_ok = False
+        try:
+            prompt_manager.get_planner_prompt(task.planner_prompt_key)
+        except KeyError:
+            planner_prompt_ok = False
+        rows.append({
+            "task_id": task.task_id,
+            "group": task.group,
+            "dataset_exists": dataset_ok,
+            "user_prompt_exists": user_prompt_ok,
+            "planner_prompt_exists": planner_prompt_ok,
+            "answer_format": task.answer_format,
+            "runnable": dataset_ok and user_prompt_ok and planner_prompt_ok,
+        })
+    return rows
+
+
+def print_preflight(rows: List[Dict[str, Any]]) -> None:
+    fieldnames = ["task_id", "group", "dataset_exists", "user_prompt_exists", "planner_prompt_exists", "answer_format", "runnable"]
+    print(",".join(fieldnames))
+    for row in rows:
+        print(",".join(str(row[field]) for field in fieldnames))
 
 
 def main() -> int:
@@ -182,6 +217,8 @@ def main() -> int:
     }
     config = load_config(os.path.join(ROOT_DIR, args.config), overrides)
     config.concurrency = max(int(config.concurrency), 1)
+    if args.smoke_test and config.max_samples in (None, "", 0):
+        config.max_samples = 20
     random.seed(config.seed)
 
     all_tasks = load_tasks(os.path.join(ROOT_DIR, args.task_config))
@@ -198,6 +235,9 @@ def main() -> int:
             return False
 
     selected_tasks = resolve_tasks(args.tasks, all_tasks, is_runnable=is_runnable_task)
+    if args.preflight:
+        print_preflight(preflight_rows(selected_tasks, prompt_manager))
+        return 0
     if args.runnable_only:
         selected_tasks = [task for task in selected_tasks if is_runnable_task(task)]
     if not selected_tasks:
@@ -264,15 +304,19 @@ def main() -> int:
             stopped_reason = run_result.get("stopped_reason", "completed")
             write_prompt_history(os.path.join(task_dir, "prompt_accuracy_history.csv"), history, stopped_reason)
             final_prompt = history[-1][0] if history else ""
+            best_prompt = run_result.get("best_prompt", "")
+            if not best_prompt and history:
+                best_prompt = max(history, key=lambda item: item[1])[0]
             write_text(os.path.join(task_dir, "final_prompt.txt"), final_prompt)
+            write_text(os.path.join(task_dir, "best_prompt.txt"), best_prompt)
             diagnostics = build_diagnostics_markdown(task.task_id, run_result.get("predictions", []))
             final_metrics = compute_final_metrics_from_predictions(run_result.get("predictions", []))
-            if final_metrics["num_samples"] and final_metrics["final_accuracy"] == 0:
-                write_text(os.path.join(task_dir, "diagnostics.md"), diagnostics)
+            write_text(os.path.join(task_dir, "diagnostics.md"), diagnostics)
             summary_rows.append(success_summary_row(task, run_result))
         except Exception as exc:
             append_error(task_dir, "task_failed", str(exc), {"exception_class": exc.__class__.__name__})
             write_text(os.path.join(task_dir, "final_prompt.txt"), "")
+            write_text(os.path.join(task_dir, "best_prompt.txt"), "")
             summary_rows.append(failed_summary_row(task, "failed", "task_failed", time.time() - task_start, num_samples))
             continue
 

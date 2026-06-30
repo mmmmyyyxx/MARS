@@ -1,0 +1,3 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"Is the following sentence plausible? ""Neymar did a maradona on the defender in the Champions Leage Semifinal.""",yes,yes,yes,yes,yes_no,True,
+1,1,"Is the following sentence plausible? ""Dejounte Murray took a side-step three.""",yes,yes,yes,yes,yes_no,True,

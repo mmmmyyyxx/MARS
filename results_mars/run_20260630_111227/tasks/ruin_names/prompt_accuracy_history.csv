@@ -1,0 +1,2 @@
+iteration,accuracy,delta_accuracy,prompt,stopped_reason
+1,1.0,,Solve the problem carefully and output only the final answer in the requested format.,max_iterations

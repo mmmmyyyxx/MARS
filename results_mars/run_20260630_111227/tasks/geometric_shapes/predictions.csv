@@ -1,0 +1,26 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"This SVG path element <path d=""M 25.00,38.00 L 89.00,58.00""/> draws a
+Options:
+(A) circle
+(B) heptagon
+(C) hexagon
+(D) kite
+(E) line
+(F) octagon
+(G) pentagon
+(H) rectangle
+(I) sector
+(J) triangle",(E),(E),(E),(E),option_letter,True,
+1,1,"This SVG path element <path d=""M 74.18,59.65 L 50.54,71.20 M 50.54,71.20 L 38.08,45.69 M 38.08,45.69 L 61.71,34.14 M 61.71,34.14 L 74.18,59.65""/> draws a
+Options:
+(A) circle
+(B) heptagon
+(C) hexagon
+(D) kite
+(E) line
+(F) octagon
+(G) pentagon
+(H) rectangle
+(I) sector
+(J) triangle
+(K) trapezoid",(K),(K),(K),(K),option_letter,True,

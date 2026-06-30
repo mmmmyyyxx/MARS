@@ -1,0 +1,22 @@
+task:
+  task_id: gsm8k
+  group: GSM8K
+  dataset_path: Dataset_format/GSM8K/gsm8k_test.csv
+  question_type: short_answer
+  user_prompt_key: gsm8k
+  planner_prompt_key: gsm8k
+  answer_format: short_answer
+  metric: accuracy
+task_id: gsm8k
+question_type: short_answer
+answer_format: short_answer
+dataset_path: Dataset_format/GSM8K/gsm8k_test.csv
+model: deepseek-v2.5-1210
+temperature: 0.6
+max_iterations: 1
+early_stop_delta: 0.01
+concurrency: 2
+max_samples: 2
+max_answer_retries: 1
+request_timeout: 60
+dry_run: true

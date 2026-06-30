@@ -1,0 +1,17 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"The study of older adults and aging is referred to as
+
+Options:
+(A)Gerontology
+(B)Geropsychiatry
+(C)Geriatrics
+(D)Gero-education
+",(A),(A),(A),(A),option_letter,True,
+1,1,"Which of the following factors is associated with a decreased risk of Alzheimer's?
+
+Options:
+(A)Being African or Hispanic American
+(B)Eating fish
+(C)A lower level of education
+(D)Being married
+",(B),(B),(B),(B),option_letter,True,

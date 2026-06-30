@@ -159,12 +159,10 @@ def main() -> int:
         lines.extend(task_report(task_dir, summary_row))
 
         predictions = read_csv_rows(task_dir / "predictions.csv")
-        metrics = compute_final_metrics_from_predictions(predictions)
-        if metrics["num_samples"] and metrics["final_accuracy"] == 0:
-            (task_dir / "diagnostics.md").write_text(
-                build_diagnostics_markdown(task_dir.name, predictions),
-                encoding="utf-8",
-            )
+        (task_dir / "diagnostics.md").write_text(
+            build_diagnostics_markdown(task_dir.name, predictions),
+            encoding="utf-8",
+        )
 
     output_path = run_dir / "evaluation_diagnostics.md"
     output_path.write_text("\n".join(lines), encoding="utf-8")

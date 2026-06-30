@@ -1,0 +1,7 @@
+Split the task '{task_description}' into detailed steps and details.
+For example, for the Art Studies task, the task is planned as follows:
+Total steps: 4
+Step 1: Identify the art historical period, concept, artwork, artist, technique, or aesthetic idea being tested.
+Step 2: Recall the relevant art studies knowledge and cultural context.
+Step 3: Compare all answer options and eliminate implausible choices.
+Step 4: Instruct the model to output only the final option letter in the required format.

@@ -1,0 +1,17 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"The Barkhausen criterion for an oscillator
+
+Options:
+(A)Loop gain should be unity
+(B)Loop gain should be less than unity
+(C)The phase of a feedback signal with respect to input should be 0° or 360°
+(D)Both A and C
+",(D),(D),(D),(D),option_letter,True,
+1,1,"Potentiometer method of DC voltage measurement is more accurate than direct measurement using a voltmeter because
+
+Options:
+(A)It loads the circuit moderately.
+(B)It loads the circuit to maximum extent.
+(C)It uses centre zero galvanometer instead of voltmeter.
+(D)It does not load the circuit at all.
+",(D),(D),(D),(D),option_letter,True,

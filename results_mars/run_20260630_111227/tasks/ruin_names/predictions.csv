@@ -1,0 +1,13 @@
+iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
+1,0,"Which of the following is a humorous edit of this artist or movie name: 'fall out boy'?
+Options:
+(A) faqll out boy
+(B) fall out bot
+(C) falbl out boy
+(D) fall outt boy",(B),(B),(B),(B),option_letter,True,
+1,1,"Which of the following is a humorous edit of this artist or movie name: 'the beatles'?
+Options:
+(A) the beatlis
+(B) the beagles
+(C) the ubeatles
+(D) the beatlies",(B),(B),(B),(B),option_letter,True,

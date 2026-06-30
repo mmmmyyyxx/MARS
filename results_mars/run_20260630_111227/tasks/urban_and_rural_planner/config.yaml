@@ -1,0 +1,22 @@
+task:
+  task_id: urban_and_rural_planner
+  group: C-EVAL
+  dataset_path: Dataset_format/C-EVAL/urban_and_rural_planner_val.csv
+  question_type: choice
+  user_prompt_key: urban_and_rural_planner
+  planner_prompt_key: urban_and_rural_planner
+  answer_format: option_letter
+  metric: accuracy
+task_id: urban_and_rural_planner
+question_type: choice
+answer_format: option_letter
+dataset_path: Dataset_format/C-EVAL/urban_and_rural_planner_val.csv
+model: deepseek-v2.5-1210
+temperature: 0.6
+max_iterations: 1
+early_stop_delta: 0.01
+concurrency: 2
+max_samples: 2
+max_answer_retries: 1
+request_timeout: 60
+dry_run: true

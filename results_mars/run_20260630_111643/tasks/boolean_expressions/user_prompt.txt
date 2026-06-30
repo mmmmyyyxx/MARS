@@ -1,0 +1,8 @@
+Here is a topic for Boolean Expressions:
+Evaluate the truth value of a random Boolean expression consisting of Boolean constants (True, False) and basic Boolean operators (and, or, not).
+
+For example:
+not ( True ) and ( True ) is
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. 
+Please generate the most suitable prompt according to the requirements I just mentioned.
