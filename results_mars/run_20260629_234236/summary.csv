@@ -1,0 +1,7 @@
+task_id,group,dataset_path,question_type,status,num_samples,num_success,num_failed,best_accuracy,final_accuracy,best_iteration,stopped_reason,total_runtime_seconds
+boolean_expressions,BBH,Dataset_format/BBH/boolean_expressions.csv,choice,success,249,16,233,0.0963855421686747,0.0642570281124498,2,early_stop_delta,1137.0388
+disambiguation_qa,BBH,Dataset_format/BBH/disambiguation_qa.csv,choice,success,249,8,241,0.04819277108433735,0.0321285140562249,1,early_stop_delta,812.4069
+formal_fallacies,BBH,Dataset_format/BBH/formal_fallacies.csv,choice,success,249,10,239,0.7188755020080321,0.040160642570281124,3,early_stop_delta,1931.0723
+geometric_shapes,BBH,Dataset_format/BBH/geometric_shapes.csv,choice,success,249,56,193,0.2248995983935743,0.2248995983935743,10,max_iterations,2729.9022
+ruin_names,BBH,Dataset_format/BBH/ruin_names.csv,choice,success,249,109,140,0.46184738955823296,0.43775100401606426,1,early_stop_delta,828.9788
+sports_understanding,BBH,Dataset_format/BBH/sports_understanding.csv,choice,success,249,192,57,0.7710843373493976,0.7710843373493976,10,max_iterations,2055.5482

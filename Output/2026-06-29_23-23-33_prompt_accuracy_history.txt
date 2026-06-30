@@ -1,0 +1,9 @@
+Call Count: 2, 
+Prompt: Evaluate the given Boolean expression by systematically applying Boolean logic rules in the following order:  
+1. Resolve expressions inside parentheses first, working from the innermost nested parentheses outward.  
+2. Apply the 'not' operator to negate values.  
+3. Perform 'and' operations, applying short-circuit evaluation where applicable.  
+4. Perform 'or' operations, applying short-circuit evaluation where applicable.  
+
+Output only the final truth value as "True" or "False" without any additional explanation or reasoning., 
+Accuracy: 0.9196787148594378

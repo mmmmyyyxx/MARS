@@ -1,2 +1,0 @@
-task_id,group,dataset_path,question_type,status,num_samples,num_success,num_failed,best_accuracy,final_accuracy,best_iteration,stopped_reason,total_runtime_seconds
-geometric_shapes,BBH,Dataset_format/BBH/geometric_shapes.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.0277

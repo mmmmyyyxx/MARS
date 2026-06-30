@@ -37,6 +37,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--early-stop-delta", type=float)
     parser.add_argument("--max-critic-revisions", type=int)
     parser.add_argument("--concurrency", type=int)
+    parser.add_argument("--max-samples", type=int, help="Limit samples per task for quick debugging runs.")
+    parser.add_argument("--max-answer-retries", type=int, help="Retries for extracting a valid answer from each sample.")
+    parser.add_argument("--request-timeout", type=float, help="Per-request timeout in seconds.")
     parser.add_argument("--output-dir")
     parser.add_argument("--seed", type=int)
     parser.add_argument("--runnable-only", action="store_true", help="Run only registered tasks whose dataset and prompts are available.")
@@ -52,6 +55,12 @@ def count_dataset_samples(path: str) -> int:
         return max(row_count - 2, 0)
     except OSError:
         return 0
+
+
+def effective_num_samples(total_samples: int, max_samples: Optional[int]) -> int:
+    if max_samples in (None, "", 0):
+        return total_samples
+    return min(total_samples, max(int(max_samples), 1))
 
 
 def failed_summary_row(task, status: str, reason: str, runtime: float, num_samples: int = 0) -> Dict[str, Any]:
@@ -104,6 +113,9 @@ def prepare_task_files(task_dir: str, task, config, user_prompt: Optional[str], 
         "max_iterations": config.max_iterations,
         "early_stop_delta": config.early_stop_delta,
         "concurrency": config.concurrency,
+        "max_samples": config.max_samples,
+        "max_answer_retries": config.max_answer_retries,
+        "request_timeout": config.request_timeout,
         "dry_run": config.dry_run,
     })
     if user_prompt is not None:
@@ -127,6 +139,9 @@ def main() -> int:
         "early_stop_delta": args.early_stop_delta,
         "max_critic_revisions": args.max_critic_revisions,
         "concurrency": args.concurrency,
+        "max_samples": args.max_samples,
+        "max_answer_retries": args.max_answer_retries,
+        "request_timeout": args.request_timeout,
         "output_dir": args.output_dir,
         "seed": args.seed,
         "dry_run": args.dry_run,
@@ -168,7 +183,7 @@ def main() -> int:
         task_dir = os.path.join(run_dir, "tasks", task.task_id)
         os.makedirs(task_dir, exist_ok=True)
         dataset_path = os.path.join(ROOT_DIR, task.dataset_path)
-        num_samples = count_dataset_samples(dataset_path)
+        num_samples = effective_num_samples(count_dataset_samples(dataset_path), config.max_samples)
         user_prompt = None
         planner_prompt = None
 

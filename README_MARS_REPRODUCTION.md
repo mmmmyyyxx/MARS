@@ -73,6 +73,18 @@ If an older run shows 0 accuracy for these label-answer tasks, rerun them after 
 python reproduce_mars.py --tasks "boolean_expressions,formal_fallacies,sports_understanding" --model deepseek-chat --temperature 0.6 --concurrency 8
 ```
 
+For quick debugging, avoid the full 249-sample evaluation loop:
+
+```bash
+python reproduce_mars.py --tasks "boolean_expressions,formal_fallacies,sports_understanding" --model deepseek-chat --temperature 0.6 --concurrency 8 --max-samples 50 --max-answer-retries 2 --request-timeout 30
+```
+
+Use the full dataset only when you are ready to record final numbers:
+
+```bash
+python reproduce_mars.py --tasks runnable --model deepseek-chat --temperature 0.6 --concurrency 8
+```
+
 ## Task Groups
 
 ```bash

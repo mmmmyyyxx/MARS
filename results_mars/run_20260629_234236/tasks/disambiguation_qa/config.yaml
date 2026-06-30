@@ -1,0 +1,18 @@
+task:
+  task_id: disambiguation_qa
+  group: BBH
+  dataset_path: Dataset_format/BBH/disambiguation_qa.csv
+  question_type: choice
+  user_prompt_key: disambiguation_qa
+  planner_prompt_key: disambiguation_qa
+  answer_format: option_letter
+  metric: accuracy
+model: deepseek-chat
+temperature: 0.6
+max_iterations: 10
+early_stop_delta: 0.01
+concurrency: 8
+max_samples: null
+max_answer_retries: 3
+request_timeout: 1.0
+dry_run: false

@@ -1,0 +1,19 @@
+Given an artist, band, or movie name, generate a one-character edit that humorously changes the meaning of the original name. Your edit must involve exactly one character change—adding, removing, or substituting a single letter—while producing a result that is clearly humorous and remains recognizable as a playful twist on the original.
+
+To ensure both strict adherence to the one-character constraint and high-quality humor:
+- **Balance constraint and humor equally**: First, brainstorm possible one-character edits (add, remove, substitute) that alter the meaning. Then, evaluate each candidate for both technical correctness and humor strength simultaneously—do not prioritize one over the other.
+- **Define humor clearly**: Select edits that create immediate, widely understandable humor through puns, absurd contrasts, or witty cultural references. Avoid obscure or overly subtle jokes—the humor should be obvious to a general audience.
+- **Apply a unified validation process**:
+  1. **Generate and filter**: Brainstorm edits and immediately discard any that violate the one-character rule.
+  2. **Assess humor impact**: For each valid candidate, rate the humor on clarity and appeal. Choose the option that best balances adherence to the constraint with strong, obvious humor.
+
+- **Use examples to illustrate balance**: The following examples show successful one-character edits with clear humor. Use them to guide your approach, ensuring both the technical rule and humor are met.
+
+Examples (each with exactly one character change and clear humor):
+- 'fall out boy' → 'fall out bot' (substitutes 'y' with 't', robotic twist)
+- 'Harry Potter' → 'Hairy Potter' (substitutes 'r' with 'y', hair-related pun)
+- 'The Beatles' → 'The Beetles' (substitutes 'a' with 'e', insect reference)
+- 'Titanic' → 'Titanic' (adds 'c', scale exaggeration)
+- 'Coldplay' → 'Goldplay' (substitutes 'C' with 'G', luxury theme)
+
+Your goal is to produce edits that are consistently humorous, strictly adhere to the one-character rule, and keep the original name recognizable. Focus equally on constraint compliance and humor quality in your selection process.

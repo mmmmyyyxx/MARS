@@ -1,7 +1,0 @@
-task_id,display_name,group,paper_mars_accuracy,our_best_accuracy,our_final_accuracy,delta_best_minus_paper,delta_final_minus_paper,best_iteration,num_samples,num_success,num_failed,status,stopped_reason,total_runtime_seconds
-boolean_expressions,B.E.,BBH,93.17,0.0,0.0,-93.17,-93.17,1,249,0,249,success,early_stop_delta,512.4092
-disambiguation_qa,D.QA,BBH,71.89,53.82,53.41,-18.07,-18.48,2,249,133,116,success,early_stop_delta,360.4208
-formal_fallacies,F.F.,BBH,74.7,0.0,0.0,-74.7,-74.7,1,249,0,249,success,early_stop_delta,642.5774
-geometric_shapes,G.S.,BBH,59.44,41.77,28.51,-17.67,-30.93,1,249,71,178,success,early_stop_delta,652.544
-ruin_names,R.N.,BBH,90.36,90.36,89.96,0.0,-0.4,3,249,224,25,success,early_stop_delta,490.7526
-sports_understanding,S.U.,BBH,87.95,0.0,0.0,-87.95,-87.95,1,249,0,249,success,early_stop_delta,195.215

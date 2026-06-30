@@ -1,0 +1,51 @@
+iteration,accuracy,delta_accuracy,prompt,stopped_reason
+1,0.05622489959839357,,"Evaluate the truth value of the given Boolean expression by carefully applying the rules of Boolean logic step by step. Begin by identifying and resolving any expressions within parentheses, then apply the 'not' operator to its operand, followed by 'and' and 'or' operators in the correct order of precedence. Ensure each step is clearly reasoned and justified before proceeding to the next, and conclude with the final truth value.",
+2,0.0963855421686747,0.04016064257028113,"**Updated Prompt:**
+
+Evaluate the Boolean expression and output only the final truth value (True or False). Follow these evaluation steps:
+
+1. Evaluate expressions inside parentheses first, from innermost to outermost.
+2. Apply `not` to the operand immediately following it.
+3. Evaluate `and` operations next, from left to right.
+4. Evaluate `or` operations last, from left to right.
+
+Example:
+Input: `not True and False`  
+Output: `False`",
+3,0.06827309236947791,-0.02811244979919679,"**Refined Prompt:**
+
+Evaluate the Boolean expression and output only ""True"" or ""False"". Use this efficient method:
+
+1. **Resolve parentheses first** from innermost to outermost
+2. **Apply operators in this order:**  
+   - `not`  
+   - `and`  
+   - `or`
+3. **Evaluate systematically** while maintaining accuracy
+
+**Key Principles:**
+- Internal self-correction is enabled by following the strict evaluation sequence
+- No intermediate steps or explanations in output
+- If any uncertainty arises during evaluation, re-verify using the precedence rules
+
+**Example:**  
+Input: `not (False or True) and True`  
+Output: `False`
+
+**Note:** The structured evaluation process inherently supports accuracy checking while keeping the output clean and focused.",
+4,0.0642570281124498,-0.004016064257028121,"**Optimized Prompt:**
+
+Evaluate the Boolean expression and output only ""True"" or ""False"".
+
+**Key Rules:**
+- `not` has highest precedence, then `and`, then `or`
+- Parentheses override precedence (innermost first)
+- Equal precedence: left-to-right evaluation
+
+**Output:** Exactly one word - ""True"" or ""False""
+
+**Example:**
+Input: `not (False or (True and False)) or True`
+Output: `True`
+
+**Remember:** No explanations, just the final truth value.",early_stop_delta

@@ -15,6 +15,9 @@ class MarsConfig:
     early_stop_delta: float
     max_critic_revisions: int
     concurrency: int
+    max_samples: Optional[int]
+    max_answer_retries: int
+    request_timeout: float
     output_dir: str
     cache_enabled: bool
     seed: int

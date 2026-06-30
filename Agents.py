@@ -27,6 +27,21 @@ def _concurrency() -> int:
     return max(int(getattr(Config, "CONCURRENCY", 1)), 1)
 
 
+def _max_samples():
+    value = getattr(Config, "MAX_SAMPLES", None)
+    if value in (None, "", 0):
+        return None
+    return max(int(value), 1)
+
+
+def _max_answer_retries() -> int:
+    return max(int(getattr(Config, "MAX_ANSWER_RETRIES", 3)), 1)
+
+
+def _request_timeout() -> float:
+    return float(getattr(Config, "REQUEST_TIMEOUT", 60))
+
+
 def _answer_format() -> str:
     return str(getattr(Config, "ANSWER_FORMAT", "auto") or "auto").lower()
 
@@ -503,7 +518,11 @@ class TargetAgent(BaseChatAgent):
         if self.dataset is None:
             dataset = pd.read_csv(Config.DATASET_PATH)
             # Preserve the legacy behavior of skipping the first data row.
-            self.dataset = dataset.iloc[1:].reset_index(drop=True)
+            dataset = dataset.iloc[1:].reset_index(drop=True)
+            max_samples = _max_samples()
+            if max_samples is not None:
+                dataset = dataset.head(max_samples).reset_index(drop=True)
+            self.dataset = dataset
         return self.dataset
 
     async def evaluate_dataset(self, prompt: str, dataset):
@@ -570,7 +589,7 @@ class TargetAgent(BaseChatAgent):
     async def process_choice(self, prompt: str, question: str):
         # print("process choice question!")
 
-        max_retries = 5
+        max_retries = _max_answer_retries()
         retry_count = 0
         answer_format = _answer_format()
         instruction = _answer_instruction(answer_format)
@@ -595,7 +614,7 @@ class TargetAgent(BaseChatAgent):
     async def process_short_answer(self, prompt: str, question: str) -> str:
         # print("process short answer question!")
 
-        max_retries = 5
+        max_retries = _max_answer_retries()
         retry_count = 0
 
         while retry_count < max_retries:
@@ -624,7 +643,11 @@ class TargetAgent(BaseChatAgent):
             return "(A)" if self.question_type == "choice" else "mock-answer"
 
         if self.target_client is None:
-            self.target_client = AsyncOpenAI(api_key=Config.API_KEY, base_url=Config.BASE_URL)
+            self.target_client = AsyncOpenAI(
+                api_key=Config.API_KEY,
+                base_url=Config.BASE_URL,
+                timeout=_request_timeout(),
+            )
 
         async with self.semaphore:
             response = await self.target_client.chat.completions.create(

@@ -1,0 +1,52 @@
+**Enhanced Geometric Shape Analysis Protocol with Robust Vertex Detection & Command-Type Adaptation**
+
+**Critical Refinement: Directional Change Calculation Stability**
+
+**Issue Identification:** The current bearing-based directional change calculation (atan2(Δy, Δx)) may yield inconsistent vertex identification due to:
+- **Path Scale Sensitivity:** Fixed 15° threshold behaves differently on small vs. large-scale paths
+- **Noise Amplification:** Minor coordinate fluctuations in short segments cause disproportionate bearing changes
+- **Curve Approximation Gap:** Linear interpolation of curved segments creates artificial directional artifacts
+
+**Resolution: Adaptive Directional Change Protocol**
+- **Scale-Normalized Threshold:** Calculate average segment length, apply directional threshold proportional to path scale (15° base × (avg_length/10))
+- **Cumulative Change Validation:** Require sustained directional change across multiple segments before vertex registration
+- **Segment Length Filtering:** Ignore directional changes in segments < 2 units to prevent noise-induced false vertices
+
+**Multi-Command Type Handling Enhancement**
+
+**Current Limitation:** Protocol assumes absolute line commands (L) only, failing on:
+- Relative commands (l, m, h, v) requiring coordinate transformation
+- Curve commands (C, S, Q, T, A) requiring bezier/circular approximation
+- Close path commands (Z) requiring implicit segment generation
+
+**Optimization: Universal Command Preprocessing**
+1. **Command Normalization:** Convert all relative commands to absolute coordinates using cumulative transformation matrix
+2. **Curve Discretization:** For bezier/arc commands, generate interpolated line segments at 1-unit intervals to approximate curvature
+3. **Implicit Closure:** Handle 'Z' commands by generating explicit segment from current position to path start
+
+**Refined Multi-Stage Vertex Filtering with Command Awareness**
+
+**Phase 0: Command Preprocessing**
+- Normalize all coordinates to absolute positioning
+- Discretize curves into line segments with adaptive sampling
+- Resolve implicit segments from close commands
+
+**Phase 1: Adaptive Vertex Filtering**
+- Apply scale-normalized directional change threshold
+- Implement cumulative change validation (≥2 consecutive segments maintaining direction)
+- Filter short-segment noise (ignore segments < 2 units)
+
+**Phase 2: Geometric Consistency Verification**
+- Enhanced collinearity check with path-scale-appropriate tolerance
+- Closure verification with command-normalized coordinates
+
+**Applied Example with Enhanced Protocol:**
+Path with mixed commands: "M 50,50 l 20,0 v 20 h -20 Z C 60,80 80,80 80,60"
+
+**Enhanced Processing:**
+- Normalize relative commands: l→L, v→L, h→L, Z→explicit closure
+- Discretize curve C 60,80 80,80 80,60 into 8 line segments
+- Apply adaptive directional filtering based on 15-unit average segment length
+- Final vertex count: 6 → "hexagon" (C)
+
+**Output Directive:** "Execute command normalization and curve discretization first, then apply adaptive vertex filtering with scale-aware thresholds. Classify by verified vertex count with geometric property checks for ambiguous cases. Output single letter only."

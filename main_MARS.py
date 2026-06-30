@@ -61,6 +61,9 @@ def run_mars_task(
     Config.EARLY_STOP_DELTA = config.early_stop_delta
     Config.MAX_CRITIC_REVISIONS = config.max_critic_revisions
     Config.CONCURRENCY = config.concurrency
+    Config.MAX_SAMPLES = config.max_samples
+    Config.MAX_ANSWER_RETRIES = config.max_answer_retries
+    Config.REQUEST_TIMEOUT = config.request_timeout
     Config.DRY_RUN = config.dry_run
     Config.TASK_OUTPUT_DIR = output_dir
     Config.PREDICTIONS_PATH = os.path.join(output_dir, "predictions.csv")

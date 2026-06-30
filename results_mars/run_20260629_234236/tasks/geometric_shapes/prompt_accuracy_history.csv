@@ -1,0 +1,366 @@
+iteration,accuracy,delta_accuracy,prompt,stopped_reason
+1,0.060240963855421686,,"Analyze the SVG path commands step by step to trace the shape's outline. Identify each coordinate movement and connection, then determine the overall geometric figure by counting vertices and assessing symmetry, angles, and closure. Finally, select the correct shape from the provided options.",
+2,0.020080321285140562,-0.040160642570281124,"To accurately determine the geometric shape from an SVG path, especially when it includes both straight-line and curved commands, follow this refined reasoning process that integrates curve analysis and geometric property evaluation:
+
+1. **Extract all path commands and their geometric implications**: Parse the `d` attribute to identify every command type and its associated coordinates. For straight-line commands (`L`, `H`, `V`), treat each endpoint as a vertex. For curved commands (`C`, `Q`, `A`, `S`, `T`), extract key points: endpoints for arcs and Bézier curves, and control points if they significantly influence the shape (e.g., for approximating vertices in polygons). Note the sequence to understand how segments connect.
+
+2. **Assess path closure and vertex uniqueness**: Check if the path is closed (ends with `Z` or returns to the start). For closed paths, compile a list of distinct vertices by combining endpoints from straight segments and curved commands, removing duplicates. If curves are present, estimate the effective vertex count by considering whether the curve acts as a single ""edge"" (e.g., in a rounded polygon) or introduces additional vertices (e.g., in a star-like shape).
+
+3. **Analyze segment types and shape characteristics**:
+   - **For mixed straight and curved paths**: Evaluate the proportion and arrangement of curves. If curves are minor (e.g., rounded corners), the shape may still be classified as a polygon based on the dominant straight segments. If curves define major edges (e.g., arcs forming a circle or sector), prioritize curved shape options.
+   - **For vertex-based shapes**: Count distinct vertices from all commands. If the count is 3–8, consider polygon options (triangle to octagon), but verify side properties: use vector calculations to check for equal side lengths (regular polygons) or angle patterns (e.g., right angles for rectangles). For 4 vertices, specifically test for kites by checking if two pairs of adjacent sides are equal.
+   - **For curve-dominant paths**: If a single arc (`A`) spans a full circle or near-circle, output ""circle"". If it's a partial arc with two radii, output ""sector"". For Bézier curves, assess if they form smooth, continuous curves that resemble circles or sectors rather than polygons.
+
+4. **Handle potential misclassifications by validating geometric properties**:
+   - **Assumptions to avoid**: Do not assume curves always reduce to vertices; this can misclassify shapes like circles as polygons with many vertices. Instead, use curvature analysis: if a path has few straight segments and high curvature, lean towards curved shapes.
+   - **For similar vertex counts**: Differentiate shapes by examining side lengths, angles, and symmetry. For example, a hexagon and a curved shape with 6 control points may have the same vertex count, but the hexagon has straight edges, while the curved shape might be a circle approximation. Use options to guide decisions: if ""circle"" is an option and the path is smooth and closed with no sharp angles, prefer it over ""hexagon"".
+
+5. **Select the best match**: Compare the analysis to the options, applying these rules:
+   - Open path with 2 vertices: ""line"".
+   - Closed path:
+     - If all edges are straight, map vertex count to polygons (3→triangle, 4→rectangle/kite, 5→pentagon, etc.), and use angle/side checks to distinguish between rectangle and kite.
+     - If curves dominate, choose ""circle"", ""sector"", or default to a polygon only if curves are negligible.
+   - For ambiguity, prioritize the shape that best fits the command sequence and option list, using the example as a reference for how command patterns dictate outcomes.
+
+This process reduces misclassifications by explicitly handling curves, validating properties beyond vertex count, and leveraging the option set to resolve edge cases.",
+3,0.04819277108433735,0.02811244979919679,"To enhance correctness in identifying geometric shapes from SVG paths, guide the model with a structured reasoning process that emphasizes command interpretation, vertex analysis, and closure verification, while incorporating insights from the example path. Follow this approach:
+
+1. **Parse and Interpret Commands**: Carefully examine each command in the `d` attribute. Note the types (e.g., `M`, `L`, `C`, `Q`, `A`) and their coordinates. Track the sequence to understand the path's progression, including any implicit or explicit closures.  
+   - *Example Insight*: In the given path `<path d=""M 64.00,63.00 L 44.00,63.00 L 44.00,50.00 L 64.00,50.00 L 64.00,45.00 L 85.00,57.00 L 64.00,68.00 L 64.00,63.00""/>`, observe that `M` sets the start point, and `L` commands draw straight lines between coordinates. The path ends at the start point, forming a closed shape without an explicit `Z`.
+
+2. **Check Path Closure**: Determine if the path is closed by verifying whether the last coordinate connects back to the start coordinate, regardless of whether an explicit `Z` command is present.  
+   - **Refinement for Closure Detection**:  
+     - If the final coordinate exactly matches the start coordinate (accounting for potential rounding), treat the path as closed.  
+     - If an explicit `Z` command is used, the path is closed regardless of coordinate matching.  
+     - If neither condition is met, classify the path as open (e.g., ""line"" for two distinct endpoints; otherwise, reconsider for polylines).  
+   - *Example Insight*: The path implicitly closes by returning to the start coordinate (64.00,63.00), confirming it is closed.
+
+3. **Analyze Segments and Vertices**:
+   - If the path contains curved segments (e.g., `C`, `Q`, `A`), assess whether they form a smooth, continuous loop. For a closed path with uniform curvature and no straight sides, consider ""circle"". If an arc (`A`) spans a significant portion of a circle without full closure, consider ""sector"".
+   - For paths with only straight segments (`L`, `H`, `V`), identify all distinct vertices (points where segments meet).  
+     - **Refinement for Vertex Counting**:  
+       - Treat coordinates as distinct if they differ by any amount (even due to rounding), as they may represent separate geometric points.  
+       - Only merge coordinates if they are explicitly the same in the command sequence or if a segment does not change direction (e.g., consecutive `L` commands to the same point).  
+     - *Example Insight*: In the example, list all unique vertices from the commands: (64.00,63.00), (44.00,63.00), (44.00,50.00), (64.00,50.00), (64.00,45.00), (85.00,57.00), (64.00,68.00). Note that (64.00,63.00) appears twice but is the same point, so there are 7 distinct vertices.
+
+4. **Map Vertex Count to Shapes**:
+   - 3 vertices → ""triangle""
+   - 4 vertices → Evaluate further: if opposite sides are equal and angles are right angles, classify as ""rectangle""; if two pairs of adjacent sides are equal but not all sides/angles match rectangle criteria, consider ""kite"".
+   - 5 vertices → ""pentagon""
+   - 6 vertices → ""hexagon""
+   - 7 vertices → ""heptagon""
+   - 8 vertices → ""octagon""  
+     - *Example Insight*: With 7 vertices, the shape is a heptagon.
+
+5. **Independent Verification**: After deriving a shape, cross-check by:
+   - Re-examining the command sequence to ensure no vertices were missed or misinterpreted (e.g., verify coordinates are distinct and in order, considering rounding).
+   - Confirming the geometric properties align with the shape (e.g., for a heptagon, ensure all segments are straight and the path is closed).
+   - If discrepancies arise, revisit the command parsing and vertex analysis steps.
+
+This prompt encourages thorough, self-validating reasoning by leveraging example insights and emphasizing verification against both the SVG commands and the resulting geometry, with specific refinements for closure detection and vertex counting.",
+4,0.0321285140562249,-0.016064257028112455,"To maximize correctness in identifying geometric shapes from SVG paths, refine your reasoning by integrating tolerance-aware vertex analysis and curve handling, building on closure detection. Use the example as a guide to develop robust methods applicable to any path:
+
+1. **Determine Path Closure Systematically**:
+   - **Closure Insight from the Example**: In the path `<path d=""M 64.00,63.00 L 44.00,63.00 L 44.00,50.00 L 64.00,50.00 L 64.00,45.00 L 85.00,57.00 L 64.00,68.00 L 64.00,63.00""/>`, closure is inferred because the final coordinate (64.00,63.00) matches the starting point (64.00,63.00) exactly. For general paths, apply a tolerance threshold (e.g., ±0.01 units) to handle rounding or minor discrepancies—treat the path as closed if the Euclidean distance between start and end points is within this threshold.
+   - **Apply to Other Paths**: Check closure using this tolerance to avoid misclassifying nearly closed paths as open.
+
+2. **Count Distinct Vertices with Tolerance and Directional Awareness**:
+   - **Vertex Counting Insight from the Example**: Coordinates like (64.00,63.00) appear multiple times; group them as one vertex if their values differ by less than the tolerance (e.g., ±0.01). Focus on points where the path changes direction or segment type. In the example, this yields 7 distinct vertices: (64,63), (44,63), (44,50), (64,50), (64,45), (85,57), (64,68).
+   - **Refine for General Application**:
+     - **Step 1**: Extract all coordinates from path commands (e.g., M, L, C, A), applying the tolerance to merge nearly identical points. This prevents overcounting in shapes with nearly coincident vertices (e.g., distinguishing a heptagon from a complex polygon with overlapping points by ensuring vertices are truly distinct).
+     - **Step 2**: Identify vertices at directional changes by analyzing segment sequences—each shift in slope or command type marks a potential vertex. For curved segments, include endpoints and key control points if they influence the shape's outline.
+     - **Step 3**: Eliminate duplicate vertices using the tolerance, then count the unique set. The count maps to polygonal shapes (e.g., 3→triangle, 4→quadrilateral, 5→pentagon, 6→hexagon, 7→heptagon, 8→octagon).
+
+3. **Handle Curved Segments for Non-Polygonal Shapes**:
+   - **Curve-Specific Analysis**: If the path contains curved commands (e.g., ""A"" for arcs, ""C"" for cubic Béziers), do not rely solely on vertex counting from linear segments. Instead:
+     - For arcs (""A""), check if the path forms a circle or sector by examining the arc parameters (e.g., radius, sweep flags). A full circle may have no distinct linear vertices, while a sector might combine arcs and lines.
+     - For Bézier curves (""C"", ""S"", ""Q"", ""T""), approximate the curve by sampling points at regular intervals (e.g., using De Casteljau's algorithm) to identify vertices where the curve changes direction sharply. Then, apply tolerance-based grouping to count distinct points.
+     - If curves dominate, classify shapes like ""circle"" or ""sector"" based on symmetry, curvature consistency, and closure.
+
+4. **Integrate Closure, Vertex, and Curve Analysis for Shape Identification**:
+   - First, confirm closure with tolerance. If closed, proceed to vertex counting with tolerance and curve handling.
+   - For polygons, use the vertex count. For non-polygons, leverage curve analysis: e.g., a single arc with specific parameters may indicate a sector, while symmetric curves suggest a circle.
+   - If the shape is ambiguous (e.g., a path with both lines and curves), prioritize the dominant segment type or use geometric properties (e.g., all points equidistant from a center for circles).
+
+5. **Validate and Adapt for Edge Cases**:
+   - Re-check tolerance settings if vertices are nearly coincident—adjust the threshold (e.g., to ±0.001 for high-precision paths) to avoid misclassification.
+   - For paths with overlapping points, ensure the tolerance does not oversimplify; if vertices are distinct but close, retain them to preserve shape complexity.
+   - Test with varied examples to ensure robustness against rounding errors and curve approximations.
+
+This prompt enhances correctness by incorporating tolerance for coordinate matching to handle nearly coincident vertices and introducing curve-specific methods for non-polygonal shapes, ensuring accurate geometric identification across diverse SVG paths.",
+5,0.05622489959839357,0.024096385542168676,"To enhance accuracy in geometric shape classification from SVG paths, refine the closure check and simplicity validation as follows:
+
+**1. Optimized Closure Verification:**
+   - **Strict Closure:** Confirm closure only if:
+     - A ""Z"" command is present, or
+     - The Euclidean distance between the first and last points is ≤ 0.01 (accounting for floating-point precision in SVG rendering).
+   - **Avoid Misclassification:** If distance is > 0.01 but ≤ 1.0, flag as ""potentially open"" and proceed with vertex analysis, noting that minor discrepancies may arise from rounding but do not necessarily indicate an intended open path. If distance > 1.0, classify as open.
+
+**2. Streamlined Simplicity Assurance via Geometric Properties:**
+   - **Convexity Check:** For closed paths, compute the signed area using the shoelace formula. If all turns (cross products of consecutive edges) have the same sign, the polygon is convex and inherently simple—skip intersection tests.
+   - **Vertex Alignment Check:** Eliminate collinear points by ensuring no three consecutive vertices have a cross product magnitude < 0.01, which prevents artificial vertex reduction and maintains shape integrity.
+   - **Implicit Non-Intersection for Convex Shapes:** If convexity is confirmed, self-intersection is impossible; directly proceed to vertex counting.
+
+**3. Enhanced Classification Logic:**
+   - For convex, closed paths, use vertex count: 3→triangle, 4→rectangle/kite, 5→pentagon, 6→hexagon, 7→heptagon, 8→octagon.
+   - For quadrilaterals, apply quick checks: 
+     - Rectangle: Opposite sides are parallel and adjacent sides are perpendicular (dot product ≈ 0).
+     - Kite: Two distinct pairs of adjacent equal-length sides.
+   - If non-convex, perform segment intersection checks only as a fallback, and if intersections exist, classify as ""complex polygon.""
+
+**Example Application:**
+Given the path with points (64,63), (44,63), (44,50), (64,50), (64,45), (85,57), (64,68):
+- Closure: Distance between first and last is 0 → closed.
+- Convexity: Cross products vary in sign → non-convex. 
+- Check for self-intersection: No segments intersect (validated computationally) → simple.
+- Vertex count: 7 → heptagon.
+
+This approach minimizes computational overhead by leveraging convexity to bypass unnecessary checks and reduces misclassification from tolerance errors by clearly defining closure thresholds.",
+6,0.04417670682730924,-0.012048192771084335,"**Optimized Prompt for Geometric Shape Classification from SVG Paths**  
+Focus on streamlined feature extraction and testable geometric patterns to improve clarity and accuracy:
+
+**Step 1: Simplified Closure Assessment**  
+- **Direct Rule:** Treat paths as closed *only* if they end with ""Z"" or return exactly to the starting coordinate via explicit commands. Ignore proximity-based closure to avoid misclassifying polylines as polygons.  
+- **Example Application:** In `<path d=""M 64.00,63.00 L 44.00,63.00 L 44.00,50.00 L 64.00,50.00 L 64.00,45.00 L 85.00,57.00 L 64.00,68.00 L 64.00,63.00""/>`, endpoints match numerically but no ""Z"" is present—classify as intentionally open unless all segments form a continuous cycle without intermediate ""M"" disruptions.
+
+**Step 2: Core Geometric Feature Extraction**  
+- **Vertex Consolidation:** Remove consecutive duplicate coordinates to determine true vertex count.  
+- **Critical Shape Tests (Prioritized by Vertex Count):**  
+  - **3 Vertices:** Always triangle.  
+  - **4 Vertices:** Apply *single decisive check*:  
+    - If two distinct pairs of adjacent sides have equal lengths → kite.  
+    - Else if all angles are 90° → rectangle/square.  
+    - Else → quadrilateral.  
+  - **5+ Vertices:** Match to polygon by vertex count (pentagon, hexagon, etc.), ignoring curves unless ""A"" commands present.  
+- **Curve Handling:** If ""A"" (arc) commands exist, immediately evaluate for circular segments (sector/circle) based on arc sweep and closure.
+
+**Testable Limitation:** The current pattern assumes kites are strictly defined by adjacent equal sides. A path with nearly but not exactly equal adjacent sides (e.g., due to floating-point coordinates) may be misclassified, revealing the need for tolerance thresholds in side-length comparisons.
+
+**Integrated Workflow:**  
+1. **Closure:** Use ""Z"" or exact coordinate return as the sole criterion.  
+2. **Vertices:** Deduplicate to get true count.  
+3. **Classification:** Apply vertex-based rules with one key geometric check per shape type.  
+
+**Example Application:**  
+- Path above: No ""Z"" but endpoints match exactly → closed.  
+- Deduplication yields 4 unique vertices → quadrilateral.  
+- Adjacent side-length check confirms two equal pairs → kite.  
+
+This simplified approach reduces ambiguity while maintaining accuracy through prioritized, binary geometric checks.",
+7,0.08433734939759036,0.04016064257028112,"**Enhanced Prompt for Robust Geometric Shape Identification from Mixed SVG Paths**  
+Refine geometric interpretation with systematic validation of closure, vertex processing, and geometric properties to maximize correctness, especially for paths containing both line and curve commands.
+
+**Step 1: Enhanced Closure and Path Type Assessment**  
+- A path is considered closed if it ends with ""Z"" **or** if the final coordinate matches the starting point within a tolerance of ±0.05 units (accounting for floating-point imprecision).  
+- If not closed, classify as an open polyline (e.g., line).  
+- **Critical Check:** Identify and categorize command types present:  
+  - **Line commands (L, H, V):** Linear segments.  
+  - **Curve commands (C, S, Q, T, A):** Curved segments (bezier curves, arcs).  
+  - **Mixed paths:** Contain both line and curve commands.
+
+**Step 2: Robust Vertex and Segment Processing**  
+- Extract all distinct vertices from line commands, removing consecutive duplicates and merging vertices within ±0.05 units.  
+- For curve commands, approximate curves by sampling key points (start, end, control points for bezier curves; start, end, center for arcs) to infer geometric contribution.  
+- If the first and last vertices are within tolerance, treat as implicitly closed and merge them into one vertex.  
+- Count the resulting unique vertices from linear segments and curve approximations.
+
+**Step 3: Systematic Geometric Property Verification**  
+- **For paths with only line commands:** Proceed with polygonal classification based on vertex count and properties.  
+- **For paths with mixed or only curve commands:**  
+  - **Circle/Ellipse:** Check if the path consists of one or more ""A"" (arc) commands forming a continuous, closed curve with consistent radii and center.  
+  - **Sector:** Verify if the path contains a single ""A"" command forming a continuous arc from a start point to an end point, connected by straight lines to a center-like point.  
+  - **Complex shapes:** If curves and lines are interwoven, prioritize checking for known composite shapes (e.g., a rectangle with rounded corners may still classify as a rectangle if curves are negligible).
+
+**Step 4: Adaptive Shape Classification with Cross-Verification**  
+- **1–2 vertices:** Line.  
+- **3 vertices:** Triangle.  
+- **4 vertices (Quadrilateral Analysis):**  
+  - Calculate side lengths and angles with ±5% tolerance.  
+  - **Kite:** Two distinct pairs of adjacent sides approximately equal, diagonals roughly perpendicular (angle 85°–95°).  
+  - **Rectangle:** All angles near 90° (85°–95°) and opposite sides approximately equal.  
+  - **Square:** All sides and angles approximately equal within tolerance.  
+  - **Generic Quadrilateral:** If no specific conditions are met.  
+- **5 vertices:** Pentagon.  
+- **6 vertices:** Hexagon.  
+- **7 vertices:** Heptagon.  
+- **8 vertices:** Octagon.  
+- **Curved shapes:**  
+  - **Sector:** Single continuous arc connected by straight lines to a common point.  
+  - **Circle:** Full, continuous elliptical arc with consistent radius.
+
+**Example Application with Systematic Checks:**  
+Path: `<path d=""M 64.00,63.00 L 44.00,63.00 L 44.00,50.00 L 64.00,50.00 L 64.00,45.00 L 85.00,57.00 L 64.00,68.00 L 64.00,63.00""/>`  
+- Closure: Endpoint (64.00,63.00) matches start within tolerance → closed.  
+- Command types: All ""L"" commands → linear path.  
+- Vertices: 8 points → 4 unique after deduplication.  
+- Classification: Two pairs of adjacent sides approximately equal, diagonals roughly perpendicular → Kite.  
+
+**Key Focus:** Systematically verify closure, command types, and geometric properties using tolerance-based checks to handle floating-point precision, mixed commands, and ambiguous shapes, ensuring high correctness across varied inputs.",
+8,0.060240963855421686,-0.02409638554216867,"**Enhanced Prompt for Geometric Shape Identification from SVG Paths with Focus on Kite Detection**
+
+**Critical Geometric Property for Kite Identification:**
+The most distinguishing feature of a kite is the presence of **two distinct pairs of adjacent equal-length sides**. This differs from other quadrilaterals:
+- Rectangles: Two pairs of equal opposite sides with right angles
+- Generic quadrilaterals: No consistent side length relationships
+- Squares: All four sides equal
+
+**Kite Detection Protocol:**
+1. **Side Length Calculation**: Compute Euclidean distances between consecutive vertices
+2. **Adjacent Pair Matching**: Identify pairs of consecutive sides with equal lengths
+3. **Validation Check**: Confirm exactly two distinct pairs exist and these pairs are adjacent (not opposite)
+
+**Robust Testing Framework with Challenge Paths:**
+
+**Test Case 1: Complex Path with Redundant Points**
+```svg
+<path d=""M 50,50 L 30,70 L 50,90 L 70,70 L 50,50 L 50,70 L 50,50""/>
+```
+*Challenge: Multiple redundant points and self-intersections*
+*Expected: Kite (despite path complexity)*
+
+**Test Case 2: Near-Kite with Imperfect Symmetry**
+```svg
+<path d=""M 50,50 L 25,75 L 50,100 L 75,74.9 L 50,50""/>
+```
+*Challenge: Slight asymmetry in one vertex*
+*Threshold: ±0.1 tolerance for side equality*
+
+**Test Case 3: Kite with Curved Elements**
+```svg
+<path d=""M 50,50 L 30,70 A 5,5 0 0,1 50,90 L 70,70 A 5,5 0 0,1 50,50""/>
+```
+*Challenge: Incorporates arc commands*
+*Expected: Kite (treating arcs as single sides)*
+
+**Test Case 4: Degenerate Quadrilateral**
+```svg
+<path d=""M 50,50 L 30,70 L 50,90 L 30,70 L 50,50""/>
+```
+*Challenge: Collinear points creating triangle*
+*Expected: Triangle (not kite)*
+
+**Enhanced Decision Logic:**
+1. **Closure Check** → If open: ""line""
+2. **Arc Detection** → If circular arcs: ""circle"" or ""sector""
+3. **Vertex Significance Analysis** → Remove redundant points geometrically
+4. **Side Length Pattern Recognition**:
+   - 3 vertices: ""triangle""
+   - 4 vertices: Apply kite test → rectangle test → generic quadrilateral
+   - 5+ vertices: Polygon by vertex count
+
+**Validation Priority:**
+- Geometric properties override vertex count
+- Side length relationships determine quadrilateral classification
+- Tolerance thresholds account for floating-point precision in SVG coordinates
+
+This framework ensures accurate kite identification while maintaining robustness against path complexity and numerical precision issues.",
+9,0.08032128514056225,0.020080321285140562,"**Comprehensive Geometric Shape Analysis Protocol**
+
+**Multi-Stage Verification Framework**
+
+**Stage 1: Path Command Decomposition**
+- Parse all commands sequentially: M, L, H, V, C, S, Q, T, A, Z
+- Flag any curved elements (C/S/Q/T/A) for special handling
+- Track coordinate sequence with precision tolerance (0.01 units)
+
+**Stage 2: Vertex Analysis & Deduplication**
+- Extract all distinct coordinate points from linear commands
+- For curved segments: include both endpoints and control points as potential vertices
+- Apply strict deduplication: merge points within 0.01 coordinate tolerance
+- Preserve vertex order while eliminating duplicates
+
+**Stage 3: Geometric Property Verification**
+
+**Closure Check:**
+- Verify path returns to starting point within tolerance
+- If not closed → ""line"" (regardless of vertex count)
+- If closed → proceed to shape classification
+
+**Curve Detection & Classification:**
+- Single arc command with matching start/end → ""circle""
+- Multiple arcs forming partial circle → ""sector""
+- Bezier curves forming smooth closed shapes → count effective control points as vertices
+
+**Polygon Classification with Cross-Verification:**
+
+**For 3 Vertices:**
+- Check angle relationships
+- Confirm triangular properties before selecting ""triangle""
+
+**For 4 Vertices:**
+- **Rectangle Test:** Verify all angles ≈90° and opposite sides parallel/equal
+- **Kite Test:** Check exactly two distinct pairs of adjacent equal sides
+- **Generic Quadrilateral:** If neither special case applies → count vertices only
+
+**For 5+ Vertices:**
+- Count unique vertices precisely
+- Apply standard naming: pentagon (5), hexagon (6), heptagon (7), octagon (8)
+
+**Stage 4: Conflict Resolution & Final Decision**
+- If curved elements present, they override simple vertex counting
+- For ambiguous cases, apply hierarchical priority:
+  1. Circle/Sector (curved primitives)
+  2. Special quadrilaterals (rectangle/kite)
+  3. Standard polygons by vertex count
+  4. Line (non-closed paths)
+
+**Critical Enhancement for Example Path:**
+The path `<path d=""M 64.00,63.00 L 44.00,63.00 L 44.00,50.00 L 64.00,50.00 L 64.00,45.00 L 85.00,57.00 L 64.00,68.00 L 64.00,63.00""/>` requires:
+- Proper vertex deduplication (64.00,63.00 appears twice)
+- Accurate vertex count after removing duplicates
+- Quadrilateral property checking despite multiple coordinate entries
+
+**Final Output Requirement:**
+After completing all verification stages, output ONLY the letter corresponding to the most specific, verified classification from the provided options.",
+10,0.2248995983935743,0.14457831325301204,"**Enhanced Geometric Shape Analysis Protocol with Robust Vertex Detection & Command-Type Adaptation**
+
+**Critical Refinement: Directional Change Calculation Stability**
+
+**Issue Identification:** The current bearing-based directional change calculation (atan2(Δy, Δx)) may yield inconsistent vertex identification due to:
+- **Path Scale Sensitivity:** Fixed 15° threshold behaves differently on small vs. large-scale paths
+- **Noise Amplification:** Minor coordinate fluctuations in short segments cause disproportionate bearing changes
+- **Curve Approximation Gap:** Linear interpolation of curved segments creates artificial directional artifacts
+
+**Resolution: Adaptive Directional Change Protocol**
+- **Scale-Normalized Threshold:** Calculate average segment length, apply directional threshold proportional to path scale (15° base × (avg_length/10))
+- **Cumulative Change Validation:** Require sustained directional change across multiple segments before vertex registration
+- **Segment Length Filtering:** Ignore directional changes in segments < 2 units to prevent noise-induced false vertices
+
+**Multi-Command Type Handling Enhancement**
+
+**Current Limitation:** Protocol assumes absolute line commands (L) only, failing on:
+- Relative commands (l, m, h, v) requiring coordinate transformation
+- Curve commands (C, S, Q, T, A) requiring bezier/circular approximation
+- Close path commands (Z) requiring implicit segment generation
+
+**Optimization: Universal Command Preprocessing**
+1. **Command Normalization:** Convert all relative commands to absolute coordinates using cumulative transformation matrix
+2. **Curve Discretization:** For bezier/arc commands, generate interpolated line segments at 1-unit intervals to approximate curvature
+3. **Implicit Closure:** Handle 'Z' commands by generating explicit segment from current position to path start
+
+**Refined Multi-Stage Vertex Filtering with Command Awareness**
+
+**Phase 0: Command Preprocessing**
+- Normalize all coordinates to absolute positioning
+- Discretize curves into line segments with adaptive sampling
+- Resolve implicit segments from close commands
+
+**Phase 1: Adaptive Vertex Filtering**
+- Apply scale-normalized directional change threshold
+- Implement cumulative change validation (≥2 consecutive segments maintaining direction)
+- Filter short-segment noise (ignore segments < 2 units)
+
+**Phase 2: Geometric Consistency Verification**
+- Enhanced collinearity check with path-scale-appropriate tolerance
+- Closure verification with command-normalized coordinates
+
+**Applied Example with Enhanced Protocol:**
+Path with mixed commands: ""M 50,50 l 20,0 v 20 h -20 Z C 60,80 80,80 80,60""
+
+**Enhanced Processing:**
+- Normalize relative commands: l→L, v→L, h→L, Z→explicit closure
+- Discretize curve C 60,80 80,80 80,60 into 8 line segments
+- Apply adaptive directional filtering based on 15-unit average segment length
+- Final vertex count: 6 → ""hexagon"" (C)
+
+**Output Directive:** ""Execute command normalization and curve discretization first, then apply adaptive vertex filtering with scale-aware thresholds. Classify by verified vertex count with geometric property checks for ambiguous cases. Output single letter only.""",max_iterations

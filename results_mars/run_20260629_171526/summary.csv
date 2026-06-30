@@ -1,7 +1,0 @@
-task_id,group,dataset_path,question_type,status,num_samples,num_success,num_failed,best_accuracy,final_accuracy,best_iteration,stopped_reason,total_runtime_seconds
-boolean_expressions,BBH,Dataset_format/BBH/boolean_expressions.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.0271
-disambiguation_qa,BBH,Dataset_format/BBH/disambiguation_qa.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.027
-formal_fallacies,BBH,Dataset_format/BBH/formal_fallacies.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.0238
-geometric_shapes,BBH,Dataset_format/BBH/geometric_shapes.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.0226
-ruin_names,BBH,Dataset_format/BBH/ruin_names.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.042
-sports_understanding,BBH,Dataset_format/BBH/sports_understanding.csv,choice,success,249,249,0,1.0,1.0,1,early_stop_delta,0.0208

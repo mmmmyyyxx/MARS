@@ -6,6 +6,9 @@ max_iterations: 10
 early_stop_delta: 0.01
 max_critic_revisions: 1
 concurrency: 1
+max_samples:
+max_answer_retries: 3
+request_timeout: 60
 output_dir: results_mars
 cache_enabled: false
 seed: 42
