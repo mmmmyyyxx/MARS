@@ -1,1 +1,0 @@
-{"iteration": 1, "prompt": "Answer BIG-Bench Hard questions for Formal Fallacies.\nRead the question carefully. Return only the final answer as valid or invalid.\nDo not include extra commentary after the final answer.\n\nOptimization sub-goals:\nBe careful and end with the required final answer format."}

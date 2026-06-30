@@ -14,8 +14,7 @@ current_time = None
 question_type = None
 ANSWER_FORMAT = "auto"
 
-# Optional runtime controls used by reproduce_mars.py. The legacy run.sh entry
-# still works with these defaults.
+# Optional runtime controls for the legacy run.sh/main_MARS.py entry.
 MAX_ITERATIONS = 10
 EARLY_STOP_DELTA = 0.01
 MAX_CRITIC_REVISIONS = 1

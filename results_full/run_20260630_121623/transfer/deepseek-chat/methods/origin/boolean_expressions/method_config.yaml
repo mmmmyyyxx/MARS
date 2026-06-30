@@ -1,5 +1,0 @@
-display_name: Origin
-type: direct
-exactness: exact_if_origin_prompt_matches
-model: deepseek-chat
-transfer_target_evaluation_only: true

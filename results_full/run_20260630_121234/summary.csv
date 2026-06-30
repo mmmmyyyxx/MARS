@@ -1,5 +1,0 @@
-accuracy,api_calls,api_errors,cache_hits,cost_estimate,delta,display_name,exactness,method,method_id,model,num_correct,num_failed,num_iterations,num_samples,parse_errors,runtime_seconds,suite,task_id,tokens_completion,tokens_prompt,tokens_total
-1.0,0,0,1,0.0,0.0,Boolean Expressions,best_effort_reimplementation,MARS,mars,deepseek-chat,1,0,1,1,0,0.005003929138183594,ablation,boolean_expressions,0,0,0
-1.0,0,0,1,0.0,0.0,Boolean Expressions,best_effort_reimplementation,w/oPlan,mars_wo_plan,deepseek-chat,1,0,1,1,0,0.004000663757324219,ablation,boolean_expressions,0,0,0
-1.0,0,0,0,0.0,0.0,Boolean Expressions,best_effort_reimplementation,w/oSoc,mars_wo_soc,deepseek-chat,1,0,1,1,0,0.002505779266357422,ablation,boolean_expressions,0,0,0
-1.0,0,0,1,0.0,0.0,Boolean Expressions,best_effort_reimplementation,w/oCri,mars_wo_critic,deepseek-chat,1,0,1,1,0,0.003998994827270508,ablation,boolean_expressions,0,0,0

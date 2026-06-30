@@ -1,7 +1,0 @@
-sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
-0,"对于固体污染物的控制规划内容，不够突出的是____。
-Options:
-(A) 电子污染物
-(B) 生活垃圾
-(C) 医疗废物
-(D) 工业固体废物",(A),Final answer: (A),(A),(A),True,option_letter,,protegi,urban_and_rural_planner,1

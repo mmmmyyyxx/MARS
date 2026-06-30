@@ -1,9 +1,0 @@
-accuracy,api_calls,api_errors,cache_hits,cost_estimate,display_name,exactness,method,method_id,model,num_correct,num_failed,num_iterations,num_samples,parse_errors,runtime_seconds,suite,task_id,tokens_completion,tokens_prompt,tokens_total
-1.0,0,0,1,0.0,Boolean Expressions,APE_reimplementation,APE,ape,deepseek-chat,1,0,,1,0,0.003000497817993164,main,boolean_expressions,0,0,0
-1.0,0,0,1,0.0,Boolean Expressions,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,1,0,,1,0,0.004000186920166016,main,boolean_expressions,0,0,0
-1.0,0,0,1,0.0,Boolean Expressions,OPRO_reimplementation,OPRO,opro,deepseek-chat,1,0,,1,0,0.0035097599029541016,main,boolean_expressions,0,0,0
-1.0,0,0,1,0.0,Boolean Expressions,PE2_reimplementation,PE2,pe2,deepseek-chat,1,0,,1,0,0.002999544143676758,main,boolean_expressions,0,0,0
-0.0,0,0,1,0.0,GSM8K,APE_reimplementation,APE,ape,deepseek-chat,0,1,,1,0,0.003000020980834961,main,gsm8k,0,0,0
-0.0,0,0,1,0.0,GSM8K,ProTeGi_reimplementation,ProTeGi,protegi,deepseek-chat,0,1,,1,0,0.004466056823730469,main,gsm8k,0,0,0
-0.0,0,0,1,0.0,GSM8K,OPRO_reimplementation,OPRO,opro,deepseek-chat,0,1,,1,0,0.0029997825622558594,main,gsm8k,0,0,0
-0.0,0,0,1,0.0,GSM8K,PE2_reimplementation,PE2,pe2,deepseek-chat,0,1,,1,0,0.003000020980834961,main,gsm8k,0,0,0

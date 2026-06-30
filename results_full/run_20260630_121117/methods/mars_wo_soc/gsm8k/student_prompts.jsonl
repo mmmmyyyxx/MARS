@@ -1,1 +1,0 @@
-{"iteration": 1, "prompt": "Solve grade-school math word problems and return the final numeric answer.\nRead the question carefully. Return only the final answer as a numeric answer.\nDo not include extra commentary after the final answer.\n\nOptimization sub-goals:\nBe careful and end with the required final answer format."}

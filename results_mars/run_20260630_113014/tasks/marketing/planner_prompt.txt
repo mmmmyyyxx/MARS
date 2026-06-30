@@ -1,7 +1,0 @@
-Split the task '{task_description}' into detailed steps and details.
-For example, for the Marketing task, the task is planned as follows:
-Total steps: 4
-Step 1: Identify the marketing concept, scenario, or definition being tested by the question.
-Step 2: Compare every option against standard marketing principles and eliminate distractors.
-Step 3: Select the single best option supported by the question.
-Step 4: Instruct the model to output only the final option letter in the required format.

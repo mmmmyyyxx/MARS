@@ -1,2 +1,0 @@
-|task_id|display_name|method|accuracy|num_samples|num_correct|num_failed|api_errors|parse_errors|runtime_seconds|tokens_prompt|tokens_completion|tokens_total|cost_estimate|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|

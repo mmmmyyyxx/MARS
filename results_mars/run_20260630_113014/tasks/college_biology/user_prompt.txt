@@ -1,7 +1,0 @@
-Here is a topic for college biology:
-Answer multiple-choice questions about biology, including cell biology, genetics, evolution, ecology, physiology, molecular biology, and experimental reasoning.
-
-The input question contains answer options. The model should choose the single best option and output only the option letter.
-
-I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
-Please generate the most suitable prompt according to the requirements I just mentioned.

@@ -1,3 +1,0 @@
-Solve grade-school math word problems and return the final numeric answer.
-Think step by step internally, then provide the final answer.
-End with Final answer: a numeric answer.

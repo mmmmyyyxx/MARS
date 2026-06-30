@@ -5,6 +5,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
+import yaml
 
 
 def find_latest(results_root: Path) -> Path:
@@ -18,12 +19,25 @@ def resolve_run(args) -> Path:
     if args.latest:
         return find_latest(Path(args.results_root))
     if args.run_dir:
+        if args.run_dir == "latest":
+            return find_latest(Path(args.results_root))
         return Path(args.run_dir)
     return find_latest(Path(args.results_root))
 
 
+def task_group_lookup(config_path: Path = Path("configs/tasks.yaml")) -> dict[str, str]:
+    if not config_path.exists():
+        return {}
+    data = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    return {task_id: str(config.get("group", "")) for task_id, config in data.items()}
+
+
 def _save_bar(
-    df: pd.DataFrame, path: Path, title: str, group_col: str = "method"
+    df: pd.DataFrame,
+    path: Path,
+    title: str,
+    group_col: str = "method",
+    dpi: int = 200,
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if df.empty:
@@ -37,11 +51,13 @@ def _save_bar(
     ax.set_ylabel("Accuracy")
     ax.set_ylim(0, 1)
     plt.tight_layout()
-    plt.savefig(path, dpi=200)
+    plt.savefig(path, dpi=dpi)
     plt.close()
 
 
-def _save_scatter(df: pd.DataFrame, path: Path, title: str, x: str, y: str) -> None:
+def _save_scatter(
+    df: pd.DataFrame, path: Path, title: str, x: str, y: str, dpi: int = 200
+) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if df.empty or x not in df or y not in df:
         path.write_text("No data available for this figure.\n", encoding="utf-8")
@@ -54,11 +70,11 @@ def _save_scatter(df: pd.DataFrame, path: Path, title: str, x: str, y: str) -> N
     ax.set_ylabel(y)
     ax.legend(fontsize=8)
     plt.tight_layout()
-    plt.savefig(path, dpi=200)
+    plt.savefig(path, dpi=dpi)
     plt.close()
 
 
-def _save_convergence(run_dir: Path, path: Path) -> None:
+def _save_convergence(run_dir: Path, path: Path, dpi: int = 200) -> None:
     curve_files = list((run_dir / "convergence").glob("*_curves.csv"))
     frames = [pd.read_csv(file) for file in curve_files if file.stat().st_size > 0]
     if not frames:
@@ -79,11 +95,11 @@ def _save_convergence(run_dir: Path, path: Path) -> None:
     ax.set_ylim(0, 1)
     ax.legend(fontsize=6, ncol=2)
     plt.tight_layout()
-    plt.savefig(path, dpi=200)
+    plt.savefig(path, dpi=dpi)
     plt.close()
 
 
-def write_report(run_dir: Path, summary: pd.DataFrame) -> None:
+def write_report(run_dir: Path, summary: pd.DataFrame, report_path: Path) -> None:
     api_errors = (
         int(summary.get("api_errors", pd.Series(dtype=int)).fillna(0).sum())
         if not summary.empty
@@ -129,7 +145,8 @@ def write_report(run_dir: Path, summary: pd.DataFrame) -> None:
             "Rows marked as reimplementation are best-effort local implementations when official templates/code were not available.",
         ]
     )
-    (run_dir / "final_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main() -> int:
@@ -139,24 +156,47 @@ def main() -> int:
     parser.add_argument("--results-root", default="results_full")
     parser.add_argument("--run-dir")
     parser.add_argument("--latest", action="store_true")
+    parser.add_argument("--out-dir-name", default="figures")
+    parser.add_argument("--dpi", type=int, default=200)
+    parser.add_argument("--format", default="png", choices=["png", "pdf", "svg"])
     args = parser.parse_args()
     run_dir = resolve_run(args)
     summary_path = run_dir / "summary.csv"
     if not summary_path.exists():
         raise FileNotFoundError(summary_path)
     summary = pd.read_csv(summary_path)
-    figures = run_dir / "figures"
+    task_groups = task_group_lookup()
+    if task_groups and "task_id" in summary:
+        summary = summary.copy()
+        summary["task_group"] = summary["task_id"].map(task_groups).fillna("")
+    figures = run_dir / args.out_dir_name
     figures.mkdir(parents=True, exist_ok=True)
 
+    main = (
+        summary[summary.get("suite") == "main"] if "suite" in summary else summary
+    )
+    general = (
+        main[main.get("task_group") == "BBH"]
+        if "task_group" in main
+        else main
+    )
+    domain = (
+        main[main.get("task_group") != "BBH"]
+        if "task_group" in main
+        else main.iloc[0:0]
+    )
+    suffix = args.format
     _save_bar(
-        summary[summary.get("suite") == "main"],
-        figures / "table1_general_bar.png",
+        general,
+        figures / f"table1_general_bar.{suffix}",
         "Table 1 General Tasks",
+        dpi=args.dpi,
     )
     _save_bar(
-        summary[summary.get("suite") == "main"],
-        figures / "table2_domain_bar.png",
+        domain,
+        figures / f"table2_domain_bar.{suffix}",
         "Table 2 Domain Tasks",
+        dpi=args.dpi,
     )
     ablation = (
         summary[summary.get("suite") == "ablation"]
@@ -166,13 +206,19 @@ def main() -> int:
     if not ablation.empty and "delta" in ablation:
         _save_scatter(
             ablation,
-            figures / "table3_ablation_delta.png",
+            figures / f"table3_ablation_delta.{suffix}",
             "Ablation Delta",
             "delta",
             "accuracy",
+            dpi=args.dpi,
         )
     else:
-        _save_bar(ablation, figures / "table3_ablation_delta.png", "Table 3 Ablation")
+        _save_bar(
+            ablation,
+            figures / f"table3_ablation_delta.{suffix}",
+            "Table 3 Ablation",
+            dpi=args.dpi,
+        )
     efficiency = (
         summary[summary.get("suite") == "efficiency"]
         if "suite" in summary
@@ -180,26 +226,29 @@ def main() -> int:
     )
     _save_scatter(
         efficiency,
-        figures / "inference_time_scaling.png",
+        figures / f"inference_time_scaling.{suffix}",
         "Inference Time Scaling",
         "runtime_seconds",
         "accuracy",
+        dpi=args.dpi,
     )
     _save_scatter(
         efficiency,
-        figures / "efficiency_accuracy_vs_tokens.png",
+        figures / f"efficiency_accuracy_vs_tokens.{suffix}",
         "Accuracy vs Tokens",
         "tokens_total",
         "accuracy",
+        dpi=args.dpi,
     )
     _save_scatter(
         efficiency,
-        figures / "cost_accuracy_tradeoff.png",
+        figures / f"cost_accuracy_tradeoff.{suffix}",
         "Cost Accuracy Tradeoff",
         "cost_estimate",
         "accuracy",
+        dpi=args.dpi,
     )
-    _save_convergence(run_dir, figures / "convergence_all.png")
+    _save_convergence(run_dir, figures / f"convergence_all.{suffix}", dpi=args.dpi)
     transfer = (
         summary[summary.get("suite") == "transfer"]
         if "suite" in summary
@@ -207,16 +256,22 @@ def main() -> int:
     )
     _save_bar(
         transfer,
-        figures / "transfer_model_comparison.png",
+        figures / f"transfer_model_comparison.{suffix}",
         "Transfer Model Comparison",
         group_col="model",
+        dpi=args.dpi,
     )
     _save_bar(
-        transfer, figures / "transfer_models.png", "Transfer Models", group_col="model"
+        transfer,
+        figures / f"transfer_models.{suffix}",
+        "Transfer Models",
+        group_col="model",
+        dpi=args.dpi,
     )
-    write_report(run_dir, summary)
+    report_path = figures / "visualization_report.md"
+    write_report(run_dir, summary, report_path)
     print(f"Visualization complete: {run_dir}")
-    print(f"Report: {run_dir / 'final_report.md'}")
+    print(f"Report: {report_path}")
     return 0
 
 

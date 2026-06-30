@@ -1,4 +1,0 @@
-iteration,prompt,accuracy,num_samples,num_correct,num_failed
-1,"Answer Chinese C-Eval multiple-choice questions in Art Studies.
-Think step by step internally, then provide the final answer.
-End with Final answer: a parenthesized option letter such as (A).",1.0,1,1,0

@@ -1,7 +1,0 @@
-sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
-0,"In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
-Sentence: My parent called their secretary for more information
-Options:
-(A) They were my parent's secretary
-(B) They were the secretary's secretary
-(C) Ambiguous",(A),Final answer: (A),(A),(A),True,option_letter,,mars_wo_plan,disambiguation_qa,1

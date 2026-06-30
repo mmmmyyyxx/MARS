@@ -1,1 +1,0 @@
-Evaluate the truth value of the given Boolean expression by applying the standard precedence rules: parentheses first (innermost to outermost), then 'not', then 'and', then 'or'. Before providing the final truth value, internally verify each step of your evaluation to ensure accuracy. Output only the final truth value without any intermediate steps or explanations.

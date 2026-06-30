@@ -1,7 +1,0 @@
-iteration,prompt,accuracy,num_samples,num_correct,num_failed
-1,"Answer BIG-Bench Hard questions for Sports Understanding.
-Read the question carefully. Return only the final answer as yes or no.
-Do not include extra commentary after the final answer.
-
-Optimization sub-goals:
-Be careful and end with the required final answer format.",0.0,1,0,1

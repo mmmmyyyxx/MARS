@@ -1,2 +1,0 @@
-sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
-0,"Is the following sentence plausible? ""Neymar did a maradona on the defender in the Champions Leage Semifinal.""",yes,Final answer: yes,yes,yes,True,yes_no,,cot_zs,sports_understanding,1

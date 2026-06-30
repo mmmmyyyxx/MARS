@@ -1,7 +1,0 @@
-Split the task '{task_description}' into detailed steps and details.
-For example, for the Electrical Engineering task, the task is planned as follows:
-Total steps: 4
-Step 1: Identify the electrical engineering principle or calculation required by the question.
-Step 2: Parse circuit, signal, device, or system information carefully.
-Step 3: Compare the options using the relevant formulas, definitions, or design constraints.
-Step 4: Instruct the model to output only the final option letter in the required format.

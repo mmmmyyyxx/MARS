@@ -10,7 +10,7 @@ if str(ROOT) not in sys.path:
 
 from mars_core.mars_runner import load_task_specs, load_yaml
 from mars_core.prompt_loader import PromptLoader
-from reproduce_full import preflight_rows
+from reproduce_paper import preflight_rows
 
 
 def main() -> int:

@@ -1,7 +1,0 @@
-iteration,prompt,accuracy,num_samples,num_correct,num_failed
-1,"Solve grade-school math word problems and return the final numeric answer.
-Read the question carefully. Return only the final answer as a numeric answer.
-Do not include extra commentary after the final answer.
-
-Optimization sub-goals:
-Be careful and end with the required final answer format.",0.0,1,0,1

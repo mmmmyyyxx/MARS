@@ -1,4 +1,0 @@
-target_model,task_id,display_name,method,accuracy,num_samples,num_correct,num_failed,api_errors,parse_errors,runtime_seconds,tokens_total,cost_estimate
-deepseek-chat,boolean_expressions,Boolean Expressions,Origin,1.0,1,1,0,0,0,0.0020003318786621094,0,0.0
-deepseek-chat,boolean_expressions,Boolean Expressions,CoT(ZS),1.0,1,1,0,0,0,0.0009996891021728516,0,0.0
-deepseek-chat,boolean_expressions,Boolean Expressions,MARS,1.0,1,1,0,0,0,0.0015101432800292969,0,0.0

@@ -1,8 +1,0 @@
-Split the task '{task_description}' into detailed steps and details. 
-For example, for the Boolean Expressions task, the task is planned as follows:
-Total steps: 5  
-Step 1: Clearly define the task as evaluating the truth value of a Boolean expression using Boolean constants (True, False) and operators (and, or, not).  
-Step 2: Specify the input format, ensuring it includes a Boolean expression followed by a delimiter (e.g., "is").  
-Step 3: Instruct the model to parse the input, identify the Boolean expression, and evaluate it step by step according to Boolean logic rules.  
-Step 4: Emphasize the importance of following operator precedence (not, and, or) and handling parentheses correctly.  
-Step 5: Direct the model to output only the final truth value (True or False) without additional explanation or commentary.

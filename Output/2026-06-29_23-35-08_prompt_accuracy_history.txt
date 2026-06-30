@@ -1,6 +1,0 @@
-Call Count: 1, 
-Prompt: Solve the problem carefully and output only the final answer in the requested format., 
-Accuracy: 1.0
-Call Count: 2, 
-Prompt: Solve the problem carefully and output only the final answer in the requested format., 
-Accuracy: 1.0

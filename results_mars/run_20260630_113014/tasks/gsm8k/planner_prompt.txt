@@ -1,7 +1,0 @@
-Split the task '{task_description}' into detailed steps and details.
-For example, for the GSM8K task, the task is planned as follows:
-Total steps: 4
-Step 1: Parse the word problem and identify the quantities, relationships, and target value.
-Step 2: Work through the arithmetic carefully in a concise internal reasoning process.
-Step 3: Verify that the computed value answers the question being asked.
-Step 4: Instruct the model to output only the final numeric answer without explanation.

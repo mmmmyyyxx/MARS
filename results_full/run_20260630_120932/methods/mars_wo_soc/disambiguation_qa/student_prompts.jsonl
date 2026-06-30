@@ -1,1 +1,0 @@
-{"iteration": 1, "prompt": "Answer BIG-Bench Hard questions for Disambiguation QA.\nRead the question carefully. Return only the final answer as a parenthesized option letter such as (A).\nDo not include extra commentary after the final answer.\n\nOptimization sub-goals:\nBe careful and end with the required final answer format."}

@@ -1,3 +1,0 @@
-Solve LSAT analytical reasoning questions by applying the stated logical constraints.
-Read the question carefully. Return only the final answer as a parenthesized option letter such as (A).
-Do not include extra commentary after the final answer.

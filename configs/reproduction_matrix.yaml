@@ -1,0 +1,37 @@
+presets:
+  smoke:
+    description: Validate all registered tasks, prompts, parsers, and output schemas.
+    suite: main
+    tasks: all
+    methods:
+      - mars
+    max_samples: 20
+    max_iterations: 2
+    cache_enabled: true
+  mars_full:
+    description: Run the 17-task MARS method slice within the full reproduction framework.
+    suite: main
+    tasks: all
+    methods:
+      - mars
+    max_samples:
+    max_iterations: 10
+    cache_enabled: true
+  paper_full:
+    description: Reproduce main, ablation, efficiency, convergence, and cross-model transfer suites.
+    suite: all
+    tasks: all
+    methods:
+      - origin
+      - cot_zs
+      - cot_fs
+      - ape
+      - protegi
+      - opro
+      - pe2
+      - mars
+    max_samples:
+    max_iterations: 10
+    cache_enabled: true
+    cross_model_transfer: true
+    efficiency: true

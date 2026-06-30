@@ -9,6 +9,7 @@ from baselines import ape, cot_few_shot, cot_zero_shot, opro, origin, pe2, prote
 from mars_core.api_client import LLMClient
 from mars_core.cache import DiskCache
 from mars_core.logging_utils import append_jsonl, write_json, write_text
+from mars_core.logging_utils import write_csv
 from mars_core.mars_runner import (
     RunSettings,
     TaskSpec,
@@ -94,7 +95,12 @@ def run_task_method(
         and predictions_path.exists()
         and not settings.force_rerun
     ):
-        return {"skipped": True, "task_id": task.task_id, "method_id": method}
+        return {
+            "skipped": True,
+            "suite": suite_name,
+            "task_id": task.task_id,
+            "method_id": method,
+        }
 
     prompts = prompt_loader.load(task.task_id)
     all_rows = load_dataset(task.dataset_path, settings.max_samples)
@@ -164,6 +170,23 @@ def run_task_method(
 
     for error in client.stats.error_records:
         append_jsonl(run_dir / "logs" / "api_errors.jsonl", error)
+    if client.stats.call_records:
+        call_columns = [
+            "model",
+            "method",
+            "task_id",
+            "iteration",
+            "question_hash",
+            "prompt_tokens",
+            "completion_tokens",
+            "total_tokens",
+            "estimated_prompt_tokens",
+            "estimated_completion_tokens",
+            "latency_seconds",
+            "cache_hit",
+            "error_type",
+        ]
+        write_csv(method_dir / "api_calls.csv", client.stats.call_records, call_columns)
 
     runtime = time.time() - start
     row = method_table_row(

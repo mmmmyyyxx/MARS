@@ -1,7 +1,0 @@
-Split the task '{task_description}' into detailed steps and details.
-For example, for the Human Aging task, the task is planned as follows:
-Total steps: 4
-Step 1: Identify the aging-related biological, medical, psychological, or social concept in the question.
-Step 2: Analyze the facts and definitions needed to answer the question accurately.
-Step 3: Compare all answer options and choose the best-supported one.
-Step 4: Instruct the model to output only the final option letter in the required format.

@@ -1,7 +1,0 @@
-Split the task '{task_description}' into detailed steps and details.
-For example, for the High School World History task, the task is planned as follows:
-Total steps: 4
-Step 1: Identify the time period, region, event, person, or historical process in the question.
-Step 2: Recall the relevant historical facts and causal relationships.
-Step 3: Evaluate each option and eliminate historically inconsistent choices.
-Step 4: Instruct the model to output only the final option letter in the required format.

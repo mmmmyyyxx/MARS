@@ -1,7 +1,187 @@
 # Paper numbers are stored only for comparison/visualization.
 # Local experiment runners must never substitute these values for failed runs.
-table1: {}
-table2: {}
-table3: {}
+# Values are percentages from arXiv:2503.16874v1 Tables 1, 2, and 3.
+table1:
+  origin:
+    boolean_expressions: 74.70
+    disambiguation_qa: 51.41
+    formal_fallacies: 52.20
+    geometric_shapes: 43.37
+    ruin_names: 59.84
+    sports_understanding: 60.24
+    college_biology: 82.52
+    college_medicine: 69.77
+    electrical_engineering: 63.89
+    high_school_world_history: 73.73
+    human_aging: 66.22
+    marketing: 81.55
+  cot_zs:
+    boolean_expressions: 80.32
+    disambiguation_qa: 54.22
+    formal_fallacies: 59.44
+    geometric_shapes: 47.39
+    ruin_names: 67.07
+    sports_understanding: 67.87
+    college_biology: 83.91
+    college_medicine: 73.25
+    electrical_engineering: 74.31
+    high_school_world_history: 76.27
+    human_aging: 68.47
+    marketing: 84.98
+  cot_fs:
+    boolean_expressions: 81.93
+    disambiguation_qa: 57.43
+    formal_fallacies: 66.26
+    geometric_shapes: 49.40
+    ruin_names: 70.68
+    sports_understanding: 72.29
+    college_biology: 86.71
+    college_medicine: 76.74
+    electrical_engineering: 79.17
+    high_school_world_history: 78.81
+    human_aging: 72.07
+    marketing: 90.99
+  ape:
+    boolean_expressions: 83.53
+    disambiguation_qa: 61.85
+    formal_fallacies: 61.04
+    geometric_shapes: 51.41
+    ruin_names: 77.51
+    sports_understanding: 74.70
+    college_biology: 88.11
+    college_medicine: 75.58
+    electrical_engineering: 69.44
+    high_school_world_history: 82.20
+    human_aging: 75.68
+    marketing: 87.98
+  protegi:
+    boolean_expressions: 83.93
+    disambiguation_qa: 63.86
+    formal_fallacies: 62.65
+    geometric_shapes: 52.21
+    ruin_names: 80.32
+    sports_understanding: 76.71
+    college_biology: 90.91
+    college_medicine: 78.49
+    electrical_engineering: 73.61
+    high_school_world_history: 84.75
+    human_aging: 77.48
+    marketing: 90.56
+  opro:
+    boolean_expressions: 86.34
+    disambiguation_qa: 66.67
+    formal_fallacies: 63.45
+    geometric_shapes: 53.81
+    ruin_names: 83.13
+    sports_understanding: 82.73
+    college_biology: 93.70
+    college_medicine: 83.14
+    electrical_engineering: 77.01
+    high_school_world_history: 86.44
+    human_aging: 79.73
+    marketing: 92.70
+  pe2:
+    boolean_expressions: 87.95
+    disambiguation_qa: 65.46
+    formal_fallacies: 63.86
+    geometric_shapes: 54.62
+    ruin_names: 84.34
+    sports_understanding: 75.90
+    college_biology: 93.01
+    college_medicine: 81.40
+    electrical_engineering: 76.39
+    high_school_world_history: 88.14
+    human_aging: 81.08
+    marketing: 93.56
+  mars:
+    boolean_expressions: 93.17
+    disambiguation_qa: 71.89
+    formal_fallacies: 74.70
+    geometric_shapes: 59.44
+    ruin_names: 90.36
+    sports_understanding: 87.95
+    college_biology: 97.90
+    college_medicine: 86.05
+    electrical_engineering: 84.03
+    high_school_world_history: 93.22
+    human_aging: 85.59
+    marketing: 97.00
+table2:
+  origin:
+    art_studies: 56.25
+    urban_and_rural_planner: 48.89
+    clinical_medicine: 57.14
+    gsm8k: 67.07
+    lsat_ar: 23.14
+  cot_zs:
+    art_studies: 59.38
+    urban_and_rural_planner: 53.33
+    clinical_medicine: 61.90
+    gsm8k: 70.26
+    lsat_ar: 30.57
+  cot_fs:
+    art_studies: 65.63
+    urban_and_rural_planner: 57.78
+    clinical_medicine: 66.67
+    gsm8k: 77.54
+    lsat_ar: 35.81
+  ape:
+    art_studies: 65.63
+    urban_and_rural_planner: 62.22
+    clinical_medicine: 71.43
+    gsm8k: 74.81
+    lsat_ar: 29.69
+  protegi:
+    art_studies: 68.75
+    urban_and_rural_planner: 66.67
+    clinical_medicine: 76.19
+    gsm8k: 77.47
+    lsat_ar: 31.88
+  opro:
+    art_studies: 71.88
+    urban_and_rural_planner: 73.33
+    clinical_medicine: 80.95
+    gsm8k: 81.56
+    lsat_ar: 31.44
+  pe2:
+    art_studies: 75.00
+    urban_and_rural_planner: 77.78
+    clinical_medicine: 76.19
+    gsm8k: 83.46
+    lsat_ar: 34.50
+  mars:
+    art_studies: 81.25
+    urban_and_rural_planner: 84.44
+    clinical_medicine: 85.71
+    gsm8k: 89.22
+    lsat_ar: 38.42
+table3:
+  mars:
+    boolean_expressions: 93.17
+    disambiguation_qa: 71.89
+    formal_fallacies: 74.70
+    geometric_shapes: 59.44
+    ruin_names: 90.36
+    sports_understanding: 87.95
+  mars_wo_plan:
+    boolean_expressions: 86.35
+    disambiguation_qa: 65.86
+    formal_fallacies: 68.67
+    geometric_shapes: 54.21
+    ruin_names: 82.33
+    sports_understanding: 79.52
+  mars_wo_soc:
+    boolean_expressions: 84.74
+    disambiguation_qa: 63.86
+    formal_fallacies: 62.25
+    geometric_shapes: 49.80
+    ruin_names: 74.30
+    sports_understanding: 74.70
+  mars_wo_critic:
+    boolean_expressions: 89.16
+    disambiguation_qa: 68.27
+    formal_fallacies: 72.28
+    geometric_shapes: 56.22
+    ruin_names: 86.34
+    sports_understanding: 83.94
 table4: {}
-

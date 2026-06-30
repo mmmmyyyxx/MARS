@@ -1,7 +1,0 @@
-sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
-0,"附睾精液囊肿____
-Options:
-(A) 精子自附睾管溢出至周围组织形成的囊肿
-(B) 睾丸网或输出小管扩张形成囊肿，囊肿液中可见精子或精子碎片
-(C) 囊肿为质硬的圆形包块
-(D) 囊肿与周围组织界限不清",(B),Final answer: (A),(A),(B),False,option_letter,,mars,clinical_medicine,1

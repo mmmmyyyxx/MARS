@@ -1,8 +1,0 @@
-Split the task '{task_description}' into detailed steps and details. 
-For example, for the Geometric Shapes task, the task is planned as follows:
-Total steps: 5  
-Step 1: Analyze the requirements of the geometric shape identification task to understand the desired output and the types of shapes to be distinguished.  
-Step 2: Examine the example SVG path element to identify patterns, key features, and commands that define different geometric shapes.  
-Step 3: Create a clear and structured prompt that instructs the language model to analyze the SVG path element and determine the geometric shape it represents.  
-Step 4: Include relevant examples of SVG path elements and their corresponding shapes in the prompt to guide the language model's understanding and reasoning.  
-Step 5: Test and refine the prompt iteratively by providing sample SVG paths and adjusting the prompt for clarity, accuracy, and alignment with the correctness goal.

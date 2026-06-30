@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import hashlib
 import time
 from dataclasses import dataclass, field
 from typing import Any
@@ -31,6 +32,7 @@ class ApiStats:
     tokens_completion: int = 0
     retries: int = 0
     error_records: list[dict[str, Any]] = field(default_factory=list)
+    call_records: list[dict[str, Any]] = field(default_factory=list)
 
     @property
     def tokens_total(self) -> int:
@@ -116,6 +118,8 @@ class LLMClient:
         question: str = "",
         max_tokens: int | None = None,
     ) -> str:
+        started_at = time.time()
+        estimated_prompt_tokens = estimate_message_tokens(messages)
         extra = {
             "method": method,
             "task_id": task_id,
@@ -126,18 +130,43 @@ class LLMClient:
         cached = self.cache.get(payload)
         if cached is not None:
             self.stats.cache_hits += 1
-            return str(cached.get("content", ""))
+            content = str(cached.get("content", ""))
+            self._record_call(
+                method=method,
+                task_id=task_id,
+                iteration=iteration,
+                question=question,
+                prompt_tokens=0,
+                completion_tokens=0,
+                latency_seconds=time.time() - started_at,
+                cache_hit=True,
+                error_type="",
+                estimated_prompt_tokens=estimated_prompt_tokens,
+            )
+            return content
 
         if self.dry_run:
             content = self._mock_response(messages, task_id=task_id)
             self.cache.set(payload, {"content": content})
+            self._record_call(
+                method=method,
+                task_id=task_id,
+                iteration=iteration,
+                question=question,
+                prompt_tokens=0,
+                completion_tokens=0,
+                latency_seconds=time.time() - started_at,
+                cache_hit=False,
+                error_type="dry_run",
+                estimated_prompt_tokens=estimated_prompt_tokens,
+                estimated_completion_tokens=estimate_tokens(content),
+            )
             return content
 
         attempt = 1
         while True:
             try:
                 self.stats.api_calls += 1
-                self.stats.tokens_prompt += estimate_message_tokens(messages)
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=messages,
@@ -147,15 +176,28 @@ class LLMClient:
                 content = response.choices[0].message.content or ""
                 usage = getattr(response, "usage", None)
                 if usage is not None:
-                    self.stats.tokens_prompt += int(
-                        getattr(usage, "prompt_tokens", 0) or 0
-                    )
-                    self.stats.tokens_completion += int(
+                    prompt_tokens = int(getattr(usage, "prompt_tokens", 0) or 0)
+                    completion_tokens = int(
                         getattr(usage, "completion_tokens", 0) or 0
                     )
                 else:
-                    self.stats.tokens_completion += estimate_tokens(content)
+                    prompt_tokens = estimated_prompt_tokens
+                    completion_tokens = estimate_tokens(content)
+                self.stats.tokens_prompt += prompt_tokens
+                self.stats.tokens_completion += completion_tokens
                 self.cache.set(payload, {"content": content})
+                self._record_call(
+                    method=method,
+                    task_id=task_id,
+                    iteration=iteration,
+                    question=question,
+                    prompt_tokens=prompt_tokens,
+                    completion_tokens=completion_tokens,
+                    latency_seconds=time.time() - started_at,
+                    cache_hit=False,
+                    error_type="",
+                    estimated_prompt_tokens=estimated_prompt_tokens,
+                )
                 return content
             except Exception as exc:
                 error_type = classify_api_error(exc)
@@ -170,6 +212,18 @@ class LLMClient:
                     }
                 )
                 if self.max_api_retries >= 0 and attempt >= self.max_api_retries:
+                    self._record_call(
+                        method=method,
+                        task_id=task_id,
+                        iteration=iteration,
+                        question=question,
+                        prompt_tokens=0,
+                        completion_tokens=0,
+                        latency_seconds=time.time() - started_at,
+                        cache_hit=False,
+                        error_type=error_type,
+                        estimated_prompt_tokens=estimated_prompt_tokens,
+                    )
                     raise ApiCallError(error_type, str(exc)) from exc
                 self.stats.retries += 1
                 time.sleep(self._sleep_seconds(attempt))
@@ -200,16 +254,60 @@ class LLMClient:
 
     def _mock_response(self, messages: list[dict[str, str]], task_id: str) -> str:
         text = "\n".join(message.get("content", "") for message in messages).lower()
+        if "final answer: (x)" in text or "single best option letter" in text:
+            return "Final answer: (A)"
+        if "final answer: yes" in text and "final answer: no" in text:
+            return "Final answer: yes"
+        if "final answer: valid" in text and "final answer: invalid" in text:
+            return "Final answer: valid"
+        if "final answer: true" in text and "final answer: false" in text:
+            return "Final answer: true"
+        if "final answer: <number>" in text or task_id == "gsm8k":
+            return "Final answer: 0"
         if "yes" in text and "no" in text:
             return "Final answer: yes"
         if "valid" in text and "invalid" in text:
             return "Final answer: valid"
         if "true" in text and "false" in text:
             return "Final answer: true"
-        if task_id == "gsm8k":
-            return "Final answer: 0"
         if "sub-goal" in text or "subgoal" in text:
             return "1. Clarify the answer format.\n2. Solve carefully before giving the final answer."
         if "candidate" in text or "prompt" in text:
             return "Be careful and end with the required final answer format."
         return "Final answer: (A)"
+
+    def _record_call(
+        self,
+        *,
+        method: str,
+        task_id: str,
+        iteration: int,
+        question: str,
+        prompt_tokens: int,
+        completion_tokens: int,
+        latency_seconds: float,
+        cache_hit: bool,
+        error_type: str,
+        estimated_prompt_tokens: int,
+        estimated_completion_tokens: int | None = None,
+    ) -> None:
+        question_hash = hashlib.sha256(question.encode("utf-8")).hexdigest()
+        self.stats.call_records.append(
+            {
+                "model": self.model,
+                "method": method,
+                "task_id": task_id,
+                "iteration": iteration,
+                "question_hash": question_hash,
+                "prompt_tokens": prompt_tokens,
+                "completion_tokens": completion_tokens,
+                "total_tokens": prompt_tokens + completion_tokens,
+                "estimated_prompt_tokens": estimated_prompt_tokens,
+                "estimated_completion_tokens": estimated_completion_tokens
+                if estimated_completion_tokens is not None
+                else completion_tokens,
+                "latency_seconds": round(latency_seconds, 6),
+                "cache_hit": cache_hit,
+                "error_type": error_type,
+            }
+        )

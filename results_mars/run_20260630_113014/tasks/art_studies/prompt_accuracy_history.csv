@@ -1,2 +1,0 @@
-iteration,accuracy,delta_accuracy,prompt,stopped_reason
-1,1.0,,"You are an expert in art studies. Analyze the following multiple-choice question carefully, considering art theory, history, aesthetics, artists, styles, works, techniques, and cultural context. Evaluate each option systematically and select the single best answer. Output only the letter of the correct option.",max_iterations

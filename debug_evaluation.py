@@ -1,49 +1,12 @@
+from __future__ import annotations
+
 import argparse
 import csv
-import os
 from collections import Counter
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional
+from typing import Any
 
-import yaml
-
-from mars_utils.evaluator import (
-    build_diagnostics_markdown,
-    compute_final_metrics_from_predictions,
-    final_prediction_rows,
-)
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Diagnose MARS prediction parsing and summary consistency."
-    )
-    parser.add_argument(
-        "--run-dir",
-        help="Specific results_mars/run_* directory, or results_mars/latest.",
-    )
-    parser.add_argument(
-        "--results-root",
-        default="results_mars",
-        help="Root directory containing run_* folders.",
-    )
-    parser.add_argument(
-        "--latest",
-        action="store_true",
-        help="Use the newest run_* directory under --results-root.",
-    )
-    return parser.parse_args()
-
-
-def resolve_run_dir(run_dir: Optional[str], results_root: str, latest: bool) -> Path:
-    if run_dir:
-        path = Path(run_dir)
-        if path.name == "latest":
-            return newest_run(path.parent)
-        return path
-    if latest:
-        return newest_run(Path(results_root))
-    raise SystemExit("Provide --run-dir or --latest.")
+from mars_core.evaluator import compute_final_metrics_from_predictions
 
 
 def newest_run(results_root: Path) -> Path:
@@ -57,21 +20,25 @@ def newest_run(results_root: Path) -> Path:
     return candidates[0]
 
 
-def read_csv_rows(path: Path) -> List[Dict[str, str]]:
+def resolve_run_dir(run_dir: str | None, results_root: str, latest: bool) -> Path:
+    if run_dir:
+        path = Path(run_dir)
+        if path.name == "latest":
+            return newest_run(path.parent if path.parent != Path(".") else Path(results_root))
+        return path
+    if latest:
+        return newest_run(Path(results_root))
+    raise SystemExit("Provide --run-dir or --latest.")
+
+
+def read_csv_rows(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         return []
     with path.open("r", encoding="utf-8", newline="") as file:
         return list(csv.DictReader(file))
 
 
-def read_yaml(path: Path) -> Dict:
-    if not path.exists():
-        return {}
-    with path.open("r", encoding="utf-8") as file:
-        return yaml.safe_load(file) or {}
-
-
-def distribution(values: Iterable[str], limit: int = 20) -> List[str]:
+def distribution(values: list[Any], limit: int = 20) -> list[str]:
     counter = Counter("" if value is None else str(value) for value in values)
     if not counter:
         return ["- None"]
@@ -81,105 +48,65 @@ def distribution(values: Iterable[str], limit: int = 20) -> List[str]:
     ]
 
 
-def summary_by_task(run_dir: Path) -> Dict[str, Dict[str, str]]:
-    rows = read_csv_rows(run_dir / "summary.csv")
-    return {row.get("task_id", ""): row for row in rows}
+def method_dirs(run_dir: Path) -> list[Path]:
+    root = run_dir / "methods"
+    if not root.exists():
+        return []
+    return sorted(path for path in root.glob("*/*") if path.is_dir())
 
 
-def float_or_none(value: str) -> Optional[float]:
-    try:
-        return float(value)
-    except (TypeError, ValueError):
-        return None
-
-
-def task_report(task_dir: Path, summary_row: Dict[str, str]) -> List[str]:
-    predictions = read_csv_rows(task_dir / "predictions.csv")
-    final_rows = final_prediction_rows(predictions)
+def method_report(path: Path) -> list[str]:
+    predictions = read_csv_rows(path / "predictions.csv")
     metrics = compute_final_metrics_from_predictions(predictions)
-    config = read_yaml(task_dir / "config.yaml")
-    answer_formats = sorted(
-        {row.get("answer_format", "") for row in final_rows if row.get("answer_format")}
-    )
-    answer_format = ", ".join(answer_formats) or str(
-        config.get("answer_format") or "unknown"
-    )
-    parse_failed = sum(
-        1
-        for row in final_rows
-        if not str(row.get("prediction", "")).strip()
-        or str(row.get("error", "")).strip() == "answer_parse_failed"
-    )
-
-    summary_accuracy = float_or_none(summary_row.get("final_accuracy", ""))
-    summary_num_samples = summary_row.get("num_samples", "")
-    summary_num_success = summary_row.get("num_success", "")
-    consistent = (
-        str(metrics["num_samples"]) == str(summary_num_samples)
-        and str(metrics["num_success"]) == str(summary_num_success)
-        and (
-            summary_accuracy is None
-            or abs(summary_accuracy - metrics["final_accuracy"]) < 1e-12
-        )
-    )
-
+    task_id = path.name
+    method_id = path.parent.name
+    errors = [row.get("error_type", "") for row in predictions]
+    parsed = [row.get("parsed_prediction", "") for row in predictions]
+    gold = [row.get("canonical_gold", "") for row in predictions]
     lines = [
-        f"## {task_dir.name}",
+        f"## {method_id} / {task_id}",
         "",
-        f"- answer_format: {answer_format}",
-        f"- final_samples: {metrics['num_samples']}",
-        f"- num_success: {metrics['num_success']}",
+        f"- samples: {metrics['num_samples']}",
+        f"- accuracy: {metrics['accuracy']}",
+        f"- num_correct: {metrics['num_correct']}",
         f"- num_failed: {metrics['num_failed']}",
-        f"- accuracy: {metrics['final_accuracy']}",
-        f"- parse_failed: {parse_failed}",
-        f"- summary_consistent: {consistent}",
+        f"- api_errors: {metrics['api_errors']}",
+        f"- parse_errors: {metrics['parse_errors']}",
+        "",
+        "### Error Types",
+        "",
     ]
-    if metrics["num_samples"] and metrics["final_accuracy"] == 0:
-        lines.append("- warning: accuracy is 0; inspect parsing and raw outputs below.")
-    lines.extend(["", "### Gold Label Distribution", ""])
-    lines.extend(distribution(row.get("answer", "") for row in final_rows))
-    lines.extend(["", "### Canonical Answer Distribution", ""])
-    lines.extend(distribution(row.get("canonical_answer", "") for row in final_rows))
-    lines.extend(["", "### Canonical Prediction Distribution", ""])
-    lines.extend(distribution(row.get("prediction", "") for row in final_rows))
-    lines.extend(["", "### Raw Prediction Examples", ""])
-    if final_rows:
-        for row in final_rows[:20]:
-            raw = str(row.get("raw_prediction", "")).replace("\n", "\\n")
-            lines.append(f"- `{raw if raw else '<empty>'}`")
-    else:
-        lines.append("- None")
+    lines.extend(distribution(errors))
+    lines.extend(["", "### Parsed Predictions", ""])
+    lines.extend(distribution(parsed))
+    lines.extend(["", "### Gold Labels", ""])
+    lines.extend(distribution(gold))
     lines.append("")
     return lines
 
 
 def main() -> int:
-    args = parse_args()
+    parser = argparse.ArgumentParser(
+        description="Diagnose full reproduction prediction parsing and summaries."
+    )
+    parser.add_argument("--run-dir")
+    parser.add_argument("--results-root", default="results_full")
+    parser.add_argument("--latest", action="store_true")
+    args = parser.parse_args()
     run_dir = resolve_run_dir(args.run_dir, args.results_root, args.latest)
     if not run_dir.exists():
         raise SystemExit(f"Run directory not found: {run_dir}")
 
-    summaries = summary_by_task(run_dir)
-    task_dirs = sorted((run_dir / "tasks").glob("*"))
+    paths = method_dirs(run_dir)
     lines = [
-        "# MARS Evaluation Diagnostics",
+        "# Full Reproduction Evaluation Diagnostics",
         "",
         f"- run_dir: {run_dir}",
-        f"- tasks: {len(task_dirs)}",
+        f"- method_task_dirs: {len(paths)}",
         "",
     ]
-
-    for task_dir in task_dirs:
-        if not task_dir.is_dir():
-            continue
-        summary_row = summaries.get(task_dir.name, {})
-        lines.extend(task_report(task_dir, summary_row))
-
-        predictions = read_csv_rows(task_dir / "predictions.csv")
-        (task_dir / "diagnostics.md").write_text(
-            build_diagnostics_markdown(task_dir.name, predictions),
-            encoding="utf-8",
-        )
+    for path in paths:
+        lines.extend(method_report(path))
 
     output_path = run_dir / "evaluation_diagnostics.md"
     output_path.write_text("\n".join(lines), encoding="utf-8")

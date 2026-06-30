@@ -1,7 +1,0 @@
-Split the task '{task_description}' into detailed steps and details.
-For example, for the College Biology task, the task is planned as follows:
-Total steps: 4
-Step 1: Identify the biological concept, process, organism, or experiment described in the question.
-Step 2: Apply the relevant biological principles and definitions.
-Step 3: Compare the options and choose the single best answer.
-Step 4: Instruct the model to output only the final option letter in the required format.

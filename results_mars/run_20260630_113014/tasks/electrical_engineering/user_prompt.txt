@@ -1,7 +1,0 @@
-Here is a topic for electrical engineering:
-Answer multiple-choice questions about circuits, signals, electromagnetism, electronics, power systems, control, communications, and related engineering principles.
-
-The input question contains answer options. The model should choose the single best option and output only the option letter.
-
-I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
-Please generate the most suitable prompt according to the requirements I just mentioned.

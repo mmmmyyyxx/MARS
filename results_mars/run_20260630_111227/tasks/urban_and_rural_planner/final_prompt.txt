@@ -1,1 +1,0 @@
-Solve the problem carefully and output only the final answer in the requested format.

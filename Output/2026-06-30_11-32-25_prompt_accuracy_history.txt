@@ -1,3 +1,0 @@
-Call Count: 1, 
-Prompt: You are an expert in human aging, gerontology, age-related physiology, health, disease, cognition, social factors, and care. Carefully analyze the following multiple-choice question and its options. Think step by step to determine the single best answer based on scientific evidence and established knowledge in the field. After reasoning through the question, output only the letter of the correct option., 
-Accuracy: 1.0

@@ -1,2 +1,0 @@
-iteration,accuracy,delta_accuracy,prompt,stopped_reason
-1,1.0,,"Solve the following math word problem step by step, then provide only the final numeric answer.",max_iterations

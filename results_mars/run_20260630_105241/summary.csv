@@ -1,4 +1,0 @@
-task_id,group,dataset_path,question_type,answer_format,status,num_samples,num_success,num_failed,best_accuracy,final_accuracy,best_iteration,best_num_success,best_num_failed,stopped_reason,total_runtime_seconds
-boolean_expressions,BBH,Dataset_format/BBH/boolean_expressions.csv,choice,boolean,success,3,3,0,1.0,1.0,1,3,0,max_iterations,0.1223
-formal_fallacies,BBH,Dataset_format/BBH/formal_fallacies.csv,choice,valid_invalid,success,3,3,0,1.0,1.0,1,3,0,max_iterations,0.1178
-sports_understanding,BBH,Dataset_format/BBH/sports_understanding.csv,choice,yes_no,success,3,3,0,1.0,1.0,1,3,0,max_iterations,0.1054

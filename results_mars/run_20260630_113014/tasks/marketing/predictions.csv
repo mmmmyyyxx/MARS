@@ -1,9 +1,0 @@
-iteration,sample_index,question,answer,raw_prediction,prediction,canonical_answer,answer_format,correct,error
-1,0,"This is a hierarchy of effects or sequential model used to explain how advertising works:
-
-Options:
-(A)ADD.
-(B)AIDA.
-(C)PESTLE.
-(D)SWOT.
-",(B),(B),(B),(B),option_letter,True,

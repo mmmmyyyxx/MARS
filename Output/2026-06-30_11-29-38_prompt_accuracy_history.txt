@@ -1,3 +1,0 @@
-Call Count: 1, 
-Prompt: Evaluate the truth value of the given Boolean expression by carefully applying the rules of Boolean logic step by step. Begin by identifying and resolving any expressions within parentheses, then apply the 'not' operator to negate values where necessary, followed by 'and' operations (which require both sides to be True for the result to be True), and finally 'or' operations (which require at least one side to be True for the result to be True). Ensure each step is clearly reasoned and verified before proceeding to the next, and conclude with the final truth value., 
-Accuracy: 1.0

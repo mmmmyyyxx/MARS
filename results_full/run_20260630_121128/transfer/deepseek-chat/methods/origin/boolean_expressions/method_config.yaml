@@ -1,8 +1,0 @@
-display_name: Origin
-type: direct
-exactness: exact_if_origin_prompt_matches
-model: deepseek-chat
-temperature: 0.6
-pricing:
-  prompt_per_1k: 0.0
-  completion_per_1k: 0.0

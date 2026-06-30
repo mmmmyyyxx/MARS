@@ -1,2 +1,0 @@
-task_id,group,dataset_path,question_type,answer_format,status,num_samples,num_success,num_failed,best_accuracy,final_accuracy,best_iteration,best_num_success,best_num_failed,stopped_reason,total_runtime_seconds
-gsm8k,GSM8K,Dataset_format/GSM8K/gsm8k_test.csv,short_answer,short_answer,success,1,1,0,1.0,1.0,1,1,0,max_iterations,16.0881

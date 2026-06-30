@@ -1,134 +1,108 @@
-# 🧝‍♀️MARS
+# MARS Full Paper Reproduction
 
-This repository contains the official implementation of the following paper:
+This repository is organized as a one-command reproduction framework for:
 
-🎉🎉[ *AAAI-26* ] **MARS: Multi-Agent Adaptive Reasoning with Socratic Guidancefor Automated Prompt Optimization**  
+**MARS: Multi-Agent Adaptive Reasoning with Socratic Guidance for Automated Prompt Optimization**
 
 arXiv: https://arxiv.org/abs/2503.16874
 
+The active workflow is the full-paper reproduction pipeline. It covers the registered
+17 tasks, main baselines, MARS variants, ablations, efficiency logging, convergence
+curves, and cross-model transfer runs.
 
-
-We propose a Multi-Agent Approach Integrating Socratic Guidance (MARS). Specifically, our multi-agent architecture autonomously plans the optimization path to mitigate uncertainty and employs a "teacher-critic-student" Socratic guidance interaction pattern to iteratively optimize the prompts while providing interpretability. 
-
-----------------------------------------------
-
-
-## 📌 Environment Setup Guide
-
-This project supports both `pip` and `conda` for environment setup. Choose the method that suits your setup.
-
-### 🔹 Method 1: Using `requirements.txt` 
-
-If you are using **pip**, follow these steps to install all dependencies:
+## Environment
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+conda activate MARS
 ```
 
-### 🔹 Method 2: Using `environment.yml` --[Recommend!]
-
-If you are using **conda**, follow these steps:
+The runner uses OpenAI-compatible environment variables by default:
 
 ```bash
-# Create a conda environment from environment.yml
-conda env create -f environment.yml
-
-# Activate the environment
-conda activate MultiAgent
+set OPENAI_API_KEY=...
+set OPENAI_BASE_URL=...
 ```
 
+PowerShell users can set them with:
 
-
-## 💡How to Run 
-
-To run the model, please use the following command.
-
-### 🔹 step 1: Configuring the OpenAI API key
-
-Configure your API Key in the ***Config.py*** file and select the model you want to use as the base
-
-```python
-API_KEY = "---YOUR_API_KEY---"
-BASE_URL = "---YOUR_BASE_URL---"
-MODEL = "deepseek-chat" # anyone you want
+```powershell
+$env:OPENAI_API_KEY="..."
+$env:OPENAI_BASE_URL="..."
 ```
 
+## Run
 
-
-### 🔹 step 2: Setting up the test dataset(optional)
-
-Set the test dataset corresponding to the task you chose in ***config.py***.
-
-```python
-# For example
-DATASET_PATH = './Dataset_format/BBH/geometric_shapes.csv'
-```
-
-
-
-### 🔹 step 3: Setting Prompts(optional)
-
-Depending on the task you want to use, select the corresponding content from the ***Prompt/ALL_userproxy_task_input.md*** and ***Prompt/ALL_prompt_planner_template.md*** files to copy into ***Prompt/EDIT_1_userproxy_task_input.txt*** and ***Prompt/EDIT_2_prompt_planner_template.txt***.
-
-Of course, if you want to optimize other tasks, you can also write the content in the ***Prompt/EDIT_1_userproxy_task_input.txt*** and ***Prompt/EDIT_2_prompt_planner_template.txt*** directly yourself.
-
-
-
-### 🔹 step 4: Run the script
-
-We have designed the program to support two question types. Exactly which one to use depends on the type of questions in the dataset.
-
-If it is a choice question please run:
+Use `reproduce_paper.py` as the canonical entrypoint:
 
 ```bash
-bash run.sh choice
+# Validate all registered tasks, prompts, parsers, and output schemas.
+python reproduce_paper.py --preset smoke --dry-run
+
+# Run MARS on all 17 registered tasks.
+python reproduce_paper.py --preset mars_full
+
+# Run the full local paper matrix.
+python reproduce_paper.py --preset paper_full --cache-enabled --resume --skip-existing
 ```
 
-If it is a short answer question, please run:
+Useful scoped runs:
 
 ```bash
-bash run.sh short_answer
+python reproduce_paper.py --preset paper_full --tasks boolean_expressions,gsm8k
+python reproduce_paper.py --preset paper_full --target-models deepseek-r1,gpt-4o
+python reproduce_paper.py --preset paper_full --max-samples 20 --dry-run
 ```
 
-The results of each run will be displayed in ***Output*** folder.
+## Outputs
 
-## 🗂️ Documentation
+Runs are written under `results_full/run_<timestamp>/`.
 
-### Dataset 
+Important files:
 
-The data used in this experiment are stored in two folders, ***Dataset*** and ***Dataset_format***. The Dataset folder stores the original dataset of the data used in this experiment, and the Dataset_format folder stores the processed data that can be used directly.
+- `summary.csv` and `summary.json`: all local result rows.
+- `paper_comparison.csv`: local results compared with paper reference values.
+- `coverage.json`: expected/completed main-suite task-method coverage.
+- `paper_reproduction_report.md`: matrix coverage, errors, and exactness notes.
+- `tables/`: paper-style CSV/Markdown tables.
+- `efficiency/`: accuracy, runtime, token, and cost points.
+- `convergence/`: per-task convergence curves.
+- `figures/`: generated visualizations.
+- `methods/<method>/<task>/api_calls.csv`: per-call token, latency, cache, and error traces.
 
-The data in Dataset_format is the result of processing the Dataset's corresponding task using the preprocess_XX.py file. The ***Preprocess/preprocess_XX.py*** file used to process the data is given here.
+## Visualize
 
+```bash
+python visualize_full_results.py --latest
+python visualize_full_results.py --run-dir results_full/latest
+```
 
+`visualize_full_results.py` is the only visualization entrypoint.
 
-### Preprocess
-The Preprocess folder holds the preprocessors used in the different tasks in this experiment, the results of running these programs have been placed in the ***Dataset_format*** folder.
+## Configuration
 
+- `configs/reproduction_matrix.yaml`: `smoke`, `mars_full`, and `paper_full` presets.
+- `configs/tasks.yaml`: registered paper tasks and datasets.
+- `configs/methods.yaml`: main methods and MARS ablation variants.
+- `configs/suites.yaml`: main, ablation, efficiency, convergence, and transfer suites.
+- `configs/models.yaml`: API defaults and pricing metadata.
+- `configs/paper_results.yaml`: paper reference numbers for comparison only.
 
+Paper reference values are never substituted for failed or missing local runs.
 
-### Work process
+## Entrypoints
 
-***run.sh***: script for automated execution of code optimization
+Use:
 
-***main_MARS***: The entry point of the program that implements the Agent calls.
+```bash
+python reproduce_paper.py --preset mars_full
+python reproduce_paper.py --preset paper_full
+```
 
-***Agents***: the implementation methods of specific Agents.
+All full-reproduction run logic now lives in `reproduce_paper.py`.
+The original manual scripts (`run.sh`, `main_MARS.py`, `Config.py`) are retained as
+legacy upstream code. They are not the active reproduction path.
 
-***Config***: Stores various configuration parameters, file paths, and APIs for calling LLM.
-
-
-
-### Results
-
-The best prompt for all tasks after iteration is in the ***Optimized prompt*** folder.
-
-
-
-## 📚 Citation
-
-If you find this work useful in your research, please consider citing:
+## Citation
 
 ```bibtex
 @article{zhang2025mars,
@@ -137,3 +111,4 @@ If you find this work useful in your research, please consider citing:
   journal={arXiv preprint arXiv:2503.16874},
   year={2025}
 }
+```
