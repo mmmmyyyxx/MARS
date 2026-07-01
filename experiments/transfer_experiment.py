@@ -17,6 +17,7 @@ from mars_core.run_state import (
     build_run_state,
     expected_sample_ids,
     prompt_hash,
+    save_run_state,
     stable_hash,
 )
 
@@ -117,6 +118,7 @@ def run_transfer_suite(
                         "max_samples": settings.max_samples,
                         "eval_protocol": settings.eval_protocol,
                         "split_seed": settings.split_seed,
+                        "dry_run": settings.dry_run,
                     }
                 )
                 client = _target_client(settings, model_config, run_dir, target, method)
@@ -151,7 +153,7 @@ def run_transfer_suite(
                     predictions_path=method_dir / "predictions.csv",
                     status="completed",
                 )
-                write_json(method_dir / "run_state.json", state)
+                save_run_state(method_dir / "run_state.json", state)
                 row = method_table_row(
                     task=task,
                     method=method,

@@ -35,6 +35,7 @@ def _generate_subgoals(
         method=method,
         task_id=task.task_id,
         iteration=0,
+        agent_name="Planner",
     )
     subgoals = []
     for line in raw.splitlines():
@@ -142,6 +143,7 @@ def run_mars_variant(
             method=method,
             task_id=task.task_id,
             iteration=iteration,
+            agent_name="Teacher",
         )
         teacher_questions.append(
             {"iteration": iteration, "subgoal": subgoal, "question": question}
@@ -155,6 +157,7 @@ def run_mars_variant(
                 method=method,
                 task_id=task.task_id,
                 iteration=iteration,
+                agent_name="Critic",
             )
         critic_feedback.append(
             {

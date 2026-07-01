@@ -7,9 +7,11 @@ levels:
     description: Uses a simplified local approximation; not suitable for claiming exact reproduction.
   reference_only:
     description: Paper value used only for comparison, never substituted for local results.
+  prompt_dependent:
+    description: Exactness depends on whether local prompt resources match the paper/original prompts.
 methods:
   origin:
-    exactness_level: exact_official
+    exactness_level: prompt_dependent
     notes: Prompt-dependent; exact only when the local origin prompt matches the original paper prompt.
   cot_zs:
     exactness_level: faithful_reimplementation
@@ -32,6 +34,9 @@ methods:
   mars_official:
     exactness_level: faithful_reimplementation
     notes: Official-compatible Manager/UserProxy/Planner/Teacher/Critic/Student/Target flow without Prompt/ mutation.
+  mars:
+    exactness_level: faithful_reimplementation
+    notes: Alias for the official-compatible MARS runner.
   mars_light:
     exactness_level: best_effort_reimplementation
     notes: Simplified local MARS variant retained for diagnostics.

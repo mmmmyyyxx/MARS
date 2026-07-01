@@ -97,7 +97,7 @@ def build_run_args(args: argparse.Namespace, matrix: dict[str, Any]) -> argparse
         suite=args.suite or preset.get("suite", "main"),
         methods=args.methods or _csv(preset.get("methods")),
         tasks=args.tasks or _csv(preset.get("tasks")),
-        model=args.model or "deepseek-v2.5-1210",
+        model=args.model or "deepseek-chat",
         source_model=args.source_model,
         target_models=args.target_models or "deepseek-r1,gpt-3.5,gpt-4,gpt-4o",
         temperature=args.temperature if args.temperature is not None else 0.6,
@@ -150,13 +150,25 @@ def override_suite_methods(
     return updated_suites
 
 
-def make_run_dir(results_root: str, resume: bool) -> Path:
+def _run_dir_matches_dry_run(run_dir: Path, dry_run: bool) -> bool:
+    config_path = run_dir / "run_config.yaml"
+    if not config_path.exists():
+        return False
+    try:
+        config = load_yaml(config_path)
+    except Exception:
+        return False
+    return bool(config.get("dry_run", False)) == bool(dry_run)
+
+
+def make_run_dir(results_root: str, resume: bool, dry_run: bool = False) -> Path:
     root = Path(results_root)
     root.mkdir(parents=True, exist_ok=True)
     if resume:
         runs = sorted(path for path in root.glob("run_*") if path.is_dir())
-        if runs:
-            return runs[-1]
+        compatible = [path for path in runs if _run_dir_matches_dry_run(path, dry_run)]
+        if compatible:
+            return compatible[-1]
     base = root / f"run_{timestamp()}"
     run_dir = base
     suffix = 1
@@ -241,7 +253,7 @@ def run_from_args(args: argparse.Namespace) -> int:
     suites = override_suite_tasks(suites, selected_ids(args.tasks))
     suites = override_suite_methods(suites, selected_ids(args.methods))
 
-    run_dir = make_run_dir(args.results_root, args.resume)
+    run_dir = make_run_dir(args.results_root, args.resume, args.dry_run)
     settings = RunSettings(
         model=args.model,
         temperature=args.temperature,

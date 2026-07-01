@@ -1,6 +1,6 @@
 api_key_env: OPENAI_API_KEY
 base_url_env: OPENAI_BASE_URL
-model: deepseek-v2.5-1210
+model: deepseek-chat
 temperature: 0.6
 max_iterations: 10
 early_stop_delta: 0.01

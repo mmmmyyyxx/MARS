@@ -1,0 +1,5 @@
+from tests.test_mars_official_runner_dryrun import test_official_mars_dryrun_writes_required_files
+
+
+def test_mars_official_dryrun_alias(tmp_path):
+    test_official_mars_dryrun_writes_required_files(tmp_path)

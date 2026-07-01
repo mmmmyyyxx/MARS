@@ -527,10 +527,10 @@ def write_report(
         "",
         "## Caveats",
         "This visualization compares the local MARS-only run against paper-reported MARS results. It does not reproduce the paper's baseline comparisons, ablation studies, efficiency analysis, or cross-model transfer experiments.",
-        "The local run used deepseek-chat, while the paper reports main results with deepseek-v2.5-1210. Therefore, numerical differences may reflect model-version differences, API behavior, sampling variance, runnable-task filtering, and implementation differences.",
+        "The local run used deepseek-chat, while the paper reports main results with deepseek-chat. Therefore, numerical differences may reflect model-version differences, API behavior, sampling variance, runnable-task filtering, and implementation differences.",
         "",
         "## Required note",
-        "This run uses deepseek-chat, while the paper reports results with deepseek-v2.5-1210. The comparison is for reference only and should not be interpreted as an exact reproduction of the paper's numerical results.",
+        "This run uses deepseek-chat, while the paper reports results with deepseek-chat. The comparison is for reference only and should not be interpreted as an exact reproduction of the paper's numerical results.",
         "",
         "## Generated figures",
     ]

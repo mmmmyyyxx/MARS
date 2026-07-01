@@ -23,7 +23,7 @@ from mars_core.mars_runner import (
     write_method_outputs,
 )
 from mars_core.mars_variants import run_mars_variant
-from mars_core.official_mars_runner import run_official_mars
+from mars_core.official_mars_runner import run_mars_official
 from mars_core.prompt_loader import PromptLoader
 from mars_core.run_state import (
     build_run_state,
@@ -37,6 +37,7 @@ from mars_core.run_state import (
     write_run_state,
 )
 from mars_core.evaluator import PREDICTION_FIELDS
+from mars_core.run_state import REQUIRED_METHOD_FILES
 
 BASELINE_RUNNERS = {
     "origin": origin.run,
@@ -124,6 +125,23 @@ def _method_prompt_hash(method: str, prompts) -> str:
 
 def _empty_api_log(method_dir: Path) -> None:
     write_csv(method_dir / "api_calls.csv", [], API_CALL_COLUMNS)
+
+
+def _write_output_manifest(method_dir: Path) -> None:
+    write_json(
+        method_dir / "output_manifest.json",
+        {
+            "required_files": REQUIRED_METHOD_FILES,
+            "created_files": sorted(
+                {
+                    *(path.name for path in method_dir.iterdir() if path.is_file()),
+                    "output_manifest.json",
+                }
+            )
+            if method_dir.exists()
+            else ["output_manifest.json"],
+        },
+    )
 
 
 def _read_metrics(method_dir: Path) -> dict[str, Any]:
@@ -273,6 +291,7 @@ def run_task_method(
             "max_iterations": settings.max_iterations,
             "eval_protocol": settings.eval_protocol,
             "split_seed": settings.split_seed,
+            "dry_run": settings.dry_run,
         }
     )
     expected_ids = expected_sample_ids(splits["test"])
@@ -287,9 +306,13 @@ def run_task_method(
     ):
         status = method_output_status(method_dir, expected_ids)
         metrics = _read_metrics(method_dir)
+        print(
+            f"[skip] {suite_name}/{method}/{task.task_id} already complete",
+            flush=True,
+        )
         return {
             "skipped": True,
-            "status": "skipped",
+            "status": "skipped_complete",
             "suite": suite_name,
             "task_id": task.task_id,
             "display_name": task.paper_display_name,
@@ -300,6 +323,7 @@ def run_task_method(
             "eval_protocol": settings.eval_protocol,
             "exactness_level": method_config.get("exactness_level", ""),
             "exactness_note": method_config.get("exactness_note", ""),
+            "exactness_notes": method_config.get("exactness_note", ""),
             "accuracy": metrics.get("accuracy", ""),
             "num_samples": metrics.get("num_samples", status["num_prediction_rows"]),
             "num_correct": metrics.get("num_correct", ""),
@@ -340,6 +364,11 @@ def run_task_method(
     method_config.update(split_row)
 
     start = time.time()
+    print(
+        f"[run] {suite_name}/{method}/{task.task_id} "
+        f"model={effective_model} samples={len(splits['test'])} dry_run={settings.dry_run}",
+        flush=True,
+    )
     metrics = _try_resume_partial_predictions(
         client=client,
         task=task,
@@ -378,7 +407,7 @@ def run_task_method(
                 max_iterations=settings.max_iterations,
             )
     elif method_type == "mars_official":
-        metrics = run_official_mars(
+        metrics = run_mars_official(
             client=client,
             task=task,
             prompts=prompts,
@@ -389,6 +418,7 @@ def run_task_method(
             method_config=method_config,
             out_dir=method_dir,
             max_iterations=settings.max_iterations,
+            early_stop_delta=settings.early_stop_delta,
             max_critic_revisions=settings.max_critic_revisions,
         )
     elif method_type == "mars_light" or method.startswith("mars"):
@@ -430,9 +460,16 @@ def run_task_method(
         expected_ids=expected_ids,
         predictions_path=method_dir / "predictions.csv",
         status="completed",
+        dataset_path=task.dataset_path,
+        split_hashes={
+            "opt": split_row["opt_hash"],
+            "val": split_row["val_hash"],
+            "test": split_row["test_hash"],
+        },
     )
     write_run_state(method_dir / "run_state.json", state)
     write_json(method_dir / "metrics.json", metrics)
+    _write_output_manifest(method_dir)
     row = method_table_row(
         task=task,
         method=method,

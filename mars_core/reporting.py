@@ -88,6 +88,7 @@ def paper_comparison_rows(
                 "num_samples": row.get("num_samples", ""),
                 "exactness_level": row.get("exactness_level", ""),
                 "exactness_note": row.get("exactness_note", ""),
+                "exactness_notes": row.get("exactness_notes", row.get("exactness_note", "")),
             }
         )
     return rows
@@ -100,9 +101,10 @@ def method_task_coverage(
     for row in summary_rows:
         if row.get("suite") != "main" or not row.get("task_id") or not row.get("method_id"):
             continue
-        status_by_pair[(str(row.get("task_id")), str(row.get("method_id")))] = str(
-            row.get("status") or ("skipped" if row.get("skipped") else "completed")
-        )
+        status = str(row.get("status") or ("skipped_complete" if row.get("skipped") else "completed"))
+        if status == "skipped":
+            status = "skipped_complete"
+        status_by_pair[(str(row.get("task_id")), str(row.get("method_id")))] = status
     expected_pairs = {
         (task_id, method_id)
         for task_id in expected_tasks
@@ -111,11 +113,11 @@ def method_task_coverage(
     completed = sorted(
         pair
         for pair in expected_pairs
-        if status_by_pair.get(pair) in {"completed", "skipped"}
+        if status_by_pair.get(pair) in {"completed", "skipped_complete"}
     )
     partial = sorted(pair for pair in expected_pairs if status_by_pair.get(pair) == "partial")
     failed = sorted(pair for pair in expected_pairs if status_by_pair.get(pair) == "failed")
-    skipped = sorted(pair for pair in expected_pairs if status_by_pair.get(pair) == "skipped")
+    skipped = sorted(pair for pair in expected_pairs if status_by_pair.get(pair) == "skipped_complete")
     missing = sorted(pair for pair in expected_pairs if pair not in status_by_pair)
     return {
         "expected_pairs": len(expected_pairs),
@@ -129,6 +131,9 @@ def method_task_coverage(
         ],
         "failed": [
             {"task_id": task_id, "method_id": method_id} for task_id, method_id in failed
+        ],
+        "skipped_complete": [
+            {"task_id": task_id, "method_id": method_id} for task_id, method_id in skipped
         ],
         "skipped": [
             {"task_id": task_id, "method_id": method_id} for task_id, method_id in skipped
@@ -271,9 +276,9 @@ def _paper_mode_warning(summary_rows: list[dict[str, Any]], eval_protocol: str) 
     for row in summary_rows:
         if row.get("opt_hash") and row.get("opt_hash") == row.get("val_hash") == row.get("test_hash"):
             return (
-                "Warning: paper_mode is active and at least one row has identical "
-                "opt/val/test split hashes. This matches paper-style comparability "
-                "but is not leakage-free prompt-search evaluation."
+                "Warning: paper_mode opt_hash == val_hash == test_hash. "
+                "paper_mode is intended for paper comparability; use strict_mode "
+                "for leakage-controlled evaluation."
             )
     return ""
 
@@ -308,6 +313,7 @@ def write_full_reproduction_outputs(
             "num_samples",
             "exactness_level",
             "exactness_note",
+            "exactness_notes",
         ],
     )
 
@@ -326,6 +332,13 @@ def write_full_reproduction_outputs(
     main_methods = list(main_config.get("methods", []))
     coverage = method_task_coverage(summary_rows, main_tasks, main_methods)
     write_json(run_dir / "coverage.json", coverage)
+    validation_path = run_dir / "validation_report.json"
+    validation_summary = {}
+    if validation_path.exists():
+        try:
+            validation_summary = json.loads(validation_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            validation_summary = {"num_errors": "invalid_report", "num_warnings": ""}
 
     paper_deltas = [
         float(row["delta_percentage_points"])
@@ -383,7 +396,7 @@ def write_full_reproduction_outputs(
         f"- main_coverage_fraction: {coverage['coverage_fraction']:.4f}",
         f"- partial_pairs: {len(coverage['partial'])}",
         f"- failed_pairs: {len(coverage['failed'])}",
-        f"- skipped_pairs: {len(coverage['skipped'])}",
+        f"- skipped_complete_pairs: {len(coverage['skipped_complete'])}",
         "",
         "## Suite Rows",
         "",
@@ -407,7 +420,19 @@ def write_full_reproduction_outputs(
             f"- api_errors: {api_errors}",
             f"- parse_errors: {parse_errors}",
             "",
-            "## API Usage",
+            "## Resume / Run-State Summary",
+            "",
+            f"- completed: {status_counts.get('completed', 0)}",
+            f"- skipped_complete: {status_counts.get('skipped_complete', 0) + status_counts.get('skipped', 0)}",
+            f"- partial: {status_counts.get('partial', 0)}",
+            f"- failed: {status_counts.get('failed', 0)}",
+            "",
+            "## Output Validation Summary",
+            "",
+            f"- validation_errors: {validation_summary.get('num_errors', 'not_run')}",
+            f"- validation_warnings: {validation_summary.get('num_warnings', 'not_run')}",
+            "",
+            "## Cost and API Summary",
             "",
             f"- total_api_call_records: {api_summary['total_api_call_records']}",
             f"- total_tokens: {api_summary['total_tokens']}",
@@ -423,7 +448,7 @@ def write_full_reproduction_outputs(
             if avg_delta is not None
             else "- mars_average_delta_percentage_points: unavailable",
             "",
-            "## Exactness",
+            "## Exactness Status",
             "",
         ]
     )

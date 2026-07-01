@@ -23,4 +23,6 @@ def test_valid_invalid_parser_prefers_invalid():
 
 def test_numeric_parser():
     assert canonical_answer("#### 1,234.5", "numeric") == "1234.5"
+    assert canonical_answer("#### 42", "numeric") == "42"
+    assert canonical_answer("Final answer: 1,234", "numeric") == "1234"
     assert is_valid_prediction("-3.14", "numeric")

@@ -17,3 +17,9 @@ def test_strict_mode_splits_rows():
     assert len(splits["val"]) > 0
     assert len(splits["test"]) > 0
     assert hash_rows(splits["opt"]) != hash_rows(splits["test"])
+
+
+def test_strict_mode_is_deterministic_for_seed():
+    assert split_dataset(rows(), "strict_mode", 7) == split_dataset(
+        rows(), "strict_mode", 7
+    )

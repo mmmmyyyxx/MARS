@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from mars_core.mars_runner import load_task_specs, load_yaml
 
 
@@ -6,7 +8,13 @@ def test_all_tasks_have_prompt_directories():
     assert len(tasks) == 17
     for task in tasks.values():
         assert task.dataset_path
+        assert task.test_path
+        assert task.question_type
         assert task.answer_format
+        assert task.user_prompt_key
+        assert task.planner_prompt_key
+        assert task.few_shot_key
+        assert Path(task.dataset_path).exists()
 
 
 def test_methods_have_exactness_level():

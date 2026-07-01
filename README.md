@@ -34,8 +34,10 @@ Use `reproduce_paper.py` as the canonical entrypoint:
 
 ```bash
 python reproduce_paper.py --preset smoke --dry-run
-python reproduce_paper.py --preset mars_full --resume --cache-enabled
-python reproduce_paper.py --preset paper_full --resume --cache-enabled
+python reproduce_paper.py --preset mars_full --cache-enabled --resume --skip-existing
+python reproduce_paper.py --preset paper_full --cache-enabled --resume --skip-existing
+python validate_reproduction_outputs.py --latest
+pytest -q
 ```
 
 Useful scoped runs:
@@ -49,19 +51,19 @@ python validate_reproduction_outputs.py --latest
 
 ## Exactness Status
 
-| Method | Status | Notes |
+| Method | Exactness | Notes |
 |---|---|---|
 | Origin | prompt-dependent | exact if original prompt matches |
-| CoT(ZS) | faithful | local prompt template |
-| CoT(FS) | faithful | local few-shot construction |
-| APE | best-effort | pending original search details |
-| ProTeGi | best-effort | pending textual-gradient beam implementation |
-| OPRO | best-effort | pending full optimizer-history protocol |
-| PE2 | best-effort | pending exact meta-prompt |
-| MARS-official | faithful | official-compatible no-file-mutation implementation |
+| CoT-ZS | faithful | standard local implementation |
+| CoT-FS | faithful | records examples |
+| APE | best-effort or faithful | depends on implementation status |
+| ProTeGi | best-effort or faithful | depends on textual-gradient/beam implementation |
+| OPRO | best-effort or faithful | depends on optimizer-history implementation |
+| PE2 | best-effort or faithful | depends on PE2 meta-prompt implementation |
+| MARS | faithful | mars_official runner |
 | MARS-light | best-effort | simplified local variant |
 
-The final report includes an `Exactness` section. Exact numerical reproduction is only claimed for methods marked `exact_official` or `faithful_reimplementation`.
+The final report includes an `Exactness Status` section. Exact numerical reproduction is only claimed for methods marked `exact_official` or `faithful_reimplementation`.
 
 ## Outputs
 

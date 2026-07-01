@@ -8,3 +8,5 @@ results_mars/run_*/
 results_full/run_*/
 logs/
 api_calls.csv
+.DS_Store
+.pytest_cache/

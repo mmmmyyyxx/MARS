@@ -138,6 +138,7 @@ class LLMClient:
         return {
             "model": self.model,
             "temperature": self.temperature,
+            "dry_run": self.dry_run,
             "messages": messages,
             **extra,
         }
@@ -153,6 +154,8 @@ class LLMClient:
         max_tokens: int | None = None,
         agent_name: str = "",
         sample_id: Any = "",
+        suite: str = "",
+        run_id: str = "",
     ) -> str:
         started_at = time.time()
         estimated_prompt_tokens = estimate_message_tokens(messages)
@@ -181,6 +184,8 @@ class LLMClient:
                 estimated_prompt_tokens=estimated_prompt_tokens,
                 agent_name=agent_name,
                 sample_id=sample_id,
+                suite=suite,
+                run_id=run_id,
             )
             return content
 
@@ -202,6 +207,8 @@ class LLMClient:
                 estimated_completion_tokens=estimate_tokens(content),
                 agent_name=agent_name,
                 sample_id=sample_id,
+                suite=suite,
+                run_id=run_id,
             )
             return content
 
@@ -243,6 +250,8 @@ class LLMClient:
                     estimated_completion_tokens=completion_tokens,
                     agent_name=agent_name,
                     sample_id=sample_id,
+                    suite=suite,
+                    run_id=run_id,
                 )
                 return content
             except Exception as exc:
@@ -272,6 +281,8 @@ class LLMClient:
                         estimated_prompt_tokens=estimated_prompt_tokens,
                         agent_name=agent_name,
                         sample_id=sample_id,
+                        suite=suite,
+                        run_id=run_id,
                     )
                     raise ApiCallError(error_type, str(exc)) from exc
                 self.stats.retries += 1
@@ -290,6 +301,8 @@ class LLMClient:
         max_tokens: int | None = None,
         agent_name: str = "",
         sample_id: Any = "",
+        suite: str = "",
+        run_id: str = "",
     ) -> str:
         return self.complete(
             messages=[
@@ -303,6 +316,8 @@ class LLMClient:
             max_tokens=max_tokens,
             agent_name=agent_name,
             sample_id=sample_id,
+            suite=suite,
+            run_id=run_id,
         )
 
     def _mock_response(self, messages: list[dict[str, str]], task_id: str) -> str:
@@ -346,6 +361,8 @@ class LLMClient:
         estimated_completion_tokens: int | None = None,
         agent_name: str = "",
         sample_id: Any = "",
+        suite: str = "",
+        run_id: str = "",
     ) -> None:
         question_hash = hashlib.sha256(question.encode("utf-8")).hexdigest()
         prompt_hash = hashlib.sha256(
@@ -370,8 +387,8 @@ class LLMClient:
         self.stats.call_records.append(
             {
                 "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-                "run_id": self.run_id,
-                "suite": self.suite,
+                "run_id": run_id or self.run_id,
+                "suite": suite or self.suite,
                 "method_id": self.method_id or method,
                 "agent_name": agent_name,
                 "model": self.model,

@@ -194,7 +194,34 @@ def write_method_outputs(
 ) -> dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     metrics = compute_final_metrics_from_predictions(predictions)
-    metrics["num_iterations"] = len(history)
+    best_history = max(
+        history,
+        key=lambda item: float(item.get("accuracy") or -1),
+        default=None,
+    )
+    final_history = history[-1] if history else None
+    metrics.update(
+        {
+            "task_id": task.task_id,
+            "method_id": method,
+            "method_display_name": method_config.get("display_name", method),
+            "answer_format": task.answer_format,
+            "metric": task.metric,
+            "best_prompt_path": "best_prompt.txt",
+            "final_prompt_path": "final_prompt.txt",
+            "num_history_rows": len(history),
+            "best_validation_accuracy": None
+            if best_history is None
+            else best_history.get("accuracy"),
+            "best_iteration": None if best_history is None else best_history.get("iteration"),
+            "final_iteration": None if final_history is None else final_history.get("iteration"),
+            "num_iterations": len(history),
+            "exactness": method_config.get("exactness", method_config.get("exactness_level", "")),
+            "exactness_level": method_config.get(
+                "exactness_level", method_config.get("exactness", "")
+            ),
+        }
+    )
     write_yaml(out_dir / "method_config.yaml", method_config)
     write_json(out_dir / "metrics.json", metrics)
     write_csv(out_dir / "predictions.csv", predictions, PREDICTION_FIELDS)
@@ -212,6 +239,31 @@ def write_method_outputs(
     write_text(out_dir / "raw_logs.txt", raw_logs)
     if run_state is not None:
         write_json(out_dir / "run_state.json", run_state)
+    manifest_required = [
+        "method_config.yaml",
+        "metrics.json",
+        "output_manifest.json",
+        "run_state.json",
+        "predictions.csv",
+        "prompt_accuracy_history.csv",
+        "best_prompt.txt",
+        "final_prompt.txt",
+        "diagnostics.md",
+        "api_calls.csv",
+        "raw_logs.txt",
+    ]
+    write_json(
+        out_dir / "output_manifest.json",
+        {
+            "required_files": manifest_required,
+            "created_files": sorted(
+                {
+                    *(path.name for path in out_dir.iterdir() if path.is_file()),
+                    "output_manifest.json",
+                }
+            ),
+        },
+    )
     return metrics
 
 
@@ -458,6 +510,18 @@ def run_candidate_method(
         write_jsonl(out_dir / "beam_candidates.jsonl", candidates)
     if method == "opro":
         write_jsonl(out_dir / "opro_history.jsonl", history)
+    if method == "pe2":
+        write_jsonl(out_dir / "pe2_candidates.jsonl", candidates)
+    write_json(
+        out_dir / "selection_trace.json",
+        {
+            "method": method,
+            "num_candidates": len(candidates),
+            "best_accuracy": best_accuracy,
+            "best_prompt": best_prompt,
+            "exactness_level": method_config.get("exactness_level", ""),
+        },
+    )
 
     metrics = write_method_outputs(
         out_dir=out_dir,
@@ -512,4 +576,5 @@ def method_table_row(
             "exactness_level", method_config.get("exactness", "")
         ),
         "exactness_note": method_config.get("exactness_note", ""),
+        "exactness_notes": method_config.get("exactness_note", ""),
     }

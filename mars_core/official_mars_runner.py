@@ -5,11 +5,12 @@ import time
 from pathlib import Path
 from typing import Any
 
-from .api_client import LLMClient
+from .api_client import API_CALL_COLUMNS, LLMClient
 from .evaluator import compute_accuracy, truthy
-from .logging_utils import write_json, write_jsonl
-from .mars_runner import TaskSpec, evaluate_prompt, write_method_outputs
+from .logging_utils import write_csv, write_json, write_jsonl
+from .mars_runner import TaskSpec, evaluate_prompt, hash_rows, write_method_outputs
 from .prompt_loader import TaskPrompts
+from .run_state import REQUIRED_METHOD_FILES, build_run_state, prompt_hash, save_run_state
 
 
 def _parse_steps(raw: str) -> list[str]:
@@ -36,11 +37,12 @@ def _planner_steps(
         return [
             "Use the original prompt without Planner-generated decomposition.",
         ]
+    planner_prompt = prompts.planner.format(task_description=prompts.user_proxy)
     raw = client.complete_text(
         system="You are the Planner agent in the MARS prompt optimization workflow.",
         user=(
             f"UserProxy task description:\n{prompts.user_proxy}\n\n"
-            f"Planner template:\n{prompts.planner}\n\n"
+            f"Planner template:\n{planner_prompt}\n\n"
             f"Task name: {task.paper_display_name}\n\n"
             "Return a concise numbered list of prompt-optimization steps."
         ),
@@ -146,7 +148,7 @@ def _student_update(
     return updated or current_prompt
 
 
-def run_official_mars(
+def run_mars_official(
     *,
     client: LLMClient,
     task: TaskSpec,
@@ -158,6 +160,7 @@ def run_official_mars(
     method_config: dict[str, Any],
     out_dir: Path,
     max_iterations: int,
+    early_stop_delta: float | None = None,
     max_critic_revisions: int = 1,
 ) -> dict[str, Any]:
     start = time.time()
@@ -201,6 +204,7 @@ def run_official_mars(
         )
 
     for iteration in range(1, iterations + 1):
+        previous_best = best_accuracy
         if socratic_enabled:
             for step_index, step in enumerate(steps):
                 question = ""
@@ -304,6 +308,14 @@ def run_official_mars(
         if accuracy > best_accuracy:
             best_accuracy = accuracy
             best_prompt = current_prompt
+        accuracy_gain = best_accuracy - previous_best if previous_best >= 0 else None
+        if (
+            early_stop_delta is not None
+            and previous_best >= 0
+            and accuracy_gain is not None
+            and accuracy_gain < early_stop_delta
+        ):
+            break
 
     predictions = evaluate_prompt(
         client=client,
@@ -334,9 +346,52 @@ def run_official_mars(
             f"socratic_enabled: {socratic_enabled}\n"
             f"critic_enabled: {critic_enabled}\n"
             f"max_critic_revisions: {max_critic_revisions}\n"
+            f"early_stop_delta: {early_stop_delta}\n"
             f"runtime_seconds: {time.time() - start:.4f}\n"
         ),
     )
     metrics["runtime_seconds"] = time.time() - start
     metrics["num_iterations"] = len(history)
+    if not (out_dir / "run_state.json").exists():
+        state = build_run_state(
+            run_id=getattr(client, "run_id", ""),
+            suite=getattr(client, "suite", ""),
+            method_id=method,
+            task_id=task.task_id,
+            model=getattr(client, "model", ""),
+            temperature=float(getattr(client, "temperature", 0) or 0),
+            max_samples=len(test_rows),
+            dataset_path=task.dataset_path,
+            dataset_hash=hash_rows(test_rows),
+            split_hashes={
+                "opt": hash_rows(opt_rows),
+                "val": hash_rows(val_rows),
+                "test": hash_rows(test_rows),
+            },
+            prompt_hash_value=prompt_hash(prompts.origin),
+            config_hash=str(method_config.get("config_hash", "")),
+            expected_ids=[row.get("sample_id") for row in test_rows],
+            predictions_path=out_dir / "predictions.csv",
+            status="completed",
+        )
+        save_run_state(out_dir / "run_state.json", state)
+    if not (out_dir / "api_calls.csv").exists():
+        write_csv(out_dir / "api_calls.csv", client.stats.call_records, API_CALL_COLUMNS)
+    write_json(out_dir / "metrics.json", metrics)
+    write_json(
+        out_dir / "output_manifest.json",
+        {
+            "required_files": REQUIRED_METHOD_FILES,
+            "created_files": sorted(
+                {
+                    *(path.name for path in out_dir.iterdir() if path.is_file()),
+                    "output_manifest.json",
+                }
+            ),
+        },
+    )
     return metrics
+
+
+def run_official_mars(**kwargs) -> dict[str, Any]:
+    return run_mars_official(**kwargs)
