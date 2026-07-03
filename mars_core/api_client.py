@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import os
+import threading
 import time
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -100,6 +101,7 @@ class LLMClient:
         suite: str = "",
         method_id: str = "",
         pricing: dict[str, Any] | None = None,
+        concurrency: int = 1,
     ):
         self.model = model
         self.temperature = temperature
@@ -113,7 +115,9 @@ class LLMClient:
         self.suite = suite
         self.method_id = method_id
         self.pricing = pricing or {}
+        self.concurrency = max(1, int(concurrency or 1))
         self.stats = ApiStats()
+        self._stats_lock = threading.Lock()
         self.client = None
         if not dry_run:
             api_key = os.getenv(api_key_env)
@@ -168,7 +172,8 @@ class LLMClient:
         payload = self._cache_payload(messages, extra)
         cached = self.cache.get(payload)
         if cached is not None:
-            self.stats.cache_hits += 1
+            with self._stats_lock:
+                self.stats.cache_hits += 1
             content = str(cached.get("content", ""))
             self._record_call(
                 method=method,
@@ -215,7 +220,8 @@ class LLMClient:
         attempt = 1
         while True:
             try:
-                self.stats.api_calls += 1
+                with self._stats_lock:
+                    self.stats.api_calls += 1
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=messages,
@@ -232,8 +238,9 @@ class LLMClient:
                 else:
                     prompt_tokens = estimated_prompt_tokens
                     completion_tokens = estimate_tokens(content)
-                self.stats.tokens_prompt += prompt_tokens
-                self.stats.tokens_completion += completion_tokens
+                with self._stats_lock:
+                    self.stats.tokens_prompt += prompt_tokens
+                    self.stats.tokens_completion += completion_tokens
                 self.cache.set(payload, {"content": content})
                 self._record_call(
                     method=method,
@@ -256,16 +263,17 @@ class LLMClient:
                 return content
             except Exception as exc:
                 error_type = classify_api_error(exc)
-                self.stats.api_errors += 1
-                self.stats.error_records.append(
-                    {
-                        "error_type": error_type,
-                        "message": str(exc),
-                        "attempt": attempt,
-                        "method": method,
-                        "task_id": task_id,
-                    }
-                )
+                with self._stats_lock:
+                    self.stats.api_errors += 1
+                    self.stats.error_records.append(
+                        {
+                            "error_type": error_type,
+                            "message": str(exc),
+                            "attempt": attempt,
+                            "method": method,
+                            "task_id": task_id,
+                        }
+                    )
                 if self.max_api_retries >= 0 and attempt >= self.max_api_retries:
                     self._record_call(
                         method=method,
@@ -285,7 +293,8 @@ class LLMClient:
                         run_id=run_id,
                     )
                     raise ApiCallError(error_type, str(exc)) from exc
-                self.stats.retries += 1
+                with self._stats_lock:
+                    self.stats.retries += 1
                 time.sleep(self._sleep_seconds(attempt))
                 attempt += 1
 
@@ -384,31 +393,32 @@ class LLMClient:
             / 1000
             * float(self.pricing.get("completion_per_1k", 0) or 0)
         )
-        self.stats.call_records.append(
-            {
-                "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
-                "run_id": run_id or self.run_id,
-                "suite": suite or self.suite,
-                "method_id": self.method_id or method,
-                "agent_name": agent_name,
-                "model": self.model,
-                "method": method,
-                "task_id": task_id,
-                "iteration": iteration,
-                "sample_id": sample_id,
-                "temperature": self.temperature,
-                "prompt_hash": prompt_hash,
-                "question_hash": question_hash,
-                "prompt_tokens": prompt_tokens,
-                "completion_tokens": completion_tokens,
-                "total_tokens": prompt_tokens + completion_tokens,
-                "estimated_prompt_tokens": estimated_prompt_tokens,
-                "estimated_completion_tokens": estimated_completion_tokens
-                if estimated_completion_tokens is not None
-                else completion_tokens,
-                "latency_seconds": round(latency_seconds, 6),
-                "cache_hit": cache_hit,
-                "error_type": error_type,
-                "estimated_cost": estimated_cost,
-            }
-        )
+        with self._stats_lock:
+            self.stats.call_records.append(
+                {
+                    "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                    "run_id": run_id or self.run_id,
+                    "suite": suite or self.suite,
+                    "method_id": self.method_id or method,
+                    "agent_name": agent_name,
+                    "model": self.model,
+                    "method": method,
+                    "task_id": task_id,
+                    "iteration": iteration,
+                    "sample_id": sample_id,
+                    "temperature": self.temperature,
+                    "prompt_hash": prompt_hash,
+                    "question_hash": question_hash,
+                    "prompt_tokens": prompt_tokens,
+                    "completion_tokens": completion_tokens,
+                    "total_tokens": prompt_tokens + completion_tokens,
+                    "estimated_prompt_tokens": estimated_prompt_tokens,
+                    "estimated_completion_tokens": estimated_completion_tokens
+                    if estimated_completion_tokens is not None
+                    else completion_tokens,
+                    "latency_seconds": round(latency_seconds, 6),
+                    "cache_hit": cache_hit,
+                    "error_type": error_type,
+                    "estimated_cost": estimated_cost,
+                }
+            )

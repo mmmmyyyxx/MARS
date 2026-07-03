@@ -5,6 +5,7 @@ import hashlib
 import json
 import random
 import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -60,6 +61,7 @@ class RunSettings:
     skip_existing: bool
     reuse_compatible_cache: bool
     dry_run: bool
+    concurrency: int = 1
 
 
 def load_yaml(path: str | Path) -> dict[str, Any]:
@@ -141,9 +143,9 @@ def evaluate_prompt(
     iteration: int,
     out_dir: Path | None = None,
 ) -> list[dict[str, Any]]:
-    predictions = []
     instruction = answer_instruction(task.answer_format)
-    for row in rows:
+
+    def evaluate_row(row: dict[str, Any]) -> dict[str, Any]:
         user_prompt = build_question_prompt(prompt, row["question"], instruction)
         error_type = ""
         raw_output = ""
@@ -161,19 +163,25 @@ def evaluate_prompt(
         except ApiCallError as exc:
             error_type = exc.error_type
             raw_output = ""
-        predictions.append(
-            prediction_row(
-                sample_id=row["sample_id"],
-                question=row["question"],
-                gold=row["answer"],
-                raw_output=raw_output,
-                answer_format=task.answer_format,
-                method=method,
-                task_id=task.task_id,
-                iteration=iteration,
-                error_type=error_type,
-            )
+        return prediction_row(
+            sample_id=row["sample_id"],
+            question=row["question"],
+            gold=row["answer"],
+            raw_output=raw_output,
+            answer_format=task.answer_format,
+            method=method,
+            task_id=task.task_id,
+            iteration=iteration,
+            error_type=error_type,
         )
+
+    concurrency = max(1, int(getattr(client, "concurrency", 1) or 1))
+    if concurrency == 1 or len(rows) <= 1:
+        predictions = [evaluate_row(row) for row in rows]
+    else:
+        workers = min(concurrency, len(rows))
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            predictions = list(executor.map(evaluate_row, rows))
     if out_dir is not None:
         write_csv(out_dir / "predictions.csv", predictions, PREDICTION_FIELDS)
     return predictions

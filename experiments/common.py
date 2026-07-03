@@ -83,6 +83,7 @@ def make_client(
         suite=suite,
         method_id=method_id,
         pricing=pricing,
+        concurrency=settings.concurrency,
     )
 
 
@@ -292,6 +293,7 @@ def run_task_method(
             "eval_protocol": settings.eval_protocol,
             "split_seed": settings.split_seed,
             "dry_run": settings.dry_run,
+            "concurrency": settings.concurrency,
         }
     )
     expected_ids = expected_sample_ids(splits["test"])

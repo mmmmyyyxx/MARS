@@ -43,6 +43,7 @@ def _target_client(
         suite="transfer",
         method_id=method_id,
         pricing=model_config.get("pricing", {}).get(model, {}),
+        concurrency=settings.concurrency,
     )
 
 
@@ -119,6 +120,7 @@ def run_transfer_suite(
                         "eval_protocol": settings.eval_protocol,
                         "split_seed": settings.split_seed,
                         "dry_run": settings.dry_run,
+                        "concurrency": settings.concurrency,
                     }
                 )
                 client = _target_client(settings, model_config, run_dir, target, method)

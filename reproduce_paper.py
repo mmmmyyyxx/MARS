@@ -270,6 +270,7 @@ def run_from_args(args: argparse.Namespace) -> int:
         skip_existing=args.skip_existing,
         reuse_compatible_cache=args.reuse_compatible_cache,
         dry_run=args.dry_run,
+        concurrency=args.concurrency,
     )
     prompt_loader = PromptLoader()
     run_config = vars(args)

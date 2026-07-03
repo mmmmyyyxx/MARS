@@ -32,6 +32,119 @@ def task_group_lookup(config_path: Path = Path("configs/tasks.yaml")) -> dict[st
     return {task_id: str(config.get("group", "")) for task_id, config in data.items()}
 
 
+def load_paper_results(
+    config_path: Path = Path("configs/paper_results.yaml"),
+) -> pd.DataFrame:
+    if not config_path.exists():
+        return pd.DataFrame()
+    data = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    rows = []
+    for table_name in ["table1", "table2", "table3"]:
+        suite = "ablation" if table_name == "table3" else "main"
+        for method_id, task_scores in (data.get(table_name) or {}).items():
+            for task_id, accuracy in (task_scores or {}).items():
+                rows.append(
+                    {
+                        "suite": suite,
+                        "paper_table": table_name,
+                        "task_id": task_id,
+                        "method_key": method_id,
+                        "method": method_id,
+                        "source": "paper",
+                        "accuracy": float(accuracy) / 100.0,
+                    }
+                )
+    return pd.DataFrame(rows)
+
+
+def _method_key(summary: pd.DataFrame) -> pd.Series:
+    if "paper_method_id" in summary:
+        keys = summary["paper_method_id"].fillna("").astype(str)
+    elif "method_id" in summary:
+        keys = summary["method_id"].fillna("").astype(str)
+    else:
+        keys = pd.Series([""] * len(summary), index=summary.index)
+    if "method_id" in summary:
+        fallback = summary["method_id"].fillna("").astype(str)
+        keys = keys.mask(keys == "", fallback)
+    return keys.replace({"mars_official": "mars"})
+
+
+def paper_comparison_frame(
+    local: pd.DataFrame,
+    paper: pd.DataFrame,
+    *,
+    suite: str,
+    task_ids: set[str] | None = None,
+) -> pd.DataFrame:
+    if local.empty or paper.empty or "accuracy" not in local:
+        return pd.DataFrame()
+    local_slice = local.copy()
+    if "suite" in local_slice:
+        local_slice = local_slice[local_slice["suite"] == suite]
+    if task_ids is not None:
+        local_slice = local_slice[local_slice["task_id"].isin(task_ids)]
+    if local_slice.empty:
+        return pd.DataFrame()
+    local_slice["method_key"] = _method_key(local_slice)
+    local_slice["source"] = "local"
+    local_slice["series"] = "local:" + local_slice["method_key"].astype(str)
+
+    paper_slice = paper[paper["suite"] == suite].copy()
+    if task_ids is not None:
+        paper_slice = paper_slice[paper_slice["task_id"].isin(task_ids)]
+    paper_slice = paper_slice[
+        paper_slice["method_key"].isin(set(local_slice["method_key"]))
+    ].copy()
+    paper_slice["series"] = "paper:" + paper_slice["method_key"].astype(str)
+    columns = ["task_id", "method_key", "series", "source", "accuracy"]
+    return pd.concat(
+        [local_slice[columns], paper_slice[columns]],
+        ignore_index=True,
+    )
+
+
+def write_paper_comparison_csv(
+    figures: Path, local: pd.DataFrame, paper: pd.DataFrame
+) -> pd.DataFrame:
+    if local.empty or paper.empty or "accuracy" not in local:
+        comparison = pd.DataFrame()
+    else:
+        local_rows = local.copy()
+        local_rows["method_key"] = _method_key(local_rows)
+        local_rows = local_rows[
+            ["suite", "task_id", "method_key", "accuracy", "num_samples"]
+        ].rename(
+            columns={
+                "accuracy": "local_accuracy",
+                "num_samples": "local_num_samples",
+            }
+        )
+        paper_rows = paper[["suite", "task_id", "method_key", "accuracy"]].rename(
+            columns={"accuracy": "paper_accuracy"}
+        )
+        comparison = local_rows.merge(
+            paper_rows, on=["suite", "task_id", "method_key"], how="inner"
+        )
+        comparison["delta_local_minus_paper"] = (
+            comparison["local_accuracy"] - comparison["paper_accuracy"]
+        )
+    figures.mkdir(parents=True, exist_ok=True)
+    comparison.to_csv(figures / "paper_local_comparison.csv", index=False)
+    return comparison
+
+
+def _save_placeholder(path: Path, title: str, message: str, dpi: int = 200) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=(7, 4))
+    ax.axis("off")
+    ax.set_title(title)
+    ax.text(0.5, 0.5, message, ha="center", va="center", wrap=True)
+    plt.tight_layout()
+    plt.savefig(path, dpi=dpi)
+    plt.close()
+
+
 def _save_bar(
     df: pd.DataFrame,
     path: Path,
@@ -41,7 +154,7 @@ def _save_bar(
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if df.empty:
-        path.write_text("No data available for this figure.\n", encoding="utf-8")
+        _save_placeholder(path, title, "No data available for this figure.", dpi=dpi)
         return
     pivot = df.pivot_table(
         index="task_id", columns=group_col, values="accuracy", aggfunc="mean"
@@ -60,7 +173,7 @@ def _save_scatter(
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if df.empty or x not in df or y not in df:
-        path.write_text("No data available for this figure.\n", encoding="utf-8")
+        _save_placeholder(path, title, "No data available for this figure.", dpi=dpi)
         return
     fig, ax = plt.subplots(figsize=(7, 5))
     for method, group in df.groupby("method"):
@@ -74,11 +187,69 @@ def _save_scatter(
     plt.close()
 
 
+def _save_comparison_bar(
+    df: pd.DataFrame,
+    path: Path,
+    title: str,
+    dpi: int = 200,
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if df.empty:
+        _save_placeholder(path, title, "No paper/local overlap available.", dpi=dpi)
+        return
+    pivot = df.pivot_table(
+        index="task_id", columns="series", values="accuracy", aggfunc="mean"
+    )
+    columns = sorted(pivot.columns)
+    pivot = pivot[columns]
+    ax = pivot.plot(kind="bar", figsize=(max(10, len(pivot) * 0.9), 5.5))
+    ax.set_title(title)
+    ax.set_ylabel("Accuracy")
+    ax.set_ylim(0, 1)
+    ax.legend(fontsize=8, ncol=2)
+    plt.tight_layout()
+    plt.savefig(path, dpi=dpi)
+    plt.close()
+
+
+def _save_delta_bar(
+    comparison: pd.DataFrame,
+    path: Path,
+    title: str,
+    task_ids: set[str] | None = None,
+    dpi: int = 200,
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if comparison.empty:
+        _save_placeholder(path, title, "No paper/local overlap available.", dpi=dpi)
+        return
+    df = comparison.copy()
+    if task_ids is not None:
+        df = df[df["task_id"].isin(task_ids)]
+    if df.empty:
+        _save_placeholder(path, title, "No paper/local overlap available.", dpi=dpi)
+        return
+    pivot = df.pivot_table(
+        index="task_id",
+        columns="method_key",
+        values="delta_local_minus_paper",
+        aggfunc="mean",
+    )
+    ax = pivot.plot(kind="bar", figsize=(max(10, len(pivot) * 0.9), 5.5))
+    ax.axhline(0, color="black", linewidth=1)
+    ax.set_title(title)
+    ax.set_ylabel("Local - Paper Accuracy")
+    ax.legend(fontsize=8, ncol=2)
+    plt.tight_layout()
+    plt.savefig(path, dpi=dpi)
+    plt.close()
+
+
 def _save_convergence(run_dir: Path, path: Path, dpi: int = 200) -> None:
     curve_files = list((run_dir / "convergence").glob("*_curves.csv"))
     frames = [pd.read_csv(file) for file in curve_files if file.stat().st_size > 0]
     if not frames:
-        path.write_text("No convergence data available.\n", encoding="utf-8")
+        _save_placeholder(path, "Convergence Curves", "No convergence data available.", dpi=dpi)
         return
     df = pd.concat(frames, ignore_index=True)
     fig, ax = plt.subplots(figsize=(8, 5))
@@ -99,7 +270,12 @@ def _save_convergence(run_dir: Path, path: Path, dpi: int = 200) -> None:
     plt.close()
 
 
-def write_report(run_dir: Path, summary: pd.DataFrame, report_path: Path) -> None:
+def write_report(
+    run_dir: Path,
+    summary: pd.DataFrame,
+    report_path: Path,
+    comparison: pd.DataFrame,
+) -> None:
     api_errors = (
         int(summary.get("api_errors", pd.Series(dtype=int)).fillna(0).sum())
         if not summary.empty
@@ -130,6 +306,7 @@ def write_report(run_dir: Path, summary: pd.DataFrame, report_path: Path) -> Non
         f"- rows: {len(summary)}",
         f"- api_errors: {api_errors}",
         f"- parse_errors: {parse_errors}",
+        f"- paper_local_overlap_rows: {len(comparison)}",
         "",
         "## Reproduction Categories",
         "",
@@ -138,6 +315,12 @@ def write_report(run_dir: Path, summary: pd.DataFrame, report_path: Path) -> Non
         lines.append(f"- {name or 'unspecified'}: {count}")
     lines.extend(
         [
+            "",
+            "## Paper Comparison",
+            "",
+            "- `paper_local_comparison.csv` contains overlapping local and paper accuracy rows.",
+            "- `paper_vs_local_*` figures compare local reproduction results against stored paper table values.",
+            "- `local_minus_paper_*` figures show local accuracy minus paper accuracy.",
             "",
             "## Trust Notes",
             "",
@@ -169,8 +352,13 @@ def main() -> int:
     if task_groups and "task_id" in summary:
         summary = summary.copy()
         summary["task_group"] = summary["task_id"].map(task_groups).fillna("")
+    paper = load_paper_results()
+    if task_groups and not paper.empty:
+        paper = paper.copy()
+        paper["task_group"] = paper["task_id"].map(task_groups).fillna("")
     figures = run_dir / args.out_dir_name
     figures.mkdir(parents=True, exist_ok=True)
+    comparison = write_paper_comparison_csv(figures, summary, paper)
 
     main = (
         summary[summary.get("suite") == "main"] if "suite" in summary else summary
@@ -196,6 +384,34 @@ def main() -> int:
         domain,
         figures / f"table2_domain_bar.{suffix}",
         "Table 2 Domain Tasks",
+        dpi=args.dpi,
+    )
+    general_tasks = set(general["task_id"]) if "task_id" in general else set()
+    domain_tasks = set(domain["task_id"]) if "task_id" in domain else set()
+    _save_comparison_bar(
+        paper_comparison_frame(main, paper, suite="main", task_ids=general_tasks),
+        figures / f"paper_vs_local_general.{suffix}",
+        "Paper vs Local: General Tasks",
+        dpi=args.dpi,
+    )
+    _save_comparison_bar(
+        paper_comparison_frame(main, paper, suite="main", task_ids=domain_tasks),
+        figures / f"paper_vs_local_domain.{suffix}",
+        "Paper vs Local: Domain Tasks",
+        dpi=args.dpi,
+    )
+    _save_delta_bar(
+        comparison,
+        figures / f"local_minus_paper_general.{suffix}",
+        "Local Minus Paper: General Tasks",
+        task_ids=general_tasks,
+        dpi=args.dpi,
+    )
+    _save_delta_bar(
+        comparison,
+        figures / f"local_minus_paper_domain.{suffix}",
+        "Local Minus Paper: Domain Tasks",
+        task_ids=domain_tasks,
         dpi=args.dpi,
     )
     ablation = (
@@ -269,7 +485,7 @@ def main() -> int:
         dpi=args.dpi,
     )
     report_path = figures / "visualization_report.md"
-    write_report(run_dir, summary, report_path)
+    write_report(run_dir, summary, report_path, comparison)
     print(f"Visualization complete: {run_dir}")
     print(f"Report: {report_path}")
     return 0

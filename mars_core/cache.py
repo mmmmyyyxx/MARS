@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import threading
 from pathlib import Path
 from typing import Any
 
@@ -35,6 +37,10 @@ class DiskCache:
         if not self.enabled:
             return
         path = self._path(self.make_key(payload))
-        path.write_text(
+        tmp_path = path.with_suffix(
+            f".{os.getpid()}.{threading.get_ident()}.tmp"
+        )
+        tmp_path.write_text(
             json.dumps(value, ensure_ascii=False, indent=2), encoding="utf-8"
         )
+        tmp_path.replace(path)
