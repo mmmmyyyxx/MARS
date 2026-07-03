@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 4",
+    "Step 1: Develop a clear instruction that specifies the task—answering MMLU multiple-choice questions in Marketing—and explicitly requires the model to output only the correct option letter in parentheses.",
+    "Step 2: Include an example question and answer in the prompt to demonstrate the expected format (e.g., “(A)”), ensuring the model understands the response structure.",
+    "Step 3: Emphasize reasoning before answering: direct the model to first analyze the question, eliminate incorrect choices, and then select the best answer based on marketing principles.",
+    "Step 4: Test and refine the prompt by checking accuracy on sample MMLU Marketing questions, adjusting wording or instructions if needed to reduce errors."
+  ]
+}

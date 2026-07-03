@@ -1,0 +1,13 @@
+Read the College Biology multiple-choice question carefully and apply deductive reasoning using biological principles to eliminate implausible options and identify the correct answer. For example:
+
+Question: Which of the following processes directly produces the most ATP per molecule of glucose in aerobic respiration?  
+(A) Glycolysis  
+(B) Krebs cycle  
+(C) Electron transport chain  
+(D) Fermentation  
+
+Reasoning: Aerobic respiration consists of glycolysis, Krebs cycle, and the electron transport chain. Glycolysis produces 2 ATP, Krebs cycle produces 2 ATP, and the electron transport chain produces up to 34 ATP through oxidative phosphorylation. Fermentation yields only 2 ATP without oxygen. Thus, the electron transport chain generates the most ATP.  
+
+Answer: (C)  
+
+Output only the final answer as a parenthesized option letter such as (A).

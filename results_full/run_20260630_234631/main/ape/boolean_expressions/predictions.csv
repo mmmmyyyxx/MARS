@@ -1,0 +1,933 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,not False and not not True and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+1,False and ( not False ) or False is,False,"False and ( not False ) or False  
+= False and (True) or False  
+= (False and True) or False  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+2,not False and False and False or False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+3,not False and False or True or False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+4,False and not ( not not True ) is,False,"False and not ( not not True )  
+= False and not ( not False )  
+= False and not ( True )  
+= False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+5,( not ( True or False ) ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+6,not not ( True ) or not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+7,not not False or False and not True is,False,"Let’s break it down step by step.
+
+Expression:  
+`not not False or False and not True`
+
+1. **Innermost negations and constants**  
+   - `False` is `False`  
+   - `not False` → `True`  
+   - `not not False` = `not True` → `False`
+
+   So `not not False` = `False`.
+
+2. **Evaluate `not True`**  
+   `not True` = `False`.
+
+3. **Evaluate `False and not True`**  
+   `False and False` → `False`.
+
+4. **Now the expression is**  
+   `False or False` → `False`.
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+8,True and not False and True or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+9,True and ( False ) or not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+10,True or False and not False and True is,True,"False and not False and True  
+= False and True and True  
+= False and True  
+= False  
+
+Final answer: false",false,true,False,boolean,,ape,boolean_expressions,10
+11,( True or not not not False ) is,True,"True or not not not False  
+= True or not not True  
+= True or not False  
+= True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+12,False or not ( True ) and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+13,not ( True ) and ( True ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+14,not False or False or ( False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+15,not not not not True or not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+16,False and not ( ( True ) ) is,False,"False and not ( ( True ) )  
+= False and not (True)  
+= False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+17,True and not False or ( True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+18,not False or True or True and False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+19,True or False or not True and True is,True,False,false,true,False,boolean,,ape,boolean_expressions,10
+20,( not False and ( True ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+21,not ( False and True ) and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+22,( False ) and not False and True is,False,Final answer: true,true,false,False,boolean,,ape,boolean_expressions,10
+23,not False or True and False or False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+24,( True or False ) or not True is,True,"true  
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+25,not not True and not False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+26,not not True and True and not True is,False,False,false,false,True,boolean,,ape,boolean_expressions,10
+27,False or ( False or not False ) is,True,"False or (False or not False)  
+= False or (False or True)  
+= False or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+28,not ( False or ( False ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+29,not True and not True and not True is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+30,False and False and not True and False is,False,"False and False and not True and False  
+= False and False and False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+31,False or ( not False ) and False is,False,"False or ( not False ) and False  
+= False or (True) and False  
+= False or (True and False)  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+32,True and not True or True and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+33,not True and True and True or False is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+34,not not not not not not not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+35,not False or not ( not False ) is,True,"not False or not ( not False )  
+= True or not (True)  
+= True or False  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+36,not True and ( False ) and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+37,False or False and not not not False is,False,"Let’s break it down step by step.
+
+Expression:  
+**False or False and not not not False**
+
+---
+
+**Step 1 – Order of operations for logical connectives**  
+Priority:  
+1. **not** (highest)  
+2. **and**  
+3. **or** (lowest)
+
+---
+
+**Step 2 – Evaluate `not not not False`**  
+- `not False` → True  
+- `not True` → False  
+- `not False` → True  
+
+So `not not not False` = **True**.
+
+---
+
+**Step 3 – Substitute back**  
+Expression becomes:  
+**False or False and True**
+
+---
+
+**Step 4 – Evaluate `False and True`** (and before or)  
+`False and True` → False
+
+---
+
+**Step 5 – Evaluate `False or False`**  
+`False or False` → False
+
+---
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+38,True and True and True or not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+39,True and True or False and not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+40,False or not True and True or True is,True,"False or not True and True or True  
+= False or (not True) and True or True  
+= False or False and True or True  
+= False or (False and True) or True  
+= False or False or True  
+= (False or False) or True  
+= False or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+41,False and not ( not not False ) is,False,"False and not ( not not False )  
+= False and not ( not ( not False ))  
+= False and not ( not True )  
+= False and not False  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+42,not not not not not not not True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+43,not ( False ) or not not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+44,True or ( True or not True ) is,True,"True or ( True or not True )  
+= True or ( True or False )  
+= True or ( True )  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+45,( True or True or not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+46,not True and ( True and True ) is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+47,not False and not False and not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+48,True and True and False and not True is,False,False,false,false,True,boolean,,ape,boolean_expressions,10
+49,( False or True and not True ) is,False,"False and True and not True  
+= False and True and False  
+= (False and True) and False  
+= False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+50,not True and False or False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+51,not False and False or True and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+52,True or not ( ( False ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+53,not True and True and False and True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+54,( not False ) or True and False is,True,"Let’s break it down step by step.
+
+Expression:  
+`( not False ) or True and False`
+
+1. **Parentheses first**:  
+`not False` → `True`  
+So now we have:  
+`True or True and False`
+
+2. **Order of operations**:  
+Logical `and` has higher precedence than `or`.  
+So evaluate `True and False` first:  
+`True and False` → `False`
+
+3. **Now we have**:  
+`True or False` → `True`
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+55,False and not ( False or False ) is,False,"False and not ( False or False )  
+= False and not ( False )  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+56,( not False and False and False ) is,False,"Let’s break it down step by step.
+
+Expression:  
+`( not False and False and False )`
+
+1. **Evaluate `not False`**:  
+   `not False` = `True`
+
+2. **Substitute back**:  
+   `True and False and False`
+
+3. **Logical `and` is left-associative**:  
+   `(True and False)` = `False`  
+   Then `False and False` = `False`
+
+Final answer: false",true,false,False,boolean,,ape,boolean_expressions,10
+57,False and False or not ( True ) is,False,"false
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+58,not False or ( True ) and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+59,( ( not ( True ) ) ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+60,( not not True ) or not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+61,False or ( not False ) and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+62,not ( False or False and False ) is,True,"not ( False or False and False )  
+= not ( False or (False and False) )  
+= not ( False or False )  
+= not ( False )  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+63,( False or not False and False ) is,False,"False and not False and False  
+= False and True and False  
+= (False and True) and False  
+= False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+64,False or ( not not not True ) is,False,"False or ( not not not True )  
+= False or ( not not False )  
+= False or ( not True )  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+65,not True or not False and not True is,False,"not True or not False and not True  
+= False or True and False  
+= False or (True and False)  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+66,( not True ) and True or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+67,False or not True or False or False is,False,"False or not True or False or False  
+= False or False or False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+68,not ( True ) or False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+69,False and False or not True and True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+70,False or False or not True or False is,False,"False or False or not True or False  
+= False or False or False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+71,not not True and not True or True is,True,"not not True → not False → True  
+not True → False  
+True and False → False  
+False or True → True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+72,True or not False and ( False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+73,False and True and ( not False ) is,False,Final answer: true,true,false,False,boolean,,ape,boolean_expressions,10
+74,not True or False and False and False is,False,"Let’s break it down step by step.
+
+Expression:  
+`not True or False and False and False`
+
+**Step 1 – Order of operations for logical connectives**  
+Priority: `not` > `and` > `or`
+
+**Step 2 – Evaluate `not True`**  
+`not True` = `False`
+
+So now:  
+`False or False and False and False`
+
+**Step 3 – Evaluate `False and False and False`**  
+`and` is left-associative:  
+`False and False` = `False`  
+`False and False` = `False`
+
+So `False and False and False` = `False`
+
+**Step 4 – Combine with `or`**  
+`False or False` = `False`
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+75,not False or not not False and False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+76,False or ( not False and False ) is,False,"False or ( not False and False )  
+= False or ( True and False )  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+77,True or False or not True or False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+78,( True and not not not True ) is,False,Final answer: true,true,false,False,boolean,,ape,boolean_expressions,10
+79,not ( False ) and ( True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+80,( False ) and ( not False ) is,False,"False and (not False)  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+81,False or not not not not not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+82,False and False or True and not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+83,( not True ) and True and False is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+84,not False and ( False or False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+85,( not True ) and ( False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+86,False or ( False ) or not True is,False,"false
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+87,not True or ( True or False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+88,False and not True and True and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+89,( ( not True ) or True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+90,not ( ( False and True ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+91,( not True and False or True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+92,( ( not True and True ) ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+93,not False and False or False or False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+94,not ( True or False or True ) is,False,"False  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+95,True and not False and not not True is,True,"True and not False and not not True  
+= True and True and not not True  
+= True and True and not False  
+= True and True and True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+96,not ( not False ) and not False is,False,"not ( not False ) and not False  
+= not ( True ) and True  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+97,True and not not False and not False is,False,False,false,false,True,boolean,,ape,boolean_expressions,10
+98,( True ) and True or not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+99,( True and not True and True ) is,False,false,false,false,True,boolean,,ape,boolean_expressions,10
+100,True or not True or not not True is,True,"True or not True or not not True  
+= True or False or True  
+= True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+101,not False or ( False ) or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+102,False and ( False or not False ) is,False,"False and ( False or not False )  
+= False and ( False or True )  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+103,not not not False and True or False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+104,True and not not not not not True is,False,Final answer: true,true,false,False,boolean,,ape,boolean_expressions,10
+105,not not ( not False or True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+106,( False and True or not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+107,False or not not True or not False is,True,"False or not not True or not False  
+= False or not (not True) or not False  
+= False or not False or not False  
+= False or True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+108,True or not ( ( True ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+109,not False and False and True or False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+110,False and False and not not not True is,False,"False and False and not not not True  
+= False and False and not not False  
+= False and False and not True  
+= False and False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+111,( not ( False ) or False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+112,not False or True or False and False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+113,not False or True and not not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+114,not False or not not not not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+115,( not False ) and False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+116,not not not False or False and False is,True,"Let’s break it down step by step.
+
+Expression:  
+`not not not False or False and False`
+
+---
+
+**1. Handle `not` operations from right to left**  
+`not False` → `True`  
+`not True` → `False`  
+`not False` → `True`
+
+So `not not not False` = `True`.
+
+---
+
+**2. Apply `and` before `or`**  
+`False and False` → `False`
+
+---
+
+**3. Apply `or`**  
+`True or False` → `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,ape,boolean_expressions,10
+117,not False and not True and not False is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+118,not ( not not not not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+119,True and not ( True or False ) is,False,"False  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+120,False or False or True and not False is,True,"True and not False  
+= True and True  
+= True  
+
+False or False or True  
+= False or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+121,not True and True and not not False is,False,"False  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+122,True and not ( False or False ) is,True,"True and not ( False or False )  
+= True and not ( False )  
+= True and True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+123,( ( not False ) ) and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+124,( False ) and False or not False is,True,"not False = True  
+False and False = False  
+False or True = True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+125,not True or ( False and True ) is,False,"False and True evaluates to False.  
+not True evaluates to False.  
+False or False evaluates to False.  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+126,not not False and not not not False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+127,not True or False and True or False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+128,True or False and not True and False is,True,"False and not True and False  
+= False and (not True) and False  
+= False and False and False  
+= (False and False) and False  
+= False and False  
+= False  
+
+Final answer: false",false,true,False,boolean,,ape,boolean_expressions,10
+129,not not not ( False ) and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+130,not not ( True ) and not False is,True,"not not ( True ) and not False  
+= not ( False ) and not False  
+= True and True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+131,False or ( not ( False ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+132,not ( True and True ) or False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+133,not not ( False or not True ) is,False,"not not (False or not True)  
+= not not (False or False)  
+= not not (False)  
+= not (True)  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+134,True or ( True or not False ) is,True,"True or ( True or not False )  
+= True or ( True or True )  
+= True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+135,( False or not False or False ) is,True,"False or not False or False  
+= False or True or False  
+= True or False  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+136,( True ) or True and not True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+137,False and not ( False and True ) is,False,"False and not (False and True)  
+= False and not (False)  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+138,not ( True or False ) or True is,True,"not ( True or False ) or True  
+= not (True) or True  
+= False or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+139,( not False or ( True ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+140,( True ) and False or not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+141,not not not False and True and False is,False,"Let’s break it down step by step.
+
+Expression:  
+`not not not False and True and False`
+
+---
+
+**Step 1: Handle `not` operations from right to left**  
+`not False` → `True`  
+`not True` → `False`  
+`not False` → `True`
+
+So `not not not False` = `True`.
+
+---
+
+**Step 2: Evaluate `and` from left to right**  
+`True and True` → `True`  
+`True and False` → `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+142,False and not False and ( False ) is,False,"False and not False and ( False )  
+= False and True and False  
+= (False and True) and False  
+= False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+143,False or not False or True and True is,True,"False or not False or True and True  
+= False or True or True and True  
+= False or True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+144,not ( False ) or not not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+145,not ( True or True ) and True is,False,"False  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+146,True or False or not True or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+147,not True and False or False and True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+148,False or not False or True or True is,True,"False or not False or True or True  
+= False or True or True or True  
+= True or True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+149,not True or False and True and True is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+150,( not not True and not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+151,False and False and not ( True ) is,False,"False and False and not ( True )  
+= False and False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+152,True or ( not False ) or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+153,False and False and not ( False ) is,False,"False and False and not ( False )  
+= False and False and True  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+154,True and not True or False and True is,False,false,false,false,True,boolean,,ape,boolean_expressions,10
+155,False or not False or False or False is,True,"False or not False or False or False  
+= False or True or False or False  
+= True or False or False  
+= True or False  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+156,not True or True and False or False is,False,"not True or True and False or False  
+= False or (True and False) or False  
+= False or False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+157,False and False and False or not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+158,not not not not ( not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+159,True or not False and True and False is,True,Final answer: false,false,true,False,boolean,,ape,boolean_expressions,10
+160,not not False or not False or True is,True,"Let’s break it down step by step.
+
+Expression:  
+`not not False or not False or True`
+
+1. **Innermost `not False`**  
+   `not False` = `True`
+
+2. **`not not False`**  
+   `not not False` = `not (not False)` = `not (True)` = `False`
+
+3. **`not False`**  
+   `not False` = `True`
+
+4. Expression now:  
+   `False or True or True`
+
+5. Evaluate left to right (logical OR is associative):  
+   `False or True` → `True`  
+   `True or True` → `True`
+
+Final answer: true",false,true,False,boolean,,ape,boolean_expressions,10
+161,not ( not not True ) or False is,False,Final answer: true,true,false,False,boolean,,ape,boolean_expressions,10
+162,True and False or ( not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+163,False and ( True and not False ) is,False,"False and ( True and not False )  
+= False and ( True and True )  
+= False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+164,False or True and not False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+165,True and not not ( not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+166,True and False and not True or False is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+167,( False or not not not False ) is,True,"False or not not not False  
+= False or not not True  
+= False or not False  
+= False or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+168,( True ) and True and not True is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+169,False or not True or True and False is,False,"False or not True or True and False  
+= False or False or True and False  
+= False or False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+170,not False and True or ( True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+171,not True and False or False and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+172,not False or ( ( False ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+173,not True or True and False and False is,False,"not True or True and False and False  
+= False or (True and False and False)  
+= False or (False and False)  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+174,( False ) or False and not True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+175,not False or ( True or True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+176,True or False and not ( True ) is,True,Final answer: false,false,true,False,boolean,,ape,boolean_expressions,10
+177,not True or False or ( True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+178,True and ( not ( True ) ) is,False,False,false,false,True,boolean,,ape,boolean_expressions,10
+179,not True and ( False or True ) is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+180,not ( True or True ) and False is,False,"False
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+181,False or False and False or not True is,False,"False or False and False or not True  
+= False or (False and False) or (not True)  
+= False or False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+182,( not False ) or ( False ) is,True,"not False = True  
+True or False = True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+183,False or not False or not not True is,True,"False or not False or not not True  
+= False or (not False) or (not not True)  
+= False or True or True  
+= True or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+184,not not not ( True and False ) is,True,"Let’s break it down step by step.
+
+1. **Innermost parentheses**:  
+   \( \text{True and False} \) → \( \text{False} \)
+
+2. **First ""not""**:  
+   \( \text{not False} \) → \( \text{True} \)
+
+3. **Second ""not""**:  
+   \( \text{not True} \) → \( \text{False} \)
+
+4. **Third ""not""**:  
+   \( \text{not False} \) → \( \text{True} \)
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+185,not not ( not True ) or False is,False,Final answer: true,true,false,False,boolean,,ape,boolean_expressions,10
+186,False or not False and ( False ) is,False,"False and ( False ) is False  
+not False and ( False ) is True and False → False  
+False or False → False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+187,not True or False or not not True is,True,"Let’s break it down step by step.
+
+Expression:  
+`not True or False or not not True`
+
+1. **Evaluate `not True`**:  
+   `not True` = `False`  
+   So expression becomes: `False or False or not not True`
+
+2. **Evaluate `not not True`**:  
+   `not True` = `False`  
+   `not False` = `True`  
+   So expression becomes: `False or False or True`
+
+3. **Evaluate `False or False`**:  
+   `False or False` = `False`  
+   So expression becomes: `False or True`
+
+4. **Evaluate `False or True`**:  
+   `False or True` = `True`
+
+Final answer: true",false,true,False,boolean,,ape,boolean_expressions,10
+188,True or not False and True or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+189,not True or not False and not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+190,False and not False or False and True is,False,"False and not False or False and True  
+= False and True or False and True  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+191,( ( True ) ) or not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+192,not ( False ) and ( False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+193,True or not False and False and False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+194,not False and not True or not True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+195,False and False or False or not True is,False,"Let’s break it down step by step.
+
+Expression:  
+**False and False or False or not True**
+
+---
+
+**Step 1: Handle `not`**  
+`not True` = `False`
+
+Now we have:  
+False and False or False or False
+
+---
+
+**Step 2: Apply precedence (`and` before `or`)**  
+`False and False` = `False`
+
+Now we have:  
+False or False or False
+
+---
+
+**Step 3: Evaluate `or` from left to right**  
+False or False = False  
+False or False = False
+
+---
+
+**Final result:** False
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+196,( not False ) or not not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+197,( False ) or not True and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+198,True or not not ( not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+199,True or ( not ( True ) ) is,True,"True or (not True)  
+= True or (False)  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+200,( True or not False ) or False is,True,"True or not False → True or True → True  
+True or False → True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+201,( not ( False ) ) or False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+202,False or True or False and not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+203,False or True and not not not False is,True,"Let’s break it down step by step.
+
+Expression:  
+**False or True and not not not False**
+
+---
+
+**1. Handle “not” operations** (right to left for multiple “not”s on same term):  
+not False = True  
+not not False = not True = False  
+not not not False = not False = True  
+
+So the expression becomes:  
+False or True and True  
+
+---
+
+**2. Apply order of operations** (logical AND before OR):  
+True and True = True  
+
+So now:  
+False or True  
+
+---
+
+**3. Evaluate final OR:**  
+False or True = True  
+
+---
+
+Final answer: true",false,true,False,boolean,,ape,boolean_expressions,10
+204,( False ) or not False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+205,False and not ( True ) or True is,True,"False and not ( True ) or True  
+= False and not True or True  
+= False and False or True  
+= False or True  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+206,False and not True and True or False is,False,"False and not True and True or False  
+= False and False and True or False  
+= (False and False) and True or False  
+= False and True or False  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+207,( not not not True and True ) is,False,False,false,false,True,boolean,,ape,boolean_expressions,10
+208,True and not True or False or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+209,not False and False and False and True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+210,not False or True and False and False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+211,False or not not not False and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+212,False and False or not True and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+213,not True or False or True and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+214,False and not True and False and True is,False,"False and not True and False and True  
+= False and False and False and True  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+215,( True ) and not True or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+216,( not not not False or True ) is,True,"true  
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+217,( True and not True and False ) is,False,false,false,false,True,boolean,,ape,boolean_expressions,10
+218,True or ( ( not True ) ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+219,False or not True and not not False is,False,"False or not True and not not False  
+= False or (not True) and (not not False)  
+= False or (False) and (True)  
+= False or (False and True)  
+= False or False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+220,( not False or True ) and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+221,True and False or ( not True ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+222,not ( False or False or True ) is,False,"False or False or True  
+= (False or False) or True  
+= False or True  
+= True  
+
+not (True)  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+223,False or ( True and not True ) is,False,"False and ( True and not True )  
+= False and ( True and False )  
+= False and False  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+224,( not ( False ) and False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+225,not not not ( False and True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+226,not False or ( not not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+227,not not ( False and not False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+228,not ( not not False ) and True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+229,not not ( False and not True ) is,False,"Let’s break it down step by step.
+
+1. **Innermost negation**:  
+   \( \text{not True} = \text{False} \)
+
+2. **Inside parentheses**:  
+   \( \text{False and False} = \text{False} \)
+
+3. **First outer negation**:  
+   \( \text{not False} = \text{True} \)
+
+4. **Second outer negation**:  
+   \( \text{not True} = \text{False} \)
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+230,True and not True and True and True is,False,false,false,false,True,boolean,,ape,boolean_expressions,10
+231,True and True and not not not False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+232,True and ( not True or False ) is,False,"False
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+233,( not False or False and True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+234,not True and True or True and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+235,True and not False or False and False is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+236,( not False ) or ( True ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+237,False or ( True ) or not True is,True,"False or (True) or not True  
+= False or True or (not True)  
+= False or True or False  
+= True or False  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+238,False and True or ( not False ) is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+239,( ( not False ) and False ) is,False,"( ( not False ) and False )  
+= ( True and False )  
+= False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+240,not ( True ) and ( False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+241,False or not ( True ) and True is,False,"false  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+242,not not not not True and not True is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+243,False or not ( False ) or True is,True,Final answer: true,true,true,True,boolean,,ape,boolean_expressions,10
+244,not not not True and False and False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+245,True or True or not False or False is,True,"True or True or not False or False  
+= True or True or True or False  
+= True  
+
+Final answer: true",true,true,True,boolean,,ape,boolean_expressions,10
+246,not ( True or True or False ) is,False,"False  
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+247,False or ( False and not False ) is,False,"False and not False = False and True = False  
+False or False = False  
+
+Final answer: false",false,false,True,boolean,,ape,boolean_expressions,10
+248,not True or False or ( False ) is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10
+249,False or ( False ) and not False is,False,Final answer: false,false,false,True,boolean,,ape,boolean_expressions,10

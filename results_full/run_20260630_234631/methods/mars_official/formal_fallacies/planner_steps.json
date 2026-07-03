@@ -1,0 +1,12 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 5",
+    "Step 1: Create a clear instruction that defines formal fallacies and specifies the binary classification task (valid/invalid)",
+    "Step 2: Include concrete examples of valid and invalid arguments with explanations to establish patterns",
+    "Step 3: Add explicit output formatting requirements to ensure consistent \"valid\" or \"invalid\" responses",
+    "Step 4: Incorporate reasoning guidance asking the model to identify the specific fallacy type when applicable",
+    "Step 5: Implement error prevention by addressing common confusion points between formal and informal fallacies"
+  ]
+}

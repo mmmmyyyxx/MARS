@@ -1,0 +1,12 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 5",
+    "Step 1: Define the task clearly by specifying that the model must evaluate Boolean expressions and output only \"true\" or \"false\" based on logical rules.",
+    "Step 2: Include examples of Boolean expressions with correct true/false answers to illustrate the expected format and reasoning.",
+    "Step 3: Emphasize checking for common logical operators (AND, OR, NOT) and parentheses to ensure correct order of operations.",
+    "Step 4: Instruct the model to avoid explanations or intermediate steps, focusing solely on the final Boolean result.",
+    "Step 5: Test the prompt with a variety of Boolean expressions from BIG-Bench Hard to refine wording and improve accuracy."
+  ]
+}

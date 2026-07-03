@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 4",
+    "Step 1: Create a clear instruction that specifies the task as answering sports-related questions with only \"yes\" or \"no\" outputs.",
+    "Step 2: Include examples of correct yes/no answers for common sports scenarios to guide the model.",
+    "Step 3: Add constraints to avoid explanations or extra text, ensuring the output is strictly \"yes\" or \"no\".",
+    "Step 4: Test and refine the prompt with sample BIG-Bench Hard questions to improve accuracy and consistency."
+  ]
+}

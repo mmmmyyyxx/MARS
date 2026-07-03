@@ -1,0 +1,23 @@
+display_name: MARS-official
+type: mars_official
+paper_method_id: mars
+exactness: faithful_reimplementation
+exactness_level: faithful_reimplementation
+exactness_note: Official-compatible Manager/UserProxy/Planner/Teacher/Critic/Student/Target
+  flow without Prompt/ mutation.
+planner_enabled: true
+socratic_enabled: true
+critic_enabled: true
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 90c6b27dea1e600e242d199525b8192c226f2b9a4dda12d1dac7ededd1a57cba
+eval_protocol: paper_mode
+num_opt_samples: 2
+num_val_samples: 2
+num_test_samples: 2
+opt_hash: 5b63cedcefa0f3be82157a67e486ddf03869da8d1db8834013bfb1b6b78422df
+val_hash: 5b63cedcefa0f3be82157a67e486ddf03869da8d1db8834013bfb1b6b78422df
+test_hash: 5b63cedcefa0f3be82157a67e486ddf03869da8d1db8834013bfb1b6b78422df

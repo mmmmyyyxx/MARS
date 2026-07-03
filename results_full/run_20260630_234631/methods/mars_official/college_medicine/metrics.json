@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.8497109826589595,
+  "num_samples": 173,
+  "num_correct": 147,
+  "num_failed": 26,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "college_medicine",
+  "method_id": "mars_official",
+  "method_display_name": "MARS-official",
+  "answer_format": "option_letter",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 2,
+  "best_validation_accuracy": 0.861271676300578,
+  "best_iteration": 1,
+  "final_iteration": 2,
+  "num_iterations": 2,
+  "exactness": "faithful_reimplementation",
+  "exactness_level": "faithful_reimplementation",
+  "runtime_seconds": 741.2831964492798
+}

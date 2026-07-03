@@ -1,0 +1,8151 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,not False and not not True and True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False and not not True and True**
+
+---
+
+**Step 1: Handle parentheses (none here)**  
+No parentheses, so move to **NOT** operations.
+
+---
+
+**Step 2: Apply NOT from left to right**  
+
+- `not False` → **True**  
+- `not not True` → `not (not True)` → `not False` → **True**  
+
+So after replacing:  
+**True and True and True**
+
+---
+
+**Step 3: Apply AND from left to right**  
+
+- `True and True` → **True**  
+- `True and True` → **True**  
+
+---
+
+**Final result:** **true**  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+1,False and ( not False ) or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and ( not False ) or False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `not False` → `True`  
+
+Expression becomes:  
+**False and True or False**
+
+---
+
+**Step 2: Apply AND before OR**  
+`False and True` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 3: Apply OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+2,not False and False and False or False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not False and False and False or False**  
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+**Step 2: Apply NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and False and False or False**
+
+---
+
+**Step 3: Apply AND from left to right**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False and False or False**  
+
+`False and False` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+3,not False and False or True or False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**not False and False or True or False**  
+
+---
+
+**Step 1: Handle `not` (highest precedence after parentheses)**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and False or True or False**  
+
+---
+
+**Step 2: Handle `and` (precedence over `or`)**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False or True or False**  
+
+---
+
+**Step 3: Handle `or` from left to right**  
+`False or True` → `True`  
+
+Expression becomes:  
+**True or False**  
+
+---
+
+**Step 4: Final `or`**  
+`True or False` → `True`  
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+4,False and not ( not not True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and not ( not not True )**
+
+---
+
+**Step 1: Evaluate innermost parentheses**  
+`not not True`  
+- `not True` → False  
+- `not False` → True  
+
+So `( not not True )` = **True**.
+
+---
+
+**Step 2: Apply the remaining NOT outside parentheses**  
+`not ( True )` → **False**.
+
+---
+
+**Step 3: Evaluate AND**  
+`False and False` → **False**.
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+5,( not ( True or False ) ) is,False,"Let’s evaluate step by step.
+
+1. **Innermost parentheses first**:  
+   \( \text{True or False} \)  
+   \( \text{True or False} = \text{True} \)
+
+2. **Apply NOT**:  
+   \( \text{not (True)} = \text{False} \)
+
+3. **Final result**:  
+   \( \text{False} \)
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+6,not not ( True ) or not True is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not not ( True ) or not True`
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( True )` is `True`.  
+So we have:  
+`not not True or not True`
+
+---
+
+**Step 2: Apply NOT from right to left (highest precedence)**  
+First `not True` → `False` (we’ll keep it aside for now).  
+But actually, we must evaluate `not not True` first because NOT has higher precedence than OR and is applied left-to-right for consecutive NOTs.
+
+`not True` → `False`  
+`not False` → `True`
+
+So `not not True` → `True`.
+
+---
+
+**Step 3: Substitute back**  
+Expression becomes:  
+`True or not True`
+
+Now evaluate `not True` → `False`.
+
+---
+
+**Step 4: Apply OR**  
+`True or False` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+7,not not False or False and not True is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not not False or False and not True`
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+---
+
+**Step 2: Apply NOT operators (highest precedence after parentheses)**  
+
+First `not False`:  
+`not False = True`
+
+Now `not not False`:  
+`not True = False`
+
+So `not not False` → `False`.
+
+Also `not True`:  
+`not True = False`
+
+Expression becomes:  
+`False or False and False`
+
+---
+
+**Step 3: Apply AND (precedence over OR)**  
+
+`False and False` → `False`
+
+Expression becomes:  
+`False or False`
+
+---
+
+**Step 4: Apply OR**  
+
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+8,True and not False and True or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**True and not False and True or True**
+
+---
+
+**Step 1: Apply NOT (highest precedence after parentheses)**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and True and True or True**
+
+---
+
+**Step 2: Apply AND from left to right**  
+`True and True` → `True`  
+
+Now: `True and True or True`  
+`True and True` → `True`  
+
+Now: `True or True`
+
+---
+
+**Step 3: Apply OR**  
+`True or True` → `True`
+
+---
+
+Final answer: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+9,True and ( False ) or not False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**True and ( False ) or not False**
+
+---
+
+**Step 1: Parentheses**  
+Inside parentheses: `(False)` is just `False`.  
+Expression becomes:  
+True and False or not False
+
+---
+
+**Step 2: NOT**  
+`not False` = True  
+Expression becomes:  
+True and False or True
+
+---
+
+**Step 3: AND**  
+`True and False` = False  
+Expression becomes:  
+False or True
+
+---
+
+**Step 4: OR**  
+`False or True` = True
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+10,True or False and not False and True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or False and not False and True**
+
+---
+
+### 1. Order of precedence  
+From highest to lowest:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+### 2. Apply **NOT** first  
+`not False` → `True`  
+
+So the expression becomes:  
+**True or False and True and True**
+
+---
+
+### 3. Apply **AND** from left to right  
+`False and True` → `False`  
+
+Now: **True or False and True**  
+`False and True` → `False`  
+
+Now: **True or False**  
+
+---
+
+### 4. Apply **OR**  
+`True or False` → `True`  
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+11,( True or not not not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( True or not not not False )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside the parentheses: `True or not not not False`
+
+---
+
+**Step 2: Evaluate `not not not False`**  
+- `not False` → `True`  
+- `not True` → `False`  
+- `not False` → `True`  
+
+So `not not not False` = `True`
+
+---
+
+**Step 3: Evaluate `True or True`**  
+`True or True` → `True`
+
+---
+
+**Step 4: Final result**  
+The expression inside parentheses is `True`, so the whole expression is `True`.
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+12,False or not ( True ) and False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or not ( True ) and False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( True )` is `True`.  
+Expression becomes:  
+**False or not True and False**
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+Expression becomes:  
+**False or False and False**
+
+---
+
+**Step 3: Apply AND** (higher precedence than OR)  
+`False and False` = `False`  
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+13,not ( True ) and ( True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+`not ( True ) and ( True )`  
+
+1. **Parentheses** — already just around `True`, so no change in grouping.  
+2. **NOT** — `not ( True )` → `False`.  
+   Now we have: `False and ( True )`  
+3. **AND** — `False and True` → `False`.  
+
+Final result: **false**  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+14,not False or False or ( False ) is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**not False or False or ( False )**
+
+---
+
+**Step 1: Handle parentheses**  
+The parentheses here don’t change anything because `( False )` is just `False`.  
+Expression becomes:  
+`not False or False or False`
+
+---
+
+**Step 2: Apply NOT (highest precedence)**  
+`not False` → `True`  
+Expression becomes:  
+`True or False or False`
+
+---
+
+**Step 3: Apply OR from left to right**  
+`True or False` → `True`  
+`True or False` → `True`
+
+---
+
+Final result: **true**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+15,not not not not True or not True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not not not not True or not True**
+
+---
+
+**Step 1 – Handle parentheses**  
+There are no parentheses, so we proceed.
+
+---
+
+**Step 2 – Apply NOT operators from right to left**  
+First, `not True` = `False`.  
+So the expression becomes:  
+
+**not not not not True or False**
+
+---
+
+**Step 3 – Apply the chain of NOTs from right to left**  
+Start with `not not not not True`:  
+
+- `not True` = `False`  
+- `not False` = `True`  
+- `not True` = `False`  
+- `not False` = `True`  
+
+So `not not not not True` = `True`.
+
+---
+
+**Step 4 – Substitute back**  
+Expression is now:  
+
+**True or False**
+
+---
+
+**Step 5 – Apply OR**  
+`True or False` = `True`
+
+---
+
+**Final answer: true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+16,False and not ( ( True ) ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and not ( ( True ) )**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside the parentheses: `( True )` is `True`.  
+So the expression becomes:  
+**False and not ( True )**
+
+---
+
+**Step 2: Apply NOT**  
+`not ( True )` = `False`  
+Expression becomes:  
+**False and False**
+
+---
+
+**Step 3: Apply AND**  
+`False and False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+17,True and not False or ( True ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True and not False or ( True )**
+
+---
+
+**Step 1: Handle parentheses**  
+( True ) is simply **True**  
+Expression becomes:  
+True and not False or True
+
+---
+
+**Step 2: Apply NOT**  
+not False = True  
+Expression becomes:  
+True and True or True
+
+---
+
+**Step 3: Apply AND**  
+True and True = True  
+Expression becomes:  
+True or True
+
+---
+
+**Step 4: Apply OR**  
+True or True = True
+
+---
+
+Final answer: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+18,not False or True or True and False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**not False or True or True and False**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not False` = **True**  
+
+Expression becomes:  
+**True or True or (True and False)**
+
+---
+
+**Step 3: Apply AND**  
+`True and False` = **False**  
+
+Expression becomes:  
+**True or True or False**
+
+---
+
+**Step 4: Apply OR from left to right**  
+`True or True` = **True**  
+`True or False` = **True**  
+
+---
+
+**Final result:** **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+19,True or False or not True and True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or False or not True and True**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+`True or False or False and True`
+
+---
+
+**Step 3: Apply AND**  
+`False and True` = `False`  
+
+Expression becomes:  
+`True or False or False`
+
+---
+
+**Step 4: Apply OR from left to right**  
+`True or False` = `True`  
+`True or False` = `True`  
+
+---
+
+**Final result:** `True`
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+20,( not False and ( True ) ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not False and ( True ) )
+
+**Step 1:** Handle parentheses first — inside parentheses, `( True )` is just `True`.  
+So we have:  
+( not False and True )
+
+**Step 2:** Apply `not` operator (higher precedence than `and`):  
+`not False` = `True`  
+So now:  
+True and True
+
+**Step 3:** Apply `and` operator:  
+True and True = True
+
+Final result: **true**  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+21,not ( False and True ) and True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+\text{not ( False and True ) and True}
+\]
+
+**Step 1: Handle parentheses**  
+Inside parentheses:  
+\[
+\text{False and True} = \text{False}
+\]  
+So the expression becomes:  
+\[
+\text{not (False) and True}
+\]
+
+**Step 2: Apply NOT**  
+\[
+\text{not (False)} = \text{True}
+\]  
+Expression now:  
+\[
+\text{True and True}
+\]
+
+**Step 3: Apply AND**  
+\[
+\text{True and True} = \text{True}
+\]
+
+Final result: **true**  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+22,( False ) and not False and True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+**( False ) and not False and True**
+
+---
+
+**Step 1: Handle parentheses**  
+( False ) = False  
+
+Expression becomes:  
+**False and not False and True**
+
+---
+
+**Step 2: Apply NOT**  
+not False = True  
+
+Expression becomes:  
+**False and True and True**
+
+---
+
+**Step 3: Apply AND from left to right**  
+AND is associative, so:  
+
+First: **False and True** = False  
+
+Then: **False and True** = False  
+
+---
+
+**Final result:** False  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+23,not False or True and False or False is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not False or True and False or False`
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so we move to the next precedence.
+
+---
+
+**Step 2: Apply `not`**  
+`not False` = `True`  
+
+Expression becomes:  
+`True or True and False or False`
+
+---
+
+**Step 3: Apply `and`** (higher precedence than `or`)  
+`True and False` = `False`  
+
+Expression becomes:  
+`True or False or False`
+
+---
+
+**Step 4: Apply `or` from left to right**  
+`True or False` = `True`  
+`True or False` = `True`
+
+---
+
+Final result: **true**
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+24,( True or False ) or not True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+\[
+( \text{True or False} ) \ \text{or} \ \text{not True}
+\]
+
+**Step 1: Evaluate inside parentheses**  
+\[
+\text{True or False} = \text{True}
+\]
+
+**Step 2: Apply NOT**  
+\[
+\text{not True} = \text{False}
+\]
+
+**Step 3: Apply OR between Step 1 result and Step 2 result**  
+\[
+\text{True or False} = \text{True}
+\]
+
+Final result: **true**
+
+\[
+\boxed{\text{Final answer: true}}
+\]",true,true,True,boolean,,protegi,boolean_expressions,10
+25,not not True and not False or True is,True,"Let’s evaluate step by step.
+
+The expression is:  
+**not not True and not False or True**
+
+---
+
+**Step 1 – Handle parentheses (none here)**  
+No parentheses, so proceed.
+
+---
+
+**Step 2 – Apply NOT operators (highest precedence after parentheses)**  
+- `not not True` → `not (not True)` → `not False` → **True**  
+- `not False` → **True**
+
+Expression becomes:  
+**True and True or True**
+
+---
+
+**Step 3 – Apply AND (precedence over OR)**  
+`True and True` → **True**
+
+Expression becomes:  
+**True or True**
+
+---
+
+**Step 4 – Apply OR**  
+`True or True` → **True**
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+26,not not True and True and not True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+`not not True and True and not True`  
+
+---
+
+**Step 1 – Order of operations**  
+Precedence: `not` > `and` > `or`.  
+So we evaluate `not` first, left to right.
+
+---
+
+**Step 2 – First `not`**  
+`not True` → `False`  
+So `not not True` = `not False` → `True`.  
+
+Expression becomes:  
+`True and True and not True`
+
+---
+
+**Step 3 – Evaluate `not True`**  
+`not True` → `False`  
+
+Expression becomes:  
+`True and True and False`
+
+---
+
+**Step 4 – Evaluate `and` left to right**  
+`True and True` → `True`  
+Then `True and False` → `False`
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+27,False or ( False or not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+**False or ( False or not False )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `False or not False`
+
+- `not False` = `True`  
+So: `False or True` = `True`
+
+Now the expression becomes:  
+**False or True**
+
+---
+
+**Step 2: Evaluate `False or True`**  
+`False or True` = `True`
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+28,not ( False or ( False ) ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+\text{not ( False or ( False ) )}
+\]
+
+1. **Parentheses first**  
+Inside the parentheses:  
+\[
+\text{False or (False)} = \text{False or False} = \text{False}
+\]  
+
+2. **Apply NOT**  
+\[
+\text{not (False)} = \text{True}
+\]  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+29,not True and not True and not True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not True and not True and not True**
+
+---
+
+**Step 1: Apply NOT operations**  
+- `not True` = `False`  
+
+So the expression becomes:  
+**False and False and False**
+
+---
+
+**Step 2: Apply AND operations (left to right)**  
+- `False and False` = `False`  
+- `False and False` = `False`  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+30,False and False and not True and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False and False and not True and False**  
+
+---
+
+**Step 1: Handle `not`**  
+`not True` = `False`  
+
+Expression becomes:  
+False and False and False and False  
+
+---
+
+**Step 2: Apply `and` from left to right**  
+`and` is associative, so we can group:  
+
+- False and False → False  
+- False and False → False  
+- False and False → False  
+
+So the result is **False**.  
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+31,False or ( not False ) and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or ( not False ) and False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `not False` → `True`  
+
+Expression becomes:  
+**False or True and False**
+
+---
+
+**Step 2: Apply AND before OR**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 3: Apply OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+32,True and not True or True and True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True and not True or True and True**
+
+---
+
+**Step 1: Parentheses**  
+There are no parentheses, so we proceed.
+
+**Step 2: NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+**True and False or True and True**
+
+---
+
+**Step 3: AND** (left to right)  
+`True and False` = `False`  
+`True and True` = `True`  
+
+Expression becomes:  
+**False or True**
+
+---
+
+**Step 4: OR**  
+`False or True` = `True`
+
+---
+
+Final answer: **true**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+33,not True and True and True or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True and True and True or False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses here.
+
+**Step 2: Apply NOT (highest precedence after parentheses)**  
+`not True` = `False`  
+
+Expression becomes:  
+**False and True and True or False**
+
+---
+
+**Step 3: Apply AND (left to right)**  
+First: `False and True` = `False`  
+Expression: **False and True or False**  
+
+Second: `False and True` = `False`  
+Expression: **False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+34,not not not not not not not False is,True,"Let’s evaluate step by step.
+
+We have:  
+**not not not not not not not False**
+
+---
+
+**Step 1 – Order of operations**  
+NOT is right-associative, so we start from the rightmost **not**.
+
+1. **not False** → True  
+Expression becomes: **not not not not not not True**
+
+2. **not True** → False  
+Expression becomes: **not not not not not False**
+
+3. **not False** → True  
+Expression becomes: **not not not not True**
+
+4. **not True** → False  
+Expression becomes: **not not not False**
+
+5. **not False** → True  
+Expression becomes: **not not True**
+
+6. **not True** → False  
+Expression becomes: **not False**
+
+7. **not False** → True  
+
+---
+
+Final result: **True**
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+35,not False or not ( not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not False or not ( not False )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside `( not False )`:  
+`not False` = `True`  
+So `( not False )` = `True`
+
+Now the expression becomes:  
+`not False or not True`
+
+---
+
+**Step 2: Apply NOT operators**  
+`not False` = `True`  
+`not True` = `False`
+
+Expression becomes:  
+`True or False`
+
+---
+
+**Step 3: Apply OR**  
+`True or False` = `True`
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+36,not True and ( False ) and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+**not True and ( False ) and False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( False )` is just `False`.  
+Expression becomes:  
+`not True and False and False`
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+Expression becomes:  
+`False and False and False`
+
+---
+
+**Step 3: Apply AND from left to right**  
+`False and False` = `False`  
+`False and False` = `False`
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+37,False or False and not not not False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or False and not not not False**
+
+---
+
+**Step 1 – Handle parentheses**  
+There are no parentheses, so we proceed.
+
+---
+
+**Step 2 – Apply NOT operators from right to left**  
+First, `not False` → `True`  
+Then `not True` → `False`  
+Then `not False` → `True`  
+
+So `not not not False` = `True`.
+
+---
+
+**Step 3 – Substitute back**  
+Expression becomes:  
+**False or False and True**
+
+---
+
+**Step 4 – Apply AND before OR**  
+`False and True` → `False`
+
+---
+
+**Step 5 – Apply OR**  
+`False or False` → `False`
+
+---
+
+Final answer: **false**
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+38,True and True and True or not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True and True and True or not False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses in this expression.
+
+---
+
+**Step 2: Handle NOT (highest precedence after parentheses)**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and True and True or True**
+
+---
+
+**Step 3: Handle AND (precedence over OR)**  
+`True and True` → `True`  
+`True and True` → `True`  
+
+So `True and True and True` = `(True and True) and True` = `True and True` = `True`  
+
+Expression becomes:  
+**True or True**
+
+---
+
+**Step 4: Handle OR**  
+`True or True` → `True`
+
+---
+
+**Final result:** `true`
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+39,True and True or False and not True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True and True or False and not True**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+---
+
+**Step 2: Handle NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**True and True or False and False**
+
+---
+
+**Step 3: Handle AND** (left to right)  
+`True and True` → `True`  
+`False and False` → `False`  
+
+Expression becomes:  
+**True or False**
+
+---
+
+**Step 4: Handle OR**  
+`True or False` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+40,False or not True and True or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not True and True or True**
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**False or False and True or True**
+
+---
+
+**Step 3: Apply AND**  
+`False and True` → `False`  
+
+Expression becomes:  
+**False or False or True**
+
+---
+
+**Step 4: Apply OR left to right**  
+`False or False` → `False`  
+`False or True` → `True`  
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+41,False and not ( not not False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and not ( not not False )**
+
+---
+
+**Step 1: Evaluate innermost parentheses**  
+Inside `( not not False )`:
+
+- `not False` → **True**  
+- `not True` → **False**  
+So `( not not False )` = **False**
+
+Now the expression becomes:  
+**False and not (False)**
+
+---
+
+**Step 2: Apply `not`**  
+`not (False)` → **True**
+
+Expression now:  
+**False and True**
+
+---
+
+**Step 3: Apply `and`**  
+`False and True` → **False**
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+42,not not not not not not not True is,False,"Let’s evaluate step by step.
+
+We have:  
+`not not not not not not not True`
+
+**Step 1 — Order of operations:**  
+`not` is a unary operator with right-to-left associativity in logic, but here we can just apply them sequentially from the nearest `not` to `True` outward.
+
+**Step 2 — Count the `not`s:**  
+There are **7** `not` operators.
+
+**Step 3 — Effect of `not`:**  
+Each `not` toggles the truth value.
+
+Starting value: `True`  
+After 1 `not`: `False`  
+After 2 `not`: `True`  
+After 3 `not`: `False`  
+After 4 `not`: `True`  
+After 5 `not`: `False`  
+After 6 `not`: `True`  
+After 7 `not`: `False`
+
+**Step 4 — Final result:**  
+`False`
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+43,not ( False ) or not not True is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not ( False ) or not not True`
+
+---
+
+**Step 1: Handle parentheses**  
+`not ( False )` → `True`
+
+So now:  
+`True or not not True`
+
+---
+
+**Step 2: Apply NOT from right to left (highest precedence after parentheses)**  
+`not True` → `False`  
+`not False` → `True`
+
+So `not not True` = `not (not True)` = `not False` = `True`
+
+Now:  
+`True or True`
+
+---
+
+**Step 3: Apply OR**  
+`True or True` → `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+44,True or ( True or not True ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True or ( True or not True )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `True or not True`  
+- `not True` = `False`  
+- `True or False` = `True`  
+
+So parentheses part becomes `True`.
+
+---
+
+**Step 2: Substitute back**  
+Expression becomes:  
+`True or True`
+
+---
+
+**Step 3: Evaluate final OR**  
+`True or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+45,( True or True or not False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( True or True or not False )
+
+**Step 1:** Handle parentheses — they group the whole expression here.  
+Inside: True or True or not False  
+
+**Step 2:** Apply NOT operator first (order of precedence: NOT before AND before OR).  
+not False = True  
+
+So now: True or True or True  
+
+**Step 3:** Apply OR from left to right (OR is associative).  
+True or True = True  
+True or True = True  
+
+Final result: True  
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+46,not True and ( True and True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+`not True and ( True and True )`  
+
+**Step 1: Parentheses first**  
+`( True and True )` → `True`  
+
+Expression becomes:  
+`not True and True`  
+
+**Step 2: NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+`False and True`  
+
+**Step 3: AND**  
+`False and True` → `False`  
+
+Final result: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+47,not False and not False and not False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not False and not False and not False**
+
+---
+
+**Step 1: Apply `not` operators**  
+`not False` = `True`  
+
+So the expression becomes:  
+`True and True and True`
+
+---
+
+**Step 2: Apply `and` from left to right**  
+`True and True` = `True`  
+`True and True` = `True`  
+
+---
+
+**Final result:** `True`  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+48,True and True and False and not True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**True and True and False and not True**
+
+---
+
+**Step 1:** Handle **NOT** first (order of precedence: NOT before AND before OR).  
+`not True` = `False`
+
+Expression becomes:  
+True and True and False and **False**
+
+---
+
+**Step 2:** Apply **AND** from left to right (AND is associative).  
+`True and True` = **True**  
+
+Now:  
+True and False and False  
+
+`True and False` = **False**  
+
+Now:  
+False and False  
+
+`False and False` = **False**
+
+---
+
+**Final result:** False
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+49,( False or True and not True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`( False or True and not True )`
+
+**Step 1: Handle parentheses**  
+Inside the parentheses, we follow precedence: NOT first, then AND, then OR.
+
+**Step 2: Apply NOT**  
+`not True` → `False`
+
+Now the expression inside parentheses is:  
+`False or True and False`
+
+**Step 3: Apply AND**  
+`True and False` → `False`
+
+Now the expression inside parentheses is:  
+`False or False`
+
+**Step 4: Apply OR**  
+`False or False` → `False`
+
+So the final result is `False`.
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+50,not True and False or False or True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**not True and False or False or True**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so we skip this.
+
+---
+
+**Step 2: Apply NOT (highest precedence after parentheses)**  
+`not True` = `False`  
+
+Expression becomes:  
+**False and False or False or True**
+
+---
+
+**Step 3: Apply AND (next precedence)**  
+`False and False` = `False`  
+
+Expression becomes:  
+**False or False or True**
+
+---
+
+**Step 4: Apply OR (left to right)**  
+`False or False` = `False`  
+
+Expression becomes:  
+**False or True**  
+
+`False or True` = `True`
+
+---
+
+**Final result:** `True`
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+51,not False and False or True and True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False and False or True and True**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and False or True and True**
+
+---
+
+**Step 3: Apply AND from left to right**  
+First `True and False` → `False`  
+
+Expression becomes:  
+**False or True and True**
+
+---
+
+**Step 4: Apply next AND**  
+`True and True` → `True`  
+
+Expression becomes:  
+**False or True**
+
+---
+
+**Step 5: Apply OR**  
+`False or True` → `True`  
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+52,True or not ( ( False ) ) is,True,"Let’s evaluate step by step.
+
+The expression is:  
+**True or not ( ( False ) )**
+
+1. **Parentheses first**:  
+Inside the parentheses, we have `(False)`, which is just `False`.  
+So the expression becomes:  
+`True or not (False)`
+
+2. **NOT operator**:  
+`not (False)` means `not False`, which is `True`.  
+Now we have:  
+`True or True`
+
+3. **OR operator**:  
+`True or True` evaluates to `True`.
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+53,not True and True and False and True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True and True and False and True**
+
+---
+
+**Step 1: Apply NOT first**  
+`not True` → `False`  
+
+So the expression becomes:  
+**False and True and False and True**
+
+---
+
+**Step 2: Apply AND from left to right**  
+- `False and True` → `False`  
+- `False and False` → `False`  
+- `False and True` → `False`  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+54,( not False ) or True and False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not False ) or True and False  
+
+**Step 1: Handle parentheses**  
+not False = True  
+
+Expression becomes:  
+True or True and False  
+
+**Step 2: Apply precedence (NOT, AND, OR)**  
+AND has higher precedence than OR, so:  
+True and False = False  
+
+Expression becomes:  
+True or False  
+
+**Step 3: Apply OR**  
+True or False = True  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+55,False and not ( False or False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and not ( False or False )**
+
+---
+
+**Step 1: Evaluate parentheses first**  
+`( False or False )` → `False` (since OR is false if both are false)
+
+Expression becomes:  
+**False and not False**
+
+---
+
+**Step 2: Apply NOT**  
+`not False` → `True`
+
+Expression becomes:  
+**False and True**
+
+---
+
+**Step 3: Apply AND**  
+`False and True` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+56,( not False and False and False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`( not False and False and False )`
+
+---
+
+**Step 1: Handle parentheses and `not`**  
+Inside parentheses: `not False and False and False`  
+`not False` = `True`  
+So we have: `True and False and False`
+
+---
+
+**Step 2: Apply `and` from left to right**  
+`True and False` = `False`  
+Now: `False and False` = `False`
+
+---
+
+**Step 3: Final result**  
+The expression in parentheses evaluates to `False`.
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+57,False and False or not ( True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and False or not ( True )**
+
+---
+
+**Step 1: Handle parentheses and NOT**  
+`not ( True )` → `False`  
+
+Expression becomes:  
+**False and False or False**
+
+---
+
+**Step 2: Apply AND before OR**  
+`False and False` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 3: Apply OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+58,not False or ( True ) and True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False or ( True ) and True**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( True )` is just `True`.  
+Expression becomes:  
+`not False or True and True`
+
+---
+
+**Step 2: Apply NOT**  
+`not False` = `True`  
+Expression becomes:  
+`True or True and True`
+
+---
+
+**Step 3: Apply AND** (AND has higher precedence than OR)  
+`True and True` = `True`  
+Expression becomes:  
+`True or True`
+
+---
+
+**Step 4: Apply OR**  
+`True or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+59,( ( not ( True ) ) ) is,False,"Let’s evaluate step by step.
+
+1. The expression is:  
+   \( ( \text{not} ( \text{True} ) ) \)
+
+2. Inside the parentheses:  
+   \( \text{not} ( \text{True} ) \)  
+   Since ""not True"" is False, this becomes:  
+   \( \text{False} \)
+
+3. The outer parentheses don’t change the value:  
+   \( \text{False} \)
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+60,( not not True ) or not False is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( not not True ) or not False`
+
+---
+
+**Step 1: Evaluate innermost parentheses**  
+`not not True`  
+- `not True` → `False`  
+- `not False` → `True`  
+
+So `( not not True )` → `True`
+
+---
+
+**Step 2: Evaluate `not False`**  
+`not False` → `True`
+
+---
+
+**Step 3: Apply OR**  
+`True or True` → `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+61,False or ( not False ) and True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**False or ( not False ) and True**
+
+---
+
+**Step 1: Handle parentheses**  
+`not False` = `True`  
+
+Expression becomes:  
+**False or True and True**
+
+---
+
+**Step 2: Apply AND before OR** (order of precedence: NOT, AND, OR)  
+`True and True` = `True`  
+
+Expression becomes:  
+**False or True**
+
+---
+
+**Step 3: Apply OR**  
+`False or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+62,not ( False or False and False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+\text{not ( False or False and False )}
+\]
+
+**Step 1 – Identify precedence**  
+Order: parentheses → NOT → AND → OR (but parentheses already group the whole expression here).  
+Inside parentheses: AND before OR.  
+
+**Step 2 – Evaluate AND inside parentheses**  
+\[
+\text{False and False} = \text{False}
+\]  
+
+**Step 3 – Evaluate OR inside parentheses**  
+\[
+\text{False or False} = \text{False}
+\]  
+
+**Step 4 – Apply NOT**  
+\[
+\text{not (False)} = \text{True}
+\]  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+63,( False or not False and False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( \text{False} \ \text{or} \ \text{not False} \ \text{and} \ \text{False} )
+\]
+
+**Step 1: Identify precedence**  
+Order: parentheses → NOT → AND → OR  
+No parentheses grouping beyond the whole expression, so we apply NOT first.
+
+**Step 2: Evaluate `not False`**  
+\[
+\text{not False} = \text{True}
+\]  
+Expression becomes:  
+\[
+\text{False} \ \text{or} \ (\text{True} \ \text{and} \ \text{False})
+\]
+
+**Step 3: Evaluate AND**  
+\[
+\text{True} \ \text{and} \ \text{False} = \text{False}
+\]  
+Expression becomes:  
+\[
+\text{False} \ \text{or} \ \text{False}
+\]
+
+**Step 4: Evaluate OR**  
+\[
+\text{False} \ \text{or} \ \text{False} = \text{False}
+\]
+
+Final result: **false**
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+64,False or ( not not not True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False or ( not not not True )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `not not not True`
+
+- `not True` → **False**  
+- `not False` → **True**  
+- `not True` → **False**  
+
+So `( not not not True )` = **False**
+
+---
+
+**Step 2: Evaluate OR**  
+`False or False` → **False**
+
+---
+
+**Final answer: false**",true,false,False,boolean,,protegi,boolean_expressions,10
+65,not True or not False and not True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or not False and not True**
+
+---
+
+**Step 1 – Identify operator precedence**  
+Precedence: parentheses (none here) → **NOT** → **AND** → **OR**
+
+---
+
+**Step 2 – Apply NOT operations**  
+- not True → False  
+- not False → True  
+- not True → False  
+
+So the expression becomes:  
+**False or True and False**
+
+---
+
+**Step 3 – Apply AND**  
+True and False → False  
+
+Expression now:  
+**False or False**
+
+---
+
+**Step 4 – Apply OR**  
+False or False → False  
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+66,( not True ) and True or True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not True ) and True or True  
+
+**Step 1: Handle parentheses and NOT**  
+not True = False  
+
+Now:  
+False and True or True  
+
+**Step 2: Apply AND (higher precedence than OR)**  
+False and True = False  
+
+Now:  
+False or True  
+
+**Step 3: Apply OR**  
+False or True = True  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+67,False or not True or False or False is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False or not True or False or False**
+
+---
+
+**Step 1: Apply NOT operator first**  
+`not True` = `False`  
+
+So the expression becomes:  
+False **or** False **or** False **or** False  
+
+---
+
+**Step 2: Evaluate OR from left to right**  
+- False or False → False  
+- False or False → False  
+- False or False → False  
+
+---
+
+**Step 3: Final result**  
+False  
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+68,not ( True ) or False or True is,True,"Let’s evaluate step by step.
+
+The expression is:  
+**not ( True ) or False or True**
+
+---
+
+**Step 1: Handle parentheses and NOT**  
+`not ( True )` → `False`
+
+Expression becomes:  
+**False or False or True**
+
+---
+
+**Step 2: Evaluate from left to right (OR is associative)**  
+`False or False` → `False`  
+`False or True` → `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+69,False and False or not True and True is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False and False or not True and True**
+
+---
+
+**Step 1: Identify the order of precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. NOT  
+3. AND  
+4. OR  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**False and False or False and True**
+
+---
+
+**Step 3: Apply AND from left to right**  
+First AND: `False and False` → `False`  
+
+Expression becomes:  
+**False or (False and True)**  
+
+Second AND: `False and True` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+70,False or False or not True or False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or False or not True or False**  
+
+---
+
+**Step 1: Apply NOT operator**  
+`not True` → `False`  
+
+Expression becomes:  
+False or False or False or False  
+
+---
+
+**Step 2: Apply OR operators from left to right**  
+- False or False → False  
+- False or False → False  
+- False or False → False  
+
+---
+
+**Final result:** `False`  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+71,not not True and not True or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not not True and not True or True**
+
+---
+
+**Step 1 – Handle parentheses**  
+There are no parentheses, so we skip this.
+
+---
+
+**Step 2 – Apply NOT operators (highest precedence after parentheses)**  
+
+- **not not True**  
+  - not True → False  
+  - not False → True  
+  So `not not True = True`
+
+- **not True** → False
+
+Now the expression becomes:  
+
+**True and False or True**
+
+---
+
+**Step 3 – Apply AND (higher precedence than OR)**  
+
+**True and False** → False
+
+Now the expression becomes:  
+
+**False or True**
+
+---
+
+**Step 4 – Apply OR**  
+
+**False or True** → True
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+72,True or not False and ( False ) is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not False and ( False )**
+
+---
+
+**Step 1: Identify the order of precedence**  
+Precedence:  
+1. Parentheses  
+2. NOT  
+3. AND  
+4. OR  
+
+---
+
+**Step 2: Evaluate parentheses**  
+Inside parentheses: `( False )` → **False**  
+
+Expression becomes:  
+**True or not False and False**
+
+---
+
+**Step 3: Evaluate NOT**  
+`not False` → **True**  
+
+Expression becomes:  
+**True or True and False**
+
+---
+
+**Step 4: Evaluate AND**  
+`True and False` → **False**  
+
+Expression becomes:  
+**True or False**
+
+---
+
+**Step 5: Evaluate OR**  
+`True or False` → **True**  
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+73,False and True and ( not False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and True and ( not False )**
+
+---
+
+**Step 1: Handle parentheses**  
+`( not False )` → `not False` means `True`.  
+So now:  
+**False and True and True**
+
+---
+
+**Step 2: Apply AND from left to right**  
+`False and True` → `False`  
+Now:  
+**False and True** → `False`
+
+---
+
+**Step 3: Final result**  
+`False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+74,not True or False and False and False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or False and False and False**
+
+---
+
+**Step 1 – Order of precedence:**  
+Parentheses → **NOT** → **AND** → **OR**  
+No parentheses here, so first apply **NOT**.
+
+**not True** = **False**  
+
+Expression becomes:  
+**False or False and False and False**
+
+---
+
+**Step 2 – Apply AND from left to right**  
+**False and False** = **False**  
+Now: **False and False** = **False**  
+
+So **False and False and False** = **False**  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 3 – Apply OR**  
+**False or False** = **False**
+
+---
+
+Final result: **false**  
+
+**Final answer: false**",true,false,False,boolean,,protegi,boolean_expressions,10
+75,not False or not not False and False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False or not not False and False**
+
+---
+
+### 1. Order of precedence  
+From highest to lowest:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+### 2. Apply **NOT** operations left to right  
+First: `not False` → **True**  
+So the expression becomes:  
+
+**True or not not False and False**
+
+---
+
+Second: `not not False`  
+- `not False` → True  
+- `not True` → False  
+
+So `not not False` → **False**  
+
+Expression now:  
+
+**True or False and False**
+
+---
+
+### 3. Apply **AND**  
+`False and False` → **False**  
+
+Expression now:  
+
+**True or False**
+
+---
+
+### 4. Apply **OR**  
+`True or False` → **True**
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+76,False or ( not False and False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or ( not False and False )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `not False and False`  
+
+- `not False` = **True**  
+So it becomes: `True and False`  
+
+- `True and False` = **False**  
+
+Now the expression is:  
+**False or False**
+
+---
+
+**Step 2: Evaluate OR**  
+`False or False` = **False**
+
+---
+
+Final answer: **false**  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+77,True or False or not True or False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or False or not True or False**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. NOT  
+3. AND (none here)  
+4. OR (left to right)  
+
+So first handle `not True`.
+
+---
+
+**Step 2: Evaluate `not True`**  
+`not True` = `False`
+
+Expression becomes:  
+`True or False or False or False`
+
+---
+
+**Step 3: Evaluate OR from left to right**  
+
+- `True or False` → `True`  
+- `True or False` → `True`  
+- `True or False` → `True`  
+
+---
+
+**Step 4: Final result**  
+The result is `True`.
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+78,( True and not not not True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`( True and not not not True )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside the parentheses: `True and not not not True`
+
+---
+
+**Step 2: Evaluate `not not not True`**  
+- `not True` → `False`  
+- `not False` → `True`  
+- `not True` → `False`  
+
+So `not not not True` = `False`
+
+---
+
+**Step 3: Evaluate `True and False`**  
+`True and False` → `False`
+
+---
+
+**Step 4: Final result**  
+`(False)` → `False`
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+79,not ( False ) and ( True ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not ( False ) and ( True )`
+
+**Step 1:** Handle parentheses and `not`  
+`not ( False )` → `True`
+
+Now we have:  
+`True and ( True )`
+
+**Step 2:** Apply `and`  
+`True and True` → `True`
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+80,( False ) and ( not False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( \text{False} ) \ \text{and} \ ( \text{not False} )
+\]
+
+**Step 1:** Evaluate `not False`  
+\[
+\text{not False} = \text{True}
+\]
+
+**Step 2:** Substitute back into the expression  
+\[
+\text{False} \ \text{and} \ \text{True}
+\]
+
+**Step 3:** Evaluate `False and True`  
+\[
+\text{False} \ \text{and} \ \text{True} = \text{False}
+\]
+
+Final result: **False**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+81,False or not not not not not False is,True,"Let’s evaluate step by step.
+
+The expression is:  
+**False or not not not not not False**
+
+---
+
+**Step 1 – Order of operations**  
+NOT has higher precedence than OR, so we evaluate all the NOTs first, starting from the rightmost one.
+
+---
+
+**Step 2 – Evaluate `not False`**  
+`not False` = **True**
+
+Now the expression becomes:  
+False or not not not not True
+
+---
+
+**Step 3 – Evaluate `not True`**  
+`not True` = **False**
+
+Expression: False or not not not False
+
+---
+
+**Step 4 – Evaluate `not False`**  
+`not False` = **True**
+
+Expression: False or not not True
+
+---
+
+**Step 5 – Evaluate `not True`**  
+`not True` = **False**
+
+Expression: False or not False
+
+---
+
+**Step 6 – Evaluate `not False`**  
+`not False` = **True**
+
+Expression: False or True
+
+---
+
+**Step 7 – Evaluate `False or True`**  
+`False or True` = **True**
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+82,False and False or True and not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**False and False or True and not False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses in this expression.
+
+---
+
+**Step 2: Apply NOT operator**  
+`not False` → `True`  
+
+Expression becomes:  
+**False and False or True and True**
+
+---
+
+**Step 3: Apply AND operators (left to right)**  
+First: `False and False` → `False`  
+Second: `True and True` → `True`  
+
+Expression becomes:  
+**False or True**
+
+---
+
+**Step 4: Apply OR operator**  
+`False or True` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+83,( not True ) and True and False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+( not True ) and True and False  
+
+**Step 1:** Handle parentheses and NOT  
+not True = False  
+
+Now the expression becomes:  
+False and True and False  
+
+**Step 2:** AND is left-associative, so evaluate left to right  
+False and True → False  
+
+Now:  
+False and False → False  
+
+**Final result:** false  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+84,not False and ( False or False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not False and ( False or False )**
+
+---
+
+**Step 1: Parentheses first**  
+( False or False ) → False  
+
+Now we have:  
+not False and False  
+
+---
+
+**Step 2: NOT**  
+not False → True  
+
+Now we have:  
+True and False  
+
+---
+
+**Step 3: AND**  
+True and False → False  
+
+---
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+85,( not True ) and ( False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`( not True ) and ( False )`
+
+**Step 1:** Evaluate `not True`  
+`not True` = `False`
+
+**Step 2:** Substitute back into the expression  
+`False and False`
+
+**Step 3:** Evaluate `False and False`  
+`False and False` = `False`
+
+Final result: **false**
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+86,False or ( False ) or not True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or ( False ) or not True**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `(False)` is just `False`.  
+Expression becomes:  
+False or False or not True
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+Expression becomes:  
+False or False or False
+
+---
+
+**Step 3: Apply OR from left to right**  
+- False or False → False  
+- False or False → False  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+87,not True or ( True or False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not True or ( True or False )
+```
+
+**Step 1: Handle parentheses**  
+Inside `( True or False )`:  
+`True or False` → `True`  
+
+So now we have:  
+```
+not True or True
+```
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+
+So now we have:  
+```
+False or True
+```
+
+**Step 3: Apply OR**  
+`False or True` → `True`  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+88,False and not True and True and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False and not True and True and False**
+
+---
+
+**Step 1: Apply NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+**False and False and True and False**
+
+---
+
+**Step 2: Apply AND from left to right**  
+AND is associative, so we can evaluate left-to-right:  
+
+- `False and False` → `False`  
+- `False and True` → `False`  
+- `False and False` → `False`  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+89,( ( not True ) or True ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( ( not True ) or True )`
+
+1. **Parentheses first** — inside the outer parentheses, we have `( not True ) or True`.  
+   - First, `not True` → `False`  
+   - So now we have `( False ) or True`
+
+2. **Evaluate `False or True`**  
+   - `or` returns `True` if at least one operand is `True`.  
+   - `False or True` → `True`
+
+3. **Final result** → `True`
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+90,not ( ( False and True ) ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not ( ( False and True ) )`
+
+1. **Parentheses first**  
+Inside: `( False and True )`  
+`False and True` → `False` (AND is true only if both are true).
+
+2. **Apply NOT**  
+`not ( False )` → `True`.
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+91,( not True and False or True ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not True and False or True )  
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `not True and False`  
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+
+So inside parentheses becomes: `False and False`  
+
+**Step 3: Apply AND**  
+`False and False` = `False`  
+
+So the expression becomes: `False or True`  
+
+**Step 4: Apply OR**  
+`False or True` = `True`  
+
+Final result: **true**  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+92,( ( not True and True ) ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`( ( not True and True ) )`
+
+---
+
+**Step 1:** Handle parentheses — they indicate what to evaluate first.  
+Inside: `not True and True`
+
+**Step 2:** Apply `not` (higher precedence than `and`):  
+`not True` → `False`
+
+Now we have: `False and True`
+
+**Step 3:** Apply `and`:  
+`False and True` → `False`
+
+**Step 4:** Final result:  
+`False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+93,not False and False or False or False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not False and False or False or False**  
+
+---
+
+**Step 1: Handle `not` (highest precedence after parentheses)**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and False or False or False**  
+
+---
+
+**Step 2: Handle `and` (precedence over `or`)**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False or False or False**  
+
+---
+
+**Step 3: Evaluate `or` from left to right**  
+`False or False` → `False`  
+`False or False` → `False`  
+
+---
+
+**Final result:** `False`  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+94,not ( True or False or True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+\text{not ( True or False or True )}
+\]
+
+**Step 1: Evaluate inside parentheses**  
+Inside: \( \text{True or False or True} \)  
+Logical OR is left-associative:  
+
+- \( \text{True or False} \) → \( \text{True} \)  
+- \( \text{True or True} \) → \( \text{True} \)  
+
+So \( \text{(True or False or True)} = \text{True} \).
+
+**Step 2: Apply NOT**  
+\[
+\text{not (True)} = \text{False}
+\]
+
+Final result: **False**
+
+\[
+\boxed{\text{false}}
+\]
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+95,True and not False and not not True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True and not False and not not True**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so we move to the next precedence level.
+
+---
+
+**Step 2: Apply NOT operators (highest precedence after parentheses)**  
+
+- `not False` → `True`  
+- `not not True` → `not (not True)` → `not False` → `True`  
+
+So the expression becomes:  
+
+**True and True and True**
+
+---
+
+**Step 3: Apply AND operators (left to right)**  
+
+- `True and True` → `True`  
+- `True and True` → `True`  
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+96,not ( not False ) and not False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+\text{not ( not False ) and not False}
+\]
+
+---
+
+**Step 1: Evaluate innermost parentheses**  
+\[
+\text{not False} = \text{True}
+\]  
+So the expression becomes:  
+\[
+\text{not ( True ) and not False}
+\]
+
+---
+
+**Step 2: Apply the next NOT**  
+\[
+\text{not ( True )} = \text{False}
+\]  
+Expression now:  
+\[
+\text{False and not False}
+\]
+
+---
+
+**Step 3: Evaluate the remaining NOT**  
+\[
+\text{not False} = \text{True}
+\]  
+Expression now:  
+\[
+\text{False and True}
+\]
+
+---
+
+**Step 4: Apply AND**  
+\[
+\text{False and True} = \text{False}
+\]
+
+---
+
+Final answer: **false**  
+
+\[
+\boxed{\text{false}}
+\]  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+97,True and not not False and not False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**True and not not False and not False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so move to **NOT** operators.
+
+---
+
+**Step 2: Evaluate `not False`**  
+`not False` = `True`  
+
+So the expression becomes:  
+`True and not not False and True`
+
+---
+
+**Step 3: Evaluate `not not False`**  
+`not False` = `True` (from Step 2, but here we need to apply `not` to `False` first, then `not` again).  
+Let’s do it carefully:  
+
+- `not False` = `True`  
+- `not True` = `False`  
+
+So `not not False` = `False`  
+
+Expression becomes:  
+`True and False and True`
+
+---
+
+**Step 4: Apply AND from left to right**  
+AND is associative, so:  
+
+- `True and False` = `False`  
+- `False and True` = `False`  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+98,( True ) and True or not True is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( True ) and True or not True`
+
+---
+
+**Step 1: Handle parentheses**  
+`( True )` is just `True`.  
+Expression becomes:  
+`True and True or not True`
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+Expression becomes:  
+`True and True or False`
+
+---
+
+**Step 3: Apply AND**  
+`True and True` = `True`  
+Expression becomes:  
+`True or False`
+
+---
+
+**Step 4: Apply OR**  
+`True or False` = `True`
+
+---
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+99,( True and not True and True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+( True and not True and True )  
+
+**Step 1 – Handle parentheses**  
+We evaluate inside the parentheses first.  
+
+**Step 2 – Apply NOT**  
+Inside: True **and** not True **and** True  
+not True = False  
+
+So inside becomes: True **and** False **and** True  
+
+**Step 3 – Apply AND from left to right**  
+True and False = False  
+False and True = False  
+
+So inside parentheses evaluates to **False**.  
+
+**Step 4 – Final result**  
+The whole expression is just that False value.  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+100,True or not True or not not True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not True or not not True**
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence: **not** > **and** > **or**  
+So we evaluate `not` first, left to right.
+
+---
+
+**Step 2: Evaluate `not True`**  
+`not True` = **False**  
+
+Expression becomes:  
+True **or** False **or** not not True
+
+---
+
+**Step 3: Evaluate `not not True`**  
+`not True` = False  
+`not False` = True  
+
+So `not not True` = **True**  
+
+Expression becomes:  
+True **or** False **or** True
+
+---
+
+**Step 4: Evaluate `or` from left to right**  
+True **or** False → True  
+True **or** True → True  
+
+---
+
+**Final result:** **true**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+101,not False or ( False ) or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not False or ( False ) or True**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `(False)` is just `False`.  
+Expression becomes:  
+`not False or False or True`
+
+---
+
+**Step 2: Apply NOT**  
+`not False` = `True`  
+Expression becomes:  
+`True or False or True`
+
+---
+
+**Step 3: Apply OR from left to right**  
+`True or False` → `True`  
+`True or True` → `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+102,False and ( False or not False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and ( False or not False )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `False or not False`  
+
+**Step 2: Apply NOT**  
+`not False` = `True`  
+
+So inside parentheses: `False or True`  
+
+**Step 3: Apply OR**  
+`False or True` = `True`  
+
+Now the expression becomes:  
+`False and True`  
+
+**Step 4: Apply AND**  
+`False and True` = `False`  
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+103,not not not False and True or False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not not not False and True or False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so we move to the next precedence level.
+
+---
+
+**Step 2: Apply NOT operators (right to left for consecutive NOTs)**  
+`not not not False`  
+
+- `not False` → **True**  
+- `not True` → **False**  
+- `not False` → **True**  
+
+So `not not not False` = **True**.
+
+---
+
+**Step 3: Apply AND**  
+Now the expression is:  
+`True and True or False`  
+
+`True and True` → **True**
+
+---
+
+**Step 4: Apply OR**  
+`True or False` → **True**
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+104,True and not not not not not True is,False,"Let’s evaluate step by step.
+
+**Expression:**  
+True and not not not not not True
+
+---
+
+**Step 1: Handle the NOT operators from right to left**  
+Order of precedence: NOT before AND.
+
+Start with the rightmost `not True`:
+
+1. `not True` → False  
+Expression becomes:  
+True and not not not not False
+
+2. `not False` → True  
+Expression becomes:  
+True and not not not True
+
+3. `not True` → False  
+Expression becomes:  
+True and not not False
+
+4. `not False` → True  
+Expression becomes:  
+True and not True
+
+5. `not True` → False  
+Expression becomes:  
+True and False
+
+---
+
+**Step 2: Apply AND**  
+True and False → False
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+105,not not ( not False or True ) is,True,"Let’s evaluate step by step.
+
+**Expression:**  
+`not not ( not False or True )`
+
+---
+
+**Step 1: Evaluate innermost parentheses**  
+Inside parentheses: `not False or True`  
+- `not False` = `True`  
+So: `True or True`  
+- `True or True` = `True`  
+
+Now the expression becomes:  
+`not not (True)`
+
+---
+
+**Step 2: Apply the first `not`**  
+`not True` = `False`  
+Expression becomes: `not False`
+
+---
+
+**Step 3: Apply the last `not`**  
+`not False` = `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+106,( False and True or not False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( False and True or not False )
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `False and True or not False`
+
+**Step 2: Apply NOT (highest precedence inside parentheses)**  
+`not False` = `True`  
+So now: `False and True or True`
+
+**Step 3: Apply AND (higher precedence than OR)**  
+`False and True` = `False`  
+So now: `False or True`
+
+**Step 4: Apply OR**  
+`False or True` = `True`
+
+Final result: **true**
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+107,False or not not True or not False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not not True or not False**
+
+---
+
+**Step 1: Identify order of operations**  
+Precedence: **not** first, then **or** left to right.
+
+---
+
+**Step 2: Evaluate `not not True`**  
+- `not True` → False  
+- `not False` → True  
+So `not not True` = **True**
+
+---
+
+**Step 3: Evaluate `not False`**  
+`not False` → **True**
+
+---
+
+**Step 4: Substitute back**  
+Expression becomes:  
+False **or** True **or** True
+
+---
+
+**Step 5: Evaluate left to right**  
+- False **or** True → True  
+- True **or** True → True
+
+---
+
+**Final result:** true  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+108,True or not ( ( True ) ) is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not ( ( True ) )**
+
+1. **Parentheses first**  
+   Inside the parentheses: `( True )` is `True`.  
+   So the expression becomes:  
+   `True or not (True)`
+
+2. **NOT operator**  
+   `not (True)` → `False`  
+   Expression now:  
+   `True or False`
+
+3. **OR operator**  
+   `True or False` → `True`
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+109,not False and False and True or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not False and False and True or False**  
+
+---
+
+**Step 1: Handle `not` (highest precedence)**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and False and True or False**  
+
+---
+
+**Step 2: Evaluate `and` from left to right**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False and True or False**  
+
+`False and True` → `False`  
+
+Expression becomes:  
+**False or False**  
+
+---
+
+**Step 3: Evaluate `or`**  
+`False or False` → `False`  
+
+---
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+110,False and False and not not not True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and False and not not not True**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+---
+
+**Step 2: Apply NOT operators from right to left**  
+First, `not True` → **False**  
+Now: `False and False and not not False`
+
+Next, `not False` → **True**  
+Now: `False and False and not True`
+
+Next, `not True` → **False**  
+Now: `False and False and False`
+
+---
+
+**Step 3: Apply AND operators left to right**  
+`False and False` → **False**  
+Now: `False and False` → **False**
+
+---
+
+**Final result:** **False**
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+111,( not ( False ) or False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+(\text{not} (\text{False}) \ \text{or} \ \text{False})
+\]
+
+**Step 1:** Handle parentheses first.  
+Inside: \(\text{not} (\text{False})\)  
+\[
+\text{not} (\text{False}) = \text{True}
+\]
+
+**Step 2:** Substitute back into the expression:  
+\[
+\text{True} \ \text{or} \ \text{False}
+\]
+
+**Step 3:** Apply OR:  
+\[
+\text{True} \ \text{or} \ \text{False} = \text{True}
+\]
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+112,not False or True or False and False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not False or True or False and False**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+So first compute **not False**, then **False and False**, then combine with **OR** from left to right.
+
+---
+
+**Step 2: Apply NOT**  
+not False = **True**  
+
+Expression becomes:  
+True or True or (False and False)  
+
+---
+
+**Step 3: Apply AND**  
+False and False = **False**  
+
+Expression becomes:  
+True or True or False  
+
+---
+
+**Step 4: Apply OR left to right**  
+True or True → **True**  
+True or False → **True**  
+
+---
+
+Final result: **true**  
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+113,not False or True and not not True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False or True and not not True**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **not**  
+3. **and**  
+4. **or**  
+
+---
+
+**Step 2: Evaluate `not False`**  
+`not False` → **True**  
+
+Expression becomes:  
+**True or True and not not True**  
+
+---
+
+**Step 3: Evaluate `not not True`**  
+`not True` → False  
+`not False` → True  
+
+So `not not True` → **True**  
+
+Expression becomes:  
+**True or True and True**  
+
+---
+
+**Step 4: Evaluate `True and True`** (because `and` has higher precedence than `or`)  
+`True and True` → **True**  
+
+Expression becomes:  
+**True or True**  
+
+---
+
+**Step 5: Evaluate `True or True`**  
+`True or True` → **True**  
+
+---
+
+Final answer: **true**  
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+114,not False or not not not not True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not False or not not not not True**
+
+---
+
+**Step 1 – Identify precedence**  
+Precedence: parentheses (none here), **not**, then **or**.  
+So we evaluate all **not** operations first, left to right within the same precedence level.
+
+---
+
+**Step 2 – Evaluate `not False`**  
+`not False` = **True**  
+
+Expression becomes:  
+**True or not not not not True**
+
+---
+
+**Step 3 – Evaluate `not not not not True`**  
+Start from the rightmost `not`:  
+
+- `not True` = False  
+- `not False` = True  
+- `not True` = False  
+- `not False` = True  
+
+So `not not not not True` = **True**.
+
+Expression becomes:  
+**True or True**
+
+---
+
+**Step 4 – Apply OR**  
+`True or True` = **True**
+
+---
+
+Final answer: true  
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+115,( not False ) and False or True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not False ) and False or True  
+
+**Step 1: Handle parentheses and NOT**  
+not False → True  
+
+Expression becomes:  
+True and False or True  
+
+**Step 2: Apply AND before OR**  
+True and False → False  
+
+Expression becomes:  
+False or True  
+
+**Step 3: Apply OR**  
+False or True → True  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+116,not not not False or False and False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not not not False or False and False**
+
+---
+
+### 1. Order of precedence  
+Parentheses (none here) → **NOT** → **AND** → **OR**
+
+---
+
+### 2. Apply NOT from right to left (since NOT is right-associative in logic)  
+First: **not False** = True  
+Expression becomes: **not not True or False and False**
+
+Second: **not True** = False  
+Expression becomes: **not False or False and False**
+
+Third: **not False** = True  
+Expression becomes: **True or False and False**
+
+---
+
+### 3. Apply AND  
+**False and False** = False  
+Expression becomes: **True or False**
+
+---
+
+### 4. Apply OR  
+**True or False** = True
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+117,not False and not True and not False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not False and not True and not False**
+
+---
+
+**Step 1: Apply NOT operators**  
+- not False → True  
+- not True → False  
+- not False → True  
+
+So the expression becomes:  
+**True and False and True**
+
+---
+
+**Step 2: Apply AND from left to right** (AND is associative but evaluated left-to-right)  
+- True and False → False  
+- False and True → False  
+
+---
+
+**Step 3: Final result**  
+False  
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+118,not ( not not not not False ) is,True,"Let’s evaluate step by step.
+
+We start with:  
+`not ( not not not not False )`
+
+---
+
+**Step 1: Evaluate `not not not not False`**  
+We apply `not` from right to left (since `not` is right-associative in logic, but here we can just count them).
+
+- `not False` = `True`  
+- `not True` = `False`  
+- `not False` = `True`  
+- `not True` = `False`
+
+So `not not not not False` = `False`.
+
+---
+
+**Step 2: Apply the outer `not`**  
+`not (False)` = `True`
+
+---
+
+Final result: **true**
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+119,True and not ( True or False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**True and not ( True or False )**
+
+---
+
+**Step 1: Evaluate parentheses first**  
+Inside parentheses: `True or False`  
+True or False = True  
+
+So now:  
+True and not (True)  
+
+---
+
+**Step 2: Apply NOT**  
+not (True) = False  
+
+So now:  
+True and False  
+
+---
+
+**Step 3: Apply AND**  
+True and False = False  
+
+---
+
+Final answer: **false**  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+120,False or False or True and not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**False or False or True and not False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+---
+
+**Step 2: Handle NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+**False or False or True and True**
+
+---
+
+**Step 3: Handle AND**  
+`True and True` → `True`  
+
+Expression becomes:  
+**False or False or True**
+
+---
+
+**Step 4: Handle OR from left to right**  
+`False or False` → `False`  
+
+Expression becomes:  
+**False or True**  
+
+`False or True` → `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+121,not True and True and not not False is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not True and True and not not False**
+
+---
+
+**Step 1: Handle parentheses (none here) and NOT operations from left to right**  
+
+First `not True` → **False**  
+
+Expression becomes:  
+**False and True and not not False**
+
+---
+
+**Step 2: Next NOT**  
+`not False` → **True**  
+
+Expression becomes:  
+**False and True and not True**
+
+---
+
+**Step 3: Next NOT**  
+`not True` → **False**  
+
+Expression becomes:  
+**False and True and False**
+
+---
+
+**Step 4: AND operations left to right**  
+`False and True` → **False**  
+
+Expression becomes:  
+**False and False**  
+
+---
+
+**Step 5: Final AND**  
+`False and False` → **False**  
+
+---
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+122,True and not ( False or False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True and not ( False or False )**
+
+1. **Parentheses first**:  
+   \( False \ or \ False \) → \( False \)  
+
+2. **NOT**:  
+   \( not \ (False) \) → \( True \)  
+
+3. **AND**:  
+   \( True \ and \ True \) → \( True \)  
+
+Final answer: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+123,( ( not False ) ) and True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( ( \text{not False} ) ) \ \text{and} \ \text{True}
+\]
+
+1. **Parentheses first**:  
+Inside the parentheses:  
+\[
+\text{not False} = \text{True}
+\]  
+So the expression becomes:  
+\[
+\text{True} \ \text{and} \ \text{True}
+\]
+
+2. **AND operation**:  
+\[
+\text{True} \ \text{and} \ \text{True} = \text{True}
+\]
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+124,( False ) and False or not False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**( False ) and False or not False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `(False)` is just `False`.  
+Expression becomes:  
+`False and False or not False`
+
+---
+
+**Step 2: Apply `not`**  
+`not False` = `True`  
+Expression becomes:  
+`False and False or True`
+
+---
+
+**Step 3: Apply `and`**  
+`False and False` = `False`  
+Expression becomes:  
+`False or True`
+
+---
+
+**Step 4: Apply `or`**  
+`False or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+125,not True or ( False and True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not True or ( False and True )
+```
+
+**Step 1 – Parentheses first**  
+Inside parentheses: `False and True`  
+`False and True` → `False`  
+
+Expression becomes:  
+```
+not True or False
+```
+
+**Step 2 – NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+```
+False or False
+```
+
+**Step 3 – OR**  
+`False or False` → `False`  
+
+Final result: **false**  
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+126,not not False and not not not False is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not not False and not not not False`
+
+---
+
+**Step 1 – Identify precedence**  
+Precedence: `not` first, then `and`, then `or`.  
+So we evaluate each `not` from left to right in each side of the `and`.
+
+---
+
+**Step 2 – Left side: `not not False`**  
+- `not False` → `True`  
+- `not True` → `False`  
+So left side = `False`
+
+---
+
+**Step 3 – Right side: `not not not False`**  
+- `not False` → `True`  
+- `not True` → `False`  
+- `not False` → `True`  
+So right side = `True`
+
+---
+
+**Step 4 – Apply `and`**  
+`False and True` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+127,not True or False and True or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or False and True or False**
+
+---
+
+**Step 1 – Order of operations**  
+Precedence: **not** > **and** > **or**
+
+---
+
+**Step 2 – Apply `not True`**  
+`not True` = **False**  
+
+Expression becomes:  
+**False or False and True or False**
+
+---
+
+**Step 3 – Apply `False and True`**  
+`False and True` = **False**  
+
+Expression becomes:  
+**False or False or False**
+
+---
+
+**Step 4 – Evaluate left to right (OR is associative)**  
+`False or False` = **False**  
+`False or False` = **False**  
+
+Final result: **False**
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+128,True or False and not True and False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or False and not True and False**
+
+---
+
+### 1. Order of precedence  
+From highest to lowest:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+### 2. Apply **NOT** first  
+`not True` → `False`  
+
+Expression becomes:  
+**True or False and False and False**
+
+---
+
+### 3. Apply **AND** from left to right  
+`False and False` → `False`  
+
+Expression becomes:  
+**True or False and False**  
+
+Now `False and False` → `False`  
+
+Expression becomes:  
+**True or False**
+
+---
+
+### 4. Apply **OR**  
+`True or False` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+129,not not not ( False ) and False is,False,"Let’s evaluate step by step.
+
+**Expression:**  
+`not not not ( False ) and False`
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `False` → `False`  
+So we have:  
+`not not not False and False`
+
+---
+
+**Step 2: Apply NOT operators from right to left**  
+First `not False` → `True`  
+Now: `not not True and False`
+
+Second `not True` → `False`  
+Now: `not False and False`
+
+Third `not False` → `True`  
+Now: `True and False`
+
+---
+
+**Step 3: Apply AND**  
+`True and False` → `False`
+
+---
+
+**Final answer:** false",false,false,True,boolean,,protegi,boolean_expressions,10
+130,not not ( True ) and not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not not ( True ) and not False
+```
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( True )` is `True`.  
+Expression becomes:  
+```
+not not True and not False
+```
+
+**Step 2: Apply NOT from left to right**  
+`not True` → `False`  
+`not False` → `True`  
+So `not not True` = `not (not True)` = `not False` = `True`.  
+
+Expression now:  
+```
+True and not False
+```
+
+**Step 3: Apply remaining NOT**  
+`not False` → `True`  
+
+Expression now:  
+```
+True and True
+```
+
+**Step 4: Apply AND**  
+`True and True` → `True`  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+131,False or ( not ( False ) ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+**False or ( not ( False ) )**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `not ( False )`  
+`not False` = `True`  
+
+So now:  
+**False or True**
+
+---
+
+**Step 2: Apply OR**  
+`False or True` = `True`
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+132,not ( True and True ) or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+`not ( True and True ) or False`  
+
+**Step 1 – Parentheses first**  
+`True and True` → `True`  
+
+Expression becomes:  
+`not True or False`  
+
+**Step 2 – NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+`False or False`  
+
+**Step 3 – OR**  
+`False or False` → `False`  
+
+Final result: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+133,not not ( False or not True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not not ( False or not True )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside: `False or not True`
+
+- `not True` = `False`  
+So: `False or False` = `False`
+
+Now the expression becomes:  
+`not not False`
+
+---
+
+**Step 2: Apply the first `not`**  
+`not False` = `True`
+
+Now: `not True`
+
+---
+
+**Step 3: Apply the second `not`**  
+`not True` = `False`
+
+---
+
+Final result: **False**
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+134,True or ( True or not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+**True or ( True or not False )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `True or not False`
+
+- `not False` = `True`  
+So: `True or True` = `True`
+
+Now the expression becomes:  
+**True or True**
+
+---
+
+**Step 2: Evaluate OR**  
+`True or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+135,( False or not False or False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( \text{False} \ \text{or} \ \text{not False} \ \text{or} \ \text{False} )
+\]
+
+**Step 1:** Apply `not` first (highest precedence after parentheses).  
+\[
+\text{not False} = \text{True}
+\]  
+So the expression becomes:  
+\[
+\text{False} \ \text{or} \ \text{True} \ \text{or} \ \text{False}
+\]
+
+**Step 2:** Evaluate left to right (OR is associative).  
+\[
+\text{False} \ \text{or} \ \text{True} = \text{True}
+\]  
+\[
+\text{True} \ \text{or} \ \text{False} = \text{True}
+\]
+
+**Final result:**  
+\[
+\text{True}
+\]
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+136,( True ) or True and not True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( True ) or True and not True  
+
+**Step 1 – Parentheses**  
+( True ) = True  
+
+Expression becomes:  
+True or True and not True  
+
+**Step 2 – NOT**  
+not True = False  
+
+Expression becomes:  
+True or True and False  
+
+**Step 3 – AND** (higher precedence than OR)  
+True and False = False  
+
+Expression becomes:  
+True or False  
+
+**Step 4 – OR**  
+True or False = True  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+137,False and not ( False and True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and not ( False and True )**
+
+---
+
+**Step 1:** Evaluate the innermost parentheses first.  
+`False and True` → `False` (since AND requires both to be true).  
+
+Now we have:  
+**False and not ( False )**
+
+---
+
+**Step 2:** Apply the `not` operator.  
+`not ( False )` → `True`  
+
+Now we have:  
+**False and True**
+
+---
+
+**Step 3:** Apply the `and` operator.  
+`False and True` → `False`  
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+138,not ( True or False ) or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**not ( True or False ) or True**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses:  
+True or False → True  
+
+So now:  
+not (True) or True  
+
+---
+
+**Step 2: Apply NOT**  
+not (True) → False  
+
+So now:  
+False or True  
+
+---
+
+**Step 3: Apply OR**  
+False or True → True  
+
+---
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+139,( not False or ( True ) ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not False or ( True ) )  
+
+**Step 1:** Handle parentheses first — inside parentheses we have `not False` and `(True)`.  
+- `not False` = `True`  
+- `(True)` = `True`  
+
+So now we have:  
+( True or True )  
+
+**Step 2:** Evaluate `True or True` → `True`  
+
+**Step 3:** Final result is `True`.  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+140,( True ) and False or not False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**( True ) and False or not False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( True )` is just `True`.  
+Expression becomes:  
+`True and False or not False`
+
+---
+
+**Step 2: Apply `not`**  
+`not False` = `True`  
+Expression becomes:  
+`True and False or True`
+
+---
+
+**Step 3: Apply `and`**  
+`True and False` = `False`  
+Expression becomes:  
+`False or True`
+
+---
+
+**Step 4: Apply `or`**  
+`False or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+141,not not not False and True and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not not not False and True and False**  
+
+---
+
+**Step 1: Handle parentheses (none here)**  
+No parentheses, so proceed.
+
+---
+
+**Step 2: Apply NOT operators from right to left**  
+First: **not False** → True  
+Now: **not not True**  
+Second: **not True** → False  
+Now: **not False** → True  
+
+So **not not not False** = **True**  
+
+Expression becomes: **True and True and False**  
+
+---
+
+**Step 3: Apply AND from left to right**  
+**True and True** → True  
+**True and False** → False  
+
+---
+
+**Final result:** False  
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+142,False and not False and ( False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and not False and ( False )**
+
+---
+
+**Step 1: Handle parentheses**  
+The parentheses only contain `False`, so no change:  
+False and not False and False
+
+---
+
+**Step 2: Apply NOT (highest precedence after parentheses)**  
+`not False` = True  
+Expression becomes:  
+False and True and False
+
+---
+
+**Step 3: Apply AND (left to right)**  
+First: `False and True` = False  
+Then: `False and False` = False
+
+---
+
+**Final result:** False
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+143,False or not False or True and True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False or not False or True and True**
+
+---
+
+**Step 1 – Identify the order of operations**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+So first compute `not False`, then `True and True`, then `or`s from left to right.
+
+---
+
+**Step 2 – Apply NOT**  
+`not False` = **True**  
+
+Expression becomes:  
+False **or** True **or** (True and True)
+
+---
+
+**Step 3 – Apply AND**  
+`True and True` = **True**  
+
+Expression becomes:  
+False **or** True **or** True
+
+---
+
+**Step 4 – Apply OR from left to right**  
+`False or True` = **True**  
+`True or True` = **True**  
+
+---
+
+**Final result:** **true**
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+144,not ( False ) or not not False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**not ( False ) or not not False**
+
+---
+
+**Step 1: Handle parentheses**  
+`not ( False )` → `True`  
+
+Expression becomes:  
+**True or not not False**
+
+---
+
+**Step 2: Apply NOT from right to left (highest precedence after parentheses)**  
+`not False` → `True`  
+So `not not False` = `not True` → `False`
+
+Expression becomes:  
+**True or False**
+
+---
+
+**Step 3: Apply OR**  
+`True or False` → `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+145,not ( True or True ) and True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+`not ( True or True ) and True`  
+
+**Step 1: Parentheses first**  
+`( True or True )` → `True`  
+
+**Step 2: Apply NOT**  
+`not (True)` → `False`  
+
+**Step 3: Apply AND**  
+`False and True` → `False`  
+
+Final result: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+146,True or False or not True or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**True or False or not True or True**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence: **not** > **and** > **or**  
+
+So first compute `not True`.  
+
+`not True` = **False**  
+
+Expression becomes:  
+
+True or False or **False** or True  
+
+---
+
+**Step 2: Evaluate left to right** (since all operators are `or` now)  
+
+- `True or False` → **True**  
+- `True or False` → **True**  
+- `True or True` → **True**  
+
+---
+
+**Final result:** **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+147,not True and False or False and True is,False,"Let's evaluate step by step.  
+
+The expression is:  
+
+**not True and False or False and True**  
+
+**Step 1 – Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+**Step 2 – Apply NOT**  
+`not True` → `False`  
+
+So the expression becomes:  
+**False and False or False and True**  
+
+**Step 3 – Apply AND from left to right**  
+`False and False` → `False`  
+`False and True` → `False`  
+
+Expression becomes:  
+**False or False**  
+
+**Step 4 – Apply OR**  
+`False or False` → `False`  
+
+Final result: **false**  
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+148,False or not False or True or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not False or True or True**  
+
+---
+
+**Step 1: Apply NOT (highest precedence after parentheses)**  
+`not False` = `True`  
+
+Expression becomes:  
+**False or True or True or True**  
+
+---
+
+**Step 2: Apply OR from left to right**  
+- `False or True` → `True`  
+- `True or True` → `True`  
+- `True or True` → `True`  
+
+---
+
+**Final result:** `True`  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+149,not True or False and True and True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or False and True and True**  
+
+---
+
+**Step 1 – Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2 – Apply NOT**  
+`not True` → **False**  
+
+Expression becomes:  
+**False or False and True and True**  
+
+---
+
+**Step 3 – Apply AND from left to right**  
+`False and True` → **False**  
+
+Expression becomes:  
+**False or False and True**  
+
+Now `False and True` → **False**  
+
+Expression becomes:  
+**False or False**  
+
+---
+
+**Step 4 – Apply OR**  
+`False or False` → **False**  
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+150,( not not True and not False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+( not not True and not False )
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `not not True and not False`
+
+---
+
+**Step 2: Apply NOT operators from right to left (highest precedence)**  
+- `not True` → False  
+- `not False` → True  
+
+So `not not True` means `not (not True)` = `not False` = **True**  
+
+Now inside parentheses: `True and True`
+
+---
+
+**Step 3: Apply AND**  
+`True and True` → **True**
+
+---
+
+**Step 4: Final result**  
+The expression evaluates to **True**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+151,False and False and not ( True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and False and not ( True )**
+
+---
+
+**Step 1: Handle parentheses and NOT**  
+`not ( True )` → `False`
+
+Now the expression becomes:  
+**False and False and False**
+
+---
+
+**Step 2: Apply AND from left to right**  
+`False and False` → `False`  
+`False and False` → `False`
+
+---
+
+**Step 3: Final result**  
+The entire expression evaluates to **False**.
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+152,True or ( not False ) or True is,True,"Let's evaluate step by step:  
+
+**Expression:**  
+`True or ( not False ) or True`
+
+**Step 1: Handle parentheses and NOT**  
+`not False` = `True`  
+
+Now the expression becomes:  
+`True or True or True`
+
+**Step 2: Apply OR from left to right**  
+`True or True` = `True`  
+`True or True` = `True`  
+
+The final result is **true**.
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+153,False and False and not ( False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and False and not ( False )**
+
+---
+
+**Step 1: Handle parentheses and NOT**  
+`not ( False )` → `True`  
+
+Expression becomes:  
+**False and False and True**
+
+---
+
+**Step 2: Apply AND from left to right**  
+`False and False` → `False`  
+
+Expression becomes:  
+**False and True**  
+
+`False and True` → `False`  
+
+---
+
+**Final result:** `False`  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+154,True and not True or False and True is,False,"Let’s break it down step by step.  
+
+The expression is:  
+
+**True and not True or False and True**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+`True and False or False and True`
+
+---
+
+**Step 3: Apply AND from left to right**  
+First AND: `True and False` = `False`  
+
+Expression becomes:  
+`False or False and True`
+
+Second AND: `False and True` = `False`  
+
+Expression becomes:  
+`False or False`
+
+---
+
+**Step 4: Apply OR**  
+`False or False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+155,False or not False or False or False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not False or False or False**
+
+---
+
+**Step 1: Apply NOT (highest precedence after parentheses)**  
+`not False` = `True`  
+
+So the expression becomes:  
+**False or True or False or False**
+
+---
+
+**Step 2: Evaluate OR from left to right**  
+- `False or True` → `True`  
+- `True or False` → `True`  
+- `True or False` → `True`  
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+156,not True or True and False or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or True and False or False**
+
+---
+
+**Step 1 – Order of precedence:**  
+Parentheses → NOT → AND → OR  
+No parentheses here, so first apply **NOT**.
+
+**not True** = **False**  
+
+Expression becomes:  
+**False or True and False or False**
+
+---
+
+**Step 2 – Apply AND**  
+**True and False** = **False**  
+
+Expression becomes:  
+**False or False or False**
+
+---
+
+**Step 3 – Apply OR from left to right**  
+**False or False** = **False**  
+**False or False** = **False**  
+
+---
+
+Final result: **False**
+
+**Final answer: false**",true,false,False,boolean,,protegi,boolean_expressions,10
+157,False and False and False or not False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False and False and False or not False**
+
+---
+
+**Step 1: Identify the order of operations**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+So first compute `not False`.
+
+---
+
+**Step 2: Evaluate `not False`**  
+`not False` = **True**  
+
+Expression becomes:  
+False and False and False or True
+
+---
+
+**Step 3: Evaluate ANDs from left to right**  
+`False and False` = **False**  
+Then `False and False` = **False**  
+
+So `False and False and False` = False  
+
+Expression now:  
+False or True
+
+---
+
+**Step 4: Evaluate OR**  
+False or True = **True**
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+158,not not not not ( not False ) is,True,"Let’s evaluate step by step.
+
+**Expression:**  
+`not not not not ( not False )`
+
+---
+
+**Step 1:** Evaluate the innermost parentheses first.  
+`not False` = `True`
+
+So the expression becomes:  
+`not not not not True`
+
+---
+
+**Step 2:** Apply the `not` operators from right to left (since they are unary and associate to the right in logic, but here they are applied sequentially).  
+
+We can count the number of `not`s in front of `True`:  
+`not not not not True`  
+Number of `not`s = 4.
+
+---
+
+**Step 3:** Effect of multiple `not`s:  
+- `not True` = `False`  
+- `not False` = `True`  
+
+So each pair of `not`s cancels out.  
+4 `not`s → even number → same as original value `True`.
+
+---
+
+**Step 4:** Final result = `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+159,True or not False and True and False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not False and True and False**
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. NOT  
+3. AND  
+4. OR  
+
+---
+
+**Step 2: Apply NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+**True or True and True and False**
+
+---
+
+**Step 3: Apply AND from left to right**  
+`True and True` → `True`  
+
+Expression becomes:  
+**True or True and False**  
+
+Now `True and False` → `False`  
+
+Expression becomes:  
+**True or False**
+
+---
+
+**Step 4: Apply OR**  
+`True or False` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+160,not not False or not False or True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not not False or not False or True**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so we move to the next precedence level.
+
+---
+
+**Step 2: Apply NOT operators from right to left (highest precedence after parentheses)**  
+
+First: `not False` → `True`  
+So `not not False` becomes `not (not False)` = `not (True)` → `False`
+
+So the expression becomes:  
+
+**False or not False or True**
+
+Now `not False` → `True`  
+
+Expression becomes:  
+
+**False or True or True**
+
+---
+
+**Step 3: Apply OR from left to right**  
+
+`False or True` → `True`  
+`True or True` → `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+161,not ( not not True ) or False is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not ( not not True ) or False`
+
+---
+
+**Step 1: Evaluate `not not True`**  
+- `not True` → `False`  
+- `not False` → `True`  
+
+So `not not True` = `True`.
+
+---
+
+**Step 2: Evaluate `not ( not not True )`**  
+From Step 1: `not not True` = `True`  
+So `not (True)` → `False`.
+
+---
+
+**Step 3: Evaluate `False or False`**  
+Expression now: `False or False`  
+`False or False` → `False`.
+
+---
+
+Final result: **false**
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+162,True and False or ( not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+**True and False or ( not False )**
+
+---
+
+**Step 1: Parentheses**  
+`( not False )` → `not False` means `True`.  
+So now:  
+**True and False or True**
+
+---
+
+**Step 2: NOT** — Already done.
+
+---
+
+**Step 3: AND**  
+`True and False` → `False`  
+So now:  
+**False or True**
+
+---
+
+**Step 4: OR**  
+`False or True` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+163,False and ( True and not False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and ( True and not False )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `True and not False`  
+- `not False` = `True`  
+- So `True and True` = `True`  
+
+Now the expression becomes:  
+**False and True**
+
+---
+
+**Step 2: Evaluate `False and True`**  
+`False and True` = `False`
+
+---
+
+**Final answer: false**",true,false,False,boolean,,protegi,boolean_expressions,10
+164,False or True and not False or True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**False or True and not False or True**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+---
+
+**Step 2: Handle NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+**False or True and True or True**
+
+---
+
+**Step 3: Handle AND**  
+`True and True` → `True`  
+
+Expression becomes:  
+**False or True or True**
+
+---
+
+**Step 4: Handle OR from left to right**  
+`False or True` → `True`  
+
+Now:  
+**True or True** → `True`
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+165,True and not not ( not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+**True and not not ( not False )**
+
+---
+
+**Step 1: Parentheses first**  
+Inside parentheses: `not False`  
+`not False` = `True`
+
+Expression becomes:  
+**True and not not True**
+
+---
+
+**Step 2: Apply `not` from right to left (highest precedence after parentheses)**  
+`not True` = `False`  
+Expression: **True and not False**
+
+---
+
+**Step 3: Apply next `not`**  
+`not False` = `True`  
+Expression: **True and True**
+
+---
+
+**Step 4: Apply `and`**  
+`True and True` = `True`
+
+---
+
+Final answer: **true**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+166,True and False and not True or False is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True and False and not True or False**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+`True and False and False or False`
+
+---
+
+**Step 3: Apply AND from left to right**  
+`True and False` → `False`  
+
+Now: `False and False or False`  
+
+`False and False` → `False`  
+
+Now: `False or False`
+
+---
+
+**Step 4: Apply OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+167,( False or not not not False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( \text{False} \ \text{or} \ \text{not not not False} )
+\]
+
+---
+
+**Step 1: Handle the triple NOT**  
+Order: `not not not False` means `not (not (not False))`.  
+
+- `not False` = True  
+- `not True` = False  
+- `not False` = True  
+
+So `not not not False` = True.
+
+---
+
+**Step 2: Substitute back into the OR expression**  
+\[
+\text{False} \ \text{or} \ \text{True}
+\]
+
+---
+
+**Step 3: Evaluate OR**  
+False or True = True.
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+168,( True ) and True and not True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+( True ) and True and not True  
+
+**Step 1: Parentheses**  
+( True ) = True  
+
+Expression becomes:  
+True and True and not True  
+
+**Step 2: NOT**  
+not True = False  
+
+Expression becomes:  
+True and True and False  
+
+**Step 3: AND** (left to right)  
+True and True = True  
+True and False = False  
+
+**Final result:** False  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+169,False or not True or True and False is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False or not True or True and False**
+
+---
+
+**Step 1 – Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. NOT  
+3. AND  
+4. OR  
+
+---
+
+**Step 2 – Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**False or False or True and False**
+
+---
+
+**Step 3 – Apply AND**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False or False or False**
+
+---
+
+**Step 4 – Apply OR from left to right**  
+`False or False` → `False`  
+`False or False` → `False`  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+170,not False and True or ( True ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not False and True or ( True )
+```
+
+**Step 1: Handle parentheses**  
+`( True )` is `True`.  
+Expression becomes:  
+```
+not False and True or True
+```
+
+**Step 2: Apply `not`**  
+`not False` is `True`.  
+Expression becomes:  
+```
+True and True or True
+```
+
+**Step 3: Apply `and`**  
+`True and True` is `True`.  
+Expression becomes:  
+```
+True or True
+```
+
+**Step 4: Apply `or`**  
+`True or True` is `True`.  
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+171,not True and False or False and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not True and False or False and False**  
+
+---
+
+**Step 1 – Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2 – Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**False and False or False and False**  
+
+---
+
+**Step 3 – Apply AND from left to right**  
+First `False and False` → `False`  
+
+Expression becomes:  
+**False or False and False**  
+
+Now `False and False` → `False`  
+
+Expression becomes:  
+**False or False**  
+
+---
+
+**Step 4 – Apply OR**  
+`False or False` → `False`  
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+172,not False or ( ( False ) ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not False or ( ( False ) )
+```
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( False )` is just `False`.  
+So the expression becomes:  
+```
+not False or False
+```
+
+**Step 2: Apply `not`**  
+`not False` = `True`  
+Expression becomes:  
+```
+True or False
+```
+
+**Step 3: Apply `or`**  
+`True or False` = `True`  
+
+Final result: **true**  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+173,not True or True and False and False is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not True or True and False and False`
+
+**Step 1 – Order of precedence:**  
+Parentheses (none here) → NOT → AND → OR.
+
+**Step 2 – Apply NOT:**  
+`not True` = `False`
+
+So expression becomes:  
+`False or True and False and False`
+
+**Step 3 – Apply AND from left to right:**  
+`True and False` = `False`  
+Then `False and False` = `False`
+
+So expression becomes:  
+`False or False`
+
+**Step 4 – Apply OR:**  
+`False or False` = `False`
+
+Final result: **false**
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+174,( False ) or False and not True is,False,"Let’s evaluate step by step.
+
+Expression:  
+`( False ) or False and not True`
+
+---
+
+**Step 1: Parentheses**  
+`( False )` is just `False`.  
+Expression becomes:  
+`False or False and not True`
+
+---
+
+**Step 2: NOT**  
+`not True` → `False`.  
+Expression becomes:  
+`False or False and False`
+
+---
+
+**Step 3: AND** (higher precedence than OR)  
+`False and False` → `False`.  
+Expression becomes:  
+`False or False`
+
+---
+
+**Step 4: OR**  
+`False or False` → `False`
+
+---
+
+Final answer: **false**
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+175,not False or ( True or True ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`not False or ( True or True )`
+
+**Step 1: Parentheses first**  
+`( True or True )` → `True`
+
+Now we have:  
+`not False or True`
+
+**Step 2: NOT**  
+`not False` → `True`
+
+Now we have:  
+`True or True`
+
+**Step 3: OR**  
+`True or True` → `True`
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+176,True or False and not ( True ) is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**True or False and not ( True )**  
+
+---
+
+**Step 1: Parentheses**  
+`not ( True )` → `False`  
+
+Expression becomes:  
+**True or False and False**  
+
+---
+
+**Step 2: NOT**  
+Already done.  
+
+---
+
+**Step 3: AND**  
+`False and False` → `False`  
+
+Expression becomes:  
+**True or False**  
+
+---
+
+**Step 4: OR**  
+`True or False` → `True`  
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+177,not True or False or ( True ) is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not True or False or ( True )**
+
+---
+
+**Step 1: Handle parentheses**  
+( True ) = True  
+
+Expression becomes:  
+not True or False or True  
+
+---
+
+**Step 2: Apply NOT (highest precedence after parentheses)**  
+not True = False  
+
+Expression becomes:  
+False or False or True  
+
+---
+
+**Step 3: Apply OR from left to right**  
+False or False = False  
+False or True = True  
+
+---
+
+**Final result:** True  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+178,True and ( not ( True ) ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`True and ( not ( True ) )`
+
+1. **Parentheses first**:  
+Inside `( not ( True ) )`, `not ( True )` evaluates to `False`.  
+So now we have:  
+`True and False`
+
+2. **AND operation**:  
+`True and False` evaluates to `False`.
+
+Final answer: **false**
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+179,not True and ( False or True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not True and ( False or True )
+```
+
+**Step 1 – Parentheses first**  
+Inside parentheses: `False or True`  
+`False or True` = `True`  
+
+Expression becomes:  
+```
+not True and True
+```
+
+**Step 2 – NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+```
+False and True
+```
+
+**Step 3 – AND**  
+`False and True` = `False`  
+
+Final result: **false**  
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+180,not ( True or True ) and False is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not ( True or True ) and False`
+
+**Step 1: Parentheses first**  
+`( True or True )` → `True`
+
+Now we have:  
+`not True and False`
+
+**Step 2: NOT**  
+`not True` → `False`
+
+Now we have:  
+`False and False`
+
+**Step 3: AND**  
+`False and False` → `False`
+
+Final result: **false**
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+181,False or False and False or not True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or False and False or not True**
+
+---
+
+**Step 1: Identify order of precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+`False or False and False or False`
+
+---
+
+**Step 3: Apply AND**  
+`False and False` → `False`  
+
+Expression becomes:  
+`False or False or False`
+
+---
+
+**Step 4: Apply OR from left to right**  
+`False or False` → `False`  
+`False or False` → `False`  
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+182,( not False ) or ( False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( not False ) or ( False )`
+
+1. **Parentheses first**  
+   `( not False )` → `not False` means the negation of `False`, which is `True`.  
+   So we have: `True or (False)`
+
+2. **Apply OR**  
+   `True or False` → `True` (since OR returns True if at least one operand is True).
+
+Final result: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+183,False or not False or not not True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False or not False or not not True**
+
+---
+
+**Step 1: Identify the order of operations**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+So we evaluate **not** first, from left to right.
+
+---
+
+**Step 2: Evaluate each NOT**  
+
+- **not False** → True  
+- **not not True** → not (not True) → not (False) → True  
+
+So the expression becomes:  
+
+**False or True or True**
+
+---
+
+**Step 3: Evaluate OR from left to right**  
+
+- **False or True** → True  
+- **True or True** → True  
+
+---
+
+**Final result:** true  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+184,not not not ( True and False ) is,True,"Let’s evaluate step by step.
+
+**Step 1:** Handle parentheses first.  
+Inside parentheses:  
+`True and False` → `False`
+
+So the expression becomes:  
+`not not not False`
+
+**Step 2:** Apply `not` operators from right to left (since they are right-associative in logic, but here we can evaluate stepwise from the innermost `not`).  
+
+First `not False` → `True`  
+Expression: `not not True`
+
+Second `not True` → `False`  
+Expression: `not False`
+
+Third `not False` → `True`
+
+**Final result:** `True`
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+185,not not ( not True ) or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not not ( not True ) or False
+```
+
+**Step 1: Parentheses first**  
+Inside parentheses: `not True` → `False`  
+Expression becomes:  
+```
+not not False or False
+```
+
+**Step 2: Apply `not` from right to left (NOT is right-associative)**  
+`not False` → `True`  
+Expression becomes:  
+```
+not True or False
+```
+
+**Step 3: Apply remaining `not`**  
+`not True` → `False`  
+Expression becomes:  
+```
+False or False
+```
+
+**Step 4: Apply OR**  
+`False or False` → `False`  
+
+Final result: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+186,False or not False and ( False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or not False and ( False )**
+
+---
+
+**Step 1: Parentheses**  
+The parentheses contain `(False)`, which is just `False`.  
+Expression becomes:  
+False or not False and False
+
+---
+
+**Step 2: NOT**  
+`not False` = `True`  
+Expression becomes:  
+False or True and False
+
+---
+
+**Step 3: AND** (higher precedence than OR)  
+`True and False` = `False`  
+Expression becomes:  
+False or False
+
+---
+
+**Step 4: OR**  
+`False or False` = `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+187,not True or False or not not True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or False or not not True**
+
+---
+
+**Step 1 – Handle parentheses (none here)**  
+No parentheses, so proceed.
+
+---
+
+**Step 2 – Apply NOT operators from left to right**  
+First `not True` → **False**  
+
+Expression becomes:  
+**False or False or not not True**
+
+---
+
+**Step 3 – Next NOT**  
+`not not True` → `not (not True)` → `not False` → **True**  
+
+Expression becomes:  
+**False or False or True**
+
+---
+
+**Step 4 – Apply OR from left to right**  
+`False or False` → **False**  
+`False or True` → **True**
+
+---
+
+Final result: **True**
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+188,True or not False and True or True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not False and True or True**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+`True or True and True or True`
+
+---
+
+**Step 3: Apply AND**  
+`True and True` → `True`  
+
+Expression becomes:  
+`True or True or True`
+
+---
+
+**Step 4: Apply OR from left to right**  
+`True or True` → `True`  
+`True or True` → `True`  
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+189,not True or not False and not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**not True or not False and not False**  
+
+---
+
+**Step 1 – Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **not**  
+3. **and**  
+4. **or**  
+
+---
+
+**Step 2 – Apply `not`**  
+- `not True` → **False**  
+- `not False` → **True**  
+- `not False` → **True**  
+
+Expression becomes:  
+**False or True and True**  
+
+---
+
+**Step 3 – Apply `and`**  
+`True and True` → **True**  
+
+Expression becomes:  
+**False or True**  
+
+---
+
+**Step 4 – Apply `or`**  
+`False or True` → **True**  
+
+---
+
+Final answer: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+190,False and not False or False and True is,False,"Let's evaluate step by step.  
+
+The expression is:  
+**False and not False or False and True**
+
+---
+
+**Step 1: Identify order of precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. NOT  
+3. AND  
+4. OR  
+
+So first compute `not False`.
+
+---
+
+**Step 2: Apply NOT**  
+`not False` = `True`  
+
+Expression becomes:  
+**False and True or False and True**
+
+---
+
+**Step 3: Apply AND from left to right**  
+`False and True` = `False`  
+`False and True` = `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+191,( ( True ) ) or not False is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( ( True ) ) or not False`
+
+**Step 1: Remove redundant parentheses**  
+`( True )` is just `True`.  
+So we have:  
+`True or not False`
+
+**Step 2: Apply `not` operator**  
+`not False` → `True`  
+Now:  
+`True or True`
+
+**Step 3: Apply `or` operator**  
+`True or True` → `True`
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+192,not ( False ) and ( False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not ( False ) and ( False )**
+
+---
+
+**Step 1:** Handle parentheses and `not` (highest precedence after parentheses).  
+`not ( False )` → `True`
+
+Now the expression becomes:  
+**True and False**
+
+---
+
+**Step 2:** Apply `and` operator.  
+`True and False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+193,True or not False and False and False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not False and False and False**
+
+---
+
+### 1. Identify operator precedence  
+Order:  
+1. Parentheses (none here)  
+2. **NOT** (`not`)  
+3. **AND** (`and`)  
+4. **OR** (`or`)  
+
+---
+
+### 2. Apply `not False` first  
+`not False` = `True`  
+
+Expression becomes:  
+**True or True and False and False**
+
+---
+
+### 3. Apply `and` from left to right  
+`True and False` = `False`  
+
+Expression becomes:  
+**True or False and False**
+
+Now `False and False` = `False`  
+
+Expression becomes:  
+**True or False**
+
+---
+
+### 4. Apply `or`  
+`True or False` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+194,not False and not True or not True is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False and not True or not True**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. **not** (highest)  
+2. **and**  
+3. **or** (lowest)  
+
+So we evaluate **not** first.
+
+---
+
+**Step 2: Apply NOT operations**  
+- not False → True  
+- not True → False  
+- not True → False  
+
+Expression becomes:  
+**True and False or False**
+
+---
+
+**Step 3: Apply AND**  
+True and False → False  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+False or False → False  
+
+---
+
+**Final result:** false  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+195,False and False or False or not True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False and False or False or not True**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**False and False or False or False**  
+
+---
+
+**Step 3: Apply AND**  
+`False and False` → `False`  
+
+Expression becomes:  
+**False or False or False**  
+
+---
+
+**Step 4: Apply OR left to right**  
+`False or False` → `False`  
+`False or False` → `False`  
+
+---
+
+**Final result:** `False`  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+196,( not False ) or not not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+(\text{not False}) \ \text{or} \ \text{not not False}
+\]
+
+---
+
+**Step 1: Handle parentheses**  
+\[
+\text{not False} = \text{True}
+\]  
+So the expression becomes:  
+\[
+\text{True} \ \text{or} \ \text{not not False}
+\]
+
+---
+
+**Step 2: Apply NOT from right to left (highest precedence after parentheses)**  
+First: \(\text{not False} = \text{True}\)  
+Second: \(\text{not True} = \text{False}\)  
+
+So \(\text{not not False} = \text{False}\).
+
+---
+
+**Step 3: Apply OR**  
+\[
+\text{True} \ \text{or} \ \text{False} = \text{True}
+\]
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+197,( False ) or not True and False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+**( False ) or not True and False**
+
+---
+
+**Step 1: Handle parentheses**  
+( False ) = False  
+
+Expression becomes:  
+**False or not True and False**
+
+---
+
+**Step 2: Apply NOT (highest precedence after parentheses)**  
+not True = False  
+
+Expression becomes:  
+**False or False and False**
+
+---
+
+**Step 3: Apply AND (precedence over OR)**  
+False and False = False  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+False or False = False  
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+198,True or not not ( not False ) is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True or not not ( not False )**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `not False`  
+`not False` = `True`  
+
+Expression becomes:  
+`True or not not True`
+
+---
+
+**Step 2: Apply `not` from right to left (highest precedence after parentheses)**  
+`not True` = `False`  
+
+Expression becomes:  
+`True or not False`
+
+---
+
+**Step 3: Apply the remaining `not`**  
+`not False` = `True`  
+
+Expression becomes:  
+`True or True`
+
+---
+
+**Step 4: Apply `or`**  
+`True or True` = `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+199,True or ( not ( True ) ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True or ( not ( True ) )**
+
+1. **Parentheses first**:  
+   Inside `( not ( True ) )`:  
+   `not (True)` → `False`  
+
+2. Now the expression is:  
+   `True or False`  
+
+3. **OR operator**:  
+   `True or False` → `True`  
+
+Final answer: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+200,( True or not False ) or False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( \text{True} \ \text{or} \ \text{not} \ \text{False} ) \ \text{or} \ \text{False}
+\]
+
+**Step 1:** Handle parentheses first.  
+Inside:  
+\[
+\text{True} \ \text{or} \ (\text{not} \ \text{False})
+\]  
+\[
+\text{not} \ \text{False} = \text{True}
+\]  
+So:  
+\[
+\text{True} \ \text{or} \ \text{True} = \text{True}
+\]  
+
+**Step 2:** Now the expression becomes:  
+\[
+\text{True} \ \text{or} \ \text{False}
+\]  
+\[
+\text{True} \ \text{or} \ \text{False} = \text{True}
+\]  
+
+Final result: **true**  
+
+\[
+\boxed{\text{true}}
+\]  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+201,( not ( False ) ) or False is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( not ( False ) ) or False`
+
+1. **Parentheses first**:  
+Inside `( not ( False ) )`, we evaluate `not False`.  
+`not False` = `True`.
+
+So now we have:  
+`True or False`
+
+2. **OR operation**:  
+`True or False` = `True`
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+202,False or True or False and not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**False or True or False and not False**
+
+---
+
+**Step 1: Identify order of precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+So first compute `not False`.
+
+`not False` = **True**
+
+Expression becomes:  
+False or True or False and True
+
+---
+
+**Step 2: Apply AND**  
+`False and True` = **False**
+
+Expression becomes:  
+False or True or False
+
+---
+
+**Step 3: Apply OR left to right**  
+`False or True` = **True**  
+`True or False` = **True**
+
+---
+
+Final result: **true**
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+203,False or True and not not not False is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**False or True and not not not False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are no parentheses, so skip.
+
+---
+
+**Step 2: Apply NOT operators (right to left within precedence)**  
+First, `not False` → `True`  
+Then `not True` → `False`  
+Then `not False` → `True`  
+
+So `not not not False` = `not not (not False)`  
+= `not not True`  
+= `not False`  
+= `True`
+
+Expression becomes:  
+**False or True and True**
+
+---
+
+**Step 3: Apply AND before OR**  
+`True and True` → `True`
+
+Expression becomes:  
+**False or True**
+
+---
+
+**Step 4: Apply OR**  
+`False or True` → `True`
+
+---
+
+Final answer: **true**
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+204,( False ) or not False or True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+**( False ) or not False or True**
+
+---
+
+**Step 1: Handle parentheses**  
+( False ) = **False**  
+
+Expression becomes:  
+**False or not False or True**
+
+---
+
+**Step 2: Apply NOT**  
+not False = **True**  
+
+Expression becomes:  
+**False or True or True**
+
+---
+
+**Step 3: Apply OR from left to right**  
+False or True → **True**  
+True or True → **True**  
+
+---
+
+**Final result:** true  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+205,False and not ( True ) or True is,True,"Let’s evaluate step by step.
+
+Expression:  
+**False and not ( True ) or True**
+
+---
+
+**Step 1: Handle parentheses and NOT**  
+`not ( True )` → `False`
+
+Now the expression becomes:  
+**False and False or True**
+
+---
+
+**Step 2: Apply AND before OR**  
+`False and False` → `False`
+
+Now the expression becomes:  
+**False or True**
+
+---
+
+**Step 3: Apply OR**  
+`False or True` → `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+206,False and not True and True or False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False and not True and True or False**
+
+---
+
+**Step 1: Handle parentheses**  
+There are none.
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+**False and False and True or False**
+
+---
+
+**Step 3: Apply AND from left to right**  
+`False and False` = `False`  
+
+Expression becomes:  
+**False and True or False**  
+
+`False and True` = `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+207,( not not not True and True ) is,False,"Let’s evaluate step by step.
+
+**Expression:**  
+`( not not not True and True )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside: `not not not True and True`
+
+---
+
+**Step 2: Apply `not` operators from right to left**  
+`not True` → `False`  
+`not False` → `True`  
+`not True` → `False`
+
+So `not not not True` = `False`.
+
+---
+
+**Step 3: Apply `and`**  
+`False and True` → `False`
+
+---
+
+**Step 4: Final result**  
+`(False)` = `False`
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+208,True and not True or False or True is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True and not True or False or True**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not True` = `False`  
+
+Expression becomes:  
+**True and False or False or True**  
+
+---
+
+**Step 3: Apply AND**  
+`True and False` = `False`  
+
+Expression becomes:  
+**False or False or True**  
+
+---
+
+**Step 4: Apply OR left to right**  
+`False or False` = `False`  
+`False or True` = `True`  
+
+---
+
+**Final result:** `True`  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+209,not False and False and False and True is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not False and False and False and True**
+
+---
+
+**Step 1: Apply NOT first**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and False and False and True**
+
+---
+
+**Step 2: AND is left-associative**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False and False and True**
+
+---
+
+**Step 3:**  
+`False and False` → `False`  
+
+Expression becomes:  
+**False and True**
+
+---
+
+**Step 4:**  
+`False and True` → `False`  
+
+---
+
+Final result: **False**
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+210,not False or True and False and False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**not False or True and False and False**
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **not**  
+3. **and**  
+4. **or**  
+
+---
+
+**Step 2: Apply `not`**  
+`not False` → `True`  
+
+Expression becomes:  
+**True or True and False and False**
+
+---
+
+**Step 3: Apply `and` from left to right**  
+`True and False` → `False`  
+
+Expression becomes:  
+**True or False and False**  
+
+Now `False and False` → `False`  
+
+Expression becomes:  
+**True or False**
+
+---
+
+**Step 4: Apply `or`**  
+`True or False` → `True`
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+211,False or not not not False and True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not not not False and True**
+
+---
+
+### 1. Order of precedence  
+Parentheses → **NOT** → **AND** → **OR**  
+No parentheses here, so first handle **NOT** operators from right to left.
+
+---
+
+### 2. Evaluate `not False`  
+`not False` = **True**  
+
+Expression becomes:  
+False or not not True and True
+
+---
+
+### 3. Evaluate `not True`  
+`not True` = **False**  
+
+Expression becomes:  
+False or not False and True
+
+---
+
+### 4. Evaluate `not False`  
+`not False` = **True**  
+
+Expression becomes:  
+False or True and True
+
+---
+
+### 5. Apply **AND** before **OR**  
+`True and True` = **True**  
+
+Expression becomes:  
+False or True
+
+---
+
+### 6. Apply **OR**  
+`False or True` = **True**
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+212,False and False or not True and False is,False,"Let’s break this down step by step.  
+
+The expression is:  
+
+**False and False or not True and False**
+
+---
+
+### 1. Order of precedence  
+From highest to lowest:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+### 2. Apply **NOT**  
+`not True` → `False`  
+
+Expression becomes:  
+**False and False or False and False**
+
+---
+
+### 3. Apply **AND** from left to right  
+First `False and False` → `False`  
+Then `False and False` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+### 4. Apply **OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+213,not True or False or True and True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**not True or False or True and True**  
+
+---
+
+**Step 1 – Identify operator precedence**  
+Order:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2 – Apply NOT**  
+`not True` → **False**  
+
+Expression becomes:  
+**False or False or True and True**  
+
+---
+
+**Step 3 – Apply AND**  
+`True and True` → **True**  
+
+Expression becomes:  
+**False or False or True**  
+
+---
+
+**Step 4 – Apply OR from left to right**  
+`False or False` → **False**  
+`False or True` → **True**  
+
+---
+
+**Final result:** **True**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+214,False and not True and False and True is,False,"Let’s evaluate step by step.
+
+Expression:  
+**False and not True and False and True**
+
+---
+
+**Step 1 – Handle `not` (highest precedence after parentheses, none here)**  
+`not True` = `False`
+
+Expression becomes:  
+**False and False and False and True**
+
+---
+
+**Step 2 – Apply `and` from left to right**  
+`and` is associative, so we can group left-to-right:
+
+- `False and False` → `False`  
+- `False and False` → `False`  
+- `False and True` → `False`
+
+Final result: **False**
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+215,( True ) and not True or True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+( \text{True} ) \ \text{and} \ \text{not} \ \text{True} \ \text{or} \ \text{True}
+\]
+
+---
+
+**Step 1: Parentheses**  
+The parentheses around the first `True` don’t change its value.  
+So we have:  
+\[
+\text{True} \ \text{and} \ \text{not} \ \text{True} \ \text{or} \ \text{True}
+\]
+
+---
+
+**Step 2: NOT**  
+\[
+\text{not} \ \text{True} = \text{False}
+\]  
+Expression becomes:  
+\[
+\text{True} \ \text{and} \ \text{False} \ \text{or} \ \text{True}
+\]
+
+---
+
+**Step 3: AND**  
+\[
+\text{True} \ \text{and} \ \text{False} = \text{False}
+\]  
+Expression becomes:  
+\[
+\text{False} \ \text{or} \ \text{True}
+\]
+
+---
+
+**Step 4: OR**  
+\[
+\text{False} \ \text{or} \ \text{True} = \text{True}
+\]
+
+---
+
+Final answer: **true**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+216,( not not not False or True ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( not not not False or True )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside: `not not not False`
+
+---
+
+**Step 2: Apply `not` from right to left**  
+- `not False` → `True`  
+- `not True` → `False`  
+- `not False` → `True`
+
+So `(not not not False)` = `True`.
+
+---
+
+**Step 3: Evaluate `or True`**  
+`True or True` → `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+217,( True and not True and False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+( True and not True and False )  
+
+**Step 1:** Handle parentheses — already grouped.  
+Inside: `True and not True and False`  
+
+**Step 2:** Apply `not` (highest precedence after parentheses).  
+`not True` = `False`  
+
+So now: `True and False and False`  
+
+**Step 3:** Apply `and` from left to right (associative).  
+`True and False` = `False`  
+
+Now: `False and False` = `False`  
+
+Final result: **false**  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+218,True or ( ( not True ) ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+**True or ( ( not True ) )**
+
+1. **Parentheses first**:  
+   Inside parentheses: `( not True )`  
+   `not True` = `False`  
+   So the expression becomes:  
+   `True or False`
+
+2. **Apply OR**:  
+   `True or False` = `True`
+
+Final answer: **true**  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+219,False or not True and not not False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or not True and not not False**
+
+---
+
+**Step 1 – Identify order of precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. NOT (`not`)  
+3. AND (`and`)  
+4. OR (`or`)  
+
+---
+
+**Step 2 – Evaluate `not True`**  
+`not True` = **False**  
+
+Expression becomes:  
+False **or** False **and** not not False  
+
+---
+
+**Step 3 – Evaluate `not False`**  
+`not False` = **True**  
+
+Expression becomes:  
+False **or** False **and** not True  
+
+---
+
+**Step 4 – Evaluate `not True` again**  
+`not True` = **False**  
+
+Expression becomes:  
+False **or** False **and** False  
+
+---
+
+**Step 5 – Apply AND**  
+`False and False` = **False**  
+
+Expression becomes:  
+False **or** False  
+
+---
+
+**Step 6 – Apply OR**  
+`False or False` = **False**  
+
+---
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+220,( not False or True ) and True is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+(\text{not False or True}) \ \text{and} \ \text{True}
+\]
+
+**Step 1: Handle parentheses first**  
+Inside parentheses:  
+\[
+\text{not False or True}
+\]  
+Order: NOT before OR.  
+\[
+\text{not False} = \text{True}
+\]  
+So:  
+\[
+\text{True or True} = \text{True}
+\]  
+
+**Step 2: Substitute back**  
+Expression becomes:  
+\[
+\text{True and True}
+\]  
+
+**Step 3: Evaluate AND**  
+\[
+\text{True and True} = \text{True}
+\]  
+
+Final result: **true**  
+
+\[
+\boxed{\text{true}}
+\]  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+221,True and False or ( not True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**True and False or ( not True )**
+
+---
+
+**Step 1: Parentheses**  
+`( not True )` → `False`  
+
+Expression becomes:  
+**True and False or False**
+
+---
+
+**Step 2: NOT** — already done.
+
+---
+
+**Step 3: AND**  
+`True and False` → `False`  
+
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: OR**  
+`False or False` → `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+222,not ( False or False or True ) is,False,"Let’s evaluate step by step.
+
+The expression is:  
+**not ( False or False or True )**
+
+---
+
+**Step 1: Evaluate inside parentheses**  
+Inside: `False or False or True`  
+Logical OR is left-associative.
+
+- `False or False` → **False**  
+- `False or True` → **True**  
+
+So `(False or False or True)` = **True**.
+
+---
+
+**Step 2: Apply NOT**  
+`not (True)` → **False**
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+223,False or ( True and not True ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or ( True and not True )**
+
+1. **Parentheses first**:  
+Inside: `True and not True`  
+   - `not True` → `False`  
+   - `True and False` → `False`  
+
+So parentheses part becomes `False`.
+
+2. Now the expression is:  
+**False or False**
+
+3. `False or False` → `False`
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+224,( not ( False ) and False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+( not ( False ) and False )
+
+---
+
+**Step 1:** Handle parentheses and `not` first.  
+Inside: `not ( False )`  
+`not False` = `True`  
+
+So now we have:  
+( True and False )
+
+---
+
+**Step 2:** Apply `and` operator.  
+`True and False` = `False`
+
+---
+
+**Step 3:** Final result.  
+`False`
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+225,not not not ( False and True ) is,True,"Let’s evaluate step by step.
+
+**Expression:**  
+`not not not ( False and True )`
+
+---
+
+**Step 1: Parentheses first**  
+`False and True` → `False` (since AND is true only if both are true)
+
+Expression becomes:  
+`not not not False`
+
+---
+
+**Step 2: Apply NOT from right to left**  
+First `not False` → `True`  
+Now: `not not True`
+
+Second `not True` → `False`  
+Now: `not False`
+
+Third `not False` → `True`
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+226,not False or ( not not False ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not False or ( not not False )
+```
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `not not False`  
+- `not False` → `True`  
+- `not True` → `False`  
+
+So `( not not False )` becomes `False`.  
+
+Expression now:  
+```
+not False or False
+```
+
+**Step 2: Apply `not`**  
+`not False` → `True`  
+
+Expression now:  
+```
+True or False
+```
+
+**Step 3: Apply `or`**  
+`True or False` → `True`  
+
+Final result: **true**  
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+227,not not ( False and not False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+```
+not not ( False and not False )
+```
+
+**Step 1:** Evaluate innermost parentheses first.  
+Inside: `False and not False`  
+
+**Step 2:** Evaluate `not False` → `True`.  
+Now: `False and True` → `False`.  
+
+So parentheses become: `(False)`.
+
+**Step 3:** Now we have `not not False`.  
+
+**Step 4:** First `not False` → `True`.  
+
+**Step 5:** Then `not True` → `False`.  
+
+Final result: **False**.
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+228,not ( not not False ) and True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+**not ( not not False ) and True**
+
+---
+
+**Step 1: Evaluate innermost NOT**  
+`not False` → `True`
+
+Expression becomes:  
+`not ( not True ) and True`
+
+---
+
+**Step 2: Evaluate next NOT**  
+`not True` → `False`
+
+Expression becomes:  
+`not ( False ) and True`
+
+---
+
+**Step 3: Evaluate outer NOT**  
+`not False` → `True`
+
+Expression becomes:  
+`True and True`
+
+---
+
+**Step 4: Evaluate AND**  
+`True and True` → `True`
+
+---
+
+Final answer: **true**
+
+---
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+229,not not ( False and not True ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not not ( False and not True )`
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside: `False and not True`
+
+- `not True` = `False`  
+So: `False and False` = `False`
+
+Now we have:  
+`not not (False)`
+
+---
+
+**Step 2: Apply the first `not`**  
+`not False` = `True`
+
+Now: `not True`
+
+---
+
+**Step 3: Apply the second `not`**  
+`not True` = `False`
+
+---
+
+Final result: **False**
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+230,True and not True and True and True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**True and not True and True and True**
+
+---
+
+**Step 1: Apply NOT (highest precedence after parentheses)**  
+`not True` = `False`  
+
+Expression becomes:  
+**True and False and True and True**
+
+---
+
+**Step 2: Apply AND from left to right**  
+`True and False` = `False`  
+
+Expression becomes:  
+**False and True and True**
+
+---
+
+**Step 3: Continue AND**  
+`False and True` = `False`  
+
+Expression becomes:  
+**False and True**
+
+---
+
+**Step 4: Final AND**  
+`False and True` = `False`  
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+231,True and True and not not not False is,True,"Let’s break this down step by step.  
+
+The expression is:  
+
+**True and True and not not not False**
+
+---
+
+**Step 1: Handle the `not not not False` part**  
+- `not False` → `True`  
+- `not True` → `False`  
+- `not False` → `True`  
+
+So `not not not False` = `True`.
+
+---
+
+**Step 2: Substitute back into the expression**  
+Now we have:  
+`True and True and True`
+
+---
+
+**Step 3: Evaluate `and` from left to right**  
+- `True and True` → `True`  
+- `True and True` → `True`  
+
+---
+
+**Final result:** `True`
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+232,True and ( not True or False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**True and ( not True or False )**
+
+---
+
+**Step 1: Handle parentheses first**  
+Inside parentheses: `not True or False`  
+
+- `not True` = **False**  
+- So: `False or False` = **False**  
+
+Now the expression becomes:  
+**True and False**
+
+---
+
+**Step 2: Apply AND**  
+`True and False` = **False**
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+233,( not False or False and True ) is,True,"Let’s evaluate step by step.  
+
+Expression:  
+\[
+(\text{not False} \ \text{or} \ \text{False} \ \text{and} \ \text{True})
+\]
+
+**Step 1: Handle parentheses first**  
+Inside parentheses:  
+\[
+\text{not False} = \text{True}
+\]  
+So the expression becomes:  
+\[
+\text{True} \ \text{or} \ (\text{False} \ \text{and} \ \text{True})
+\]
+
+**Step 2: Apply AND before OR**  
+\[
+\text{False} \ \text{and} \ \text{True} = \text{False}
+\]  
+So now:  
+\[
+\text{True} \ \text{or} \ \text{False}
+\]
+
+**Step 3: Apply OR**  
+\[
+\text{True} \ \text{or} \ \text{False} = \text{True}
+\]
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+234,not True and True or True and False is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**not True and True or True and False**  
+
+---
+
+**Step 1: Identify operator precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+not True → False  
+
+Expression becomes:  
+**False and True or True and False**  
+
+---
+
+**Step 3: Apply AND from left to right**  
+First AND: False and True → False  
+
+Expression becomes:  
+**False or True and False**  
+
+Second AND: True and False → False  
+
+Expression becomes:  
+**False or False**  
+
+---
+
+**Step 4: Apply OR**  
+False or False → False  
+
+---
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+235,True and not False or False and False is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**True and not False or False and False**  
+
+---
+
+**Step 1: Identify order of precedence**  
+Precedence:  
+1. Parentheses (none here)  
+2. **NOT**  
+3. **AND**  
+4. **OR**  
+
+---
+
+**Step 2: Apply NOT**  
+`not False` → `True`  
+
+Expression becomes:  
+**True and True or False and False**  
+
+---
+
+**Step 3: Apply AND from left to right**  
+First AND: `True and True` → `True`  
+
+Expression becomes:  
+**True or False and False**  
+
+Second AND: `False and False` → `False`  
+
+Expression becomes:  
+**True or False**  
+
+---
+
+**Step 4: Apply OR**  
+`True or False` → `True`  
+
+---
+
+**Final answer: true**",true,true,True,boolean,,protegi,boolean_expressions,10
+236,( not False ) or ( True ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+`( not False ) or ( True )`
+
+**Step 1:** Evaluate `not False`  
+`not False` = `True`
+
+**Step 2:** Substitute back into the expression:  
+`True or ( True )`
+
+**Step 3:** Evaluate `True or True`  
+`True or True` = `True`
+
+Final result: **true**
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+237,False or ( True ) or not True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or ( True ) or not True**
+
+---
+
+**Step 1: Handle parentheses**  
+( True ) = True  
+
+Expression becomes:  
+False or True or not True  
+
+---
+
+**Step 2: Apply NOT**  
+not True = False  
+
+Expression becomes:  
+False or True or False  
+
+---
+
+**Step 3: Apply OR from left to right**  
+False or True → True  
+True or False → True  
+
+---
+
+**Final result:** true  
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+238,False and True or ( not False ) is,True,"Let’s evaluate step by step.
+
+Expression:  
+**False and True or ( not False )**
+
+---
+
+**Step 1: Handle parentheses**  
+`( not False )` → `not False` means `True`.  
+So the expression becomes:  
+**False and True or True**
+
+---
+
+**Step 2: Apply AND before OR**  
+`False and True` → `False`  
+Expression becomes:  
+**False or True**
+
+---
+
+**Step 3: Apply OR**  
+`False or True` → `True`
+
+---
+
+**Final answer: true**",false,true,False,boolean,,protegi,boolean_expressions,10
+239,( ( not False ) and False ) is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+\[
+( ( \text{not False} ) \ \text{and} \ \text{False} )
+\]
+
+1. **Parentheses first**:  
+Inside the inner parentheses:  
+\[
+\text{not False} = \text{True}
+\]  
+So the expression becomes:  
+\[
+( \text{True} \ \text{and} \ \text{False} )
+\]
+
+2. **AND operation**:  
+\[
+\text{True and False} = \text{False}
+\]
+
+Final result: **False**  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+240,not ( True ) and ( False ) is,False,"Let’s evaluate step by step.
+
+Expression:  
+`not ( True ) and ( False )`
+
+**Step 1:** Handle parentheses and `not`  
+`not ( True )` → `False`
+
+Now the expression becomes:  
+`False and ( False )`
+
+**Step 2:** Apply `and`  
+`False and False` → `False`
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10
+241,False or not ( True ) and True is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not ( True ) and True**
+
+---
+
+**Step 1: Parentheses**  
+Inside parentheses: `( True )` is `True`.  
+Expression becomes:  
+`False or not True and True`
+
+---
+
+**Step 2: NOT**  
+`not True` = `False`  
+Expression becomes:  
+`False or False and True`
+
+---
+
+**Step 3: AND**  
+`False and True` = `False`  
+Expression becomes:  
+`False or False`
+
+---
+
+**Step 4: OR**  
+`False or False` = `False`
+
+---
+
+Final answer: **false**  
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+242,not not not not True and not True is,False,"Let’s evaluate step by step.
+
+**Expression:**  
+`not not not not True and not True`
+
+---
+
+**Step 1 – Handle parentheses (none here)**  
+No parentheses, so proceed.
+
+---
+
+**Step 2 – Apply NOT operators from right to left (highest precedence)**  
+
+First, `not True` = `False`  
+So the expression becomes:  
+`not not not not True and False`
+
+---
+
+**Step 3 – Evaluate `not not not not True`**  
+
+- `not True` = `False`  
+- `not False` = `True`  
+- `not True` = `False`  
+- `not False` = `True`  
+
+So `not not not not True` = `True`.
+
+---
+
+**Step 4 – Apply AND**  
+
+Now we have: `True and False`  
+`True and False` = `False`
+
+---
+
+**Final answer:** `false`
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+243,False or not ( False ) or True is,True,"Let’s evaluate step by step.  
+
+The expression is:  
+
+**False or not ( False ) or True**
+
+---
+
+**Step 1: Handle parentheses and NOT**  
+Inside parentheses: `(False)` is `False`.  
+`not (False)` → `not False` → `True`.  
+
+Expression becomes:  
+**False or True or True**
+
+---
+
+**Step 2: Apply OR from left to right**  
+`False or True` → `True`  
+`True or True` → `True`  
+
+---
+
+**Final result:** `True`
+
+Final answer: true",true,true,True,boolean,,protegi,boolean_expressions,10
+244,not not not True and False and False is,False,"Let’s evaluate step by step.
+
+The expression is:  
+**not not not True and False and False**
+
+---
+
+**Step 1 – Order of precedence**  
+NOT has highest precedence, then AND, then OR (no OR here).  
+So first we handle **not not not True**.
+
+---
+
+**Step 2 – Evaluate “not not not True”**  
+- **not True** → False  
+- **not False** → True  
+- **not True** → False  
+
+So **not not not True** = **False**.
+
+---
+
+**Step 3 – Substitute back into expression**  
+Expression becomes:  
+**False and False and False**
+
+---
+
+**Step 4 – AND is left-associative**  
+- **False and False** → False  
+- **False and False** → False  
+
+Final result: **False**
+
+---
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+245,True or True or not False or False is,True,"Let’s evaluate step by step.
+
+The expression is:  
+**True or True or not False or False**
+
+---
+
+**Step 1: Identify operator precedence**  
+Order: parentheses → NOT → AND → OR  
+Here, no parentheses, no AND, so first apply **NOT**.
+
+**not False** = **True**
+
+Expression becomes:  
+True or True or True or False
+
+---
+
+**Step 2: Apply OR from left to right**  
+True or True → True  
+True or True → True  
+True or False → True
+
+---
+
+**Step 3: Final result**  
+The entire expression evaluates to **True**.
+
+---
+
+Final answer: true",false,true,False,boolean,,protegi,boolean_expressions,10
+246,not ( True or True or False ) is,False,"Let's evaluate step by step.  
+
+The expression is:  
+\[
+\text{not ( True or True or False )}
+\]
+
+**Step 1: Evaluate inside parentheses**  
+Inside, we have `True or True or False`.  
+OR is associative, so evaluate left to right:  
+- `True or True` → `True`  
+- `True or False` → `True`  
+
+So `(True or True or False)` = `True`.
+
+**Step 2: Apply the NOT**  
+\[
+\text{not (True)} = \text{False}
+\]
+
+Final result: **false**
+
+\[
+\boxed{\text{false}}
+\]  
+
+Final answer: false",true,false,False,boolean,,protegi,boolean_expressions,10
+247,False or ( False and not False ) is,False,"Let’s evaluate step by step.  
+
+Expression:  
+**False or ( False and not False )**
+
+---
+
+**Step 1:** Handle parentheses first.  
+Inside parentheses: `False and not False`  
+
+**Step 2:** Apply `not` before `and` (order of precedence: NOT, AND, OR).  
+`not False` = **True**  
+
+So inside parentheses: `False and True`  
+
+**Step 3:** Evaluate `False and True` = **False**  
+
+Now the expression becomes:  
+`False or False`  
+
+**Step 4:** Evaluate `False or False` = **False**  
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+248,not True or False or ( False ) is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+**not True or False or ( False )**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `( False )` is just `False`.  
+Expression becomes:  
+`not True or False or False`
+
+---
+
+**Step 2: Apply NOT**  
+`not True` → `False`  
+Expression becomes:  
+`False or False or False`
+
+---
+
+**Step 3: Apply OR from left to right**  
+`False or False` → `False`  
+`False or False` → `False`
+
+---
+
+**Final result:** `False`
+
+---
+
+Final answer: false",false,false,True,boolean,,protegi,boolean_expressions,10
+249,False or ( False ) and not False is,False,"Let’s evaluate step by step.  
+
+The expression is:  
+**False or ( False ) and not False**
+
+---
+
+**Step 1: Handle parentheses**  
+Inside parentheses: `(False)` is just `False`.  
+Expression becomes:  
+**False or False and not False**
+
+---
+
+**Step 2: Apply NOT**  
+`not False` = `True`  
+Expression becomes:  
+**False or False and True**
+
+---
+
+**Step 3: Apply AND** (higher precedence than OR)  
+`False and True` = `False`  
+Expression becomes:  
+**False or False**
+
+---
+
+**Step 4: Apply OR**  
+`False or False` = `False`
+
+---
+
+**Final answer: false**",false,false,True,boolean,,protegi,boolean_expressions,10

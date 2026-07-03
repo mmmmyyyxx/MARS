@@ -1,0 +1,71 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"**Revised Prompt:**  
+Solve grade-school math word problems by first identifying all required operations and any implicit intermediate steps. Clearly show your step-by-step reasoning, labeling each calculation and explicitly noting when you infer unstated relationships or combine multiple operations. During verification, check for these patterns:  
+- **Operation Sequencing:** Confirm the order of operations matches the problem’s logical flow, especially when steps are implied rather than stated (e.g., “half of the remaining” implies a prior subtraction).  
+- **Hidden Intermediate Values:** Identify when quantities must be calculated before use (e.g., total cost before discount, remaining amount before division).  
+- **Contextual Clues:** Use phrases like “then,” “after that,” “combined,” or “total” to detect multi-step processes.  
+
+After completing all steps, return only the final numeric answer without any additional text.  
+
+**Example 1:**  
+Problem: Maria had $10. She spent $3 on a snack and then bought a book for $5. How much money does she have left?  
+Step 1: Start with initial money: $10.  
+Step 2: Subtract snack cost: $10 - $3 = $7 (intermediate step).  
+Step 3: Subtract book cost: $7 - $5 = $2.  
+Step 4: Verify: Sequential spending implies subtraction steps; units consistent.  
+Final Answer: 2  
+
+**Example 2:**  
+Problem: A farmer has 15 cows and 12 sheep. If he sells one-third of the total animals, how many does he sell?  
+Step 1: Calculate total animals: 15 + 12 = 27 (implicit intermediate step).  
+Step 2: Find one-third of total: 27 ÷ 3 = 9.  
+Step 3: Verify: “Total animals” must be computed first; “one-third” implies division after addition.  
+Final Answer: 9  
+
+**Example 3:**  
+Problem: Tom reads 8 pages on Monday and twice as many on Tuesday. How many pages does he read in total?  
+Step 1: Monday’s pages: 8.  
+Step 2: Tuesday’s pages: 2 × 8 = 16 (implicit multiplication step).  
+Step 3: Total pages: 8 + 16 = 24.  
+Step 4: Verify: “Twice as many” implies hidden calculation before addition; units consistent.  
+Final Answer: 24",1.0,2,2,0
+2,"**Revised Prompt:**  
+Solve grade-school math word problems by systematically analyzing numerical relationships—both explicit and implicit—through structured reasoning. Follow these steps:
+
+1. **Identify All Values and Units:**  
+   - List all directly stated numbers and their associated units (e.g., dollars, pages, hours).  
+   - Recognize implicit values derived from relationships (e.g., ""twice as many,"" ""half of the remaining,"" ""combined total"").  
+   - Note any mixed units (e.g., dollars and cents, hours and minutes) and plan for necessary conversions.
+
+2. **Map Relationships and Timeline:**  
+   - Connect values using operations (addition, subtraction, multiplication, division) based on contextual clues (e.g., ""then,"" ""after,"" ""together"").  
+   - **Model the Narrative Timeline:** Explicitly outline the sequence of events in the problem to ensure calculations respect temporal dependencies (e.g., ""before,"" ""after,"" ""then"").  
+   - Note dependencies where one calculation must precede another.  
+   - **Avoid Common Misinterpretations:**  
+     - ""More than"" often implies subtraction when comparing quantities, not addition.  
+     - ""Less than"" may require careful ordering in subtraction.  
+     - Ensure correct order of operations, especially with combined steps (e.g., multiplication before addition unless parentheses indicate otherwise).  
+     - **Critical Clarifications:**  
+       - ""More than"" in comparisons (e.g., ""A has 5 more than B"") means A = B + 5, not B = A + 5.  
+       - ""Less than"" (e.g., ""A has 3 less than B"") means A = B - 3, not B = A - 3.  
+       - ""Increased by"" implies addition to the original value.  
+       - ""Decreased by"" implies subtraction from the original value.  
+       - ""Times as many"" implies multiplication, but verify the reference point (e.g., ""twice as many as B"" means A = 2 × B).  
+       - ""Half as many"" implies division by 2, but confirm which quantity is being halved.
+
+3. **Execute Step-by-Step Calculations:**  
+   - Perform operations in the logically required sequence, labeling each step clearly.  
+   - Compute intermediate results explicitly before using them in subsequent steps.  
+   - **Maintain Unit Consistency:**  
+     - Convert all mixed or incompatible units to a common unit before performing calculations (e.g., convert dollars and cents to cents, hours and minutes to minutes).  
+     - Verify that units align at each step (e.g., adding dollars to dollars, not dollars to pages).
+
+4. **Verify Consistency and Correct Errors:**  
+   - Ensure units and context align throughout the reasoning.  
+   - Check that all implicit relationships have been correctly translated into calculations.  
+   - **Review for Common Pitfalls:**  
+     - Re-examine steps where phrases like ""more than,"" ""less than,"" or fractional parts might have been misinterpreted.  
+     - Confirm the sequence of operations matches the problem’s narrative flow.  
+     - Validate that totals, differences, and proportions logically fit the scenario.  
+     - **Explicitly Verify Unit Consistency:** Double-check that all unit conversions were performed correctly and that final answers are expressed in the appropriate unit as required by the problem.  
+     - **Cross-Check Comparative Language:**",1.0,2,2,0

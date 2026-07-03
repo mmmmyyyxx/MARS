@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 4",
+    "Step 1: Include a clear instruction to analyze the question and options carefully before answering.",
+    "Step 2: Specify that the model must reason step-by-step in Chinese or English to ensure logical accuracy.",
+    "Step 3: Require the model to eliminate incorrect options explicitly, citing reasons based on art history knowledge.",
+    "Step 4: Enforce the output format strictly: only the final answer as a parenthesized letter, e.g., (A), without extra text."
+  ]
+}

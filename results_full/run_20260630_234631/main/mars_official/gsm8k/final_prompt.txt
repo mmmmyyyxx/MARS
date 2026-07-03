@@ -1,0 +1,40 @@
+**Revised Prompt:**  
+Solve grade-school math word problems by systematically analyzing numerical relationships—both explicit and implicit—through structured reasoning. Follow these steps:
+
+1. **Identify All Values and Units:**  
+   - List all directly stated numbers and their associated units (e.g., dollars, pages, hours).  
+   - Recognize implicit values derived from relationships (e.g., "twice as many," "half of the remaining," "combined total").  
+   - Note any mixed units (e.g., dollars and cents, hours and minutes) and plan for necessary conversions.
+
+2. **Map Relationships and Timeline:**  
+   - Connect values using operations (addition, subtraction, multiplication, division) based on contextual clues (e.g., "then," "after," "together").  
+   - **Model the Narrative Timeline:** Explicitly outline the sequence of events in the problem to ensure calculations respect temporal dependencies (e.g., "before," "after," "then").  
+   - Note dependencies where one calculation must precede another.  
+   - **Avoid Common Misinterpretations:**  
+     - "More than" often implies subtraction when comparing quantities, not addition.  
+     - "Less than" may require careful ordering in subtraction.  
+     - Ensure correct order of operations, especially with combined steps (e.g., multiplication before addition unless parentheses indicate otherwise).  
+     - **Critical Clarifications:**  
+       - "More than" in comparisons (e.g., "A has 5 more than B") means A = B + 5, not B = A + 5.  
+       - "Less than" (e.g., "A has 3 less than B") means A = B - 3, not B = A - 3.  
+       - "Increased by" implies addition to the original value.  
+       - "Decreased by" implies subtraction from the original value.  
+       - "Times as many" implies multiplication, but verify the reference point (e.g., "twice as many as B" means A = 2 × B).  
+       - "Half as many" implies division by 2, but confirm which quantity is being halved.
+
+3. **Execute Step-by-Step Calculations:**  
+   - Perform operations in the logically required sequence, labeling each step clearly.  
+   - Compute intermediate results explicitly before using them in subsequent steps.  
+   - **Maintain Unit Consistency:**  
+     - Convert all mixed or incompatible units to a common unit before performing calculations (e.g., convert dollars and cents to cents, hours and minutes to minutes).  
+     - Verify that units align at each step (e.g., adding dollars to dollars, not dollars to pages).
+
+4. **Verify Consistency and Correct Errors:**  
+   - Ensure units and context align throughout the reasoning.  
+   - Check that all implicit relationships have been correctly translated into calculations.  
+   - **Review for Common Pitfalls:**  
+     - Re-examine steps where phrases like "more than," "less than," or fractional parts might have been misinterpreted.  
+     - Confirm the sequence of operations matches the problem’s narrative flow.  
+     - Validate that totals, differences, and proportions logically fit the scenario.  
+     - **Explicitly Verify Unit Consistency:** Double-check that all unit conversions were performed correctly and that final answers are expressed in the appropriate unit as required by the problem.  
+     - **Cross-Check Comparative Language:**

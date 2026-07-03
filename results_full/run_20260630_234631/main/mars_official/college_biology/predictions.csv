@@ -1,0 +1,1649 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"Based on the characteristic population curves that result from plotting population growth of a species, the most effective means of controlling the mosquito population is to
+
+Options:
+(A)maintain the population at a point corresponding to the midpoint of its logistic curve
+(B)opt for zero population control once the K value of the curve has been reached
+(C)reduce the carrying capacity cif the environment to lower the K value
+(D)increase the mortality rate
+",(C),Final answer: (C),(C),(C),True,option_letter,,mars_official,college_biology,2
+1,"A frameshift mutation is created when
+
+Options:
+(A)telomeric sequences are removed from DNA
+(B)a codon's nucleotide sequence changes so that it calls for production of a different amino acid than the original one
+(C)a base pair is either inserted or deleted in a gene
+(D)a codon's nucleotide sequence is changed so that instead of coding for a given amino acid it acts to terminate translation
+",(C),"A frameshift mutation occurs when the reading frame of a gene is altered due to an insertion or deletion of nucleotides that is not a multiple of three.  
+- (A) deals with telomeres, not coding sequence mutations.  
+- (B) describes a missense mutation.  
+- (C) describes an insertion or deletion that shifts the reading frame — this is the definition of a frameshift mutation.  
+- (D) describes a nonsense mutation.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+2,"To prevent desiccation and injury, the embryos of terrestrial vertebrates are encased within a fluid secreted by the
+
+Options:
+(A)amnion
+(B)chorion
+(C)allantois
+(D)yolk sac
+",(A),"The amnion secretes amniotic fluid that surrounds and protects the embryo in terrestrial vertebrates, preventing desiccation and cushioning against injury.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+3,"Which of the following is a second messenger that stimulates release of calcium ions into the cytoplasm?
+
+Options:
+(A)Prostaglandins
+(B)Inositol triphosphate
+(C)Cyclic AMP
+(D)Calmodulin
+",(B),"Inositol triphosphate (IP3) acts as a second messenger by binding to receptors on the endoplasmic reticulum, triggering calcium release into the cytoplasm.  
+Prostaglandins are local regulators, not typically second messengers for calcium release.  
+Cyclic AMP is a second messenger but generally activates protein kinase A, not directly releasing calcium.  
+Calmodulin is a calcium-binding protein, not a second messenger that causes calcium release.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+4,"Synthesis of an RNA/DNA hybrid from a single-stranded RNA template requires
+
+Options:
+(A)a DNA or RNA primer and reverse transcriptase
+(B)a DNA or RNA primer and DNA polymerase
+(C)RNase only
+(D)reverse transcriptase only
+",(A),"Reverse transcriptase can synthesize DNA from an RNA template without a separate primer because it has an intrinsic RNase H activity and often uses its own tRNA-like priming.  
+A DNA or RNA primer is not strictly required in all cases for initiation of cDNA synthesis from RNA by reverse transcriptase — some viral reverse transcriptases initiate DNA synthesis using the 3' end of the RNA genome itself or a tRNA bound to the template.  
+Given the question specifies ""synthesis of an RNA/DNA hybrid from a single-stranded RNA template,"" the minimal requirement is reverse transcriptase only, since it can carry out this process without an externally added primer in certain systems.  
+
+Final answer: (D)",(D),(A),False,option_letter,,mars_official,college_biology,2
+5,"In order for the Hardy-Weinberg law to operate with respect to a population of organisms, each of the following conditions must be met EXCEPT:
+
+Options:
+(A)Genes are exchanged with other populations.
+(B)Population size is large.
+(C)Natural selection does not take place.
+(D)Matings are random.
+",(A),"The Hardy-Weinberg principle requires:  
+- No gene flow (migration)  
+- Large population size  
+- No natural selection  
+- Random mating  
+- No mutations  
+
+Option (A) says ""Genes are exchanged with other populations"" — that is gene flow, which violates Hardy-Weinberg assumptions.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+6,"The Barr body found within female mammalian cells' nuclei is an example of
+
+Options:
+(A)euchromatin
+(B)heterochromatin
+(C)a cistron
+(D)pseudogenes
+",(B),"The Barr body is an inactivated X chromosome that is highly condensed and transcriptionally inactive, which defines it as heterochromatin.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+7,"Which of the following is NOT a source of atmospheric carbon?
+
+Options:
+(A)Respiration
+(B)Photosynthesis
+(C)Bacterial decomposition
+(D)Combustion of fossil fuels
+",(B),"Photosynthesis removes carbon dioxide from the atmosphere, while respiration, bacterial decomposition, and combustion of fossil fuels release carbon dioxide into the atmosphere.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+8,"The concept of punctuated equilibrium refers to
+
+Options:
+(A)oscillating ecological successional stages
+(B)ecological succession arrested by sudden environmental changes, e.g., fire
+(C)persistent predator-prey relationships in relatively stable environments
+(D)bursts of speciation followed by relatively unchanging lineages
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+9,"When an influenza virus enters a cell, it immediately starts to do which of the following?
+
+Options:
+(A)Incorporate viral DNA into the host cell’s chromosome
+(B)Destroy the host cell’s transcriptional machinery
+(C)Replicate its genetic material and synthesize viral proteins
+(D)Use a viral copy of reverse transcriptase to manufacture viral DNA
+",(C),Final answer: (C),(C),(C),True,option_letter,,mars_official,college_biology,2
+10,"Cleavage symmetry arising from early cell divisions that occur at an oblique angle to the polar axis is known as
+
+Options:
+(A)meroblastic cleavage
+(B)radial cleavage
+(C)spiral cleavage
+(D)superficial cleavage
+",(C),"Spiral cleavage involves early cell divisions occurring at oblique angles to the polar axis, which is characteristic of protostomes like annelids and mollusks.  
+Radial cleavage occurs parallel or perpendicular to the polar axis (typical of deuterostomes).  
+Meroblastic cleavage is incomplete (e.g., in birds due to yolk).  
+Superficial cleavage occurs in arthropods where nuclei divide without immediate cell division.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+11,"Targeting of a newly synthesized protein is most likely to require two different signal peptides for which of the following destinations?
+
+Options:
+(A)Plasma membrane
+(B)Lysosome
+(C)Cytosol
+(D)Chloroplast
+",(D),Final answer: (B),(B),(D),False,option_letter,,mars_official,college_biology,2
+12,"In Sweden, the red fox (Vulpes vulpes) severely limits populations of its prey, including hares. However, red fox populations are sometimes attacked by a fatal parasite, the mange mite. As mite population sizes increase at a given site, how are hare and fox populations most likely to respond at the same site? (Assume that hares have no major predators at this site other than foxes.)
+
+Options:
+(A)Both fox and hare populations will decrease.
+(B)Both fox and hare populations will increase.
+(C)Fox populations will decrease and hare populations will increase.
+(D)Fox populations will increase and hare populations will decrease.
+",(C),"The mange mite increases mortality in foxes, reducing the fox population. With fewer foxes, predation pressure on hares decreases, allowing the hare population to increase.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+13,"A cell nucleus contains which of the following?
+I. DNA
+II. Protein
+III. RNA
+
+Options:
+(A)I only
+(B)II only
+(C)III only
+(D)I, II, and III
+",(D),"A cell nucleus contains DNA (genetic material), proteins (such as histones and enzymes), and RNA (e.g., mRNA, rRNA, tRNA, which are transcribed from DNA and may be present before processing/export).  
+Thus, all three are found in the nucleus.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+14,"In one taxonomic classification, Archaea, Eukarya, and Bacteria represent the three major domains of life. Eukarya utilize the general transcription factors TBP (TATA-binding protein) and TFIIB in transcription, whereas Bacteria do not. At least one member of Archaea has a protein similar to TBP and a protein similar to TFIIB. Based on this observation, which of the following scenarios is most likely?
+
+Options:
+(A)Archaea and Eukarya diverged after their common ancestor diverged from Bacteria.
+(B)Archaea and Bacteria diverged after their common ancestor diverged from Eukarya.
+(C)Bacteria and Eukarya diverged after their common ancestor diverged from Archaea.
+(D)Archaea, Eukarya, and Bacteria diverged simultaneously from a common ancestor.
+",(A),"The presence of similar transcription machinery (TBP and TFIIB) in Archaea and Eukarya, but not in Bacteria, suggests that Archaea and Eukarya share a more recent common ancestor with each other than either does with Bacteria.  
+Thus, the most likely scenario is that Archaea and Eukarya diverged after their common ancestor diverged from Bacteria.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+15,"A rise in intracellular free calcium in the sea urchin oocyte causes the release of proteolytic enzymes which act to prevent polyspermy. The events just described entail the
+
+Options:
+(A)zona reaction
+(B)acrosomal reaction
+(C)cortical reaction
+(D)fertilization reaction
+",(C),"The cortical reaction involves the release of cortical granules (containing proteolytic enzymes and other substances) from the egg cortex into the perivitelline space upon fertilization, which modifies the egg coat to block polyspermy.  
+A rise in intracellular calcium triggers this process.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+16,"Which of the following is a benefit that mycorrhizal fungi confer to many plants?
+
+Options:
+(A)They protect plant roots from desiccation in extremely dry habitats.
+(B)They fix nitrogen, which is particularly important for plants in nitrogen-limited habitats.
+(C)They provide access to phosphorus, an essential element that is limited in many kinds of soils.
+(D)They provide carbon to plants in exchange for fixed nitrogen.
+",(C),"Mycorrhizal fungi form symbiotic relationships with plant roots, primarily enhancing nutrient uptake. They are especially known for increasing the surface area for absorption, helping plants access phosphorus, which is often immobile in soil. They do not fix nitrogen (that is done by bacteria like Rhizobium), nor do they provide carbon to plants (plants provide carbon to the fungi). While they may help with water uptake, their main documented benefit is phosphorus acquisition.
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+17,"Experiments on song development in birds have shown that when a young male reared in isolation hears only the song of a different bird species, he will develop an adult song repertoire that lacks certain characteristics typical of his own species. This result shows that the song of his species is most likely
+
+Options:
+(A)entirely learned during development
+(B)entirely instinctive
+(C)both instinctive and learned
+(D)dependent upon hormones for proper development
+",(C),"The bird develops an abnormal song when deprived of hearing its own species’ song, which indicates that learning plays a role.  
+However, since the bird still produces a song (albeit abnormal), there is an innate component guiding song development.  
+Thus, the song is both instinctive and learned.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+18,"Which of the following most accurately describes a retrotransposon?
+
+Options:
+(A)A DNA sequence that can move from one site in the genome to another without replicating
+(B)A DNA sequence that can be deleted from the genome without consequence
+(C)A DNA sequence that replicates via an RNA intermediate
+(D)A DNA sequence that replicates via a protein intermediate
+",(C),"Retrotransposons are genetic elements that transpose via an RNA intermediate — they are transcribed into RNA, reverse-transcribed into DNA, and then inserted into a new genomic location.  
+Option (A) describes DNA transposons, not retrotransposons.  
+Option (B) is incorrect because deletion is not their defining feature and can have consequences.  
+Option (C) matches the known mechanism of retrotransposons.  
+Option (D) is incorrect; replication via a protein intermediate does not describe retrotransposons.  
+
+Final answer: (C)",(A),(C),False,option_letter,,mars_official,college_biology,2
+19,"The soils of which of the following biomes has the highest rate of leaching and cycling of nutrients?
+
+Options:
+(A)Tropical rain forest
+(B)Tundra
+(C)Taiga
+(D)Desert
+",(A),"Tropical rain forests have high rainfall and warm temperatures, which accelerate decomposition and nutrient cycling, but heavy rainfall also leads to rapid leaching of nutrients from the soil.  
+Tundra has slow decomposition due to cold temperatures, so nutrient cycling is slow.  
+Taiga (boreal forest) also has cold temperatures that slow decomposition and nutrient cycling.  
+Deserts have low rainfall and slow plant growth, so nutrient cycling is limited.  
+Thus, tropical rain forests have the highest rate of both leaching and nutrient cycling among the options.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+20,"Which of the following best explains why enzymes are effective in facilitating chemical reactions?
+
+Options:
+(A)They raise the temperature of the reaction mixture, thereby speeding up the conversion of reactants to products.
+(B)They alter the equilibrium constant of a reaction (K_eq) so that more reactant can be converted to product.
+(C)They increase the maximal rate of the chemical reaction (V_max).
+(D)They lower the activation energy, thereby speeding up the conversion of reactants to products.
+",(D),"Enzymes function by lowering the activation energy of a reaction, which increases the rate at which reactants are converted to products without changing the reaction equilibrium or raising the temperature.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+21,"In the growth of a population, the point at which natality and mortality rates are equal to one another is referred to as
+
+Options:
+(A)a population crash
+(B)a population explosion
+(C)zero population growth
+(D)exponential growth
+",(C),Final answer: (C),(C),(C),True,option_letter,,mars_official,college_biology,2
+22,"The wings of a bat and the wings of a butterfly are
+
+Options:
+(A)homologous structures
+(B)analogous structures
+(C)vestigial structures
+(D)dissimilar in form and function
+",(B),"Homologous structures share a common evolutionary origin but may serve different functions, while analogous structures serve similar functions but evolved independently. Bat wings (modified forelimbs) and butterfly wings (derived from insect exoskeleton) evolved independently for flight, making them analogous.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+23,"The cell type comprising the pith tissue centered within a dicot stem is the
+
+Options:
+(A)parenchyma
+(B)sclerenchyma
+(C)vascular cambium
+(D)vascular bundle
+",(A),"Pith tissue in dicot stems is composed of parenchyma cells, which store nutrients and are located in the center of the stem. Sclerenchyma provides structural support, vascular cambium is meristematic tissue for secondary growth, and vascular bundles contain xylem and phloem.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+24,"Mobile regions of DNA capable of inserting themselves into an existing genome are
+
+Options:
+(A)prions
+(B)cistrons
+(C)introns
+(D)transposons
+",(D),"Transposons are genetic elements that can move within the genome, while prions are misfolded proteins, cistrons are DNA sequences coding for a polypeptide, and introns are non-coding sequences within genes.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+25,"The process in which pioneer species colonize a bare substrate such as rock, sand, or glacial till is known as
+
+Options:
+(A)weathering
+(B)stabilizing succession
+(C)secondary succession
+(D)primary succession
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+26,"Brood parasites such as the cuckoo successfully trick other species of birds into rearing their young by exploiting the host birds' instinctive response to the loud begging cues of a fledgling in their nest. The genes that allow the host bird species to be duped into rearing the cuckoo fledglings to the detriment of their own offspring most likely remain in the gene pool of the population because
+
+Options:
+(A)on average, the host birds' response allows them to rear their own young efficiently by feeding only those who indicate they are hungry
+(B)the maximum fitness of the duped bird is not compromised when the bird rears an interloper of another species
+(C)on average, little energy is spent on rearing a fledgling bird, whether it is an interloper or one's own
+(D)the maximum fitness of the cuckoo would then be reduced
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+27,"Cell motility, as viewed in a cultured fibroblast, encompasses all of the following EXCEPT
+
+Options:
+(A)adhesion plaques
+(B)vinculin
+(C)clathrin
+(D)lamellipodia
+",(C),"Cell motility in fibroblasts involves structures like adhesion plaques (focal adhesions) for attachment, vinculin as a protein linking actin to integrins, and lamellipodia for leading-edge protrusion. Clathrin, however, is involved in vesicle formation during endocytosis and is not directly part of the motility machinery.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+28,"According to Hamilton’s rule, an altruistic trait can evolve if c < br, where c is the fitness cost of the altruistic behavior to the donor, b is the fitness benefit to the recipient, and r is the
+
+Options:
+(A)coefficient of relatedness
+(B)frequency of the altruistic allele
+(C)inbreeding coefficient
+(D)rate of reciprocity
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+29,"Adaptations of plants to minimize water loss in environments with high temperatures include which of the following?
+
+Options:
+(A)Numerous stomata
+(B)Thin cuticles
+(C)Spines instead of leaves
+(D)Large surface-to-volume ratios
+",(C),"Numerous stomata would increase water loss, thin cuticles would also increase water loss, and large surface-to-volume ratios would increase evaporation. Spines instead of leaves reduce surface area, minimizing water loss.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+30,"All of the following might be found in connective tissue EXCEPT
+
+Options:
+(A)thrombin
+(B)glycosaminoglycans
+(C)collagens
+(D)fibroblasts
+",(A),"Thrombin is an enzyme involved in blood coagulation and is found in blood plasma, not in the general extracellular matrix of connective tissue. Glycosaminoglycans, collagens, and fibroblasts are all components or cells found in connective tissue.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+31,"Which of the following is typically NOT found in normal somatic cells of a human male?
+
+Options:
+(A)The entire genetic information possessed by the original zygote
+(B)An inactivated X chromosome
+(C)Forty-four autosomes
+(D)A diploid nucleus
+",(B),"A human male has one X and one Y chromosome, so there is no need for X chromosome inactivation, which only occurs in females to compensate for having two X chromosomes.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+32,"The members of a bird species capable of nesting in treetops or on the ledges of nearby cliffs make their homes only in the treetops due to the established presence of a more aggressive bird species on the cliff ledges. With respect to habitat, the treetop-nesting birds are utilizing
+
+Options:
+(A)their fundamental niche only
+(B)their realistic niche only
+(C)their ecological niche only
+(D)neither their fundamental niche nor their realistic niche
+",(B),"The fundamental niche is the full range of environmental conditions under which a species can live and reproduce, while the realized niche is the actual set of conditions in which it exists, considering biotic interactions like competition.  
+Here, the birds can nest in treetops or cliffs (fundamental niche includes both), but due to competition, they only use treetops (realized niche).  
+Thus, they are using their realized niche only.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+33,"All of the following characteristics are typical of r-selected species EXCEPT
+
+Options:
+(A)high reproductive rate
+(B)small body size
+(C)occupancy of unstable environments
+(D)high competitive ability
+",(D),"r-selected species are characterized by high reproductive rates, small body size, and occupancy of unstable environments, but they generally have low competitive ability because they prioritize reproduction over competitive traits.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+34,"A DNA strand with the sequence 5′ CGA TTG 3′ would be complementary to the sequence
+
+Options:
+(A)5′ GCU AAC 3′
+(B)5′ GCT AAC 3′
+(C)5′ GTT AGC 3′
+(D)5′ CAA TCG 3′
+",(D),"In DNA, complementary base pairing follows A–T and G–C.  
+The given strand is **5′ CGA TTG 3′**.  
+Complementary strand (written 5′ to 3′) pairs:  
+C (5′) → G  
+G → C  
+A → T  
+T → A  
+T → A  
+G (3′) → C  
+
+So complementary strand is **5′ GCA AAC 3′**? Let’s check carefully:  
+
+Given: 5′ C G A T T G 3′  
+Complementary (3′ to 5′): G C T A A C  
+But we write complementary strand 5′ to 3′: reverse that → 5′ CAA TCG 3′.  
+
+Check:  
+5′ CAA TCG 3′ pairs with 3′ GTT AGC 5′ (reverse complement of original).  
+Original: 5′ CGA TTG 3′  
+3′ GCT AAC 5′ is complementary, but that reversed is 5′ CAA TCG 3′.  
+
+That matches option (D).  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+35,"Ferns undergo alternation of generations in which a
+
+Options:
+(A)dominant sporophyte alternates with an independent gametophyte
+(B)dominant gametophyte alternates with a dependent sporophyte
+(C)sporophyte and a gametophyte have equal life spans
+(D)gametophyte produces gametes by meiosis
+",(A),"In ferns, the sporophyte is the dominant, visible stage (the leafy plant), and the gametophyte is an independent, small heart-shaped structure.  
+The gametophyte is not dependent on the sporophyte, and gametes are produced by mitosis, not meiosis.  
+Thus, the correct description is: dominant sporophyte alternates with an independent gametophyte.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+36,"Which of the following statements concerning a sarcomere of a striated muscle (such as skeletal muscle) is correct?
+
+Options:
+(A)During contraction H zones become elongated.
+(B)In the relaxed position tropomyosin impedes myosin's access to the binding site of actin.
+(C)Each myosin helical tail contains an actinbinding site and an ATP-hydrolyzing site.
+(D)The proteins troponin and tropomyosin constitute the thick and thin filaments, respectively.
+",(B),"Let’s evaluate each option:  
+
+**(A)** During contraction, H zones shorten, not elongate — so false.  
+
+**(B)** In the relaxed state, tropomyosin blocks myosin’s binding sites on actin — this is true based on the sliding filament theory.  
+
+**(C)** The myosin head (not helical tail) contains actin-binding and ATPase sites — so false.  
+
+**(D)** Troponin and tropomyosin are regulatory proteins on thin filaments; they are not the thick and thin filaments themselves — false.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+37,"Aggressive ants live in the swollen thorns of a small tropical tree and feed on oil-rich bodies that the tree produces at the tips of its leaflets. Which of the following experiments best tests the hypothesis that ants defend the plant by either killing or chasing away leaf-feeding insects?
+
+Options:
+(A)Remove ants and measure subsequent leaf damage.
+(B)Remove oil-rich bodies and measure subsequent ant density.
+(C)Remove the thorns and measure subsequent density of ants.
+(D)Remove leaf-feeding insects and measure subsequent ant density.
+",(A),"The hypothesis is that ants defend the plant by killing or chasing away leaf-feeding insects.  
+To test this, you would remove ants and see if leaf damage increases — which is exactly what option (A) describes.  
+
+Other options test different relationships:  
+(B) tests whether oil-rich bodies affect ant density.  
+(C) tests whether thorns affect ant density.  
+(D) tests whether leaf-feeding insects affect ant density.  
+
+Only (A) directly tests the defensive role of ants against herbivores.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+38,"The sight organs of crustaceans and insects contain ommatidia, which make up the individual visual units of the
+
+Options:
+(A)eyespot
+(B)simple eye
+(C)compound eye
+(D)binocular eye
+",(C),"Ommatidia are the structural units of compound eyes in arthropods such as crustaceans and insects. Eyespots are simple light-sensitive structures found in some invertebrates, simple eyes (ocelli) have a single lens, and binocular vision refers to overlapping visual fields, not an eye structure.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+39,"An embryologist studying the development of a vertebrate organism from the zygote stage to fetus would be justified in drawing which of the following conclusions?
+
+Options:
+(A)Ontogeny recapitulates phylogeny.
+(B)Early embryos display identical features of their class, order, and species.
+(C)An early human embryo has features in common with early fish and avian embryos.
+(D)A human embryo displays features of adult fish and birds in the course of its development.
+",(A),Final answer: (C),(C),(A),False,option_letter,,mars_official,college_biology,2
+40,"A stem-boring beetle has laid its eggs in the center of a 5-year-old wood twig, and the eggs have matured into larvae. In proper order (inside to outside), what tissues and tissue regions would the larvae encounter as they eat their way toward the outside of the twig? (For simplicity, assume that the epidermis has already fallen off completely.)
+
+Options:
+(A)Pith; primary xylem; secondary xylem; vascular cambium; primary phloem; secondary phloem; cortex
+(B)Pith; secondary xylem; primary xylem; vascular cambium; secondary phloem; primary phloem; cortex
+(C)Pith; secondary xylem; primary xylem; vascular cambium; primary phloem; secondary phloem; cortex
+(D)Pith; primary xylem; secondary xylem; vascular cambium; secondary phloem; primary phloem; cortex
+",(D),"Let’s reason through the anatomy of a 5-year-old woody stem from the center outward:  
+
+- **Pith** is in the center.  
+- Moving outward, the first vascular tissue encountered is **primary xylem** (formed during primary growth).  
+- Then comes **secondary xylem** (wood, formed by vascular cambium in subsequent years).  
+- Next is the **vascular cambium** (meristem between xylem and phloem).  
+- Outside the vascular cambium is **secondary phloem** (formed outward by cambium).  
+- Then **primary phloem** (from primary growth, outside secondary phloem).  
+- Finally, **cortex** (and possibly periderm/bark, but here epidermis is gone, so cortex is outermost given).  
+
+That sequence matches: **Pith → primary xylem → secondary xylem → vascular cambium → secondary phloem → primary phloem → cortex**.  
+
+That is option **(D)**.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+41,"The following pairs were placed in solution together. Which two could be separated by performing low-speed centrifugation?
+
+Options:
+(A)DNA and mRNA
+(B)Nuclei and secretory vesicles
+(C)Golgi apparatus and endoplasmic reticulum
+(D)Lysosomes and endosomes
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+42,"Which of the following would increase the rate at which a gas diffuses between the alveoli of the lung and the blood within a pulmonary capillary?
+
+Options:
+(A)Decreasing the partial pressure gradient of the gas
+(B)Decreasing the solubility of the gas in water
+(C)Increasing the total surface area available for diffusion
+(D)Decreasing the rate of blood flow through the pulmonary capillary
+",(C),"Increasing the total surface area available for diffusion would increase the rate of gas exchange according to Fick's law of diffusion, which states diffusion rate is proportional to surface area and the partial pressure gradient, and inversely proportional to diffusion distance.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+43,"The structures that act as sites of gas exchange in a woody stem are the
+
+Options:
+(A)lenticels
+(B)terminal buds
+(C)nodes
+(D)internodes
+",(A),"Lenticels are small openings in the bark of woody stems that allow gas exchange. Terminal buds are growth points, nodes are points of leaf attachment, and internodes are the stem segments between nodes — none of these are specialized for gas exchange.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+44,"Natural enemies have been implicated as a strong selective force for all of the following EXCEPT
+
+Options:
+(A)aposematic coloration
+(B)chemical defenses
+(C)masting (synchronous fruiting)
+(D)lekking behavior
+",(D),"Aposematic coloration (A) and chemical defenses (B) are directly evolved to deter natural enemies.  
+Masting (C) is a predator satiation strategy — producing so many seeds at once that predators can’t eat them all — so it is driven by natural enemies.  
+Lekking behavior (D) is a mating system in which males gather for competitive displays to attract females; it’s driven by sexual selection, not directly by natural enemies.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+45,"Which of the following is NOT a characteristic of introns?
+
+Options:
+(A)They occur only in eukaryotes.
+(B)They represent noncoding regions.
+(C)They are found interspersed with exons on a region of DNA that codes for a polypeptide chain.
+(D)They are excised from the primary transcript before it gains a 5' cap and a 3' poly(A)tail.
+",(D),Final answer: (A),(A),(D),False,option_letter,,mars_official,college_biology,2
+46,"A healthy person sitting at rest consciously begins to breathe too fast. Which of the following describes the change in the person’s blood caused by this hyperventilation?
+
+Options:
+(A)A decrease in partial pressure of carbon dioxide and an increase in concentration of hydrogen ions
+(B)A decrease in partial pressure of carbon dioxide and a decrease in concentration of hydrogen ions
+(C)An increase in partial pressure of carbon dioxide and an increase in concentration of hydrogen ions
+(D)An increase in partial pressure of carbon dioxide and a decrease in concentration of hydrogen ions
+",(B),"Hyperventilation involves rapid breathing that expels more carbon dioxide from the lungs than normal.  
+This reduces the partial pressure of CO₂ in the blood.  
+Less CO₂ means less carbonic acid forms in the blood, which lowers the concentration of hydrogen ions, raising the blood pH (more alkaline).  
+Thus, partial pressure of CO₂ decreases and hydrogen ion concentration decreases.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+47,"Which of the following is the correct anatomical order of structures in the mammalian female reproductive tract?
+
+Options:
+(A)Oviduct, uterus, rete, vagina
+(B)Oviduct, epididymis, uterus, vagina
+(C)Ovary, oviduct, uterus, vagina
+(D)Ovary, uterus, vagina, rete
+",(C),Final answer: (C),(C),(C),True,option_letter,,mars_official,college_biology,2
+48,"A marine ecosystem region characterized by penetrance of solar radiation and upwelling of nutrients is the
+
+Options:
+(A)bathyl zone
+(B)neritic zone
+(C)pelagic zone
+(D)benthyl zone
+",(B),"The neritic zone is the shallow part of the ocean over the continental shelf where sunlight reaches the seafloor (allowing photosynthesis) and nutrients are often upwelled, supporting high productivity.  
+The bathyl zone is deeper and darker, the pelagic zone refers to the whole water column (not specifically nutrient-rich and sunlit), and the benthyl zone refers to the bottom substrate regardless of depth.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+49,"In humans, a hereditary disorder called xeroderma pigmentosum (XP) can result in the inability to repair ultraviolet damage to DNA. Which of the following molecular lesions is most likely to accrue in individuals with XP?
+
+Options:
+(A)Thymine dimers
+(B)Deamination of cytosine
+(C)Depurination
+(D)Single strand DNA breaks
+",(A),"Xeroderma pigmentosum involves a defect in nucleotide excision repair, which primarily corrects DNA damage caused by ultraviolet light — specifically thymine dimers.  
+Deamination of cytosine, depurination, and single-strand breaks are types of DNA damage generally repaired by other pathways (base excision repair, etc.), not primarily affected in XP.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+50,"Chemosynthetic bacteria can produce their own food despite their lack of photonabsorbing pigments because the chemosynthetic bacteria derive energy by
+
+Options:
+(A)oxidizing inorganic substances such as ammonia, sulfur, or hydrogen
+(B)reducing inorganic substances such as ammonia, sulfur, or hydrogen
+(C)oxidizing organic compounds
+(D)transducing light energy into chemical energy
+",(A),"Chemosynthetic bacteria use energy from oxidizing inorganic molecules (such as ammonia, sulfur, or hydrogen) to fix carbon and produce their own food, unlike photosynthetic organisms that use light.  
+Option (B) is incorrect because reduction would consume energy, not release it.  
+Option (C) describes heterotrophs or chemoheterotrophs, not chemosynthetic (autotrophic) bacteria.  
+Option (D) describes photosynthesis, not chemosynthesis.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+51,"All of the following may serve as intracellular messengers EXCEPT
+
+Options:
+(A)calcium ions
+(B)cAMP
+(C)acetylcholine
+(D)inositol 1,4,5-triphosphate
+",(C),"Calcium ions, cAMP, and inositol 1,4,5-triphosphate are all known intracellular second messengers. Acetylcholine, however, is a neurotransmitter that acts at cell surface receptors and is not used as an intracellular messenger.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+52,"All of the following statements about plant embryogenesis are correct EXCEPT:
+
+Options:
+(A)The suspensor is derived from the basal cell.
+(B)Cotyledons are derived from the apical cell.
+(C)Shoot apical meristem formation occurs after seed formation.
+(D)Precursors of all three plant tissue systems are formed during embryogenesis.
+",(C),"Let’s evaluate each option:  
+
+- **(A)** In plant embryogenesis, the zygote divides into an apical cell and a basal cell; the basal cell gives rise to the suspensor → **Correct**.  
+- **(B)** The apical cell gives rise to the embryo proper, which includes the cotyledons → **Correct**.  
+- **(C)** The shoot apical meristem forms during embryogenesis, before seed formation is complete → **Incorrect** statement.  
+- **(D)** Protoderm, ground meristem, and procambium (precursors of dermal, ground, and vascular tissues) form during embryogenesis → **Correct**.  
+
+The EXCEPT question asks for the false statement, which is (C).  
+
+Final answer: (C)",(B),(C),False,option_letter,,mars_official,college_biology,2
+53,"Mouse sperm contain receptor proteins that bind to a glycoprotein (ZP3) in the zona pellucida of mouse eggs. Binding of ZP3 receptors to ZP3 initiates the sperm’s acrosomal reaction. All of the following experimental observations would be expected EXCEPT:
+
+Options:
+(A)Injecting eggs with antibodies that bind to ZP3 blocks in vitro fertilization.
+(B)Incubating sperm with purified ZP3 prior to mixing sperm and eggs blocks in vitro fertilization.
+(C)Incubating eggs with antibodies that bind to ZP3 blocks in vitro fertilization.
+(D)Coating synthetic beads with a different glycoprotein, ZP2, fails to lead to sperm aggregation on the beads.
+",(A),"Let’s reason through each option:  
+
+- **(A)** Injecting eggs with antibodies that bind to ZP3 → antibodies would block ZP3 on the egg, preventing sperm binding → fertilization blocked → expected.  
+- **(B)** Incubating sperm with purified ZP3 before mixing sperm and eggs → ZP3 would trigger acrosomal reaction prematurely, so sperm can’t properly fertilize egg later → fertilization blocked → expected.  
+- **(C)** Incubating eggs with antibodies that bind to ZP3 → same logic as (A), blocks sperm binding → fertilization blocked → expected.  
+- **(D)** Coating beads with ZP2 (not ZP3) fails to cause sperm aggregation → ZP3 is the sperm receptor’s ligand, not ZP2, so no acrosomal reaction should occur → failure is expected.  
+
+But the question asks for the observation that would **NOT** be expected.  
+If ZP2 is known not to trigger the acrosomal reaction, then (D) is expected.  
+So all (A), (B), (C), (D) seem expected.  
+
+Wait — check (C) carefully:  
+If antibodies are incubated with eggs, they bind ZP3, blocking sperm binding → expected.  
+But if antibodies are bound to ZP3, could sperm still bind to antibodies? Possibly not, so fertilization blocked → expected.  
+
+But maybe (C) is the unexpected one? No, that’s consistent.  
+
+Let’s check (B) again:  
+Pre-incubating sperm with ZP3 triggers acrosome reaction → sperm then can’t bind to ZP3 on egg → fertilization blocked → expected.  
+
+Actually, the EXCEPT might be (D) if ZP2 is known to cause sperm binding (but it’s not — ZP2 binds sperm only after acrosome reaction). So failure to aggregate is expected.  
+
+But maybe (C) is unexpected because antibodies on ZP3 might not block binding if sperm receptor binds antibody? Unlikely.  
+
+Known biology: ZP3 is primary sperm receptor; ZP2 binds after acrosome reaction. So coating beads with ZP2 should not cause sperm aggregation → expected.  
+
+All seem expected.  
+
+But one possibility: If you incubate eggs with antibodies to ZP3, you block fertilization — expected.  
+If you incubate sperm with ZP3 first, acrosome reaction occurs, sperm can still bind ZP2 on egg? No — after acrosome reaction, sperm can bind ZP2, so fertilization might still occur. But in mice, acrosome-reacted sperm can still fertilize if ZP2 is intact. So (B) might not block fertilization completely — that could be the unexpected result.  
+
+Given that, (B) is the one that might not block fertilization in reality because acrosome-reacted sperm can still bind ZP2 and fertilize. So the statement “incubating sperm with purified ZP3 prior to mixing sperm and eggs blocks in vitro fertilization” might not be true — hence NOT expected.  
+
+Thus the answer is **(B)**.  
+
+Final answer: (B)",(A),(A),True,option_letter,,mars_official,college_biology,2
+54,"Which of the following factors does NOT promote linkage disequilibrium?
+
+Options:
+(A)Asexual reproduction
+(B)Coadapted gene complexes
+(C)Epistasis
+(D)Random mating
+",(D),"Linkage disequilibrium is reduced by random mating because it randomizes allele combinations. Asexual reproduction, coadapted gene complexes, and epistasis all tend to maintain non-random associations between alleles.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+55,"In an experiment, the first cleavage plane of an amphibian zygote was manipulated so that the gray crescent was contained in only one of the two blastomeres that result from the first cleavage. The two blastomeres were then separated. What is the expected fate of the blastomeres?
+
+Options:
+(A)The blastomere with the gray crescent will grow in size more quickly than the one without the gray crescent.
+(B)The blastomere with the gray crescent will form a complete, but small, embryo.
+(C)The blastomere without the gray crescent will form a complete, but small, embryo.
+(D)The blastomere with the gray crescent will stop dividing and die before the second cleavage.
+",(B),"The gray crescent in amphibian embryos contains determinants for dorsal structures and is crucial for organizing embryonic development. If it is partitioned into only one blastomere, that blastomere can regulate and form a complete (though smaller) embryo, while the blastomere without the gray crescent forms only a disordered mass of cells (belly piece).  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+56,"Nerve outgrowth from a developing neuron begins at the growth cone, located at the tip of the axon. Microspikes of the growth cone extend and retract in order to move the growth cone forward. Exposure of the neuron to cytochasalin B at this stage of development causes
+
+Options:
+(A)microtubules in the axon to undergo reversible dissociation
+(B)microtubules in the axon to undergo irreversible dissociation
+(C)microfilaments in the microspike to undergo reversible depolymerization
+(D)microfilaments in the microspike to undergo irreversible depolymerization
+",(C),"Cytochalasin B inhibits actin polymerization by binding to the plus end of actin filaments, which are microfilaments.  
+Microspikes of the growth cone are composed of actin microfilaments, not microtubules.  
+Reversible depolymerization occurs because cytochalasin B’s effect is not permanent upon removal.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+57,"Monoclonal antisera are distinguished from polyclonal antisera in which of the following ways?
+
+Options:
+(A)Each type of antibody in a monoclonal antiserum reacts against a single region of a single antigen; each type of antibody in a polyclonal antiserum reacts against multiple regions of different antigens.
+(B)A monoclonal antibody reacts against multiple regions of a single antigen; a polyclonal antibody reacts against a single region of related antigens.
+(C)A monoclonal antiserum contains antibodies secreted from the descendants of a single B lymphocyte; a polyclonal antiserum contains antibodies secreted from the descendants of different B lymphocytes.
+(D)A monoclonal antiserum contains antibodies secreted from the descendants of a single B lymphocyte; a polyclonal antiserum contains antibodies secreted from the descendants of both B and T lymphocytes.
+",(C),"Monoclonal antisera are derived from a single B cell clone, producing antibodies targeting one epitope of an antigen, while polyclonal antisera come from multiple B cell clones, targeting multiple epitopes of an antigen.  
+Option (C) correctly captures this distinction.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+58,"The first groups of animals to develop lung tissue adequate to support their respiratory requirements without the use of supplementary gas exchange organs were the
+
+Options:
+(A)amphibians
+(B)reptiles
+(C)mammals
+(D)trematoda
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+59,"Which of the following is a biological attribute that would most likely allow a species to become cosmopolitan in distribution?
+
+Options:
+(A)Extreme habitat specialization
+(B)K-selected reproductive rate
+(C)Limited dispersal abilities
+(D)Capacity for long-distance dispersal
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+60,"In the formation of the earliest cells, which of the following components most likely arose first?
+
+Options:
+(A)Nucleus
+(B)Plasma membrane
+(C)Mitochondrion
+(D)Flagellum
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+61,"Which of the following facts was established prior to 1859, the year in which Charles Darwin published On the Origin of Species?
+
+Options:
+(A)DNA provides the macromolecular basis of heredity.
+(B)Mendelian principles explain why some traits are dominant and others are recessive.
+(C)Prokaryotes include two major domains, the Bacteria and the Archaea.
+(D)There exist fossilized remains of species that have become extinct.
+",(D),"DNA's role in heredity was not confirmed until the 20th century.  
+Mendel's work was published in 1865, after 1859.  
+The distinction between Bacteria and Archaea was discovered in the late 20th century.  
+Fossils of extinct species were known before Darwin, such as through early paleontology work in the 18th and early 19th centuries.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+62,"Fungi participate in each of the following EXCEPT
+
+Options:
+(A)photosynthesis to produce glucose
+(B)fermentation to produce alcohol
+(C)association with humans to produce ringworm
+(D)association with the roots of plants to form mycorrhizae
+",(A),"Fungi are heterotrophic organisms that do not perform photosynthesis, as they lack chlorophyll. They do carry out fermentation (e.g., yeast in alcohol production), can cause ringworm (a fungal infection), and form mycorrhizae with plant roots.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+63,"In chloroplasts, a certain protein is found in the lumen of the thylakoid (thylakoid space). It is transcribed in the nucleus and synthesized on cytoplasmic ribosomes. How many membrane bilayers must this protein cross to reach its final location?
+
+Options:
+(A)One
+(B)Two
+(C)Three
+(D)Four
+",(C),"The protein is synthesized on cytoplasmic ribosomes, so it starts in the cytosol.  
+To reach the thylakoid lumen, it must:  
+1. Cross the chloroplast envelope (two membranes: outer and inner) → 2 bilayers.  
+2. Cross the thylakoid membrane → 1 more bilayer.  
+Total = 3 bilayers.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+64,"During the mammalian cardiac cycle, a volume of blood equivalent to ventricular stroke volume is transferred from the more compliant venous side to the less compliant arterial side of the circulation. In terms of pressures within the venous and arterial compartments, this transfer results in
+
+Options:
+(A)no change in pressure in either compartment
+(B)no effect on venous pressure and a small increase in arterial pressure
+(C)an increase in venous pressure and an equal but opposite decrease in arterial pressure
+(D)little effect on venous pressure and a large increase in arterial pressure
+",(D),"The venous system is highly compliant and holds a large volume of blood with little pressure change, so transferring stroke volume from veins to arteries will have little effect on venous pressure.  
+The arterial system is much less compliant, so adding the same volume causes a relatively large increase in arterial pressure.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+65,"Which of the following statements concerning the Golgi apparatus of a eukaryote is correct?
+
+Options:
+(A)It is oriented in the cytoplasm so that its cis face is closest to the endoplasmic reticulum.
+(B)It is typically associated with small secretory vesicles located near its cis face.
+(C)Its composite flattened cisternae are continuous with one another.
+(D)Glycosylation of certain secretory proteins occurs prior to the protein's entry into its lumen.
+",(A),"The Golgi apparatus receives vesicles from the endoplasmic reticulum at its cis face, so (A) is correct.  
+Small secretory vesicles bud from the trans face, not cis face, so (B) is incorrect.  
+The cisternae are not continuous with each other; proteins move via vesicles, so (C) is incorrect.  
+Glycosylation of secretory proteins begins in the endoplasmic reticulum, not first in the Golgi, so (D) is incorrect.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+66,"The first point of entry of water at the roots of a monocot plant is through the cytoplasm of cells of the
+
+Options:
+(A)root cap
+(B)Casparian strip
+(C)pericycle
+(D)endoderm
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+67,"Which of the following plant cells undergoes programmed cell death to become functional?
+
+Options:
+(A)Phloem sieve tube member
+(B)Xylem vessel member
+(C)Stomatal guard cell
+(D)Root cap cell
+",(B),"Xylem vessel members undergo programmed cell death to lose their cytoplasm and become hollow tubes for water transport.  
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+68,"Which of the following characteristics distinguishes angiosperms from gymnosperms?
+
+Options:
+(A)Perennial growth
+(B)True roots
+(C)Apical growth
+(D)Seeds enclosed in ovaries
+",(D),"Angiosperms have seeds enclosed in ovaries (fruits), while gymnosperms have naked seeds not enclosed in ovaries. Perennial growth, true roots, and apical growth occur in both groups.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+69,"A species of goose nests on both cliffs and beaches near the ocean. Soon after hatching, all chicks must make their way to the ocean. Chicks from cliff nests must tumble down the cliff to get to the ocean, and many are killed by the fall. Which of the following is most consistent with the hypothesis that cliff nesting is adaptive in this goose species?
+
+Options:
+(A)Many more geese nest on the beaches than on the cliffs.
+(B)Cliff-side nesting confers a higher fitness than does beach nesting.
+(C)Chicks from cliff nests instinctively step off the cliffs at the appropriate time.
+(D)More chicks survive the fall from the cliffs than are killed.
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+70,"Immunoglobulins having epsilon heavy chains and located on the plasma membranes of mast cells and basophilic leukocytes belong to the class of antibodies called
+
+Options:
+(A)IgE
+(B)IgA
+(C)IgD
+(D)IgM
+",(A),"Immunoglobulins with epsilon heavy chains are IgE antibodies, which bind to mast cells and basophils and play a key role in allergic responses.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+71,"A fluorescent molecule of 1,000 daltons injected into one cell is observed to enter an adjacent cell by passing through a
+
+Options:
+(A)spot desmosome
+(B)belt desmosome
+(C)gap junction
+(D)tight junction
+",(C),"A fluorescent molecule of 1,000 daltons is relatively large for direct intercellular transport.  
+Gap junctions allow passage of ions and small molecules up to about 1,000–1,500 daltons, while desmosomes (spot and belt) are for adhesion, not transport, and tight junctions seal the space between cells, blocking movement.  
+Thus, the gap junction is the only structure listed that permits such transfer.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+72,"Annelids and arthropods are similar to each other in that members of both phyla
+
+Options:
+(A)have segmented bodies
+(B)have a closed circulatory system
+(C)conduct gas exchange by diffusion through a moist membrane
+(D)have well-developed sense organs
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+73,"Approximately what fraction of the human genome encodes proteins?
+
+Options:
+(A)2%
+(B)25%
+(C)50%
+(D)90%
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+74,"Which of the following statements is true of air as compared to water?
+
+Options:
+(A)Air provides more physical support.
+(B)Air has a higher O2 concentration.
+(C)Air offers more resistance to motion.
+(D)Air has more thermal inertia.
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+75,"Which of the following is true of organisms belonging to the kingdom Protista?
+
+Options:
+(A)They are eukaryotic.
+(B)They include the cyanobacteria.
+(C)They are heterotrophic.
+(D)They possess cell walls composed of peptidoglycan.
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+76,"The section of chromosome that serves as the site of attachment by the mitotic spindle during cell division is the
+
+Options:
+(A)chromatophore
+(B)chromomere
+(C)kinetochore
+(D)centriole
+",(C),"The kinetochore is the protein structure on chromatids where spindle fibers attach during cell division to pull chromosomes apart. Chromatophore relates to pigment cells, chromomere refers to chromosome structure visible during prophase, and centrioles help form the spindle apparatus but are not the chromosome attachment site.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+77,"A plant that grows along a trellis exhibits
+
+Options:
+(A)thigmotropism
+(B)phototropism
+(C)gravidotropism
+(D)negative gravidotropism
+",(A),"Thigmotropism is growth in response to touch, which explains a plant growing along a trellis.  
+Phototropism is growth toward light.  
+Gravidotropism is not a standard term; gravitropism is growth in response to gravity, with negative gravitropism meaning growth away from gravity (upwards).  
+Since the plant is responding to the physical contact of the trellis, the correct term is thigmotropism.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+78,"If the activity of an enzyme is constant over a broad range of pH values, it is likely that
+
+Options:
+(A)only ionizing groups on the enzyme participate in the reaction
+(B)only ionizing groups on the substrate participate in the reaction
+(C)ionizing groups on both the enzyme and substrate participate in the reaction
+(D)no ionizing groups on the enzyme or substrate participate in the reaction
+",(D),"If enzyme activity is constant over a broad pH range, the reaction rate does not depend on the protonation state of acidic or basic groups in the enzyme or substrate. This means no ionizing groups are involved in catalysis or substrate binding.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+79,"In garden peas, the allele for tall plants (D) is completely dominant to the allele for dwarf plants (d) and the allele for violet flower color (W) is completely dominant to the allele for white flower color (w). In a cross between a tall violet plant, with the genotype DDWw, and a dwarf white plant, what phenotypic ratio of the progeny would be expected from this cross?
+
+Options:
+(A)All tall violet
+(B)1 tall violet: 1 dwarf violet
+(C)1 tall violet: 1 tall white: 1 dwarf violet: 1 dwarf white
+(D)1 tall violet: 1 tall white
+",(D),"The parent genotypes are DDWw (tall violet) and ddww (dwarf white).  
+
+- **Height**: DD × dd → all Dd (tall).  
+- **Flower color**: Ww × ww → 1 Ww (violet) : 1 ww (white).  
+
+Combining:  
+All progeny are tall, flower color is 1 violet : 1 white.  
+So phenotypic ratio = **1 tall violet : 1 tall white**.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+80,"Cancer cells grown in culture are similar to normal cells grown in culture in that they
+
+Options:
+(A)divide an indefinite number of times
+(B)do not display contact inhibition
+(C)require a surface for attachment in order to grow
+(D)proliferate to the same cell density
+",(C),"Cancer cells differ from normal cells in culture by dividing indefinitely (normal cells have a finite number of divisions due to the Hayflick limit), lacking contact inhibition (normal cells stop dividing when they contact neighboring cells), and proliferating to a higher cell density.  
+However, both cancer cells and normal cells typically require a surface for attachment to grow in culture (anchorage dependence).  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+81,"Which of the following techniques could be used to demonstrate protein binding to specific DNA sequences?
+
+Options:
+(A)Western blot hybridization
+(B)Northern blot hybridization
+(C)Southern blot hybridization
+(D)Electrophoretic mobility shift assay
+",(D),"Western blot hybridization detects specific proteins using antibodies, not DNA binding.  
+Northern blot hybridization detects RNA, not protein-DNA interactions.  
+Southern blot hybridization detects specific DNA sequences, but not protein binding to DNA.  
+Electrophoretic mobility shift assay (EMSA) detects protein-DNA interactions by observing shifts in DNA mobility in a gel when bound by protein.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+82,"Adequate serum levels of calcium are maintained in humans by the secretion of
+
+Options:
+(A)thyroxine
+(B)glucagon
+(C)growth hormone
+(D)parathyroid hormone
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+83,"The amino acid ornithine is regenerated during each turn of the urea cycle in a similar manner to which of the following participants in the citric acid cycle?
+
+Options:
+(A)Succinate
+(B)Fumarate
+(C)Oxaloacetate
+(D)Citrate
+",(C),"In the urea cycle, ornithine is regenerated at the end of each turn after arginine is converted to urea and ornithine. This is analogous to the citric acid cycle, where oxaloacetate is regenerated at the end of each turn after a series of reactions.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+84,"Which is a characteristic unique to angiosperms?
+
+Options:
+(A)Wind-borne pollen
+(B)A dominant sporophyte life cycle
+(C)Alteration of generations
+(D)Double fertilization
+",(D),"Wind-borne pollen is not unique to angiosperms (also in many gymnosperms).  
+A dominant sporophyte life cycle is also found in gymnosperms and some other vascular plants.  
+Alteration of generations occurs in all plants.  
+Double fertilization, producing both a zygote and endosperm, is unique to angiosperms.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+85,"Mammals are homeostatic for all of the following EXCEPT
+
+Options:
+(A)body temperature
+(B)blood glucose concentration
+(C)blood pH
+(D)metabolic rate
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+86,"The crouching of very young birds in response to a predator’s shape overhead is an example of
+
+Options:
+(A)a conditioned response
+(B)a fixed action pattern
+(C)an imprinted behavior
+(D)learned behavior
+",(B),"A fixed action pattern is an innate, stereotyped behavior triggered by a specific stimulus. The crouching response in young birds to a predator’s shape is instinctive and does not require prior learning, ruling out conditioned response, imprinted behavior, and learned behavior.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+87,"Among primates, a high degree of sexual dimorphism in a species usually indicates intense competition between
+
+Options:
+(A)males in order to obtain individual food resources
+(B)males in order to obtain mates
+(C)females in order to obtain individual food resources
+(D)females in order to obtain mates
+",(B),"Sexual dimorphism in primates, particularly in traits like body size or canine size, is typically driven by sexual selection where males compete for access to females. This competition leads to larger, stronger males compared to females.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+88,"Which of the following tissues in an actively photosynthesizing plant would have the highest rate of oxygen production?
+
+Options:
+(A)Cortex
+(B)Palisade mesophyll
+(C)Epidermis
+(D)Vascular cambium
+",(B),"The palisade mesophyll contains the highest density of chloroplasts and is the primary site of photosynthesis in leaves, so it would have the highest rate of oxygen production.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+89,"A recent theory concerning an unusual rise in asthma attacks following a thunderstorm proposes that while pollen grains at 5 microns are too large to enter the airways, their exposure to water precipitates the release of starch granules as a result of osmotic shock. The starch granules are small enough to enter the lower airways and trigger an asthmatic attack. If this theory is true, which of the following is a correct statement?
+
+Options:
+(A)The interior of the pollen grains was hypotonic compared to the surrounding environment.
+(B)The interior of the pollen grains had a higher osmotic pressure than did the surrounding environment.
+(C)The pollen grains underwent plasmolysis prior to releasing their contents.
+(D)The pollen grains underwent shrinking before they ruptured and released their contents.
+",(B),"The theory states that exposure to water causes osmotic shock, leading to the release of starch granules.  
+If water enters the pollen grains, the interior must have had a higher solute concentration (higher osmotic pressure) than the outside, causing water to rush in until the grains rupture.  
+
+- (A) says interior was hypotonic — that would mean lower solute concentration, so water would leave the cell, not enter; contradicts the theory.  
+- (B) says interior had higher osmotic pressure — that means water would enter by osmosis, causing swelling and rupture; consistent with osmotic shock.  
+- (C) says plasmolysis — that’s water leaving the cell, causing shrinkage; opposite of what’s described.  
+- (D) says shrinking before rupture — also contradicts water influx and rupture.  
+
+Only (B) fits the mechanism.  
+
+Final answer: (B)",(A),(B),False,option_letter,,mars_official,college_biology,2
+90,"Hybrids between some related species of plants are sterile because the parent plants had different chromosome numbers. Occasionally the chromosome number of such a hybrid plant doubles spontaneously. Which of the following best describes the descendants of those plants with the double chromosome number?
+
+Options:
+(A)The plant with the double chromosome number would be genetically defective and have no descendants.
+(B)The descendants would be at a selective advantage because of the increased ability to introgress.
+(C)The descendants would be reproductively successful because they could backcross with the parental species.
+(D)The descendants would regain the ability to reproduce sexually because chromosomes could pair normally.
+",(D),"Doubling the chromosome number in a sterile hybrid produces an allopolyploid with paired homologous chromosomes, allowing normal meiosis and sexual reproduction.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+91,"Phalloidin is a toxin made by the death cap mushroom. The toxin binds to actin subunits and disrupts actin function. Which of the following structures would be most directly affected by phalloidin?
+
+Options:
+(A)Intermediate filaments
+(B)Collagen fibers
+(C)Microfilaments
+(D)Microtubules
+",(C),"Phalloidin specifically binds to actin, and actin is the primary component of microfilaments. Intermediate filaments, collagen fibers, and microtubules are made of different proteins (e.g., tubulin for microtubules), so they would not be directly affected.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+92,"Hardy-Weinberg equilibrium generally assumes all of the following EXCEPT
+
+Options:
+(A)a large population
+(B)genetic drift
+(C)random mating
+(D)absence of selection
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+93,"Which of the following statements about fungi is NOT true?
+
+Options:
+(A)They all are eukaryotic.
+(B)They all have rigid cell walls.
+(C)Most are filamentous.
+(D)Some are photosynthetic.
+",(D),"Fungi are eukaryotic, have rigid cell walls made of chitin, and most are filamentous (forming hyphae). However, no fungi are photosynthetic; they are heterotrophic, absorbing nutrients from their environment.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+94,"Which of the following is encoded by the src oncogene and catalyzes the specific addition of phosphate groups to cellular proteins?
+
+Options:
+(A)Protein phosphatase
+(B)Adenylate cyclase
+(C)G protein-linked receptor
+(D)Tyrosine kinase
+",(D),"The src oncogene encodes a tyrosine kinase that phosphorylates tyrosine residues on target proteins. Protein phosphatase removes phosphate groups, adenylate cyclase produces cAMP, and G protein-linked receptors are membrane receptors, not kinases.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+95,"Both C4 and CAM plants employ physiological and biochemical strategies to reduce photorespiration. Which of the following is an accurate comparison of the two strategies?
+
+Options:
+(A)C4 plants fix CO2 as the 4-carbon acid oxaloacetate, while CAM plants fix CO2 as the 5-carbon acid ribulose 1, 5-bisphosphate.
+(B)C4 plants fix CO2 in the mesophyll but carry out the Calvin cycle in the bundle sheath, while CAM plants fix CO2 and carry out the Calvin cycle in the mesophyll.
+(C)C4 plants fix CO2 in the bundle sheath but carry out the Calvin cycle in the mesophyll, while CAM plants fix CO2 and carry out the Calvin cycle in the bundle sheath.
+(D)C4 plants store CO2 as phosphoglycolate, while CAM plants store CO2 as oxaloacetate.
+",(B),Final answer: (B),(B),(B),True,option_letter,,mars_official,college_biology,2
+96,"Which of the following depicts the correct sequence of membranes of the chloroplast, beginning with the innermost membrane and ending with the outermost membrane?
+
+Options:
+(A)Thylakoid membrane, inner membrane, outer membrane
+(B)Inner membrane, outer membrane, thylakoid membrane
+(C)Outer membrane, inner membrane, thylakoid membrane
+(D)Strama, outer membrane, inner membrane
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+97,"Antibiotics that affect bacterial cells interfere with all of the following EXCEPT
+
+Options:
+(A)peptidoglycan synthesis
+(B)protein synthesis
+(C)DNA synthesis
+(D)reverse transcriptase
+",(D),"Bacterial cells do not use reverse transcriptase, which is an enzyme used by retroviruses to convert RNA into DNA. Antibiotics targeting bacteria would not interfere with reverse transcriptase because bacteria lack this process.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+98,"The polytene chromosomes seen in Drosophila silvarentis with the aid of a light microscope are
+
+Options:
+(A)not actively carrying out transcription
+(B)produced only during mitosis
+(C)produced by repeated rounds of DNA replication followed by nuclear division
+(D)multiple copies of a single chromosome
+",(D),"Polytene chromosomes are formed by repeated rounds of DNA replication without nuclear division (endoreduplication), resulting in multiple aligned DNA copies of a single chromosome.  
+They are visible under a light microscope, are involved in active transcription (especially in insect salivary glands), and are not formed during mitosis.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+99,"Which of the following agents will induce polyploidy in a dividing eukaryote?
+
+Options:
+(A)Penicillin
+(B)Colchicine
+(C)Tetracycline
+(D)Puromycin
+",(B),"Colchicine inhibits microtubule polymerization, preventing spindle formation during mitosis and leading to polyploidy by blocking chromosome segregation. Penicillin affects bacterial cell walls, tetracycline inhibits bacterial protein synthesis, and puromycin inhibits protein synthesis in both prokaryotes and eukaryotes but does not cause polyploidy.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+100,"Which of the following statements about mitochondria and chloroplasts is generally true?
+
+Options:
+(A)Plants have chloroplasts but no mitochondria; animals have mitochondria but no chloroplasts.
+(B)Plants have chloroplasts but no mitochondria; fungi have mitochondria but no chloroplasts.
+(C)Plants and fungi have chloroplasts but no mitochondria; animals have only mitochondria.
+(D)Plants have both chloroplasts and mitochondria; animals and fungi have only mitochondria.
+",(D),"Plants perform photosynthesis (requiring chloroplasts) and cellular respiration (requiring mitochondria). Animals and fungi do not perform photosynthesis, so they lack chloroplasts but have mitochondria for respiration.  
+Option (D) correctly states that plants have both chloroplasts and mitochondria, while animals and fungi have only mitochondria.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+101,"How do cyanobacteria differ from green unicellular algae?
+
+Options:
+(A)Cyanobacteria reduce sulfur compounds.
+(B)Cyanobacteria lack cell walls.
+(C)Cyanobacteria have no nuclei.
+(D)Green algae produce cell membranes.
+",(C),"Cyanobacteria are prokaryotes, while green unicellular algae are eukaryotes. Prokaryotes lack membrane-bound organelles, including a nucleus.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+102,"Stabilization of the unique coiled structure of an alpha helix in a protein is primarily attributed to (A) hydrogen bonding between the peptide backbone atoms
+
+Options:
+(A)hydrogen bonding between the peptide backbone atoms
+(B)disulfide bridges between cysteine side chains
+(C)carbohydrate moieties attached to polar amino acids
+(D)peptide linkages that covalently bond amino acids
+",(A),"Hydrogen bonding between the carbonyl oxygen and amide hydrogen in the peptide backbone stabilizes the alpha helix structure, while disulfide bridges, carbohydrate attachments, and peptide linkages are not responsible for the specific coiled shape of an alpha helix.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+103,"The target of digestion of a nucleosome dimer to nucleosome monomers by DNase is
+
+Options:
+(A)the H1 histone
+(B)histones H2A, H2B, H3, and H4
+(C)the nucleosome core
+(D)linker DNA
+",(D),"Nucleosomes consist of a histone octamer (H2A, H2B, H3, H4) wrapped by DNA, with linker DNA between nucleosomes and histone H1 associated with linker DNA.  
+DNase cleaves DNA, not proteins.  
+A nucleosome dimer is two nucleosomes connected by linker DNA.  
+Cleaving linker DNA with DNase would separate the dimer into monomers.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+104,"A prokaryote that is thermophilic and methanogenic and has isoprenylglycerol ethers in its membrane instead of phospholipids is most likely
+
+Options:
+(A)a proteobacterium
+(B)a spirochete
+(C)a member of the genus Chlamydia
+(D)an archaeon
+",(D),"Thermophilic (heat-loving) and methanogenic (methane-producing) traits are characteristic of certain archaea, not bacteria.  
+Additionally, archaeal membranes contain isoprenylglycerol ethers, unlike bacterial membranes that have phospholipids with ester linkages.  
+Thus, the description matches archaea.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+105,"All of the following environmental conditions increase the rate of transpiration from plants EXCEPT
+
+Options:
+(A)high temperature
+(B)high relative humidity
+(C)low relative humidity
+(D)wind
+",(B),"High relative humidity reduces the rate of transpiration because it decreases the water vapor gradient between the leaf and the surrounding air. High temperature, low relative humidity, and wind all increase transpiration.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+106,"Which of the following statements about embryonic cleavage is NOT true?
+
+Options:
+(A)The presence of yolk inhibits cleavage.
+(B)Telolecithal eggs undergo meroblastic cleavage.
+(C)The vegetal pole undergoes cleavage more readily than does the animal pole
+(D)The rapid mitotic divisions of cleavage directly give rise to blastomeres.
+",(C),"Let’s evaluate each option:  
+
+- **(A)** True — yolk physically impedes cleavage, so this is correct.  
+- **(B)** True — telolecithal eggs (large yolk at one end) undergo meroblastic (partial) cleavage.  
+- **(C)** NOT true — the vegetal pole has more yolk, so it cleaves more slowly, not more readily.  
+- **(D)** True — cleavage is rapid mitotic division producing blastomeres.  
+
+Thus, the false statement is (C).  
+
+Final answer: (C)",(B),(C),False,option_letter,,mars_official,college_biology,2
+107,"In eukaryotic photosynthetic cells, which of the following occurs when electrons flow cyclically through the electron transport chain associated with photosystem I?
+
+Options:
+(A)Synthesis of ATP
+(B)Reduction of NADP+ to NADPH
+(C)Release of O2
+(D)Reduction of CO2 to sugar
+",(A),"Cyclic electron flow in photosystem I involves electrons cycling back to the electron transport chain between photosystem I and the cytochrome complex, which pumps protons into the thylakoid lumen. This proton gradient drives ATP synthesis via ATP synthase.  
+It does **not** involve photosystem II (so no O₂ release), and NADP⁺ is not reduced because the electrons are cycling rather than going to ferredoxin-NADP⁺ reductase.  
+Thus, the outcome is ATP synthesis without NADPH production.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+108,"Many marine birds drink seawater yet maintain their internal osmolarity at a constant level that is hypoosmotic to seawater. Which of the following physiological strategies best explains how the birds maintain their tissue osmolarity?
+
+Options:
+(A)Marine birds absorb water from the environment through specialized salt-exchange glands and produce large volumes of dilute urine in the kidneys.
+(B)Marine birds absorb salts from the environment through specialized salt-exchange glands and produce large volumes of concentrated urine in the kidneys.
+(C)Marine birds excrete salts through specialized salt-exchange glands and excrete small volumes of urine.
+(D)Marine birds excrete salts and nitrogenous wastes through specialized nasal glands.
+",(C),"Marine birds ingest seawater, which has a higher osmolarity than their internal fluids. To maintain hypoosmotic tissue osmolarity, they must excrete excess salt without losing too much water. Specialized salt glands (often nasal glands) excrete concentrated salt solutions, and to conserve water, they produce small volumes of urine.  
+
+Option (A) is incorrect because absorbing more salt and producing dilute urine would increase internal osmolarity.  
+Option (B) is incorrect because absorbing salts would worsen the problem.  
+Option (D) is incorrect because nitrogenous wastes are primarily excreted by the kidneys, not salt glands.  
+Option (C) matches the known physiology: excrete salts via salt glands and produce small volumes of urine to conserve water.  
+
+Final answer: (C)",(A),(C),False,option_letter,,mars_official,college_biology,2
+109,"A species of small rodent eats seeds from only one species of pine. In normal years, a pair of these rodents will have a litter of two or three. It is unusual for small rodents to have such small litter sizes. The rodents are most likely to exhibit which other characteristic?
+
+Options:
+(A)Moderate sexual size dimorphism
+(B)High parental investment
+(C)Precocial young
+(D)Frequent extrapair matings
+",(B),"The rodent has a small litter size, which is unusual for small rodents. In life history theory, species with fewer offspring typically invest more resources per offspring, leading to higher parental investment.  
+Precocial young (C) is unlikely here because small rodents generally have altricial young.  
+Moderate sexual size dimorphism (A) and frequent extrapair matings (D) are traits more associated with mating systems influenced by sexual selection, not necessarily linked to small litter size.  
+Thus, high parental investment (B) fits best with the small litter size.  
+
+Final answer: (B)",(C),(B),False,option_letter,,mars_official,college_biology,2
+110,"Which of the following sources makes the greatest contribution to the dry mass of organic matter that comprises an oak tree?
+
+Options:
+(A)Organic molecules from decaying matter in the soil that are taken up by the roots
+(B)Mineral nutrients dissolved in groundwater that are taken up by the roots
+(C)Water that is taken up by the roots and carbon dioxide from the air
+(D)Endosperm located in the cotyledons of the acorn
+",(C),Final answer: (C),(C),(C),True,option_letter,,mars_official,college_biology,2
+111,"Which of the following must be true in order for evolution to have occurred?
+
+Options:
+(A)The frequencies of some alleles in a population's gene pool has changed over successive generations.
+(B)The frequencies of some alleles in a population's gene pool has changed during the organisms' lifetimes.
+(C)The frequencies of each allele in a population's gene pool has remained constant over successive generations.
+(D)The frequencies of each allele in an organism's genotype has remained constant within the organism's lifetime.
+",(A),"Evolution is defined as a change in allele frequencies in a population over successive generations.  
+- (A) matches this definition.  
+- (B) refers to changes during organisms' lifetimes, which is not evolution but individual change.  
+- (C) describes no change in allele frequencies, so evolution has not occurred.  
+- (D) refers to an individual organism's genotype, not the population's gene pool.  
+
+Final answer: (A)",(D),(A),False,option_letter,,mars_official,college_biology,2
+112,"From an evolutionary perspective, the optimality theory as applied to a given trait is best represented by the idea that
+
+Options:
+(A)if the benefits gained from the trait exceed the cost of the trait to the animal performing them, that trait will persist in the genome
+(B)if the trait reaps the best return for the cost relative to alternative forms of the trait, that trait will win out over the alternative forms
+(C)beneficial traits are always worth the cost to the organism in energy and physiology, so those traits will persist in the genome
+(D)the relative fitness of an organism must be improved due to a specific trait in order for the trait to remain in a population's gene pool
+",(B),"Optimality theory in evolution centers on traits that provide the greatest net benefit relative to costs compared to alternative traits — not just any benefit exceeding cost, but the best cost-benefit ratio among possible variants.  
+Option (A) only states that benefits exceed costs, which is necessary but not sufficient for optimality.  
+Option (C) says beneficial traits are *always* worth the cost, which is too absolute and ignores trade-offs.  
+Option (D) focuses only on relative fitness improvement, not cost-benefit comparisons among alternative trait forms.  
+Option (B) correctly captures the idea of the best return for the cost relative to alternatives, which is the core of optimality theory.  
+
+Final answer: (B)",(D),(B),False,option_letter,,mars_official,college_biology,2
+113,"In the presence of alcohol dehydrogenase, the rate of reduction of acetaldehyde to ethanol increases as the concentration of acetaldehyde is increased. Eventually, the rate of the reaction reaches a maximum, after which point further increases in the concentration of acetaldehyde have no effect. Which of the following is true at the maximal rate of reaction?
+
+Options:
+(A)Nearly all of the enzyme molecules are interacting with acetaldehyde molecules.
+(B)The activation energy of the reaction decreases.
+(C)The change in free energy of the reaction decreases.
+(D)The enzyme is no longer specific for acetaldehyde.
+",(A),"The scenario describes enzyme kinetics where increasing substrate concentration leads to a plateau in reaction rate, indicating saturation of the enzyme active sites.  
+At the maximal rate (Vmax), the enzyme is saturated with substrate, meaning nearly all enzyme molecules are bound to acetaldehyde at any given moment.  
+
+- (B) is false because activation energy is determined by the enzyme’s catalytic mechanism, not substrate concentration.  
+- (C) is false because the change in free energy (ΔG) of the reaction is a fixed thermodynamic property, unaffected by enzyme saturation.  
+- (D) is false because enzyme specificity does not change with substrate concentration.  
+
+Thus, (A) correctly describes the saturation condition at Vmax.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+114,"Which of the following best explains how mutations in DNA can result in the expression of a new phenotype?
+
+Options:
+(A)A different polypeptide is produced.
+(B)The polarity of tRNA becomes the opposite of that of DNA.
+(C)Nucleic acids are methylated.
+(D)The gene is now read in the 3′ to 5′ direction.
+",(A),"Mutations alter the DNA sequence, which can change the mRNA sequence during transcription and subsequently lead to a different amino acid sequence in the polypeptide during translation. A different polypeptide may have altered structure and function, potentially producing a new phenotype.  
+(B) is incorrect because tRNA polarity does not reverse due to DNA mutation.  
+(C) is incorrect because methylation is an epigenetic modification, not a direct result of a DNA sequence mutation.  
+(D) is incorrect because genes are always read 5′ to 3′ during transcription; a mutation does not reverse reading direction.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+115,"A competitive inhibitor of an enzyme exerts its effect by
+
+Options:
+(A)irreversibly forming covalent links with the enzyme, effectively preventing the enzyme's dissociation from it
+(B)irreversibly modifying some of the amino acid residues that help to comprise the enzyme's active site
+(C)competing with the substrate molecule for the same enzyme but a different binding site than the substrate binding site
+(D)reversibly decreasing the number of enzyme molecules that are available to bind substrates
+",(D),"A competitive inhibitor binds reversibly to the enzyme’s active site, competing directly with the substrate. This reduces the proportion of enzyme molecules available to bind substrate at any given time, but does not change the total amount of enzyme.  
+
+Option (A) describes irreversible covalent binding — that’s more like an inactivator or poison, not a competitive inhibitor.  
+Option (B) also describes irreversible modification — not competitive inhibition.  
+Option (C) is incorrect because competitive inhibitors bind to the *same* active site as the substrate, not a different site (that would be allosteric inhibition).  
+Option (D) matches the reversible reduction in available enzyme molecules for substrate binding, which is correct for competitive inhibition.  
+
+Final answer: (D)",(B),(D),False,option_letter,,mars_official,college_biology,2
+116,"The ability of the brain to detect differences in stimulus intensity is best explained by the fact that which of the following varies with the stimulus intensity?
+
+Options:
+(A)The amplitude of the action potential
+(B)The threshold potential
+(C)The number of action potentials per second
+(D)The number of synapses crossed
+",(C),"The amplitude of an action potential is fixed due to the all-or-none principle, so (A) is incorrect.  
+The threshold potential is generally constant for a given neuron, so (B) is incorrect.  
+The number of synapses crossed depends on neural circuitry, not directly on stimulus intensity, so (D) is incorrect.  
+Stimulus intensity is coded by the frequency of action potentials (number per second), making (C) correct.  
+
+Final answer: (C)",(A),(C),False,option_letter,,mars_official,college_biology,2
+117,"Which of the following is the best explanation for why net primary productivity in terrestrial ecosystems tends to increase toward the tropics?
+
+Options:
+(A)The higher species diversity in the tropics tends to increase plant growth.
+(B)There are lower metabolic costs to plant growth in the tropics.
+(C)The availability of water and warm temperatures in the tropics fosters photosynthesis.
+(D)The tropics have more predators that minimize herbivory.
+",(C),Final answer: (C),(C),(C),True,option_letter,,mars_official,college_biology,2
+118,"Proteins were shown to move about in a plane of the plasma membrane when mouse cellsurface proteins and human cell-surface proteins were observed to integrate along a fused mouse-human cell plasma membrane. Which of the following cell culture techniques was most likely employed in order to yield these results?
+
+Options:
+(A)Producing a heterokaryon
+(B)Producing a hybrid cell
+(C)Isolating an immortal variant cell from culture and using it to create a cell line
+(D)Inserting a tumor-inducing virus into a normal cell to initiate transformation
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+119,"Gene flow between populations results in
+
+Options:
+(A)an increase in genetic homogeneity in the metapopulation
+(B)an increase in the rate of deleterious mutations in the metapopulation
+(C)an increased likelihood of speciation
+(D)disruption of Hardy-Weinberg equilibrium in the metapopulation
+",(A),"Gene flow involves the exchange of genes between populations, which tends to reduce genetic differences between them, leading to greater genetic homogeneity in the metapopulation.  
+It does not inherently increase deleterious mutations, nor does it increase speciation likelihood — in fact, gene flow usually hinders speciation.  
+While gene flow can alter allele frequencies and disrupt Hardy-Weinberg equilibrium locally, the question asks for what it ""results in"" as a general outcome, and the most direct and consistent effect is increased genetic homogeneity across the metapopulation.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+120,"A subunit of DNA and protein consisting of 134-base-pair long stretches of DNA surrounding a protein octomer is called (a)
+
+Options:
+(A)histone
+(B)chromatin
+(C)nucleosome
+(D)solenoid
+",(C),"A nucleosome is the fundamental repeating subunit of chromatin, consisting of 146–147 base pairs of DNA wrapped around a histone octamer.  
+Given the description matches this structure, the correct choice is nucleosome.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+121,"Which of the following would be the most dependable environmental signal that a plant in a temperate ecosystem could use to initiate flowering at the correct time of the year?
+
+Options:
+(A)Circadian rhythm
+(B)Photoperiod
+(C)Changing air temperature
+(D)Fluctuations in abscisic acid levels
+",(B),"Photoperiod is the most reliable signal for flowering in temperate ecosystems because it changes predictably with the seasons, unlike temperature or hormone levels, which can fluctuate daily. Circadian rhythm regulates daily cycles, not seasonal timing.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+122,"Mitochondria isolated and placed in a buffered solution with a low pH begin to manufacture ATP. Which of the following is the best explanation for the effect of low external pH?
+
+Options:
+(A)It increases the concentration of OH-, causing the mitochondria to pump H+ to the intermembrane space.
+(B)It increases the OH- concentration in the mitochondria matrix.
+(C)It increases the acid concentration in the mitochondria matrix.
+(D)It increases diffusion of H+ from the intermembrane space to the matrix.
+",(D),"A low external pH means a high external H+ concentration. This creates a steeper H+ gradient across the inner mitochondrial membrane, with the intermembrane space having relatively fewer H+ compared to the outside. This gradient drives H+ into the intermembrane space, and then the flow of H+ into the matrix through ATP synthase increases ATP production.  
+
+Option (D) correctly describes that low external pH increases diffusion of H+ from the intermembrane space to the matrix because the pH gradient (intermembrane space less acidic than outside) enhances proton motive force.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+123,"An organism belonging to the nekton is which one of the following?
+
+Options:
+(A)Whale
+(B)Barnacle
+(C)Cyanobacterium
+(D)Protist
+",(A),"Nekton refers to aquatic organisms that can swim and move independently of water currents.  
+- (A) Whale: A large marine mammal that actively swims → nekton.  
+- (B) Barnacle: Sessile crustacean, attached to surfaces → not nekton.  
+- (C) Cyanobacterium: Tiny photosynthetic bacteria, drift with currents → plankton.  
+- (D) Protist: Most are microscopic and drift → plankton.  
+
+Final answer: (A)",(A),(A),True,option_letter,,mars_official,college_biology,2
+124,"A behavioral response called a fixed action pattern shown by animals
+
+Options:
+(A)occurs the second time an animal is exposed to the correct stimulus at the appropriate time in its life
+(B)occurs in the absence of sensory feedback
+(C)is a motor response which once released may be terminated spontaneously
+(D)is triggered by a number of sensory signals in the animal's environment
+",(B),"A fixed action pattern is an innate, stereotyped behavior that, once initiated by a specific sign stimulus, runs to completion without requiring further sensory feedback.  
+
+- (A) is incorrect because fixed action patterns occur the first time the stimulus is encountered, not only the second time.  
+- (B) is correct because the behavior continues even if the stimulus is removed after initiation.  
+- (C) is incorrect because it is not terminated spontaneously; it goes to completion.  
+- (D) is incorrect because it is triggered by a specific sign stimulus, not a number of different signals.  
+
+Final answer: (B)",(A),(B),False,option_letter,,mars_official,college_biology,2
+125,"Which of the following adaptations would limit pollination by bees and promote hummingbird pollination?
+
+Options:
+(A)Patterns of ultraviolet color on the petals
+(B)Modified petals to provide a landing space
+(C)Pendant (hanging) red-colored flowers
+(D)Nectar with high sugar concentration produced in limited amounts
+",(C),"Patterns of ultraviolet color (A) are visible to bees but not hummingbirds, so this would not limit bee pollination.  
+Modified petals for landing (B) would help bees, not limit them.  
+Pendant red flowers (C) are hard for bees to access, and red is less visible to bees but attractive to hummingbirds, so this would limit bees and promote hummingbird pollination.  
+Nectar with high sugar concentration in limited amounts (D) might not specifically deter bees, since both bees and hummingbirds seek high-sugar nectar.  
+
+Final answer: (C)",(B),(C),False,option_letter,,mars_official,college_biology,2
+126,"Double fertilization is a unique feature of flowering plants. In this process, one sperm unites with the egg to yield a zygote. The second sperm unites with the polar nuclei to initiate the formation of the
+
+Options:
+(A)megagametophyte
+(B)endodermis
+(C)embryo
+(D)endosperm
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+127,"Mutation of homeotic cluster genes often results in which of the following developmental defects in Drosophila?
+
+Options:
+(A)Absence of a group of contiguous segments
+(B)Transformation of one segment into another
+(C)Polarity defects in every segment along the anterior-posterior axis
+(D)Tumor formation in imaginal discs
+",(B),"Homeotic genes control the identity of body segments, and mutations in them can cause one body part to develop in the location where another should be (e.g., a leg growing where an antenna should be). This is a transformation of one segment into another, not the absence of segments, global polarity defects, or tumor formation.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+128,"Root pressure created by a plant's roots causes water to enter the roots by
+
+Options:
+(A)translocation
+(B)adhesion
+(C)osmosis
+(D)capillary action
+",(C),"Root pressure is generated by the osmotic movement of water into the roots from the soil, driven by solute accumulation in the root xylem. Translocation refers to movement of sugars in phloem, adhesion is the attraction of water molecules to other substances, and capillary action is movement in narrow tubes due to adhesion and cohesion — but the primary mechanism for water entry into roots during root pressure is osmosis.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+129,"Cellular uptake of cholesterol occurs through internalization of low density lipoproteincholesterol complexes. Cholesterol uptake involves all of the following EXCEPT
+
+Options:
+(A)cell-surface receptors
+(B)adhesion plaques
+(C)endosome formation
+(D)receptor-mediated endocytosis
+",(B),"Cholesterol uptake via LDL involves cell-surface receptors, receptor-mediated endocytosis, and endosome formation. Adhesion plaques are associated with cell–cell or cell–matrix adhesion, not cholesterol uptake.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+130,"Two xylem plant cell types that provide support and conduct water and minerals are the
+
+Options:
+(A)collenchyma and sclerenchyma
+(B)sieve tube members and companion cells
+(C)tracheids and vessel elements
+(D)vessel elements and companion cells
+",(C),"Tracheids and vessel elements are the two types of water-conducting cells in xylem; collenchyma and sclerenchyma are supporting tissues but not primarily for water conduction; sieve tube members and companion cells are phloem cells.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+131,"Which of the following statements about excretory organs is true?
+
+Options:
+(A)The kidneys of saltwater fishes produce urine hyperosmotic to their tissues.
+(B)The kidneys of desert mammals produce urine that is hypoosmotic to the urine of freshwater fishes.
+(C)Malpighian tubules allow insects to excrete waste through the exoskeleton.
+(D)Juxtamedullary nephrons in the mammalian kidney allow the organism to produce hyperosmotic urine.
+",(D),Final answer: (D),(D),(D),True,option_letter,,mars_official,college_biology,2
+132,"Mimicry is a strategy that has evolved through natural selection to increase the fitness of organisms to their environment. Which of the following represents a form of Batesian mimicry?
+
+Options:
+(A)A type of millipede that is toxic to a toad is permanently avoided by the toad following the toad's initial attempt to consume it.
+(B)A moth exhibits false eyes at its tail end in order to disorient predators.
+(C)A moth exhibits nearly identical coloration to that of a stinging bee.
+(D)A ground-nesting gull chick displays a coloration pattern that is nearly indistinguishable from its surroundings.
+",(C),"Batesian mimicry involves a harmless species evolving to resemble a harmful or unpalatable species to deter predators.  
+
+- (A) Describes actual toxicity and learned avoidance, not mimicry.  
+- (B) Describes deflection or intimidation markings, not Batesian mimicry.  
+- (C) A harmless moth resembling a stinging bee fits Batesian mimicry.  
+- (D) Describes camouflage (cryptic coloration), not mimicry of another species.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+133,"Keystone species are thought to have profound effects on the structure and composition of ecological communities because they
+
+Options:
+(A)tend to reduce diversity by eliminating food resources for other species
+(B)provide the foundation for food webs
+(C)are more abundant than most other species in their communities
+(D)can prevent superior competitors from driving inferior competitors to local extinction
+",(D),"Keystone species exert a strong influence on community structure disproportionate to their abundance, often by controlling populations of dominant competitors or prey, which maintains diversity by preventing competitive exclusion.  
+Option (A) is incorrect because keystone species generally increase diversity.  
+Option (B) describes foundation species (like corals or trees), not necessarily keystone species.  
+Option (C) is false; keystone species are not necessarily abundant.  
+Option (D) fits the classic definition: by keeping dominant competitors in check, they prevent local extinction of weaker competitors.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+134,"Which of the following is a reason that geneticists use mitochondrial DNA (mtDNA) to study the relatedness of animal populations?
+
+Options:
+(A)mtDNA mutates at a slower rate than nuclear DNA.
+(B)mtDNA is passed from mother to child and is free from recombination that occurs between pairs of chromosomes.
+(C)There are few single nucleotide polymorphisms in the hypervariable, noncoding regions.
+(D)All mitochondrial proteins are coded for by mitochondrial genes.
+",(B),"Mitochondrial DNA is inherited maternally without recombination, making it useful for tracing lineage and studying population relatedness.  
+(A) is incorrect because mtDNA generally mutates faster, not slower, than nuclear DNA.  
+(C) is incorrect because hypervariable regions in mtDNA have many polymorphisms, not few.  
+(D) is incorrect because most mitochondrial proteins are encoded by nuclear DNA, not mtDNA.  
+
+Final answer: (B)",(B),(B),True,option_letter,,mars_official,college_biology,2
+135,"A quote from a natural resources text states: ""Whenever the original ecosystem becomes restructured by man, it tends to become simplified, with a resultant disruption of the stabilizing influences of density-dependent regulatory factors."" This implies that in a disturbed ecosystem
+
+Options:
+(A)there exist large populations of a low number of species
+(B)population levels of a species are kept at equilibrium through natural regulatory mechanisms
+(C)a given prey organism is subject to higher predation rates by more diverse predators
+(D)a given prey organism is less likely to undergo a population surge
+",(A),"The quote describes how human-disturbed ecosystems become simplified and lose density-dependent regulatory factors.  
+Density-dependent factors (like predation, competition, disease) normally keep populations in balance.  
+If these are disrupted, populations are less regulated and can undergo surges rather than staying at equilibrium.  
+Option (D) says a given prey organism is *less* likely to undergo a population surge — but if regulatory mechanisms are disrupted, population surges become *more* likely, not less.  
+So (D) is incorrect.  
+
+Option (A) fits: simplification means fewer species, but those remaining may exist in large numbers due to reduced competition/predation.  
+(B) is wrong because the text says these regulatory mechanisms are disrupted.  
+(C) is wrong because a simplified ecosystem has fewer, not more diverse, predators.  
+
+Final answer: (A)",(D),(A),False,option_letter,,mars_official,college_biology,2
+136,"A female fruit fly bearing linked genes that produce the phenotype gray body and normal wings mates with a male fruit fly of phenotype black body and vestigial wings. The presence of gray-bodied, vestigialwinged flies among the progeny is best explained by
+
+Options:
+(A)crossing over
+(B)independent assortment
+(C)segregation of alleles
+(D)penetrance
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+137,"Which of the following active pools of carbon is the largest on Earth and contributes the most to carbon cycling?
+
+Options:
+(A)The atmosphere
+(B)Rain-forest vegetation
+(C)Recoverable fossil fuels
+(D)The oceans
+",(D),"The oceans contain the largest active pool of carbon, storing far more carbon than the atmosphere, vegetation, or fossil fuels, primarily in dissolved inorganic forms and marine organisms.  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2
+138,"Charles Darwin's proposed conditions for natural selection encompass all of the following with regard to a given population EXCEPT
+
+Options:
+(A)inheritance of both ""fit"" and ""unfit"" genes
+(B)differential survival and reproductive success
+(C)competition for limited resources
+(D)overproduction of offspring
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+139,"Which of the following is a correct statement about the cohesion-tension theory for the ascent of water in the xylem?
+
+Options:
+(A)The evaporation of water from leaf mesophyll cells generates tension in the water column.
+(B)Water moves from a source region with high hydrostatic pressure to a sink region with low hydrostatic pressure.
+(C)The cohesion of water molecules is responsible for the formation of embolisms (air bubbles) in the water column.
+(D)Living cells of the xylem provide the main conduit for an ascent of water.
+",(A),"The cohesion-tension theory states that transpiration from leaves creates tension (negative pressure) in the xylem sap, and because of hydrogen bonding between water molecules (cohesion) and adhesion to xylem walls, a continuous water column is pulled upward from roots to leaves.  
+
+- (A) matches this: evaporation from mesophyll generates tension.  
+- (B) describes pressure-flow mechanism for phloem, not xylem water ascent.  
+- (C) is incorrect — cohesion prevents embolisms; embolisms occur when cohesion fails.  
+- (D) is false — xylem vessels/tracheids are dead at maturity.  
+
+Final answer: (A)",(B),(A),False,option_letter,,mars_official,college_biology,2
+140,"In fungi, cell walls are reinforced by which of the following?
+
+Options:
+(A)Chitin
+(B)Silica
+(C)Lignin
+(D)Collagen fibers
+",(A),Final answer: (A),(A),(A),True,option_letter,,mars_official,college_biology,2
+141,"In plants, proton pumps are involved in the process of loading sugars into the phloem for transport. Which of the following is true about this process?
+
+Options:
+(A)It is passive.
+(B)It depends on DNA.
+(C)It requires ATP.
+(D)It translocates starch.
+",(C),"Proton pumps require energy to move protons against their concentration gradient, and this energy comes from ATP. Since the process of loading sugars into the phloem involves proton pumps, it must require ATP.  
+
+Final answer: (C)",(C),(C),True,option_letter,,mars_official,college_biology,2
+142,"Which of the following characteristics is predicted for an early-successional plant community?
+
+Options:
+(A)High niche divergence among co-occurring species
+(B)High ratios of primary production to standing-crop biomass
+(C)High frequency of K-selected species
+(D)High detrital biomass
+",(B),"Early-successional plant communities are characterized by rapid growth, high reproductive rates, and efficient resource use.  
+They typically have high productivity relative to biomass (due to small, fast-growing plants), which means a high ratio of primary production to standing-crop biomass.  
+High niche divergence (A) is more common in stable, late-successional communities.  
+K-selected species (C) are late-successional, not early.  
+High detrital biomass (D) accumulates later in succession.  
+
+Final answer: (B)",(A),(B),False,option_letter,,mars_official,college_biology,2
+143,"Which of the following is the symplastic pathway for the movement of sucrose from the site of photosynthesis in mesophyll cells into the phloem?
+
+Options:
+(A)Fibers, phloem parenchyma, companion cell, sieve tube
+(B)Phloem parenchyma, fibers, bundle sheath, tracheids
+(C)Companion cells, phloem parenchyma, fibers, sieve tube
+(D)Bundle sheath, phloem parenchyma, companion cell, sieve tube
+",(D),"The symplastic pathway involves movement through plasmodesmata without crossing plasma membranes. Sucrose moves from mesophyll cells into sieve tubes via the symplast, typically passing through bundle sheath cells, phloem parenchyma, companion cells, and then into sieve tube elements.  
+Option (D) lists these correctly: bundle sheath → phloem parenchyma → companion cell → sieve tube.  
+Other options include incorrect components like fibers (not part of symplastic phloem loading) or tracheids (xylem, not phloem).  
+
+Final answer: (D)",(D),(D),True,option_letter,,mars_official,college_biology,2

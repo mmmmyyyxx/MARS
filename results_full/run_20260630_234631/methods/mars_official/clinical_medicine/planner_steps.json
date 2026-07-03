@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 4",
+    "Step 1: Instruct the model to carefully read the question and all options, focusing on key clinical terms and diagnostic clues.",
+    "Step 2: Emphasize recalling relevant medical knowledge (e.g., disease mechanisms, drug indications, diagnostic criteria) before selecting an answer.",
+    "Step 3: Specify that the model must eliminate incorrect options by identifying contradictions or implausible associations with the question stem.",
+    "Step 4: Require the final output to strictly follow the format: a single parenthesized letter, such as (A), without any additional text."
+  ]
+}

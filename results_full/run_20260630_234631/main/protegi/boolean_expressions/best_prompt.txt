@@ -1,0 +1,1 @@
+Evaluate the Boolean expression step by step, applying logical operators in the correct order of precedence (parentheses, NOT, AND, OR). If the final result is logically true, output "true"; otherwise, output "false".

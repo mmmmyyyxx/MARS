@@ -1,0 +1,23 @@
+display_name: ProTeGi
+type: optimization
+num_iterations: 10
+beam_width: 4
+num_gradient_samples: 4
+minibatch_size: 32
+exactness: best_effort_reimplementation
+exactness_level: best_effort_reimplementation
+exactness_note: Generic textual-gradient-inspired search; pending full ProTeGi beam
+  protocol.
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 5d6f6d26fb7e8a6092c2624be2cc86db16f0f23d25c97a6b6d25e8aef0a4ad27
+eval_protocol: paper_mode
+num_opt_samples: 250
+num_val_samples: 250
+num_test_samples: 250
+opt_hash: a45f5c5d0116216e2e327a6f58d5d79ba832452d392be9d71d4198237ec6783a
+val_hash: a45f5c5d0116216e2e327a6f58d5d79ba832452d392be9d71d4198237ec6783a
+test_hash: a45f5c5d0116216e2e327a6f58d5d79ba832452d392be9d71d4198237ec6783a

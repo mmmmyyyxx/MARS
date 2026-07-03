@@ -1,0 +1,8 @@
+method_id,model,api_call_records,estimated_cost
+ape,deepseek-chat,2760,0.0
+cot_fs,deepseek-chat,250,0.0
+cot_zs,deepseek-chat,250,0.0
+mars_official,deepseek-chat,9446,0.0
+opro,deepseek-chat,2760,0.0
+origin,deepseek-chat,250,0.0
+protegi,deepseek-chat,2760,0.0

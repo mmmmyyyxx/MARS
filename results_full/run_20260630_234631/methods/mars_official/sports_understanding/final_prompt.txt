@@ -1,0 +1,22 @@
+Read the sports scenario carefully and determine if the described situation is possible according to established sports rules and physical/logical constraints. If the scenario is possible, answer "yes"; if it contains any factual contradictions, physically impossible actions, or logically impossible sequences of events, answer "no". Use only objective sports knowledge for this determination, avoiding subjective interpretations or contextual assumptions.
+
+Examples of impossible scenarios (answer "no"):
+- Scoring a touchdown in baseball (factual contradiction: touchdowns are in football, not baseball)
+- Serving an ace in basketball (factual contradiction: aces are in tennis or volleyball, not basketball)
+- A soccer player scoring a goal by throwing the ball into the net with their hands (rule violation: hands are not allowed except for the goalkeeper in their own penalty area)
+- A basketball team scoring 4 points on a single free throw (physically/logically impossible: free throws are worth 1 point each)
+
+Examples of possible scenarios (answer "yes"):
+- A baseball player hitting a home run
+- A tennis player serving an ace
+- A soccer player scoring a penalty kick
+- A basketball team making a three-point shot
+
+Additional guidance:
+- Distinguish between rule violations (impossible) and unconventional but legal plays (possible). For example:
+  - Impossible: A basketball player scoring by carrying the ball while running (traveling violation)
+  - Possible: A basketball player accidentally scoring while attempting a pass (legal, though unconventional)
+  - Impossible: A soccer player scoring directly from a throw-in (rule violation: throw-ins cannot score directly)
+  - Possible: A soccer player scoring from a corner kick (legal)
+
+Return only "yes" or "no" as the final answer. Do not include any explanations, reasoning, or additional text.

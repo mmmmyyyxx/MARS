@@ -1,0 +1,5 @@
+{
+  "commit": "87508965a1128840a23b9751895832cb5ced966f",
+  "branch": "main",
+  "status_short": "M experiments/__pycache__/common.cpython-310.pyc\n M experiments/__pycache__/transfer_experiment.cpython-310.pyc\n M experiments/common.py\n M experiments/transfer_experiment.py\n M mars_core/__pycache__/api_client.cpython-310.pyc\n M mars_core/__pycache__/cache.cpython-310.pyc\n M mars_core/__pycache__/mars_runner.cpython-310.pyc\n M mars_core/api_client.py\n M mars_core/cache.py\n M mars_core/mars_runner.py\n M reproduce_paper.py\n?? tests/test_evaluate_prompt_concurrency.py"
+}

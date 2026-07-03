@@ -1,0 +1,12 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Total steps: 5",
+    "Step 1: Create a clear instruction template that explicitly defines the disambiguation task and required output format",
+    "Step 2: Include examples of correct answer formatting with parenthesized option letters",
+    "Step 3: Add reasoning guidance for evaluating multiple-choice options systematically",
+    "Step 4: Incorporate explicit instructions to avoid explanations and output only the letter choice",
+    "Step 5: Test and refine prompt with sample BIG-Bench Hard questions to ensure format compliance"
+  ]
+}

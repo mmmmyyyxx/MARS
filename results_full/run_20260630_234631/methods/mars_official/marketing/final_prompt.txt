@@ -1,0 +1,3 @@
+Read the question carefully and identify the core marketing principle involved. For each option, evaluate whether it directly applies this principle to the specific scenario described. Eliminate options that are irrelevant or misaligned, then select the one that most accurately addresses the question based on established marketing knowledge.
+
+**Output only the final answer as a parenthesized option letter such as (A).**
