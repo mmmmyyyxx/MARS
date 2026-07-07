@@ -1,0 +1,3 @@
+{
+  "content": "The superposition theorem applies to linear networks regardless of whether the excitation is DC, AC, or a combination, because linearity implies that responses from multiple independent sources can be summed.  \nAn impulse is also valid, but the question asks when the theorem would hold in general — it holds for both AC and DC.  \nOption (C) is correct.  \n\nFinal answer: (C)"
+}

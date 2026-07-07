@@ -1,0 +1,3 @@
+{
+  "content": "A dynamometer wattmeter measures power using a fixed current coil (in series with the load) and a moving potential coil (across the load).  \nThe moving coil is part of the voltage circuit, so it should draw minimal current to avoid altering the load voltage and thus affecting measurement accuracy.  \nTo minimize current in the potential coil, its resistance must be **high**, ensuring that the voltage circuit’s power consumption is negligible compared to the load power.  \n\n- (A) Low — would draw more current, disturbing the load condition.  \n- (B) Very low — same issue, even worse.  \n- (C) High — correct, minimizes loading effect.  \n- (D) Almost zero — would short the supply in the voltage circuit, completely wrong.  \n\nFinal answer: (C)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A reverse-biased p-n junction diode blocks current flow, behaving like an open switch in an ideal case.  \nIt does not act as an on switch (A), nor is it simply a Zener diode (B) unless specifically designed for breakdown operation.  \nWhile there is junction capacitance in reverse bias, the primary intended behavior in most circuit contexts is that of an open or \"off\" switch (D).  \n\nFinal answer: (D)"
+}

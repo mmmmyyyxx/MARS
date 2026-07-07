@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down.  \n\n**First premise:**  \n\"Everybody who is neither an ancestor of Andy nor a nephew of Donald is however a cousin of Ralph.\"  \nLogical form:  \nIf (not ancestor of Andy AND not nephew of Donald) → cousin of Ralph.  \n\n**Second premise:**  \n\"Dale is neither a nephew of Donald nor an ancestor of Andy.\"  \nThat means: Dale is (not nephew of Donald AND not ancestor of Andy).  \n\nFrom the first premise, if someone satisfies (not ancestor of Andy AND not nephew of Donald), then they must be a cousin of Ralph.  \nDale satisfies the antecedent, so the conclusion \"Dale is a cousin of Ralph\" follows necessarily.  \n\nThis is deductively valid.  \n\nFinal answer: valid"
+}

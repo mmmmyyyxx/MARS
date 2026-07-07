@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.  \n\nExpression:  \nTrue or ( not False ) or True  \n\n1. **Resolve parentheses and negations**  \n   - Inside parentheses: `not False` → `True`  \n   Expression becomes:  \n   True or True or True  \n\n2. **Apply logical operators in precedence order**  \n   - No more NOT or AND, only OR left.  \n   - OR is left-associative:  \n     (True or True) → True  \n     Then True or True → True  \n\nFinal answer: true"
+}

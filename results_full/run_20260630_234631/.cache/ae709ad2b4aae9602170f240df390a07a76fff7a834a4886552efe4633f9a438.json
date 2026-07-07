@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n**True and not True or False and True**\n\n---\n\n**Step 1: Handle parentheses and negations (NOT)**  \nThere are no parentheses, but there is a `not True`.  \n`not True` = `False`  \n\nSo the expression becomes:  \n**True and False or False and True**\n\n---\n\n**Step 2: Apply AND before OR**  \n`True and False` = `False`  \n`False and True` = `False`  \n\nNow we have:  \n**False or False**\n\n---\n\n**Step 3: Apply OR**  \n`False or False` = `False`\n\n---\n\n**Final answer: false**"
+}

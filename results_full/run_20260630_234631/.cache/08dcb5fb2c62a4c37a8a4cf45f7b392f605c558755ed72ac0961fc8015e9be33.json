@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.\n\nThe expression is:  \n`( ( True ) ) or not False`\n\n1. **Parentheses first**: `( ( True ) )` is just `True`.  \n2. **NOT operator**: `not False` is `True`.  \n3. **OR operator**: `True or True` is `True`.\n\nFinal answer: true"
+}

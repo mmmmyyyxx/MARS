@@ -1,0 +1,3 @@
+{
+  "content": "How can we ensure the prompt explicitly guides the model to verify that all units remain consistent throughout the problem, especially when dealing with mixed measurements like dollars and cents or different time units?"
+}

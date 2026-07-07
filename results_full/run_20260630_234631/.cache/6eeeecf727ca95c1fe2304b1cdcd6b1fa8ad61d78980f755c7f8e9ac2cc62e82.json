@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step:  \n\n1. **Expression**: `( True and not True and False )`  \n2. **Evaluate `not True`**: `not True` = `False`  \n3. **Substitute**: `( True and False and False )`  \n4. **Evaluate left to right** (logical AND is associative):  \n   - `True and False` → `False`  \n   - `False and False` → `False`  \n\nFinal result: **False**  \n\nFinal answer: false"
+}

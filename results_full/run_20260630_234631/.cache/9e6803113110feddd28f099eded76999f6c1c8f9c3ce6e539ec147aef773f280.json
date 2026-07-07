@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\n**Premises:**  \n1. Everyone who is a grandson of Dominic is a workmate of James.  \n   - If **Gd** → **Wj**  \n2. Whoever is neither a son of Cody nor a son of Ivan is a grandson of Dominic.  \n   - If **not(Sc ∨ Si)** → **Gd**  \n\n**Conclusion:**  \nWhoever is neither a son of Cody nor a son of Ivan is a workmate of James.  \n- If **not(Sc ∨ Si)** → **Wj**  \n\n---\n\n**Reasoning chain:**  \nFrom premise 2:  \nnot(Sc ∨ Si) → Gd  \n\nFrom premise 1:  \nGd → Wj  \n\nBy hypothetical syllogism:  \nnot(Sc ∨ Si) → Wj  \n\nThat is exactly the conclusion.  \n\nSo the argument is **deductively valid**.  \n\nFinal answer: valid"
+}

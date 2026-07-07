@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The question conflates reasoning quality with output formatting - these are separate concerns. A better prompt would: 1) Specify analyzing biological concepts before answering 2) Explicitly require the (X) format 3) Include examples showing both reasoning process and final formatted answer. Consider: \"For each biology question, first analyze the scientific principles involved, then output only your final answer as a parenthesized letter like (A).\""
+}

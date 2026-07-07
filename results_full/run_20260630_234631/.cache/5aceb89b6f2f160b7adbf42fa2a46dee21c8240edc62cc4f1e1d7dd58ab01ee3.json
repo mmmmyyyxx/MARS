@@ -1,0 +1,3 @@
+{
+  "content": "ACCEPT\n\nAdding a specific example concretely demonstrates the required output format, preventing confusion between the model's internal reasoning (which should remain implicit) and the mandatory structured response. This reduces ambiguity and increases compliance with task specifications."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( True and not not not True )`\n\n1. **Resolve the negations from right to left** (NOT has highest precedence):  \n   - `not True` → `False`  \n   - `not False` → `True`  \n   - `not True` → `False`  \n\n   So `not not not True` = `False`.\n\n2. **Now the expression is**:  \n   `True and False`\n\n3. **Apply AND**:  \n   `True and False` → `False`\n\nFinal answer: false"
+}

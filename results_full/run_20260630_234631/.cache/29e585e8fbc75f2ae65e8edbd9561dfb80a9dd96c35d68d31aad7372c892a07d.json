@@ -1,0 +1,3 @@
+{
+  "content": "In force-voltage analogy:  \n- Force (F) is analogous to voltage (V)  \n- Velocity (v) is analogous to current (i)  \n- Mechanical mass (m) relates force and velocity by \\( F = m \\frac{dv}{dt} \\)  \n- In electrical terms, \\( V = L \\frac{di}{dt} \\)  \n- Thus, mass (m) is analogous to inductance (L).  \n\nResistance and capacitance do not match this relationship.  \n\nFinal answer: (B)"
+}

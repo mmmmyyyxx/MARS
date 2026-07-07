@@ -1,0 +1,3 @@
+{
+  "content": "First, evaluate parentheses: (not False) = True  \nExpression becomes: True and False or True  \n\nNext, evaluate AND: True and False = False  \nExpression becomes: False or True  \n\nFinally, evaluate OR: False or True = True  \n\nFinal answer: true"
+}

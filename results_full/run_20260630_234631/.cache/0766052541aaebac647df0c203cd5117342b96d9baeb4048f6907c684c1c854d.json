@@ -1,0 +1,3 @@
+{
+  "content": "A digital device operates with discrete states (typically binary: on/off, 1/0), not continuous values.  \n\n- **(A) Regulator of a fan** → Usually a continuous control (analog) for speed, not inherently digital.  \n- **(B) Microphone** → Converts continuous sound waves to continuous electrical signals (analog).  \n- **(C) Resistance of a material** → Analog property; varies continuously.  \n- **(D) Light switch** → Has two discrete states (on/off), making it a simple digital device.  \n\nFinal answer: (D)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "We can use Boyle’s Law: \\( P_1 V_1 = P_2 V_2 \\).  \n\nGiven:  \n\\( P_1 = 200 \\ \\text{atm} \\)  \n\\( V_1 = 0.1 \\ \\text{L} \\)  \n\\( P_2 = 1 \\ \\text{atm} \\)  \n\\( V_2 = ? \\)  \n\n\\[\n200 \\times 0.1 = 1 \\times V_2\n\\]\n\\[\n20 = V_2\n\\]\n\nBoyle’s Law assumes ideal gas behavior, but real gases deviate slightly from ideal behavior at high pressures (200 atm). At high pressure, intermolecular forces reduce the volume slightly compared to the ideal prediction. When pressure is reduced to 1 atm, the gas behaves more ideally, so the actual volume will be slightly **more** than the ideal prediction of 20 L.  \n\nThus, the answer is **slightly more than 20 L**.  \n\nFinal answer: (C)"
+}

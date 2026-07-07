@@ -1,0 +1,3 @@
+{
+  "content": "The SVG path contains only two points connected by a single \"L\" (line to) command, so it draws a straight line segment between those points.  \n\nFinal answer: (E)"
+}

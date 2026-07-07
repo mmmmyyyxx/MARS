@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The question is too vague about implementation and doesn't specify what constitutes \"common misconceptions\" in electrical engineering. A better question would ask: \"What specific prompting techniques can help the model recognize and correct frequent conceptual errors (like confusing series/parallel circuits or misapplying Kirchhoff's laws) before final answer selection?\""
+}

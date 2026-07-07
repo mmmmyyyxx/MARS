@@ -1,0 +1,3 @@
+{
+  "content": "Total steps: 4  \nStep 1: Analyze the Ruin Names task to understand its core challenge—identifying which name is \"ruined\" by a subtle spelling or phonetic alteration.  \nStep 2: Draft an initial prompt that clearly defines the task, provides examples of correct reasoning, and specifies the required output format (e.g., \"(A)\").  \nStep 3: Refine the prompt by adding explicit instructions to compare names carefully, flagging common pitfalls (e.g., homophones, letter swaps).  \nStep 4: Test and adjust the prompt based on sample BIG-Bench Hard questions to ensure it generalizes well and maximizes answer accuracy."
+}

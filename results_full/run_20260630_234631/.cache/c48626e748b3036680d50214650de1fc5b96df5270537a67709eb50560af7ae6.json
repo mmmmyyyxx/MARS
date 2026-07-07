@@ -1,0 +1,3 @@
+{
+  "content": "A fuse or circuit breaker (CB) is used to protect an SCR from overcurrent conditions.  \nA heat sink protects against overheating due to power dissipation, not overcurrent.  \nA snubber circuit protects against high dv/dt and voltage transients.  \nA voltage clamping device (like a TVS) protects against overvoltage, not overcurrent.  \n\nThus, the correct choice is **(A)**.  \n\nFinal answer: (A)"
+}

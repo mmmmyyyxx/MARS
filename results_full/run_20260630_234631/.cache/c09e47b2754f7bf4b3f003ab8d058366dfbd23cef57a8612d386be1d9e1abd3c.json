@@ -1,0 +1,3 @@
+{
+  "content": "Let's evaluate step by step.  \n\nExpression:  \n**( True and not not not True )**\n\n1. **Innermost part**: `not not not True`  \n   - `not True` → `False`  \n   - `not False` → `True`  \n   - `not True` → `False`  \n\n   So `not not not True` = `False`\n\n2. **Replace back into the expression**:  \n   `True and False`\n\n3. **Apply AND**:  \n   `True and False` → `False`\n\nFinal answer: false"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down.  \n\nThe SVG path has these points in order:  \n\n1. (53.73, 61.64)  \n2. (50.59, 49.13)  \n3. (61.50, 52.50)  \n4. (66.59, 62.74)  \n5. Back to (53.73, 61.64)  \n\nThat’s **5 distinct points** (the first and last are the same, closing the shape).  \n\nA shape with 5 vertices is a **pentagon**.  \n\nChecking the options:  \n- (G) pentagon → matches the vertex count.  \n- No indication it’s a regular pentagon, but the question only asks for the shape name from the given list.  \n\nFinal answer: (G)"
+}

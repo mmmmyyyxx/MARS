@@ -1,0 +1,3 @@
+{
+  "content": "The path has four points: M (start), L (line to), L (line to), L (line to the start).  \nThat’s four vertices, but the first and last points are the same, so it’s a closed shape with 3 distinct line segments between 3 distinct vertices.  \nThus, it’s a triangle.  \n\nFinal answer: (J)"
+}

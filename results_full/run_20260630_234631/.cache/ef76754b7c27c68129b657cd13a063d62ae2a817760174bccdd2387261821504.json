@@ -1,0 +1,3 @@
+{
+  "content": "Identify the logical form of the argument presented in the question. Check if the argument follows a valid logical structure or if it commits a formal fallacy by violating rules of deductive reasoning. Compare the structure to known valid forms and common formal fallacies. Return only the final answer as valid or invalid."
+}

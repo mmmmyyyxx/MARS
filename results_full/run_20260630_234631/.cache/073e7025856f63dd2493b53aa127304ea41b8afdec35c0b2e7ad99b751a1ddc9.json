@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n**True or ( True or not False )**\n\n1. **Operator precedence**: NOT has the highest precedence, then AND, then OR.  \n2. **Evaluate innermost parentheses first**:  \n   - `not False` → `True`  \n   - So inside parentheses: `True or True` → `True`  \n3. Now the expression becomes:  \n   `True or True`  \n4. This evaluates to `True`.  \n\nFinal answer: true"
+}

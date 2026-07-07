@@ -1,0 +1,3 @@
+{
+  "content": "The potentiometer method uses a null detection technique where, at balance, no current flows through the galvanometer and thus the circuit under test is not loaded. This avoids errors caused by drawing current, making it more accurate than a voltmeter, which always draws some current.  \n\nFinal answer: (D)"
+}

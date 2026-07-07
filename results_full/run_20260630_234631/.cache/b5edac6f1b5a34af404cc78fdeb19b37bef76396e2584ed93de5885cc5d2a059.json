@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`True or not ( ( True ) )`\n\n1. **Parentheses first**:  \nInside `not ( ( True ) )`, `( True )` is just `True`.  \nSo we have `not (True)`.\n\n2. **NOT**:  \n`not (True)` = `False`.\n\n3. **OR**:  \n`True or False` = `True`.\n\nFinal answer: true"
+}

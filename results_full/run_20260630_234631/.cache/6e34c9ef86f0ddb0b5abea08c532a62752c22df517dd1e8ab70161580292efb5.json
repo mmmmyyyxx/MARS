@@ -1,0 +1,3 @@
+{
+  "content": "Answer Chinese C-Eval multiple-choice questions in Clinical Medicine by first analyzing the clinical scenario and identifying critical discriminators such as timing of symptom onset, patient demographics, test specificity/sensitivity, and characteristic disease patterns. Systematically eliminate incorrect options by comparing each against established medical knowledge and identifying contradictions with clinical guidelines. Before selecting the final answer, internally reason through the diagnostic logic step-by-step, focusing on the option most strongly supported by evidence and consistency with the clinical context. Output only the final answer as a parenthesized option letter, such as (A)."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "The 8085 microprocessor has two 16-bit registers: the stack pointer (SP) and the program counter (PC).  \nBoth are used for handling memory addresses — SP for the stack and PC for the next instruction address.  \nThus, the correct option is \"both A and B\".  \n\nFinal answer: (C)"
+}

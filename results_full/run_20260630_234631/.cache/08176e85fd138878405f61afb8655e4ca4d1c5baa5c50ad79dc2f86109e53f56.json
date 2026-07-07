@@ -1,0 +1,3 @@
+{
+  "content": "A truth table lists all possible combinations of input values and the corresponding output.  \nFor \\( n \\) binary inputs, the number of possible input combinations is \\( 2^n \\).  \n\nHere, \\( n = 3 \\), so the number of input combinations is \\( 2^3 = 8 \\).  \nEach combination occupies one row in the truth table, so the total number of entries (rows) is 8.  \n\nThe options:  \n- (A) 3 → incorrect, that’s the number of inputs, not rows.  \n- (B) 6 → incorrect, not equal to \\( 2^n \\) for \\( n=3 \\).  \n- (C) 8 → correct.  \n- (D) 9 → incorrect, no \\( n \\) gives \\( 2^n = 9 \\).  \n\nFinal answer: (C)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "First, evaluate the inner expression:  \n`not (False)` → `True`  \n\nNow the expression becomes:  \n`True or False`  \n\nUsing the truth table for OR:  \n`True or False` = `True`  \n\nFinal answer: true"
+}

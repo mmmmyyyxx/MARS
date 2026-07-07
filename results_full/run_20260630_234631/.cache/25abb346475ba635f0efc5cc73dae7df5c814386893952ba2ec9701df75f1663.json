@@ -1,0 +1,3 @@
+{
+  "content": "BCD (Binary-Coded Decimal) represents each decimal digit (0–9) with a 4-bit binary code.  \nSince decimal digits range from 0 to 9, and 4 bits can represent values from 0 to 15, 4 bits are sufficient and necessary to encode each BCD digit.  \n\nFinal answer: (D)"
+}

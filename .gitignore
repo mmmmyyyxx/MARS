@@ -1,9 +1,3 @@
-__pycache__/
-*.pyc
-.env
-.cache/
-*.sqlite
-logs/
-api_calls.csv
-.DS_Store
-.pytest_cache/
+dataset/
+Dataset/
+Dataset_format/

@@ -1,0 +1,3 @@
+{
+  "content": "A snubber circuit is used to protect semiconductor devices like SCRs from voltage transients and excessive \\( \\frac{dv}{dt} \\) by providing a controlled path for current during switching.  \nIt typically consists of a resistor and capacitor connected **in parallel** with the SCR to limit the rate of rise of voltage.  \nSeries connection would not serve this purpose, and \"anti parallel\" refers to inverse-parallel connection of two SCRs for AC control, not the snubber arrangement.  \nThus, the correct configuration is **parallel**.\n\nFinal answer: (B)"
+}

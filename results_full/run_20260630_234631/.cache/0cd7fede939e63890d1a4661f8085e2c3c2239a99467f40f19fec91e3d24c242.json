@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\nExpression:  \n( not not True ) or not False  \n\n1. **Innermost not**:  \n   not True → False  \n\n2. **Outer not**:  \n   not False → True  \n\nSo ( not not True ) = True  \n\n3. **Right side**:  \n   not False → True  \n\n4. **Final OR**:  \n   True or True → True  \n\nFinal answer: true"
+}

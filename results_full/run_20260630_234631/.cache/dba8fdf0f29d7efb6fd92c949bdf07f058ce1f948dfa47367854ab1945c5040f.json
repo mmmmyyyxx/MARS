@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.\n\nExpression:  \n**True or not False and False and False**\n\n---\n\n**Step 1 – Precedence order:**  \nParentheses → NOT → AND → OR  \nNo parentheses here, so first apply **NOT**.\n\nnot False = True\n\nExpression becomes:  \nTrue or True and False and False\n\n---\n\n**Step 2 – Apply AND from left to right**  \nTrue and False = False  \nFalse and False = False\n\nSo now:  \nTrue or False\n\n---\n\n**Step 3 – Apply OR**  \nTrue or False = True\n\n---\n\nFinal answer: true"
+}

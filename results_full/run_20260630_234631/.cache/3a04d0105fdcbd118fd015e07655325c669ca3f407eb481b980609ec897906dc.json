@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step, following operator precedence:  \n**Precedence order**: `not` > `and` > `or`.\n\nExpression:  \n`( False ) and False or not False`\n\n1. **Parentheses first** — `( False )` is just `False`.  \n   Expression becomes:  \n   `False and False or not False`\n\n2. **`not` operator** — `not False` = `True`.  \n   Expression becomes:  \n   `False and False or True`\n\n3. **`and` operator** — `False and False` = `False`.  \n   Expression becomes:  \n   `False or True`\n\n4. **`or` operator** — `False or True` = `True`.\n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n( not not not False or True )\n\n---\n\n**Step 1: Resolve the innermost negation**  \nnot False → True\n\nNow:  \n( not not True or True )\n\n---\n\n**Step 2: Resolve next negation**  \nnot True → False\n\nNow:  \n( not False or True )\n\n---\n\n**Step 3: Resolve final negation**  \nnot False → True\n\nNow:  \n( True or True )\n\n---\n\n**Step 4: Apply OR**  \nTrue or True → True\n\n---\n\nFinal answer: true"
+}

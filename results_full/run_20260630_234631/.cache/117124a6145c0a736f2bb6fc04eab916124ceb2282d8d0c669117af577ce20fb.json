@@ -1,0 +1,3 @@
+{
+  "content": "Let’s go step-by-step according to the order of operations.\n\n**Original expression:**  \n`not not ( False or not True )`\n\n---\n\n**Step 1 — Resolve innermost parentheses**  \nInside parentheses: `False or not True`  \nFirst apply NOT to `True`: `not True = False`  \nNow: `False or False`  \n`False or False = False`  \n\nExpression becomes:  \n`not not False`\n\n---\n\n**Step 2 — Apply all NOT operators from right to left**  \nFirst NOT: `not False = True`  \nNow: `not True`  \nSecond NOT: `not True = False`  \n\n---\n\n**Final answer:** false"
+}

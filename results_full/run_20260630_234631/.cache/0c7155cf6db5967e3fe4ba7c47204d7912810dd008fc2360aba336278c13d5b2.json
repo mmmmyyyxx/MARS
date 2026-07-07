@@ -1,0 +1,3 @@
+{
+  "content": "Read the sports scenario carefully and determine if the described situation is possible according to established sports rules and physical/logical constraints. If the scenario is possible, answer \"yes\"; if it contains any factual contradictions, physically impossible actions, or logically impossible sequences of events, answer \"no\". Use only objective sports knowledge for this determination, avoiding subjective interpretations or contextual assumptions. Return only the final answer as \"yes\" or \"no\"."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "In the Intel 8085A microprocessor, every instruction begins with fetching the opcode from memory.  \nThis first machine cycle is specifically called the **op-code fetch cycle**, identified by the IO/M‾ signal being low and S1 and S0 both high.  \nOther machine cycles (memory read, memory write, I/O read, I/O write) may follow depending on the instruction, but the first one is always the op-code fetch.  \n\nFinal answer: (A)"
+}

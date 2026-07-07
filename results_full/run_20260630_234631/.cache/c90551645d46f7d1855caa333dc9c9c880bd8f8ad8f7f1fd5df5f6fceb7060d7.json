@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step without writing extra reasoning here.  \n\nThe premises are:  \n\n1. ¬A (Alma is not a fan of Burnley FC)  \n2. Whoever is **not** both a backer of Zenit **and** a fan of Burnley FC → supporter of Lokomotiv Moskva.  \n\nThat is:  \n¬(Z ∧ B) → L  \nwhere B = \"fan of Burnley FC\", Z = \"backer of Zenit\", L = \"supporter of Lokomotiv Moskva\".  \n\nFrom premise 1: B is false for Alma.  \nThen Z ∧ B is false regardless of Z (since B is false).  \nSo ¬(Z ∧ B) is true.  \nFrom premise 2, if ¬(Z ∧ B) is true, then L is true.  \n\nSo the conclusion \"Alma is a supporter of Lokomotiv Moskva\" follows necessarily from the premises.  \n\nFinal answer: valid"
+}

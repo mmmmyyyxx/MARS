@@ -1,0 +1,3 @@
+{
+  "content": "A D-flip-flop is transparent when the clock enable is active, meaning the output follows the input in real time rather than being latched only on the clock edge.  \nFor a level-triggered D-flip-flop (often called a D-latch), transparency occurs when the clock is high.  \nAmong the options, \"the output follows input\" matches this definition.  \n\nFinal answer: (D)"
+}

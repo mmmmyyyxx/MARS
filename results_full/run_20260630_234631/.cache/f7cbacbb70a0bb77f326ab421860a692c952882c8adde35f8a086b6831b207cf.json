@@ -1,0 +1,3 @@
+{
+  "content": "How might the prompt be adjusted to ensure the model correctly handles expressions where XOR and equivalence operators appear in mixed sequences, given their equal precedence and left-to-right evaluation requirement?"
+}

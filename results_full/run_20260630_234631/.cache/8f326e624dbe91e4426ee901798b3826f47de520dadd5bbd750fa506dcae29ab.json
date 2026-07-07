@@ -1,0 +1,3 @@
+{
+  "content": "ACCEPT\n\nIncluding a sample question and answer demonstrates the desired reasoning process by showing how to analyze the question, eliminate incorrect options, and justify the correct choice. It also explicitly models the required output format (parenthesized letter), reducing ambiguity and improving the model's accuracy in following instructions."
+}

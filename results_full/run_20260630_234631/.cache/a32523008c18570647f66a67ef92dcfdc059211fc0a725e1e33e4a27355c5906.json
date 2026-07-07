@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\nExpression:  \nTrue or False or not True or True  \n\n1. **NOT has highest precedence after parentheses** (none here):  \n   not True → False  \n\n   Now we have:  \n   True or False or False or True  \n\n2. **OR is left-associative**, so evaluate left to right:  \n   True or False → True  \n   True or False → True  \n   True or True → True  \n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\n1. Inside the parentheses:  \n   \\( \\text{True or True or False} \\)  \n   OR gives True if at least one operand is True.  \n   True or True → True  \n   True or False → True  \n   So the expression inside is **True**.\n\n2. Apply the **not**:  \n   \\( \\text{not (True)} \\) → **False**.\n\nFinal answer: false"
+}

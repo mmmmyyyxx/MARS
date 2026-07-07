@@ -1,0 +1,3 @@
+{
+  "content": "A quartz crystal oscillator operates based on the piezoelectric effect.  \nThe crystal has a natural mechanical resonance that can be modeled electrically with an equivalent circuit containing both series and parallel resonant frequencies.  \nThe series resonance occurs when the impedance is minimum (reactances cancel), and the parallel (anti-resonance) occurs when impedance is maximum.  \nBoth frequencies are used in oscillator circuits depending on the configuration and load capacitance.  \n\nFinal answer: (C)"
+}

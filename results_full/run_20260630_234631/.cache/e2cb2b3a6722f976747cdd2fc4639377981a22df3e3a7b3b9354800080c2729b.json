@@ -1,0 +1,3 @@
+{
+  "content": "In the binary number system, the rightmost digit is the one with the smallest place value (2⁰ = 1), so it is called the Least Significant Bit (LSB).  \nThe leftmost digit is the Most Significant Bit (MSB).  \nThus, the first digit from right to left is the LSB.  \n\nFinal answer: (A)"
+}

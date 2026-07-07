@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or not True or not not True**\n\n---\n\n**Step 1: Interpret the logical operators**  \n- `not True` means logical negation of `True`, which is `False`.  \n- `not not True` means `not (not True)` = `not False` = `True`.  \n\nSo the expression becomes:  \n\n**True or False or True**\n\n---\n\n**Step 2: Apply logical OR**  \nLogical OR (`or`) is associative and evaluates to `True` if at least one operand is `True`.  \n\n- `True or False` → `True`  \n- `True or True` → `True`  \n\nSo the whole expression simplifies to `True`.\n\n---\n\n**Final answer: true**"
+}

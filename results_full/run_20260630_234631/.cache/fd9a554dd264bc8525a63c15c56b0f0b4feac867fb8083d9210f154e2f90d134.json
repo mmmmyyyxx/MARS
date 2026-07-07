@@ -1,0 +1,3 @@
+{
+  "content": "Read the question carefully and identify the word that has been altered by changing one letter to create a new, valid word. Focus on distinguishing between intentional phonetic alterations that create plausible new words and random spelling errors by analyzing sound patterns, context, and the plausibility of the resulting word. Ensure that the transformation maintains the original word's recognizability and structure. Return only the final answer as a parenthesized option letter such as (A). Do not include extra commentary after the final answer."
+}

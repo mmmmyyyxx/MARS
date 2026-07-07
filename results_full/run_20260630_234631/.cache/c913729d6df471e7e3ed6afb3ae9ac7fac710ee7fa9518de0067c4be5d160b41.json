@@ -1,0 +1,3 @@
+{
+  "content": "In a Wien bridge oscillator, the feedback network consists of two RC stages in series and parallel.  \nThe condition for oscillation requires the loop gain to be 1, and the phase shift to be 0° at the oscillation frequency.  \nFor the Wien bridge, the transfer function of the RC network at resonance is \\( \\beta = \\frac{1}{3} \\).  \nThus, to satisfy the Barkhausen criterion \\( A\\beta = 1 \\), the amplifier gain \\( A \\) must be 3 when \\( \\beta = \\frac{1}{3} \\).  \nSo the feedback factor \\( \\beta \\) is \\( \\frac{1}{3} \\).  \n\nFinal answer: (A)"
+}

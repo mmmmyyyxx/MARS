@@ -1,0 +1,3 @@
+{
+  "content": "In the Intel 8085 microprocessor, the stack pointer (SP) and program counter (PC) are both 16-bit registers used for managing memory addresses — SP for the stack and PC for the next instruction address.  \nTherefore, both A and B are correct.  \n\nFinal answer: (C)"
+}

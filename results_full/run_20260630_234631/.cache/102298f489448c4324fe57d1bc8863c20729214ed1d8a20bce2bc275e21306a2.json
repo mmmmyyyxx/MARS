@@ -1,0 +1,3 @@
+{
+  "content": "Mnemonics are translated into machine instructions.  \nIdentifiers are names given to data or addresses.  \nOperands are parts of instructions specifying data to act upon.  \nDirectives (or pseudo-ops) tell the assembler how to handle the program but are not translated into machine instructions.  \n\nFinal answer: (B)"
+}

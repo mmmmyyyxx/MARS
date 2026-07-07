@@ -1,0 +1,3 @@
+{
+  "content": "A latch is a basic memory element that responds to the level of a control signal (such as an enable input) rather than a transition.  \nUnlike flip-flops, which are edge-triggered, latches change their output state whenever the enable signal is at a certain logic level, regardless of whether the signal is changing at that moment.  \nTherefore, latches are level-sensitive devices.  \n\nFinal answer: (C)"
+}

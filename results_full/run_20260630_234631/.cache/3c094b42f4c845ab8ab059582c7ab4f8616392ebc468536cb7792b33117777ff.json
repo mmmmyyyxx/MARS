@@ -1,0 +1,3 @@
+{
+  "content": "Break down the Boolean expression into its fundamental logical components, evaluate each part step-by-step while strictly adhering to operator precedence, and then deduce the final truth value, responding with only \"true\" or \"false\" as your answer."
+}

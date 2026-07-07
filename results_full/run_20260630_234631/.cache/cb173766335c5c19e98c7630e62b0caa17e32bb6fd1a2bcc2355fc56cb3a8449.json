@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down.  \n\nThe SVG path has these points in order:  \n\n1. (3.00, 60.00)  \n2. (55.00, 74.00)  \n3. (82.00, 50.00)  \n4. (91.00, 16.00)  \n5. (34.00, 44.00)  \n6. (1.00, 56.00)  \n7. (3.00, 60.00)  \n\nCounting the points:  \n- There are 7 distinct coordinate pairs listed before the last one, but the last one is the same as the first (closed shape).  \n- So the vertices are: (3,60), (55,74), (82,50), (91,16), (34,44), (1,56), and back to (3,60).  \n- That’s 6 unique vertices plus returning to start = a 6-sided polygon.  \n\nA 6-sided polygon is a **hexagon**.  \n\nFinal answer: (C)"
+}

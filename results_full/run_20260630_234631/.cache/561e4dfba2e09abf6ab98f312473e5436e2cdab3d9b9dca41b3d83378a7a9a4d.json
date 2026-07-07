@@ -1,0 +1,3 @@
+{
+  "content": "Let's break it down step by step:  \n\n1. Evaluate `True and True` → **True**  \n2. Now we have `True and False` → **False**  \n3. Now we have `False and not True`  \n   - `not True` is **False**  \n4. So `False and False` → **False**  \n\nFinal answer: false"
+}

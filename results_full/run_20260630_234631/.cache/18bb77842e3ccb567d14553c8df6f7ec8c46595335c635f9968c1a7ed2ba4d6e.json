@@ -1,0 +1,3 @@
+{
+  "content": "In a system where the output affects the input quantity, this means there is feedback from the output to the input for control purposes.  \nThis is the defining characteristic of a **closed-loop control system**.  \nAn open-loop system has no feedback, so the output does not influence the input.  \nThus, options (A), (C), and (D) are incorrect.  \n\nFinal answer: (B)"
+}

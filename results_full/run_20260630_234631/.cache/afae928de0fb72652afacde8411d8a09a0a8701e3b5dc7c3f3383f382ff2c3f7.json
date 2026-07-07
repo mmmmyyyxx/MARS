@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True and not False or False and False**\n\n---\n\n### Step 1: Handle `not False`\n`not False` means the negation of `False`, which is `True`.  \nSo the expression becomes:  \n\n**True and True or False and False**\n\n---\n\n### Step 2: Apply operator precedence  \nIn Boolean logic, `and` has higher precedence than `or`.  \nSo we evaluate `True and True` first:  \n\n`True and True` → `True`  \n\nThen evaluate `False and False`:  \n\n`False and False` → `False`  \n\nNow the expression is:  \n\n**True or False**\n\n---\n\n### Step 3: Evaluate `True or False`  \n`True or False` → `True`\n\n---\n\n**Final answer: true**"
+}

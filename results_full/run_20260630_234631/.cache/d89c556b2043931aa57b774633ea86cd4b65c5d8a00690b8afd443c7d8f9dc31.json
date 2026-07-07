@@ -1,0 +1,3 @@
+{
+  "content": "When capacitors are connected in series, the reciprocal of the equivalent capacitance is the sum of the reciprocals of the individual capacitances.  \n\nFor five capacitors each of \\( C = 5\\ \\mu\\text{F} \\):  \n\n\\[\n\\frac{1}{C_{eq}} = \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5}\n\\]\n\\[\n\\frac{1}{C_{eq}} = \\frac{5}{5} = 1\n\\]\n\\[\nC_{eq} = 1\\ \\mu\\text{F}\n\\]\n\nFinal answer: (D)"
+}

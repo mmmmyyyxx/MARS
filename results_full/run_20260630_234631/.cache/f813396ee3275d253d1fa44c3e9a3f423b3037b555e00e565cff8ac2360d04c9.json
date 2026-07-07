@@ -1,0 +1,3 @@
+{
+  "content": "not False and True or ( True )  \nStep 1: Resolve parentheses → ( True ) = True  \nExpression becomes: not False and True or True  \n\nStep 2: Apply NOT → not False = True  \nExpression becomes: True and True or True  \n\nStep 3: Apply AND → True and True = True  \nExpression becomes: True or True  \n\nStep 4: Apply OR → True or True = True  \n\nFinal answer: true"
+}

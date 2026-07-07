@@ -1,0 +1,3 @@
+{
+  "content": "Let's evaluate the expression step-by-step:  \nThe given expression is:  \n**not True or ( True or False )**\n\n1. **Evaluate the innermost parentheses first**  \n   Inside the parentheses: **True or False**  \n   OR operator: True or False → True  \n   So now we have: **not True or True**\n\n2. **Evaluate \"not True\"**  \n   \"not True\" → False  \n   So now we have: **False or True**\n\n3. **Evaluate \"False or True\"**  \n   OR operator: False or True → True\n\nThus, the expression simplifies to **True**.\n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to precedence rules:  \n**Precedence**:  \n1. Parentheses (none here)  \n2. NOT  \n3. AND  \n4. OR  \n\nExpression:  \n`True and not False or False and False`\n\n---\n\n**Step 1 – Apply NOT**  \n`not False` → `True`  \n\nExpression becomes:  \n`True and True or False and False`\n\n---\n\n**Step 2 – Apply AND from left to right**  \nFirst AND: `True and True` → `True`  \n\nExpression becomes:  \n`True or False and False`\n\nSecond AND: `False and False` → `False`  \n\nExpression becomes:  \n`True or False`\n\n---\n\n**Step 3 – Apply OR**  \n`True or False` → `True`\n\n---\n\nFinal answer: true"
+}

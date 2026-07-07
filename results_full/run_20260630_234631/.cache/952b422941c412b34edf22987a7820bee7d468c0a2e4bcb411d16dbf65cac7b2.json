@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n( True ) and not True or True  \n\n1. **Operator precedence**: NOT > AND > OR.  \n2. **Parentheses first**: ( True ) is just True.  \n   So we have:  \n   True and not True or True  \n\n3. **NOT**: not True = False.  \n   Expression becomes:  \n   True and False or True  \n\n4. **AND**: True and False = False.  \n   Expression becomes:  \n   False or True  \n\n5. **OR**: False or True = True.  \n\nFinal answer: true"
+}

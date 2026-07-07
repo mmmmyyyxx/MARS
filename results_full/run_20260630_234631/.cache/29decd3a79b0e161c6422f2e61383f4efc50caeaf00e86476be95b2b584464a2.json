@@ -1,0 +1,3 @@
+{
+  "content": "The cross-sectional area of a conductor affects its resistance (since resistance \\( R = \\rho L / A \\)), but reluctance is a property of magnetic circuits, not conductors in the sense of electric current flow.  \nReluctance depends on the material and geometry of the magnetic path, but for a conductor placed in a magnetic field, changing its cross-sectional area doesn’t directly change the reluctance of the magnetic circuit unless it’s part of the core — which is not implied here.  \nThus, only resistance is affected.  \n\nFinal answer: (B)"
+}

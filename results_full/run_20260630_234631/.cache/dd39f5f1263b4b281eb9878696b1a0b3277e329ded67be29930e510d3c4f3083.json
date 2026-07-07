@@ -1,0 +1,3 @@
+{
+  "content": "An oscillator must maintain stable oscillation amplitude and frequency over time to function properly.  \n- **Amplitude stability** ensures the output signal does not decay or saturate.  \n- **Frequency stability** ensures the oscillation occurs at the desired resonant frequency.  \n- **Power stability** is not typically listed as a separate necessary requirement in basic oscillator theory; it is often a consequence of amplitude and bias stability.  \n\nThus, the necessary requirements are both (A) and (B).  \n\nFinal answer: (D)"
+}

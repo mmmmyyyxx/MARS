@@ -1,0 +1,3 @@
+{
+  "content": "First, resolve parentheses: ( True ) → True  \nIntermediate result: not False and True or True  \n\nNext, apply NOT operators: not False → True  \nIntermediate result: True and True or True  \n\nThen, apply AND operators: True and True → True  \nIntermediate result: True or True  \n\nFinally, apply OR operators: True or True → True  \n\nFinal answer: true"
+}

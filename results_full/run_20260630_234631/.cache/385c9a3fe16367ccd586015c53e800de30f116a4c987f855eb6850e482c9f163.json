@@ -1,0 +1,3 @@
+{
+  "content": "In DC machines, windings must form closed paths to allow continuous current flow through commutator segments while maintaining electrical continuity as the rotor rotates.  \n- **Closed winding** is essential because without a closed circuit, current cannot circulate through the armature coils under commutation.  \n- Lap and wave windings are types of closed windings, but they are not the only possible configurations — the necessity is that the winding be closed, not specifically lap or wave.  \n- Open type winding would break the current path during rotation, making it impractical for normal DC machine operation.  \n\nThus, the correct choice is the one that applies universally to all DC machines: **closed winding**.  \n\nFinal answer: (A)"
+}

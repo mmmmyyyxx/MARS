@@ -1,0 +1,3 @@
+{
+  "content": "The capacitance \\( C \\) of a parallel-plate capacitor is given by:  \n\\[\nC = \\frac{\\varepsilon A}{d}\n\\]\nwhere \\( \\varepsilon = \\varepsilon_0 \\varepsilon_r \\) is the permittivity of the dielectric, \\( A \\) is the plate area, and \\( d \\) is the plate separation.  \n\nTo maximize \\( C \\), \\( \\varepsilon \\) should be large, meaning the relative permittivity (dielectric constant) should be **high**, not low, zero, or unity.  \n\nFinal answer: (C)"
+}

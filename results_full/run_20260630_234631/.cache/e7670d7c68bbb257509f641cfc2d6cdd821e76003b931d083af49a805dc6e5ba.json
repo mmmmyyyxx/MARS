@@ -1,0 +1,3 @@
+{
+  "content": "V/f control maintains a constant ratio between voltage and frequency to keep the air-gap flux approximately constant in an induction motor, which enables constant torque operation below the rated speed.  \n\n- (B) Speed reversal is achieved by changing phase sequence, not V/f control.  \n- (C) Magnetic losses may not necessarily be reduced; in fact, improper V/f can cause increased losses.  \n- (D) Harmonic elimination requires PWM techniques or filters, not V/f control alone.  \n\nThus, the correct choice is (A).  \n\nFinal answer: (A)"
+}

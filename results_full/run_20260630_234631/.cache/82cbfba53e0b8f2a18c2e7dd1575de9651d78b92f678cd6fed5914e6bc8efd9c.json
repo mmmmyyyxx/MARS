@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not False and True or ( True )**\n\n---\n\n**Step 1 – Handle parentheses**  \nInside parentheses: `( True )` is just `True`.  \nExpression becomes:  \n\n`not False and True or True`\n\n---\n\n**Step 2 – Apply operator precedence: NOT first**  \n`not False` = `True`  \n\nExpression becomes:  \n\n`True and True or True`\n\n---\n\n**Step 3 – AND before OR**  \n`True and True` = `True`  \n\nExpression becomes:  \n\n`True or True`\n\n---\n\n**Step 4 – Evaluate OR**  \n`True or True` = `True`\n\n---\n\nFinal answer: **true**\n\n---\n\nFinal answer: true"
+}

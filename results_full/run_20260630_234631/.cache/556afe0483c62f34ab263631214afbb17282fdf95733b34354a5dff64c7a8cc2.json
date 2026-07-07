@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( not False and False and False )`\n\n---\n\n**Step 1 — Resolve `not False`**  \n`not False` = `True`  \n\nExpression becomes:  \n`( True and False and False )`\n\n---\n\n**Step 2 — Apply AND from left to right**  \n`True and False` = `False`  \n\nExpression becomes:  \n`( False and False )`\n\n---\n\n**Step 3 — Apply final AND**  \n`False and False` = `False`\n\n---\n\nFinal result: `False`\n\n---\n\nFinal answer: false"
+}

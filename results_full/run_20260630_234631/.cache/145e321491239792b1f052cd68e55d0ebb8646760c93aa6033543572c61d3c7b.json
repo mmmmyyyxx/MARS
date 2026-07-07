@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the Boolean expression by strictly following the order of operations: resolve all parentheses from innermost to outermost, then apply all NOT operators, followed by all AND operators, and finally all OR operators. After each step, rewrite the expression with the simplified result before proceeding to the next operation."
+}

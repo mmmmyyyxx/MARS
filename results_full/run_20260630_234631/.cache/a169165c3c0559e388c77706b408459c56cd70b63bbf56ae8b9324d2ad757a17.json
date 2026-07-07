@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( True or not False ) or False  \n\n**Step 1:** Handle `not` (highest precedence).  \n`not False` → `True`  \n\nNow:  \n( True or True ) or False  \n\n**Step 2:** Evaluate parentheses.  \n`True or True` → `True`  \n\nNow:  \nTrue or False  \n\n**Step 3:** Final `or`.  \n`True or False` → `True`  \n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Wait states (Tw) are inserted between T3 and T4 in the 8086/8088 bus cycle to allow more time for memory or I/O devices to respond.  \n\nFinal answer: (C)"
+}

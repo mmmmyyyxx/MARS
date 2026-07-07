@@ -1,0 +1,3 @@
+{
+  "content": "ACCEPT\n\nThis question effectively targets a key refinement for improving accuracy: forcing explicit misconception-based reasoning. By requiring the model to identify specific common errors (e.g., confusing mitosis/meiosis stages or misapplying Hardy-Weinberg), it ensures deeper biological understanding rather than superficial elimination. This directly supports the Planner's goal of knowledge-based reasoning over guessing."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A quartz crystal oscillator operates based on the piezoelectric effect, where the crystal can vibrate at two closely spaced resonant frequencies: one series and one parallel.  \nThe series resonance occurs when the crystal's inductive and capacitive reactances cancel in the series branch, and the parallel resonance occurs when the crystal's motional inductance resonates with the parallel (shunt) capacitance.  \nBoth frequencies are utilized in oscillator circuits depending on the circuit configuration and load capacitance.  \n\nFinal answer: (C)"
+}

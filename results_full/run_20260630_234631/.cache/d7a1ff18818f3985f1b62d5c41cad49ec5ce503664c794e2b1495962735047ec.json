@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step-by-step:  \n\nExpression:  \n( True and not True and True )  \n\n1. **Innermost parentheses** — already done, no nested parentheses.  \n2. **Apply NOT operators**:  \n   - `not True` → `False`  \n   Expression becomes:  \n   `True and False and True`  \n\n3. **Apply AND operators** (left to right):  \n   - `True and False` → `False`  \n   - `False and True` → `False`  \n\n4. **No OR operators** to apply.  \n\nFinal result: `False`  \n\nFinal answer: false"
+}

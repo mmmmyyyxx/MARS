@@ -1,0 +1,3 @@
+{
+  "content": "Relaxation oscillators are easier to fabricate in monolithic ICs because they typically require only resistors, capacitors, and switching elements (like transistors or logic gates), which are straightforward to integrate.  \nCrystal oscillators need a piezoelectric crystal, which is not easily integrated into a silicon chip.  \nHartley and Wien bridge oscillators generally require inductors or more precise passive components, which are less ideal for monolithic integration.  \n\nFinal answer: (D)"
+}

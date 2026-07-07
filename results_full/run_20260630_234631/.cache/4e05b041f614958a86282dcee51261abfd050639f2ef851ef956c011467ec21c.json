@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\n( ( not True ) or True )  \n\n1. **not True** = False  \n2. So we have: ( False or True )  \n3. **False or True** = True  \n\nFinal answer: true"
+}

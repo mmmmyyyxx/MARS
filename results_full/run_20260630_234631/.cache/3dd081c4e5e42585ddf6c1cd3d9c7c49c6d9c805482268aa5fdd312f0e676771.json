@@ -1,0 +1,3 @@
+{
+  "content": "Let's break this down step by step.  \n\nThe expression is:  \n\n**( False ) or not False or True**  \n\nOperator precedence: NOT > AND > OR  \n\n**Step 1 – Parentheses**  \n( False ) = **False**  \nSo the expression becomes:  \nFalse **or** not False **or** True  \n\n**Step 2 – NOT**  \nnot False = **True**  \nExpression: False **or** True **or** True  \n\n**Step 3 – OR** (left to right)  \nFalse or True = **True**  \nTrue or True = **True**  \n\nFinal result: **true**  \n\nFinal answer: true"
+}

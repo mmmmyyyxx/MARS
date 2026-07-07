@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to the rules.  \n\nExpression:  \n\\[\n\\text{not ( False or False and False )}\n\\]\n\n---\n\n**Step 1: Resolve parentheses from innermost to outermost**  \nInside the parentheses:  \n\\[\n\\text{False or False and False}\n\\]  \nOrder of operations: NOT first (none inside), then AND, then OR.  \n\nAND first:  \n\\[\n\\text{False and False} = \\text{False}\n\\]  \nNow:  \n\\[\n\\text{False or False} = \\text{False}\n\\]  \n\nSo parentheses evaluate to **False**.\n\n---\n\n**Step 2: Apply all NOT operators**  \n\\[\n\\text{not (False)} = \\text{True}\n\\]  \n\n---\n\n**Final answer: true**"
+}

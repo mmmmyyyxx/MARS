@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.\n\nExpression:  \n**False or not True and not not False**\n\n---\n\n**Step 1: Resolve innermost NOTs (working right to left for nested NOTs)**  \n`not not False` → `not (not False)`  \n`not False` = True  \n`not True` = False  \nSo `not not False` = **False**\n\nExpression now:  \n**False or not True and False**\n\n---\n\n**Step 2: Apply remaining NOT operators**  \n`not True` = False\n\nExpression now:  \n**False or False and False**\n\n---\n\n**Step 3: Apply AND before OR**  \n`False and False` = False\n\nExpression now:  \n**False or False**\n\n---\n\n**Step 4: Apply OR**  \n`False or False` = False\n\n---\n\nFinal answer: false"
+}

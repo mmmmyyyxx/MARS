@@ -1,0 +1,3 @@
+{
+  "content": "In a DC machine, the shunt field winding is designed to have high resistance to limit the current through it, as it is connected directly across the supply voltage.  \nThe armature resistance is kept low to minimize copper losses and voltage drop under load, ensuring good efficiency and speed regulation.  \n\nThus, the correct combination is **high shunt resistance** and **low armature resistance**.  \n\nFinal answer: (B)"
+}

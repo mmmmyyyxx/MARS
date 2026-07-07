@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\nExpression:  \n( True ) and True and not True  \n\n1. **Parentheses first** — ( True ) is just True.  \n   → True and True and not True  \n\n2. **NOT** — not True = False.  \n   → True and True and False  \n\n3. **AND** from left to right:  \n   - True and True = True  \n   - True and False = False  \n\nFinal result: **false**  \n\nFinal answer: false"
+}

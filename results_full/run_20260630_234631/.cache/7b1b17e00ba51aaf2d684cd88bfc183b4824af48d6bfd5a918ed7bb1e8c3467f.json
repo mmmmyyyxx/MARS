@@ -1,0 +1,3 @@
+{
+  "content": "A latch is level-sensitive because its output changes state based on the level (high or low) of the enable signal, not on a clock edge.  \nEdge sensitivity is a characteristic of flip-flops, not latches.  \n\nFinal answer: (C)"
+}

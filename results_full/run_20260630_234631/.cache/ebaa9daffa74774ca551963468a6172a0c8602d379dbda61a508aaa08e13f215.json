@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down using Signal Detection Theory:  \n\n- **Signal Detection Theory** has four possible outcomes:  \n  1. **Hit** – Signal present, person detects it.  \n  2. **Miss** – Signal present, person fails to detect it.  \n  3. **False Alarm** – Signal absent, person says they detect it.  \n  4. **Correct Rejection** – Signal absent, person says they don’t detect it.  \n\nIn this scenario:  \n- The light is on (signal present).  \n- The pilot says he cannot see it (fails to detect).  \n\nThat’s a **Miss**.  \n\nFinal answer: (B)"
+}

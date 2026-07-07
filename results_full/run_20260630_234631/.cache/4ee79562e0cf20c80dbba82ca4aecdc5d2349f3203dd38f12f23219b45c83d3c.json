@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The question asks about general reasoning techniques rather than focusing on the specific task of answering MMLU multiple-choice questions with letter-only outputs. It doesn't help optimize prompt design for accuracy in this constrained format. A better question would address how to structure prompts to eliminate ambiguity or improve option discrimination within the given output constraints."
+}

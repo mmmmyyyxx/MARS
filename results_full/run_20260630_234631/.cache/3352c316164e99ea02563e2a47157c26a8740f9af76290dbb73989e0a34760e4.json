@@ -1,0 +1,3 @@
+{
+  "content": "A combinational PLD with a fixed AND array and a programmable OR array is known as a PAL (Programmable Array Logic).  \n- PROM has a fixed AND array (address decoder) and programmable OR array, but it is generally considered a memory device, not typically classified under general-purpose PLDs in this context.  \n- PLA has both arrays programmable.  \n- PLD is a general term, not specific to this configuration.  \n\nFinal answer: (C)"
+}

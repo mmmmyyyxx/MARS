@@ -1,0 +1,3 @@
+{
+  "content": "The surge current rating is related to the \\( I^2 t \\) rating.  \nFor half-cycle (10 ms at 50 Hz), \\( I^2 \\times t \\) is constant.  \n\nGiven:  \nHalf-cycle surge current \\( I_{h} = 3000 \\text{ A} \\)  \nTime for half-cycle \\( t_h = 0.01 \\text{ s} \\)  \n\nSo \\( I^2 t = (3000)^2 \\times 0.01 = 90000 \\times 0.01 = 900 \\)  \n\nFor one full cycle (20 ms), \\( I_f^2 \\times 0.02 = 900 \\)  \n\\( I_f^2 = 900 / 0.02 = 45000 \\)  \n\\( I_f = \\sqrt{45000} \\approx 2121.32 \\text{ A} \\)  \n\nFinal answer: (C)"
+}

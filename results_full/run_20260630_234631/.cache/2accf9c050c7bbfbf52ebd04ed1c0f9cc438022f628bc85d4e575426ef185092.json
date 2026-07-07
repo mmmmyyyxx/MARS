@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step:  \n\nExpression:  \n**False and False and not not not True**\n\n1. **not not not True**  \n   - not True → False  \n   - not False → True  \n   - not True → False  \n   So `not not not True` = **False**\n\n2. Now the expression becomes:  \n   **False and False and False**\n\n3. **False and False** → False  \n   **False and False** → False  \n\nSo the whole expression evaluates to **False**.  \n\nFinal answer: false"
+}

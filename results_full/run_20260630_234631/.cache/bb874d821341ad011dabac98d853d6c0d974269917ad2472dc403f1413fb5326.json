@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down.  \n\nThe premise says:  \n> not being a friend of Manchester United FC is sufficient for not being an ex-fan of FC Zenit.  \n\nIn logic:  \nLet \\( F \\) = \"friend of Manchester United FC\"  \nLet \\( E \\) = \"ex-fan of FC Zenit\"  \n\n\"Not \\( F \\) is sufficient for not \\( E \\)\" means:  \n\\[\n\\neg F \\rightarrow \\neg E\n\\]  \n\nThis is logically equivalent to:  \n\\[\nE \\rightarrow F\n\\]  \n\nThe conclusion says:  \n> being a friend of Manchester United FC is necessary for being an ex-fan of FC Zenit.  \n\n\"\\( F \\) is necessary for \\( E \\)\" means:  \n\\[\nE \\rightarrow F\n\\]  \n\nSo premise and conclusion are logically equivalent.  \n\nThus the argument is **deductively valid**.  \n\nFinal answer: valid"
+}

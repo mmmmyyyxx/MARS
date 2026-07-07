@@ -1,0 +1,3 @@
+{
+  "content": "4G networks are designed for high-speed data transmission, with theoretical peak download speeds up to around 1 Gbps for stationary users and 100 Mbps for mobile users, according to standards like LTE-Advanced.  \n\n- (A) 386 kbps – 2 mbps → This range is too slow; it corresponds to 2G/3G speeds, not 4G.  \n- (B) 2 mbps → Far below actual 4G speeds; incorrect.  \n- (C) 2 mbps – 1 gbps → This includes the realistic range for 4G, from lower-end mobile speeds up to peak theoretical speeds.  \n- (D) 100 mbps – 1 gbps → This is too narrow; it excludes common lower-speed 4G scenarios (e.g., 2–100 Mbps in many real-world cases).  \n\nThe correct range that matches 4G specifications and real-world performance is **2 Mbps – 1 Gbps**.  \n\nFinal answer: (C)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Both the ALU and the control unit of a CPU use registers for temporary storage of data, addresses, and control signals.  \nBuffers are for intermediate data transfer, not core CPU operations.  \nDecoders are combinational logic circuits, not storage locations.  \nAccumulators are a specific type of register used in the ALU, but the control unit uses other registers (instruction register, program counter, etc.), so the common special-purpose storage location category is registers.  \n\nFinal answer: (D)"
+}

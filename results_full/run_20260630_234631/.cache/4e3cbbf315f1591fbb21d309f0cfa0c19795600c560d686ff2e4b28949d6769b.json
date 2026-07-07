@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not not ( not False or True )`\n\n1. **Parentheses first**:  \nInside: `not False or True`  \n`not False` = `True`  \nSo: `True or True` = `True`  \n\nNow we have:  \n`not not (True)`\n\n2. **Apply NOT from right to left** (since NOT is right-associative in many logic contexts, but here we just apply inner to outer):  \n`not True` = `False`  \n`not False` = `True`\n\nFinal truth value: **true**\n\nFinal answer: true"
+}

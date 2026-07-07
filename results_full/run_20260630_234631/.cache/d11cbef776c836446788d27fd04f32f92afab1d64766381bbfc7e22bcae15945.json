@@ -1,0 +1,3 @@
+{
+  "content": "Voltage-controlled oscillators (VCOs) are integral in frequency modulators (directly generating FM signals by varying voltage), phase-locked loops (as the tunable oscillator whose frequency is controlled by a phase difference), and certain types of pulse modulators (e.g., pulse-position modulation where timing varies with voltage).  \nOption (A) lists \"Pulse Modulators Frequency Modulators Phase Clocked loops\" — the phrasing is awkward but seems to mean pulse modulators, frequency modulators, and phase-locked loops.  \nOption (B) and (C) are subsets of the applications.  \nSince VCOs are indeed used in all three, the correct choice is (D) All the above.  \n\nFinal answer: (D)"
+}

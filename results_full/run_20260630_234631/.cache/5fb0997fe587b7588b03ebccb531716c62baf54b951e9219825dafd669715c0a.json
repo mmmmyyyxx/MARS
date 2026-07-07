@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\n1. **Innermost parentheses**:  \n   \\( \\text{True and False} \\) → \\( \\text{False} \\)\n\n2. **Apply the first `not`**:  \n   \\( \\text{not False} \\) → \\( \\text{True} \\)\n\n3. **Apply the second `not`**:  \n   \\( \\text{not True} \\) → \\( \\text{False} \\)\n\n4. **Apply the third `not`**:  \n   \\( \\text{not False} \\) → \\( \\text{True} \\)\n\nFinal answer: true"
+}

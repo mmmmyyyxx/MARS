@@ -1,0 +1,3 @@
+{
+  "content": "Let’s reason through this.  \n\n1. The template strand has A:T ratio = 3:2.  \n   That means for every 5 bases in the template strand, there are 3 A’s and 2 T’s.  \n\n2. DNA polymerase synthesizes the new strand complementary to the template strand.  \n   - Where the template has A, the new strand gets T.  \n   - Where the template has T, the new strand gets A.  \n\n3. So in the new strand:  \n   - Number of A’s = number of T’s in the template = 2 (per 5 bases in template)  \n   - Number of T’s = number of A’s in the template = 3 (per 5 bases in template)  \n\n4. Therefore, in the new strand, A:T ratio = 2:3.  \n\nFinal answer: (C)"
+}

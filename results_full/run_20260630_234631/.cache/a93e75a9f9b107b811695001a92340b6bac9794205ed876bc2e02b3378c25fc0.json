@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\n1. The expression is: **True or ( not ( True ) )**  \n2. First, evaluate **not ( True )** → **False**  \n3. Now the expression becomes: **True or False**  \n4. **True or False** evaluates to **True**  \n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A voltage clamping device, such as a Zener diode or a metal-oxide varistor (MOV), operates by sharply decreasing its resistance when the voltage exceeds a certain threshold.  \nUnder normal voltage, its impedance is high, but during an overvoltage condition, it \"clamps\" the voltage by becoming highly conductive — i.e., its impedance becomes **low** so that excess current is shunted away from the protected circuit.  \n\nThus, under overvoltage, impedance is **low**.  \n\nFinal answer: (B)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "False and not True evaluates to False (since False and False is False).  \nThen (False) or False evaluates to False.  \n\nFinal answer: false"
+}

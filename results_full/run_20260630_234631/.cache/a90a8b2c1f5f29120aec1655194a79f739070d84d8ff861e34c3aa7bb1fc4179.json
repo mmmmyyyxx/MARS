@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( not True ) and True and False`\n\n1. **Resolve parentheses (innermost first):**  \n`( not True )` → `False`\n\nNow the expression becomes:  \n`False and True and False`\n\n2. **Apply operators in precedence order (NOT already done, now AND before OR):**  \n`False and True` → `False`  \nThen `False and False` → `False`\n\nFinal result: **false**\n\nFinal answer: false"
+}

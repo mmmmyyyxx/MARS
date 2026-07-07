@@ -1,0 +1,3 @@
+{
+  "content": "The short circuit MVA for one alternator is:  \n\\[\n\\text{Short circuit MVA} = \\frac{\\text{Base MVA}}{\\text{Subtransient reactance (p.u.)}} = \\frac{20}{0.16} = 125 \\text{ MVA}\n\\]  \n\nFor four identical alternators in parallel, the total short circuit MVA is:  \n\\[\n4 \\times 125 = 500 \\text{ MVA}\n\\]  \n\nFinal answer: (A)"
+}

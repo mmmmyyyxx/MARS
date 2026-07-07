@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe statement is:  \n\n**True or False or not True or False**\n\n---\n\n**Step 1 – Operator precedence**  \nIn Boolean logic:  \n1. **NOT** (`not`) has highest precedence.  \n2. **AND** comes next.  \n3. **OR** has lowest precedence.  \n\nSo `not True` is evaluated first.\n\n---\n\n**Step 2 – Substitute values**  \n`True or False or (not True) or False`  \n`not True` = `False`  \n\nSo we have:  \n`True or False or False or False`\n\n---\n\n**Step 3 – Evaluate left to right (OR is associative)**  \n`True or False` → `True`  \n`True or False` → `True`  \n`True or False` → `True`  \n\n---\n\n**Step 4 – Conclusion**  \nThe expression evaluates to **true**.\n\n---\n\nFinal answer: true"
+}

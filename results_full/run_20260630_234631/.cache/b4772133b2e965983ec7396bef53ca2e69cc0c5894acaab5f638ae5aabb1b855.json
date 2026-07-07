@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n**not True and ( False or True )**\n\n1. **not True** → False  \n2. **( False or True )** → True  \n3. Now substitute: **False and True** → False  \n\nFinal answer: false"
+}

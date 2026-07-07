@@ -1,0 +1,3 @@
+{
+  "content": "First, resolve the innermost negation:  \nnot False → True  \n\nNow the expression becomes:  \n( True and False )  \n\nApply the AND operator:  \nTrue and False → False  \n\nFinal answer: false"
+}

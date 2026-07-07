@@ -1,0 +1,3 @@
+{
+  "content": "Answer BIG-Bench Hard questions for Sports Understanding.\nRead the question carefully and interpret its intent based on sports knowledge. Determine if the scenario described aligns with common rules, outcomes, or logic in sports. Return only the final answer as yes or no.\nDo not include extra commentary after the final answer."
+}

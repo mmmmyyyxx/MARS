@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to the order of operations.\n\n**Original expression:**  \n`not ( False or False and False )`\n\n---\n\n**Step 1 — Parentheses (innermost):**  \nInside parentheses, precedence: `NOT` (none here) → `AND` → `OR`.\n\n`False and False` = `False`\n\nNow inside parentheses:  \n`False or False` = `False`\n\nSo parentheses simplify to:  \n`not ( False )`\n\n---\n\n**Step 2 — Apply NOT:**  \n`not False` = `True`\n\n---\n\n**Step 3 — Fully simplified:**  \n`True`\n\n---\n\nFinal answer: true"
+}

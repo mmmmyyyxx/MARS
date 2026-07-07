@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to the order of operations:  \n**1. Innermost parentheses** → none here.  \n**2. NOT operators** → `not False` becomes `True`.  \n\nExpression becomes:  \n`True and True and True or True`  \n\n**3. AND operators** (left to right):  \n`True and True` → `True`  \n`True and True` → `True`  \n\nExpression becomes:  \n`True or True`  \n\n**4. OR operators**:  \n`True or True` → `True`  \n\nFinal answer: true"
+}

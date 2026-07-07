@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step:  \n\nExpression:  \nnot False or True and False or False  \n\n1. **Order of operations**: In Boolean logic, `not` has the highest precedence, then `and`, then `or`.  \n   So:  \n   not False → True  \n\n   Rewrite:  \n   True or True and False or False  \n\n2. **Evaluate `and` before `or`**:  \n   True and False → False  \n\n   Now:  \n   True or False or False  \n\n3. **Evaluate left to right for `or`**:  \n   True or False → True  \n   True or False → True  \n\nFinal result: **True**  \n\nFinal answer: true"
+}

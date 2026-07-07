@@ -1,0 +1,3 @@
+{
+  "content": "In an oscillator, feedback is essential to sustain oscillations by returning a portion of the output signal to the input with the correct phase and amplitude.  \nFeedback can be implemented using:  \n\n- **Resistive coupling** — for broadband feedback, often combined with reactive components to set frequency.  \n- **Capacitive coupling** — blocks DC and can be part of frequency-selective networks (e.g., in RC oscillators).  \n- **Inductive coupling** — used in LC oscillators, transformers, or tapped inductors for feedback.  \n\nSince oscillators can use resistive, capacitive, inductive, or combinations of these couplings to achieve the required feedback, the correct choice is the one that includes all possibilities.  \n\nFinal answer: (D)"
+}

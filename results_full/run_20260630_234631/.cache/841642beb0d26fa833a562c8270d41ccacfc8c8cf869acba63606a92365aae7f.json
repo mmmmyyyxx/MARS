@@ -1,0 +1,3 @@
+{
+  "content": "First, calculate the total luminous flux needed:  \n\nArea = 4 m × 3 m = 12 m²  \nIlluminance = 50 lux  \nLuminous flux (lumens) = Illuminance × Area = 50 × 12 = 600 lumens  \n\nEach lamp produces 300 lumens.  \nNumber of lamps = Total lumens / Lumens per lamp = 600 / 300 = 2  \n\nFinal answer: (A)"
+}

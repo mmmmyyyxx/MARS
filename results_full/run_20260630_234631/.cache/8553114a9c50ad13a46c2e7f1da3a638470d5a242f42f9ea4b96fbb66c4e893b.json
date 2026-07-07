@@ -1,0 +1,3 @@
+{
+  "content": "In an oscillator, feedback must be phase-shifted appropriately to satisfy the Barkhausen criterion for sustained oscillations.  \nFeedback can be provided via:  \n\n- **Resistive coupling** — direct or through a resistive network (e.g., in phase-shift oscillators).  \n- **Capacitive coupling** — blocks DC but passes AC feedback (e.g., in Colpitts oscillator).  \n- **Inductive coupling** — transformer coupling (e.g., in Armstrong or Hartley oscillators).  \n\nSince oscillators can use any of these or combinations (like RC networks, LC tanks with tapping), the correct option is the one that includes all possibilities.  \n\nFinal answer: (D)"
+}

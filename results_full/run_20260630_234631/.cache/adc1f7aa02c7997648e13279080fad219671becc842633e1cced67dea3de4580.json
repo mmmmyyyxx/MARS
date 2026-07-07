@@ -1,0 +1,3 @@
+{
+  "content": "An oscillator’s primary function is to generate sustained oscillations at a constant amplitude and specific frequency without requiring an external input signal after startup.  \n\n- (A) is incorrect because oscillators can produce non-sinusoidal waveforms (e.g., relaxation oscillators), so “produces sinusoidal oscillations” is not the primary function.  \n- (B) is incorrect because while some oscillators generate non-sinusoidal waveforms, that is not the defining primary function — many oscillators are designed for sine waves.  \n- (C) correctly captures the essential requirement: sustained oscillations, constant amplitude, specific frequency.  \n- (D) is incorrect because (C) is valid.  \n\nFinal answer: (C)"
+}

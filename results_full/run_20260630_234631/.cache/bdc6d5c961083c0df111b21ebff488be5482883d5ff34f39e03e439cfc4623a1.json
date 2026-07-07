@@ -1,0 +1,3 @@
+{
+  "content": "How can you ensure the prompt explicitly guides the model to first identify the original word before analyzing its altered version, especially when dealing with homophones or near-homophones?"
+}

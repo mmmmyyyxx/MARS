@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the Boolean expression systematically, applying correct operator precedence and logical rules. Pay special attention to nested negations, compound conditionals, and expressions involving XOR or equivalence operators, as these have been identified as common failure points in BIG-Bench Hard. After completing the evaluation, output only the final result as **true** or **false**, with no intermediate steps or explanations."
+}

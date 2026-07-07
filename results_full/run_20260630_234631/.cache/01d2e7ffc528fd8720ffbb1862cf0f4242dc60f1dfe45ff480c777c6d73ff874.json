@@ -1,0 +1,3 @@
+{
+  "content": "not False → True  \n(False or False) → False  \nTrue and False → False  \n\nFinal answer: false"
+}

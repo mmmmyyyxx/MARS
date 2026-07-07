@@ -1,0 +1,3 @@
+{
+  "content": "A three-state buffer, or tri-state buffer, has three possible output states:  \n- Logic high (1)  \n- Logic low (0)  \n- High impedance (float, high-Z)  \n\nOption (A) uses digital logic notation (1, 0, float).  \nOption (B) uses equivalent voltage-level terminology (High, Low, Float).  \nOption (C) states that both A and B are correct, which is true since they describe the same three states in different notation.  \nOption (D) uses terms unrelated to tri-state buffer outputs (Set, Reset, Halt are for flip-flops or control logic, not tri-state outputs).  \n\nThus, (C) is correct.  \n\nFinal answer: (C)"
+}

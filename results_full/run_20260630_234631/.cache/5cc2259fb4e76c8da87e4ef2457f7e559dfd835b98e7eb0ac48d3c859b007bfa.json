@@ -1,0 +1,3 @@
+{
+  "content": "Let’s reason step by step.  \n\nThe **absolute threshold** is defined as the minimum stimulus intensity that can be detected **50% of the time**.  \n\nFrom the data:  \n- At 80% power → 20 out of 30 mice responded → \\( \\frac{20}{30} \\approx 67\\% \\) detection rate.  \n- At 70% power → 15 out of 30 mice responded → \\( \\frac{15}{30} = 50\\% \\) detection rate.  \n- At 60% power → 10 out of 30 mice responded → \\( \\frac{10}{30} \\approx 33\\% \\) detection rate.  \n\nSince 50% detection happens at 70% power, that is the absolute threshold.  \n\n**Final answer: (B)**"
+}

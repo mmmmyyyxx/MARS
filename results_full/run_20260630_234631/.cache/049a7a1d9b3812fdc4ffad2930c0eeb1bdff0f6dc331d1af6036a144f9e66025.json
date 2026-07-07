@@ -1,0 +1,3 @@
+{
+  "content": "Answer BIG-Bench Hard questions for Sports Understanding.\nRead the question carefully. Identify the key action or event in the scenario that determines the outcome. Return only the final answer as yes or no.\nDo not include extra commentary after the final answer."
+}

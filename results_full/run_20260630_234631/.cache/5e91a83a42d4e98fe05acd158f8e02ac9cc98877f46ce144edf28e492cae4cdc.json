@@ -1,0 +1,3 @@
+{
+  "content": "In force-current analogy (also called mobility analogy), mechanical force \\( F \\) is analogous to electrical current \\( I \\), and mechanical velocity \\( v \\) is analogous to electrical voltage \\( V \\).  \n\nSince displacement \\( x = \\int v \\, dt \\),  \nits electrical analog would be \\( \\int V \\, dt \\), which is flux linkage \\( \\lambda \\) (flux = time integral of voltage).  \n\nChecking the options:  \n- (A) voltage → analogous to velocity, not displacement.  \n- (B) inductance → parameter, not a variable.  \n- (C) capacitance → parameter, not a variable.  \n- (D) flux → \\( \\lambda = \\int V \\, dt \\) → correct analog of displacement \\( x = \\int v \\, dt \\).  \n\nFinal answer: (D)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "The SVG path element `<path d=\"M 25.00,38.00 L 89.00,58.00\"/>` contains a \"M\" (move to) command followed by an \"L\" (line to) command, which draws a straight line segment from (25.00, 38.00) to (89.00, 58.00).  \nThis matches option (E) line.  \n\nFinal answer: (E)"
+}

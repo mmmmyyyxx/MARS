@@ -1,0 +1,3 @@
+{
+  "content": "First, simplify the expression:  \nnot (False) and (True)  \n\nnot (False) = True  \nSo we have: True and True  \n\nTrue and True = True  \n\nFinal answer: true"
+}

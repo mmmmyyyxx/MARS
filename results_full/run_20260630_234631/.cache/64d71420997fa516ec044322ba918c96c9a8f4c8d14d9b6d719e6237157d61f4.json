@@ -1,0 +1,3 @@
+{
+  "content": "First, calculate the area of the room:  \nArea = 4 m × 3 m = 12 m².  \n\nIlluminance \\( E \\) in lux is lumens per square meter:  \n\\[\nE = \\frac{\\text{Total lumens}}{\\text{Area}}\n\\]  \nWe want \\( E = 50 \\ \\text{lux} \\), so:  \n\\[\n\\text{Total lumens} = E \\times \\text{Area} = 50 \\times 12 = 600 \\ \\text{lm}\n\\]  \n\nEach lamp produces 300 lumens, so:  \n\\[\n\\text{Number of lamps} = \\frac{600}{300} = 2\n\\]  \n\nThis matches option (A).  \n\nFinal answer: (A)"
+}

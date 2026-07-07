@@ -1,0 +1,3 @@
+{
+  "content": "First, evaluate `not True`:  \n`not True = False`  \n\nNow the expression becomes:  \n`False and False`  \n\nSince `and` requires both operands to be true to return true, `False and False = False`.  \n\nFinal answer: false"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "An oscillator must maintain consistent output amplitude and frequency over time to function properly.  \nAmplitude stability ensures the signal does not decay or grow uncontrollably, while frequency stability ensures the oscillation occurs at the desired frequency.  \nPower stability is not typically listed as a separate fundamental requirement; it is generally encompassed by amplitude and frequency stability.  \nThus, the necessary requirements are both amplitude stability and frequency stability.  \n\nFinal answer: (D)"
+}

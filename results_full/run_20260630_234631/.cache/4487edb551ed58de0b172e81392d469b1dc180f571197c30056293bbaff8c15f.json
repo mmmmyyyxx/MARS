@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\nExpression:  \nTrue or ( True or not True )  \n\n1. **Resolve innermost parentheses first**:  \n   Inside: True or not True  \n   - not True → False  \n   - True or False → True  \n\n2. **Substitute back**:  \n   Expression becomes: True or (True)  \n\n3. **Apply OR**:  \n   True or True → True  \n\nFinal answer: true"
+}

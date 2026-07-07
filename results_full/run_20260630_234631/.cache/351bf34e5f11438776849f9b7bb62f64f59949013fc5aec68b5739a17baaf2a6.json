@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step (internally) without showing the steps in the final answer.\n\nExpression:  \n`not not True and not True or True`\n\n1. `not not True` → `not False` → `True`  \n2. `not True` → `False`  \n3. `True and False` → `False`  \n4. `False or True` → `True`\n\nFinal answer: true"
+}

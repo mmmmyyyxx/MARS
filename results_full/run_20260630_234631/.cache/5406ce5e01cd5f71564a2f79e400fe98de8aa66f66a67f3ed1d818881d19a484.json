@@ -1,0 +1,3 @@
+{
+  "content": "Let’s go through each option step by step.  \n\n- **(A) LC oscillator** — Uses an LC tank circuit to produce sinusoidal oscillations; it is a sinusoidal oscillator.  \n- **(B) RC phase shift oscillator** — Uses RC networks to produce a sine wave output; it is a sinusoidal oscillator.  \n- **(C) Relaxation oscillator** — Produces a non-sinusoidal output (e.g., square, triangle, or sawtooth waves), not a sine wave.  \n- **(D) Crystal oscillator** — Uses a quartz crystal for precise sinusoidal oscillation; it is a sinusoidal oscillator.  \n\nThe one that is **not** a sinusoidal oscillator is the relaxation oscillator.  \n\nFinal answer: (C)"
+}

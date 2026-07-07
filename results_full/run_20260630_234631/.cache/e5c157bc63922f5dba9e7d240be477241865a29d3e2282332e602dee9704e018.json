@@ -1,0 +1,3 @@
+{
+  "content": "In force-voltage analogy:  \n- Force (F) is analogous to voltage (V)  \n- Velocity (v) is analogous to current (i)  \n- Mechanical spring: \\( F = K \\int v \\, dt \\)  \n- Electrical analog: \\( V = \\frac{1}{C} \\int i \\, dt \\)  \nThus, spring constant \\( K \\) corresponds to \\( 1/C \\).  \n\nFinal answer: (C)"
+}

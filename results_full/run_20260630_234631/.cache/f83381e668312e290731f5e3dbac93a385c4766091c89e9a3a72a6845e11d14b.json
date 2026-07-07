@@ -1,0 +1,3 @@
+{
+  "content": "Identify the logical form of the argument presented in the question. Compare the structure to canonical valid logical forms (e.g., modus ponens, modus tollens, disjunctive syllogism, hypothetical syllogism) and common formal fallacies (e.g., affirming the consequent, denying the antecedent, fallacy of the undistributed middle, illicit major/minor). Determine if the argument follows a valid structure or violates deductive reasoning rules by committing one of these fallacies. Return only the final answer as valid or invalid."
+}

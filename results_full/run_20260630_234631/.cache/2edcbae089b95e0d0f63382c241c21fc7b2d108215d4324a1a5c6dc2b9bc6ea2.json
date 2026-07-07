@@ -1,0 +1,3 @@
+{
+  "content": "The ALE (Address Latch Enable) signal in the Intel 8085 microprocessor is used to latch the lower-order address (A0–A7) from the multiplexed address/data bus (AD0–AD7) into an external latch.  \nWhen ALE is high, the AD0–AD7 lines carry the lower-order address bits.  \nWhen ALE goes low, those lines can then be used for data, and the address is held stable by the external latch.  \nSo ALE high enables the bus to be used as the low-order address bus.  \n\nFinal answer: (A)"
+}

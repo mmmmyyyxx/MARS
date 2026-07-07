@@ -1,0 +1,3 @@
+{
+  "content": "Purely mechanical instruments rely on physical movement of components like springs, masses, and dampers, which possess significant mass.  \nHigh mass leads to **high inertia**, which means they cannot follow rapid changes in the measured quantity.  \nThis results in **higher response time** and a **large time constant** in their dynamic response.  \nAll three listed factors — high inertia, higher response time, and large time constant — are interrelated and contribute to their inability to accurately track dynamic signals.  \n\nFinal answer: (D)"
+}

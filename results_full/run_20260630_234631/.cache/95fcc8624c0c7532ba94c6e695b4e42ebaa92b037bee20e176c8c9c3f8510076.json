@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the Boolean expression by strictly adhering to the following rules:  \n1. **Operator Precedence**: Apply operators in this exact order: parentheses first, then NOT (¬), followed by AND (∧), then OR (∨), and finally XOR (⊕) and equivalence (↔).  \n2. **Nested Negations**: Resolve multiple negations from the innermost outward, applying double negation elimination (¬¬P ≡ P) immediately.  \n3. **Direct Evaluation**: Do not show intermediate steps or reasoning; compute the result internally and output only the final truth value.  \n4. **Output Format**: Conclude with **true** or **false** exclusively, with no additional text."
+}

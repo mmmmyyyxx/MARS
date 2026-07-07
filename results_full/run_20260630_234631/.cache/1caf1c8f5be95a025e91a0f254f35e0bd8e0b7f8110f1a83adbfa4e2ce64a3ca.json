@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step:  \n\n1. Inside the parentheses:  \n   - `not (False)` → `True`  \n   - `True or False` → `True`  \n\nSo the whole expression simplifies to `True`.  \n\nFinal answer: true"
+}

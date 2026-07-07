@@ -1,0 +1,3 @@
+{
+  "content": "A latch changes its output state based on the level of the enable signal (often called enable or clock depending on context), not the edge transition.  \nTherefore, it is level-sensitive, not edge-sensitive.  \n\nFinal answer: (C)"
+}

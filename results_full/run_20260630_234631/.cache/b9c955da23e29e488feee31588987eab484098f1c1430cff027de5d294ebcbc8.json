@@ -1,0 +1,3 @@
+{
+  "content": "In a star connection, the line voltage is \\( \\sqrt{3} \\) times the phase voltage and the line current equals the phase current.  \nIn a delta connection, the line voltage equals the phase voltage and the line current is \\( \\sqrt{3} \\) times the phase current.  \n\nFor the same impedance per phase, the phase voltage in delta is \\( \\sqrt{3} \\) times that in star, so the phase power in delta is \\( 3 \\) times that in star.  \nSince total power = \\( 3 \\times \\) phase power, the delta system’s total power is \\( 3 \\) times the star system’s total power for the same impedance.  \n\nThus, if star power is \\( P \\), delta power is \\( 3P \\).  \n\nFinal answer: (B)"
+}

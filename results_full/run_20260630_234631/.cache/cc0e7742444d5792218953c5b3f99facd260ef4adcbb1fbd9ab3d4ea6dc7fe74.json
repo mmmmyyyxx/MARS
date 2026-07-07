@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step-by-step according to operator precedence (NOT first, then AND, left-to-right).\n\nExpression:  \n**True or not False and True and False**\n\n1. **NOT has highest precedence**:  \n   `not False` → `True`  \n   Expression becomes:  \n   `True or True and True and False`\n\n2. **AND is next, left-to-right**:  \n   First AND: `True and True` → `True`  \n   Expression becomes:  \n   `True or True and False`\n\n3. Next AND: `True and False` → `False`  \n   Expression becomes:  \n   `True or False`\n\n4. **OR**:  \n   `True or False` → `True`\n\nFinal answer: true"
+}

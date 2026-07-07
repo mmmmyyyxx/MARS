@@ -1,0 +1,3 @@
+{
+  "content": "Read the question carefully and identify the type of ambiguity present. For each option, directly compare how it resolves the ambiguity by asking: \"Does this interpretation make the most sense given the context, and why is it more coherent than the others?\" Eliminate options that fail to resolve the ambiguity clearly or introduce inconsistencies. Select the option that provides the most straightforward and contextually fitting resolution. **Ensure the output is strictly in the format \"(X)\" where X is the selected option letter, with no additional text, explanations, or deviations.**"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A variable displacement transducer measures linear or angular displacement and provides an output that varies proportionally with the displacement.  \n- A **tachometer** measures speed, not displacement.  \n- A **potentiometer** can measure displacement by changing resistance as its wiper moves, making it a variable displacement transducer.  \n- **Synchros** measure angular displacement but are typically used for position sensing rather than being called \"variable displacement transducers\" in the same sense as a potentiometer.  \n\nGiven the options, the potentiometer is the most common example of a variable displacement transducer.  \n\nFinal answer: (B)"
+}

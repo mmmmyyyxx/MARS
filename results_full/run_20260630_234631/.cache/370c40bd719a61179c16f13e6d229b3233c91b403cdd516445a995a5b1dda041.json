@@ -1,0 +1,3 @@
+{
+  "content": "Reverse transcriptase can synthesize DNA from an RNA template without a separate primer because it has an intrinsic RNase H activity and often uses its own tRNA-like priming.  \nA DNA or RNA primer is not strictly required in all cases for initiation of cDNA synthesis from RNA by reverse transcriptase — some viral reverse transcriptases initiate DNA synthesis using the 3' end of the RNA genome itself or a tRNA bound to the template.  \nGiven the question specifies \"synthesis of an RNA/DNA hybrid from a single-stranded RNA template,\" the minimal requirement is reverse transcriptase only, since it can carry out this process without an externally added primer in certain systems.  \n\nFinal answer: (D)"
+}

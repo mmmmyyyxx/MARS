@@ -1,0 +1,3 @@
+{
+  "content": "Total steps: 5\nStep 1: Create a clear instruction template that explicitly defines the disambiguation task and required output format\nStep 2: Include examples of correct answer formatting with parenthesized option letters\nStep 3: Add reasoning guidance for evaluating multiple-choice options systematically\nStep 4: Incorporate explicit instructions to avoid explanations and output only the letter choice\nStep 5: Test and refine prompt with sample BIG-Bench Hard questions to ensure format compliance"
+}

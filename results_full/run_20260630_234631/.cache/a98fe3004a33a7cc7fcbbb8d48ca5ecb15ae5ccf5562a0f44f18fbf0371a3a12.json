@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.\n\n1. **Innermost parentheses and NOT first**  \n   `not True` → `False`\n\n2. **Substitute back into the expression**  \n   `( ( False and True ) )`\n\n3. **Evaluate `False and True`**  \n   `False and True` → `False`\n\n4. **Final result**  \n   `False`\n\nFinal answer: false"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.\n\nExpression:  \n**True and not False and not not True**\n\n---\n\n**Step 1 – Handle innermost negations (NOT operations):**  \n- `not False` → `True`  \n- `not not True` → `not (not True)` → `not False` → `True`\n\nSo now:  \n**True and True and True**\n\n---\n\n**Step 2 – Apply AND from left to right (AND has precedence over OR, but here only AND exists):**  \n- `True and True` → `True`  \n- `True and True` → `True`\n\n---\n\n**Step 3 – Final result:**  \n`True`\n\n---\n\nFinal answer: true"
+}

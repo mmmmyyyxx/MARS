@@ -1,0 +1,3 @@
+{
+  "content": "Let's evaluate step-by-step.  \n\nExpression:  \n\\[\n\\text{False and not ( True ) or True}\n\\]\n\n---\n\n**Step 1: Handle parentheses and negation (NOT)**  \nInside parentheses: `True` → `not (True)` = `False`  \n\nSo now:  \n\\[\n\\text{False and False or True}\n\\]\n\n---\n\n**Step 2: Apply AND** (precedence before OR)  \n`False and False` = `False`  \n\nSo now:  \n\\[\n\\text{False or True}\n\\]\n\n---\n\n**Step 3: Apply OR**  \n`False or True` = `True`\n\n---\n\n**Final answer: true**"
+}

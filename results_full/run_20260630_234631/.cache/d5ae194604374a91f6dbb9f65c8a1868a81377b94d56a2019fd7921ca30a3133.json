@@ -1,0 +1,3 @@
+{
+  "content": "Let's extract the logical structure:\n\n1. \"Being a frequent consumer of Dove soap is sufficient for being an owner of a Bumble and bumble shampoo.\"\n   - This means: If D (Dove consumer) then B (Bumble shampoo owner).  \n   - Symbolically: D → B\n\n2. Conclusion: \"Everyone who is an owner of a Bumble and bumble shampoo is a frequent consumer of Dove soap, too.\"\n   - Symbolically: B → D\n\nSo the argument is:  \nPremise: D → B  \nConclusion: B → D  \n\nThis is the fallacy of **affirming the consequent** in reverse form: from D → B, it concludes B → D.  \nThe premise says D is sufficient for B, but the conclusion claims B is sufficient for D, which does not follow logically.\n\nThus, the argument is **invalid**.\n\nFinal answer: invalid"
+}

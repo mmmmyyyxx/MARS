@@ -1,0 +1,3 @@
+{
+  "content": "An open-loop control system lacks feedback, meaning it cannot self-correct for disturbances or changes in system parameters.  \nThis leads to **inaccuracy** because the output may deviate from the desired value without the system being aware.  \nIt is also **unreliable** because its performance depends heavily on calibration and it cannot compensate for unexpected changes or disturbances over time.  \nThus, both (A) and (B) are correct disadvantages.  \n\nFinal answer: (C)"
+}

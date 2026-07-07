@@ -1,0 +1,3 @@
+{
+  "content": "ACCEPT\n\nThis is a strong Socratic question because it:\n- Focuses on critical implementation details (logical operators and common pitfalls)\n- Targets systematic error prevention rather than surface-level fixes\n- Encourages thinking about explicit instruction design\n- Maintains relevance to the core Boolean evaluation task\n- Prompts consideration of where models typically struggle with logical operations\n\nThe question effectively guides toward creating a more robust prompt by addressing specific failure points in Boolean reasoning."
+}

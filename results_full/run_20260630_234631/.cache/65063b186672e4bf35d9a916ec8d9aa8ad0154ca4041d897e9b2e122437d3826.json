@@ -1,0 +1,3 @@
+{
+  "content": "First, convert speeds to m/s:  \nCar speed \\( v_s = 108 \\text{ km/h} = 30 \\text{ m/s} \\)  \nCamera speed \\( v_o = 72 \\text{ km/h} = 20 \\text{ m/s} \\)  \n\nBoth moving in same direction, so relative motion:  \nSource moving toward observer at \\( v_s = 30 \\) m/s, observer moving toward source at \\( v_o = 20 \\) m/s.  \n\nUse Doppler formula for sound in air (speed of sound \\( c \\approx 343 \\) m/s):  \n\n\\[\nf' = f \\cdot \\frac{c + v_o}{c - v_s}\n\\]\n\n\\[\nf' = 800 \\cdot \\frac{343 + 20}{343 - 30}\n\\]\n\n\\[\nf' = 800 \\cdot \\frac{363}{313}\n\\]\n\n\\[\n\\frac{363}{313} \\approx 1.1597\n\\]\n\n\\[\nf' \\approx 800 \\times 1.1597 \\approx 927.76 \\ \\text{Hz}\n\\]\n\nClosest option: 924 Hz.  \n\nFinal answer: (C)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "In a lap winding, the number of parallel paths \\( A \\) equals the number of poles \\( P \\), and the back and front pitches are close in value.  \nThe average pitch \\( Y_a \\) is given by:\n\n\\[\nY_a = \\frac{Z}{P} \\quad \\text{or} \\quad Y_a = \\frac{Z}{A}\n\\]\n\nHere, \\( Z = 100 \\) conductors, \\( A = 10 \\) parallel paths.  \nSo:\n\n\\[\nY_a = \\frac{100}{10} = 10\n\\]\n\nFinal answer: (A)"
+}

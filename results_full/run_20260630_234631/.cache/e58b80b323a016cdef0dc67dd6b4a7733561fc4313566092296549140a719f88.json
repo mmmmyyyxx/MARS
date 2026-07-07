@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( not ( False ) or False )\n\n1. **Precedence:** `not` has higher precedence than `or`.  \n2. Evaluate `not ( False )`:  \n   - `not False` → `True`  \n3. Expression becomes: `True or False`  \n4. `True or False` → `True`  \n\nFinal answer: true"
+}

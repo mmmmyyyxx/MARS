@@ -1,0 +1,3 @@
+{
+  "content": "Let’s reason through each option:  \n\n- **(A) Power transfer capability of the transmission line is increased**  \n  True — for a given conductor current, higher voltage allows higher power transfer (\\(P = VI\\) for single-phase, \\(P = \\sqrt{3} V_L I_L\\) for three-phase).  \n\n- **(B) Transmission line losses are reduced**  \n  True — for the same power, higher voltage means lower current, and since losses are \\(I^2 R\\), losses decrease.  \n\n- **(C) Area of cross section and volume of the conductor is reduced**  \n  True — because lower current is needed for the same power, a thinner conductor can be used.  \n\nSince all three are valid advantages, the correct choice is **(D) all of the above**.  \n\nFinal answer: (D)"
+}

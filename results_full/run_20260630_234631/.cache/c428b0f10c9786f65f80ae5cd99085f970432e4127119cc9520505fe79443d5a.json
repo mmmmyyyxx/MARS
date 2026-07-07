@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down.  \n\n1 F (farad) is the unit of capacitance.  \nThe definition of capacitance \\( C \\) is:  \n\\[\nC = \\frac{Q}{V}\n\\]\nwhere \\( Q \\) is charge in coulombs (C) and \\( V \\) is voltage in volts (V).  \n\nSo, 1 F means:  \n\\[\n1 \\ \\text{F} = \\frac{1 \\ \\text{C}}{1 \\ \\text{V}}\n\\]\nThat is, 1 farad is the ratio of 1 coulomb to 1 volt.  \n\nLooking at the options:  \n- (A) 1 ohm of resistance → unrelated (ohm is unit of resistance).  \n- (B) ratio of 1 V to 1 C → that’s \\( V/C \\), which is the inverse of capacitance.  \n- (C) ratio of 1 C to 1 V → matches \\( C/V \\), which is capacitance.  \n- (D) none of these → incorrect since (C) is correct.  \n\nFinal answer: (C)"
+}

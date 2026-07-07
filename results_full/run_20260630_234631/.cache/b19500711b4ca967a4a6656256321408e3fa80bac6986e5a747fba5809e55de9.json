@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or True or not False or False**\n\n---\n\n### 1. Identify the order of operations\nLogical operator precedence (highest to lowest):  \n1. `not`  \n2. `and`  \n3. `or`  \n\nSo:  \n`True or True or (not False) or False`\n\n---\n\n### 2. Apply `not` first\n`not False` → `True`  \n\nExpression becomes:  \n`True or True or True or False`\n\n---\n\n### 3. Apply `or` from left to right\n- Step 1: `True or True` → `True`  \n- Step 2: `True or True` → `True`  \n- Step 3: `True or False` → `True`  \n\n---\n\n**Final answer: true**"
+}

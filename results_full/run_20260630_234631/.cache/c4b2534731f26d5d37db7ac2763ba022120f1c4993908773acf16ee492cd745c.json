@@ -1,0 +1,3 @@
+{
+  "content": "A latch is a level-sensitive storage element, meaning its output changes state based on the continuous level (high or low) of the enable signal (often called \"enable\" or \"clock\" depending on context), not on transitions.  \nThis contrasts with flip-flops, which are edge-triggered.  \n\n- (A) Incorrect: Latches are not both level and edge sensitive.  \n- (B) Incorrect: Edge sensitivity is characteristic of flip-flops.  \n- (C) Correct: Latches respond to the level of the control signal.  \n- (D) Incorrect: Latches do have sensitivity — it is level sensitivity.  \n\nFinal answer: (C)"
+}

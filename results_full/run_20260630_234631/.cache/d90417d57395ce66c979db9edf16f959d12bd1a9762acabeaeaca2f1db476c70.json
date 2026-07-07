@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The current prompt lacks explicit guidance on verifying assumptions (e.g., checking if components are in series/parallel before applying laws) or identifying common pitfalls (e.g., sign errors in Kirchhoff's Laws). Strengthen by adding: \"Before applying laws, explicitly verify circuit configuration and variable directions. Cross-check solutions for consistency with fundamental principles.\""
+}

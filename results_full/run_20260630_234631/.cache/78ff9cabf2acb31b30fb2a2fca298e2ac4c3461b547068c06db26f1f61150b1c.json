@@ -1,0 +1,3 @@
+{
+  "content": "First, resolve the innermost NOT:  \nnot not True → not (not True) → not False → True  \nIntermediate: not False and True and True  \n\nNext, resolve the remaining NOT:  \nnot False → True  \nIntermediate: True and True and True  \n\nNow apply AND from left to right:  \nTrue and True → True  \nIntermediate: True and True  \n\nTrue and True → True  \nIntermediate: True  \n\nFinal answer: true"
+}

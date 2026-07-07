@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step, following operator precedence: **not** > **and** > **or**.\n\nExpression:  \n`( not True and False or True )`\n\n1. **`not True`** → `False`  \n   Now we have: `( False and False or True )`\n\n2. **`False and False`** → `False`  \n   Now we have: `( False or True )`\n\n3. **`False or True`** → `True`\n\nFinal answer: true"
+}

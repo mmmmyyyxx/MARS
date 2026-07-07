@@ -1,0 +1,3 @@
+{
+  "content": "Read the question carefully and evaluate the Boolean expression systematically, applying correct operator precedence and logical rules. After completing the evaluation, output only the final result as **true** or **false**, with no intermediate steps or explanations."
+}

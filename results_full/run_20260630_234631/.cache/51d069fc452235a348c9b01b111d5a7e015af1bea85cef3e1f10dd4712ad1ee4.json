@@ -1,0 +1,3 @@
+{
+  "content": "In the two-wattmeter method for a three-phase system, if the total power is measured by only one wattmeter, it implies that the other wattmeter reads zero.  \nThis happens when the power factor is 0.5 (cos φ = 0.5, φ = 60°), because at that phase angle, one wattmeter’s reading becomes zero while the other measures the total power.  \n\nFinal answer: (B)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A diode is a semiconductor device that conducts current primarily in one direction.  \n- **Forward bias**: The diode is ON, with low resistance (ideally zero in an ideal diode).  \n- **Reverse bias**: The diode is OFF, with high resistance (ideally infinite).  \n\nChecking the options:  \n- (A) says high resistance in both biases — incorrect for forward bias.  \n- (B) says low resistance in forward bias, high in reverse bias — matches diode behavior.  \n- (C) says high resistance in forward bias, low in reverse — opposite of reality.  \n- (D) says low resistance in both biases — incorrect for reverse bias.  \n\nThus, only (B) aligns with semiconductor diode fundamentals.  \n\nFinal answer: (B)"
+}

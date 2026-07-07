@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step:  \n\nExpression:  \n( True ) or True and not True  \n\n1. **Order of operations**: In Boolean logic, `not` has the highest precedence, then `and`, then `or`.  \n   So `True and not True` is evaluated first.  \n\n2. `not True` = `False`  \n\n3. `True and False` = `False`  \n\n4. Now we have: `( True ) or False`  \n\n5. `True or False` = `True`  \n\nFinal answer: True"
+}

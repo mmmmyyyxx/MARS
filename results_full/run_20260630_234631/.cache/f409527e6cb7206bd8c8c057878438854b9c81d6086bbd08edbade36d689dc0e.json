@@ -1,0 +1,3 @@
+{
+  "content": "First, resolve the innermost parentheses:  \n`(not False)` → `True`  \n\nNow the expression becomes:  \n`(True and False)`  \n\nApply the AND operator:  \n`True and False` → `False`  \n\nFinal answer: false"
+}

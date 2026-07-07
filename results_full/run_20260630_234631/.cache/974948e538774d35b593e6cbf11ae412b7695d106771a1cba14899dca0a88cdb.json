@@ -1,0 +1,3 @@
+{
+  "content": "The lowest critical frequency being due to a zero near or at the origin suggests a system where the first critical frequency is determined by a zero in the transfer function rather than a pole.  \nIn RC circuits, zeros can occur at low frequencies (including near the origin), especially in high-pass or lead networks, whereas LC or RLC circuits typically have complex critical frequencies farther from the origin due to resonances.  \nRL circuits can also have zeros, but RC circuits are more commonly associated with dominant low-frequency zeros in certain filter configurations.  \n\nGiven the emphasis on the lowest critical frequency being a zero near the origin, this is characteristic of certain RC network transfer functions.  \n\nFinal answer: (B)"
+}

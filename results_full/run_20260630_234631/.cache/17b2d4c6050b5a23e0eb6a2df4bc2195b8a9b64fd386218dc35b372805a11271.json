@@ -1,0 +1,3 @@
+{
+  "content": "For a Lissajous figure, the ratio of frequencies is given by:  \n\n\\[\n\\frac{f_y}{f_x} = \\frac{\\text{number of horizontal tangencies}}{\\text{number of vertical tangencies}}\n\\]\n\nHere:  \n- Horizontal tangencies = 5  \n- Vertical tangencies = 2  \n- \\( f_x = 100 \\ \\text{Hz} \\)  \n\nSo:  \n\\[\n\\frac{f_y}{100} = \\frac{5}{2}\n\\]\n\\[\nf_y = 100 \\times \\frac{5}{2} = 250 \\ \\text{Hz}\n\\]\n\nThis matches option (B).  \n\nFinal answer: (B)"
+}

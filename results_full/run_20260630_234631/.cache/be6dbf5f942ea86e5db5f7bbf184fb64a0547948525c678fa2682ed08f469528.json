@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n**not True or ( True or False )**\n\n1. **Parentheses first:**  \n   `( True or False )` → `True` (since OR gives True if at least one operand is True).\n\n2. **Substitute back:**  \n   Expression becomes:  \n   `not True or True`\n\n3. **NOT has higher precedence than OR:**  \n   `not True` → `False`\n\n4. **Now evaluate:**  \n   `False or True` → `True` (OR gives True if at least one operand is True).\n\nFinal answer: **true**  \n\nFinal answer: true"
+}

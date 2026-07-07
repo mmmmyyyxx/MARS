@@ -1,0 +1,3 @@
+{
+  "content": "The original sequence ends with `…CAGUAACAGA…` and the modified sequence ends with `…CAGUACCAGA…`.  \nThe change is `A → C` in the codon `UAA` (stop) to `UAC` (tyrosine).  \nThis removes the stop codon, so translation continues beyond the normal endpoint, producing a longer protein.  \n\nFinal answer: (D)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The question conflates formal fallacies (structural invalidity) with unsoundness (false premises), which are distinct concepts. Formal fallacies concern validity alone, while unsoundness involves both validity and truth. A better question would directly test structural pattern recognition without introducing premise truth values, such as: \"Does this argument commit a formal fallacy regardless of whether its premises are true or false?\""
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the Boolean expression step-by-step, resolving parentheses from innermost to outermost, then applying NOT operators, then AND operators, and finally OR operators. After completing the evaluation, output only \"true\" or \"false\" as the final answer."
+}

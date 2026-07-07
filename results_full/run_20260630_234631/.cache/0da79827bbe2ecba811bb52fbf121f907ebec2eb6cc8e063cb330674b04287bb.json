@@ -1,0 +1,3 @@
+{
+  "content": "An SCR (silicon-controlled rectifier) is a semiconductor device sensitive to overcurrent conditions, which can cause thermal damage.  \nA circuit breaker (CB) and fuse are overcurrent protection devices used to interrupt excessive current flow before it damages the SCR.  \nA heat sink helps with heat dissipation but does not protect against overcurrent.  \nA snubber circuit protects against voltage transients, not overcurrent.  \nA voltage clamping device limits overvoltage, not overcurrent.  \n\nFinal answer: (A)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Relaxation voltage-controlled oscillators (VCOs) typically use switching circuits (like Schmitt triggers and capacitors) to generate non-sinusoidal waveforms such as triangular and sawtooth waves, rather than smooth sinusoidal oscillations.  \nSinusoidal waves are usually produced by LC or crystal oscillators, not relaxation oscillators.  \nThus, relaxation VCOs are associated with both triangular and sawtooth outputs.  \n\nFinal answer: (D)"
+}

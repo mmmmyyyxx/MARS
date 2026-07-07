@@ -1,0 +1,3 @@
+{
+  "content": "The lowest critical frequency being due to a pole near or at the origin suggests a network with a dominant pole at low frequencies.  \nRC networks typically have poles at \\( f = \\frac{1}{2\\pi RC} \\), which can be made very low with large \\( R \\) or \\( C \\), whereas RL poles are \\( f = \\frac{R}{2\\pi L} \\) and generally not as easily placed very close to the origin unless \\( L \\) is impractically large. LC networks can have poles away from the origin depending on resonance.  \nThus, RC networks are most associated with a dominant low-frequency pole near the origin.  \n\nFinal answer: (C)"
+}

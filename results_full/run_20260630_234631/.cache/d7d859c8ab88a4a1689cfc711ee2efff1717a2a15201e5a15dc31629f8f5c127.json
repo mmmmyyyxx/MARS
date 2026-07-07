@@ -1,0 +1,3 @@
+{
+  "content": "The 8085 microprocessor is packaged in a 40-pin DIP (dual in-line package).  \nNot all pins are output pins — some are input, some are bidirectional, and some are power/clock pins.  \nThe question specifically asks for **output pins**, which are:  \n\n- Address pins (A8–A15) → 8 output pins  \n- Control signals like S0, S1, IO/M̄, RD̄, WR̄, etc. → some are outputs  \n- Serial Output (SOD) → 1 output pin  \n\nCounting carefully from the 8085 pin diagram:  \n- 8 address lines (A8–A15)  \n- Status lines S0, S1 (outputs)  \n- IO/M̄, RD̄, WR̄ (outputs)  \n- ALE (output)  \n- SOD (output)  \n- HLDA (output)  \n\nTotal output pins = 27.  \n\nThus, the correct option is (A).  \n\nFinal answer: (A)"
+}

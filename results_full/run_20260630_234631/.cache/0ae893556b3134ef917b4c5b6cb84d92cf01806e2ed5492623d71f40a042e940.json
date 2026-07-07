@@ -1,0 +1,3 @@
+{
+  "content": "Open-loop control systems lack feedback, making them inherently less accurate than closed-loop systems since they cannot correct for disturbances or variations. While they are indeed simple, economical, and reliable due to fewer components, they are not accurate in the presence of uncertainties.  \n\nFinal answer: (A)"
+}

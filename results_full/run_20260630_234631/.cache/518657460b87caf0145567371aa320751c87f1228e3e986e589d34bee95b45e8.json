@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\n1. **Innermost parentheses**:  \n   \\( \\text{False or not False} \\)  \n   - `not False` = `True`  \n   - So: `False or True` = `True`  \n\n2. **Replace back into the main expression**:  \n   \\( \\text{False or (True)} \\)  \n\n3. **Evaluate**:  \n   `False or True` = `True`  \n\nFinal answer: true"
+}

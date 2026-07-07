@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\n1. **Innermost parentheses**:  \n   \\( \\text{not False or True} \\)  \n   \\( \\text{not False} = \\text{True} \\)  \n   So: \\( \\text{True or True} = \\text{True} \\)  \n\n2. **Apply the outer “not not”**:  \n   \\( \\text{not not (True)} \\)  \n   \\( \\text{not True} = \\text{False} \\)  \n   \\( \\text{not False} = \\text{True} \\)  \n\nFinal answer: True"
+}

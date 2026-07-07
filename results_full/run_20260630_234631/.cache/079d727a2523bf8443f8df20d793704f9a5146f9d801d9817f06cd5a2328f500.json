@@ -1,0 +1,3 @@
+{
+  "content": "When capacitors are connected in parallel, the equivalent capacitance is the sum of all capacitances.  \n\nHere, four capacitors each of 40 µF are in parallel:  \n\n\\[\nC_{eq} = 40 + 40 + 40 + 40 = 160\\ \\mu\\text{F}\n\\]\n\nThis matches option (A).  \n\nFinal answer: (A)"
+}

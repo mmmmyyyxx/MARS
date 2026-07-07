@@ -1,0 +1,3 @@
+{
+  "content": "REVISE\n\nThe Teacher question shifts focus from answer selection strategy to evidence evaluation methodology, which is too broad for this specific multiple-choice task. While evidence-based reasoning is important in medicine, the core requirement here is accurate option identification. A better prompt would directly address the multiple-choice format and answer presentation requirement.\n\nSuggested revision: \"Analyze each College Medicine MMLU question carefully. For each question, select the single best answer based on medical knowledge and provide only the parenthesized letter of your chosen option as the final output.\""
+}

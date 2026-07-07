@@ -1,0 +1,3 @@
+{
+  "content": "A variable displacement transducer measures linear or angular displacement and outputs a variable electrical signal proportional to that displacement.  \n\n- **Tachometer**: Measures speed, not displacement.  \n- **Potentiometer**: Can measure angular or linear displacement by varying resistance proportional to position → variable displacement transducer.  \n- **Synchros**: Measure angular position but are typically used as position sensors, not necessarily described as \"variable displacement transducers\" in the same basic sense as a potentiometer.  \n\nGiven the options, the potentiometer fits the definition best.  \n\nFinal answer: (B)"
+}

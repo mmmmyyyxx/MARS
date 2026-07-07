@@ -1,0 +1,3 @@
+{
+  "content": "Let’s go step-by-step.\n\n**Step 1: Original expression**  \n`not ( True or True or False )`\n\n**Step 2: Resolve parentheses from innermost outward**  \nInside the parentheses, we have `True or True or False`.  \nOR is associative, so we can evaluate left to right.\n\n- `True or True` → `True` (since T OR T = T)  \n- `True or False` → `True` (since T OR F = T)  \n\nSo `( True or True or False )` simplifies to `True`.\n\n**Step 3: Apply NOT**  \n`not (True)` → `False` (since NOT T = F)\n\n**Step 4: Verification with truth table principles**  \nLet’s check:  \n`(True or True or False)`  \nTruth table for OR:  \n- T OR T = T  \n- T OR F = T  \nSo result inside = T.  \nNOT T = F.\n\n**Final answer: false**"
+}

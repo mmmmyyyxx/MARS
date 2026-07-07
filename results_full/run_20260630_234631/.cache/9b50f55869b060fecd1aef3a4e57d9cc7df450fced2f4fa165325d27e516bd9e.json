@@ -1,0 +1,3 @@
+{
+  "content": "In a moving coil meter (PMMC instrument), damping is achieved by the induced eddy currents in the aluminum frame on which the coil is wound.  \nWhen the coil moves in the magnetic field, eddy currents are generated in the aluminum frame, producing a torque that opposes the motion — providing critical damping without mechanical contact.  \n\n- (A) is correct — aluminum frame acts as a short-circuited turn for eddy current damping.  \n- (B) coil spring provides control torque, not damping.  \n- (C) eddy current disk is used in some energy meters, not typical moving coil meters.  \n- (D) damping vane in airtight chamber is used in moving iron instruments, not moving coil.  \n\nFinal answer: (A)"
+}

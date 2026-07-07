@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nThe expression is:  \n**not ( True or False ) or True**\n\n---\n\n**Step 1: Evaluate inside parentheses**  \n`True or False`  \nLogical OR: True OR False = True.  \nSo we have: `not (True) or True`\n\n---\n\n**Step 2: Apply the NOT**  \n`not (True)` = False  \nSo now: `False or True`\n\n---\n\n**Step 3: Evaluate the final OR**  \n`False or True` = True\n\n---\n\n**Final answer: true**"
+}

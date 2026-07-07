@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.\n\nThe expression is:  \n**True or not False and False and False**\n\n---\n\n**Step 1 – Interpret operator precedence**  \nPrecedence: NOT > AND > OR\n\nSo we rewrite with implicit parentheses according to precedence:  \nTrue **or** ( (not False) **and** False **and** False )\n\n---\n\n**Step 2 – Evaluate NOT first**  \nnot False = True\n\nExpression becomes:  \nTrue **or** ( True **and** False **and** False )\n\n---\n\n**Step 3 – Evaluate AND from left to right**  \nTrue and False = False  \nFalse and False = False\n\nSo inside parentheses: False\n\nExpression becomes:  \nTrue **or** False\n\n---\n\n**Step 4 – Evaluate OR**  \nTrue or False = True\n\n---\n\nFinal answer: true"
+}

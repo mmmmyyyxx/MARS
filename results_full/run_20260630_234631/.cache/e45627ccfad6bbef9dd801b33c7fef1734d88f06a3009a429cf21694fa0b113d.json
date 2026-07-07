@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\nExpression:  \n`( True or not not not False )`\n\n**Step 1 – Operator precedence**  \nIn Boolean logic, `not` has higher precedence than `or`. So we evaluate `not not not False` first.\n\n**Step 2 – Evaluate `not False`**  \n`not False` = `True`\n\n**Step 3 – Evaluate `not True`**  \n`not not False` = `not (not False)` = `not True` = `False`\n\n**Step 4 – Evaluate `not False`**  \n`not not not False` = `not (not not False)` = `not False` = `True`\n\nSo `not not not False` = `True`.\n\n**Step 5 – Evaluate `True or True`**  \n`True or True` = `True`\n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n**True and False or ( not True )**\n\n1. **Operator precedence**: NOT > AND > OR  \n2. **Parentheses first**:  \n   \\( \\text{not True} = \\text{False} \\)  \n   So the expression becomes:  \n   \\( \\text{True and False or False} \\)  \n\n3. **AND before OR**:  \n   \\( \\text{True and False} = \\text{False} \\)  \n   So now:  \n   \\( \\text{False or False} \\)  \n\n4. **OR**:  \n   \\( \\text{False or False} = \\text{False} \\)  \n\nFinal answer: false"
+}

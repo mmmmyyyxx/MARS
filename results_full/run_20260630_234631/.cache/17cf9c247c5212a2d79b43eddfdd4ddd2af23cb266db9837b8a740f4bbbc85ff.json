@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down.  \n\nThe SVG path has these points in order:  \n\n1. (22.00, 62.00)  \n2. (46.00, 65.00)  \n3. (64.00, 60.00)  \n4. (91.00, 42.00)  \n5. (92.00, 24.00)  \n6. (46.00, 19.00)  \n7. Back to (22.00, 62.00)  \n\nCounting the distinct vertices:  \n(22,62), (46,65), (64,60), (91,42), (92,24), (46,19) → that’s 6 distinct points before closing back to the first.  \n\nA polygon with 6 vertices is a **hexagon**.  \n\nFinal answer: (C)"
+}

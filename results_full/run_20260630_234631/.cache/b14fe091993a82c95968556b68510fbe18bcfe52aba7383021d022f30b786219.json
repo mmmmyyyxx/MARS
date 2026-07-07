@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nExpression:  \n**not True and True or True and False**  \n\n---\n\n**Step 1: Handle NOT**  \n`not True` = `False`  \n\nExpression becomes:  \n**False and True or True and False**  \n\n---\n\n**Step 2: Handle AND operations (left to right)**  \nFirst AND: `False and True` = `False`  \n\nExpression becomes:  \n**False or True and False**  \n\nSecond AND: `True and False` = `False`  \n\nExpression becomes:  \n**False or False**  \n\n---\n\n**Step 3: Handle OR**  \n`False or False` = `False`  \n\n---\n\nFinal answer: **false**  \n\nFinal answer: false"
+}

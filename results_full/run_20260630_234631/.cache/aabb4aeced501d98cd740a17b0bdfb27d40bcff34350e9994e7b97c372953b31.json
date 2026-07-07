@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe statement is:  \n\n> True or False or not True or False  \n\nWe can interpret this as a Boolean expression:  \n\n1. Replace `True` with `true` and `False` with `false`.  \n2. `not True` means `not true` → `false`.  \n3. So the expression becomes:  \n\n```\ntrue or false or false or false\n```\n\n4. Evaluate left to right:  \n   - `true or false` → `true`  \n   - `true or false` → `true`  \n   - `true or false` → `true`  \n\nSo the overall result is `true`.  \n\n**Final answer: true**"
+}

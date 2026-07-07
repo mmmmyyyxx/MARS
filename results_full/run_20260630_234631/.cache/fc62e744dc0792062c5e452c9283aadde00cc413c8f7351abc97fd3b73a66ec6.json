@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**False or not False and ( False )**\n\n---\n\n### 1. Resolve parentheses\nThe parentheses contain just `False`, so no change:  \n\\[\n\\text{False or not False and False}\n\\]\n\n---\n\n### 2. Apply NOT operators\n`not False` = `True`  \nSo:  \n\\[\n\\text{False or True and False}\n\\]\n\n---\n\n### 3. Apply AND operators (before OR)\n`True and False` = `False`  \nSo:  \n\\[\n\\text{False or False}\n\\]\n\n---\n\n### 4. Apply OR operators\n`False or False` = `False`\n\n---\n\n**Final answer: false**"
+}

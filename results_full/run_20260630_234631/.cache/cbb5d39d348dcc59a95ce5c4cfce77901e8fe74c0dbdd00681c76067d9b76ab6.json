@@ -1,0 +1,3 @@
+{
+  "content": "Let's break down the SVG path step by step:\n\n1. **M 64.00,63.00** — Move to (64, 63)  \n2. **L 44.00,63.00** — Line to (44, 63)  \n3. **L 44.00,50.00** — Line to (44, 50)  \n4. **L 64.00,50.00** — Line to (64, 50)  \n5. **L 64.00,45.00** — Line to (64, 45)  \n6. **L 85.00,57.00** — Line to (85, 57)  \n7. **L 64.00,68.00** — Line to (64, 68)  \n8. **L 64.00,63.00** — Line back to (64, 63)  \n\nCounting the distinct vertices:  \n(64,63), (44,63), (44,50), (64,50), (64,45), (85,57), (64,68) → 7 vertices.\n\nA 7-sided polygon is a **heptagon**.\n\nFinal answer: (B)"
+}

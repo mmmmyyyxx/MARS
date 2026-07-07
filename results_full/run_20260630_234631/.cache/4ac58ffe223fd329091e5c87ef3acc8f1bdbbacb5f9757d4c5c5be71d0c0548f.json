@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. While restating problems can aid comprehension in learning contexts, this conflicts directly with the Planner's emphasis on brevity and minimal output. For MMLU questions requiring only letter answers, adding intermediate steps would reduce precision by introducing unnecessary complexity and potential error points. The current prompt structure already ensures accuracy through domain expertise and verification focus."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break down the SVG path:\n\n- `M 60.00,33.00` — move to starting point.\n- `L 55.42,43.00` — line to another point.\n- `A 11.00,11.00 0.00 0,1 52.81,24.68` — arc with radius 11, sweep flag 1, to a new point.\n- `L 60.00,33.00` — line back to start.\n\nSo the path is:  \nStart → line → arc → line back to start.  \nThat’s a closed shape with two straight sides and one arc.\n\nA closed shape with two straight sides and one arc is a **sector** (a pie slice of a circle).\n\nFinal answer: (I)"
+}

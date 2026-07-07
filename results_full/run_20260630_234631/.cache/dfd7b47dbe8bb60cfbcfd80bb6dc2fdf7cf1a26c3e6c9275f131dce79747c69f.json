@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break down the SVG path:  \n\n- `M 57.00,62.00` — Move to starting point (57, 62).  \n- `L 80.00,62.00` — Line to (80, 62).  \n- `L 80.00,49.00` — Line to (80, 49).  \n- `L 57.00,49.00` — Line to (57, 49).  \n- `L 57.00,62.00` — Line back to start (57, 62).  \n\nThis traces a closed shape with four sides:  \n- Two horizontal lines (top and bottom)  \n- Two vertical lines (left and right)  \n- Opposite sides are equal and all angles are 90°  \n\nThat’s a rectangle.  \n\nFinal answer: (H)"
+}

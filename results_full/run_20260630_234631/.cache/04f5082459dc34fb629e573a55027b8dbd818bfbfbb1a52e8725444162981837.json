@@ -1,0 +1,3 @@
+{
+  "content": "First, evaluate the inner expression:  \nTrue or False → True  \n\nThen apply the NOT:  \nnot (True) → False  \n\nFinal answer: false"
+}

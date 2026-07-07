@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break down the SVG path:  \n\n- It starts at (41, 42).  \n- Then draws a line to (37, 34).  \n- Then to (41, 30).  \n- Then to (45, 34).  \n- Then back to (41, 42).  \n\nThat’s 4 line segments connecting 4 points in order.  \n\nCheck the shape:  \n- Points: (41,42), (37,34), (41,30), (45,34).  \n- Two pairs of adjacent sides equal?  \n  - From (41,42) to (37,34): length = √[(4)² + (8)²] = √(16+64) = √80.  \n  - From (41,42) to (45,34): length = √[(4)² + (8)²] = √80.  \n  - From (37,34) to (41,30): length = √[(4)² + (4)²] = √32.  \n  - From (41,30) to (45,34): length = √[(4)² + (4)²] = √32.  \n\nSo adjacent sides are equal in pairs — that’s a kite.  \n\nFinal answer: (D)"
+}

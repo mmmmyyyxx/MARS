@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The question is too broad and shifts focus from the core task (yes/no classification) to rule analysis, which could lead to overcomplication. A better question would directly address how to formulate clear, unambiguous instructions that guide the model to extract key elements from the scenario for binary classification without delving into rule interpretation."
+}

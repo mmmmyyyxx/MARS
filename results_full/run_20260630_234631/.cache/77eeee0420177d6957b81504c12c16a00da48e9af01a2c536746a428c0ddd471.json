@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down:  \n\n1. **Premise 1:** William is a devotee of AC Milan.  \n2. **Premise 2:** Every devotee of AC Milan and every expert of Yeni Malatyaspor is an ex-supporter of Fenerbahçe SK.  \n\nThe second premise says:  \n- If you are a devotee of AC Milan → you are an ex-supporter of Fenerbahçe SK.  \n- If you are an expert of Yeni Malatyaspor → you are an ex-supporter of Fenerbahçe SK.  \n\nSince William is a devotee of AC Milan, the first part of premise 2 applies directly to him.  \nThus, from premise 1 and premise 2, we can deduce: William is an ex-supporter of Fenerbahçe SK.  \n\nThe conclusion follows necessarily from the premises.  \n\nFinal answer: valid"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A single-phase full bridge inverter can use load commutation when the load provides a natural zero crossing of current before the switching device needs to turn off.  \nThis happens when the load is underdamped RLC, because the current leads the voltage (due to capacitive effect) or oscillates, allowing the current to fall to zero naturally each half cycle.  \nRL loads do not cause natural commutation because the current lags and does not go to zero naturally.  \nOverdamped and critically damped RLC loads do not produce oscillatory or leading current needed for load commutation.  \n\nFinal answer: (B)"
+}

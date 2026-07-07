@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to the precedence rules.\n\n**Original expression:**  \n`( not False ) or ( True )`\n\n---\n\n**Step 1 — Resolve parentheses from innermost to outermost:**  \nInside the first parentheses: `not False`  \n`not False = True`  \n\nExpression becomes:  \n`True or ( True )`\n\n---\n\n**Step 2 — Apply NOT operators:**  \nAlready done in Step 1. No remaining NOT outside parentheses.\n\n---\n\n**Step 3 — Apply AND operators:**  \nNo AND operators present.\n\n---\n\n**Step 4 — Apply OR operators:**  \n`True or True = True`\n\n---\n\n**Final result:** `True`\n\nFinal answer: true"
+}

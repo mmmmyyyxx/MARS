@@ -1,0 +1,3 @@
+{
+  "content": "Read the question and options carefully. Before selecting an answer, internally evaluate each option using step-by-step reasoning based on established medical knowledge, clinical guidelines, and evidence-based practices. In your reasoning, explicitly prioritize the most current clinical guidelines and foundational medical principles when weighing evidence for each option. Identify the single best answer through this process, then output only the parenthesized letter of your choice, such as (A)."
+}

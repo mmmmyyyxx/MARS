@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( True or False or True )`\n\n1. **Innermost parentheses** — there’s only one set here.  \n   Inside: `True or False or True`  \n   OR is left-associative:  \n   `(True or False) → True`  \n   `True or True → True`  \n   So `( True or False or True ) = True`.\n\n2. **Apply NOT**:  \n   `not (True) = False`.\n\nFinal answer: **false**\n\nFinal answer: false"
+}

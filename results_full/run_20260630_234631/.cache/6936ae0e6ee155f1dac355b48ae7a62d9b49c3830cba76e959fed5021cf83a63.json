@@ -1,0 +1,3 @@
+{
+  "content": "A relaxation oscillator generates non-sinusoidal output waveforms (such as square, triangle, or sawtooth waves) by repeatedly charging and discharging energy storage components in a switching manner, rather than using resonance or phase shift principles to produce a sinusoidal signal.  \n\nLC oscillators, RC phase shift oscillators, and crystal oscillators all produce sinusoidal outputs under proper design conditions, relying on frequency-selective feedback networks to satisfy the Barkhausen criterion at a specific frequency.  \n\nThus, the one that is **not** a sinusoidal oscillator is the relaxation oscillator.  \n\nFinal answer: (C)"
+}

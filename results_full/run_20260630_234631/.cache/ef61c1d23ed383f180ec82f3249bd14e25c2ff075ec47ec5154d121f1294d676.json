@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down:  \n\n- Premise 1: Terry is a grandson of Ward.  \n- Premise 2: Every grandson of Paul is an uncle of Earl and a grandson of Ward.  \n- Conclusion: Terry is a grandson of Paul.  \n\nFrom premise 2, if someone is a grandson of Paul, then they are a grandson of Ward.  \nBut premise 1 says Terry is a grandson of Ward — that does not necessarily mean Terry is a grandson of Paul, because there could be other grandsons of Ward who are not grandsons of Paul.  \n\nThis is the fallacy of affirming the consequent in disguise:  \nPremise 2: If grandson of Paul → grandson of Ward.  \nPremise 1: Terry is grandson of Ward.  \nConclusion: Terry is grandson of Paul.  \nThat’s invalid.  \n\nFinal answer: invalid"
+}

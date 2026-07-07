@@ -1,0 +1,3 @@
+{
+  "content": "How can you ensure that the prompt explicitly guides the model to prioritize eliminating clearly incorrect options before selecting the best answer, given that this is a proven strategy for improving multiple-choice accuracy?"
+}

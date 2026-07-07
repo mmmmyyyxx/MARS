@@ -1,0 +1,3 @@
+{
+  "content": "A snubber circuit is used with an SCR primarily to suppress voltage transients during turn-off by limiting the rate of rise of voltage (dv/dt) across the device.  \nIt typically consists of a resistor and capacitor network placed **in parallel** with the SCR to divert transient current away from the SCR, thereby preventing false triggering.  \nPlacing it in series would not serve this purpose, as it would affect the main current flow rather than the voltage across the SCR.  \n\"Anti-parallel\" refers to a reverse-parallel connection used for AC control, not for snubber function.  \n\nFinal answer: (B)"
+}

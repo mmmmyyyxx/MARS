@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The Teacher question shifts focus from format consistency to reasoning depth across subfields, which diverges from the Planner's specific formatting goal. This could overcomplicate the prompt and reduce accuracy on the core task of answering MMLU questions. A better approach would address how to maintain strict output formatting while handling varied question content."
+}

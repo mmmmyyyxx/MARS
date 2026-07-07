@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The Teacher question is too narrow - focusing only on \"single most discriminative clinical feature\" may not suit all medical questions where multiple factors contribute to diagnosis. The core task requires answering multiple-choice questions accurately, not necessarily through feature elimination. A better prompt would emphasize pattern recognition, clinical knowledge application, and direct answer selection while maintaining the strict output format."
+}

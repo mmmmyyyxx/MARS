@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to the precedence rules (NOT first, then AND, then OR).  \n\nExpression:  \n**True and True and False and not True**\n\n---\n\n**Step 1: Resolve NOT**  \n`not True` = `False`  \n\nSo the expression becomes:  \nTrue and True and False and False\n\n---\n\n**Step 2: Apply AND from left to right**  \nAND is associative, so we can group sequentially:  \n\n- `True and True` → `True`  \n- `True and False` → `False`  \n- `False and False` → `False`  \n\n---\n\n**Final truth value:** `False`  \n\n---\n\nFinal answer: false"
+}

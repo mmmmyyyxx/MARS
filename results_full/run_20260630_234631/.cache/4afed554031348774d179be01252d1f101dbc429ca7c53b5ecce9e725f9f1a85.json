@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.  \n\nExpression:  \n\\[\n\\text{not ( False or False and False )}\n\\]\n\n**Step 1 – Identify precedence**  \nOrder: parentheses → NOT → AND → OR (but parentheses already group the whole expression here).  \nInside parentheses: AND before OR.  \n\n**Step 2 – Evaluate AND inside parentheses**  \n\\[\n\\text{False and False} = \\text{False}\n\\]  \n\n**Step 3 – Evaluate OR inside parentheses**  \n\\[\n\\text{False or False} = \\text{False}\n\\]  \n\n**Step 4 – Apply NOT**  \n\\[\n\\text{not (False)} = \\text{True}\n\\]  \n\nFinal result: **true**  \n\nFinal answer: true"
+}

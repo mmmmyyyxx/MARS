@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not not not True and False and False**\n\n---\n\n**Step 1 – Operator precedence**  \nNOT has highest precedence, then AND.  \nSo we first evaluate `not not not True`.\n\n---\n\n**Step 2 – Evaluate `not not not True`**  \n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`  \n\nSo `not not not True` = `False`.\n\n---\n\n**Step 3 – Substitute back**  \nExpression becomes:  \n`False and False and False`\n\n---\n\n**Step 4 – Evaluate AND from left to right**  \n- `False and False` → `False`  \n- `False and False` → `False`  \n\nFinal result: **False**\n\n---\n\nFinal answer: false"
+}

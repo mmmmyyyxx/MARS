@@ -1,0 +1,3 @@
+{
+  "content": "First, evaluate the innermost parentheses:  \n(False or not False or False)  \n\nApply NOT to False:  \nnot False = True  \n\nNow the expression becomes:  \n(False or True or False)  \n\nEvaluate OR from left to right:  \nFalse or True = True  \nTrue or False = True  \n\nFinal truth value: true  \n\nFinal answer: true"
+}

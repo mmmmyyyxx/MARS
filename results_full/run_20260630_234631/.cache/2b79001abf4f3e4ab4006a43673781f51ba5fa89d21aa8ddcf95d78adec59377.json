@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step:  \n\nExpression:  \n**True or False or not True or False**  \n\n1. **Precedence: NOT first**  \n   `not True` → `False`  \n\n   Expression becomes:  \n   `True or False or False or False`  \n\n2. **Left-to-right for OR**  \n   `True or False` → `True`  \n   `True or False` → `True`  \n   `True or False` → `True`  \n\nFinal truth value: **true**  \n\nFinal answer: true"
+}

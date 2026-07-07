@@ -1,0 +1,3 @@
+{
+  "content": "REVISE. The Teacher question is too abstract and doesn't provide concrete guidance for prompt engineering. Instead of asking \"how can the prompt guide,\" it should propose specific wording that forces the model to evaluate option completeness against marketing fundamentals. A better approach would be: \"Add this instruction: 'Before selecting, evaluate which option most comprehensively addresses the marketing principle in question, not just which contains correct elements.'\""
+}

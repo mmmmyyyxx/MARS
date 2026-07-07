@@ -1,0 +1,3 @@
+{
+  "content": "Let’s reason through this.  \n\n1. For a single infinite plate with uniform surface charge density \\( \\sigma \\), the electric field magnitude is \\( E = \\frac{\\sigma}{2\\varepsilon_0} \\), directed away from the plate if \\( \\sigma > 0 \\).  \n\n2. For two parallel plates with the same polarity and same \\( \\sigma \\), between the plates the fields from each plate oppose each other because they point in opposite directions.  \n\n3. Outside the plates, the fields add up; but inside, the field from the left plate points to the right, and the field from the right plate points to the left — so they cancel.  \n\n4. Therefore, the net electric field in the gap between them is zero.  \n\nFinal answer: (D)"
+}

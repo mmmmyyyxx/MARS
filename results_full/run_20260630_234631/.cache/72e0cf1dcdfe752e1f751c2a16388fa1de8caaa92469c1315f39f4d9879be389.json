@@ -1,0 +1,3 @@
+{
+  "content": "First, evaluate the expression inside the parentheses:  \n\\( \\text{False or False or True} \\)  \n\n- Left to right:  \n  \\( \\text{False or False} = \\text{False} \\)  \n  \\( \\text{False or True} = \\text{True} \\)  \n\nSo \\( \\text{False or False or True} = \\text{True} \\).  \n\nNow apply the NOT:  \n\\( \\text{not (True)} = \\text{False} \\)  \n\nFinal answer: false"
+}

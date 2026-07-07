@@ -1,0 +1,3 @@
+{
+  "content": "How might explicitly modeling the evaluation process internally before suppressing intermediate steps in the output affect the model's accuracy in adhering to operator precedence rules?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Cyclic electron flow in photosystem I involves electrons cycling back to the electron transport chain between photosystem I and the cytochrome complex, which pumps protons into the thylakoid lumen. This proton gradient drives ATP synthesis via ATP synthase.  \nIt does **not** involve photosystem II (so no O₂ release), and NADP⁺ is not reduced because the electrons are cycling rather than going to ferredoxin-NADP⁺ reductase.  \nThus, the outcome is ATP synthesis without NADPH production.  \n\nFinal answer: (A)"
+}

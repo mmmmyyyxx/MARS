@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not not not ( False and True )`\n\n1. **Parentheses first**:  \n`False and True` → `False` (since AND is true only if both are true)\n\nNow we have:  \n`not not not False`\n\n2. **NOT operations from right to left** (since they are prefix unary operators and associate right-to-left in logic, but here we apply them sequentially to the result):\n\n- First `not False` → `True`  \n- Then `not True` → `False`  \n- Then `not False` → `True`\n\nFinal truth value: **true**  \n\nFinal answer: true"
+}

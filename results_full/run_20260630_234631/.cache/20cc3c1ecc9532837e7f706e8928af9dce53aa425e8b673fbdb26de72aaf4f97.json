@@ -1,0 +1,3 @@
+{
+  "content": "In the 8086/8088 microprocessor, each bus cycle consists of T1, T2, T3, and T4 clock cycles.  \nDuring T2 and T3, data is read from or written to the bus.  \nIf the memory or I/O device is slow to respond, wait states (Tw) are inserted to extend the read/write period.  \nThese wait states are inserted between T3 and the following T4, effectively extending T3.  \nMore precisely, Tw states are inserted after T3 and before T4.  \n\nSo the correct option is between T3 and T4.  \n\nFinal answer: (C)"
+}

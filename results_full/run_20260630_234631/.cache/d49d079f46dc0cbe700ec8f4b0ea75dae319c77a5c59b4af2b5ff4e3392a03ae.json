@@ -1,0 +1,3 @@
+{
+  "content": "Let’s go step by step.  \n\nWe know:  \nIllumination \\( E = 6 \\ \\text{lux} \\)  \nDistance \\( r = 5 \\ \\text{m} \\)  \n\nIllumination from a point source is given by:  \n\\[\nE = \\frac{I}{r^2}\n\\]  \nwhere \\( I \\) is the luminous intensity in candela (candle power).  \n\nSubstitute:  \n\\[\n6 = \\frac{I}{5^2}  \n\\]  \n\\[\n6 = \\frac{I}{25}  \n\\]  \n\\[\nI = 6 \\times 25 = 150 \\ \\text{cd}\n\\]  \n\nSo the candle power is \\( 150 \\ \\text{cd} \\).  \n\nFinal answer: (C)"
+}

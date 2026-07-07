@@ -1,0 +1,3 @@
+{
+  "content": "When a diode is reverse biased, the depletion region widens, preventing current flow except for a very small leakage current. This high resistance state effectively acts like an open switch (off).  \n\n- (A) On Switch — incorrect, because forward bias turns it on.  \n- (B) Zener diode — incorrect, a Zener diode in reverse bias can conduct only after breakdown voltage, but the question is about a general p-n junction diode in reverse bias.  \n- (C) Capacitor — incorrect, though there is junction capacitance, the primary behavior is not capacitive in function.  \n- (D) Off Switch — correct, because reverse bias blocks current.  \n\nFinal answer: (D)"
+}

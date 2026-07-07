@@ -1,0 +1,3 @@
+{
+  "content": "In ferromagnetic materials, the relationship between magnetization \\( M \\) and applied field \\( H \\) is characterized by hysteresis and saturation effects, meaning \\( M \\) does not increase proportionally with \\( H \\) across all values. This rules out a linear relationship.  \nInstead, the \\( M-H \\) curve is **nonlinear**, especially near saturation and in the presence of hysteresis.  \n\nFinal answer: (B)"
+}

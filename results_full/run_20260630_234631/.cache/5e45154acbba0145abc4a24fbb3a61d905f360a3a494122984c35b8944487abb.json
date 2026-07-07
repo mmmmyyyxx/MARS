@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step according to precedence rules:  \n**Precedence**: `not` > `and` > `or`.\n\nExpression:  \n`( True ) and True or not True`\n\n1. **Parentheses first** — `( True )` is just `True`.  \n   So we have:  \n   `True and True or not True`\n\n2. **`not`** has highest precedence:  \n   `not True` → `False`  \n   Expression becomes:  \n   `True and True or False`\n\n3. **`and`** next:  \n   `True and True` → `True`  \n   Expression becomes:  \n   `True or False`\n\n4. **`or`** last:  \n   `True or False` → `True`\n\nFinal answer: true"
+}

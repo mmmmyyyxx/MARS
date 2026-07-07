@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\n1. The expression is:  \n   not ( False or False or True )  \n\n2. Evaluate inside the parentheses first:  \n   False or False → False  \n   False or True → True  \n\n3. So inside parentheses:  \n   (False or False or True) = True  \n\n4. Apply the **not**:  \n   not (True) = False  \n\nFinal answer: false"
+}

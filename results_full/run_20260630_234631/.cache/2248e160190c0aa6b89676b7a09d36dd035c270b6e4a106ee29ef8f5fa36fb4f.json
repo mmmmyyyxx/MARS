@@ -1,0 +1,3 @@
+{
+  "content": "For \\( n \\) capacitors of equal capacitance \\( C \\) connected in series, the equivalent capacitance is:\n\n\\[\nC_{eq} = \\frac{C}{n}\n\\]\n\nHere, \\( C = 5\\ \\mu\\text{F} \\) and \\( n = 5 \\):\n\n\\[\nC_{eq} = \\frac{5\\ \\mu\\text{F}}{5} = 1\\ \\mu\\text{F}\n\\]\n\n(A) 5 µF — incorrect, that’s the individual capacitance.  \n(B) 25 µF — incorrect, that would be parallel combination.  \n(C) 10 µF — incorrect, not matching series formula.  \n(D) 1 µF — correct.\n\nFinal answer: (D)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "LC oscillators are typically used for high-frequency applications due to their high-Q factor and frequency stability at RF ranges.  \nRC oscillators, such as phase-shift or Wien-bridge oscillators, are more suitable for low-frequency applications because using large inductors for low frequencies in LC oscillators is impractical (bulky and lossy).  \nThus, for LF applications, RC oscillators are preferred.  \n\nFinal answer: (B)"
+}

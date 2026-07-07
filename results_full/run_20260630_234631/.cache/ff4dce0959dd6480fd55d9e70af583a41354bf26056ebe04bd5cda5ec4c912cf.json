@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not not ( not False or True )`\n\n1. **Innermost parentheses first**:  \n`not False` → `True`  \nSo inside parentheses: `True or True` → `True`\n\n2. **Parentheses resolved**:  \nExpression becomes `not not True`\n\n3. **Apply inner `not`**:  \n`not True` → `False`\n\n4. **Apply outer `not`**:  \n`not False` → `True`\n\nFinal answer: true"
+}

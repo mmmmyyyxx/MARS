@@ -1,0 +1,3 @@
+{
+  "content": "For a single-phase one-pulse controlled rectifier with counter EMF \\( E \\) and source voltage \\( V_m \\sin(\\omega t) \\),  \nconduction begins when \\( V_m \\sin(\\theta) = E \\).  \n\nGiven:  \n\\( V_m = 400 \\, \\text{V} \\), \\( E = 200 \\, \\text{V} \\).  \n\nSo:  \n\\[\n400 \\sin(\\theta) = 200 \\quad \\Rightarrow \\quad \\sin(\\theta) = 0.5 \\quad \\Rightarrow \\quad \\theta = 30^\\circ \\text{ or } 150^\\circ.\n\\]  \n\nThe thyristor can be triggered only when \\( V_s > E \\), i.e., between \\( 30^\\circ \\) and \\( 150^\\circ \\) in the positive half-cycle.  \nThus the firing angle \\( \\alpha \\) range is \\( 30^\\circ \\) to \\( 150^\\circ \\).  \n\nFinal answer: (A)"
+}

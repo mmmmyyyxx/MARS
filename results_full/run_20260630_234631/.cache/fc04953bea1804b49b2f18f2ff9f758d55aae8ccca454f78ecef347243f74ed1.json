@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not not not not True or not True`\n\n---\n\n**Step 1 – Handle parentheses (none here) and apply NOT from right to left**  \nFirst, `not True` = `False` (we’ll keep this for later since OR has lower precedence than NOT).\n\nSo the expression becomes:  \n`not not not not True or False`\n\n---\n\n**Step 2 – Evaluate `not not not not True`**  \nWork from the rightmost `not` inward:\n\n- `not True` = `False`\n- `not False` = `True`\n- `not True` = `False`\n- `not False` = `True`\n\nSo `not not not not True` = `True`.\n\n---\n\n**Step 3 – Apply OR**  \nNow we have: `True or False`  \n`True or False` = `True`\n\n---\n\n**Final answer:** true\n\n---\n\nFinal answer: true"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nWe have:  \n**not not ( not False or True )**\n\n1. **Innermost parentheses first**:  \n   `not False` → `True`  \n   So now we have: `not not ( True or True )`\n\n2. **Evaluate `( True or True )`**:  \n   `True or True` → `True`  \n   So now: `not not True`\n\n3. **First `not`**:  \n   `not True` → `False`  \n   So now: `not False`\n\n4. **Second `not`**:  \n   `not False` → `True`\n\nFinal answer: **true**  \n\nFinal answer: true"
+}

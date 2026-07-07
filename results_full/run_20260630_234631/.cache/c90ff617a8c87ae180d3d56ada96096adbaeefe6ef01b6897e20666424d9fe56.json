@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step by step.\n\nOriginal expression:  \n**True and True and False and not True**\n\n---\n\n**Step 1 — Resolve parentheses**  \nThere are no parentheses, so expression remains:  \nTrue and True and False and not True\n\n---\n\n**Step 2 — Apply NOT operators**  \nnot True = False  \nExpression becomes:  \nTrue and True and False and False\n\n---\n\n**Step 3 — Apply AND operators (left to right)**  \nTrue and True = True  \nExpression: True and False and False  \n\nTrue and False = False  \nExpression: False and False  \n\nFalse and False = False  \nExpression: False\n\n---\n\n**Step 4 — Apply OR operators**  \nNo OR operators remain.\n\n---\n\nFinal simplified expression: **False**\n\nFinal answer: false"
+}

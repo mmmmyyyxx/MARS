@@ -1,0 +1,3 @@
+{
+  "content": "The capacitance of a coaxial or parallel-wire cable is given by  \n\n\\[\nC = \\frac{2 \\pi \\epsilon L}{\\ln(b/a)}\n\\]  \n\nfor a coaxial cable, where \\(L\\) is the length.  \nFrom this formula, \\(C \\propto L\\).  \n\nIf length \\(L\\) is doubled, capacitance \\(C\\) is doubled.  \n\nNo change occurs in geometry or dielectric constant, so per-unit-length capacitance remains the same, and total capacitance scales directly with length.  \n\nFinal answer: (C)"
+}

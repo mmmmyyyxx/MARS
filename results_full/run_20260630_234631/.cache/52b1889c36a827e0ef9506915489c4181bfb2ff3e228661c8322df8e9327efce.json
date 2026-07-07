@@ -1,0 +1,3 @@
+{
+  "content": "The Intel 8085A microprocessor uses the ALE (Address Latch Enable) signal to demultiplex the lower 8 bits of the address from the data bus.  \nWhen ALE is high, the address/data bus (AD0–AD7) carries the lower 8 bits of the address.  \nALE going high enables an external latch to capture this address before the bus switches to data mode.  \n\n- (A) is correct: ALE high allows the data bus (AD0–AD7) to be used as the low-order address bus.  \n- (B) is incorrect: ALE high latches the address, not data; data is latched by other control signals (like RD/WR).  \n- (C) is incorrect: ALE high does not disable the data bus; it enables address latching.  \n- (D) is incorrect because not all listed functions are true.  \n\nFinal answer: (A)"
+}

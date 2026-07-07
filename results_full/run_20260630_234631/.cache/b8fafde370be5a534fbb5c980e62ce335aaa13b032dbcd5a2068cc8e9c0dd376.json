@@ -1,0 +1,3 @@
+{
+  "content": "Purely mechanical instruments rely on physical movement of components like springs, masses, and pointers.  \nFor dynamic measurements (rapidly changing signals), these moving parts cannot respond quickly enough due to their **mass**, which leads to:  \n\n- **High inertia** — resistance to change in motion.  \n- **Higher response time** — slow to reach final value.  \n- **Large time constant** — sluggish reaction to input changes.  \n\nAll three factors contribute to the inability to track fast-changing signals accurately.  \n\nFinal answer: (D)"
+}

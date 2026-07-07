@@ -1,0 +1,3 @@
+{
+  "content": "The full scale reading is 100 V.  \nAccuracy = 2% of full scale = \\( 0.02 \\times 100 = 2 \\) V.  \nMeasured voltage = 75 V.  \nLimiting error in percentage of measured value = \\( \\frac{2}{75} \\times 100 \\approx 2.66\\% \\).  \n\nFinal answer: (B)"
+}

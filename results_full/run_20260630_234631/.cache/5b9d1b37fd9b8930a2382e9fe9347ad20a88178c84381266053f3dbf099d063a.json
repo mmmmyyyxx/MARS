@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step-by-step according to precedence (parentheses first, then `not`, then `or`).\n\nExpression:  \n`not True or ( True or False )`\n\n1. **Parentheses first**:  \n`( True or False )` → `True` (because `True or False` is `True`)\n\nNow we have:  \n`not True or True`\n\n2. **`not` before `or`**:  \n`not True` → `False`\n\nNow we have:  \n`False or True`\n\n3. **Evaluate `or`**:  \n`False or True` → `True`\n\nFinal answer: true"
+}

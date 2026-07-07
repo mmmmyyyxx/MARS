@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step:  \n\n1. **True and not False**  \n   - `not False` = `True`  \n   - `True and True` = `True`  \n\n2. **… and not not True**  \n   - `not True` = `False`  \n   - `not False` = `True`  \n\n3. Combine: `True and True` = `True`  \n\nFinal answer: true"
+}

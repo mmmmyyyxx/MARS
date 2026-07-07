@@ -1,0 +1,3 @@
+{
+  "content": "The voltage across an inductor is given by  \n\\[\nv_L = L \\frac{di}{dt}\n\\]  \nwhich is the **product of its inductance and the rate of change of current** through it.  \n\n- (A) \\( L \\times i \\) → incorrect, that would be flux linkage, not voltage.  \n- (B) \\( L / i \\) → incorrect dimensionally and conceptually.  \n- (C) \\( i / L \\) → incorrect dimensionally and conceptually.  \n- (D) \\( L \\times \\frac{di}{dt} \\) → matches the correct formula.  \n\nFinal answer: (D)"
+}

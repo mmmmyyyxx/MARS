@@ -1,0 +1,3 @@
+{
+  "content": "Shunt capacitors improve voltage stability by compensating for reactive power losses, while series capacitors reduce inductive reactance to improve power transfer capability and angular stability.  \nShunt reactors absorb reactive power and are used in lightly loaded lines, which does not directly increase stability in the typical stability sense.  \nThus, both shunt and series capacitors can improve stability, but in different ways.  \n\nFinal answer: (D)"
+}

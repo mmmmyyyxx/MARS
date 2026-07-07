@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down step by step:  \n\nExpression:  \n**False or not False or True and True**  \n\n1. **Order of operations**: `not` has highest precedence, then `and`, then `or`.  \n   - `not False` → `True`  \n   - `True and True` → `True`  \n\n2. Rewrite expression with results:  \n   `False or True or True`  \n\n3. Evaluate left to right (for `or`, stops at first `True`):  \n   - `False or True` → `True`  \n   - `True or True` → `True`  \n\nFinal result: **True**  \n\nFinal answer: true"
+}

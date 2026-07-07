@@ -1,0 +1,3 @@
+{
+  "content": "In force-current analogy (also called mobility analogy), mechanical force is analogous to electrical current, and mechanical velocity is analogous to electrical voltage.  \n\nDisplacement \\( x \\) is the integral of velocity:  \n\\[\nx = \\int v \\, dt\n\\]  \nIn the electrical domain, voltage \\( v \\) is analogous to mechanical velocity, so displacement \\( x \\) is analogous to the integral of voltage:  \n\\[\n\\int v \\, dt\n\\]  \nThe integral of voltage with respect to time is flux linkage \\( \\lambda \\) (flux for constant inductance).  \n\nThus, displacement \\( x \\) is analogous to flux.  \n\nFinal answer: (D)"
+}

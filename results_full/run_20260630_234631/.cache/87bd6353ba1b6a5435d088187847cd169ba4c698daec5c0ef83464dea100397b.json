@@ -1,0 +1,3 @@
+{
+  "content": "Universal gates are those from which any other logic gate can be constructed.  \nNOR and NAND gates individually can be used to implement NOT, AND, OR, and thus any Boolean function, making them universal.  \nXOR and XNOR are not universal by themselves, and OR, NOT, AND are basic gates but not universal because you cannot construct all gates from OR and AND alone without NOT.  \n\nFinal answer: (A)"
+}

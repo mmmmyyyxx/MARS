@@ -1,0 +1,3 @@
+{
+  "content": "Let's extract the logical structure:\n\nLet:  \n- L = devotee of Legia Warszawa  \n- K = follower of FK Kukësi  \n- M = friend of Olympique de Marseille  \n\nPremise 1: Everyone who is L is K → All L are K (∀x: Lx → Kx)  \nPremise 2: No follower of FK Kukësi is a friend of Olympique de Marseille → No K are M (∀x: Kx → ¬Mx)  \nConclusion: Whoever is L is not M (∀x: Lx → ¬Mx)  \n\nSymbolically:  \n1. L → K  \n2. K → ¬M  \nConclusion: L → ¬M  \n\nThis is a **hypothetical syllogism** form:  \nIf L → K and K → ¬M, then L → ¬M necessarily follows.  \n\nThe reasoning is valid because the structure guarantees the conclusion from the premises regardless of the truth of the premises.  \n\nFinal answer: valid"
+}

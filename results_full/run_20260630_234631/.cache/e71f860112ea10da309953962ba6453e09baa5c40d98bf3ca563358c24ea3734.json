@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**False or not False or False or False**\n\n---\n\n**Step 1: Interpret the precedence**  \nIn Boolean logic, `not` has higher precedence than `or`.  \nSo `False or not False or False or False` means:  \n`False or (not False) or False or False`\n\n---\n\n**Step 2: Evaluate `not False`**  \n`not False` = `True`\n\nSo the expression becomes:  \n`False or True or False or False`\n\n---\n\n**Step 3: Evaluate left to right**  \n`False or True` → `True`  \nNow: `True or False` → `True`  \nNow: `True or False` → `True`\n\n---\n\n**Step 4: Conclusion**  \nThe expression simplifies to `True`.\n\n---\n\n**Final answer: true**"
+}

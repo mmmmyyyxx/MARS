@@ -1,0 +1,3 @@
+{
+  "content": "LC oscillators are typically used for high-frequency applications due to their high-Q resonant circuits, while RC oscillators are suitable for low-frequency applications because resistors and capacitors can practically achieve the large time constants needed for low frequencies without requiring impractically large inductors.  \n\nGiven this, only RC oscillators are appropriate for LF applications.  \n\nFinal answer: (B)"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "A snubber circuit is used with an SCR primarily to suppress voltage transients and limit the rate of rise of voltage (dv/dt) across the device.  \nThis is typically achieved by placing an RC snubber circuit **in parallel** with the SCR.  \n\nFinal answer: (B)"
+}

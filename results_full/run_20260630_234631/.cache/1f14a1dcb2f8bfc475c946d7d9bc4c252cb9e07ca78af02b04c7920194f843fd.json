@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break it down:  \n\n1. **Premise 1:** Everyone who is a son of Andres is a son of Bruce.  \n   → If Son(Andres) then Son(Bruce).  \n\n2. **Premise 2:** Jeffrey is not a son of Bruce.  \n   → Not Son(Bruce).  \n\n3. **Conclusion:** Jeffrey is not a son of Andres.  \n   → Not Son(Andres).  \n\nFrom premise 1:  \nSon(Andres) → Son(Bruce)  \nContrapositive: Not Son(Bruce) → Not Son(Andres)  \n\nPremise 2 says: Not Son(Bruce)  \nSo by modus tollens, we can conclude: Not Son(Andres).  \n\nThe conclusion follows necessarily from the premises.  \n\nFinal answer: valid"
+}

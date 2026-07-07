@@ -1,0 +1,3 @@
+{
+  "content": "Voltage controlled oscillators (VCOs) are used in frequency modulators to generate FM signals by varying the input voltage. They are also essential in phase-locked loops (PLLs), often called \"phase clocked loops\" in the options, to generate an output signal locked in phase to a reference. While VCOs can be used in some pulse modulators, the most common and standard applications are in frequency modulators and phase-locked loops. The option \"All the above\" includes these standard uses.  \n\nFinal answer: (D)"
+}

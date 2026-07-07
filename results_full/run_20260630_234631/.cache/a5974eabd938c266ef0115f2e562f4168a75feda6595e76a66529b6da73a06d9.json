@@ -1,0 +1,3 @@
+{
+  "content": "Total steps: 4  \nStep 1: Include a clear instruction to select the single best answer from the multiple-choice options, emphasizing that only one option is correct.  \nStep 2: Specify that the model must reason step-by-step before selecting the final answer, to ensure accuracy and reduce guessing.  \nStep 3: Require the output format to be strictly a parenthesized letter (e.g., (A)) without any additional text or explanation after the selection.  \nStep 4: Incorporate domain-specific guidance, such as recalling key medical concepts, diagnostic criteria, or clinical guidelines relevant to College Medicine topics when reasoning."
+}

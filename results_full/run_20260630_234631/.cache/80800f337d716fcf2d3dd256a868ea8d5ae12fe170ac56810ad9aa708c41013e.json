@@ -1,0 +1,3 @@
+{
+  "content": "Let’s evaluate step-by-step.\n\n1. **Innermost parentheses**:  \n   \\( \\text{True and False} \\) → \\( \\text{False} \\)\n\n2. **Apply NOT operators from right to left** (since NOT is right-associative in logic, but here we apply sequentially):  \n   - First NOT: \\( \\text{not False} \\) → \\( \\text{True} \\)  \n   - Second NOT: \\( \\text{not True} \\) → \\( \\text{False} \\)  \n   - Third NOT: \\( \\text{not False} \\) → \\( \\text{True} \\)\n\nFinal result: **True**\n\nFinal answer: true"
+}

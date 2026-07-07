@@ -1,0 +1,3 @@
+{
+  "content": "Let’s break this down step by step according to the order of operations:  \n1. Parentheses (none here)  \n2. NOT operators  \n3. AND operators  \n4. OR operators  \n\nExpression:  \nTrue or not False and True or True  \n\n**Step 1: Apply NOT**  \nnot False → True  \n\nIntermediate: True or True and True or True  \n\n**Step 2: Apply AND**  \nTrue and True → True  \n\nIntermediate: True or True or True  \n\n**Step 3: Apply OR** (left to right)  \nTrue or True → True  \nTrue or True → True  \n\nFinal truth value: true  \n\nFinal answer: true"
+}
