@@ -1,6 +1,6 @@
-preset: mars_full
+preset: paper_full
 suite: main
-methods: mars_official
+methods: origin,cot_zs,cot_fs
 tasks: boolean_expressions,disambiguation_qa,formal_fallacies,geometric_shapes,ruin_names,sports_understanding,college_biology,college_medicine,electrical_engineering,high_school_world_history,human_aging,marketing
 model: deepseek-chat
 source_model: null

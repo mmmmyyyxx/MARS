@@ -1,0 +1,1964 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"The Barkhausen criterion for an oscillator
+
+Options:
+(A)Loop gain should be unity
+(B)Loop gain should be less than unity
+(C)The phase of a feedback signal with respect to input should be 0° or 360°
+(D)Both A and C
+",(D),"The Barkhausen criterion states that for sustained oscillations, the loop gain must be exactly 1 and the phase shift around the loop must be zero or a multiple of 360°.  
+This corresponds to both option (A) and option (C).  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+1,"Potentiometer method of DC voltage measurement is more accurate than direct measurement using a voltmeter because
+
+Options:
+(A)It loads the circuit moderately.
+(B)It loads the circuit to maximum extent.
+(C)It uses centre zero galvanometer instead of voltmeter.
+(D)It does not load the circuit at all.
+",(D),"The potentiometer method uses a null detection technique where, at balance, no current flows through the galvanometer and thus the circuit under test is not loaded. This avoids errors caused by drawing current, making it more accurate than a voltmeter, which always draws some current.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+2,"Which of these sets of logic gates are designated as universal gates?
+
+Options:
+(A)NOR, NAND.
+(B)XOR, NOR, NAND.
+(C)OR, NOT, AND.
+(D)NOR, NAND, XNOR.
+",(A),"Universal gates are those from which any other logic gate can be constructed.  
+NOR and NAND gates individually can be used to implement NOT, AND, OR, and thus any Boolean function, making them universal.  
+XOR and XNOR are not universal by themselves, and OR, NOT, AND are basic gates but not universal because you cannot construct all gates from OR and AND alone without NOT.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+3,"A single phase one pulse controlled circuit has a resistance R and counter emf E load 400 sin(314 t) as the source voltage. For a load counter emf of 200 V, the range of firing angle control is
+
+Options:
+(A)30° to 150°.
+(B)30° to 180°.
+(C)60° to 120°.
+(D)60° to 180°.
+",(A),"Let’s break this down.  
+
+We have:  
+- Source voltage: \( V_s = 400 \sin(314t) \) → peak voltage \( V_m = 400 \text{ V} \)  
+- Load counter EMF \( E = 200 \text{ V} \)  
+- Single-phase one-pulse controlled circuit = half-wave controlled rectifier with R + E load.  
+
+For half-wave controlled rectifier with E load, conduction is possible only when \( V_s(\omega t) > E \) and SCR is triggered.  
+
+**Step 1: Find the earliest firing angle possible**  
+The condition for conduction: \( V_m \sin(\omega t) \ge E \)  
+\[
+400 \sin(\theta) \ge 200
+\]
+\[
+\sin(\theta) \ge 0.5
+\]
+\[
+\theta \ge \arcsin(0.5) = 30^\circ
+\]
+So the earliest firing angle \( \alpha_{\min} = 30^\circ \).  
+
+**Step 2: Find the latest firing angle possible**  
+The voltage must still be above E when triggered, but in the positive half-cycle, \( V_m \sin(\theta) \) decreases after \( 90^\circ \).  
+We need \( V_m \sin(\alpha) \ge E \) for the entire possible range.  
+Actually, the SCR can be triggered at any angle \( \alpha \) such that \( \sin(\alpha) \ge 0.5 \) and \( \alpha \le 180^\circ - 30^\circ = 150^\circ \) because \( \sin(150^\circ) = 0.5 \) and beyond that \( V_m \sin(\alpha) < E \).  
+
+Thus \( \alpha_{\max} = 150^\circ \).  
+
+So firing angle range: \( 30^\circ \) to \( 150^\circ \).  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+4,"A box which tells the effect of inputs on control sub system is known as
+
+Options:
+(A)Data Box.
+(B)Logical box.
+(C)Decision box.
+(D)State box.
+",(C),"A ""state box"" in control systems terminology typically describes how inputs affect the state or behavior of a control subsystem.  
+Final answer: (D)",(D),(C),False,option_letter,,cot_fs,electrical_engineering,1
+5,"Two infinite parallel metal plates are charged with equal surface charge density of the same polarity. The electric field in the gap between the plates is
+
+Options:
+(A)same as that produced by one plate.
+(B)double the field produced by one plate.
+(C)dependent on coordinates of field points.
+(D)zero.
+",(D),"For a single infinite plate with surface charge density σ, the electric field is σ/(2ε₀) directed away from the plate.  
+When two parallel plates have the same polarity and equal surface charge density, the fields between them are in opposite directions.  
+Thus, the net electric field in the gap is σ/(2ε₀) − σ/(2ε₀) = 0.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+6,"The resistance in the circuit of the moving coil of a dynamometer wattmeter should be
+
+Options:
+(A)Low.
+(B)Very low.
+(C)High.
+(D)Almost zero.
+",(C),"A dynamometer wattmeter measures power by using a fixed coil for current and a moving coil for voltage. The moving coil is connected across the supply voltage, so it must have high resistance to draw minimal current and avoid altering the circuit conditions.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+7,"The following are the necessary requirements of an oscillator
+
+Options:
+(A)Amplitude stability
+(B)Frequency stability
+(C)Power stability
+(D)Both A and B
+",(D),"The Barkhausen criterion specifies that for sustained oscillations, the loop gain must be exactly 1 and the phase shift around the loop must be zero or a multiple of 360°.  
+However, the question asks about necessary requirements of an oscillator in general — beyond just the Barkhausen criterion — and these include amplitude stability (so output amplitude remains constant) and frequency stability (so frequency doesn’t drift).  
+Power stability is not typically listed as a separate necessary requirement in basic oscillator theory.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+8,"The normal voltage used in directional heating is
+
+Options:
+(A)1.5 KV.
+(B)15 KV.
+(C)33 KV.
+(D)66 KV.
+",(A),"Directional heating typically refers to dielectric heating or induction heating processes used in industrial applications.  
+Standard voltages for such high-power industrial heating systems are often in the range of 11 kV to 33 kV, with 33 kV being a common supply level for large installations.  
+
+Final answer: (C)",(C),(A),False,option_letter,,cot_fs,electrical_engineering,1
+9,"LC oscillators are used for produce a waveform with frequency ranging from
+
+Options:
+(A)1MHz to 500 MHz
+(B)100 KHz to 500 MHz
+(C)1 KHz to 1 MHz
+(D)1MHz to 100 GHz
+",(A),"LC oscillators are typically used for generating high-frequency signals due to their ability to produce stable oscillations with low phase noise.  
+They are commonly employed in radio frequency applications, where the frequency range is generally from around 100 kHz up to several hundred megahertz.  
+Option (B) covers this typical range accurately.  
+
+Final answer: (B)",(B),(A),False,option_letter,,cot_fs,electrical_engineering,1
+10,"A working diode must have
+
+Options:
+(A)High resistance when forward or reverse biased
+(B)Low resistance when forward biased, while high resistance when reverse bias
+(C)High resistance when forward biased, while low resistance when reverse bias
+(D)Low resistance when forward or reverse biased
+",(B),"A diode is designed to allow current to flow easily in one direction (forward bias) and block current in the opposite direction (reverse bias).  
+In forward bias, the resistance is low; in reverse bias, the resistance is high.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+11,"What is the name of the fluorescent material that gives red colour fluorescence?
+
+Options:
+(A)Zinc silicate.
+(B)Calcium silicate.
+(C)Zinc sulphide.
+(D)Magnesium silicate.
+",(D),"Zinc sulphide is known to produce green fluorescence under electron bombardment, not red.  
+For red fluorescence, zinc cadmium sulphide or similar compounds are typically used, but among the given options, zinc silicate is associated with green, calcium silicate with yellow, and magnesium silicate with blue-green.  
+However, historically, zinc sulphide with certain activators can produce red in some contexts, but in CRT phosphor common knowledge:  
+- Zinc silicate → green  
+- Zinc sulphide → green (or blue with silver activator)  
+- For red, common phosphor is yttrium oxysulfide or others, but not listed.  
+Given typical multiple-choice exams, zinc sulphide is often the answer for red when other silicate-based options are for other colors, but actually zinc sulphide is mainly green/blue.  
+Checking known phosphors:  
+- Red: Y₂O₂S:Eu³⁺ or Zn₃(PO₄)₂:Mn — not in options.  
+But in older texts, ""zinc sulphide"" with copper can give green, and with manganese can give yellow-orange.  
+Magnesium silicate with Mn gives red-orange.  
+
+Given the options, magnesium silicate is known to produce reddish-orange fluorescence when activated with manganese.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+12,"How many bits are required to store one BCD digit ?
+
+Options:
+(A)1
+(B)2
+(C)3
+(D)4
+",(D),"BCD (Binary Coded Decimal) represents each decimal digit (0–9) using a 4-bit binary code.  
+Therefore, one BCD digit requires 4 bits.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+13,"Commutator in DC generator is used for
+
+Options:
+(A)collecting of current
+(B)reduce losses
+(C)increase efficiency
+(D)convert AC armature current in to DC
+",(D),"The commutator in a DC generator mechanically reverses the connections between the armature windings and the external circuit, ensuring that the output current remains unidirectional despite the alternating nature of the induced current in the armature.  
+This process converts the AC in the armature to DC in the external load.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+14,"1 F is theoretically equal to
+
+Options:
+(A)1 ohm of resistance
+(B)ratio of 1 V to 1 C
+(C)ratio of 1 C to 1 V
+(D)none of these
+",(C),"The unit farad (F) is defined as capacitance, where capacitance \( C = \frac{Q}{V} \), meaning charge in coulombs divided by voltage in volts.  
+So 1 F = 1 C / 1 V.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+15,"How many entries will be in the truth table of a 3 input NAND gate ?
+
+Options:
+(A)3
+(B)6
+(C)8
+(D)9
+",(C),"A truth table lists all possible combinations of inputs and the corresponding output.  
+For \( n \) inputs, the number of possible input combinations is \( 2^n \).  
+Here \( n = 3 \), so \( 2^3 = 8 \) combinations.  
+Thus, the truth table will have 8 rows (entries).  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+16,"In decimal number system what is MSD
+
+Options:
+(A)First digit from left to right
+(B)First digit from right to left
+(C)Middle digit
+(D)Mean of all digits
+",(A),"In decimal numbers, MSD stands for Most Significant Digit, which is the leftmost digit contributing the highest weight in the number's value.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+17,"In Digital Logic Designs, GAL is abbreviated as
+
+Options:
+(A)General Advance Logic
+(B)General Array Logic
+(C)Generic Advance Logic
+(D)Generic Array Logic
+",(D),"GAL in digital logic design stands for Generic Array Logic, which is a type of programmable logic device.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+18,"Inintel 8085A microprocessor ALE signal is made high to
+
+Options:
+(A)Enable the data bus to be used as low order address bus
+(B)To latch data D0-D7 from data bus
+(C)To disable data bus
+(D)To achieve all the functions listed above
+",(A),"The ALE (Address Latch Enable) signal in the Intel 8085 microprocessor is used to latch the lower-order address (A0–A7) from the multiplexed address/data bus (AD0–AD7) into an external latch.  
+When ALE is high, the AD0–AD7 lines carry the lower-order address bits.  
+When ALE goes low, those lines can then be used for data, and the address is held stable by the external latch.  
+So ALE high enables the bus to be used as the low-order address bus.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+19,"For an SCR gate cathode characteristic is a straight line of 130. For triggered source volume of 15 V and allowable gate power dissipation of 0.5 W compute the gate source resistance?
+
+Options:
+(A)111.9 ohm
+(B)11.19 ohm
+(C)108 ohm
+(D)115 ohm
+",(A),"We know the gate-cathode characteristic is a straight line with slope 130, meaning \( V_g = 130 \times I_g \) (since \( V_g / I_g = 130 \) ohms from the slope).  
+
+Given:  
+Trigger source voltage \( V_s = 15 \ \text{V} \)  
+Allowable gate power dissipation \( P_g = 0.5 \ \text{W} \)  
+
+Let \( R_g \) = gate source resistance (external resistor to be added).  
+Let \( r_{gk} = 130 \ \Omega \) (internal gate-cathode resistance).  
+
+Total circuit resistance = \( R_g + r_{gk} \)  
+Circuit current \( I_g = \frac{V_s}{R_g + r_{gk}} \)  
+
+Power dissipated in the gate-cathode junction:  
+\[
+P_g = I_g^2 \times r_{gk}
+\]  
+Substitute \( I_g \):  
+\[
+0.5 = \left( \frac{V_s}{R_g + r_{gk}} \right)^2 \times r_{gk}
+\]  
+\[
+0.5 = \frac{V_s^2 \times r_{gk}}{(R_g + r_{gk})^2}
+\]  
+\[
+(R_g + r_{gk})^2 = \frac{V_s^2 \times r_{gk}}{0.5}
+\]  
+\[
+(R_g + 130)^2 = \frac{(15)^2 \times 130}{0.5}
+\]  
+\[
+(R_g + 130)^2 = \frac{225 \times 130}{0.5} = \frac{29250}{0.5} = 58500
+\]  
+\[
+R_g + 130 = \sqrt{58500} \approx 241.867
+\]  
+\[
+R_g \approx 241.867 - 130 \approx 111.867 \ \Omega
+\]  
+
+That matches option (A) 111.9 ohm.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+20,"The concept of V/f control of inverters driving induction motors resuls in
+
+Options:
+(A)constant torque operation
+(B)speed reversal
+(C)reduced magnetic loss
+(D)hormonic elimination
+",(A),"The concept of V/f control in inverters driving induction motors maintains a constant ratio between voltage and frequency, which keeps the air-gap flux approximately constant. This allows the motor to produce constant torque over a range of speeds, especially below the rated frequency.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+21,"The energy stored in the magnetic field in a solenoid 30 cm long and 3 cm diameter wound with 1000 turns of wire carrying a current at 10 amp, is
+
+Options:
+(A)0.015 joule.
+(B)0.15 joule.
+(C)0.015 joule.
+(D)1.15 joule.
+",(B),"First, recall the formula for the energy stored in the magnetic field of an inductor:  
+
+\[
+E = \frac{1}{2} L I^2
+\]
+
+For a solenoid, the inductance \( L \) is given by:  
+
+\[
+L = \frac{\mu_0 N^2 A}{l}
+\]
+
+Where:  
+- \( \mu_0 = 4\pi \times 10^{-7} \, \text{H/m} \)  
+- \( N = 1000 \) turns  
+- \( l = 0.30 \, \text{m} \)  
+- \( A = \pi r^2 \), \( r = 0.015 \, \text{m} \)  
+- \( I = 10 \, \text{A} \)  
+
+---
+
+**Step 1: Calculate cross-sectional area \( A \)**  
+\[
+A = \pi (0.015)^2 = \pi \times 0.000225 \approx 7.0686 \times 10^{-4} \, \text{m}^2
+\]
+
+**Step 2: Calculate inductance \( L \)**  
+\[
+L = \frac{(4\pi \times 10^{-7}) \times (1000)^2 \times (7.0686 \times 10^{-4})}{0.30}
+\]  
+\[
+L \approx \frac{4\pi \times 10^{-7} \times 10^6 \times 7.0686 \times 10^{-4}}{0.30}
+\]  
+\[
+L \approx \frac{4\pi \times 7.0686 \times 10^{-5}}{0.30}
+\]  
+\[
+L \approx \frac{8.886 \times 10^{-4}}{0.30} \approx 2.962 \times 10^{-3} \, \text{H}
+\]
+
+**Step 3: Calculate energy \( E \)**  
+\[
+E = \frac{1}{2} \times (2.962 \times 10^{-3}) \times (10)^2
+\]  
+\[
+E \approx 0.5 \times 2.962 \times 10^{-3} \times 100
+\]  
+\[
+E \approx 0.1481 \, \text{J} \approx 0.15 \, \text{J}
+\]
+
+---
+
+That matches option (B).  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+22,"While operating on variable frequency supplies, the AC motor requires variable voltage in order to
+
+Options:
+(A)protect the insulation.
+(B)avoid effect of saturation.
+(C)improve the capabilities of the inverter.
+(D)protect thyristor from dV / dt.
+",(B),"The Barkhausen criterion states that for sustained oscillations, the loop gain must be exactly 1 and the phase shift around the loop must be 0° or 360° (or an integer multiple of 360°).  
+Looking at the options:  
+- (A) Loop gain should be unity → correct  
+- (B) Loop gain should be less than unity → incorrect  
+- (C) The phase of a feedback signal with respect to input should be 0° or 360° → correct  
+- (D) Both A and C → correct  
+
+Final answer: (D)",(D),(B),False,option_letter,,cot_fs,electrical_engineering,1
+23,"Which of the following windings are necessary in case of all dc machines?
+
+Options:
+(A)closed winding
+(B)lap winding
+(C)wave winding
+(D)open type winding
+",(A),"In DC machines, windings must form closed paths to allow continuous current flow and proper commutation. Open windings would prevent the machine from functioning.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+24,"Relaxation Voltage controlled oscillators are used to generate
+
+Options:
+(A)Sinusoidal wave
+(B)Triangular wave
+(C)Sawtooth wave
+(D)Both B and C
+",(D),"Relaxation voltage-controlled oscillators typically generate non-sinusoidal waveforms such as triangular and sawtooth waves by charging and discharging a capacitor.  
+They are not generally used for pure sinusoidal outputs.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+25,"The supply frequency usually employed for high frequency eddy current heating is
+
+Options:
+(A)1 KHz.
+(B)5 KHz.
+(C)10 MHz.
+(D)10 KHz to 400 KHz.
+",(D),"High-frequency eddy current heating typically operates in the range of 10 kHz to several hundred kHz to achieve effective induction heating with reasonable skin depth and power penetration.  
+Among the options, 10 kHz to 400 kHz is the standard industrial frequency range for such applications.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+26,"In the toggle mode a JK flip-flop has
+
+Options:
+(A)J = 0, K = 0.
+(B)J = 1, K = 1.
+(C)J = 0, K = 1.
+(D)J = 1, K = 0.
+",(B),"A JK flip-flop toggles its output state when both J and K inputs are high (J = 1, K = 1).  
+This causes the output to switch (toggle) on each clock pulse.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+27,"Electric drive is becoming more and more popular because
+
+Options:
+(A)all of below.
+(B)it provide smooth and easy control.
+(C)it is cheaper in cost.
+(D)it is simple and reliable.
+",(A),"Electric drives are known for offering smooth speed control, ease of automation, reliability, and relatively simple maintenance compared to mechanical or hydraulic systems.  
+While cost can vary depending on the application, the primary advantages often cited are smooth control, simplicity, and reliability.  
+The option ""all of below"" would be correct if all the listed reasons are true, and indeed smooth control, simplicity, reliability, and increasingly competitive costs are all valid reasons for their popularity.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+28,"A step up chopper has input voltage 110 V and output voltage 150 V. The value of duty cycle is
+
+Options:
+(A)0.32.
+(B)0.67.
+(C)0.45.
+(D)0.27.
+",(B),"For a step-up chopper (boost converter), the output voltage \( V_o \) is related to the input voltage \( V_i \) and duty cycle \( D \) by:  
+
+\[
+V_o = \frac{V_i}{1 - D}
+\]
+
+Given \( V_i = 110 \ \text{V} \) and \( V_o = 150 \ \text{V} \):
+
+\[
+150 = \frac{110}{1 - D}
+\]
+\[
+1 - D = \frac{110}{150} = 0.7333
+\]
+\[
+D = 1 - 0.7333 = 0.2667 \approx 0.27
+\]
+
+Final answer: (D)",(D),(B),False,option_letter,,cot_fs,electrical_engineering,1
+29,"A Binary number system has how many digits.
+
+Options:
+(A)0
+(B)1
+(C)2
+(D)10
+",(C),"A binary number system uses only two digits: 0 and 1.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+30,"Lowest critical frequency is due to pole and it may be present at the origin or nearer to the origin, then the type of network is
+
+Options:
+(A)LC.
+(B)RL.
+(C)RC.
+(D)Any of the above.
+",(C),"The lowest critical frequency being due to a pole near or at the origin suggests a network with a dominant pole at low frequencies.  
+RC networks typically have poles at \( f = \frac{1}{2\pi RC} \), which can be made very low with large \( R \) or \( C \), whereas RL poles are \( f = \frac{R}{2\pi L} \) and generally not as easily placed very close to the origin unless \( L \) is impractically large. LC networks can have poles away from the origin depending on resonance.  
+Thus, RC networks are most associated with a dominant low-frequency pole near the origin.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+31,"Advantages of open loop control system is/are
+
+Options:
+(A)simple and economical.
+(B)accurate.
+(C)reliable.
+(D)all of the above.
+",(A),"Open loop control systems are known for being simple and economical due to their lack of feedback components, but they are generally not accurate because they cannot correct for disturbances or errors. They can be reliable in stable environments where conditions don’t vary. However, the question asks for advantages, and while (A) and (C) are often cited, ""all of the above"" would imply they are also accurate, which is not true.  
+Thus, the correct choice is that they are simple, economical, and reliable — but not accurate — so the best match from the given options is (A) and (C) together, but since that’s not an option and the question says ""is/are,"" the intended answer in many standard contexts is (A) only.  
+However, checking common definitions: open-loop systems are simple, economical, and reliable (due to fewer components), so some sources list all three as advantages. Given the options, ""all of the above"" would require accuracy, which is false, so the correct answer is only (A) and (C) — but since that’s not listed, the most correct single option is (A).  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+32,"The voltage induced in an inductor is represented as,
+
+Options:
+(A)product of its inductance and current through it.
+(B)ratio of its inductance to current through it.
+(C)ratio of current through it to its inductance.
+(D)product of its inductance and rate of change of current through it.
+",(D),"The voltage induced in an inductor is given by Faraday’s law of electromagnetic induction:  
+\( v = L \frac{di}{dt} \),  
+which is the product of inductance \( L \) and the rate of change of current \( \frac{di}{dt} \).  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+33,"If a Hexadecimal number needs to convert to binary. For each hexadecimal digit, there will be how many bits
+
+Options:
+(A)1
+(B)2
+(C)4
+(D)8
+",(C),"Each hexadecimal digit represents 4 binary bits because the base-16 system uses digits 0–9 and A–F, which correspond to 4-bit binary values from 0000 to 1111.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+34,"Induction heating takes place in
+
+Options:
+(A)conducting but non-magnetic materials.
+(B)conducting materials which may be either magnetic or non-magentic materials.
+(C)insulating materials.
+(D)conducting and magnetic materials.
+",(B),"Induction heating relies on eddy currents generated in a conductor by a changing magnetic field.  
+It works in any conducting material, regardless of whether it is magnetic or non-magnetic.  
+Magnetic materials can also experience hysteresis losses, but induction heating fundamentally occurs in conductors, magnetic or not.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+35,"In a lap winding dc machine number of conductors are 100 and number of parallel paths are 10. Find the average pitch
+
+Options:
+(A)10
+(B)100
+(C)50
+(D)1
+",(A),"In a lap winding, the number of parallel paths is equal to the number of poles, and the average pitch \( Y_a \) is given by:  
+
+\[
+Y_a = \frac{\text{Number of conductors}}{\text{Number of parallel paths}}
+\]
+
+Here,  
+Number of conductors = 100  
+Number of parallel paths = 10  
+
+\[
+Y_a = \frac{100}{10} = 10
+\]
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+36,"Magnetic flux has the unit of
+
+Options:
+(A)Newton
+(B)Ampere turn
+(C)Weber
+(D)Tesla
+",(C),"Magnetic flux is measured in webers, which is the SI unit for magnetic flux.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+37,"In balanced bridge, if the positions of detector and source are interchanged, the bridge will still remain balanced. This can be explained from which theorem
+
+Options:
+(A)Reciprocity theorem
+(B)Thevinin's theorem
+(C)Norton's theorem
+(D)Compensation theorem
+",(A),"The reciprocity theorem states that in a linear bilateral network, the interchange of an ideal voltage source and an ideal ammeter (detector) does not change the ammeter reading.  
+In a balanced bridge, interchanging the source and detector positions keeps the bridge balanced, which aligns with the reciprocity principle.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+38,"A D-flip-flop is said to be transparent when
+
+Options:
+(A)the output is LOW
+(B)the output is HIGH
+(C)the output follows clock
+(D)the output follow input
+",(D),"A D-flip-flop is called transparent when the output follows the input, which occurs when the clock signal is high in a level-triggered D-flip-flop.  
+This means the input changes are directly reflected at the output without waiting for a clock edge.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+39,"A Lissajous pattern on an oscilloscope has 5 horinzontal tangencies and 2 vertical tangencies. The frequency of horizontal input is 100 Hz. The frequency of the vertical will be
+
+Options:
+(A)500 Hz.
+(B)250 Hz.
+(C)400 Hz.
+(D)625 Hz.
+",(B),"For a Lissajous pattern, the ratio of vertical frequency \( f_v \) to horizontal frequency \( f_h \) is given by:  
+
+\[
+\frac{f_v}{f_h} = \frac{\text{number of horizontal tangencies}}{\text{number of vertical tangencies}}
+\]
+
+Here:  
+- Horizontal tangencies = 5  
+- Vertical tangencies = 2  
+- \( f_h = 100 \ \text{Hz} \)  
+
+So:  
+\[
+\frac{f_v}{100} = \frac{5}{2}
+\]
+\[
+f_v = 100 \times \frac{5}{2} = 250 \ \text{Hz}
+\]
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+40,"Speed control by variation of field flux results in
+
+Options:
+(A)constant power drive.
+(B)constant torque drive.
+(C)variable power drive.
+(D)none of the above.
+",(A),"In DC motors, speed is inversely proportional to field flux when armature voltage is constant. Reducing field flux increases speed but decreases torque for the same armature current, keeping power (torque × speed) approximately constant. This is known as constant power drive.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+41,"Which of the following memories uses one transistor and one capacitor as basic memory unit
+
+Options:
+(A)SRAM
+(B)DRAM
+(C)Both SRAM and DRAM
+(D)None
+",(B),"DRAM uses a single transistor and capacitor per memory cell to store a bit, while SRAM typically uses multiple transistors (often 4-6) per cell without a capacitor.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+42,"What will be the number of lamps, each having 300 lumens, required to obtain an average illuminance of 50 lux on a 4m * 3m rectangular room?
+
+Options:
+(A)2
+(B)4
+(C)5
+(D)6
+",(A),"First, calculate the total luminous flux needed for the room.  
+
+Illuminance \( E \) in lux is lumens per square meter:  
+\[
+E = \frac{\text{Total lumens}}{\text{Area}}
+\]  
+Area = \( 4 \times 3 = 12 \, \text{m}^2 \)  
+\[
+50 = \frac{\text{Total lumens}}{12}
+\]  
+\[
+\text{Total lumens} = 50 \times 12 = 600
+\]  
+
+Each lamp provides 300 lumens, so:  
+\[
+\text{Number of lamps} = \frac{600}{300} = 2
+\]  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+43,"The output of the system has an effect upon the input quantity, then the system is a
+
+Options:
+(A)open loop control system.
+(B)closed loop control system.
+(C)either A or B.
+(D)none of the above.
+",(B),"In a system where the output affects the input quantity, there is feedback from the output to the input. This is the defining characteristic of a closed-loop control system.  
+An open-loop system has no feedback, so the output does not influence the input.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+44,"A sinusoidal signal is analog signal, because
+
+Options:
+(A)it can have a number of values between the negative and positive peaks
+(B)it is negative for one half cycle
+(C)it is positive for one half cycle
+(D)it has positive as well as negative values
+",(A),"A sinusoidal signal is considered analog because it varies continuously over time and can take on any value within its amplitude range, including all values between its negative and positive peaks.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+45,"FM stands for
+
+Options:
+(A)frequent modulation.
+(B)frequency modulation.
+(C)frequency moderator.
+(D)frequent moderator.
+",(B),"FM is a standard abbreviation in communications engineering for ""frequency modulation.""  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+46,"Stack is also known as
+
+Options:
+(A)FIFO memory
+(B)Flash memory
+(C)LIFO memory
+(D)LILO memory
+",(C),"A stack is a data structure where the last element added is the first one to be removed, which is known as Last In, First Out (LIFO).  
+FIFO refers to a queue, flash memory is a type of storage, and LILO is not a standard term for stack.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+47,"In Ward-Leonard system, the lower limit of the speed imposed by
+
+Options:
+(A)Field resistance.
+(B)Armature resistance.
+(C)Residual magnetism of the generator.
+(D)None of above.
+",(C),"In the Ward-Leonard speed control system, the lower speed limit is determined by the residual magnetism of the generator. Without residual magnetism, the generator would fail to build up voltage at very low field currents, thus limiting how low the motor speed can be set.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+48,"Colpitts oscillator is also called as
+
+Options:
+(A)Tank circuit oscillator
+(B)LC oscillator
+(C)Resonant circuit oscillator
+(D)All of the above
+",(D),"The Colpitts oscillator uses an LC tank circuit for resonance and is a type of LC oscillator.  
+It is also referred to as a resonant circuit oscillator because it relies on resonance in the LC tank.  
+Thus, all the given names apply.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+49,"An SCR has half cycle surge current rating of 3000 A for 50 Hz supply. One cycle surge current will be
+
+Options:
+(A)1500 A.
+(B)6000 A.
+(C)2121.32 A.
+(D)4242.64 A.
+",(C),"The surge current rating for an SCR is typically given in terms of \( I^2 t \), where \( I \) is the current and \( t \) is the time.  
+
+For a half-cycle surge at 50 Hz:  
+- Half-cycle duration = \( \frac{1}{2 \times 50} = 0.01 \ \text{s} \)  
+- Given \( I_{\text{half}} = 3000 \ \text{A} \),  
+\[
+I^2 t = (3000)^2 \times 0.01 = 9000000 \times 0.01 = 90000
+\]  
+
+For one full cycle:  
+- Duration = \( 0.02 \ \text{s} \)  
+- Same \( I^2 t \) rating:  
+\[
+I_{\text{full}}^2 \times 0.02 = 90000
+\]  
+\[
+I_{\text{full}}^2 = \frac{90000}{0.02} = 4.5 \times 10^6
+\]  
+\[
+I_{\text{full}} = \sqrt{4.5 \times 10^6} = \sqrt{4500000} \approx 2121.32 \ \text{A}
+\]  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+50,"Both the ALU and control section of CPU employ which special purpose storage location?
+
+Options:
+(A)Buffers
+(B)Decoders
+(C)Accumulators
+(D)Registers
+",(C),"The ALU (Arithmetic Logic Unit) and the control section of a CPU both use registers for temporary storage of data, addresses, and control signals.  
+Buffers are for temporary data holding during transfers, decoders convert coded inputs to outputs, and accumulators are a type of register specifically for arithmetic results, but the general special-purpose storage locations used by both ALU and control unit are registers.  
+
+Final answer: (D)",(D),(C),False,option_letter,,cot_fs,electrical_engineering,1
+51,"Systematic errors are
+
+Options:
+(A)environmental errors.
+(B)observational errors.
+(C)instrument errors.
+(D)all of the above.
+",(D),"Systematic errors are consistent, repeatable errors associated with faulty equipment, calibration, or experimental technique.  
+They include environmental errors (due to external conditions), observational errors (due to the observer’s habits), and instrument errors (due to the measuring device).  
+Thus, all the listed options are types of systematic errors.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+52,"Which of the following is/are the disadvantages of an open loop control system?
+
+Options:
+(A)Inaccurate.
+(B)Unreliable.
+(C)both A and B.
+(D)none of the above.
+",(C),"Open loop control systems lack feedback, so they cannot correct for disturbances or changes in operating conditions, leading to inaccuracy.  
+They are also considered unreliable because their performance can vary significantly with parameter changes or external influences.  
+Both inaccuracy and unreliability are recognized disadvantages.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+53,"A diode (p-n junction) when reverse biased act as
+
+Options:
+(A)On Switch
+(B)Zener diode
+(C)Capacitor
+(D)Off Switch
+",(D),"A reverse-biased p-n junction diode blocks current flow, effectively acting as an open switch in a circuit.  
+While there is some junction capacitance (option C), the primary intended behavior in most circuit contexts is that of an ""off switch.""  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+54,"Piezoelectric effect is carried out in
+
+Options:
+(A)composite filter.
+(B)crystal filter.
+(C)m derived.
+(D)constant k prototype.
+",(B),"The piezoelectric effect involves generating an electric charge in response to mechanical stress, and this property is utilized in crystal filters, where quartz or other piezoelectric crystals are used as resonant elements.  
+Composite filters, m-derived filters, and constant-k prototype filters do not inherently rely on the piezoelectric effect.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+55,"The resistivity of the conductor depends on
+
+Options:
+(A)area of the conductor.
+(B)length of the conductor.
+(C)type of material.
+(D)none of these.
+",(C),"The resistivity of a conductor is an intrinsic property of the material, meaning it depends only on the type of material and not on its dimensions (length or cross-sectional area).  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+56,"The smallest change in measured variable to which instrument will respond is
+
+Options:
+(A)resolution.
+(B)accuracy.
+(C)precision.
+(D)sensitivity.
+",(A),"The smallest detectable change in a measured variable is defined as the instrument's resolution.  
+Accuracy refers to closeness to the true value, precision to repeatability of measurements, and sensitivity to the ratio of output change to input change.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+57,"In electronic communications, ""AM"" stands for
+
+Options:
+(A)Amp Modification
+(B)Amplitude Method
+(C)Amplitude Modulation
+(D)Ampere Method
+",(C),"""AM"" in electronic communications is a standard abbreviation for Amplitude Modulation, which is a technique where the amplitude of a carrier wave is varied in proportion to the message signal.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+58,"Which system is also known as automatic control system?
+
+Options:
+(A)Open loop control system
+(B)Closed loop control system
+(C)Either A or B
+(D)Nether A nor B
+",(B),"A closed loop control system uses feedback to automatically adjust its operation to maintain a desired output, which matches the definition of an automatic control system.  
+An open loop system does not use feedback and requires manual intervention for adjustments, so it is not automatic.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+59,"A combinational PLD with a fixed AND array and a programmable OR array is called a
+
+Options:
+(A)PLD
+(B)PROM
+(C)PAL
+(D)PLA
+",(B),"A combinational PLD with a fixed AND array and a programmable OR array is known as a PAL (Programmable Array Logic).  
+PROM has a fixed OR array and programmable AND array, while PLA has both arrays programmable.  
+PLD is a general term, but the specific architecture described matches PAL.  
+
+Final answer: (C)",(C),(B),False,option_letter,,cot_fs,electrical_engineering,1
+60,"A null type instrument as compared to a deflected type instrument has
+
+Options:
+(A)a lower sensitivity.
+(B)a faster response.
+(C)a higher accuracy.
+(D)all of the above.
+",(C),"A null type instrument balances the measured quantity against a known reference, resulting in zero deflection at the balance point.  
+This eliminates errors due to friction, calibration, and nonlinearities in the deflection mechanism, giving it higher accuracy compared to a deflected type instrument.  
+Sensitivity and speed are not necessarily better — in fact, null instruments can be slower due to the balancing process.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+61,"Length of the cable is doubled, its capacitance C will be
+
+Options:
+(A)one-fourth.
+(B)one-half.
+(C)doubled.
+(D)unchanged.
+",(C),"The capacitance of a cable is directly proportional to its length, assuming other factors (like geometry and dielectric) remain constant.  
+If the length is doubled, the capacitance also doubles.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+62,"Electrons in p-type material of a semi-conductor are called as
+
+Options:
+(A)either minority carriers or majority carriers
+(B)minority carriers
+(C)majority carriers
+(D)valance carriers
+",(B),"In p-type semiconductor material, the majority carriers are holes, which are positively charged. Electrons are the minority carriers in p-type material because they are less abundant.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+63,"________ is the most detrimental impurity in the magnetic materials
+
+Options:
+(A)Carbon.
+(B)Sulphur.
+(C)Oxygen.
+(D)Nitrogen.
+",(A),"Oxygen is known to be particularly harmful in magnetic materials because it can form non-magnetic oxides and inclusions, which degrade magnetic properties such as permeability and increase hysteresis loss.  
+
+Final answer: (C)",(C),(A),False,option_letter,,cot_fs,electrical_engineering,1
+64,"Voltage controlled oscillators are used commonly in
+
+Options:
+(A)Pulse Modulators Frequency Modulators Phase Clocked loops
+(B)Frequency Modulators
+(C)Phase Clocked loops
+(D)All the above
+",(D),"Voltage controlled oscillators (VCOs) are used in frequency modulators to generate FM signals by varying the input voltage. They are also essential in phase-locked loops (PLLs), often called ""phase clocked loops"" in the options, to generate an output signal locked in phase to a reference. While VCOs can be used in some pulse modulators, the most common and standard applications are in frequency modulators and phase-locked loops. The option ""All the above"" includes these standard uses.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+65,"Low frequency supply is necessary for direct core type induction furnaces because
+
+Options:
+(A)With normal frequeny supply the electromagnetic forces causes severe stirring action in the molten metal.
+(B)Magnetic coupling between the primary and secondary circuit is poor.
+(C)Both A and B.
+(D)None of the above.
+",(C),"In direct core type induction furnaces, operating at normal (higher) AC frequencies would produce strong electromagnetic forces that cause excessive stirring of the molten metal, which is undesirable for certain metallurgical processes.  
+Using a low frequency reduces this stirring effect.  
+The magnetic coupling is generally adequate in core-type designs, so the primary reason is the stirring issue.  
+
+Final answer: (A)",(A),(C),False,option_letter,,cot_fs,electrical_engineering,1
+66,"The moving coil-meters, damping is provided by
+
+Options:
+(A)the aluminium frame of the coil.
+(B)the coil spring attached to the moving.
+(C)eddy current disk.
+(D)damping vane in the airtight chamber.
+",(A),"In moving coil meters, damping is necessary to prevent excessive oscillation of the pointer and ensure it settles quickly at the correct reading.  
+The aluminum frame of the coil moves in the magnetic field, inducing eddy currents in the frame itself.  
+These eddy currents produce a magnetic field that opposes the motion, providing electromagnetic damping.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+67,"Which of the following is the analogous quantity for mass element in force-voltage analogy?
+
+Options:
+(A)Resistance.
+(B)Inductance.
+(C)Capacitance.
+(D)All of the above.
+",(B),"In force–voltage analogy, mechanical force is analogous to voltage, and velocity is analogous to current.  
+The mass element in a mechanical system is governed by \( F = m \frac{dv}{dt} \).  
+In an electrical system, \( v = L \frac{di}{dt} \).  
+Comparing, force \( F \) (analogous to voltage \( v \)) and velocity \( v \) (analogous to current \( i \)), the mass \( m \) corresponds to inductance \( L \).  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+68,"A latch is ________ sensitive
+
+Options:
+(A)both level and edge
+(B)edge
+(C)level
+(D)None
+",(C),"A latch changes its output state based on the level of the enable signal (often called enable or clock depending on context), not the edge transition.  
+Therefore, it is level-sensitive, not edge-sensitive.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+69,"What is used to protect the SCR from over current ?
+
+Options:
+(A)CB and fuse.
+(B)Heat sink.
+(C)Snubber circuit.
+(D)Voltage clamping device.
+",(A),"An SCR (Silicon Controlled Rectifier) can be protected from overcurrent using circuit breakers (CB) and fuses, which interrupt excessive current.  
+A heat sink protects against overheating but not directly overcurrent.  
+A snubber circuit protects against voltage transients.  
+A voltage clamping device protects against overvoltage, not overcurrent.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+70,"The errors mainly caused by human mistakes are
+
+Options:
+(A)gross error.
+(B)instrumental error.
+(C)observational error.
+(D)systematic error.
+",(A),"Gross errors are those primarily caused by human mistakes, such as misreading an instrument or incorrect recording of data. Instrumental errors stem from imperfections in the measuring device itself. Observational errors relate to inaccuracies in reading measurements, which can be human-related but are often categorized separately. Systematic errors arise from flaws in the measurement method or calibration. Since the question specifies errors ""mainly caused by human mistakes,"" gross error is the most appropriate choice.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+71,"Electrical analogous quantity for dash-pot in force-current analogy is
+
+Options:
+(A)resistance.
+(B)conductance.
+(C)inductance.
+(D)capacitance.
+",(B),"In force-current analogy, mechanical force is analogous to electrical current, and velocity is analogous to voltage.  
+A dash-pot in mechanical systems provides a damping force proportional to velocity: \( F = B v \), where \( B \) is the damping coefficient.  
+In force-current analogy, force \( F \) maps to current \( i \), and velocity \( v \) maps to voltage \( V \).  
+So \( i = B v \) becomes \( i = B V \), which is Ohm’s law \( i = G V \) where \( G \) is conductance.  
+Thus, the dash-pot is analogous to electrical conductance.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+72,"Which lamp has the best Colour Rendering Index (CRI)?
+
+Options:
+(A)LED
+(B)Fluorescent
+(C)Incandescent
+(D)High pressure sodium vapour
+",(C),"The Colour Rendering Index (CRI) measures how accurately a light source reproduces colors compared to natural light.  
+Incandescent lamps produce light by heating a filament, emitting a continuous spectrum similar to sunlight, giving them a CRI close to 100 — the highest among common lamp types.  
+LEDs and fluorescents often have lower CRI values (though high-CRI versions exist), and high-pressure sodium vapour lamps have very poor CRI.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+73,"Power dissipation in ideal inductor is
+
+Options:
+(A)Maximum
+(B)Minimum
+(C)Zero
+(D)A finite value
+",(C),"An ideal inductor has zero resistance, so it does not convert electrical energy into heat.  
+Therefore, in AC or DC circuits, the average power dissipated in an ideal inductor is zero.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+74,"For intermittent work which of the following furnace is suitable?
+
+Options:
+(A)Core less furnace.
+(B)Indirect arc furnace.
+(C)Either of above.
+(D)Nither of above.
+",(B),"Intermittent work refers to operations where the furnace is frequently turned on and off.  
+Coreless furnaces (induction type) are generally more suitable for continuous operation, while indirect arc furnaces can handle intermittent work better because they heat the charge by radiation and convection rather than by direct contact with the arc, allowing easier start-stop cycles.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+75,"In electrical resistance welding material of electrode should have
+
+Options:
+(A)higher electrical conductivities.
+(B)higher thermal conductivities.
+(C)sufficient strength to sustain high pressure at elevated temperatures.
+(D)all of above.
+",(D),"In electrical resistance welding, the electrode must efficiently conduct current (requiring high electrical conductivity), dissipate heat to avoid degradation (requiring high thermal conductivity), and maintain mechanical integrity under pressure and temperature (requiring sufficient strength at elevated temperatures).  
+Thus, all the listed properties are necessary.
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+76,"Which of the following are the passive elements?
+
+Options:
+(A)Resistor
+(B)Bulb
+(C)Both
+(D)None of these.
+",(C),"A resistor is a classic passive element because it does not produce energy and only dissipates it.  
+A bulb (incandescent lamp) is essentially a resistor when operating, converting electrical energy into heat and light, so it also behaves as a passive element.  
+Thus both are passive elements.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+77,"The main advantage of dielectric heating is that
+
+Options:
+(A)heating occurs in the material itself.
+(B)heating occurs due to high frequency.
+(C)it can be used for drying the explosives.
+(D)None of the above.
+",(A),"Dielectric heating works by generating heat within an insulating material due to molecular friction in an alternating electric field, especially at high frequencies.  
+The key point is that the heat is generated internally in the material, not applied from an outside source.  
+This matches option (A).  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+78,"Materials used in heat sink should have
+
+Options:
+(A)high thermal conductivity.
+(B)large surface area.
+(C)high melting point.
+(D)All of these.
+",(D),"A heat sink functions by transferring heat away from a component, so high thermal conductivity is necessary for efficient heat transfer.  
+A large surface area improves heat dissipation to the surrounding air via convection.  
+A high melting point ensures the heat sink maintains structural integrity at high operating temperatures.  
+Since all these properties are important, the correct choice is ""All of these.""  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+79,"Conductor is static and the field is varying then emf will be induced. This principle is called
+
+Options:
+(A)virtually induced emf.
+(B)dynamically induced emf.
+(C)static induced emf.
+(D)none of these
+",(C),"When a conductor is static and the magnetic field is varying, the induced emf is due to a time-varying magnetic field without physical motion of the conductor.  
+This is known as **statically induced emf**, often occurring in transformers.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+80,"Four identical alternators each are rated for 20 MVA, 11 KV having a subtransient reactance of 16% are working in parallel. The short circuit level at the busbar is
+
+Options:
+(A)500 MVA
+(B)400 MVA
+(C)125 MVA
+(D)100 MVA
+",(A),"First, the short circuit level at the busbar for generators in parallel is the sum of their individual short circuit capacities.  
+
+Each alternator:  
+Rating = 20 MVA  
+Subtransient reactance \( X_d'' = 16\% = 0.16 \, \text{p.u.} \)  
+
+Short circuit MVA for one machine = \( \frac{\text{Base MVA}}{X_d''} = \frac{20}{0.16} = 125 \, \text{MVA} \)  
+
+Four machines in parallel:  
+Total short circuit MVA = \( 4 \times 125 = 500 \, \text{MVA} \)  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+81,"According to the Bohr model, an electron gains or losses energy only by
+
+Options:
+(A)moving faster or slower in an allowed orbit.
+(B)jumping from one allowed orbit to another.
+(C)being completely removed from an atom.
+(D)jumping from one atom to another atom.
+",(B),"The Bohr model states that electrons exist in fixed energy levels (orbits) and can only gain or lose energy by transitioning between these discrete orbits, not by changing speed within an orbit.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+82,"A three-state buffer has the following output states
+
+Options:
+(A)1, 0, float
+(B)High, Low, Float
+(C)Both A and B
+(D)Set, Reset, Halt
+",(C),"A three-state buffer (tri-state buffer) can output high (1), low (0), or a high-impedance (float) state.  
+Both (A) and (B) describe these states correctly, just using different naming conventions.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+83,"By using which of the following elements, mechanical translational systems are obtained?
+
+Options:
+(A)mass element
+(B)spring element
+(C)dash-pot
+(D)all of the above
+",(D),"Mechanical translational systems involve motion in a straight line and are modeled using mass (for inertia), spring (for stiffness/energy storage), and dash-pot (for damping/friction). All three are fundamental elements used together to represent such systems.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+84,"Four capacitors each of 40 µF are connected in parallel, the equivalent capacitance of the system will be
+
+Options:
+(A)160 µF
+(B)10 µF
+(C)40 µF
+(D)5 µF
+",(A),"When capacitors are connected in parallel, the equivalent capacitance is the sum of the individual capacitances.  
+Here, four 40 µF capacitors in parallel give:  
+\( 40 + 40 + 40 + 40 = 160\ \mu\text{F} \).  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+85,"The resistance of a conductor of diameter d and length l is R Ω. If the diameter of the conductor is halved and its length is doubled, the resistance will be
+
+Options:
+(A)R Ω
+(B)2R Ω
+(C)4R Ω
+(D)8R Ω
+",(C),"The resistance of a conductor is given by \( R = \rho \frac{l}{A} \), where \( A = \pi (d/2)^2 = \pi d^2 / 4 \).  
+So \( R = \rho \frac{l}{\pi d^2 / 4} = \frac{4\rho l}{\pi d^2} \).  
+
+Initially: \( R = \frac{4\rho l}{\pi d^2} \).  
+
+Now, \( d' = d/2 \) and \( l' = 2l \).  
+New resistance:  
+\[
+R' = \frac{4\rho (2l)}{\pi (d/2)^2} 
+= \frac{8\rho l}{\pi d^2 / 4} 
+= \frac{8\rho l}{\pi d^2} \times 4 
+= \frac{32\rho l}{\pi d^2}.
+\]  
+
+Compare \( R' \) to \( R \):  
+\[
+R' / R = \frac{\frac{32\rho l}{\pi d^2}}{\frac{4\rho l}{\pi d^2}} = \frac{32}{4} = 8.
+\]  
+
+So \( R' = 8R \).  
+
+Final answer: (D)",(D),(C),False,option_letter,,cot_fs,electrical_engineering,1
+86,"A single phase full bridge inverter can operated in load commutation mode in case load consist of
+
+Options:
+(A)RL.
+(B)RLC underdamped.
+(C)RLC overdamped.
+(D)RLC critically damped.
+",(B),"A single-phase full bridge inverter can use load commutation when the load provides a natural zero crossing of current before the switching device needs to turn off.  
+This happens when the load is underdamped RLC, because the current leads the voltage (due to capacitive effect) or oscillates, allowing the current to fall to zero naturally each half cycle.  
+RL loads do not cause natural commutation because the current lags and does not go to zero naturally.  
+Overdamped and critically damped RLC loads do not produce oscillatory or leading current needed for load commutation.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+87,"A microprocessor is ALU
+
+Options:
+(A)and control unit on a single chip.
+(B)and memory on a single chip.
+(C)register unit and I/O device on a single chip.
+(D)register unit and control unit on a single chip.
+",(D),"A microprocessor integrates the arithmetic logic unit (ALU) and the control unit, along with registers, onto a single chip.  
+Memory and I/O devices are generally external to the microprocessor chip in basic definitions.  
+Thus, the correct choice is the one stating ALU and control unit on a single chip.  
+
+Final answer: (A)",(A),(D),False,option_letter,,cot_fs,electrical_engineering,1
+88,"To obtain a high value of capacitance, the permittivity of dielectric medium should be
+
+Options:
+(A)low
+(B)zero
+(C)high
+(D)unity
+",(C),"The capacitance of a capacitor is given by \( C = \frac{\varepsilon A}{d} \), where \( \varepsilon \) is the permittivity of the dielectric medium.  
+A higher permittivity \( \varepsilon \) increases the capacitance for a given plate area \( A \) and separation \( d \).  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+89,"Deflection method direct measurements are most widely used as these are
+
+Options:
+(A)least time consuming.
+(B)most simple.
+(C)most simple and least time consuming.
+(D)most accurate.
+",(C),"Deflection methods in direct measurements are known for being straightforward and quick, as they involve directly observing the deflection of a pointer or indicator without complex balancing or nulling procedures. This makes them simpler and faster compared to null methods, which require adjustment to a balanced condition.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+90,"Purely mechanical instrument cannot be used for dynamic measurements because they have
+
+Options:
+(A)high inertia.
+(B)higher response time.
+(C)large time constant.
+(D)all of the above.
+",(D),"Purely mechanical instruments rely on physical movement of components like springs, masses, and pointers.  
+For dynamic measurements (rapidly changing signals), these moving parts cannot respond quickly enough due to their **mass**, which leads to:  
+
+- **High inertia** — resistance to change in motion.  
+- **Higher response time** — slow to reach final value.  
+- **Large time constant** — sluggish reaction to input changes.  
+
+All three factors contribute to the inability to track fast-changing signals accurately.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+91,"Advantages of higher transmission voltage is/are
+
+Options:
+(A)Power transfer capability of the transmission line is increased
+(B)Transmission line losses are reduced
+(C)Area of cross section and volume of the conductor is reduced
+(D)all of the above
+",(D),"Higher transmission voltage increases power transfer capability by allowing more power for the same current, reduces losses since losses are proportional to the square of the current, and reduces conductor cross-section and volume because lower current requires less conductor material.  
+Therefore, all listed advantages apply.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+92,"Under over voltage condition impedance offered by the voltage clamping device is
+
+Options:
+(A)high.
+(B)low.
+(C)moderate.
+(D)infinity.
+",(B),"A voltage clamping device, such as a Zener diode or a varistor, operates by becoming conductive when the voltage exceeds a certain threshold. Under normal voltage conditions, it presents high impedance, but under overvoltage conditions, its impedance drops significantly to shunt excess current and clamp the voltage.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+93,"A long wire composed of a smooth round conductor runs above and parallel to the ground (assumed to be a large conducting plane). A high voltage exists between the conductor and the ground. The maximum electric stress occurs at
+
+Options:
+(A)lower surface of the conductor.
+(B)upper surface of the conductor.
+(C)the ground surface.
+(D)midway between the conductor and ground.
+",(A),"In this configuration, the conductor and ground form a two-wire system with the ground acting as the image plane.  
+The electric field is strongest where the radius of curvature is smallest and where the distance between the conductor and its image is smallest — which is at the bottom surface of the conductor, closest to the ground.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+94,"In a dc machine 6 pole wave winding is used. The number of parallel paths are?
+
+Options:
+(A)6
+(B)4
+(C)2
+(D)1
+",(C),"In a DC machine, the number of parallel paths for a wave winding is always 2, regardless of the number of poles.  
+For a lap winding, the number of parallel paths equals the number of poles, but here it is wave winding.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+95,"Which of the following is a digital device
+
+Options:
+(A)Regulator of a fan
+(B)Microphone
+(C)Resistance of a material
+(D)Light switch
+",(D),"A digital device operates with discrete values (typically 0 and 1, or on/off states), not continuous signals.  
+
+- (A) Regulator of a fan — usually varies voltage continuously (analog control).  
+- (B) Microphone — converts sound to continuous electrical signals (analog).  
+- (C) Resistance of a material — analog property.  
+- (D) Light switch — either on or off (discrete states), so it is digital in nature.  
+
+Final answer: (D)",(C),(D),False,option_letter,,cot_fs,electrical_engineering,1
+96,"Instantaneous power in inductor is proportional to the
+
+Options:
+(A)product of the instantaneous current and rate of change of current.
+(B)square of instantaneous current.
+(C)square of the rate of change of current.
+(D)temperature of the inductor.
+",(A),"The instantaneous power in an inductor is given by  
+\[
+p(t) = v(t) \, i(t)
+\]  
+and for an inductor,  
+\[
+v(t) = L \frac{di}{dt}.
+\]  
+Thus,  
+\[
+p(t) = L \, i(t) \, \frac{di}{dt}.
+\]  
+This means instantaneous power is proportional to the product of instantaneous current and the rate of change of current.  
+
+Final answer: (A)",(T),(A),False,option_letter,,cot_fs,electrical_engineering,1
+97,"Which of the following is a variable displacement transducer?
+
+Options:
+(A)tachometer
+(B)potentiometer
+(C)synchros
+(D)none of the above
+",(B),"A variable displacement transducer measures linear or angular displacement and provides an output that varies proportionally with the displacement.  
+- A **tachometer** measures speed, not displacement.  
+- A **potentiometer** can measure displacement by changing resistance as its wiper moves, making it a variable displacement transducer.  
+- **Synchros** measure angular displacement but are typically used for position sensing rather than being called ""variable displacement transducers"" in the same sense as a potentiometer.  
+
+Given the options, the potentiometer is the most common example of a variable displacement transducer.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+98,"Five capacitors each of 5 µF are connected in series, the equivalent capacitance of the system will be
+
+Options:
+(A)5 µF
+(B)25 µF
+(C)10 µF
+(D)1 µF
+",(D),"For capacitors in series, the equivalent capacitance \( C_{eq} \) is given by:
+
+\[
+\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \dots + \frac{1}{C_n}
+\]
+
+Here, \( n = 5 \) and \( C_i = 5\ \mu\text{F} \) for each.
+
+\[
+\frac{1}{C_{eq}} = \frac{1}{5} + \frac{1}{5} + \frac{1}{5} + \frac{1}{5} + \frac{1}{5} = \frac{5}{5} = 1
+\]
+
+So \( C_{eq} = 1\ \mu\text{F} \).
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+99,"Susceptibility is negative for
+
+Options:
+(A)non magnetic substances.
+(B)diamagnetic substances.
+(C)ferromagnetic substances.
+(D)none of above.
+",(B),"Susceptibility refers to how a material responds to an external magnetic field.  
+- **Diamagnetic substances** weakly repel magnetic fields, resulting in a negative susceptibility.  
+- **Paramagnetic** and **ferromagnetic** substances have positive susceptibility.  
+- Non-magnetic substances generally have susceptibility near zero, but ""non-magnetic"" is not a specific classification here; diamagnetic is the correct category for negative susceptibility.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+100,"One of the following is the primary function of an oscillator
+
+Options:
+(A)produces sinusoidal oscillations
+(B)generates non sinusoidal waveforms
+(C)generates sustained oscillations at a constant amplitude and specific frequency
+(D)none of the above
+",(C),"An oscillator's primary function is to generate sustained oscillations at a constant amplitude and specific frequency, regardless of whether the waveform is sinusoidal or non-sinusoidal.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+101,"The metal surfaces for electrical resistance welding must be
+
+Options:
+(A)rough.
+(B)clean.
+(C)moistened
+(D)coloured
+",(B),"For electrical resistance welding, the metal surfaces must be clean to ensure low contact resistance and a strong, consistent weld.  
+Rough, moistened, or colored surfaces would interfere with proper electrical contact and weld quality.
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+102,"The latching current of SCR is 20 mA. Its holding current will be
+
+Options:
+(A)23 mA.
+(B)40 mA.
+(C)10 mA.
+(D)60 mA.
+",(C),"The latching current is the minimum anode current required to maintain the SCR in the on-state immediately after it has been turned on and the gate signal is removed.  
+The holding current is the minimum anode current required to maintain the SCR in the on-state under steady-state conditions.  
+Typically, the holding current is lower than the latching current.  
+Given latching current = 20 mA, the holding current should be less than 20 mA.  
+Among the options, only 10 mA is less than 20 mA.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+103,"In force-current analogy, electrical analogous quantity for displacement (x) is
+
+Options:
+(A)voltage.
+(B)inductance.
+(C)capacitance.
+(D)flux.
+",(D),"In force-current analogy, mechanical force is analogous to electrical current, and mechanical displacement is analogous to electrical flux linkage (flux).  
+So displacement \(x\) corresponds to magnetic flux \(\phi\).  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+104,"Feedback circuit in an oscillator can be accomplished by
+
+Options:
+(A)Resistive coupling between input and output
+(B)Capacitive coupling between input and output
+(C)Inductive coupling between input and output
+(D)Any one or combinations of the above methods
+",(D),"In an oscillator, the feedback circuit must provide the necessary phase shift and gain to sustain oscillations. This can be achieved using resistive, capacitive, or inductive coupling, or a combination of these, depending on the oscillator design.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+105,"Lowest critical frequency is due to zero and it may be present at the origin or nearer to the origin, then the type of network is
+
+Options:
+(A)LC circuit.
+(B)RC circuit.
+(C)RLC circuit.
+(D)RL Circuit.
+",(D),"The lowest critical frequency being due to a zero near or at the origin suggests a system where the first critical frequency is determined by a zero in the transfer function rather than a pole.  
+In RC circuits, zeros can occur at low frequencies (including near the origin), especially in high-pass or lead networks, whereas LC or RLC circuits typically have complex critical frequencies farther from the origin due to resonances.  
+RL circuits can also have zeros, but RC circuits are more commonly associated with dominant low-frequency zeros in certain filter configurations.  
+
+Given the emphasis on the lowest critical frequency being a zero near the origin, this is characteristic of certain RC network transfer functions.  
+
+Final answer: (B)",(B),(D),False,option_letter,,cot_fs,electrical_engineering,1
+106,"What is the value of dielectric constant of air?
+
+Options:
+(A)Less than 1
+(B)0.
+(C)1.
+(D)none of these.
+",(C),"The dielectric constant of a material is defined relative to the permittivity of free space (vacuum), which is approximately the same as that of air for practical purposes.  
+The dielectric constant of air is very close to 1.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+107,"Temperature variation is a/an
+
+Options:
+(A)Digital quantity
+(B)Analog quantity
+(C)Either Digital or Analog quantity
+(D)None
+",(B),"Temperature is a continuous physical quantity that can take any value within a range, so it is an analog quantity rather than a digital one.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+108,"The illumination at a point 5 meters below a lamp in 6 lux. The candle power of the lamp is
+
+Options:
+(A)30
+(B)140.
+(C)150.
+(D)200.
+",(C),"The illumination \( E \) in lux is given by the formula:  
+\[
+E = \frac{I}{d^2}
+\]
+where \( I \) is the luminous intensity in candela (candle power) and \( d \) is the distance in meters.
+
+Given:  
+\( E = 6 \ \text{lux} \)  
+\( d = 5 \ \text{m} \)
+
+\[
+I = E \times d^2 = 6 \times 25 = 150 \ \text{candela}
+\]
+
+So the candle power is 150.
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+109,"For a dc machine shunt resistance and armature resistance values are
+
+Options:
+(A)high and high
+(B)high and low
+(C)low and low
+(D)low and high
+",(B),"In a DC machine, the shunt field winding is designed to have high resistance to limit the current through it, while the armature resistance is kept low to minimize losses and voltage drop under load.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+110,"The change of cross sectional area of conductor in magnetic field will affect
+
+Options:
+(A)reluctance of conductor.
+(B)resistance of conductor.
+(C)(A) and (B) both in the same way.
+(D)none of above.
+",(C),"The cross-sectional area of a conductor affects its resistance (since resistance \( R = \rho L / A \)), but reluctance is a property of magnetic circuits, not conductors in the sense of electric current flow.  
+Reluctance depends on the material and geometry of the magnetic path, but for a conductor placed in a magnetic field, changing its cross-sectional area doesn’t directly change the reluctance of the magnetic circuit unless it’s part of the core — which is not implied here.  
+Thus, only resistance is affected.  
+
+Final answer: (B)",(B),(C),False,option_letter,,cot_fs,electrical_engineering,1
+111,"Which of the following is used in SCR to protect from high dV / dt?
+
+Options:
+(A)Snubber circuit.
+(B)Fuse.
+(C)Equalizing circuit.
+(D)Circuit breaker.
+",(A),"A snubber circuit (typically an RC network) is used across an SCR to limit the rate of rise of voltage (dV/dt) and prevent false triggering.  
+Fuses, circuit breakers, and equalizing circuits serve other protection roles (overcurrent, overvoltage sharing), but not primarily for high dV/dt.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+112,"What are the sets of commands in a program which are not translated into machine instructions during assembly process, called?
+
+Options:
+(A)Mnemonics
+(B)Directives
+(C)Identifiers
+(D)Operands
+",(B),"Mnemonics are the instructions that get translated into machine code.  
+Directives (or pseudo-ops) tell the assembler something but do not become machine instructions.  
+Identifiers are names for data or addresses.  
+Operands are the data part of an instruction.  
+
+The question asks for commands **not** translated into machine instructions — those are directives.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+113,"Speed of data transmission in 4-G network of telecom is
+
+Options:
+(A)386 kbps - 2 mbps.
+(B)2 mbps.
+(C)2 mbps – 1 gbps.
+(D)100 mbps - 1 gbps.
+",(D),"The 4G network is designed for high-speed data transmission, typically offering peak download speeds in the range of 100 Mbps to 1 Gbps under ideal conditions, though real-world speeds are often lower.  
+Comparing the options:  
+- (A) 386 kbps – 2 mbps → too slow (3G range)  
+- (B) 2 mbps → too slow  
+- (C) 2 mbps – 1 gbps → includes lower speeds not typical of 4G  
+- (D) 100 mbps – 1 gbps → matches the expected 4G speed range  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+114,"Which of the followings is/are active element?
+
+Options:
+(A)Voltage source
+(B)Current source
+(C)Both
+(D)None of these.
+",(C),"Voltage sources and current sources are both capable of supplying power to a circuit independently, making them active elements.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+115,"Electrical analogous quantity for spring element (K) in force-voltage analogy is
+
+Options:
+(A)L
+(B)R
+(C)1/C
+(D)C
+",(C),"In force-voltage analogy, mechanical spring stiffness \( K \) corresponds to electrical capacitance \( C \) in the inverse form \( 1/C \).  
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+116,"A quartz crystal oscillator consists of
+
+Options:
+(A)only series resonant frequency.
+(B)only parallel resonant frequency.
+(C)both series and parallel frequencies.
+(D)neither series nor parallel frequency.
+",(C),"A quartz crystal oscillator operates based on the piezoelectric effect, where the crystal can vibrate at two closely spaced resonant frequencies: one series and one parallel.  
+The series resonance occurs when the crystal's inductive and capacitive reactances cancel in the series branch, and the parallel resonance occurs when the crystal's motional inductance resonates with the parallel (shunt) capacitance.  
+Both frequencies are utilized in oscillator circuits depending on the circuit configuration and load capacitance.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+117,"Which of the following oscillators are used for low frequency (LF) applications
+
+Options:
+(A)LC oscillators
+(B)RC oscillators
+(C)Both LC and RC Oscillators
+(D)None
+",(B),"RC oscillators are generally used for low-frequency applications because they can generate stable oscillations at lower frequencies more effectively than LC oscillators, which are better suited for higher frequencies.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+118,"The solid angle subtended by an area of 2400 cm^2 on the surface of a sphere of diameter 1.2 m is
+
+Options:
+(A)3 / 2.
+(B)1 / 3.
+(C)2 / 3.
+(D)2 / 5.
+",(C),"The solid angle \(\Omega\) is given by \(\Omega = \frac{A}{r^2}\), where \(A\) is the area on the sphere’s surface and \(r\) is the sphere’s radius.  
+
+Given:  
+- \(A = 2400 \text{ cm}^2 = 2400 \times 10^{-4} \text{ m}^2 = 0.24 \text{ m}^2\)  
+- Diameter = \(1.2 \text{ m}\), so \(r = 0.6 \text{ m}\)  
+
+\[
+\Omega = \frac{0.24}{(0.6)^2} = \frac{0.24}{0.36} = \frac{2}{3}
+\]
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+119,"Relative error is same as
+
+Options:
+(A)ratio of absolute error and true value.
+(B)absolute error.
+(C)true error.
+(D)none of the above.
+",(A),"Relative error is defined as the ratio of the absolute error to the true value.  
+That matches option (A).  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+120,"If holding current of a thyristor is 2 mA then latching current should be
+
+Options:
+(A)0.01 A.
+(B)0.002 A.
+(C)0.009 A.
+(D)0.004 A.
+",(D),"The latching current for a thyristor is typically 2 to 3 times the holding current.  
+Holding current = 2 mA = 0.002 A.  
+So latching current ≈ 0.004 A to 0.006 A.  
+Among the options, 0.004 A = 2 × holding current, which fits the typical ratio.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+121,"In an intel 8085A, which is the first machine cycle of an instruction?
+
+Options:
+(A)An op-code fetch cycle
+(B)A memory read cycle
+(C)A memory write cycle
+(D)An I/O read cycle
+",(A),"In the Intel 8085A microprocessor, the first machine cycle of any instruction is always the **op-code fetch cycle**, during which the processor fetches the instruction opcode from memory.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+122,"Which of the following are the disadvantages of a closed loop control system?
+
+Options:
+(A)Reduces the overall gain.
+(B)Complex and costly.
+(C)Oscillatory response.
+(D)All of the above.
+",(D),"A closed loop control system generally has higher accuracy due to feedback, but it also has some disadvantages:  
+- It reduces the overall gain because part of the output is fed back to the input.  
+- It is more complex and costly than open loop systems due to additional components like sensors and feedback paths.  
+- It can exhibit oscillatory or unstable response if not properly designed.  
+
+Since all three listed options are valid disadvantages, the correct choice is ""All of the above.""  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+123,"Poles and zeros are arranged alternatively on negative real axis, then type of network is/are
+
+Options:
+(A)LC network.
+(B)RC network.
+(C)RL network.
+(D)Both 2 and 3.
+",(D),"Poles and zeros alternating on the negative real axis is a property of RC and RL networks, because in LC networks poles and zeros occur on the imaginary axis or in complex conjugate pairs, not alternating on the negative real axis.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+124,"The magnetisation and applied field in ferromagnetic materials are related
+
+Options:
+(A)sinusoidally.
+(B)non linearly.
+(C)linearly.
+(D)parabolically.
+",(B),"In ferromagnetic materials, the relationship between magnetization and applied field exhibits hysteresis and saturation effects, meaning the magnetization does not increase linearly with the applied field after a certain point. This behavior is inherently nonlinear.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+125,"Thin laminations are used in a machine in order to reduce
+
+Options:
+(A)Eddy current losses
+(B)Hysteresis losses
+(C)Both A and B
+(D)Copper losses
+",(A),"Thin laminations in electrical machines are primarily used to reduce eddy current losses by increasing the resistance to circulating currents within the core.  
+Hysteresis losses depend on the magnetic material properties and are not significantly reduced by laminations.  
+Copper losses occur in windings, not in the core.  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+126,"A metal surface with 1 meter radius and surface charge density of 20 coulombs / m2 is enclosed in a 10 m side cube. The total outward electric displacement normal to the surface of the cube is
+
+Options:
+(A)40π coulombs.
+(B)80π coulombs.
+(C)10π coulombs.
+(D)none of these.
+",(B),"We can use Gauss’s law for electric displacement:  
+\[
+\oint_S \mathbf{D} \cdot d\mathbf{A} = Q_{\text{free enclosed}}
+\]  
+Here, \( Q_{\text{free enclosed}} \) is the total free charge inside the closed surface.  
+
+The metal surface is a sphere of radius \( 1 \ \text{m} \) with surface charge density \( \sigma = 20 \ \text{C/m}^2 \).  
+Surface area of sphere:  
+\[
+A_{\text{sphere}} = 4\pi r^2 = 4\pi (1)^2 = 4\pi \ \text{m}^2
+\]  
+Total charge enclosed:  
+\[
+Q = \sigma \times A_{\text{sphere}} = 20 \times 4\pi = 80\pi \ \text{C}
+\]  
+
+The cube (side 10 m) fully encloses the sphere, so the total free charge inside the cube is \( 80\pi \ \text{C} \).  
+
+By Gauss’s law:  
+\[
+\oint \mathbf{D} \cdot d\mathbf{A} = Q_{\text{free inside}} = 80\pi
+\]  
+
+Thus, the total outward electric displacement normal to the cube’s surface is \( 80\pi \ \text{C} \).  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+127,"In binary number system the first digit (bit) from right to left is called as
+
+Options:
+(A)LSB, Least Significant Bit
+(B)MSB, Most Significant Bit
+(C)First Bit
+(D)Last Bit
+",(A),"In binary representation, the rightmost bit is the one with the smallest weight (2⁰ = 1), so it is called the Least Significant Bit (LSB).  
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+128,"In two wattmeter method of power measurement if the total power is measured by one wattmeter only then power factor of the system is
+
+Options:
+(A)0.
+(B)0.5.
+(C)1.
+(D)none of above.
+",(B),"In the two-wattmeter method for a three-phase system, if the total power is measured by only one wattmeter, it implies that the other wattmeter reads zero.  
+This happens when the power factor is 0.5 (cos φ = 0.5, φ = 60°), because at that phase angle, one wattmeter’s reading becomes zero while the other measures the total power.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+129,"A 0 - 100 V voltmeter has a guaranteed accuracy of 2 % of full scale reading. The voltage measured by the voltmeter is 75 V. The limiting error is in percentage
+
+Options:
+(A)3.33 %.
+(B)2.66 %.
+(C)2 %.
+(D)1 %.
+",(B),"The full-scale reading is 100 V, and the guaranteed accuracy is 2% of full scale, so the maximum possible error is:  
+
+\[
+\text{Error} = 2\% \times 100 = 2 \text{ V}
+\]
+
+When measuring 75 V, the limiting error as a percentage of the reading is:  
+
+\[
+\frac{2}{75} \times 100\% \approx 2.666\%
+\]
+
+That matches 2.66% in the options.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+130,"Which of the following methods is/are used for reactive or voltage compensation
+
+Options:
+(A)shunt capacitor
+(B)series capacitor
+(C)generation excitation control
+(D)all of the above
+",(D),"Reactive or voltage compensation methods include using shunt capacitors to improve power factor, series capacitors to reduce inductive reactance in transmission lines, and generator excitation control to regulate terminal voltage.  
+All three listed methods are valid techniques for reactive or voltage compensation.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+131,"The ROM programmed during manufacturing process itself is called
+
+Options:
+(A)MROM
+(B)PROM
+(C)EPROM
+(D)EEPROM
+",(A),"ROMs programmed during the manufacturing process are mask-programmed and cannot be altered afterward, which matches the definition of MROM (Mask Read-Only Memory).  
+
+Final answer: (A)",(A),(A),True,option_letter,,cot_fs,electrical_engineering,1
+132,"In 8085 name/names of the 16 bit registers is/are
+
+Options:
+(A)stack pointer.
+(B)program counter.
+(C)both A and B.
+(D)none of these.
+",(C),"In the Intel 8085 microprocessor, the stack pointer (SP) and program counter (PC) are both 16-bit registers used for managing memory addresses — SP for the stack and PC for the next instruction address.  
+Therefore, both A and B are correct.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+133,"Stability of a transmission line can be increased by
+
+Options:
+(A)shunt capacitor
+(B)series capacitor
+(C)shunt reactor
+(D)both A and B
+",(D),"Stability in a transmission line is primarily related to maintaining synchronism and improving power transfer capability.  
+- **Shunt capacitors** improve voltage profile by compensating for reactive power losses, indirectly aiding stability.  
+- **Series capacitors** reduce the series inductive reactance, thereby increasing the power transfer limit and directly improving transient stability.  
+- **Shunt reactors** are used in lightly loaded lines to absorb reactive power and control voltage, but they do not generally increase stability in the same way as series capacitors.  
+
+Since both shunt capacitors and series capacitors can improve stability (though through different mechanisms), the correct choice is ""both A and B"".  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+134,"Snubber circuit is used with SCR
+
+Options:
+(A)in series.
+(B)in parallel.
+(C)either series or parallel.
+(D)anti parallel.
+",(B),"A snubber circuit is used with an SCR primarily to suppress voltage transients and limit the rate of rise of voltage (dv/dt) across the device.  
+This is typically achieved by placing an RC snubber circuit **in parallel** with the SCR.  
+
+Final answer: (B)",(B),(B),True,option_letter,,cot_fs,electrical_engineering,1
+135,"The number of rings in the Bohr model of any element is determined by what?
+
+Options:
+(A)Column number on periodic table.
+(B)Atomic mass.
+(C)Row number on periodic table.
+(D)Atomic number.
+",(C),"The Bohr model arranges electrons in discrete energy levels or shells, and the number of these shells corresponds to the period (row) in the periodic table.  
+For example, hydrogen and helium are in row 1 and have 1 shell, lithium to neon are in row 2 and have 2 shells, and so on.  
+This is determined by the principal quantum number \( n \), which matches the row number.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+136,"Silicon and Germanium are ________ elements.
+
+Options:
+(A)trivalant
+(B)pentavalant
+(C)hexavalant
+(D)tetravalant
+",(D),"Silicon and Germanium are both in group 14 of the periodic table, which means they have four valence electrons and are tetravalent.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+137,"The number of output pins in 8085 microprocessors are
+
+Options:
+(A)27.
+(B)40.
+(C)21.
+(D)19.
+",(A),"The 8085 microprocessor has 40 pins in total, but not all are output pins.  
+It has 16 address lines (A8–A15 and AD0–AD7, the latter multiplexed), 8 data lines (multiplexed with lower address lines), and various control signals (RD, WR, IO/M, etc.).  
+Counting only dedicated output pins:  
+- Higher-order address bus (A8–A15): 8 output pins  
+- Control signals like WR, S0, S1: some are outputs  
+But the question likely refers to the total number of pins that can serve as outputs, which is not 40 because many are input or bidirectional.  
+However, standard answer from typical competitive exams: 8085 has **40 pins** in its DIP package, and the number of output pins is **21** (address lines A8–A15 = 8, status lines = 5, control outputs = 6, plus ALE and possibly others).  
+
+Final answer: (C)",(C),(A),False,option_letter,,cot_fs,electrical_engineering,1
+138,"If P is the power of a star connected system then what will be power of an equivalent delta connected system?
+
+Options:
+(A)P
+(B)3P
+(C)P/3
+(D)None of the above
+",(A),"In a star connection, the line voltage is \( \sqrt{3} \) times the phase voltage and the line current equals the phase current.  
+In a delta connection, the line voltage equals the phase voltage and the line current is \( \sqrt{3} \) times the phase current.  
+
+For the same impedance per phase, the phase voltage in delta is \( \sqrt{3} \) times that in star, so the phase power in delta is \( 3 \) times that in star.  
+Since total power = \( 3 \times \) phase power, the delta system’s total power is \( 3 \) times the star system’s total power for the same impedance.  
+
+Thus, if star power is \( P \), delta power is \( 3P \).  
+
+Final answer: (B)",(B),(A),False,option_letter,,cot_fs,electrical_engineering,1
+139,"Which oscillators are easy to fabricate in a monolithic IC?
+
+Options:
+(A)Crystal oscillator.
+(B)Hartley oscillator.
+(C)Wien bridge oscillator.
+(D)Relaxation oscillator.
+",(D),"Relaxation oscillators are easier to fabricate in monolithic ICs because they typically require only resistors, capacitors, and switching elements (like transistors or logic gates), which are straightforward to integrate.  
+Crystal oscillators need a piezoelectric crystal, which is not easily integrated into a silicon chip.  
+Hartley and Wien bridge oscillators generally require inductors or more precise passive components, which are less ideal for monolithic integration.  
+
+Final answer: (D)",(D),(D),True,option_letter,,cot_fs,electrical_engineering,1
+140,"If all the elements in a particular network are linear, then the superposition theorem would hold, when the excitation is
+
+Options:
+(A)DC only
+(B)AC only
+(C)Either AC or DC
+(D)An Impulse
+",(C),"The superposition theorem applies to linear networks regardless of the type of excitation, as long as all elements are linear.  
+It works for DC sources, AC sources, or a combination of both.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+141,"The feedback factor of a Wien bridge oscillator using Op-Amp is
+
+Options:
+(A)1/3
+(B)1/4
+(C)1/2
+(D)1
+",(C),"The Wien bridge oscillator uses a lead-lag network (RC network) in the feedback path.  
+For oscillations to occur, the loop gain must satisfy the Barkhausen criterion.  
+The feedback network’s transfer function at the resonant frequency \( f = \frac{1}{2\pi RC} \) gives a phase shift of 0° and a feedback factor \( \beta = \frac{1}{3} \).  
+Thus, the amplifier must have a gain of 3 to make \( A\beta = 1 \).  
+
+Final answer: (A)",(A),(C),False,option_letter,,cot_fs,electrical_engineering,1
+142,"The length of bus cycle in 8086/8088 is four clock cycles, T1, T2, T3, T4 and an indeterminate number of wait state clock cycles denoted by Tw. The wait states are always inserted between
+
+Options:
+(A)T1 & T2
+(B)T2 & T3
+(C)T3 & T4
+(D)T4 & T1
+",(C),"In the 8086/8088 microprocessor, wait states (Tw) are inserted when the memory or I/O device is not ready to complete the data transfer in the standard bus cycle.  
+The T3 clock cycle is when data is normally read from the bus. If the READY signal is low at the beginning of T3, wait states are inserted between T3 and T4 until READY becomes high.  
+
+Thus, wait states are inserted between T3 and T4.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+143,"Which of the following is not a sinusoidal oscillator?
+
+Options:
+(A)LC oscillator
+(B)RC phase shift oscillator
+(C)Relaxation oscillator
+(D)Crystal oscillator
+",(C),"A sinusoidal oscillator produces a smooth, continuous sinusoidal waveform.  
+- LC oscillators, RC phase shift oscillators, and crystal oscillators all generate sinusoidal outputs.  
+- A relaxation oscillator produces a non-sinusoidal output (e.g., square or triangular waves).  
+
+Thus, the relaxation oscillator is not a sinusoidal oscillator.  
+
+Final answer: (C)",(C),(C),True,option_letter,,cot_fs,electrical_engineering,1
+144,"A wire carrying current is bent in the form of a circular loop. Then the magnetic field around each portion of the wire will be
+
+Options:
+(A)parallel to the plane of the wire.
+(B)perpendicular to the circumference of the wire.
+(C)parallel to half portion and perpendicular for the other half.
+(D)none of above.
+",(A),"For a circular loop carrying current, the magnetic field at the center is perpendicular to the plane of the loop (along the axis).  
+Around each small portion of the wire, the magnetic field lines form concentric circles around that portion, so at any point just outside the wire, the magnetic field is tangential to such a circle — meaning it is perpendicular to the radius from the center of the loop, i.e., perpendicular to the circumference of the wire at that point.  
+
+Final answer: (B)",(B),(A),False,option_letter,,cot_fs,electrical_engineering,1

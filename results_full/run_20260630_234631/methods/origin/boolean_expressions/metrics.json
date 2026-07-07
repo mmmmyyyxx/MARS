@@ -19,5 +19,5 @@
   "num_iterations": 1,
   "exactness": "prompt_dependent",
   "exactness_level": "prompt_dependent",
-  "runtime_seconds": 493.9159610271454
+  "runtime_seconds": 0.22791790962219238
 }

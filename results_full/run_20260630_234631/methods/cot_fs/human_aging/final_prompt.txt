@@ -1,0 +1,39 @@
+Answer MMLU multiple-choice questions in Human Aging.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).
+
+Example question:
+The study of older adults and aging is referred to as
+
+Options:
+(A)Gerontology
+(B)Geropsychiatry
+(C)Geriatrics
+(D)Gero-education
+
+Example answer:
+Final answer: (A)
+
+Example question:
+Which of the following factors is associated with a decreased risk of Alzheimer's?
+
+Options:
+(A)Being African or Hispanic American
+(B)Eating fish
+(C)A lower level of education
+(D)Being married
+
+Example answer:
+Final answer: (B)
+
+Example question:
+The docility hypothesis is that
+
+Options:
+(A)Those with low capabilities are more vulnerable to environmental demands
+(B)Those who experience high environmental demands become more docile
+(C)Those who experience high environmental demands become less docile
+(D)Those with less capability are less vulnerable to environmental demands
+
+Example answer:
+Final answer: (A)

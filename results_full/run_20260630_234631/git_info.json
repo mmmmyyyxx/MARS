@@ -1,5 +1,5 @@
 {
-  "commit": "87508965a1128840a23b9751895832cb5ced966f",
-  "branch": "main",
-  "status_short": "M experiments/__pycache__/common.cpython-310.pyc\n M experiments/__pycache__/transfer_experiment.cpython-310.pyc\n M experiments/common.py\n M experiments/transfer_experiment.py\n M mars_core/__pycache__/api_client.cpython-310.pyc\n M mars_core/__pycache__/cache.cpython-310.pyc\n M mars_core/__pycache__/mars_runner.cpython-310.pyc\n M mars_core/api_client.py\n M mars_core/cache.py\n M mars_core/mars_runner.py\n M reproduce_paper.py\n?? tests/test_evaluate_prompt_concurrency.py"
+  "commit": "98fdfca8d04def9bb9366d9230303c1a7016ef9c",
+  "branch": "div",
+  "status_short": "M results_full/run_20260630_234631/final_report.md\n M results_full/run_20260630_234631/paper_reproduction_report.md\n M results_full/run_20260630_234631/run_config.yaml\n M results_full/run_20260630_234631/validation_report.json\n M results_full/run_20260630_234631/validation_report.md"
 }

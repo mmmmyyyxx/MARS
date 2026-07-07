@@ -21,9 +21,9 @@ Paper reference values are used only for comparison and are never substituted fo
 ## Matrix Coverage
 
 - registered_tasks: 17
-- main_methods: mars_official
-- expected_main_task_method_pairs: 12
-- completed_main_task_method_pairs: 12
+- main_methods: origin, cot_zs, cot_fs
+- expected_main_task_method_pairs: 36
+- completed_main_task_method_pairs: 36
 - main_coverage_fraction: 1.0000
 - partial_pairs: 0
 - failed_pairs: 0
@@ -31,11 +31,11 @@ Paper reference values are used only for comparison and are never substituted fo
 
 ## Suite Rows
 
-- main: 12
+- main: 36
 
 ## Status
 
-- completed: 12
+- completed: 36
 
 ## Error Summary
 
@@ -44,33 +44,34 @@ Paper reference values are used only for comparison and are never substituted fo
 
 ## Resume / Run-State Summary
 
-- completed: 12
+- completed: 36
 - skipped_complete: 0
 - partial: 0
 - failed: 0
 
 ## Output Validation Summary
 
-- validation_errors: 102
+- validation_errors: 0
 - validation_warnings: 0
 
 ## Cost and API Summary
 
-- total_api_call_records: 18476
-- total_tokens: 5069636
-- total_estimated_tokens: 7400072
-- cache_hit_rate: 0.1771
+- total_api_call_records: 25694
+- total_tokens: 7879413
+- total_estimated_tokens: 10432610
+- cache_hit_rate: 0.1568
 - total_estimated_cost: 0.000000
-- mean_latency_seconds: 3.4038
+- mean_latency_seconds: 3.8830
 
 ## Paper Reference Comparison
 
-- comparable_rows: 6
-- mars_average_delta_percentage_points: -3.79
+- comparable_rows: 36
+- mars_average_delta_percentage_points: unavailable
 
 ## Exactness Status
 
-- faithful_reimplementation: 12
+- prompt_dependent: 12
+- faithful_reimplementation: 24
 
 |Method|Exactness|Notes|
 |---|---|---|

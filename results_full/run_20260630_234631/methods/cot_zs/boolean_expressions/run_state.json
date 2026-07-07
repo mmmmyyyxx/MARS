@@ -14,7 +14,7 @@
     "test": "a45f5c5d0116216e2e327a6f58d5d79ba832452d392be9d71d4198237ec6783a"
   },
   "prompt_hash": "4344937aba595e03931fb95632c1becd5498fbf31ea1bffb8402210a7b19e0b0",
-  "method_config_hash": "55f03b3f4e2063ca52ae1efd6ffb6b2c6a1c9d01653c1f84cb5d28a9bd9854ac",
+  "method_config_hash": "36167d7925efbd832522847ac970f1fdba13b01efecffc8b6bafd233b46e2510",
   "status": "completed",
   "expected_sample_ids": [
     0,
@@ -522,7 +522,7 @@
   ],
   "failed_sample_ids": [],
   "started_at": null,
-  "completed_at": "2026-06-30T17:36:31Z",
+  "completed_at": "2026-07-06T12:35:28Z",
   "error_message": null,
-  "config_hash": "55f03b3f4e2063ca52ae1efd6ffb6b2c6a1c9d01653c1f84cb5d28a9bd9854ac"
+  "config_hash": "36167d7925efbd832522847ac970f1fdba13b01efecffc8b6bafd233b46e2510"
 }

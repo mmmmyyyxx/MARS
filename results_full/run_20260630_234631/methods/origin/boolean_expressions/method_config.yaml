@@ -9,7 +9,7 @@ temperature: 0.6
 pricing:
   prompt_per_1k: 0.0
   completion_per_1k: 0.0
-config_hash: efcc7681e4224ee8946212f34c59a6b786d66d9a06ad52a5f562031749f6a15d
+config_hash: deb6d0abfaea67c5544e72968f269af4fc6aa82fdaf158ce0d61d3152107a87e
 eval_protocol: paper_mode
 num_opt_samples: 250
 num_val_samples: 250

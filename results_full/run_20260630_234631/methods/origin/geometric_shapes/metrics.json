@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.432,
+  "num_samples": 250,
+  "num_correct": 108,
+  "num_failed": 142,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "geometric_shapes",
+  "method_id": "origin",
+  "method_display_name": "Origin",
+  "answer_format": "option_letter",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.432,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "prompt_dependent",
+  "exactness_level": "prompt_dependent",
+  "runtime_seconds": 113.25910472869873
+}

@@ -1,0 +1,39 @@
+Answer MMLU multiple-choice questions in Marketing.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).
+
+Example question:
+This is a hierarchy of effects or sequential model used to explain how advertising works:
+
+Options:
+(A)ADD.
+(B)AIDA.
+(C)PESTLE.
+(D)SWOT.
+
+Example answer:
+Final answer: (B)
+
+Example question:
+ _____________is an important element in the communication process. It recognizes that successful communications are more likely to be achieved if the source and the receiver understand each other.
+
+Options:
+(A)The realm of understanding.
+(B)Personal selling.
+(C)Noise.
+(D)Feedback.
+
+Example answer:
+Final answer: (A)
+
+Example question:
+In the history of marketing, when did the production period end?
+
+Options:
+(A)In the late 1800s.
+(B)In the early 1900s.
+(C)In the 1920s.
+(D)After the end of the Second World War.
+
+Example answer:
+Final answer: (C)

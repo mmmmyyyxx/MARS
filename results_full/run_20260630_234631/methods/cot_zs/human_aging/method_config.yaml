@@ -1,0 +1,18 @@
+display_name: CoT(ZS)
+type: direct
+exactness: faithful_reimplementation
+exactness_level: faithful_reimplementation
+exactness_note: Local zero-shot chain-of-thought template.
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 36167d7925efbd832522847ac970f1fdba13b01efecffc8b6bafd233b46e2510
+eval_protocol: paper_mode
+num_opt_samples: 223
+num_val_samples: 223
+num_test_samples: 223
+opt_hash: 1c13c3d9305e1377ca92dc2f77eddbb61bcc979915fd666fa3c9068b399b9f7f
+val_hash: 1c13c3d9305e1377ca92dc2f77eddbb61bcc979915fd666fa3c9068b399b9f7f
+test_hash: 1c13c3d9305e1377ca92dc2f77eddbb61bcc979915fd666fa3c9068b399b9f7f

@@ -1,0 +1,19 @@
+display_name: Origin
+type: direct
+exactness: prompt_dependent
+exactness_level: prompt_dependent
+exactness_note: Prompt-dependent; exact only when the local origin prompt matches
+  the original paper prompt.
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: deb6d0abfaea67c5544e72968f269af4fc6aa82fdaf158ce0d61d3152107a87e
+eval_protocol: paper_mode
+num_opt_samples: 250
+num_val_samples: 250
+num_test_samples: 250
+opt_hash: 94307963003ffda6807fcf0ddbb018f997543934041e3b16893c0881693e6847
+val_hash: 94307963003ffda6807fcf0ddbb018f997543934041e3b16893c0881693e6847
+test_hash: 94307963003ffda6807fcf0ddbb018f997543934041e3b16893c0881693e6847

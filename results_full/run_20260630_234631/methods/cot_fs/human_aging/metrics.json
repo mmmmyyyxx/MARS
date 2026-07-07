@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.8161434977578476,
+  "num_samples": 223,
+  "num_correct": 182,
+  "num_failed": 41,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "human_aging",
+  "method_id": "cot_fs",
+  "method_display_name": "CoT(FS)",
+  "answer_format": "option_letter",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.8161434977578476,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "faithful_reimplementation",
+  "exactness_level": "faithful_reimplementation",
+  "runtime_seconds": 283.68319487571716
+}

@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.9583333333333334,
+  "num_samples": 144,
+  "num_correct": 138,
+  "num_failed": 6,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "college_biology",
+  "method_id": "origin",
+  "method_display_name": "Origin",
+  "answer_format": "option_letter",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.9583333333333334,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "prompt_dependent",
+  "exactness_level": "prompt_dependent",
+  "runtime_seconds": 70.53954458236694
+}

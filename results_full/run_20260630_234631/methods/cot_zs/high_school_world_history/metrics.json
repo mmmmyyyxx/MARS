@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.5189873417721519,
+  "num_samples": 237,
+  "num_correct": 123,
+  "num_failed": 114,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "high_school_world_history",
+  "method_id": "cot_zs",
+  "method_display_name": "CoT(ZS)",
+  "answer_format": "option_letter",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.5189873417721519,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "faithful_reimplementation",
+  "exactness_level": "faithful_reimplementation",
+  "runtime_seconds": 506.5835072994232
+}

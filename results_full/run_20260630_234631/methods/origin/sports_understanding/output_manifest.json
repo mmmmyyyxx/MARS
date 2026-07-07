@@ -1,0 +1,28 @@
+{
+  "required_files": [
+    "method_config.yaml",
+    "run_state.json",
+    "metrics.json",
+    "output_manifest.json",
+    "predictions.csv",
+    "prompt_accuracy_history.csv",
+    "best_prompt.txt",
+    "final_prompt.txt",
+    "diagnostics.md",
+    "api_calls.csv",
+    "raw_logs.txt"
+  ],
+  "created_files": [
+    "api_calls.csv",
+    "best_prompt.txt",
+    "diagnostics.md",
+    "final_prompt.txt",
+    "method_config.yaml",
+    "metrics.json",
+    "output_manifest.json",
+    "predictions.csv",
+    "prompt_accuracy_history.csv",
+    "raw_logs.txt",
+    "run_state.json"
+  ]
+}

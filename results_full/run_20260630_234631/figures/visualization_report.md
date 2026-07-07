@@ -2,14 +2,15 @@
 
 - run_dir: results_full\run_20260630_234631
 - suites: main
-- rows: 12
+- rows: 48
 - api_errors: 0
 - parse_errors: 0
-- paper_local_overlap_rows: 12
+- paper_local_overlap_rows: 48
 
 ## Reproduction Categories
 
-- faithful_reimplementation: 12
+- faithful_reimplementation: 36
+- prompt_dependent: 12
 
 ## Paper Comparison
 
