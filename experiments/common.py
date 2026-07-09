@@ -304,6 +304,7 @@ def _try_resume_partial_predictions(
         method=method,
         iteration=len(history) or 1,
         max_answer_retries=settings.max_answer_retries,
+        legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
     )
     existing = read_predictions(predictions_path)
     merged = _merge_predictions(existing=existing, fresh=fresh, test_rows=test_rows)
@@ -361,6 +362,8 @@ def run_task_method(
             "legacy_skip_first_data_row": settings.legacy_skip_first_data_row,
             "max_answer_retries": settings.max_answer_retries,
             "planner_strict_mode": settings.planner_strict_mode,
+            "legacy_target_prompt_mode": settings.legacy_target_prompt_mode,
+            "target_call_count_limit": settings.target_call_count_limit,
         }
     )
     expected_ids = expected_sample_ids(splits["test"])
@@ -434,6 +437,8 @@ def run_task_method(
     method_config["legacy_skip_first_data_row"] = settings.legacy_skip_first_data_row
     method_config["max_answer_retries"] = settings.max_answer_retries
     method_config["planner_strict_mode"] = settings.planner_strict_mode
+    method_config["legacy_target_prompt_mode"] = settings.legacy_target_prompt_mode
+    method_config["target_call_count_limit"] = settings.target_call_count_limit
     method_config.update(split_row)
     initial_prompt = None
     initial_metadata: dict[str, Any] = {}
@@ -482,6 +487,7 @@ def run_task_method(
                 if method == "origin" and _legacy_initial_prompt_enabled(settings)
                 else None,
                 max_answer_retries=settings.max_answer_retries,
+                legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
             )
         else:
             metrics = runner(
@@ -498,6 +504,7 @@ def run_task_method(
                 if _legacy_initial_prompt_enabled(settings)
                 else None,
                 max_answer_retries=settings.max_answer_retries,
+                legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
             )
     elif method_type == "mars_official":
         metrics = run_mars_official(
@@ -518,6 +525,8 @@ def run_task_method(
             else None,
             max_answer_retries=settings.max_answer_retries,
             planner_strict_mode=settings.planner_strict_mode,
+            legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
+            target_call_count_limit=settings.target_call_count_limit,
         )
     elif method_type == "mars_light" or method.startswith("mars"):
         metrics = run_mars_variant(

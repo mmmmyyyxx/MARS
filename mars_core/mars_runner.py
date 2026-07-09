@@ -68,6 +68,8 @@ class RunSettings:
     legacy_skip_first_data_row: bool = False
     max_answer_retries: int = 1
     planner_strict_mode: bool = False
+    legacy_target_prompt_mode: bool = True
+    target_call_count_limit: int = 10
 
 
 def load_yaml(path: str | Path) -> dict[str, Any]:
@@ -142,6 +144,27 @@ def split_info(
 
 def build_question_prompt(base_prompt: str, question: str, instruction: str) -> str:
     return f"{base_prompt.strip()}\n\nQuestion:\n{question}\n\n{instruction.strip()}"
+
+
+LEGACY_TARGET_SYSTEM = "You are a helpful assistant"
+LEGACY_CHOICE_INSTRUCTION = (
+    "Please don't output the process of doing the question, only the content of "
+    "the answer. The answer should be a parenthesis containing the capital letter "
+    "of the chosen answer. Please do not add any other spaces or symbols."
+)
+LEGACY_SHORT_ANSWER_INSTRUCTION = (
+    "Please don't output the process of doing the question, only the content of "
+    "the answer."
+)
+
+
+def build_legacy_target_prompt(task: TaskSpec, base_prompt: str, question: str) -> str:
+    instruction = (
+        LEGACY_CHOICE_INSTRUCTION
+        if (task.answer_format or "").lower() == "option_letter"
+        else LEGACY_SHORT_ANSWER_INSTRUCTION
+    )
+    return f"{base_prompt}\nQuestion: {question}\n {instruction}"
 
 
 LEGACY_INITIAL_PROMPT_SEED = "Think step by step and solve the question."
@@ -260,12 +283,17 @@ def evaluate_prompt(
     iteration: int,
     out_dir: Path | None = None,
     max_answer_retries: int = 1,
+    legacy_target_prompt_mode: bool = False,
 ) -> list[dict[str, Any]]:
     instruction = answer_instruction(task.answer_format)
     max_attempts = max(1, int(max_answer_retries or 1))
 
     def evaluate_row(row: dict[str, Any]) -> dict[str, Any]:
-        user_prompt = build_question_prompt(prompt, row["question"], instruction)
+        user_prompt = (
+            build_legacy_target_prompt(task, prompt, row["question"])
+            if legacy_target_prompt_mode
+            else build_question_prompt(prompt, row["question"], instruction)
+        )
         error_type = ""
         raw_output = ""
         last_prediction: dict[str, Any] | None = None
@@ -277,7 +305,9 @@ def evaluate_prompt(
                     else f"{row['question']}\n[answer_retry={attempt}]"
                 )
                 raw_output = client.complete_text(
-                    system="You are a careful evaluation assistant.",
+                    system=LEGACY_TARGET_SYSTEM
+                    if legacy_target_prompt_mode
+                    else "You are a careful evaluation assistant.",
                     user=user_prompt,
                     method=method,
                     task_id=task.task_id,
@@ -435,6 +465,7 @@ def run_direct_method(
     few_shot_rows: list[dict[str, Any]] | None = None,
     initial_prompt: str | None = None,
     max_answer_retries: int = 1,
+    legacy_target_prompt_mode: bool = False,
 ) -> dict[str, Any]:
     if method == "origin":
         prompt = initial_prompt or prompts.origin
@@ -464,6 +495,7 @@ def run_direct_method(
         method=method,
         iteration=iteration,
         max_answer_retries=max_answer_retries,
+        legacy_target_prompt_mode=legacy_target_prompt_mode,
     )
     history = [history_record(iteration=iteration, prompt=prompt, predictions=predictions)]
     metrics = write_method_outputs(
@@ -491,6 +523,7 @@ def evaluate_fixed_prompt_method(
     method_config: dict[str, Any],
     out_dir: Path,
     max_answer_retries: int = 1,
+    legacy_target_prompt_mode: bool = False,
 ) -> dict[str, Any]:
     start = time.time()
     predictions = evaluate_prompt(
@@ -501,6 +534,7 @@ def evaluate_fixed_prompt_method(
         method=method,
         iteration=1,
         max_answer_retries=max_answer_retries,
+        legacy_target_prompt_mode=legacy_target_prompt_mode,
     )
     history = [history_record(iteration=1, prompt=prompt, predictions=predictions)]
     metrics = write_method_outputs(
@@ -559,6 +593,7 @@ def run_candidate_method(
     max_iterations: int,
     initial_prompt: str | None = None,
     max_answer_retries: int = 1,
+    legacy_target_prompt_mode: bool = False,
 ) -> dict[str, Any]:
     start = time.time()
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -576,6 +611,7 @@ def run_candidate_method(
         method=method,
         iteration=0,
         max_answer_retries=max_answer_retries,
+        legacy_target_prompt_mode=legacy_target_prompt_mode,
     )
     initial_record = history_record(
         iteration=0,
@@ -636,6 +672,7 @@ def run_candidate_method(
             method=method,
             iteration=iteration,
             max_answer_retries=max_answer_retries,
+            legacy_target_prompt_mode=legacy_target_prompt_mode,
         )
         record = history_record(
             iteration=iteration,
@@ -660,6 +697,7 @@ def run_candidate_method(
         method=method,
         iteration=best_iteration,
         max_answer_retries=max_answer_retries,
+        legacy_target_prompt_mode=legacy_target_prompt_mode,
     )
 
     write_jsonl(out_dir / "candidate_prompts.jsonl", candidates)

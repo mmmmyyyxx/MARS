@@ -16,6 +16,8 @@ presets:
     legacy_skip_first_data_row: true
     max_answer_retries: 5
     planner_strict_mode: true
+    legacy_target_prompt_mode: true
+    target_call_count_limit: 10
     cache_enabled: true
   mars_full:
     description: Run the 17-task MARS method slice within the full reproduction framework.
@@ -29,6 +31,8 @@ presets:
     legacy_skip_first_data_row: true
     max_answer_retries: 5
     planner_strict_mode: true
+    legacy_target_prompt_mode: true
+    target_call_count_limit: 10
     cache_enabled: true
   paper_full:
     description: Reproduce main, ablation, efficiency, convergence, and cross-model transfer suites.
@@ -49,6 +53,8 @@ presets:
     legacy_skip_first_data_row: true
     max_answer_retries: 5
     planner_strict_mode: true
+    legacy_target_prompt_mode: true
+    target_call_count_limit: 10
     cache_enabled: true
     cross_model_transfer: true
     efficiency: true

@@ -137,6 +137,7 @@ def run_transfer_suite(
                         "legacy_skip_first_data_row": settings.legacy_skip_first_data_row,
                         "initial_prompt_source": settings.initial_prompt_source,
                         "max_answer_retries": settings.max_answer_retries,
+                        "legacy_target_prompt_mode": settings.legacy_target_prompt_mode,
                     }
                 )
                 client = _target_client(settings, model_config, run_dir, target, method)
@@ -149,6 +150,7 @@ def run_transfer_suite(
                     method_config=method_config,
                     out_dir=method_dir,
                     max_answer_retries=settings.max_answer_retries,
+                    legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
                 )
                 metrics["num_iterations"] = 0
                 write_json(method_dir / "metrics.json", metrics)

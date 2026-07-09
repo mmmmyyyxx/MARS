@@ -11,6 +11,8 @@ max_answer_retries: 5
 initial_prompt_source: legacy_student_generated
 legacy_skip_first_data_row: true
 planner_strict_mode: true
+legacy_target_prompt_mode: true
+target_call_count_limit: 10
 request_timeout: 60
 output_dir: results_mars
 cache_enabled: false

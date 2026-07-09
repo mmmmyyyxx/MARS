@@ -57,6 +57,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-answer-retries", type=int)
     parser.add_argument("--planner-strict-mode", action="store_true")
     parser.add_argument("--no-planner-strict-mode", action="store_true")
+    parser.add_argument("--legacy-target-prompt-mode", action="store_true")
+    parser.add_argument("--no-legacy-target-prompt-mode", action="store_true")
+    parser.add_argument("--target-call-count-limit", type=int)
     parser.add_argument("--request-timeout", type=float, default=120)
     parser.add_argument(
         "--eval-protocol", choices=["paper_mode", "strict_mode"], default="paper_mode"
@@ -123,6 +126,15 @@ def build_run_args(args: argparse.Namespace, matrix: dict[str, Any]) -> argparse
         planner_strict_mode = True
     if args.no_planner_strict_mode:
         planner_strict_mode = False
+    legacy_target_prompt_mode = bool(
+        preset.get("legacy_target_prompt_mode", True)
+        if args.eval_protocol == "paper_mode"
+        else preset.get("legacy_target_prompt_mode", False)
+    )
+    if args.legacy_target_prompt_mode:
+        legacy_target_prompt_mode = True
+    if args.no_legacy_target_prompt_mode:
+        legacy_target_prompt_mode = False
 
     return argparse.Namespace(
         preset=args.preset,
@@ -148,6 +160,10 @@ def build_run_args(args: argparse.Namespace, matrix: dict[str, Any]) -> argparse
         if args.max_answer_retries is not None
         else int(preset.get("max_answer_retries", 5)),
         planner_strict_mode=planner_strict_mode,
+        legacy_target_prompt_mode=legacy_target_prompt_mode,
+        target_call_count_limit=args.target_call_count_limit
+        if args.target_call_count_limit is not None
+        else int(preset.get("target_call_count_limit", 10)),
         request_timeout=args.request_timeout,
         eval_protocol=args.eval_protocol,
         split_seed=args.split_seed,
@@ -313,6 +329,8 @@ def run_from_args(args: argparse.Namespace) -> int:
         legacy_skip_first_data_row=args.legacy_skip_first_data_row,
         max_answer_retries=args.max_answer_retries,
         planner_strict_mode=args.planner_strict_mode,
+        legacy_target_prompt_mode=args.legacy_target_prompt_mode,
+        target_call_count_limit=args.target_call_count_limit,
     )
     prompt_loader = PromptLoader()
     run_config = vars(args)
