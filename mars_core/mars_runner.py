@@ -4,6 +4,7 @@ import csv
 import hashlib
 import json
 import random
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
@@ -19,6 +20,7 @@ from .evaluator import (
     compute_accuracy,
     compute_final_metrics_from_predictions,
     diagnostics_markdown,
+    is_valid_prediction,
     prediction_row,
     truthy,
 )
@@ -62,6 +64,10 @@ class RunSettings:
     reuse_compatible_cache: bool
     dry_run: bool
     concurrency: int = 1
+    initial_prompt_source: str = "legacy_student_generated"
+    legacy_skip_first_data_row: bool = False
+    max_answer_retries: int = 1
+    planner_strict_mode: bool = False
 
 
 def load_yaml(path: str | Path) -> dict[str, Any]:
@@ -76,17 +82,22 @@ def load_task_specs(path: str | Path = "configs/tasks.yaml") -> dict[str, TaskSp
 
 
 def load_dataset(
-    path: str | Path, max_samples: int | None = None
+    path: str | Path,
+    max_samples: int | None = None,
+    *,
+    skip_first_data_row: bool = False,
 ) -> list[dict[str, Any]]:
     rows = []
     with Path(path).open("r", encoding="utf-8", newline="") as file:
         reader = csv.DictReader(file)
         for index, row in enumerate(reader):
+            if skip_first_data_row and index == 0:
+                continue
             if max_samples is not None and len(rows) >= max_samples:
                 break
             rows.append(
                 {
-                    "sample_id": index,
+                    "sample_id": len(rows),
                     "question": row.get("question", ""),
                     "answer": row.get("answer", ""),
                 }
@@ -133,6 +144,112 @@ def build_question_prompt(base_prompt: str, question: str, instruction: str) -> 
     return f"{base_prompt.strip()}\n\nQuestion:\n{question}\n\n{instruction.strip()}"
 
 
+LEGACY_INITIAL_PROMPT_SEED = "Think step by step and solve the question."
+LEGACY_INITIAL_PROMPT_SYSTEM = (
+    "You are a prompt generator, please proceed to iterate over the existing "
+    "prompts as required.\n"
+    "Note that you should only output the new prompt you generated."
+)
+
+
+def generate_initial_prompt_legacy(
+    client: LLMClient,
+    task: TaskSpec,
+    prompts: TaskPrompts,
+    seed_prompt: str = LEGACY_INITIAL_PROMPT_SEED,
+) -> tuple[str, dict[str, Any]]:
+    user = (
+        f"Here is the task definition:\n{prompts.user_proxy}\n\n"
+        "Please generate a more appropriate prompt based on the following prompt "
+        f"and task definition:\n{seed_prompt}"
+    )
+    generated = client.complete_text(
+        system=LEGACY_INITIAL_PROMPT_SYSTEM,
+        user=user,
+        method="initial_prompt",
+        task_id=task.task_id,
+        iteration=0,
+        max_tokens=700,
+        agent_name="Student",
+    ).strip()
+    initial_prompt = generated or seed_prompt
+    metadata = {
+        "label": "p0",
+        "source": "legacy_student_generated",
+        "seed_prompt": seed_prompt,
+        "system_message": LEGACY_INITIAL_PROMPT_SYSTEM,
+        "user_message": user,
+        "task_id": task.task_id,
+        "prompt_hash": hashlib.sha256(initial_prompt.encode("utf-8")).hexdigest(),
+    }
+    return initial_prompt, metadata
+
+
+def manual_origin_initial_prompt(
+    task: TaskSpec, prompts: TaskPrompts
+) -> tuple[str, dict[str, Any]]:
+    initial_prompt = prompts.origin
+    metadata = {
+        "label": "p0",
+        "source": "manual_origin",
+        "task_id": task.task_id,
+        "prompt_hash": hashlib.sha256(initial_prompt.encode("utf-8")).hexdigest(),
+    }
+    return initial_prompt, metadata
+
+
+def write_initial_prompt_artifacts(
+    *,
+    task_dir: Path,
+    method_dir: Path,
+    initial_prompt: str,
+    metadata: dict[str, Any],
+) -> None:
+    task_dir.mkdir(parents=True, exist_ok=True)
+    method_dir.mkdir(parents=True, exist_ok=True)
+    write_text(task_dir / "initial_prompt.txt", initial_prompt)
+    write_json(task_dir / "initial_prompt_metadata.json", metadata)
+    write_text(method_dir / "initial_prompt.txt", initial_prompt)
+    write_json(method_dir / "initial_prompt_metadata.json", metadata)
+
+
+def history_record(
+    *,
+    iteration: int,
+    prompt: str,
+    predictions: list[dict[str, Any]],
+) -> dict[str, Any]:
+    num_correct = sum(truthy(row["correct"]) for row in predictions)
+    return {
+        "iteration": iteration,
+        "prompt": prompt,
+        "accuracy": compute_accuracy(predictions),
+        "num_samples": len(predictions),
+        "num_correct": num_correct,
+        "num_failed": len(predictions) - num_correct,
+    }
+
+
+def _valid_target_format(raw_output: str, parsed_prediction: str, answer_format: str) -> bool:
+    answer_format = (answer_format or "free_text").lower()
+    if answer_format == "option_letter":
+        return bool(re.search(r"\([A-Z]\)", raw_output or ""))
+    return is_valid_prediction(parsed_prediction, answer_format)
+
+
+def _mark_invalid_target_format(
+    prediction: dict[str, Any], answer_format: str
+) -> dict[str, Any]:
+    answer_format = (answer_format or "free_text").lower()
+    if answer_format == "option_letter" and not re.search(
+        r"\([A-Z]\)", str(prediction.get("raw_output") or "")
+    ):
+        prediction = dict(prediction)
+        prediction["error_type"] = "invalid_answer_format"
+        prediction["correct"] = False
+    return prediction
+
+
 def evaluate_prompt(
     *,
     client: LLMClient,
@@ -142,27 +259,58 @@ def evaluate_prompt(
     method: str,
     iteration: int,
     out_dir: Path | None = None,
+    max_answer_retries: int = 1,
 ) -> list[dict[str, Any]]:
     instruction = answer_instruction(task.answer_format)
+    max_attempts = max(1, int(max_answer_retries or 1))
 
     def evaluate_row(row: dict[str, Any]) -> dict[str, Any]:
         user_prompt = build_question_prompt(prompt, row["question"], instruction)
         error_type = ""
         raw_output = ""
-        try:
-            raw_output = client.complete_text(
-                system="You are a careful evaluation assistant.",
-                user=user_prompt,
+        last_prediction: dict[str, Any] | None = None
+        for attempt in range(max_attempts):
+            try:
+                question_key = (
+                    row["question"]
+                    if attempt == 0
+                    else f"{row['question']}\n[answer_retry={attempt}]"
+                )
+                raw_output = client.complete_text(
+                    system="You are a careful evaluation assistant.",
+                    user=user_prompt,
+                    method=method,
+                    task_id=task.task_id,
+                    iteration=iteration,
+                    question=question_key,
+                    agent_name="Target",
+                    sample_id=row.get("sample_id", ""),
+                )
+                error_type = ""
+            except ApiCallError as exc:
+                error_type = exc.error_type
+                raw_output = ""
+            last_prediction = prediction_row(
+                sample_id=row["sample_id"],
+                question=row["question"],
+                gold=row["answer"],
+                raw_output=raw_output,
+                answer_format=task.answer_format,
                 method=method,
                 task_id=task.task_id,
                 iteration=iteration,
-                question=row["question"],
-                agent_name="Target",
-                sample_id=row.get("sample_id", ""),
+                error_type=error_type,
             )
-        except ApiCallError as exc:
-            error_type = exc.error_type
-            raw_output = ""
+            if error_type:
+                return last_prediction
+            if _valid_target_format(
+                raw_output,
+                str(last_prediction.get("parsed_prediction", "")),
+                task.answer_format,
+            ):
+                return last_prediction
+        if last_prediction is not None:
+            return _mark_invalid_target_format(last_prediction, task.answer_format)
         return prediction_row(
             sample_id=row["sample_id"],
             question=row["question"],
@@ -285,11 +433,15 @@ def run_direct_method(
     method_config: dict[str, Any],
     out_dir: Path,
     few_shot_rows: list[dict[str, Any]] | None = None,
+    initial_prompt: str | None = None,
+    max_answer_retries: int = 1,
 ) -> dict[str, Any]:
     if method == "origin":
-        prompt = prompts.origin
+        prompt = initial_prompt or prompts.origin
+        iteration = 0 if initial_prompt else 1
     elif method == "cot_zs":
         prompt = prompts.cot_zero_shot
+        iteration = 1
     elif method == "cot_fs":
         num_shots = int(method_config.get("num_shots", 3))
         examples = (few_shot_rows or prompts.few_shot_examples)[:num_shots]
@@ -299,6 +451,7 @@ def run_direct_method(
         )
         write_jsonl(out_dir / "used_few_shot_examples.jsonl", examples)
         prompt = f"{prompts.cot_few_shot}\n\n{example_text}"
+        iteration = 1
     else:
         raise ValueError(f"Unknown direct method: {method}")
 
@@ -309,20 +462,10 @@ def run_direct_method(
         rows=test_rows,
         prompt=prompt,
         method=method,
-        iteration=1,
+        iteration=iteration,
+        max_answer_retries=max_answer_retries,
     )
-    accuracy = compute_accuracy(predictions)
-    history = [
-        {
-            "iteration": 1,
-            "prompt": prompt,
-            "accuracy": accuracy,
-            "num_samples": len(predictions),
-            "num_correct": sum(truthy(row["correct"]) for row in predictions),
-            "num_failed": len(predictions)
-            - sum(truthy(row["correct"]) for row in predictions),
-        }
-    ]
+    history = [history_record(iteration=iteration, prompt=prompt, predictions=predictions)]
     metrics = write_method_outputs(
         out_dir=out_dir,
         task=task,
@@ -347,6 +490,7 @@ def evaluate_fixed_prompt_method(
     method: str,
     method_config: dict[str, Any],
     out_dir: Path,
+    max_answer_retries: int = 1,
 ) -> dict[str, Any]:
     start = time.time()
     predictions = evaluate_prompt(
@@ -356,19 +500,9 @@ def evaluate_fixed_prompt_method(
         prompt=prompt,
         method=method,
         iteration=1,
+        max_answer_retries=max_answer_retries,
     )
-    accuracy = compute_accuracy(predictions)
-    history = [
-        {
-            "iteration": 1,
-            "prompt": prompt,
-            "accuracy": accuracy,
-            "num_samples": len(predictions),
-            "num_correct": sum(truthy(row["correct"]) for row in predictions),
-            "num_failed": len(predictions)
-            - sum(truthy(row["correct"]) for row in predictions),
-        }
-    ]
+    history = [history_record(iteration=1, prompt=prompt, predictions=predictions)]
     metrics = write_method_outputs(
         out_dir=out_dir,
         task=task,
@@ -423,13 +557,36 @@ def run_candidate_method(
     method_config: dict[str, Any],
     out_dir: Path,
     max_iterations: int,
+    initial_prompt: str | None = None,
+    max_answer_retries: int = 1,
 ) -> dict[str, Any]:
     start = time.time()
     out_dir.mkdir(parents=True, exist_ok=True)
     candidates = []
     history = []
-    best_prompt = prompts.origin
+    best_prompt = initial_prompt or prompts.origin
     best_accuracy = -1.0
+    best_iteration = 0
+    eval_rows = val_rows or opt_rows or test_rows
+    initial_predictions = evaluate_prompt(
+        client=client,
+        task=task,
+        rows=eval_rows,
+        prompt=best_prompt,
+        method=method,
+        iteration=0,
+        max_answer_retries=max_answer_retries,
+    )
+    initial_record = history_record(
+        iteration=0,
+        prompt=best_prompt,
+        predictions=initial_predictions,
+    )
+    history.append(initial_record)
+    best_accuracy = float(initial_record["accuracy"])
+    candidates.append(
+        {"iteration": 0, "prompt": best_prompt, "accuracy": best_accuracy}
+    )
 
     if method == "ape":
         total = int(method_config.get("num_candidates", 20))
@@ -470,8 +627,7 @@ def run_candidate_method(
             context=context,
         )
         if not candidate:
-            candidate = prompts.origin
-        eval_rows = val_rows or opt_rows or test_rows
+            candidate = initial_prompt or prompts.origin
         eval_predictions = evaluate_prompt(
             client=client,
             task=task,
@@ -479,17 +635,14 @@ def run_candidate_method(
             prompt=candidate,
             method=method,
             iteration=iteration,
+            max_answer_retries=max_answer_retries,
         )
-        accuracy = compute_accuracy(eval_predictions)
-        record = {
-            "iteration": iteration,
-            "prompt": candidate,
-            "accuracy": accuracy,
-            "num_samples": len(eval_predictions),
-            "num_correct": sum(truthy(row["correct"]) for row in eval_predictions),
-            "num_failed": len(eval_predictions)
-            - sum(truthy(row["correct"]) for row in eval_predictions),
-        }
+        record = history_record(
+            iteration=iteration,
+            prompt=candidate,
+            predictions=eval_predictions,
+        )
+        accuracy = float(record["accuracy"])
         history.append(record)
         candidates.append(
             {"iteration": iteration, "prompt": candidate, "accuracy": accuracy}
@@ -497,6 +650,7 @@ def run_candidate_method(
         if accuracy > best_accuracy:
             best_accuracy = accuracy
             best_prompt = candidate
+            best_iteration = iteration
 
     final_predictions = evaluate_prompt(
         client=client,
@@ -504,7 +658,8 @@ def run_candidate_method(
         rows=test_rows,
         prompt=best_prompt,
         method=method,
-        iteration=len(history) or 1,
+        iteration=best_iteration,
+        max_answer_retries=max_answer_retries,
     )
 
     write_jsonl(out_dir / "candidate_prompts.jsonl", candidates)

@@ -6,9 +6,15 @@ from pathlib import Path
 from typing import Any
 
 from .api_client import API_CALL_COLUMNS, LLMClient
-from .evaluator import compute_accuracy, truthy
+from .evaluator import truthy
 from .logging_utils import write_csv, write_json, write_jsonl
-from .mars_runner import TaskSpec, evaluate_prompt, hash_rows, write_method_outputs
+from .mars_runner import (
+    TaskSpec,
+    evaluate_prompt,
+    hash_rows,
+    history_record,
+    write_method_outputs,
+)
 from .prompt_loader import TaskPrompts
 from .run_state import REQUIRED_METHOD_FILES, build_run_state, prompt_hash, save_run_state
 
@@ -25,6 +31,21 @@ def _parse_steps(raw: str) -> list[str]:
     ]
 
 
+def parse_steps_strict(raw: str) -> list[str]:
+    total_match = re.search(r"^\s*Total steps:\s*(\d+)\s*$", raw, re.MULTILINE)
+    if not total_match:
+        raise ValueError("Planner output missing `Total steps: <number>`.")
+    total = int(total_match.group(1))
+    steps: dict[int, str] = {}
+    for match in re.finditer(r"^\s*Step\s+(\d+):\s*(.+?)\s*$", raw, re.MULTILINE):
+        steps[int(match.group(1))] = match.group(2).strip()
+    expected = list(range(1, total + 1))
+    missing = [index for index in expected if index not in steps]
+    if missing:
+        raise ValueError(f"Planner output missing steps: {missing}")
+    return [steps[index] for index in expected]
+
+
 def _planner_steps(
     *,
     client: LLMClient,
@@ -32,30 +53,43 @@ def _planner_steps(
     prompts: TaskPrompts,
     method: str,
     enabled: bool,
+    strict: bool = False,
 ) -> list[str]:
     if not enabled:
         return [
             "Use the original prompt without Planner-generated decomposition.",
         ]
     planner_prompt = prompts.planner.format(task_description=prompts.user_proxy)
+    format_instruction = (
+        "Return the plan in exactly this format:\n"
+        "Total steps: <number>\n"
+        "Step 1: ...\n"
+        "Step 2: ..."
+        if strict
+        else "Return a concise numbered list of prompt-optimization steps."
+    )
     raw = client.complete_text(
         system="You are the Planner agent in the MARS prompt optimization workflow.",
         user=(
             f"UserProxy task description:\n{prompts.user_proxy}\n\n"
             f"Planner template:\n{planner_prompt}\n\n"
             f"Task name: {task.paper_display_name}\n\n"
-            "Return a concise numbered list of prompt-optimization steps."
+            f"{format_instruction}"
         ),
         method=method,
         task_id=task.task_id,
         iteration=0,
         agent_name="Planner",
     )
+    if strict:
+        return parse_steps_strict(raw)
     return _parse_steps(raw)
 
 
 def _critic_accepts(feedback: str) -> bool:
     lowered = feedback.lower()
+    if re.search(r"\bfalse\b", lowered):
+        return False
     if any(word in lowered for word in ["reject", "revise", "not useful", "unclear"]):
         return False
     return True
@@ -162,6 +196,9 @@ def run_mars_official(
     max_iterations: int,
     early_stop_delta: float | None = None,
     max_critic_revisions: int = 1,
+    initial_prompt: str | None = None,
+    max_answer_retries: int = 1,
+    planner_strict_mode: bool = False,
 ) -> dict[str, Any]:
     start = time.time()
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -176,6 +213,7 @@ def run_mars_official(
         prompts=prompts,
         method=method,
         enabled=planner_enabled,
+        strict=planner_strict_mode,
     )
     write_json(
         out_dir / "planner_steps.json",
@@ -186,9 +224,10 @@ def run_mars_official(
         },
     )
 
-    current_prompt = prompts.origin
+    current_prompt = initial_prompt or prompts.origin
     best_prompt = current_prompt
     best_accuracy = -1.0
+    best_iteration = 0
     history = []
     teacher_questions = []
     critic_feedback_rows = []
@@ -196,15 +235,34 @@ def run_mars_official(
     target_scores = []
     iterations = max(1, int(max_iterations or 1))
 
+    initial_predictions = evaluate_prompt(
+        client=client,
+        task=task,
+        rows=eval_rows,
+        prompt=current_prompt,
+        method=method,
+        iteration=0,
+        max_answer_retries=max_answer_retries,
+    )
+    initial_score = history_record(
+        iteration=0,
+        prompt=current_prompt,
+        predictions=initial_predictions,
+    )
+    history.append(initial_score)
+    target_scores.append(initial_score)
+    best_accuracy = float(initial_score["accuracy"])
+    best_prompt = current_prompt
+    best_iteration = 0
+
     if not socratic_enabled:
         current_prompt = (
-            prompts.origin
+            current_prompt
             + "\n\nPlanner steps:\n"
             + "\n".join(f"- {step}" for step in steps)
         )
 
     for iteration in range(1, iterations + 1):
-        previous_best = best_accuracy
         if socratic_enabled:
             for step_index, step in enumerate(steps):
                 question = ""
@@ -292,28 +350,28 @@ def run_mars_official(
             prompt=current_prompt,
             method=method,
             iteration=iteration,
+            max_answer_retries=max_answer_retries,
         )
-        accuracy = compute_accuracy(eval_predictions)
-        score_row = {
-            "iteration": iteration,
-            "prompt": current_prompt,
-            "accuracy": accuracy,
-            "num_samples": len(eval_predictions),
-            "num_correct": sum(truthy(row["correct"]) for row in eval_predictions),
-            "num_failed": len(eval_predictions)
-            - sum(truthy(row["correct"]) for row in eval_predictions),
-        }
+        score_row = history_record(
+            iteration=iteration,
+            prompt=current_prompt,
+            predictions=eval_predictions,
+        )
+        accuracy = float(score_row["accuracy"])
         history.append(score_row)
         target_scores.append(score_row)
         if accuracy > best_accuracy:
             best_accuracy = accuracy
             best_prompt = current_prompt
-        accuracy_gain = best_accuracy - previous_best if previous_best >= 0 else None
+            best_iteration = iteration
         if (
             early_stop_delta is not None
-            and previous_best >= 0
-            and accuracy_gain is not None
-            and accuracy_gain < early_stop_delta
+            and len(history) >= 2
+            and abs(
+                float(history[-1].get("accuracy") or 0.0)
+                - float(history[-2].get("accuracy") or 0.0)
+            )
+            < early_stop_delta
         ):
             break
 
@@ -323,7 +381,8 @@ def run_mars_official(
         rows=test_rows,
         prompt=best_prompt,
         method=method,
-        iteration=len(history) or 1,
+        iteration=best_iteration,
+        max_answer_retries=max_answer_retries,
     )
 
     write_jsonl(out_dir / "teacher_questions.jsonl", teacher_questions)
@@ -347,6 +406,9 @@ def run_mars_official(
             f"critic_enabled: {critic_enabled}\n"
             f"max_critic_revisions: {max_critic_revisions}\n"
             f"early_stop_delta: {early_stop_delta}\n"
+            f"initial_prompt_source: {'provided' if initial_prompt is not None else 'manual_origin'}\n"
+            f"planner_strict_mode: {planner_strict_mode}\n"
+            f"max_answer_retries: {max_answer_retries}\n"
             f"runtime_seconds: {time.time() - start:.4f}\n"
         ),
     )
@@ -368,7 +430,7 @@ def run_mars_official(
                 "val": hash_rows(val_rows),
                 "test": hash_rows(test_rows),
             },
-            prompt_hash_value=prompt_hash(prompts.origin),
+            prompt_hash_value=prompt_hash(initial_prompt or prompts.origin),
             config_hash=str(method_config.get("config_hash", "")),
             expected_ids=[row.get("sample_id") for row in test_rows],
             predictions_path=out_dir / "predictions.csv",

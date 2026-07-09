@@ -331,6 +331,12 @@ class LLMClient:
 
     def _mock_response(self, messages: list[dict[str, str]], task_id: str) -> str:
         text = "\n".join(message.get("content", "") for message in messages).lower()
+        if "total steps: <number>" in text or "return the plan in exactly this format" in text:
+            return (
+                "Total steps: 2\n"
+                "Step 1: Clarify the required answer format.\n"
+                "Step 2: Improve task-specific reasoning before giving the final answer."
+            )
         if "final answer: (x)" in text or "single best option letter" in text:
             return "Final answer: (A)"
         if "final answer: yes" in text and "final answer: no" in text:

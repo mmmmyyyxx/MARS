@@ -96,7 +96,14 @@ def expected_task_scope(
     max_samples = parse_optional_int(run_config.get("max_samples"))
     eval_protocol = str(run_config.get("eval_protocol") or "paper_mode")
     split_seed = int(run_config.get("split_seed") or 42)
-    all_rows = load_dataset(task.dataset_path, max_samples)
+    skip_first = parse_bool(run_config.get("legacy_skip_first_data_row"))
+    if skip_first is None:
+        skip_first = eval_protocol == "paper_mode"
+    all_rows = load_dataset(
+        task.dataset_path,
+        max_samples,
+        skip_first_data_row=bool(skip_first),
+    )
     splits = split_dataset(all_rows, eval_protocol, split_seed)
     return {
         "max_samples": max_samples,
