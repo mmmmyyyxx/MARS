@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not not ( not False or True )`\n\n---\n\n**Step 1: Evaluate innermost parentheses**  \nInside parentheses: `not False or True`  \n- `not False` = `True`  \nSo: `True or True`  \n- `True or True` = `True`  \n\nNow the expression becomes:  \n`not not (True)`\n\n---\n\n**Step 2: Apply inner `not`**  \n`not True` = `False`  \n\nNow: `not False`\n\n---\n\n**Step 3: Apply final `not`**  \n`not False` = `True`\n\n---\n\n**Final answer:** `true`\n\n---\n\nFinal answer: true"
-}

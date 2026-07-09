@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate the innermost NOT:  \nnot False → true  \n\nNow the expression becomes:  \n( False or not not true )  \n\nNext, evaluate the innermost NOT in the remaining part:  \nnot true → false  \n\nExpression now:  \n( False or not false )  \n\nEvaluate the remaining NOT:  \nnot false → true  \n\nExpression now:  \n( False or true )  \n\nEvaluate OR:  \nFalse or true → true  \n\nFinal answer: true"
-}

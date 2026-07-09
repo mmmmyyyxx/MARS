@@ -1,3 +1,0 @@
-{
-  "content": "First, count the vertices from the path coordinates:  \n(31,73), (26,55), (37,39), (61,34), (77,50), (82,65), (62,83), back to (31,73).  \nThat’s 8 distinct points, so it’s an octagon.  \n\nFinal answer: (F)"
-}

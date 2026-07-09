@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Resolve parentheses**  \nInside parentheses: `False and True`  \n`False and True` → `False` (since AND is true only if both are true)  \nIntermediate result: `not not not False`\n\n**Step 2: Apply NOT operators from right to left**  \nFirst NOT: `not False` → `True`  \nIntermediate: `not not True`  \n\nSecond NOT: `not True` → `False`  \nIntermediate: `not False`  \n\nThird NOT: `not False` → `True`  \n\nFinal truth value: `True`  \n\nFinal answer: true"
-}

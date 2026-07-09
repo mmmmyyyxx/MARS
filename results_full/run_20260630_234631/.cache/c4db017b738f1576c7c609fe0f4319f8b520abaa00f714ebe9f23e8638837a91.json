@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\n**Expression:**  \nTrue and ( not True or False )\n\n---\n\n**Step 1 — Resolve innermost parentheses**  \nInside parentheses: `not True or False`\n\n- `not True` = False  \nSo: `False or False`  \nFrom truth table: `False or False` = False  \n\nIntermediate expression after parentheses:  \nTrue **and** False\n\n---\n\n**Step 2 — Apply AND**  \nTrue and False = False (truth table: T ∧ F = F)\n\n---\n\n**Final answer:** false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the parentheses:  \n(False or False or True)  \nFalse or False = False  \nFalse or True = True  \nSo inside parentheses: True  \n\nNow apply the NOT operator:  \nnot (True) = False  \n\nFinal answer: false"
-}

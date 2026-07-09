@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( True and not True and True )  \n\n**Step 1:** Apply NOT first (highest precedence)  \nnot True = False  \n\nExpression becomes:  \n( True and False and True )  \n\n**Step 2:** AND is left-associative, so evaluate left to right:  \nTrue and False = False  \n\nNow:  \n( False and True )  \n\n**Step 3:**  \nFalse and True = False  \n\nFinal result: **False**  \n\nFinal answer: false"
-}

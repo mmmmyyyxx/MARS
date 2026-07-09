@@ -1,3 +1,0 @@
-{
-  "content": "In force-voltage analogy:  \n- Force (F) is analogous to voltage (V)  \n- Velocity (v) is analogous to current (i)  \n- Spring element (K) has the relationship \\( F = K \\int v \\, dt \\)  \n- In electrical terms, \\( V = \\frac{1}{C} \\int i \\, dt \\)  \n- Therefore, spring constant \\( K \\) is analogous to \\( 1/C \\) in the electrical domain.  \n\nFinal answer: (C)"
-}

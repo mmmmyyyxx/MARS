@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step:  \n\nThe expression is:  \n\n**False and not True and True and False**  \n\n1. **not True** → False  \n   So the expression becomes:  \n   False **and** False **and** True **and** False  \n\n2. Evaluate left to right (AND is associative, but let’s go stepwise):  \n   - False **and** False → False  \n   - False **and** True → False  \n   - False **and** False → False  \n\nFinal result: **False**  \n\nFinal answer: false"
-}

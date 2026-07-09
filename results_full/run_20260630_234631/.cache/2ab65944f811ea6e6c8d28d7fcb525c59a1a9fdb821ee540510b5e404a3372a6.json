@@ -1,3 +1,0 @@
-{
-  "content": "Evaluate the Boolean expression by first resolving all parentheses from the innermost outward, then applying NOT operators, followed by AND operators, and finally OR operators. At each intermediate step, explicitly state the simplified subexpression and verify the truth value before proceeding to the next operation. Ensure that all logical equivalences are maintained throughout the evaluation process."
-}

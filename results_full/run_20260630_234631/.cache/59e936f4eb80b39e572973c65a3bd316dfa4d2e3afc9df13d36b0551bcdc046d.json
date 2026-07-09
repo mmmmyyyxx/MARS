@@ -1,3 +1,0 @@
-{
-  "content": "In a lap winding, the average pitch \\( Y_a \\) is given by:  \n\\[\nY_a = \\frac{Z}{P}\n\\]\nwhere \\( Z \\) = total number of conductors, \\( P \\) = number of poles = number of parallel paths for lap winding.  \n\nGiven:  \n\\( Z = 100 \\)  \n\\( P = 10 \\) (since number of parallel paths = \\( P \\) in lap winding)  \n\n\\[\nY_a = \\frac{100}{10} = 10\n\\]\n\nFinal answer: (A)"
-}

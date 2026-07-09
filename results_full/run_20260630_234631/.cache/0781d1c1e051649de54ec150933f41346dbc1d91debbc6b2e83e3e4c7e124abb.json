@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not False and False and True or False**\n\n---\n\n**Step 1: Handle `not False`**  \n`not False` = `True`  \n\nSo the expression becomes:  \n`True and False and True or False`\n\n---\n\n**Step 2: Evaluate `True and False`**  \n`True and False` = `False`  \n\nExpression becomes:  \n`False and True or False`\n\n---\n\n**Step 3: Evaluate `False and True`**  \n`False and True` = `False`  \n\nExpression becomes:  \n`False or False`\n\n---\n\n**Step 4: Evaluate `False or False`**  \n`False or False` = `False`\n\n---\n\n**Final answer: false**"
-}

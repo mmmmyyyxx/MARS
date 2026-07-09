@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step according to operator precedence (parentheses first, then **not**, then **or**).\n\n1. Inside the parentheses:  \n   \\( \\text{True or False} \\)  \n   Logical OR: True or False → **True**\n\n2. Apply the **not**:  \n   \\( \\text{not (True)} \\) → **False**\n\nFinal answer: false"
-}

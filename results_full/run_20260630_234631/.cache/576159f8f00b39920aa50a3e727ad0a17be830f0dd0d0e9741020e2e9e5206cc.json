@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step according to the rules of precedence: parentheses first (none here), then **NOT**, then **AND**, then **OR**.\n\nThe expression is:\n\n\\[\n\\text{not True or True and False and False}\n\\]\n\n---\n\n**Step 1: Apply NOT**\n\n\\[\n\\text{not True} = \\text{False}\n\\]\n\nSo the expression becomes:\n\n\\[\n\\text{False or (True and False and False)}\n\\]\n\n---\n\n**Step 2: Apply AND from left to right**\n\nFirst:  \n\\[\n\\text{True and False} = \\text{False}\n\\]\n\nThen:  \n\\[\n\\text{False and False} = \\text{False}\n\\]\n\nSo the expression becomes:\n\n\\[\n\\text{False or False}\n\\]\n\n---\n\n**Step 3: Apply OR**\n\n\\[\n\\text{False or False} = \\text{False}\n\\]\n\n---\n\n**Final answer: false**"
-}

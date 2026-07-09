@@ -1,3 +1,0 @@
-{
-  "content": "REVISE. The question introduces unnecessary complexity by focusing on internal reasoning steps rather than task execution. For maximizing accuracy on multiple-choice questions, the prompt should remain simple and directive - specifying the output format and domain is sufficient. Adding prescribed reasoning frameworks may constrain the model's natural problem-solving ability and doesn't align with the straightforward nature of the task."
-}

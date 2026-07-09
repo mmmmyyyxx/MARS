@@ -1,3 +1,0 @@
-{
-  "content": "In DNA base pairing, adenine (A) pairs with thymine (T), and cytosine (C) pairs with guanine (G).  \nThe given strand is **5′ CGA TTG 3′**.  \nComplementary strand runs antiparallel, so it will be **3′ … 5′** relative to the given strand.  \n\nStep-by-step complementarity:  \n- C (5′) pairs with G (3′)  \n- G pairs with C  \n- A pairs with T  \n- T pairs with A  \n- T pairs with A  \n- G pairs with C  \n\nSo complementary sequence (written 5′ → 3′) is: **5′ GCT AAC 3′**.  \n\nOption (A) has U instead of T, so that’s RNA.  \nOption (B) matches **5′ GCT AAC 3′**.  \nOption (C) is incorrect pairing.  \nOption (D) is incorrect pairing.  \n\nFinal answer: (B)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**True or False and not False and True**  \n\nOperator precedence: `not` > `and` > `or`  \n\n1. Handle `not False`:  \n   `not False` = `True`  \n\n   Expression becomes:  \n   `True or False and True and True`  \n\n2. Evaluate `False and True and True` from left to right:  \n   `False and True` = `False`  \n   `False and True` = `False`  \n\n   So `False and True and True` = `False`  \n\n3. Now we have:  \n   `True or False`  \n\n4. `True or False` = `True`  \n\nFinal answer: True"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**( False or not not not False )**\n\n---\n\n**Step 1 — Resolve parentheses from innermost to outermost**  \nThe parentheses contain:  \n`False or not not not False`  \nWe must evaluate `not not not False` first because NOT has higher precedence than OR.\n\n---\n\n**Step 2 — Apply all NOT operators**  \nStart with `not False` → `True`  \nThen `not True` → `False`  \nThen `not False` → `True`  \n\nSo `not not not False` = `True`.\n\n---\n\n**Step 3 — Substitute back into the OR expression**  \n`False or True`\n\n---\n\n**Step 4 — Apply OR operators**  \n`False or True` → `True`\n\n---\n\n**Final answer: true**"
-}

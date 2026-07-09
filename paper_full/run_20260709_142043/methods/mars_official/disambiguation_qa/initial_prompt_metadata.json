@@ -1,0 +1,9 @@
+{
+  "label": "p0",
+  "source": "legacy_student_generated",
+  "seed_prompt": "Think step by step and solve the question.",
+  "system_message": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\nNote that you should only output the new prompt you generated.",
+  "user_message": "Here is the task definition:\nHere is a topic for disambiguation question:\nGiven a sentence with an ambigious pronoun, either determine whether the sentence is inherently ambiguous (i.e., the thing that the pronoun refers to cannot be inferred by given information) or, if the pronoun can be implicitly deduced, state the antecedent of the pronoun (i.e., the noun to which the pronoun refers).\n\nFor example:\nIn the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: My parent called their secretary for more information\nOptions:\n(A) They were my parent's secretary\n(B) They were the secretary's secretary\n(C) Ambiguous\n\nI want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. \nPlease generate the most suitable prompt according to the requirements I just mentioned.\n\nPlease generate a more appropriate prompt based on the following prompt and task definition:\nThink step by step and solve the question.",
+  "task_id": "disambiguation_qa",
+  "prompt_hash": "1f490c20befa7233a73ab9f405954f2d4359fdf26601f48e476eac031b39fac3"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\nThe SVG path command `M 26.00,23.00 L 19.00,16.00` means:  \n\n- **M** = move to (26.00, 23.00)  \n- **L** = line to (19.00, 16.00)  \n\nSo this draws a straight line from one point to another.  \n\nThat corresponds to a **line**, which is option (E).  \n\nFinal answer: (E)"
-}

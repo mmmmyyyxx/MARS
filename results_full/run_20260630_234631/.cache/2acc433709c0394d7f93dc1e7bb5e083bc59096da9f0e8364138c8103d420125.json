@@ -1,3 +1,0 @@
-{
-  "content": "How can we ensure the prompt explicitly guides the model to distinguish between directly stated numbers and those that must be derived through intermediate calculations, particularly in problems where multiple relationships are nested within a single sentence?"
-}

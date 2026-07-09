@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**False or not ( False ) or True**  \n\n1. **not ( False )** → **True**  \n2. Replace: **False or True or True**  \n3. **False or True** → **True**  \n4. **True or True** → **True**  \n\nFinal answer: True"
-}

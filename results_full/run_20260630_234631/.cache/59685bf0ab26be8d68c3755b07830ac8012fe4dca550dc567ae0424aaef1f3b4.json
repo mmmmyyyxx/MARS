@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Resolve parentheses**  \nInside parentheses:  \n\\( \\text{True and False} \\) → \\( \\text{False} \\)  \n\nSo the expression becomes:  \n\\( \\text{not not not False} \\)\n\n---\n\n**Step 2: Apply NOT operators from right to left**  \nFirst NOT: \\( \\text{not False} \\) → \\( \\text{True} \\)  \nExpression: \\( \\text{not not True} \\)  \n\nSecond NOT: \\( \\text{not True} \\) → \\( \\text{False} \\)  \nExpression: \\( \\text{not False} \\)  \n\nThird NOT: \\( \\text{not False} \\) → \\( \\text{True} \\)\n\n---\n\n**Final truth value:** \\( \\text{True} \\)\n\nFinal answer: true"
-}

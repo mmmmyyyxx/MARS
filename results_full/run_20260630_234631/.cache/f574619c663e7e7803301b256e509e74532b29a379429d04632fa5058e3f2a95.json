@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\n1. Inside parentheses: `False and True` → `False`  \n2. Apply `not`: `not (False)` → `True`  \n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step-by-step:  \n\nExpression:  \nTrue or ( True or not False )\n\n1. **Innermost parentheses**:  \n   Inside: `True or not False`  \n   - `not False` = True  \n   - `True or True` = True  \n\n   So parentheses resolve to: True  \n\n2. **Outer expression**:  \n   True or True = True  \n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "LC oscillators are resonant circuits that generate sinusoidal signals using inductors and capacitors.  \nTheir frequency range is determined by practical values of L and C.  \n- Very low frequencies (kHz range) would require impractically large inductors or capacitors.  \n- High frequencies (GHz range) are possible, but parasitic effects limit the upper end unless very small L and C values are used.  \nIn practice, LC oscillators are commonly used from around 100 kHz up to several hundred MHz.  \nAbove roughly 500 MHz–1 GHz, distributed-element or crystal oscillators are often preferred for stability.  \nGiven the options, (B) 100 kHz to 500 MHz best matches the typical usable range of LC oscillators.  \n\nFinal answer: (B)"
-}

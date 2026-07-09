@@ -1,3 +1,0 @@
-{
-  "content": "In DC machines, the armature winding must form closed loops to allow continuous current flow and commutation, regardless of whether it is lap or wave winding.  \nOpen windings would not work because they would break the current path.  \nThus, the necessary feature is that the winding is **closed**, not a specific type like lap or wave.  \n\nFinal answer: (A)"
-}

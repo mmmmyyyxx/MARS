@@ -1,0 +1,250 @@
+sample_id,question,gold,raw_output,parsed_prediction,canonical_gold,correct,answer_format,error_type,method,task_id,iteration
+0,"Is the following sentence plausible? ""Dejounte Murray took a side-step three.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+1,"Is the following sentence plausible? ""Giorgio Chiellini committed a handball in the FA Cup.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+2,"Is the following sentence plausible? ""Paulinho earned an indirect kick in the FA Cup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+3,"Is the following sentence plausible? ""Zach LaVine  shot the puck.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+4,"Is the following sentence plausible? ""Miro Heiskanen earned a trip to the penalty box.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+5,"Is the following sentence plausible? ""Angel Di Maria scored in extra time.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+6,"Is the following sentence plausible? ""Tuukka Rask killed the powerplay.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+7,"Is the following sentence plausible? ""Dani Alves took the snap.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+8,"Is the following sentence plausible? ""John Tavares earned a trip to the penalty box in the Stanley Cup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+9,"Is the following sentence plausible? ""Kyle Connor eurostepped to the basket in the Western Conference Finals.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+10,"Is the following sentence plausible? ""Stefon Diggs hit the slant pass.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+11,"Is the following sentence plausible? ""Diego Forlan did a maradona on the defender.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+12,"Is the following sentence plausible? ""Kyle Tucker stepped on first base.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+13,"Is the following sentence plausible? ""Kendrick Nunn took a charge.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+14,"Is the following sentence plausible? ""Mario Gomez scored a reverse layup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+15,"Is the following sentence plausible? ""Luka Modric went in studs up in the FA Cup.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+16,"Is the following sentence plausible? ""Toni Kroos took a throw in in the Champions Leage Semifinal.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+17,"Is the following sentence plausible? ""Russell Westbrook scored on the power play.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+18,"Is the following sentence plausible? ""Mookie Betts skated behind the net.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+19,"Is the following sentence plausible? ""John Carlson scored in the third period.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+20,"Is the following sentence plausible? ""Malcolm Brogdon banked the shot in.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+21,"Is the following sentence plausible? ""Sterling Shepard converted the first down.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+22,"Is the following sentence plausible? ""Sam Darnold scored on the power play in the Stanley Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+23,"Is the following sentence plausible? ""DJ Chark caught the back shoulder fade in the NFC divisional round.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+24,"Is the following sentence plausible? ""Jerry Jeudy killed the powerplay.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+25,"Is the following sentence plausible? ""Gerrit Cole set the hard screen.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+26,"Is the following sentence plausible? ""Santi Cazorla earned a red card in the Champions League Final.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+27,"Is the following sentence plausible? ""Robin Lehner launched the desperation heave.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+28,"Is the following sentence plausible? ""Marvin Jones lost control of the puck.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+29,"Is the following sentence plausible? ""T.Y. Hilton drew a flag on the play.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+30,"Is the following sentence plausible? ""Caris LeVert scored a reverse layup.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+31,"Is the following sentence plausible? ""Jayson Tatum took a side-step three in the NBA Championship.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+32,"Is the following sentence plausible? ""Robert Woods converted the first down.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+33,"Is the following sentence plausible? ""Jakub Vrana skated backwards.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+34,"Is the following sentence plausible? ""Tristan Jarry dunked the ball.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+35,"Is the following sentence plausible? ""George Springer committed a blocking foul.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+36,"Is the following sentence plausible? ""Tyler Glasnow scored a penalty kick.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+37,"Is the following sentence plausible? ""Klaas Jan Huntelaar shot the puck.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+38,"Is the following sentence plausible? ""Anthony Davis beat the buzzer.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+39,"Is the following sentence plausible? ""Norman Powell committed a blocking foul.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+40,"Is the following sentence plausible? ""Aleksander Barkov bricked the three pointer.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+41,"Is the following sentence plausible? ""Juan Soto took ball four.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+42,"Is the following sentence plausible? ""Evander Kane hit the slant pass in the AFC divisional round.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+43,"Is the following sentence plausible? ""Deshaun Watson was called for the goal tend in the Eastern Conference Finals.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+44,"Is the following sentence plausible? ""CJ McCollum shot from the six yard line.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+45,"Is the following sentence plausible? ""Marcell Ozuna scored a touchdown.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+46,"Is the following sentence plausible? ""Calvin Ridley skated behind the net.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+47,"Is the following sentence plausible? ""Brandon Woodruff set the hard screen in the Eastern Conference Finals.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+48,"Is the following sentence plausible? ""Nazem Kadri was out at home.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+49,"Is the following sentence plausible? ""David Pastrnak skated backwards.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+50,"Is the following sentence plausible? ""Elias Lindholm beat the buzzer.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+51,"Is the following sentence plausible? ""Ryan Fitzpatrick scored a touchdown.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+52,"Is the following sentence plausible? ""Mike Williams scored a bicycle kick in the FA Cup.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+53,"Is the following sentence plausible? ""Mitchell Marner nutmegged the defender.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+54,"Is the following sentence plausible? ""Robert Woods killed the powerplay.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+55,"Is the following sentence plausible? ""Petr Cech bricked the three pointer.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+56,"Is the following sentence plausible? ""Mario Gomez scored a reverse layup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+57,"Is the following sentence plausible? ""Corbin Burnes earned an indirect kick.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+58,"Is the following sentence plausible? ""James Karinchak crossed the blue line.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+59,"Is the following sentence plausible? ""Walker Buehler earned a trip to the penalty box.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+60,"Is the following sentence plausible? ""Carles Puyol did a maradona on the defender.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+61,"Is the following sentence plausible? ""Marouane Fellaini scored in extra time.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+62,"Is the following sentence plausible? ""Joao Moutinho was out at third.""",no,No,no,no,True,yes_no,,mars_official,sports_understanding,5
+63,"Is the following sentence plausible? ""Brandin Cooks went for it on fourth down.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+64,"Is the following sentence plausible? ""Sergio Busquets got on base.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+65,"Is the following sentence plausible? ""Josh Allen hit the screen pass.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+66,"Is the following sentence plausible? ""Stephan El Shaarawy shot with the left foot.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+67,"Is the following sentence plausible? ""Aaron Nola converted the first down.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+68,"Is the following sentence plausible? ""Tuukka Rask hit a double.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+69,"Is the following sentence plausible? ""Jayson Tatum was called for the goal tend.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+70,"Is the following sentence plausible? ""Joe Burrow caught the back shoulder fade in the Superbowl.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+71,"Is the following sentence plausible? ""Ryan O'Reilly wristed a shot.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+72,"Is the following sentence plausible? ""Patrice Bergeron converted the first down.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+73,"Is the following sentence plausible? ""Michael Porter Jr. called for the screen.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+74,"Is the following sentence plausible? ""Mario Balotelli took a left footed shot in the Champions League Final.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+75,"Is the following sentence plausible? ""Elias Lindholm took the snap.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+76,"Is the following sentence plausible? ""Andrei Svechnikov took ball four.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+77,"Is the following sentence plausible? ""Pierre-Luc Dubois skated backwards.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+78,"Is the following sentence plausible? ""Nerlens Noel was out at home.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+79,"Is the following sentence plausible? ""Tom Brady was safe at first.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+80,"Is the following sentence plausible? ""Juan Mata scored a bicycle kick in the Champions League Final.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+81,"Is the following sentence plausible? ""Nazem Kadri took a charge in the NBA Championship.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+82,"Is the following sentence plausible? ""Clint Capela got into the endzone.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+83,"Is the following sentence plausible? ""LaMelo Ball launched the half court shot in the Western Conference Finals.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+84,"Is the following sentence plausible? ""Steven Stamkos hit the slant pass.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+85,"Is the following sentence plausible? ""A.J. Green scored in the third period.""",no,No,no,no,True,yes_no,,mars_official,sports_understanding,5
+86,"Is the following sentence plausible? ""Jonathan Marchessault scored on the power play in the Stanley Cup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+87,"Is the following sentence plausible? ""Kevin Durant hit a walkoff homer.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+88,"Is the following sentence plausible? ""Travis Konecny did a maradona on the defender.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+89,"Is the following sentence plausible? ""De'Aaron Fox scored a bicycle kick.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+90,"Is the following sentence plausible? ""Gabriel Landeskog launched the desperation heave.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+91,"Is the following sentence plausible? ""Carlos Tevez skated backwards.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+92,"Is the following sentence plausible? ""Andres Iniesta performed a give and go.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+93,"Is the following sentence plausible? ""Malcolm Brogdon eurostepped to the basket in the NBA Championship.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+94,"Is the following sentence plausible? ""Sergio Aguero maradona'd the defender.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+95,"Is the following sentence plausible? ""Deshaun Watson was flagged on the play.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+96,"Is the following sentence plausible? ""Chris Godwin crossed the blue line in the Stanley Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+97,"Is the following sentence plausible? ""Pepe converted the first down.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+98,"Is the following sentence plausible? ""Kenta Maeda threw to first base in the American League Championship Series.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+99,"Is the following sentence plausible? ""Ketel Marte got into the endzone.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+100,"Is the following sentence plausible? ""T.Y. Hilton threw a touchdown in the AFC divisional round.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+101,"Is the following sentence plausible? ""John Carlson entered the attacking zone in the Stanley Cup.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+102,"Is the following sentence plausible? ""Tyreek Hill caught the screen pass.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+103,"Is the following sentence plausible? ""Fred VanVleet passed the puck.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+104,"Is the following sentence plausible? ""Luke Voit was out at first.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+105,"Is the following sentence plausible? ""Jayson Tatum nutmegged the defender.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+106,"Is the following sentence plausible? ""DeVante Parker was called for icing.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+107,"Is the following sentence plausible? ""Pete Alonso hit a triple in the World Series.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+108,"Is the following sentence plausible? ""Philip Rivers launched a hail mary.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+109,"Is the following sentence plausible? ""Emmanuel Sanders got a base hit.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+110,"Is the following sentence plausible? ""Vincent Kompany comitted a three second violation.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+111,"Is the following sentence plausible? ""Willian killed the powerplay.""",no,No,no,no,True,yes_no,,mars_official,sports_understanding,5
+112,"Is the following sentence plausible? ""Brandon Lowe took a left footed shot.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+113,"Is the following sentence plausible? ""Justin Herbert maradona'd the defender.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+114,"Is the following sentence plausible? ""Marcelo got on the end of a through ball.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+115,"Is the following sentence plausible? ""Eden Hazard hit the buzzer beater.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+116,"Is the following sentence plausible? ""Connor McDavid threw a touchdown in the NFC divisional round.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+117,"Is the following sentence plausible? ""Sean Couturier passed the puck in the Stanley Cup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+118,"Is the following sentence plausible? ""Kwadwo Asamoah beat the shot clock in the Eastern Conference Finals.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+119,"Is the following sentence plausible? ""Draymond Green threw a touchdown.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+120,"Is the following sentence plausible? ""Joe Burrow gained five yards.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+121,"Is the following sentence plausible? ""Drew Brees went for it on fourth down.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+122,"Is the following sentence plausible? ""Sean Couturier maradona'd the defender.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+123,"Is the following sentence plausible? ""Julian Edelman fumbled the ball.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+124,"Is the following sentence plausible? ""Darius Slayton ran out of bounds in the AFC championship.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+125,"Is the following sentence plausible? ""Philip Rivers drove into the restricted area.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+126,"Is the following sentence plausible? ""Gleyber Torres got a base hit.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+127,"Is the following sentence plausible? ""Carson Wentz took to the ice.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+128,"Is the following sentence plausible? ""Arjen Robben crossed the blue line in the Stanley Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+129,"Is the following sentence plausible? ""Drew Brees was flagged on the play.""",yes,No,no,yes,False,yes_no,,mars_official,sports_understanding,5
+130,"Is the following sentence plausible? ""Khyri Thomas  changed direction in the backfield in the NFC championship.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+131,"Is the following sentence plausible? ""Francisco Lindor walked on ball four.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+132,"Is the following sentence plausible? ""Klaas Jan Huntelaar scored the easy layup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+133,"Is the following sentence plausible? ""Jakub Vrana hit a walkoff homer.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+134,"Is the following sentence plausible? ""Marcell Ozuna hit into a double play.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+135,"Is the following sentence plausible? ""Allen Robinson gained five yards.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+136,"Is the following sentence plausible? ""Ryan O'Reilly hit the wheel route.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+137,"Is the following sentence plausible? ""Mitchell Trubisky caught the screen pass.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+138,"Is the following sentence plausible? ""Nick Foles lost control of the puck.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+139,"Is the following sentence plausible? ""Frederik Andersen crossed the blue line in the Stanley Cup.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+140,"Is the following sentence plausible? ""Aleksander Barkov passed the puck.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+141,"Is the following sentence plausible? ""Sergio Ramos hit nothing but net.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+142,"Is the following sentence plausible? ""Wayne Rooney watched the pitch go by.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+143,"Is the following sentence plausible? ""Kwadwo Asamoah was flagged on the play.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+144,"Is the following sentence plausible? ""Patrice Bergeron took a backhand shot.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+145,"Is the following sentence plausible? ""Luis Robert was out at second.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+146,"Is the following sentence plausible? ""Kailer Yamamoto performed a slide tackle in the European Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+147,"Is the following sentence plausible? ""Trae Young got into the endzone.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+148,"Is the following sentence plausible? ""Kailer Yamamoto caught the back shoulder fade.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+149,"Is the following sentence plausible? ""Ramires scored a header goal.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+150,"Is the following sentence plausible? ""Bryce Harper fumbled the ball.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+151,"Is the following sentence plausible? ""Bastian Schweinsteiger scored in added time.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+152,"Is the following sentence plausible? ""Jonas Valanciunas beat the buzzer.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+153,"Is the following sentence plausible? ""Tyler Boyd hit the screen pass in the NFC divisional round.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+154,"Is the following sentence plausible? ""Mitchell Robinson airballed the shot.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+155,"Is the following sentence plausible? ""Wayne Rooney threw a touchdown in the Superbowl.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+156,"Is the following sentence plausible? ""Gerrit Cole committed a handball in the European Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+157,"Is the following sentence plausible? ""Yaya Toure scored a freekick.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+158,"Is the following sentence plausible? ""James Karinchak worked a full count.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+159,"Is the following sentence plausible? ""Frederik Andersen converted the first down.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+160,"Is the following sentence plausible? ""Dougie Hamilton hit the buzzer beater.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+161,"Is the following sentence plausible? ""Juan Mata caught the screen pass.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+162,"Is the following sentence plausible? ""Michael Conforto comitted a three second violation.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+163,"Is the following sentence plausible? ""Mike Trout hit a walkoff homer.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+164,"Is the following sentence plausible? ""Delon Wright went for it on fourth down.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+165,"Is the following sentence plausible? ""Keenan Allen drew a flag on the play in the NFC championship.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+166,"Is the following sentence plausible? ""Keenan Allen beat the buzzer in the Western Conference Finals.""",no,No,no,no,True,yes_no,,mars_official,sports_understanding,5
+167,"Is the following sentence plausible? ""Santi Cazorla called for the screen.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+168,"Is the following sentence plausible? ""Mookie Betts took a side-step three.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+169,"Is the following sentence plausible? ""Igor Shesterkin launched a hail mary.""",no,No,no,no,True,yes_no,,mars_official,sports_understanding,5
+170,"Is the following sentence plausible? ""Jonas Valanciunas beat the buzzer.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+171,"Is the following sentence plausible? ""Tyler Glasnow watched the pitch go by.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+172,"Is the following sentence plausible? ""Jaylen Brown comitted a three second violation.""",yes,No,no,yes,False,yes_no,,mars_official,sports_understanding,5
+173,"Is the following sentence plausible? ""Ryan Tannehill hit a triple.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+174,"Is the following sentence plausible? ""Freddie Freeman watched the pitch go by.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+175,"Is the following sentence plausible? ""Mookie Betts scored on the power play.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+176,"Is the following sentence plausible? ""Bryce Harper hit the back shoulder fade.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+177,"Is the following sentence plausible? ""Domantas Sabonis gained five yards in the AFC championship.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+178,"Is the following sentence plausible? ""James Harden shot from outside the eighteen.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+179,"Is the following sentence plausible? ""David Silva took a throw in.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+180,"Is the following sentence plausible? ""Courtland Sutton hit a triple.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+181,"Is the following sentence plausible? ""Deshaun Watson took a corner kick.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+182,"Is the following sentence plausible? ""Cooper Kupp scored in the third period in the Stanley Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+183,"Is the following sentence plausible? ""Robert Lewandowski threw a touchdown.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+184,"Is the following sentence plausible? ""Nick Castellanos hit the wheel route.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+185,"Is the following sentence plausible? ""Fred VanVleet scored a freekick in the Champions League Final.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+186,"Is the following sentence plausible? ""Kawhi Leonard took a turnaround jumper.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+187,"Is the following sentence plausible? ""Amari Cooper scored a penalty kick.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+188,"Is the following sentence plausible? ""Jesus Luzardo was called for slashing.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+189,"Is the following sentence plausible? ""Vincent Kompany scored a bicycle kick.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+190,"Is the following sentence plausible? ""Petr Cech was safe at first.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+191,"Is the following sentence plausible? ""Caris LeVert scored a reverse dunk.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+192,"Is the following sentence plausible? ""Max Scherzer was safe at first.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+193,"Is the following sentence plausible? ""Jordan Binnington scored in the third period.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+194,"Is the following sentence plausible? ""Javier Zanetti watched the pitch go by in the National League Championship Series.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+195,"Is the following sentence plausible? ""Didier Drogba got into the endzone.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+196,"Is the following sentence plausible? ""Sterling Shepard hit a walkoff homer.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+197,"Is the following sentence plausible? ""Jack Flaherty walked to first base in the National League Championship Series.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+198,"Is the following sentence plausible? ""Sonny Gray was out at second.""",yes,No,no,yes,False,yes_no,,mars_official,sports_understanding,5
+199,"Is the following sentence plausible? ""Matthew Stafford launched a hail mary.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+200,"Is the following sentence plausible? ""Gleyber Torres scored a bicycle kick.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+201,"Is the following sentence plausible? ""Thomas Muller hit a triple.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+202,"Is the following sentence plausible? ""Neymar took a backhand shot in the Stanley Cup.""",no,No,no,no,True,yes_no,,mars_official,sports_understanding,5
+203,"Is the following sentence plausible? ""Ryan Nugent-Hopkins killed the powerplay.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+204,"Is the following sentence plausible? ""Mark Stone hit a triple.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+205,"Is the following sentence plausible? ""Teuvo Teravainen shot the puck.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+206,"Is the following sentence plausible? ""Tom Brady converted the first down.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+207,"Is the following sentence plausible? ""Timo Meier nutmegged the defender in the FA Cup.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+208,"Is the following sentence plausible? ""Jonathan Marchessault went five hole.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+209,"Is the following sentence plausible? ""Collin Sexton hit the buzzer beater.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+210,"Is the following sentence plausible? ""Leon Draisaitl grounded out to second base in the National League Championship Series.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+211,"Is the following sentence plausible? ""John Brown went for it on fourth down in the NFC championship.""",yes,No,no,yes,False,yes_no,,mars_official,sports_understanding,5
+212,"Is the following sentence plausible? ""Adam Thielen got on base.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+213,"Is the following sentence plausible? ""Adam Thielen scored in added time.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+214,"Is the following sentence plausible? ""Michael Thomas took the snap.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+215,"Is the following sentence plausible? ""Jamison Crowder drew a flag on the play.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+216,"Is the following sentence plausible? ""Javier Mascherano took a left footed shot.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+217,"Is the following sentence plausible? ""Nathan MacKinnon bricked the three pointer in the Eastern Conference Finals.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+218,"Is the following sentence plausible? ""Josh Allen caught the screen pass.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+219,"Is the following sentence plausible? ""Tom Wilson scored a penalty kick.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+220,"Is the following sentence plausible? ""Juan Soto did a double stepover.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+221,"Is the following sentence plausible? ""Brad Hand hit the wheel route.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+222,"Is the following sentence plausible? ""Kenta Maeda caught the screen pass.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+223,"Is the following sentence plausible? ""Mike Hoffman launched the half court shot in the Western Conference Finals.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+224,"Is the following sentence plausible? ""Ben Simmons was called for the goal tend.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+225,"Is the following sentence plausible? ""Dylan Larkin walked on ball four.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+226,"Is the following sentence plausible? ""Mikal Bridges scored a windmill dunk.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+227,"Is the following sentence plausible? ""Mark Stone spent time in the penalty box in the Stanley Cup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+228,"Is the following sentence plausible? ""Mike Williams fumbled the ball in the Superbowl.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+229,"Is the following sentence plausible? ""Mathew Barzal called for the screen.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+230,"Is the following sentence plausible? ""Kyle Tucker took a left footed shot.""",no,Yes.,yes,no,False,yes_no,,mars_official,sports_understanding,5
+231,"Is the following sentence plausible? ""Jamal Murray walked on ball four.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+232,"Is the following sentence plausible? ""Stephen Curry scored a reverse layup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+233,"Is the following sentence plausible? ""Patrick Kane backhanded a shot in the Stanley Cup.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+234,"Is the following sentence plausible? ""Malcolm Brogdon drove into the restricted area in the Eastern Conference Finals.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+235,"Is the following sentence plausible? ""Mike Trout eurostepped to the basket.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+236,"Is the following sentence plausible? ""Juan Soto shot from beyond the arc.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+237,"Is the following sentence plausible? ""Anthony Rizzo skated backwards in the Stanley Cup.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+238,"Is the following sentence plausible? ""Gerard Pique scored a corner kick.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+239,"Is the following sentence plausible? ""Neal Pionk shot from the six yard line.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+240,"Is the following sentence plausible? ""Toni Kroos performed a give and go.""",yes,Yes.,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+241,"Is the following sentence plausible? ""Edinson Cavani caught the screen pass.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+242,"Is the following sentence plausible? ""Fernando Tatis Jr. earned a red card.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5
+243,"Is the following sentence plausible? ""Malik Beasley  comitted a three second violation.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+244,"Is the following sentence plausible? ""Carson Wentz caught the screen pass.""",yes,No.,no,yes,False,yes_no,,mars_official,sports_understanding,5
+245,"Is the following sentence plausible? ""Pedro struck out the side.""",no,Yes,yes,no,False,yes_no,,mars_official,sports_understanding,5
+246,"Is the following sentence plausible? ""Nicklas Backstrom earned a trip to the penalty box.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+247,"Is the following sentence plausible? ""Blake Snell hit a single.""",yes,Yes,yes,yes,True,yes_no,,mars_official,sports_understanding,5
+248,"Is the following sentence plausible? ""Frederik Andersen took a three.""",no,No.,no,no,True,yes_no,,mars_official,sports_understanding,5

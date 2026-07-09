@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate `not False`:  \n`not False` = `True`  \n\nNow the expression becomes:  \n`True or False`  \n\nSince `or` returns `True` if at least one operand is `True`,  \n`True or False` = `True`  \n\nFinal answer: true"
-}

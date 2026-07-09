@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nExpression:  \n`( not False ) or True and False`\n\n1. **Parentheses first**:  \n`not False` → `True`  \nSo now we have:  \n`True or True and False`\n\n2. **Order of operations**:  \nLogical `and` has higher precedence than `or`.  \nSo evaluate `True and False` first:  \n`True and False` → `False`\n\n3. **Now we have**:  \n`True or False` → `True`\n\nFinal answer: true"
-}

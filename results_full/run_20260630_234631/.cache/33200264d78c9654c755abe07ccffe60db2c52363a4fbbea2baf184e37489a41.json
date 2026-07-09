@@ -1,3 +1,0 @@
-{
-  "content": "A reverse-biased p-n junction has a depletion region that widens, preventing current flow except for negligible reverse saturation current. This matches the behavior of an open or \"off\" switch.  \n- (A) On Switch: Incorrect — reverse bias blocks current flow.  \n- (B) Zener diode: Incorrect — a Zener diode in reverse bias can conduct only after breakdown voltage, but the question describes general reverse bias behavior, not breakdown.  \n- (C) Capacitor: Incorrect — although there is junction capacitance, the primary function in reverse bias is not as a capacitor but as a blocking device.  \n- (D) Off Switch: Correct — reverse bias means very high resistance, effectively an open circuit.  \n\nFinal answer: (D)"
-}

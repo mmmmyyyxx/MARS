@@ -1,3 +1,0 @@
-{
-  "content": "The 8085 microprocessor is housed in a 40-pin DIP package.  \nNot all pins are output pins — some are input, some are bidirectional, and some are power/clock pins.  \nCounting only dedicated output pins (like address bus high, control signals such as WR, S0, S1, etc.) yields 27 output pins.  \nThis is a standard fact in microprocessor architecture.  \n\nFinal answer: (A)"
-}

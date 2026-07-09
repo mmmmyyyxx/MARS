@@ -1,3 +1,0 @@
-{
-  "content": "REVISE. The question is overly specific about implementation details (contrapositives, systematic order) rather than focusing on core prompt design principles for logical reasoning. It risks leading to a convoluted prompt that may confuse the model. A better approach would ask how to structure the prompt to ensure thorough logical validation of all options against constraints."
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step according to operator precedence (NOT first, then AND left-to-right).\n\nExpression:  \nTrue and True and False and not True\n\n1. **Evaluate `not True`**  \n   `not True` = False\n\n   Now the expression becomes:  \n   True and True and False and False\n\n2. **Left-to-right evaluation for AND**  \n   - First: True and True → True  \n   - Second: True and False → False  \n   - Third: False and False → False\n\nFinal result: **False**\n\nFinal answer: false"
-}

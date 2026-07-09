@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n( True or False ) or not True\n\n---\n\n**Step 1 — Innermost parentheses**  \n( True or False )  \nTrue or False = True  \nIntermediate result: **True** or not True\n\n---\n\n**Step 2 — Apply NOT**  \nnot True = False  \nIntermediate result: True or False\n\n---\n\n**Step 3 — Apply OR**  \nTrue or False = True\n\n---\n\nFinal answer: true"
-}

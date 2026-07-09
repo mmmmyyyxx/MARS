@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not not True and not True or True**\n\n---\n\n**Step 1: Replace `True` with `T` for clarity**  \nnot not T and not T or T\n\n---\n\n**Step 2: Evaluate `not T`**  \nnot T = False  \nSo: not not T and False or T\n\n---\n\n**Step 3: Evaluate `not not T`**  \nnot T = False  \nnot False = True  \nSo: True and False or T\n\n---\n\n**Step 4: Apply precedence (NOT > AND > OR)**  \nTrue and False = False  \nSo: False or T\n\n---\n\n**Step 5: Evaluate `False or T`**  \nFalse or True = True\n\n---\n\n**Step 6: Conclusion**  \nThe expression simplifies to **True**.\n\n---\n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or not not ( not False )**\n\n---\n\n**Step 1: Resolve innermost parentheses**  \n`( not False )`  \n`not False` = `True`  \nSo now: `True or not not True`\n\n---\n\n**Step 2: Apply `not` from left to right with highest precedence**  \n`not not True`  \nFirst `not True` = `False`  \nThen `not False` = `True`  \n\nSo `not not True` = `True`\n\n---\n\n**Step 3: Apply `or`**  \n`True or True` = `True`\n\n---\n\nFinal answer: true"
-}

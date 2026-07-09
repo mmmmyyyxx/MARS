@@ -1,3 +1,0 @@
-{
-  "content": "Read the question carefully. Evaluate each Boolean expression step by step, verifying the truth value of each component and logical operator. Pay special attention to operator precedence (NOT before AND before OR), parentheses, and nested expressions, resolving them in the correct order. Watch for common pitfalls such as misinterpreting implication (→), equivalence (↔), XOR, and De Morgan’s laws. Ensure that all variables and subexpressions are evaluated accurately before combining results. Only after completing this systematic evaluation, return the final answer as true or false. Do not include extra commentary after the final answer."
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go step-by-step.\n\n---\n\n**Step 1: Original expression**  \n`not not not not True and not True`\n\n---\n\n**Step 2: Resolve `not` operators from left to right**  \nWe start with `not not not not True`.\n\n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`  \n- `not False` → `True`\n\nSo `not not not not True` = `True`.\n\n---\n\n**Step 3: Evaluate `not True`**  \n`not True` = `False`.\n\n---\n\n**Step 4: Apply `and`**  \nNow we have `True and False`.  \nFrom truth table: `True and False` = `False`.\n\n---\n\n**Step 5: Final answer**  \n`False`.\n\n---\n\n**Final answer: false**"
-}

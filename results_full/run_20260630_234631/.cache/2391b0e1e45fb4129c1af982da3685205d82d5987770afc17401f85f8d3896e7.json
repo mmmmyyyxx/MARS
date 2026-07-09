@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path.  \n\nThe path contains two arc commands (`A`):  \n- First arc: `A 21.00,21.00 0.00 1,0 23.00,42.00`  \n  - Radius: 21,21 (same x and y radius → circular arc)  \n  - Large-arc-flag = 1, sweep-flag = 0  \n- Second arc: `A 21.00,21.00 0.00 1,0 65.00,42.00`  \n  - Same radius, same flags  \n\nThe path starts at (65,42), draws an arc to (23,42), then another arc back to (65,42).  \nBecause both arcs have equal radii and each goes 180° (large-arc-flag=1), together they form a full circle.  \n\nFinal answer: (A)"
-}

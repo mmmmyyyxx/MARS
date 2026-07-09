@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Resolve innermost parentheses**  \n`( not False )` → `not False` means `True`.  \nSo we have:  \n`not not not not True`\n\n**Step 2: Apply NOT operators from right to left** (since they are prefix operators, we start with the innermost logical scope — but here they are chained directly, so we can count them).\n\nNumber of `not`s in front of `True`:  \n`not not not not True` → 4 `not`s.\n\n**Step 3: Effect of multiple NOTs**  \n- `not True` = `False`  \n- `not False` = `True`  \n- `not True` = `False`  \n- `not False` = `True`  \n\nSo:  \n`not not not not True` = `True`\n\n**Final answer: true**"
-}

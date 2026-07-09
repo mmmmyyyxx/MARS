@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of the prompt's structure might lead to inconsistent parsing of Boolean expressions across different inputs?\n\nHow could the prompt be refined to encourage the model to independently recognize and apply operator precedence without explicit step-by-step instructions?"
+}

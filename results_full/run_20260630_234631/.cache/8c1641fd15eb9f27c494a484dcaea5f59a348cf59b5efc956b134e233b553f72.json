@@ -1,3 +1,0 @@
-{
-  "content": "The solid angle \\(\\Omega\\) is given by \\(\\Omega = \\frac{A}{r^2}\\) for small angles, but more generally for a sphere it’s \\(\\Omega = \\frac{A_{\\text{surface}}}{r^2}\\) when \\(A\\) is the area on the sphere’s surface.  \n\nGiven:  \nArea \\(A = 2400 \\text{ cm}^2 = 2400 \\times 10^{-4} \\text{ m}^2 = 0.24 \\text{ m}^2\\)  \nDiameter \\(= 1.2 \\text{ m}\\), so radius \\(r = 0.6 \\text{ m}\\)  \n\n\\[\n\\Omega = \\frac{A}{r^2} = \\frac{0.24}{(0.6)^2} = \\frac{0.24}{0.36} = \\frac{2}{3}\n\\]\n\nFinal answer: (C)"
-}

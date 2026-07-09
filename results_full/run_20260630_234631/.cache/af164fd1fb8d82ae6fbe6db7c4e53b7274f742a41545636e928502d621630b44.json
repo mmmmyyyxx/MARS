@@ -1,3 +1,0 @@
-{
-  "content": "Evaluate the Boolean expression by strictly following the order of operations: resolve innermost parentheses first, then apply NOT operators, then AND operators, and finally OR operators. After each step, explicitly write the simplified expression before proceeding. Once fully simplified, output only \"true\" or \"false\" as the final answer."
-}

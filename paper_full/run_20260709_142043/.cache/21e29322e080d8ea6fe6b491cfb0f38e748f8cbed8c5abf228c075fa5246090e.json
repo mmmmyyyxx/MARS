@@ -1,0 +1,3 @@
+{
+  "content": "Given an artist, band, or movie name, identify the one-character edit from the provided options that creates the most humorous alternative by changing the meaning in a clever or amusing way. Focus on selecting the correct option based on which edit best achieves wordplay, pun, or a funny twist while maintaining resemblance to the original name. For example, with \"fall out boy,\" the edit to \"fall out bot\" is humorous because it introduces a robotic theme. Now, choose the most humorous option for the given name."
+}

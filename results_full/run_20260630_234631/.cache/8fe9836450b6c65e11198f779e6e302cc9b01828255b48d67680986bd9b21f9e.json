@@ -1,3 +1,0 @@
-{
-  "content": "How can you ensure the model correctly handles expressions with multiple XOR or equivalence operators, given their equal precedence and left-to-right evaluation?"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s analyze the path:  \n\nThe path starts at `M 51.00,18.00` and then has six `L` commands:  \n\n1. `L 5.00,62.00`  \n2. `L 37.00,63.00`  \n3. `L 53.00,71.00`  \n4. `L 52.00,55.00`  \n5. `L 65.00,31.00`  \n6. `L 51.00,18.00` (back to start)  \n\nCounting the points:  \n- Start point (M)  \n- 6 additional line-to points  \n- Last point closes back to start  \n\nThat’s 7 distinct points in total (since the last one is the same as the first).  \nA polygon with 7 sides is a **heptagon**.  \n\nFinal answer: (B)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step according to operator precedence (parentheses first, then `not`, then `and`).\n\nExpression:  \n**True and not ( True or False )**\n\n1. Evaluate inside parentheses:  \n   **True or False** → True\n\n2. Apply `not`:  \n   **not (True)** → False\n\n3. Apply `and`:  \n   **True and False** → False\n\nFinal answer: false"
-}

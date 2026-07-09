@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step according to the rules:  \n\n**Original expression:**  \nTrue and True and True or not False  \n\n---\n\n**Step 1 — Resolve parentheses**  \nThere are no parentheses in this expression, so we skip this step.\n\n---\n\n**Step 2 — Apply NOT operators**  \nWe have `not False` → `True`.  \n\nExpression becomes:  \nTrue and True and True or True  \n\n---\n\n**Step 3 — Apply AND operators**  \nAND is left-associative:  \n\n- First: True and True → True  \n- Second: True and True → True  \n\nExpression becomes:  \nTrue or True  \n\n---\n\n**Step 4 — Apply OR operators**  \nTrue or True → True  \n\n---\n\n**Final result:**  \nTrue  \n\nFinal answer: true"
-}

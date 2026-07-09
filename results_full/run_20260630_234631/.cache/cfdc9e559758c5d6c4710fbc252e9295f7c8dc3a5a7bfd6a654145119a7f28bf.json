@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step by step.  \n\n**Given:**  \n\\( \\text{False} \\lor (\\neg \\neg \\neg \\text{True}) \\)  \n\n---\n\n**Step 1 — Handle the triple negation inside parentheses**  \n- \\( \\neg \\text{True} = \\text{False} \\)  \n- \\( \\neg \\text{False} = \\text{True} \\)  \n- \\( \\neg \\text{True} = \\text{False} \\)  \n\nSo \\( \\neg \\neg \\neg \\text{True} = \\text{False} \\)  \n\n---\n\n**Step 2 — Substitute back into the main expression**  \n\\( \\text{False} \\lor \\text{False} \\)  \n\n---\n\n**Step 3 — Apply OR**  \n\\( \\text{False} \\lor \\text{False} = \\text{False} \\)  \n\n---\n\n**Final answer: false**"
-}

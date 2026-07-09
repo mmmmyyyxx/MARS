@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step:  \n\n1. **True or True** → `True` (since `True OR True` is `True`)  \n2. **not False** → `True` (since `not False` is `True`)  \n3. Now we have: `True or True or True`  \n4. `True or True` → `True`  \n5. `True or True` → `True`  \n\nSo the whole expression evaluates to `True`.  \n\nFinal answer: true"
-}

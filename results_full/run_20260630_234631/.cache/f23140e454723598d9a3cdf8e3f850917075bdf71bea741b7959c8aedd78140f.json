@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n**not False or False or ( False )**\n\n1. **not False** → `True`  \n2. So the expression becomes: **True or False or False**  \n3. Logical OR: `True or False` is `True`.  \n4. `True or False` (the third term) is still `True`.  \n\nSo the whole expression evaluates to **True**.  \n\nFinal answer: true"
-}

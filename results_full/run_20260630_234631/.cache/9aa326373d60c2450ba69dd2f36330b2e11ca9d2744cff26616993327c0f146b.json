@@ -1,3 +1,0 @@
-{
-  "content": "In a DC machine, the shunt field winding is connected in parallel with the armature.  \nThe shunt resistance needs to be high so that the shunt field current is relatively small compared to the armature current, allowing most of the supply current to go to the armature.  \nThe armature resistance is kept low to minimize copper losses and voltage drop under load, ensuring good efficiency and regulation.  \n\nSo: shunt resistance → high, armature resistance → low.  \n\nFinal answer: (B)"
-}

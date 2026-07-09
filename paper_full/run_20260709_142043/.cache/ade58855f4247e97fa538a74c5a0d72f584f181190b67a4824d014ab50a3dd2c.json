@@ -1,0 +1,3 @@
+{
+  "content": "How can you modify the prompt to explicitly include the example SVG path and its step-by-step classification process, ensuring the model follows the same reasoning for new inputs?\n\nWhat specific elements in the current prompt could be optimized to reduce ambiguity and increase the model's accuracy in distinguishing between similar polygon types, such as kites and rectangles?"
+}

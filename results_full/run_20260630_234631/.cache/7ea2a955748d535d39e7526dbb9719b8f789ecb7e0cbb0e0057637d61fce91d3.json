@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\n1. The SVG path starts with `M 25.00,38.00` — this means **Move** to coordinates (25, 38).  \n2. Then `L 89.00,58.00` — this means **Line** to coordinates (89, 58).  \n3. So the path draws a straight line segment between two points.  \n4. Looking at the options, the only one that matches a straight segment between two points is **line**.  \n\nFinal answer: (E)"
-}

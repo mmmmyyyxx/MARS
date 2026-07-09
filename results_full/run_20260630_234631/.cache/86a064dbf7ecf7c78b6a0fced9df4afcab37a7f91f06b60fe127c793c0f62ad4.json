@@ -1,3 +1,0 @@
-{
-  "content": "How can we ensure the prompt explicitly guides the model to demonstrate its reasoning process internally before selecting the final answer, without adding unnecessary complexity to the output format?"
-}

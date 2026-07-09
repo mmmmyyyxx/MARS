@@ -1,3 +1,0 @@
-{
-  "content": "A variable displacement transducer converts mechanical displacement into an electrical signal.  \n\n- **(A) Tachometer**: Measures speed (rate of displacement), not displacement itself — incorrect.  \n- **(B) Potentiometer**: A resistive element where the wiper position changes proportionally to displacement — this is a variable displacement transducer.  \n- **(C) Synchros**: Measure angular position but are not typically classified as simple variable displacement transducers; they are more specialized position sensors, often used in pairs for remote indication.  \n- **(D) None of the above**: Incorrect, since (B) fits the definition.  \n\nFinal answer: (B)"
-}

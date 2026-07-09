@@ -1,3 +1,0 @@
-{
-  "content": "DNA strands are complementary and antiparallel. The given sequence is 5′ CGA TTG 3′.  \nComplementary base pairing rules: C pairs with G, G with C, A with T, T with A.  \nSo, complement of CGA TTG is GCT AAC, but written antiparallel (3′ to 5′) relative to the original strand.  \nWhen we write the complementary strand in the 5′ to 3′ direction, we reverse it: 5′ GCT AAC 3′.  \nChecking options: (B) matches 5′ GCT AAC 3′.  \n\nFinal answer: (B)"
-}

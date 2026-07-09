@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate inside parentheses:  \nTrue or True or False = True (since OR yields True if at least one operand is True).  \n\nThen apply NOT:  \nnot (True) = False.  \n\nFinal answer: false"
-}

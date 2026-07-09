@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step:  \n\nThe expression is:  \n\n**False or not False or not not True**\n\n1. **not False** = True  \n   → Expression becomes: **False or True or not not True**\n\n2. **not not True** = not (not True) = not False = True  \n   → Expression becomes: **False or True or True**\n\n3. **False or True** = True  \n   → Expression becomes: **True or True**\n\n4. **True or True** = True  \n\nFinal answer: true"
-}

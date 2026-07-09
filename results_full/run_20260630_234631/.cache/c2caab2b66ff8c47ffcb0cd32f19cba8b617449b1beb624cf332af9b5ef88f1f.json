@@ -1,3 +1,0 @@
-{
-  "content": "A three-state buffer is a digital logic component that can output three possible states: high (logic 1), low (logic 0), and high-impedance (often called \"float\" or \"tri-state\").  \nOption (A) uses \"1, 0, float\" and option (B) uses \"High, Low, Float\" — both describe the same three states, just with different naming conventions.  \nTherefore, the correct choice is that both A and B are correct.  \n\nFinal answer: (C)"
-}

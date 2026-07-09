@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the innermost negation:  \nnot True → False  \n\nThen:  \nnot not False → not (not False) → not True → False  \n\nThen:  \nnot False → True  \n\nNow the expression becomes:  \nFalse or True  \n\nFinally:  \nFalse or True → True  \n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Start with the expression**  \n`True and not not not not not True`\n\n**Step 2: Resolve the `not not not not not True` part**  \nWe apply `not` operators from right to left (innermost first).\n\n- `not True` → `False`  \nExpression becomes: `True and not not not not False`\n\n- `not False` → `True`  \nExpression becomes: `True and not not not True`\n\n- `not True` → `False`  \nExpression becomes: `True and not not False`\n\n- `not False` → `True`  \nExpression becomes: `True and not True`\n\n- `not True` → `False`  \nExpression becomes: `True and False`\n\n**Step 3: Apply the AND operator**  \n`True and False` → `False`\n\n**Final answer: false**"
-}

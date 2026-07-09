@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path given is:  \n`M 68.00,36.00 L 61.00,80.00`  \n\n- `M` means \"move to\" the starting point (68.00, 36.00).  \n- `L` means \"line to\" the next point (61.00, 80.00).  \n\nSo this path draws a straight line segment from (68, 36) to (61, 80).  \n\nLooking at the options, the only one that matches a straight line segment is **line**.  \n\nFinal answer: (E)"
-}

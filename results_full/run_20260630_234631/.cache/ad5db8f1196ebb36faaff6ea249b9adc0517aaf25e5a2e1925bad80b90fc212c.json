@@ -1,3 +1,0 @@
-{
-  "content": "The potentiometer measures voltage by balancing it against a known voltage, drawing no current from the circuit under test at null condition.  \nThis eliminates loading errors that occur when a voltmeter draws current.  \n\nOptions:  \n(A) Incorrect — moderate loading still causes error.  \n(B) Incorrect — maximum loading is worse for accuracy.  \n(C) Incorrect — the galvanometer is for detecting null, not the reason for higher accuracy.  \n(D) Correct — no loading means no error due to current draw from the source.  \n\nFinal answer: (D)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThe Teacher question effectively targets key task challenges by asking about specific ambiguity types in BIG-Bench Hard questions and prompt guidance strategies. This aligns with maximizing accuracy through disambiguation, encouraging analysis of lexical, structural, or contextual ambiguities that could mislead the model. It prompts consideration of tailored instructions, examples, or reasoning steps to improve resolution, making it a focused and Socratic approach to refining the prompt."
-}

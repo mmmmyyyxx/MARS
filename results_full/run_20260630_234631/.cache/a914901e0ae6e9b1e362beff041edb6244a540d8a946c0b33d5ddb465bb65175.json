@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:  \n**False or not not not not not False**\n\n---\n\n**Step 1 – Handle the sequence of NOTs**  \nWe start from the rightmost **not** and move inward.\n\n- **not False** = True  \n- **not not False** = not (not False) = not True = False  \n- **not not not False** = not (not not False) = not False = True  \n- **not not not not False** = not (not not not False) = not True = False  \n- **not not not not not False** = not (not not not not False) = not False = **True**\n\nSo:  \n**not not not not not False** = **True**\n\n---\n\n**Step 2 – Apply OR**  \nExpression becomes:  \n**False or True**\n\n**False or True** = True\n\n---\n\n**Final answer: true**"
-}

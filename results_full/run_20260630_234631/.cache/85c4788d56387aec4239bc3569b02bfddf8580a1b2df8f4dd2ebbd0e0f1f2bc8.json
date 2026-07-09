@@ -1,3 +1,0 @@
-{
-  "content": "A reverse-biased p-n junction diode blocks current flow, effectively acting as an open switch in a circuit.  \nWhile there is some junction capacitance (option C), the primary intended behavior in most circuit contexts is that of an \"off switch.\"  \n\nFinal answer: (D)"
-}

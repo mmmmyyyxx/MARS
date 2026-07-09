@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.8192771084337349,
+  "num_samples": 249,
+  "num_correct": 204,
+  "num_failed": 45,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "sports_understanding",
+  "method_id": "cot_zs",
+  "method_display_name": "CoT(ZS)",
+  "answer_format": "yes_no",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.8192771084337349,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "best_effort_reimplementation",
+  "exactness_level": "best_effort_reimplementation",
+  "runtime_seconds": 112.23733353614807
+}

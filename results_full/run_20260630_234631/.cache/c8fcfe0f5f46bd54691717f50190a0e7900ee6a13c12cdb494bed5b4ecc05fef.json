@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis is a strong Socratic question that directly addresses a key challenge in GSM8K problems - implicit multi-step reasoning. It pushes for specific prompt engineering strategies to help models recognize when problems contain unstated intermediate calculations, which is crucial for improving accuracy. The question focuses on a well-documented failure mode and asks for concrete adjustments rather than general improvements."
-}

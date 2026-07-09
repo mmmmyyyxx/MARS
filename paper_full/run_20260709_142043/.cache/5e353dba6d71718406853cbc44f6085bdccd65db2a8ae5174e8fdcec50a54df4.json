@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the requirement to \"not rely on external knowledge or assumptions\" in your current prompt affect the model's ability to resolve pronouns that depend on real-world context, and could this limitation reduce correctness in certain cases?\n\n2. Considering your goal to maximize correctness rate, what specific elements in your prompt's output format could be optimized to prevent the model from generating explanations while still ensuring it follows the full reasoning process internally?"
+}

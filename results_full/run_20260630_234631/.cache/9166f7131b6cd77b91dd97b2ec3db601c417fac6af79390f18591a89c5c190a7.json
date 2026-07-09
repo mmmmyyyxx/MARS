@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:\n\n**not not not False and True and False**\n\n---\n\n### **Step 1: Resolve the innermost NOT**\nStart with `not False`:\n\n- `not False` = `True`\n\nExpression becomes:  \n`not not True and True and False`\n\n---\n\n### **Step 2: Apply the next NOT**\n`not True` = `False`\n\nExpression becomes:  \n`not False and True and False`\n\n---\n\n### **Step 3: Apply the last NOT**\n`not False` = `True`\n\nExpression becomes:  \n`True and True and False`\n\n---\n\n### **Step 4: Apply AND from left to right**\n`True and True` = `True`\n\nExpression becomes:  \n`True and False`\n\n`True and False` = `False`\n\n---\n\n**Final answer: false**"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "First, count the number of distinct vertices in the path:  \nM 14.18,74.73 → L 7.06,77.65 → L 54.96,79.97 → L 60.67,46.13 → L 44.42,32.60 → L 8.68,65.69 → L 14.18,74.73.  \n\nThat’s 7 vertices (the last point closes to the first).  \nA 7-sided polygon is a heptagon.  \n\nFinal answer: (B)"
-}

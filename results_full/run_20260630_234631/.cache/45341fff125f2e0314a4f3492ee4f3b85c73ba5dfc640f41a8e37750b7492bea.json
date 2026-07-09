@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nExpression:  \n**not True and True and True or False**\n\n---\n\n**Step 1 – Apply NOT first (highest precedence)**  \nnot True = False  \n\nExpression becomes:  \n**False and True and True or False**\n\n---\n\n**Step 2 – Apply AND from left to right**  \nFalse and True = False  \nFalse and True = False  \n\nExpression becomes:  \n**False or False**\n\n---\n\n**Step 3 – Apply OR**  \nFalse or False = False  \n\n---\n\n**Final answer: false**"
-}

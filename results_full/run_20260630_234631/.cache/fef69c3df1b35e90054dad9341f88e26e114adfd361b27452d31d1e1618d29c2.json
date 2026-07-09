@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step-by-step (mentally) according to precedence rules:  \n\nExpression:  \nTrue **and** not not False **and** not False  \n\n1. **Negations first**:  \n   - not False → True  \n   - not not False = not (not False) = not (True) → False  \n\nSo now:  \nTrue **and** False **and** True  \n\n2. **Left-to-right for `and`** (all must be True for overall True):  \n   - True and False → False  \n   - False and True → False  \n\nFinal result: **false**  \n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\nExpression:  \nTrue and True and not not not False  \n\n1. **Innermost NOTs** (right to left for multiple NOTs):  \n   - not False → True  \n   - not True → False  \n   - not False → True  \n\nSo `not not not False` = True.  \n\n2. **Expression now**:  \n   True and True and True  \n\n3. **AND from left to right**:  \n   - True and True → True  \n   - True and True → True  \n\nFinal truth value: **true**  \n\nFinal answer: true"
-}

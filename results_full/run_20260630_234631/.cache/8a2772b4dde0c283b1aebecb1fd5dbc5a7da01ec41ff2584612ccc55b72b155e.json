@@ -1,3 +1,0 @@
-{
-  "content": "Deflection methods involve measuring the displacement of a pointer or indicator (like in a galvanometer or analog meter) to determine the value of the measured quantity directly.  \nThey are generally **simple** and **fast** because they don’t require balancing or null conditions like comparison methods (e.g., Wheatstone bridge).  \nHowever, they are **not** the most accurate — comparison methods are more accurate because they are unaffected by calibration errors in the deflection instrument.  \nThe option that matches both simplicity and speed is (C), which aligns with the common advantage cited for deflection methods in measurement systems.  \n\nFinal answer: (C)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let's break it down step-by-step using standard precedence (NOT first, then AND left-to-right).  \n\nThe expression is:  \n**False and not True and False and True**\n\n---\n\n**Step 1: Handle \"not True\"**  \nnot True = False  \n\nExpression becomes:  \nFalse **and** False **and** False **and** True  \n\n---\n\n**Step 2: Evaluate left-to-right**  \n- False **and** False → False  \n- False **and** False → False  \n- False **and** True → False  \n\n---\n\nFinal result: **False**\n\n---\n\nFinal answer: false"
-}

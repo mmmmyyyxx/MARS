@@ -1,3 +1,0 @@
-{
-  "content": "The path has points at (76,30), (58,25), (42,26), (41,41), (47,54), and returns to (76,30).  \nCounting the distinct vertices:  \n1. (76,30)  \n2. (58,25)  \n3. (42,26)  \n4. (41,41)  \n5. (47,54)  \nThat’s 5 vertices, and the path is closed (last point connects to first).  \nA closed shape with 5 vertices is a pentagon.  \n\nFinal answer: (G)"
-}

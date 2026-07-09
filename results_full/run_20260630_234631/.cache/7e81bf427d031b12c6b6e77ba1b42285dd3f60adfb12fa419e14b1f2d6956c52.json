@@ -1,3 +1,0 @@
-{
-  "content": "Step 1: Total eggs laid per day: 16.  \nStep 2: Eggs eaten for breakfast: 3.  \nStep 3: Eggs used for muffins: 4.  \nStep 4: Eggs remaining for sale: 16 − 3 − 4 = 9.  \nStep 5: Verify: Sequential subtractions after total eggs; “remainder” implies total eggs minus all uses.  \nStep 6: Daily earnings: 9 × $2 = $18.  \n\nFinal answer: 18"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n( True ) and not True or True  \n\n1. **Parentheses first**:  \n   ( True ) is just `True`.  \n   So we have:  \n   `True and not True or True`  \n\n2. **Logical NOT**:  \n   `not True` = `False`  \n   Expression becomes:  \n   `True and False or True`  \n\n3. **Logical AND** before OR (order of operations):  \n   `True and False` = `False`  \n   Expression becomes:  \n   `False or True`  \n\n4. **Logical OR**:  \n   `False or True` = `True`  \n\nFinal answer: true"
-}

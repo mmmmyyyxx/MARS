@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\nThe premise says:  \n- Every stepbrother of Joan is a schoolmate of Reyes.  \n\nThat means:  \nIf someone is a stepbrother of Joan → they are a schoolmate of Reyes.  \n\nThe conclusion says:  \n- Every schoolmate of Reyes is a stepbrother of Joan.  \n\nThat means:  \nIf someone is a schoolmate of Reyes → they are a stepbrother of Joan.  \n\nThis is reversing the premise without justification — it’s the fallacy of affirming the consequent in categorical logic terms.  \nJust because all stepbrothers of Joan are schoolmates of Reyes doesn’t mean all schoolmates of Reyes are stepbrothers of Joan.  \n\nSo the argument is **invalid**.  \n\nFinal answer: invalid"
-}

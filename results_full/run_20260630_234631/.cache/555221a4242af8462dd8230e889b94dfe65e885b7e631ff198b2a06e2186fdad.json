@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\nThe SVG path command `M 38.35,49.41 L 31.18,9.15` means:  \n\n- **M** = move to the starting point (38.35, 49.41)  \n- **L** = draw a straight line to (31.18, 9.15)  \n\nSo this path draws exactly one line segment between two points.  \n\nLooking at the options, the only shape that matches a single straight segment is **line**.  \n\nFinal answer: (E)"
-}

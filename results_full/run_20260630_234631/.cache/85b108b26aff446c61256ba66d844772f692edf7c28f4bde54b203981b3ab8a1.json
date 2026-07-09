@@ -1,3 +1,0 @@
-{
-  "content": "A combinational PLD with a fixed AND array and a programmable OR array is known as a PAL (Programmable Array Logic).  \nPROM has a fixed OR array and programmable AND array, while PLA has both arrays programmable.  \nPLD is a general term, but the specific architecture described matches PAL.  \n\nFinal answer: (C)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( not not True ) or not False`\n\n---\n\n**Step 1: Resolve innermost parentheses**  \nInside `( not not True )`:\n\n- `not True` → `False`\n- `not False` → `True`\n\nSo `( not not True )` = `True`.\n\n---\n\n**Step 2: Evaluate the rest**  \nNow we have:  \n`True or not False`\n\nPrecedence: NOT before OR.  \n`not False` → `True`\n\nSo:  \n`True or True` → `True`\n\n---\n\nFinal answer: true"
-}

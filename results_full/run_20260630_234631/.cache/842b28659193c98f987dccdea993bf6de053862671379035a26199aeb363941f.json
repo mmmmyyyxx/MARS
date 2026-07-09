@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\n1. Start with `False`.  \n2. Apply `not False` → `True`.  \n3. Apply `not` again: `not True` → `False`.  \n4. Apply `not` again: `not False` → `True`.  \n5. Apply `not` again: `not True` → `False`.  \n6. Apply `not` again: `not False` → `True`.  \n\nSo the expression simplifies to `True`.  \n\nFinal answer: true"
-}

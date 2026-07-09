@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:  \n**True and not True and True and True**\n\n---\n\n**Step 1: Handle parentheses and negations (NOT)**  \nThere are no parentheses, so we apply **NOT** first where it appears.\n\n`not True` = `False`\n\nSo the expression becomes:  \n**True and False and True and True**\n\n---\n\n**Step 2: Apply AND from left to right**  \nAND is associative, but we must evaluate left-to-right because all operators are the same precedence here (AND).\n\n- `True and False` → `False`  \n- `False and True` → `False`  \n- `False and True` → `False`\n\n---\n\n**Step 3: Final result**  \nThe entire expression evaluates to **False**.\n\n---\n\nFinal answer: false"
-}

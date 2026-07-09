@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step (internally) without writing them in the final answer.\n\nExpression:  \nnot not ( not False or True )\n\n1. **Innermost parentheses**:  \nnot False = True  \nSo: (True or True) = True  \n\n2. **Apply first \"not\"**:  \nnot True = False  \n\n3. **Apply second \"not\"**:  \nnot False = True  \n\nFinal answer: true"
-}

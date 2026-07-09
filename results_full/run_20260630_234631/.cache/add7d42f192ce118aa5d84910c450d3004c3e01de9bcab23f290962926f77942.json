@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n**not ( True or True ) and True**\n\n1. **Parentheses first:**  \n   \\( \\text{True or True} = \\text{True} \\)  \n\n2. **Apply NOT:**  \n   \\( \\text{not (True)} = \\text{False} \\)  \n\n3. **AND with True:**  \n   \\( \\text{False and True} = \\text{False} \\)  \n\nFinal answer: false"
-}

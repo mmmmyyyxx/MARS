@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:\n\n**not not not not True and not True**\n\n---\n\n### **1. Resolve parentheses and negations from the inside out**\nThere are no parentheses, so we apply **NOT** operators from right to left on their operands.\n\nFirst, handle the left side: `not not not not True`\n\n- `not True` → False  \n- `not False` → True  \n- `not True` → False  \n- `not False` → True  \n\nSo `not not not not True` = **True**.\n\n---\n\n### **2. Evaluate the right side**\n`not True` = **False**.\n\n---\n\n### **3. Apply AND**\nLeft side: **True**  \nRight side: **False**  \n`True and False` → **False**.\n\n---\n\n**Final answer: false**"
-}

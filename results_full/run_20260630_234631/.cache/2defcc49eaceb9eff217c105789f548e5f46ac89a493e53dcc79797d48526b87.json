@@ -1,3 +1,0 @@
-{
-  "content": "A microprocessor integrates the arithmetic logic unit (ALU) and control unit on a single chip, along with registers.  \n- (B) is incorrect because memory (especially main memory) is typically external to the microprocessor chip.  \n- (C) is incorrect because I/O devices are generally not integrated into the microprocessor itself.  \n- (D) is incorrect because it omits the ALU, which is a core component of the microprocessor.  \n\nFinal answer: (A)"
-}

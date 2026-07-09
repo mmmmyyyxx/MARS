@@ -1,3 +1,0 @@
-{
-  "content": "The voltmeter's accuracy is specified as 2% of full scale reading.  \nFull scale = 100 V.  \nSo, maximum possible error in volts = \\( 0.02 \\times 100 = 2 \\text{ V} \\).  \n\nMeasured voltage = 75 V.  \nLimiting error in percentage of the measured value =  \n\\[\n\\frac{2}{75} \\times 100\\% \\approx 2.666\\%\n\\]  \n\nThis matches option (B).  \n\nFinal answer: (B)"
-}

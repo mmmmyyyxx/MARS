@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**True and True and not not not False**\n\n---\n\n**Step 1: Handle negations from right to left**  \n- `not False` → `True`  \n- `not True` → `False`  \n- `not False` → `True`\n\nSo `not not not False` = `not not (not False)`  \n= `not not (True)`  \n= `not (False)`  \n= `True`\n\n---\n\n**Step 2: Apply AND from left to right**  \n`True and True and True`  \n= `(True and True) and True`  \n= `True and True`  \n= `True`\n\n---\n\n**Final answer: true**"
-}

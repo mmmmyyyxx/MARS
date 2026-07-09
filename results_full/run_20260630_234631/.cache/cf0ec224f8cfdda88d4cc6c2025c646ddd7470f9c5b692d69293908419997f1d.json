@@ -1,3 +1,0 @@
-{
-  "content": "The original sequence ends with `…CAGUAACAGA…` and the modified sequence ends with `…CAGUACCAGA…`.  \nThis is a single nucleotide change from `UAA` (stop codon) in the original to `UAC` (tyrosine) in the modified sequence, because the reading frame is:  \n\nOriginal: `…CAG UAA CAG A…` → stop codon after `CAG`.  \nModified: `…CAG UAC CAG A…` → tyrosine instead of stop, so translation continues.  \n\nThus, the protein will be longer, but likely dysfunctional due to altered C-terminal sequence.  \n\nFinal answer: (D)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "How can you ensure the prompt explicitly guides the model to distinguish between arguments that are structurally identical to known valid forms versus those that merely resemble them but contain subtle structural deviations?"
-}

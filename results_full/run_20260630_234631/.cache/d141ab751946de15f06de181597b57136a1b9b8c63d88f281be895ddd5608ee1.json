@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**False and ( False or not False )**\n\n---\n\n**Step 1: Resolve parentheses and negations (NOT first)**  \nInside parentheses:  \n`False or not False`  \n`not False` = **True**  \nSo: `False or True` = **True**\n\n---\n\n**Step 2: Substitute back**  \nExpression becomes:  \n`False and True`\n\n---\n\n**Step 3: Apply AND**  \n`False and True` = **False**\n\n---\n\nFinal answer: **false**  \n\nFinal answer: false"
-}

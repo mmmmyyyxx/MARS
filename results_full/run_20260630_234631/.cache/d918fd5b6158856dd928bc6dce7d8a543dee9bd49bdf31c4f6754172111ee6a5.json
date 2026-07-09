@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nThe expression is:  \n**( True or not False ) or False**\n\n---\n\n**Step 1: Evaluate `not False`**  \n`not False` means the negation of `False`, which is `True`.  \nSo inside parentheses: `True or not False` → `True or True`.\n\n---\n\n**Step 2: Evaluate `True or True`**  \n`True or True` is `True`.  \nSo parentheses simplify to `True`.\n\n---\n\n**Step 3: Evaluate `(True) or False`**  \n`True or False` is `True`.\n\n---\n\n**Step 4: Conclusion**  \nThe entire expression simplifies to `True`.\n\n---\n\n**Final answer: true**"
-}

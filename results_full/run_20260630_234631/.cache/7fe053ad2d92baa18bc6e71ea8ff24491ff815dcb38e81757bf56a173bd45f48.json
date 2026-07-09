@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step (even though I won’t show the steps in the final answer).\n\nThe expression is:  \n**True or False and not True and False**\n\nOperator precedence (Python/logic rules):  \n1. `not`  \n2. `and`  \n3. `or`\n\nSo:  \n`not True` = `False`  \n\nNow:  \n`False and False` = `False`  \n\nNow:  \n`True or False` = `True`  \n\nFinal answer: **true**\n\nFinal answer: true"
-}

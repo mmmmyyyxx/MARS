@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the order of operations.\n\n**Original expression:**  \n`not False and False and False and True`\n\n---\n\n**Step 1: Apply NOT operators**  \n`not False` → `True`  \n\nExpression becomes:  \n`True and False and False and True`\n\n---\n\n**Step 2: Apply AND operators from left to right**  \n`True and False` → `False`  \n\nExpression becomes:  \n`False and False and True`  \n\n`False and False` → `False`  \n\nExpression becomes:  \n`False and True`  \n\n`False and True` → `False`  \n\n---\n\n**Final answer:** `False`\n\n---\n\nFinal answer: false"
-}

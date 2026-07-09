@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of the student's prompt might lead to ambiguity or inconsistency when evaluating expressions with nested parentheses or mixed operators?\n\nConsidering the goal of maximizing correctness rate, how could the prompt be refined to ensure it guides the model to consistently apply Boolean logic principles without relying on rigid step-by-step instructions?"
+}

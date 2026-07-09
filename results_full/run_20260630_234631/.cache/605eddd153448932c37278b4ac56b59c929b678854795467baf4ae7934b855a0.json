@@ -1,3 +1,0 @@
-{
-  "content": "In the Ward-Leonard system, the generator’s residual magnetism is necessary to initiate voltage buildup. Without it, no generator voltage would be produced at very low field currents, thus imposing a lower speed limit because the motor cannot run below a certain voltage.  \nField resistance affects the upper speed limit, and armature resistance causes speed drop but not a strict lower limit.  \n\nFinal answer: (C)"
-}

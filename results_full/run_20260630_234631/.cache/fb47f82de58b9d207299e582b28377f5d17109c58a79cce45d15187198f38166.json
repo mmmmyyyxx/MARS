@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( ( False and True ) )`\n\n1. **Parentheses first**  \nInside: `( False and True )`  \n`False and True` → `False` (AND is true only if both are true).\n\n2. **Apply NOT**  \n`not ( False )` → `True`.\n\nFinal result: **true**  \n\nFinal answer: true"
-}

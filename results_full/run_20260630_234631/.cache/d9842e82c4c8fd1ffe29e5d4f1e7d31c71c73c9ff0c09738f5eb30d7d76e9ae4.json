@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not not not not True or not True`\n\n---\n\n**Step 1 — Resolve innermost NOT operations**  \nWe start from the leftmost `not` and move inward logically, but since there are no parentheses, we apply `not` from right to left in the first subexpression.\n\n`not not not not True` means:  \n`not (not (not (not True)))`\n\n- `not True` = **False**  \n- `not False` = **True**  \n- `not True` = **False**  \n- `not False` = **True**\n\nSo `not not not not True` = **True**.\n\n---\n\n**Step 2 — Evaluate `not True`**  \n`not True` = **False**.\n\n---\n\n**Step 3 — Apply OR**  \n`True or False` = **True**.\n\n---\n\n**Final answer: true**"
-}

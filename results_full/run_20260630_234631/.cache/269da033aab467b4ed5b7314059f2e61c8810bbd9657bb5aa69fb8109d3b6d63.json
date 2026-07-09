@@ -1,3 +1,0 @@
-{
-  "content": "Let’s analyze the given path coordinates:  \n\nM 47.84,53.33  \nL 50.68,45.65  \nL 67.09,40.91  \nL 56.00,53.91  \nL 47.84,53.33  \n\nThis path has 5 distinct vertices (the last point closes back to the first).  \nA polygon with 5 vertices is a pentagon.  \n\nFinal answer: (G)"
-}

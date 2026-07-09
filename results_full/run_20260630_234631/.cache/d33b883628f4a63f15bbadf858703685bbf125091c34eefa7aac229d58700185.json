@@ -1,3 +1,0 @@
-{
-  "content": "Determine whether the given Boolean expression evaluates to true or false. Carefully apply the rules of Boolean logic, including operator precedence (NOT, AND, OR), and consider all parentheses. Output only \"true\" or \"false\" as your final answer."
-}

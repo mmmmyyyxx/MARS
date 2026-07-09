@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence rules (NOT first, then AND, left to right).\n\nExpression:  \n**False and True and ( not False )**\n\n1. **NOT has highest precedence**:  \n   not False → True  \n   Expression becomes:  \n   False and True and True\n\n2. **AND is left-associative**:  \n   First: False and True → False  \n   Expression becomes:  \n   False and True\n\n3. **Next AND**:  \n   False and True → False\n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence rules (NOT first, then AND, then OR):\n\nExpression:  \nTrue or ( True or not True )\n\n1. **Evaluate innermost parentheses first**:  \n   Inside: `True or not True`  \n   - `not True` = False  \n   - So: `True or False` = True  \n\n2. **Substitute back**:  \n   Expression becomes: `True or True`  \n\n3. **Evaluate final OR**:  \n   `True or True` = True  \n\nFinal answer: true"
-}

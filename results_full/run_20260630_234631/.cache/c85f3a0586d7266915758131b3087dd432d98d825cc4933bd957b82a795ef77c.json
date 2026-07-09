@@ -1,3 +1,0 @@
-{
-  "content": "DNA polymerase synthesizes a new strand complementary to the template strand.  \nIf the template strand has A:T = 3:2, then in the template strand, for every 3 adenines there are 2 thymines.  \n\nIn the complementary strand:  \n- Where the template has A, the new strand gets T.  \n- Where the template has T, the new strand gets A.  \n\nSo the number of T’s in the new strand equals the number of A’s in the template strand (3),  \nand the number of A’s in the new strand equals the number of T’s in the template strand (2).  \n\nThus, in the new strand, A:T = 2:3.  \n\nFinal answer: (C)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "An oscillator’s main purpose is to generate an AC signal without requiring an external input signal after startup.  \nWhile some oscillators produce sinusoidal outputs, others produce non-sinusoidal waveforms (square, triangle, etc.), but the primary function common to all oscillators is to generate **sustained oscillations at a constant amplitude and specific frequency** once powered.  \n\nOption (A) is too narrow because not all oscillators are sinusoidal.  \nOption (B) is also too narrow because not all oscillators are non-sinusoidal.  \nOption (C) captures the essential function: sustained oscillations, constant amplitude, specific frequency.  \nOption (D) is incorrect because (C) is correct.  \n\nFinal answer: (C)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "An oscillator must sustain stable oscillations without external input after startup.  \n- **Amplitude stability** is necessary to prevent the output from decaying (too little gain) or saturating/clipping (too much gain).  \n- **Frequency stability** is required to maintain a constant oscillation frequency, often ensured by a resonant circuit or crystal.  \n- **Power stability** is not a standard primary requirement; power depends on amplitude and load, but the core criteria are amplitude and frequency stability.  \n\nThus, the correct choice is both A and B.  \n\nFinal answer: (D)"
-}

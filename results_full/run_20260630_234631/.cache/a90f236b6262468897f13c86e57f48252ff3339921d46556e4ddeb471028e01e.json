@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not False or not not not not True`\n\n---\n\n**Step 1: Resolve innermost constants**  \n`True` and `False` are Boolean literals.\n\n---\n\n**Step 2: Apply NOT operators from right to left (precedence)**  \n\nFirst, `not True` → `False`  \nNow: `not False or not not not False`\n\nNext, `not False` → `True`  \nNow: `not False or not not True`\n\nNext, `not True` → `False`  \nNow: `not False or not False`\n\nNext, `not False` → `True`  \nNow: `not False or True`\n\n---\n\n**Step 3: Continue left to right with precedence**  \n\n`not False` → `True`  \nNow: `True or True`\n\n---\n\n**Step 4: Apply OR**  \n\n`True or True` → `True`\n\n---\n\nFinal answer: true"
-}

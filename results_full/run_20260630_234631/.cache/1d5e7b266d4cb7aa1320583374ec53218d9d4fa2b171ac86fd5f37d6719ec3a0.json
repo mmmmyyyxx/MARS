@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the rules.\n\n**Expression:**  \nTrue and ( not True or False )\n\n---\n\n**Step 1: Resolve parentheses**  \nInside parentheses: `not True or False`  \n\n- `not True` = False  \nSo: `False or False` = False  \n\nParentheses resolved: `True and False`\n\n---\n\n**Step 2: Apply AND**  \n`True and False` = False\n\n---\n\n**Step 3: No OR outside AND needed** — already done.\n\n---\n\n**Step 4: Final evaluation**  \nThe expression simplifies to **False**.\n\n---\n\nFinal answer: false"
-}

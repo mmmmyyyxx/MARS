@@ -1,3 +1,0 @@
-{
-  "content": "BCD (Binary-Coded Decimal) represents each decimal digit (0-9) using binary code.  \nSince decimal digits range from 0 to 9, we need at least 4 bits to represent up to 16 values (0–15 in binary), but only 10 combinations are used for BCD (0000 to 1001).  \nUsing fewer than 4 bits (e.g., 3 bits) can only represent 0–7, which is insufficient for digits 8 and 9.  \n\nThus, **4 bits** are required to store one BCD digit.  \n\nFinal answer: (D)"
-}

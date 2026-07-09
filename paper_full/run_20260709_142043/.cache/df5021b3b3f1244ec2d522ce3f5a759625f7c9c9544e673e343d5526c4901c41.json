@@ -1,0 +1,3 @@
+{
+  "content": "1. In the student's current prompt, what specific grammatical or structural cues would you prioritize to ensure the model avoids relying on unsupported semantic inferences when resolving ambiguous pronouns?\n\n2. Considering the task's goal of maximizing correctness rate, how might you refine the prompt's instructions to more explicitly guide the model in distinguishing between cases where minimal semantic inference is structurally necessary versus cases where ambiguity remains due to insufficient linguistic evidence?"
+}

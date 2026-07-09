@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step-by-step.\n\nThe expression is:  \n**False and not ( False and True )**\n\n---\n\n**Step 1: Evaluate the inner parentheses**  \n`False and True`  \n- Logical AND: both operands must be true for the result to be true.  \n- Here, `False and True` → **False**.\n\nSo now the expression becomes:  \n**False and not (False)**\n\n---\n\n**Step 2: Evaluate `not (False)`**  \n`not (False)` → **True**.\n\nNow the expression is:  \n**False and True**\n\n---\n\n**Step 3: Evaluate `False and True`**  \n`False and True` → **False**.\n\n---\n\n**Final answer: false**"
-}

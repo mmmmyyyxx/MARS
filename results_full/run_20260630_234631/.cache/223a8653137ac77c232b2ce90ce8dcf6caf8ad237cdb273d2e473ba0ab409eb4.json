@@ -1,3 +1,0 @@
-{
-  "content": "The latching current for a thyristor is typically 2 to 3 times greater than the holding current.  \nHolding current = 2 mA = 0.002 A.  \nSo latching current ≈ 0.004 A to 0.006 A.  \nAmong the options, 0.004 A matches this range.  \n\nFinal answer: (D)"
-}

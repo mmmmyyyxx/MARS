@@ -1,0 +1,3 @@
+{
+  "content": "How can you test whether the current prompt's complexity classification criteria are sufficiently strict to prevent misclassification of ambiguous schedules as simple?\n\nWhat specific adjustments would you make to the prompt if initial testing reveals the model is consistently underestimating transition times between activities?"
+}

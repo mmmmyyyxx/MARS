@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the order of operations:  \n**Parentheses → NOT → AND → OR**  \n\nExpression:  \nTrue and True or False and not True  \n\n---\n\n**Step 1: Resolve NOT**  \nnot True → False  \n\nIntermediate expression:  \nTrue and True or False and False  \n\n---\n\n**Step 2: Apply AND from left to right**  \nFirst AND: True and True → True  \n\nIntermediate expression:  \nTrue or False and False  \n\nSecond AND: False and False → False  \n\nIntermediate expression:  \nTrue or False  \n\n---\n\n**Step 3: Apply OR**  \nTrue or False → True  \n\n---\n\nFinal answer: true"
-}

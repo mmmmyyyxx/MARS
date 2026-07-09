@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:\n\n\\[\n( \\text{False} ) \\ \\text{or} \\ \\text{not False} \\ \\text{or} \\ \\text{True}\n\\]\n\n---\n\n**Step 1: Handle parentheses**  \nThe parentheses here only group `False`, so:\n\n\\[\n\\text{False} \\ \\text{or} \\ \\text{not False} \\ \\text{or} \\ \\text{True}\n\\]\n\n---\n\n**Step 2: Apply NOT (highest precedence)**  \n`not False` = `True`\n\nSo now:\n\n\\[\n\\text{False} \\ \\text{or} \\ \\text{True} \\ \\text{or} \\ \\text{True}\n\\]\n\n---\n\n**Step 3: Apply OR from left to right**  \n`False or True` = `True`  \n`True or True` = `True`\n\n---\n\n**Final answer: true**"
-}

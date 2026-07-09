@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n**( False or not False and False )**\n\n1. **Order of operations**: In Boolean logic, `not` has the highest precedence, then `and`, then `or`.  \n   So `not False` is evaluated first.\n\n2. **Evaluate `not False`**:  \n   `not False` = `True`\n\n3. **Substitute back**:  \n   Expression becomes:  \n   `False or True and False`\n\n4. **Evaluate `True and False`** (because `and` comes before `or`):  \n   `True and False` = `False`\n\n5. **Now we have**:  \n   `False or False` = `False`\n\nFinal answer: false"
-}

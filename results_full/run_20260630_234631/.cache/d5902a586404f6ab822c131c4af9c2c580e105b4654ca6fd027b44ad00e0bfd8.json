@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nThe expression is:  \n**False and not True and False and True**\n\n---\n\n**Step 1: Apply NOT**  \n`not True` = `False`\n\nSo the expression becomes:  \n**False and False and False and True**\n\n---\n\n**Step 2: Apply AND from left to right**  \nAND is associative in this case (all same precedence), so we evaluate left-to-right:\n\n- `False and False` → `False`  \n- `False and False` → `False`  \n- `False and True` → `False`\n\n---\n\n**Final result:** `False`\n\n---\n\nFinal answer: false"
-}

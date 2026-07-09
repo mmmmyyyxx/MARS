@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step (internally) according to operator precedence:  \n- **not** has the highest precedence  \n- **and** comes next  \n- **or** comes last  \n\nExpression:  \nTrue or False and not True and False  \n\n1. **not True** = False  \nExpression becomes: True or False and False and False  \n\n2. **False and False** = False  \nExpression becomes: True or False and False  \n\n3. **False and False** = False  \nExpression becomes: True or False  \n\n4. **True or False** = True  \n\nFinal answer: true"
-}

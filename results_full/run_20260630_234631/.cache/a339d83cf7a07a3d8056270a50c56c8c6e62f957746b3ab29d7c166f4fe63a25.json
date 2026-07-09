@@ -1,3 +1,0 @@
-{
-  "content": "In a binary number, the rightmost bit has the smallest place value (2⁰), so it is the Least Significant Bit (LSB).  \nThe leftmost bit is the Most Significant Bit (MSB).  \nThus, the first digit from right to left is LSB.  \n\nFinal answer: (A)"
-}

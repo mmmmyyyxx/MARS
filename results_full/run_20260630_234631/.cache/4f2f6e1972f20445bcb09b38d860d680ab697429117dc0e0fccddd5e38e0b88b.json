@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go step by step.  \n\n1. **Area of the room**:  \n\\[\n\\text{Area} = 4 \\times 3 = 12 \\ \\text{m}^2\n\\]\n\n2. **Total lumens needed for 50 lux average illuminance**:  \n\\[\n\\text{Lux} = \\frac{\\text{Total lumens}}{\\text{Area in m}^2}\n\\]\n\\[\n50 = \\frac{\\text{Total lumens}}{12}\n\\]\n\\[\n\\text{Total lumens} = 50 \\times 12 = 600 \\ \\text{lm}\n\\]\n\n3. **Number of lamps**:  \nEach lamp = 300 lm  \n\\[\nN = \\frac{600}{300} = 2\n\\]\n\nSo, **2 lamps** are needed.  \n\nFinal answer: (A)"
-}

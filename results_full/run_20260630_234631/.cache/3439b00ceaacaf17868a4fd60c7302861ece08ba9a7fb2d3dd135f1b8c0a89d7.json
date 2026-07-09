@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n\n```\nnot not True and True and not True\n```\n\n**Operator precedence**: `not` has higher precedence than `and`.  \n\n---\n\n**Step 1:** Evaluate `not True`  \n`not True` → `False`\n\nSo the expression becomes:  \n```\nnot not True and True and False\n```\n\n---\n\n**Step 2:** Evaluate `not not True`  \n`not True` → `False`  \n`not False` → `True`\n\nSo now:  \n```\nTrue and True and False\n```\n\n---\n\n**Step 3:** Evaluate `True and True`  \n`True and True` → `True`\n\nSo now:  \n```\nTrue and False\n```\n\n---\n\n**Step 4:** Evaluate `True and False`  \n`True and False` → `False`\n\n---\n\nFinal answer: **false**\n\nFinal answer: false"
-}

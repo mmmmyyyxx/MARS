@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n( True and not not not True )\n\n---\n\n**Step 1 — Resolve parentheses**  \nWe work inside the parentheses first.\n\nInside:  \nTrue and not not not True\n\n---\n\n**Step 2 — Apply NOT operators from right to left**  \nFirst: not True → False  \nNow: True and not not False  \n\nSecond: not False → True  \nNow: True and not True  \n\nThird: not True → False  \nNow: True and False  \n\n---\n\n**Step 3 — Apply AND**  \nTrue and False → False  \n\nSo inside parentheses: False  \n\nExpression becomes:  \n( False )  \n\n---\n\n**Step 4 — No outer operators**  \nFinal value: False  \n\n---\n\nFinal answer: false"
-}

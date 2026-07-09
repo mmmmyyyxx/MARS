@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**False or not ( True ) and True**\n\n---\n\n**Step 1: Identify operator precedence**  \nIn Boolean logic, the order is:  \n1. Parentheses  \n2. `not`  \n3. `and`  \n4. `or`  \n\nSo we handle `not ( True )` first.\n\n---\n\n**Step 2: Evaluate `not ( True )`**  \n`not ( True )` = `False`  \n\nNow the expression becomes:  \n**False or False and True**\n\n---\n\n**Step 3: Evaluate `False and True`** (because `and` comes before `or`)  \n`False and True` = `False`  \n\nNow the expression becomes:  \n**False or False**\n\n---\n\n**Step 4: Evaluate `False or False`**  \n`False or False` = `False`  \n\n---\n\n**Final answer: false**"
-}

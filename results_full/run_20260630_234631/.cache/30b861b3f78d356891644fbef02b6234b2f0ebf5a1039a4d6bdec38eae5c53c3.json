@@ -1,3 +1,0 @@
-{
-  "content": "For a step-up chopper (boost converter), the output voltage \\( V_o \\) is related to the input voltage \\( V_s \\) and duty cycle \\( D \\) by:  \n\\[\nV_o = \\frac{V_s}{1 - D}\n\\]\nGiven \\( V_s = 110 \\), \\( V_o = 150 \\):\n\\[\n150 = \\frac{110}{1 - D}\n\\]\n\\[\n1 - D = \\frac{110}{150} = 0.7333\n\\]\n\\[\nD = 1 - 0.7333 = 0.2667 \\approx 0.27\n\\]\nFinal answer: (D)"
-}

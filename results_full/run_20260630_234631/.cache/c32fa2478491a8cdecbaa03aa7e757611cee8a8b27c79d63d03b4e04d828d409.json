@@ -1,3 +1,0 @@
-{
-  "content": "The path defines two elliptical arcs with the same radii and angles, forming a closed shape that is not a full ellipse but a sector-like segment of an ellipse.  \nGiven the parameters (large arc flags set to 1, same start/end points after two arcs), it draws an elliptical sector.  \n\nFinal answer: (I)"
-}

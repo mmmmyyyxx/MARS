@@ -1,3 +1,0 @@
-{
-  "content": "First, calculate the total luminous flux needed for the room.  \n\nIlluminance \\( E \\) in lux is lumens per square meter:  \n\\[\nE = \\frac{\\text{Total lumens}}{\\text{Area}}\n\\]  \nArea = \\( 4 \\times 3 = 12 \\, \\text{m}^2 \\)  \n\\[\n50 = \\frac{\\text{Total lumens}}{12}\n\\]  \n\\[\n\\text{Total lumens} = 50 \\times 12 = 600\n\\]  \n\nEach lamp provides 300 lumens, so:  \n\\[\n\\text{Number of lamps} = \\frac{600}{300} = 2\n\\]  \n\nFinal answer: (A)"
-}

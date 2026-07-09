@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or not ( ( True ) )**\n\n1. **Resolve parentheses first**  \nInside the parentheses: `( True )` → `True`.  \nSo the expression becomes:  \n`True or not True`\n\n2. **Apply NOT**  \n`not True` → `False`  \nExpression now:  \n`True or False`\n\n3. **Apply OR**  \n`True or False` → `True`\n\nFinal answer: **true**  \n\nFinal answer: true"
-}

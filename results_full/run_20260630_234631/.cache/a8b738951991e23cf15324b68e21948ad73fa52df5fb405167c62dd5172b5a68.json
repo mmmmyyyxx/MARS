@@ -1,3 +1,0 @@
-{
-  "content": "An open-loop control system operates without feedback, meaning it cannot adjust its output based on actual performance or disturbances.  \nThis leads to inaccuracy because any unaccounted changes in the system or environment will cause deviations from the desired output.  \nIt is also unreliable because it cannot self-correct errors or adapt to unexpected conditions.  \nBoth inaccuracy and unreliability are recognized disadvantages of open-loop systems.  \n\nFinal answer: (C)"
-}

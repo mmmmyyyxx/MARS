@@ -1,3 +1,0 @@
-{
-  "content": "Let’s analyze each option in the context of closed-loop control systems:  \n\n- **(A) Reduces the overall gain** — True: Closed-loop systems reduce gain compared to open-loop systems because part of the output is used for feedback, effectively lowering the overall forward path gain.  \n- **(B) Complex and costly** — True: They require sensors, feedback paths, and more components, increasing complexity and cost.  \n- **(C) Oscillatory response** — True: Feedback can introduce instability or oscillations, especially if the system is underdamped or has significant phase lag.  \n\nSince all three are valid disadvantages, the correct choice is **(D) All of the above**.  \n\nFinal answer: (D)"
-}

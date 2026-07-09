@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go step by step.  \n\n1. **Convert velocity to m/s**  \n\\[\n130 \\ \\text{km/h} = 130 \\times \\frac{1000}{3600} \\ \\text{m/s}\n\\]\n\\[\n= \\frac{130000}{3600} \\approx 36.11 \\ \\text{m/s}\n\\]\n\n2. **Use kinematic equation**  \nWe know:  \nInitial velocity \\( u = 0 \\) m/s  \nFinal velocity \\( v = 36.11 \\) m/s  \nDistance \\( s = 50 \\) m  \nAcceleration \\( a = ? \\)  \n\nEquation:  \n\\[\nv^2 = u^2 + 2 a s\n\\]\n\\[\n(36.11)^2 = 0 + 2 \\cdot a \\cdot 50\n\\]\n\\[\n1303.57 \\approx 100 a\n\\]\n\\[\na \\approx 13.035 \\ \\text{m/s}^2\n\\]\n\n3. **Compare with options**  \nClosest to **13 m/s²**, which is option (A).  \n\nFinal answer: (A)"
-}

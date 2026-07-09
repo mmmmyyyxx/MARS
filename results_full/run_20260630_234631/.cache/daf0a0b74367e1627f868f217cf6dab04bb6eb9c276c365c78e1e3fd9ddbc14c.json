@@ -1,3 +1,0 @@
-{
-  "content": "The energy charge is a measure of the metabolic energy status of a cell, defined by the proportion of adenosine phosphates (ATP, ADP, AMP) that are in the high-energy state.  \nIt is calculated as:  \n\n\\[\n\\text{Energy charge} = \\frac{[ATP] + \\frac{1}{2}[ADP]}{[ATP] + [ADP] + [AMP]}\n\\]\n\nThis reflects how fully the adenine nucleotide pool is phosphorylated, which matches option (D).  \n\n- (A) refers to membrane potential, not energy charge.  \n- (B) refers to the Na⁺/K⁺ pump, which consumes ATP but does not define energy charge.  \n- (C) refers to metabolic rate, not energy charge.  \n\nFinal answer: (D)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s analyze each option:  \n\n- **(A) Power transfer capability of the transmission line is increased**  \n  True — for a given conductor current, higher voltage increases power transfer (\\(P = V I \\cos\\phi\\)).  \n\n- **(B) Transmission line losses are reduced**  \n  True — for the same power, higher voltage means lower current, so \\(I^2 R\\) losses decrease.  \n\n- **(C) Area of cross section and volume of the conductor is reduced**  \n  True — lower current for same power allows thinner conductors.  \n\nSince all three are valid advantages, the correct choice is **(D) all of the above**.  \n\nFinal answer: (D)"
-}

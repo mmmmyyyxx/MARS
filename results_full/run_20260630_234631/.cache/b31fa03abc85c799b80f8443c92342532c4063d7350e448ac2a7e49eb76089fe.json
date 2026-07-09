@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step:  \n\nThe expression is:  \n\n**False or True and not not not False**\n\n---\n\n**Step 1: Handle the “not not not False” part**  \n- not False → True  \n- not True → False  \n- not False → True  \n\nSo “not not not False” = True.\n\n---\n\n**Step 2: Substitute back**  \nExpression becomes:  \nFalse or True and True\n\n---\n\n**Step 3: Apply precedence (NOT > AND > OR)**  \nTrue and True → True  \n\nSo now:  \nFalse or True\n\n---\n\n**Step 4: Evaluate OR**  \nFalse or True → True\n\n---\n\nFinal answer: true"
-}

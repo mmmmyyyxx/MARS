@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\n1. `not True` evaluates to `False`.  \n2. So `(not True) or True` becomes `False or True`.  \n3. `False or True` evaluates to `True` because OR returns `True` if at least one operand is `True`.  \n\nFinal answer: true"
-}

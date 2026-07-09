@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:  \n\n- `M 34.00,47.00 L 59.00,47.00` → move to (34,47), draw line to (59,47)  \n- `A 25.00,25.00 0.00 0,1 9.25,50.53` → arc with radius 25, large-arc-flag 0, sweep-flag 1, to point (9.25,50.53)  \n- `L 34.00,47.00` → line back to start  \n\nThis traces two straight lines and one arc, forming a closed shape with a curved edge — that’s a **sector** (a portion of a circle bounded by two radii and an arc).  \n\nFinal answer: (I)"
-}

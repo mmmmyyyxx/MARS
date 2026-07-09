@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate `not True`:  \n`not True` = `False`\n\nNow the expression becomes:  \n`False and False`\n\nEvaluate `False and False`:  \n`False and False` = `False`\n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "What specific wording in the prompt ensures the model outputs only \"true\" or \"false\" without any intermediate reasoning, while still maintaining high accuracy in Boolean evaluation?"
-}

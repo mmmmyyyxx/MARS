@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Original expression:**  \n`False and False and False or not False`\n\n---\n\n**Step 1 — Resolve innermost parentheses**  \nThere are no parentheses here, so expression remains:  \n`False and False and False or not False`\n\n---\n\n**Step 2 — Apply NOT operators**  \n`not False` → `True`  \nExpression becomes:  \n`False and False and False or True`\n\n---\n\n**Step 3 — Apply AND operators (left to right)**  \n`False and False` → `False`  \n`False and False` → `False`  \nSo `False and False and False` = `(False and False) and False` = `False and False` = `False`  \n\nExpression becomes:  \n`False or True`\n\n---\n\n**Step 4 — Apply OR operators**  \n`False or True` → `True`\n\n---\n\n**Final answer:** true"
-}

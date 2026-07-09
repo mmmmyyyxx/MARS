@@ -1,3 +1,0 @@
-{
-  "content": "The Barkhausen criterion specifies that for sustained oscillations, the loop gain must be exactly 1 and the phase shift around the loop must be zero or a multiple of 360°.  \nHowever, the question asks about necessary requirements of an oscillator in general — beyond just the Barkhausen criterion — and these include amplitude stability (so output amplitude remains constant) and frequency stability (so frequency doesn’t drift).  \nPower stability is not typically listed as a separate necessary requirement in basic oscillator theory.  \n\nFinal answer: (D)"
-}

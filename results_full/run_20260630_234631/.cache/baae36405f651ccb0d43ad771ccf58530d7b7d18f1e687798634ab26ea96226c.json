@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down:  \n\nThe premise says:  \n- Being a close friend of Samuel → not being a brother of Jeff.  \n\nThat means:  \nIf someone is a close friend of Samuel, then they are **not** a brother of Jeff.  \n\nThe conclusion says:  \n- No brother of Jeff is a close friend of Samuel.  \n\nThis is logically equivalent to:  \nIf someone is a brother of Jeff, then they are **not** a close friend of Samuel.  \n\nFrom the premise:  \n\"Friend of Samuel → not brother of Jeff\"  \ncontrapositive:  \n\"Brother of Jeff → not friend of Samuel\"  \n\nThe conclusion is exactly the contrapositive of the premise, so the argument is deductively valid.  \n\nFinal answer: valid"
-}

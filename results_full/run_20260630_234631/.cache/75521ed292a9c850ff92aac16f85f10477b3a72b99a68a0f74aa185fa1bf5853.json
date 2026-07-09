@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or False or not True or True**  \n\n---\n\n**Step 1 – Operator precedence**  \nNOT has highest precedence:  \n`not True` = `False`  \n\nSo the expression becomes:  \n`True or False or False or True`  \n\n---\n\n**Step 2 – Associativity of OR**  \nOR is left-associative:  \n\n- First: `True or False` → `True`  \n- Then: `True or False` → `True`  \n- Then: `True or True` → `True`  \n\n---\n\n**Step 3 – Conclusion**  \nFinal result is `True`.  \n\n---\n\nFinal answer: true"
-}

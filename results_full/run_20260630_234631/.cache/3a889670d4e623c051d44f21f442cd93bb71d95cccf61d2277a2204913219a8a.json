@@ -1,3 +1,0 @@
-{
-  "content": "In a lap winding, the number of parallel paths is equal to the number of poles, and the average pitch \\( Y_a \\) is given by:  \n\n\\[\nY_a = \\frac{\\text{Number of conductors}}{\\text{Number of parallel paths}}\n\\]\n\nHere,  \nNumber of conductors = 100  \nNumber of parallel paths = 10  \n\n\\[\nY_a = \\frac{100}{10} = 10\n\\]\n\nFinal answer: (A)"
-}

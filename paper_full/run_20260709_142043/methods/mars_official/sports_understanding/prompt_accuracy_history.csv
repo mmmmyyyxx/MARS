@@ -1,0 +1,307 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+0,"Given a series of events and activities a person has completed throughout the day, analyze the timeline step by step to identify any gaps or free periods. For each event, note its start and end time, then determine when the person might have been available to perform another activity. Ensure your reasoning is clear and based on the provided schedule.",0.7108433734939759,249,177,72
+1,"Given a series of events and activities a person has completed throughout the day, analyze the timeline step by step to identify **all potential free periods**, including explicit gaps between events and implicit gaps arising from flexible activity durations, transitions, or early/late starts/ends. For each activity, estimate both the **minimum and maximum possible time** it might require, and consider how these variations create or eliminate free time. Then, determine when the person might have been available to perform another activity, evaluating the plausibility of adding it by accounting for the full range of possible schedules. Ensure your reasoning explicitly highlights overlooked gaps (e.g., between rigidly stated events) and uses min/max timing to assess uncertainties before concluding plausibility.
+
+**Key Enhancements:**
+1. **Explicitly Prompt for Implicit Gap Detection:** Directly instruct the model to scrutinize intervals between consecutive events—even if not explicitly labeled as free—by considering realistic transition times, variable activity durations, and potential overlaps or early completions.
+2. **Conflict Validation Step:** After identifying free periods, require the model to cross-check each candidate free time against all possible schedule variations (using min/max times) to ensure no hidden conflicts arise—such as overlapping activities or insufficient time for transitions—before finalizing plausibility.
+3. **Assumption Awareness and Expansion:** Explicitly instruct the model to identify and challenge common assumptions about activity durations, transitions, and fixed start/end times that could lead to overlooking free periods. Encourage consideration of a wider range of schedule variations by:
+   - Treating stated times as approximate unless specified as rigid (e.g., ""about,"" ""around,"" or no explicit constraints imply flexibility).
+   - Including transition times (e.g., travel, preparation) between activities as potential sources of implicit gaps or constraints.
+   - Exploring scenarios where activities start earlier or end later than stated, or where durations are shorter or longer than typical estimates.
+4. **Scenario Exploration:** Require the model to generate and evaluate multiple plausible schedule scenarios based on min/max timing estimates, especially for activities with uncertain or flexible timings, to ensure all potential free periods are identified and validated.
+
+**Example Input:**  
+""John woke up at 7:00 AM, had breakfast from 7:30 to 8:00, attended a meeting from 9:00 to 10:30, and went for a run at 11:00 AM for about 45 minutes. Could he have gone grocery shopping at 10:45 AM?""
+
+**Example Output:**  
+""Step 1: Identify explicit gaps—between 8:00 and 9:00 (1 hour), and after ~11:45 (post-run).  
+Step 2: Identify implicit gaps—between 10:30 and 11:00 (30 minutes) is an overlooked gap; also, transitions (e.g., post-meeting) may add flexibility.  
+Step 3: Estimate min/max activity times—breakfast could take 20–40 min (min 7:30–7:50, max 7:30–8:10); meeting could be 1–1.5 hours (min 9:00–10:00, max 9:00–10:30); run could be 30–60 min (min end 11:30, max end 12:00).  
+Step 4: **Assumption Check**—Challenge assumptions:",0.6305220883534136,249,157,92
+2,"Given a series of events and activities a person completed during the day, identify **all plausible free periods** where another activity could fit, by systematically evaluating timing assumptions with calibrated flexibility. For each activity, **list initial timing assumptions** (e.g., fixed start/end times, exact durations, no transitions), then **assess reasonableness of variations**—such as minor adjustments to start/end times (e.g., ±5–10 minutes), realistic duration ranges (e.g., ""about 30 minutes"" meaning 25–35 minutes), and necessary transitions (e.g., 5 minutes between activities). Estimate **realistic min/max bounds** for each activity duration and transition, avoiding extreme or unlikely adjustments. Use these bounded ranges to construct **multiple feasible schedule scenarios**, prioritizing interpretations that are common or contextually reasonable (e.g., meetings often start on time, meals may have flexible ends). Check for conflicts and identify gaps by testing these scenarios, focusing only on periods where the new activity can fit without requiring improbable timing shifts.
+
+**Key Steps:**
+1. **Identify explicit gaps** between consecutive events based on stated times.
+2. **Evaluate assumptions**—determine if start/end times are likely fixed or flexible, if transitions are needed, and if durations could reasonably vary within everyday limits.
+3. **Define realistic min/max times** for each activity and transition, avoiding overgeneralization (e.g., do not assume activities can be arbitrarily shortened or extended unless implied).
+4. **Generate feasible scenarios** by applying only reasonable timing adjustments (e.g., a 30-minute call could be 25–35 minutes; a lunch might end 10 minutes early or late), and verify that schedules remain conflict-free.
+5. **Assess plausibility of the new activity** by checking if it fits within any gap—explicit or implicit—under at least one feasible scenario, without relying on unlikely coincidences (e.g., multiple activities shifting maximally in the same direction).
+6. **For each identified free period, justify its plausibility** by referencing the specific, reasonable adjustments applied (e.g., ""If the call ended 5 minutes early, a 10-minute transition still allows the activity to fit""), and note if the period depends on less common timing (e.g., ""This requires the meeting to start late, which is possible but less likely"").
+
+**Example Input:**  
+""Maria woke at 6:30 AM, exercised from 7:00 to 7:45, had a work call at 8:30 AM for 30 minutes, and met a friend for lunch at 12:00 PM. Could she have cleaned her apartment at 9:00 AM?""
+
+**Example Output:**  
+""Assumptions evaluated:  
+- Exercise: Ends at ~7:45 (reasonable range 7:40–7:50).  
+- Work call: Starts at ~8:30 (likely fixed; range 8:30–8:35 if flexible), duration 25–35 min.  
+- Transitions: 5–10 min between activities possible.  
+Explicit gap: 7:45–8:30 (45 min).  
+Implicit gaps: If call ends by 8:55 (max duration with flexible start), gap from 8:55–12:00; if exercise ends early (7:40), extra 5 min before call.  
+Realistic scenarios:",0.7228915662650602,249,180,69
+3,"**Revised Prompt:**
+
+Given a series of events and activities a person completed during the day, identify **all plausible free periods** where another activity could fit, following these **systematic steps**:
+
+**Step 1: Chronological Event Mapping**
+- List all events in strict chronological order with start/end times.
+- Calculate explicit gaps between consecutive events.
+
+**Step 2: Activity Flexibility Analysis**
+For each event, determine:
+- **Timing Rigidity**: Fixed (e.g., scheduled meetings) vs. flexible (e.g., personal tasks).
+- **Duration Variability**: Assign realistic bounds (±5–10 minutes for short activities, ±15–30 minutes for longer ones).
+- **Transition Times**: Include 5–15 minutes between activities based on context (location changes, preparation).
+
+**Step 3: Implicit Gap Exploration via Systematic Adjustment**
+- **Identify all flexible events** and their possible start/end time ranges.
+- **Generate overlapping time bounds** by considering earliest possible ends and latest possible starts.
+- **Compute implicit gaps** by finding intervals where no event (including adjusted timings) necessarily occurs.
+- Avoid reliance on specific scenarios; instead, use continuous time bounds to reveal all potential free periods.
+
+**Step 4: Combine and Validate Free Periods**
+- Merge explicit gaps with implicit gaps derived from flexible timing bounds.
+- For each candidate period, ensure:
+  - Duration accommodates the new activity plus transitions.
+  - No mandatory event conflicts, even under reasonable timing shifts.
+- Exclude periods requiring simultaneous extreme adjustments or improbable overlaps.
+
+**Step 5: Explicit Validation and Justification**
+- **For each identified free period**, explicitly validate by:
+  - Confirming it does not overlap with any fixed events or the adjusted bounds of flexible events.
+  - Ensuring the duration is sufficient for the new activity and necessary transitions.
+- **Justify plausibility** by referencing:
+  - Explicit gaps (directly from schedule).
+  - Implicit gaps (from flexible event bounds without requiring coincidental shifts).
+- Avoid justifications that depend on multiple activities adjusting maximally in the same direction.
+- **Address potential gaps/ambiguities** by:
+  - Checking for overlooked implicit gaps due to rigid interpretation of flexible events—systematically test all combinations of earliest ends and latest starts.
+  - Ensuring transitions are realistically applied and not double-counted or omitted.
+  - Verifying that no valid free period is missed by considering all pairwise event boundaries, not just consecutive ones.
+
+**Step 6: Systematic Testing and Adjustment for Ambiguity**
+- **Test for overlapping flexible events**: If flexible events have overlapping possible time bounds, identify periods where both could shift without conflict, and check if this creates additional implicit gaps.
+- **Handle ambiguous transitions**: If transition times between events are uncertain, consider a range (e.g., 5–15 minutes) and evaluate free periods under both minimum and maximum transition assumptions.
+- **Adjust for less structured schedules**: For routines with many flexible events, expand duration variability bounds (e.g., ±15–45 minutes for longer flexible activities) and consider more aggressive time shifts to uncover hidden free periods.
+- **Validate consistency**: Ensure that the method produces similar results for highly structured vs. highly flexible schedules by testing against both extremes.
+
+**Output Format:**
+1. Explicit gaps with times.
+2. Activity assumptions (fixed/flexible, duration range, transitions).
+3. Implicit gaps derived from flexible timing bounds (",0.7751004016064257,249,193,56
+4,"**Optimized Prompt:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person’s completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **balanced validation process** that prioritizes **identifying obvious free gaps** in straightforward schedules while still rigorously checking for **hidden constraints** in complex ones.
+
+**Guidelines for Analysis:**
+
+1. **Map the Schedule Holistically**
+   - Arrange events chronologically, noting start and end times.
+   - Classify activities as **fixed** (strict timing), **flexible** (variable timing/duration), or **adjustable** (can shift slightly without disruption).
+
+2. **Identify All Gaps Efficiently**
+   - First, list **clear, explicit gaps** between consecutive events without overcomplicating.
+   - Apply **standard transition times** (e.g., 5–15 minutes) only where context suggests movement or preparation is needed.
+
+3. **Apply Tiered Validation**
+   - **For straightforward schedules** (e.g., minimal events, no mentioned complexities):
+     - Assume gaps are free unless evidence indicates otherwise.
+     - Skip deep hidden-constraint checks unless unusual patterns or dependencies are implied.
+   - **For complex schedules** (e.g., packed, overlapping, or with noted routines):
+     - Uncover implicit gaps by reasonably shifting flexible/adjustable activities.
+     - Validate against explicit, implicit, and plausible hidden constraints (e.g., typical meals, commutes, rest).
+
+4. **Validate Free Periods Practically**
+   - For each candidate period, check:
+     - **Duration Sufficiency**: Accommodates new activity + necessary transitions.
+     - **Explicit Conflict Avoidance**: No overlap with fixed events or flexible cores.
+     - **Plausible Hidden Constraints**: Only consider hidden factors if typical daily patterns or schedule context suggest they are relevant.
+   - Justify free periods by noting source (explicit/implicit) and summarizing checks passed.
+
+5. **Use Measurable Correctness Criteria**
+   - Ensure output includes **all obvious free periods** in simple cases.
+   - In complex cases, ensure no valid free time is missed due to overlooked adjustments or constraints.
+   - Flag only constraints supported by context—avoid unnecessary assumptions.
+
+**Output Format:**
+- List each free period with start and end times.
+- For each, specify source (explicit/implicit) and validation summary:
+  - Duration and conflict checks met.
+  - Note if hidden constraints were considered and why they were dismissed or applicable.
+
+**Objective:** Maximize correctness by balancing simplicity for straightforward schedules with thoroughness for complex ones, using practical, context-aware validation.",0.7630522088353414,249,190,59
+5,"**Optimized Prompt:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person’s completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **tiered reasoning approach** that adapts to the complexity of the schedule—**simple and direct for straightforward cases**, **thorough and nuanced for complex ones**.
+
+**Guidelines for Analysis:**
+
+1. **Assess Schedule Complexity First**
+   - **Straightforward schedules**: Few events, clear gaps, no overlapping or implied dependencies (e.g., “8–9 AM: Breakfast; 10 AM–12 PM: Meeting”).
+   - **Complex schedules**: Many events, overlapping times, flexible/adjustable activities, or implied routines (e.g., “Morning workout, followed by errands, then back-to-back meetings with travel”).
+
+2. **For Straightforward Schedules (Simple Reasoning)**
+   - Identify **explicit gaps**—clear, uninterrupted time blocks between fixed events.
+   - Assume gaps are free unless explicitly contradicted.
+   - Skip hidden constraint checks unless context hints at them (e.g., “had a very busy day” implies limited flexibility).
+   - Example: For “Breakfast 8–9 AM, Meeting 10 AM–12 PM,” free time is clearly 9–10 AM (explicit gap).
+
+3. **For Complex Schedules (Thorough Reasoning)**
+   - Map all events chronologically, noting fixed, flexible, and adjustable activities.
+   - **Distinguish Fixed vs. Flexible Activities**:
+     - **Fixed**: Time-bound, immovable events (e.g., meetings, appointments).
+     - **Flexible**: Activities with adjustable timing or duration (e.g., errands, personal tasks).
+   - Identify **implicit gaps** by reasonably shifting flexible/adjustable events to create free time, considering:
+     - **Logical activity sequencing** (e.g., travel between locations, preparation time).
+     - **Minimum realistic durations** for activities.
+   - Check for **hidden constraints** (e.g., typical meal times, commute, rest) only if supported by context or daily patterns.
+   - Example: For “Gym 7–8 AM, Errands 8:30–10 AM, Meeting at Office 10:30 AM–12 PM,” consider travel time between locations and adjust errands to find free slots like 10–10:30 AM (implicit gap).
+
+4. **Validate Free Periods Practically**
+   - For each candidate period, ensure:
+     - **Duration Sufficiency**: Fits new activity + transitions if needed.
+     - **Logical Sequencing**: Activities flow reasonably (e.g., no “lunch” before “morning workout” unless specified).
+     - **Conflict Avoidance**: No overlap with fixed or reasonably adjusted events.
+     - **Contextual Constraints**: Only apply hidden constraints if typical patterns or explicit cues suggest relevance.
+   - Justify free periods by noting source (explicit/implicit) and checks passed.
+
+5. **Use Contrasting Examples for Guidance**
+   - **Straightforward Example**: “8–9 AM: Breakfast, 11 AM–12 PM: Call” → Free: 9–11 AM (explicit gap, no hidden issues).
+   - **Complex Example**: “7–8 AM: Gym, 8:30–9:",0.7871485943775101,249,196,53
+6,"**Optimized Prompt:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person's completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **tiered reasoning approach** that adapts to the complexity of the schedule—**simple and direct for straightforward cases**, **thorough and nuanced for complex ones**.
+
+**Guidelines for Analysis:**
+
+1. **Assess Schedule Complexity First**
+   - **Straightforward schedules**: Few events, clear gaps, no overlapping or implied dependencies (e.g., ""8–9 AM: Breakfast; 10 AM–12 PM: Meeting"").
+   - **Complex schedules**: Many events, overlapping times, flexible/adjustable activities, or implied routines (e.g., ""Morning workout, followed by errands, then back-to-back meetings with travel"").
+
+2. **For Straightforward Schedules (Simple Reasoning)**
+   - Identify **explicit gaps**—clear, uninterrupted time blocks between fixed events.
+   - Assume gaps are free unless explicitly contradicted.
+   - Skip hidden constraint checks unless context hints at them (e.g., ""had a very busy day"" implies limited flexibility).
+   - Example: For ""Breakfast 8–9 AM, Meeting 10 AM–12 PM,"" free time is clearly 9–10 AM (explicit gap).
+
+3. **For Complex Schedules (Thorough Reasoning)**
+   - Map all events chronologically, noting fixed, flexible, and adjustable activities.
+   - **Distinguish Fixed vs. Flexible Activities**:
+     - **Fixed**: Time-bound, immovable events (e.g., meetings, appointments).
+     - **Flexible**: Activities with adjustable timing or duration (e.g., errands, personal tasks).
+   - **Explicitly Define Flexibility Constraints**:
+     - **Minimum/Maximum Duration**: If unspecified, assume realistic bounds (e.g., errands: 30 min–3 hours).
+     - **Sequencing Dependencies**: Note if activities must occur in a certain order (e.g., ""pick up dry cleaning before work"").
+     - **Location/Travel**: Account for transit time between venues if implied.
+   - Identify **implicit gaps** by reasonably shifting flexible/adjustable events to create free time, considering:
+     - **Logical activity sequencing** (e.g., travel between locations, preparation time).
+     - **Minimum realistic durations** for activities.
+   - Check for **hidden constraints** (e.g., typical meal times, commute, rest) only if supported by context or daily patterns.
+   - Example: For ""Gym 7–8 AM, Errands 8:30–10 AM, Meeting at Office 10:30 AM–12 PM,"" consider travel time between locations and adjust errands to find free slots like 10–10:30 AM (implicit gap).
+
+4. **Validate Free Periods Practically**
+   - For each candidate period, ensure:
+     - **Duration Sufficiency**: Fits new activity + transitions if needed.
+     - **Logical Sequencing**: Activities flow reasonably (e.g., no ""lunch"" before ""morning workout"" unless specified).
+     - **Conflict Avoidance**: No overlap with fixed or reasonably adjusted events.
+     - **Contextual Constraints**: Only apply hidden constraints if typical patterns or explicit cues suggest relevance.
+   - Justify free periods by",0.7670682730923695,249,191,58
+7,"**Optimized Prompt:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person's completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **dynamic reasoning approach** that first classifies schedule complexity accurately and then adapts the analysis accordingly.
+
+**Step 1: Complexity Classification Framework**
+Before analysis, classify the schedule using these definitive criteria:
+- **Simple Schedule**: Contains only fixed-time events with explicit start/end times, clear non-overlapping gaps, and no implied dependencies or flexible activities.
+- **Complex Schedule**: Contains any of: overlapping events, flexible/adjustable activities, implied routines/travel, ambiguous time references, or dependencies between activities.
+
+**Step 2: Adaptive Analysis Methods**
+
+**For Simple Schedules (Direct Gap Analysis)**
+- Identify only explicit time gaps between fixed events
+- Assume gaps are free unless explicitly contradicted by context
+- Skip constraint checking and flexible activity analysis
+- Example: ""Breakfast 8–9 AM, Meeting 10 AM–12 PM"" → Free: 9–10 AM
+
+**For Complex Schedules (Comprehensive Analysis)**
+1. **Event Categorization**: Label each activity as:
+   - Fixed: Time-bound, immovable events
+   - Flexible: Adjustable timing/duration
+   - Routine: Implied regular activities (meals, commute)
+
+2. **Constraint Mapping**:
+   - Define minimum/maximum durations for flexible activities
+   - Identify sequencing dependencies between events
+   - Calculate travel time between locations when implied
+   - Note preparation/wrap-up time for activities when typical
+
+3. **Gap Identification**:
+   - Find explicit gaps between fixed events
+   - Create implicit gaps by reasonably shifting flexible activities
+   - Consider logical activity sequencing and realistic timing
+
+**Step 3: Validation Protocol**
+For each candidate free period:
+- **Duration Check**: Ensure sufficient time for new activity + transitions
+- **Logical Flow**: Verify activities follow reasonable sequence
+- **Constraint Compliance**: Respect all mapped constraints
+- **Context Awareness**: Only apply typical patterns if explicitly supported
+
+**Testing & Refinement Guidance**
+To maximize correctness, this prompt should be validated against:
+1. **Edge Cases**: Schedules with ambiguous timing, overlapping events, or unusual sequences
+2. **Complexity Boundary Cases**: Schedules that challenge the simple/complex classification
+3. **Constraint Scenarios**: Situations requiring travel time, preparation periods, or activity dependencies
+4. **Real-world Patterns**: Typical daily routines and common scheduling patterns
+
+The analysis must clearly justify why each time period is considered free, referencing the specific classification and reasoning method applied.",0.7429718875502008,249,185,64
+8,"**Optimized Prompt with Enhanced Complexity Classification and Transition Time Enforcement:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person's completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **rigorous reasoning approach** that first classifies schedule complexity with enhanced precision and then adapts the analysis with strict transition time protocols.
+
+**Step 1: Enhanced Complexity Classification Framework**
+Before analysis, classify the schedule using these **strict, unambiguous criteria**:
+- **Simple Schedule**: Contains **only** events with explicit, non-overlapping start/end times (e.g., ""Meeting 10–11 AM""), **no** flexible activities, **no** implied routines/travel, **no** ambiguous time references, and **no** location changes requiring transitions.
+- **Complex Schedule**: Contains **any** of the following:
+  - Flexible/adjustable activities (e.g., ""worked on project,"" ""brief workout"")
+  - Ambiguous time references (e.g., ""morning,"" ""later"")
+  - Implied dependencies or routines (e.g., ""commute,"" ""preparation"")
+  - Overlapping or potentially overlapping events
+  - **Any** location changes or transitions between activities
+  - Activities with unspecified but implied setup/cleanup time
+
+**Step 2: Adaptive Analysis Methods**
+
+**For Simple Schedules (Direct Gap Analysis)**
+- Identify only explicit time gaps between fixed events
+- Assume gaps are free unless explicitly contradicted by context
+- **Apply minimum 15-minute transition buffer** between consecutive events at different locations
+- Skip constraint checking and flexible activity analysis
+
+**For Complex Schedules (Comprehensive Analysis)**
+1. **Enhanced Fixed vs. Flexible Classification Protocol**:
+   - **Fixed Activities**: MUST have explicit start/end times (e.g., ""Meeting 10–11 AM""), are time-bound and immovable
+   - **Flexible Activities**: Characterized by:
+     * No explicit timing (e.g., ""worked on project"")
+     * Adjustable duration indicators (e.g., ""brief workout,"" ""extended lunch"")
+     * General time references without specifics (e.g., ""morning emails"")
+     * Activities that typically vary in timing (e.g., ""exercise,"" ""errands"")
+
+2. **Constraint Mapping with Duration and Transition Validation**:
+   - For **flexible activities**: Assign realistic minimum/maximum durations based on context
+   - For **ambiguous events**: Calculate most probable timing using typical patterns
+   - Map sequencing dependencies between all events
+   - **Mandatory Transition Time Allocation**:
+     * **Minimum 15 minutes** between activities at different locations
+     * **Minimum 10 minutes** for activity setup/preparation when implied
+     * **Minimum 5 minutes** for activity wrap-up/cleanup when implied
+     * Scale transition times based on activity complexity and context cues
+   - Include typical preparation/wrap-up buffers for relevant activities
+
+3. **Gap Identification with Enhanced Logical Flow**:
+   - First place all **fixed activities** at their specified times with transition buffers
+   - Then schedule **flexible activities** around fixed events respecting:
+     * Logical sequence (morning before afternoon, meals at typical times)
+     * Duration constraints (don't compress flexible activities unrealistically)
+     * **Strict transition time requirements** between all activities",0.7469879518072289,249,186,63

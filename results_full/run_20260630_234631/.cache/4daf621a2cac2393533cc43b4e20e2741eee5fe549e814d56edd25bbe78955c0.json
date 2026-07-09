@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**True or not True or not not True**\n\n---\n\n**Step 1 – Handle parentheses**  \nNo parentheses, so move to next precedence.\n\n---\n\n**Step 2 – Apply NOT operators from left to right**  \nFirst `not True` = False  \nSo: True **or** False **or** not not True\n\nNow `not not True` = not (not True) = not False = True  \nSo: True **or** False **or** True\n\n---\n\n**Step 3 – Apply OR from left to right**  \nTrue or False → True  \nTrue or True → True\n\n---\n\nFinal truth value: **true**\n\nFinal answer: true"
-}

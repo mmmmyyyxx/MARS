@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate the innermost parentheses:  \nnot True → False  \n\nNow the expression becomes:  \n( False and True )  \n\nEvaluate AND:  \nFalse and True → False  \n\nFinal answer: false"
-}

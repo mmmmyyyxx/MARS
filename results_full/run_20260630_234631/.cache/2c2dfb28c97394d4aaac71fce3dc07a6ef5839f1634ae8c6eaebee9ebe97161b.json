@@ -1,3 +1,0 @@
-{
-  "content": "For capacitors in parallel, the equivalent capacitance is the sum of the individual capacitances:  \n\\[\nC_{eq} = C_1 + C_2 + C_3 + C_4\n\\]  \nGiven \\( C_1 = C_2 = C_3 = C_4 = 40\\ \\mu\\text{F} \\):  \n\\[\nC_{eq} = 40 + 40 + 40 + 40 = 160\\ \\mu\\text{F}\n\\]  \n\nThis follows directly from the definition of parallel capacitance, where the voltage is the same across each capacitor and the total charge stored is the sum of individual charges.  \n\n- (B) 10 µF would be for series connection of four 40 µF capacitors, which is incorrect here.  \n- (C) 40 µF would be the value of one capacitor, not the parallel combination.  \n- (D) 5 µF is unrelated to the given configuration.  \n\nFinal answer: (A)"
-}

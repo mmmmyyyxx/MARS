@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path:  \n`M 61.00,3.00 L 89.00,15.00 L 70.00,74.00 L 61.00,3.00\"`  \n\n- `M` means move to the starting point (61, 3).  \n- `L` means draw a line to the next point.  \n- Points visited:  \n  1. (61, 3)  \n  2. (89, 15)  \n  3. (70, 74)  \n  4. Back to (61, 3)  \n\nThat’s **4 points**, but the first and last are the same, so it’s a closed shape with **3 distinct vertices** (since the last segment returns to the start).  \n\nA shape with 3 vertices is a triangle.  \n\nFinal answer: (J)"
-}

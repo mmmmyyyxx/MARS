@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not not not True and False and False**\n\n---\n\n**Step 1 – Interpret the expression**  \nIn Python-like Boolean logic, `not` has higher precedence than `and`, so we evaluate `not` first from left to right.  \n\n`not not not True` means:  \n\n1. `not True` → `False`  \n2. `not False` → `True`  \n3. `not True` → `False`  \n\nSo `not not not True` = `False`.\n\n---\n\n**Step 2 – Combine with `and False`**  \nNow we have:  \n\n`False and False and False`  \n\n`and` is left-associative:  \n\n- `False and False` → `False`  \n- `False and False` → `False`  \n\nFinal result: `False`.\n\n---\n\nFinal answer: false"
-}

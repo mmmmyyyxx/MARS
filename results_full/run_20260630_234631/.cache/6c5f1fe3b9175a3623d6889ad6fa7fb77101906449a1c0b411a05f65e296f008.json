@@ -1,3 +1,0 @@
-{
-  "content": "A snubber circuit (typically an RC network) is used across an SCR or thyristor to limit the rate of rise of voltage (dV/dt) during turn-off and transient conditions, preventing false triggering due to excessive dV/dt.  \nFuses and circuit breakers protect against overcurrent, not high dV/dt.  \nAn equalizing circuit is used to balance voltage sharing in series-connected devices, not primarily for dV/dt protection.  \n\nFinal answer: (A)"
-}

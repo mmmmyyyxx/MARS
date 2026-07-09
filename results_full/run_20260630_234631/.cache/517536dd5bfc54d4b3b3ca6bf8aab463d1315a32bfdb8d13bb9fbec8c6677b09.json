@@ -1,3 +1,0 @@
-{
-  "content": "Let's extract the logical structure:\n\n1. \"Being a frequent consumer of Dove soap is sufficient for being an owner of a Bumble and bumble shampoo.\"\n   - This means: If D (Dove consumer) then B (Bumble shampoo owner).  \n   - Symbolically: D → B\n\n2. Conclusion: \"Everyone who is an owner of a Bumble and bumble shampoo is a frequent consumer of Dove soap, too.\"\n   - Symbolically: B → D\n\nSo the argument is:  \nPremise: D → B  \nConclusion: B → D  \n\nThis is the fallacy of **affirming the consequent** in reverse form:  \nFrom \"If D then B\" it concludes \"If B then D\".  \nThis is invalid — the premise only guarantees that Dove consumers have Bumble shampoo, not that all Bumble shampoo owners use Dove soap.  \n\nFinal answer: invalid"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Read the question carefully. Evaluate each Boolean expression step by step, verifying the truth value of each component and logical operator. Ensure all parentheses and nested expressions are resolved in the correct order. Only after completing this systematic evaluation, return the final answer as true or false. Do not include extra commentary after the final answer."
-}

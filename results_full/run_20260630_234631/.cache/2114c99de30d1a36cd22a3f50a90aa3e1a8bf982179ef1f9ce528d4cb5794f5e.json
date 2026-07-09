@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe statement is:  \n\n**True or not False and True and False**  \n\nWe interpret this as:  \nTrue **or** (not False **and** True **and** False)  \n\n---\n\n**Step 1: Handle `not False`**  \nnot False = True  \n\nSo now we have:  \nTrue **or** (True **and** True **and** False)  \n\n---\n\n**Step 2: Evaluate `True and True and False`**  \nThis is left-to-right:  \nTrue and True = True  \nTrue and False = False  \n\nSo inside parentheses: False  \n\n---\n\n**Step 3: Evaluate `True or False`**  \nTrue or False = True  \n\n---\n\nFinal answer: true"
-}

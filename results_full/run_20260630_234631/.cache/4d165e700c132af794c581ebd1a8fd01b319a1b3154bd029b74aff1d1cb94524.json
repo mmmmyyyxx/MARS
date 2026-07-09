@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( True or True or False )`\n\n---\n\n**Step 1 – Evaluate inside parentheses**  \nLogical OR (`or`) is left-associative and has lower precedence than `not`.  \n\n`True or True` → `True`  \n`True or False` → `True`  \n\nSo `( True or True or False )` = `True`.\n\n---\n\n**Step 2 – Apply `not`**  \n`not (True)` → `False`\n\n---\n\n**Final answer: false**"
-}

@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might be unclear or ambiguous to the model when interpreting different Boolean expression formats?\n\nHow could the prompt be refined to ensure the model consistently applies the correct operator precedence and evaluation order without relying on external assumptions?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "The SVG path element `<path d=\"M 22.00,62.00 L 30.00,74.00\"/>` contains two points: a move-to command (M) to (22,62) and a line-to command (L) to (30,74). This draws a straight line segment between these two points.  \n\nFinal answer: (E)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( not False and ( True ) )`\n\n---\n\n**Step 1: Resolve parentheses and negations**  \n- Innermost parentheses: `( True )` → `True`  \n- `not False` → `True`  \n\nSo now we have:  \n`True and True`\n\n---\n\n**Step 2: Apply logical operators in precedence order**  \n- `and` is the only operator left.  \n- `True and True` → `True`\n\n---\n\n**Step 3: Final truth value**  \n`True`\n\n---\n\nFinal answer: true"
-}

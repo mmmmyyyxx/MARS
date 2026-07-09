@@ -1,3 +1,0 @@
-{
-  "content": "First, calculate the total luminous flux needed:  \n\nIlluminance \\( E = 50 \\ \\text{lux} \\)  \nArea \\( A = 4 \\times 3 = 12 \\ \\text{m}^2 \\)  \n\n\\[\n\\text{Total luminous flux} = E \\times A = 50 \\times 12 = 600 \\ \\text{lm}\n\\]\n\nEach lamp produces 300 lm, so:  \n\n\\[\n\\text{Number of lamps} = \\frac{600}{300} = 2\n\\]\n\nFinal answer: (A)"
-}

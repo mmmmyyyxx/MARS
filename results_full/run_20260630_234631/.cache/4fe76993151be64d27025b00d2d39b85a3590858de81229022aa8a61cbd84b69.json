@@ -1,3 +1,0 @@
-{
-  "content": "The voltage induced in an inductor is given by Faraday’s law of electromagnetic induction:  \n\\( v = L \\frac{di}{dt} \\),  \nwhich is the product of inductance \\( L \\) and the rate of change of current \\( \\frac{di}{dt} \\).  \n\nFinal answer: (D)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence rules (NOT first, then OR).\n\nExpression:  \n`not False or not not not not True`\n\n---\n\n**Step 1 – Evaluate `not False`**  \n`not False` = `True`\n\nSo far: `True or not not not not True`\n\n---\n\n**Step 2 – Evaluate `not not not not True`**  \nStart from the rightmost `not`:\n\n- `not True` = `False`\n- `not False` = `True`\n- `not True` = `False`\n- `not False` = `True`\n\nSo `not not not not True` = `True`\n\nExpression becomes: `True or True`\n\n---\n\n**Step 3 – Evaluate `True or True`**  \n`True or True` = `True`\n\n---\n\nFinal answer: true"
-}

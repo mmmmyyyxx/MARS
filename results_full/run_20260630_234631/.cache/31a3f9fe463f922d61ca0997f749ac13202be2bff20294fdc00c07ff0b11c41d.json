@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nExpression:  \n**False and False or not ( True )**\n\n1. **Operator precedence**: NOT (`not`) first, then AND (`and`), then OR (`or`).  \n2. Evaluate `not ( True )` → `False`.  \n   Expression becomes:  \n   `False and False or False`  \n3. Evaluate `False and False` → `False`.  \n   Expression becomes:  \n   `False or False`  \n4. `False or False` → `False`.\n\nFinal answer: false"
-}

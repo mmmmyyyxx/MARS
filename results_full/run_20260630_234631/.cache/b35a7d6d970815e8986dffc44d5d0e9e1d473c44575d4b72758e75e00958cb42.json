@@ -1,3 +1,0 @@
-{
-  "content": "The Doppler shift formula for sound is \\( f' = f \\frac{v \\pm v_o}{v \\mp v_s} \\), where \\( v \\) is the speed of sound in the medium, \\( f \\) is the emitted frequency, and \\( v_o \\) and \\( v_s \\) are the speeds of the observer and source relative to the medium.  \nTo determine the shift, you must know the emitted frequency and the speed of sound in the medium. Time of interaction and distance are not directly part of the formula unless velocities are unknown and must be derived from them, but they are not strictly required in the basic Doppler equation.  \n\nThus, the necessary variables from the list are **I** and **IV**.  \n\nFinal answer: (D)"
-}

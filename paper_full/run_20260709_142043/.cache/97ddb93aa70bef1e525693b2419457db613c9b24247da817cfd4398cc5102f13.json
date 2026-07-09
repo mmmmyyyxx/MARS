@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to overlook contextual or semantic cues that could resolve ambiguity in some cases?\n\nHow might simplifying the output format or clarifying the constraints improve the model's ability to consistently produce the correct answer without introducing unintended biases?"
+}

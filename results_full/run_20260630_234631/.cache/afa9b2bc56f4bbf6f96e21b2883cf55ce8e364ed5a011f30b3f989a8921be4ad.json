@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step by step.  \n\nThe expression is:  \n\n**not False or True and not not True**  \n\n**Step 1 – Identify operator precedence**  \nPrecedence order:  \n1. Parentheses (none here)  \n2. **not**  \n3. **and**  \n4. **or**  \n\n**Step 2 – Evaluate `not` operations from left to right**  \nFirst `not False` → **True**  \nExpression now: **True or True and not not True**  \n\nNext `not True` → **False**  \nExpression now: **True or True and not False**  \n\nNext `not False` → **True**  \nExpression now: **True or True and True**  \n\n**Step 3 – Evaluate `and`**  \n`True and True` → **True**  \n\n**Step 4 – Evaluate `or`**  \n`True or True` → **True**  \n\nFinal result: **true**  \n\n**Final answer: true**"
-}

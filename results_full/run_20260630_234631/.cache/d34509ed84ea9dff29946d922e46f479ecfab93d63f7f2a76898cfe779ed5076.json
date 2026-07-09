@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nOriginal expression:  \n**False or ( True ) or not True**\n\n---\n\n**Step 1 — Resolve parentheses (innermost to outermost)**  \nInside parentheses: `( True )` is `True`.  \nExpression becomes:  \n**False or True or not True**\n\n---\n\n**Step 2 — Apply all NOT operators**  \n`not True` → `False`  \nExpression becomes:  \n**False or True or False**\n\n---\n\n**Step 3 — Apply all AND operators**  \nNo AND operators present, so skip.\n\n---\n\n**Step 4 — Apply all OR operators**  \nOR is left-associative:  \n\n- First: `False or True` → `True`  \nExpression becomes: **True or False**  \n\n- Second: `True or False` → `True`  \n\n---\n\nFinal simplified expression: **True**\n\n---\n\nFinal answer: true"
-}

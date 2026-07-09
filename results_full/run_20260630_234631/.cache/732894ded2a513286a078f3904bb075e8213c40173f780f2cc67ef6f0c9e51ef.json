@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( not False and ( True ) )  \n\n1. **Parentheses first** — inside `( True )` is just `True`.  \n   → `( not False and True )`  \n\n2. **NOT has highest precedence**:  \n   `not False` = `True`  \n   → `( True and True )`  \n\n3. **AND**:  \n   `True and True` = `True`  \n\nFinal answer: true"
-}

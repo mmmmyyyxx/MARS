@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not True and not True and not True`\n\n---\n\n**Step 1 — Apply NOT operators**  \n`not True` = `False`  \n\nSo the expression becomes:  \n`False and False and False`\n\n---\n\n**Step 2 — Apply AND operators left to right**  \n`False and False` = `False`  \n`False and False` = `False`\n\nIntermediate result after all ANDs: `False`\n\n---\n\n**Step 3 — No OR operators remain**  \nFinal result: `False`\n\n---\n\nFinal answer: false"
-}

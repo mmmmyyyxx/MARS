@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the NOT operator:  \nnot False → True  \n\nIntermediate result: True and False and False and True  \n\nNow apply AND operators from left to right:  \nTrue and False → False  \n\nIntermediate result: False and False and True  \n\nFalse and False → False  \n\nIntermediate result: False and True  \n\nFalse and True → False  \n\nFinal truth value: false  \n\nFinal answer: false"
-}

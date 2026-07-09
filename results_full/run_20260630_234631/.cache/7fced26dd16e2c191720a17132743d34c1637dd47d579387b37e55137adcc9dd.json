@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( not True ) and True and False  \n\n**Step 1:** Handle parentheses and NOT  \nnot True = False  \n\nNow the expression becomes:  \nFalse and True and False  \n\n**Step 2:** AND is left-associative, so evaluate left to right  \nFalse and True → False  \n\nNow:  \nFalse and False → False  \n\n**Final result:** false  \n\nFinal answer: false"
-}

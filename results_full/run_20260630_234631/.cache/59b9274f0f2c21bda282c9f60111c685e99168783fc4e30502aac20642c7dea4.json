@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step, following operator precedence (NOT before AND).  \n\nExpression:  \n( not not True and not False )\n\n1. **Innermost NOT operations** (left to right):  \n   - `not True` → False  \n   - `not False` → True  \n\n   So now we have:  \n   ( not False and True )\n\n2. **Remaining NOT**:  \n   - `not False` → True  \n\n   Now:  \n   ( True and True )\n\n3. **AND operation**:  \n   - True and True → True  \n\nFinal answer: true"
-}

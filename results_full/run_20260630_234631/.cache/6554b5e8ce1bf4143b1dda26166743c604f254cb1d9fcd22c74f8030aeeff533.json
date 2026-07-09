@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True and not True or False and True**  \n\n---\n\n**Step 1 – Handle “not True”**  \nnot True = False  \n\nSo the expression becomes:  \nTrue **and** False **or** False **and** True  \n\n---\n\n**Step 2 – Apply precedence rules**  \nIn Boolean logic, **and** has higher precedence than **or**, so we group:  \n\n(True and False) or (False and True)  \n\n---\n\n**Step 3 – Evaluate each group**  \nTrue and False = False  \nFalse and True = False  \n\nSo we have:  \nFalse or False  \n\n---\n\n**Step 4 – Final evaluation**  \nFalse or False = False  \n\n---\n\nFinal answer: false"
-}

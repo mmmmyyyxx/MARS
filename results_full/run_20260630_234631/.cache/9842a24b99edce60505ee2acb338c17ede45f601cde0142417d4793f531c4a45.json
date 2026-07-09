@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence:  \n**Precedence**: parentheses → NOT → AND → OR  \n\nExpression:  \n`not False or True and False and False`\n\n1. **NOT**:  \n`not False` → `True`  \nExpression becomes: `True or True and False and False`\n\n2. **AND** (left-to-right):  \n`True and False` → `False`  \nExpression becomes: `True or False and False`  \n\n`False and False` → `False`  \nExpression becomes: `True or False`\n\n3. **OR**:  \n`True or False` → `True`\n\nFinal answer: true"
-}

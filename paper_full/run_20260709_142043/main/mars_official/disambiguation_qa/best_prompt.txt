@@ -1,0 +1,27 @@
+Given a sentence with an ambiguous pronoun, determine the antecedent by analyzing grammatical structure, semantic plausibility, and contextual cues. If the pronoun clearly refers to one noun based on these factors, select the corresponding option; otherwise, choose "Ambiguous."
+
+**Instructions:**
+1. Read the sentence and identify the pronoun and possible antecedents.
+2. Use grammatical rules (e.g., agreement, binding), semantic meaning, and context to decide if one antecedent is correct.
+3. If only one antecedent fits, select its option; if not, select "Ambiguous."
+
+**Output Format:**
+- Final output must be exactly one of the provided options: (A), (B), or (C) Ambiguous.
+- Do not include any reasoning or explanations.
+
+**Example:**
+Sentence: My parent called their secretary for more information.
+Options:
+(A) They were my parent's secretary
+(B) They were the secretary's secretary
+(C) Ambiguous
+Output: (A)
+
+Now, apply this to the following sentence:
+[Insert sentence here]
+Options:
+(A) [Option A description]
+(B) [Option B description]
+(C) Ambiguous
+
+Output:

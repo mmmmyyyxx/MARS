@@ -1,3 +1,0 @@
-{
-  "content": "Mechanical translational systems are modeled using three fundamental elements:  \n- **Mass element** (represents inertia, governed by \\( F = m \\cdot a \\))  \n- **Spring element** (represents elasticity, \\( F = k \\cdot x \\))  \n- **Dash-pot** (represents viscous damping, \\( F = c \\cdot v \\))  \n\nThese three components together form the basis for modeling mechanical systems in translational motion, analogous to electrical R, L, C components in circuit analysis.  \n\nSince the question asks “By using which of the following elements, mechanical translational systems are obtained?” and all three are necessary for complete modeling, the correct choice is **all of the above**.  \n\nFinal answer: (D)"
-}

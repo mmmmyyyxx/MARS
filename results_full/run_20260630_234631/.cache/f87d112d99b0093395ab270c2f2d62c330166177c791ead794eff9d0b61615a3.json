@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step, following operator precedence (NOT first, then AND left to right).\n\nExpression:  \n**True and True and not not not False**\n\n1. **Evaluate `not False`**  \n   `not False` → `True`\n\n2. **Evaluate `not not False`**  \n   This is `not (not False)` → `not (True)` → `False`\n\n3. **Evaluate `not not not False`**  \n   This is `not (not not False)` = `not (False)` → `True`\n\n4. **Now the expression is:**  \n   `True and True and True`\n\n5. **Evaluate left to right:**  \n   `True and True` → `True`  \n   `True and True` → `True`\n\nFinal answer: **true**\n\nFinal answer: true"
-}

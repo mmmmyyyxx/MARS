@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step by step.  \n\nThe expression is:  \n**not True and True or True and False**  \n\n---\n\n### Step 1: Handle parentheses and negations  \nThere are no parentheses, so first apply **NOT** (highest precedence).  \n\n`not True` → **False**  \n\nExpression becomes:  \n**False and True or True and False**  \n\n---\n\n### Step 2: Apply AND operations (precedence over OR)  \n\nFirst AND:  \n`False and True` → **False**  \n\nSecond AND:  \n`True and False` → **False**  \n\nExpression becomes:  \n**False or False**  \n\n---\n\n### Step 3: Apply OR operation  \n\n`False or False` → **False**  \n\n---\n\nFinal answer: false"
-}

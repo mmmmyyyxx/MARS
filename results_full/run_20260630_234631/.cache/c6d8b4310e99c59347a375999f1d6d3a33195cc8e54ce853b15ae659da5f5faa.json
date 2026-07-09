@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( False ) or False and not True`\n\n---\n\n**Step 1: Resolve parentheses**  \n`( False )` is just `False`.  \nSo expression becomes:  \n`False or False and not True`\n\n---\n\n**Step 2: Apply NOT**  \n`not True` = `False`  \nExpression:  \n`False or False and False`\n\n---\n\n**Step 3: Apply AND** (precedence before OR)  \n`False and False` = `False`  \nExpression:  \n`False or False`\n\n---\n\n**Step 4: Apply OR**  \n`False or False` = `False`\n\n---\n\nFinal answer: false"
-}

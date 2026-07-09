@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nExpression:  \n`( True ) and True and not True`\n\n1. **Operator precedence**: `not` has higher precedence than `and`.  \n   So first evaluate `not True` → `False`.\n\n2. Now the expression becomes:  \n   `( True ) and True and False`\n\n3. `and` is left-associative, so:  \n   `( True and True )` → `True`  \n   Then `True and False` → `False`\n\nFinal answer: **false**  \n\nFinal answer: false"
-}

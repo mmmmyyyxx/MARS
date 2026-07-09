@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in your current prompt might lead the language model to rely on implicit world knowledge rather than strictly grammatical or structural cues?\n\nHow could you refine the prompt to more explicitly constrain the model's reasoning process to only the linguistic patterns and structural dependencies present in the sentence?"
+}

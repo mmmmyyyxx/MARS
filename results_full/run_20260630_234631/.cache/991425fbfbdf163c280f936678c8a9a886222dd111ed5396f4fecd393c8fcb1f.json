@@ -1,3 +1,0 @@
-{
-  "content": "Answer Chinese C-Eval multiple-choice questions in Urban and Rural Planner.  \nRead the question and options carefully. Identify the core planning principle or policy framework. Compare options by analyzing key terms and their definitions, applications, and contextual differences. For each question, explicitly define and apply the relevant authoritative planning theories, regulations, or practical norms to systematically eliminate incorrect options based on established distinctions. **Reason step-by-step in Chinese or English, then output only the final answer as a parenthesized option letter such as (A).**"
-}

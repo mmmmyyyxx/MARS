@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not not not False and True or False**\n\n---\n\n**Step 1 – Resolve `not False`**  \n`not False` = `True`\n\nExpression becomes:  \n`not not True and True or False`\n\n---\n\n**Step 2 – Resolve `not True`**  \n`not True` = `False`\n\nExpression becomes:  \n`not False and True or False`\n\n---\n\n**Step 3 – Resolve `not False`**  \n`not False` = `True`\n\nExpression becomes:  \n`True and True or False`\n\n---\n\n**Step 4 – Apply `and` before `or`**  \n`True and True` = `True`\n\nExpression becomes:  \n`True or False`\n\n---\n\n**Step 5 – Apply `or`**  \n`True or False` = `True`\n\n---\n\n**Final answer: true**"
-}

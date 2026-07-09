@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence: **not** first, then **and**, then **or**.\n\nExpression:  \n`not False or not not False and False`\n\n---\n\n**Step 1 – Evaluate `not False`**  \n`not False` = `True`\n\n**Step 2 – Evaluate `not not False`**  \n`not False` = `True` (from Step 1, but here it’s inside)  \nActually, let’s do it carefully:  \n`not False` = `True`  \n`not True` = `False`  \nSo `not not False` = `False`\n\n---\n\nExpression now:  \n`True or False and False`\n\n---\n\n**Step 3 – Apply `and` before `or`**  \n`False and False` = `False`\n\nExpression now:  \n`True or False`\n\n---\n\n**Step 4 – Apply `or`**  \n`True or False` = `True`\n\n---\n\nFinal answer: true"
-}

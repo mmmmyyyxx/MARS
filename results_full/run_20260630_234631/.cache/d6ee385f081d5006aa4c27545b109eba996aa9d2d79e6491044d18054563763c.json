@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down:  \n\n- **First premise:** All devotees of Legia Warszawa are followers of FK Kukësi.  \n  (If L then K)  \n\n- **Second premise:** No follower of FK Kukësi is a friend of Olympique de Marseille.  \n  (If K then not O)  \n\nFrom these:  \nIf L → K, and K → not O, then L → not O.  \nThis is a syllogism (Barbara type with negation in second premise) that is deductively valid.  \n\nFinal answer: valid"
-}

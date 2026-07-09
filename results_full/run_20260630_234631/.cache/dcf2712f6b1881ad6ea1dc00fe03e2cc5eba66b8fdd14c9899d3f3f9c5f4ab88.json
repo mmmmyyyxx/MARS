@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nExpression:  \n**False and False and not True and False**\n\n---\n\n**Step 1 – Apply NOT first (highest precedence)**  \n`not True` → `False`\n\nExpression becomes:  \nFalse and False and **False** and False\n\n---\n\n**Step 2 – Apply AND from left to right**  \nAND is left-associative in standard Boolean evaluation.\n\n- `False and False` → **False**  \n- `False and False` → **False**  \n- `False and False` → **False**\n\nSo the entire expression evaluates to **False**.\n\n---\n\nFinal answer: false"
-}

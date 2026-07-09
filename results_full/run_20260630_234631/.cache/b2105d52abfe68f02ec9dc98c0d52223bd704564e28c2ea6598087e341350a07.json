@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nIlluminance \\( E \\) (in lux) is related to luminous intensity \\( I \\) (in candela, or candle power) by the inverse-square law:  \n\n\\[\nE = \\frac{I}{d^2}\n\\]\n\nwhere \\( d \\) is the distance in meters.  \n\nGiven:  \n\\( E = 6 \\ \\text{lux} \\)  \n\\( d = 5 \\ \\text{m} \\)  \n\n\\[\nI = E \\times d^2 = 6 \\times 25 = 150 \\ \\text{candela}\n\\]\n\nThis matches option (C).  \n\nNo dimensional or conservation issues here — it’s a direct application of the photometric inverse-square law.  \n\nFinal answer: (C)"
-}

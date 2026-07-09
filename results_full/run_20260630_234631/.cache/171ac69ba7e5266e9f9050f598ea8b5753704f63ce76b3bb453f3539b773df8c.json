@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence rules.  \n\nExpression:  \n**False or ( not ( False ) )**\n\n1. **Innermost parentheses**:  \n   Inside `( not ( False ) )`, first evaluate `False` → `False`.  \n   Expression becomes: `False or ( not False )`\n\n2. **Apply NOT operators**:  \n   `not False` → `True`  \n   Expression becomes: `False or True`\n\n3. **Apply OR operators**:  \n   `False or True` → `True`\n\nFinal result: **true**  \n\nFinal answer: true"
-}

@@ -1,0 +1,3 @@
+{
+  "content": "1. In the example provided, the pronoun \"their\" refers to \"my parent,\" leading to option (A). What specific wording or structural cues in the sentence make this reference unambiguous, and how could your prompt more explicitly guide the model to detect such cues without relying on external knowledge?\n\n2. Considering the current emphasis on strict formatting and eliminating reasoning from the output, how might you adjust the prompt to prevent the model from generating explanatory text while still ensuring it internally follows a reliable decision process for identifying antecedents or ambiguity?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate the inner parentheses:  \nnot (False) → True  \n\nNow the expression becomes:  \nFalse or True  \n\nEvaluate the OR operation:  \nFalse or True → True  \n\nFinal answer: true"
-}

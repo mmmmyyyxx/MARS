@@ -1,3 +1,0 @@
-{
-  "content": "In DNA, complementary base pairing follows A–T and G–C.  \nThe given strand is **5′ CGA TTG 3′**.  \nComplementary strand (written 5′ to 3′) pairs:  \nC (5′) → G  \nG → C  \nA → T  \nT → A  \nT → A  \nG (3′) → C  \n\nSo complementary strand is **5′ GCA AAC 3′**? Let’s check carefully:  \n\nGiven: 5′ C G A T T G 3′  \nComplementary (3′ to 5′): G C T A A C  \nBut we write complementary strand 5′ to 3′: reverse that → 5′ CAA TCG 3′.  \n\nCheck:  \n5′ CAA TCG 3′ pairs with 3′ GTT AGC 5′ (reverse complement of original).  \nOriginal: 5′ CGA TTG 3′  \n3′ GCT AAC 5′ is complementary, but that reversed is 5′ CAA TCG 3′.  \n\nThat matches option (D).  \n\nFinal answer: (D)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Mechanical translational systems involve motion in a straight line and are modeled using fundamental mechanical elements:  \n- **Mass element** represents inertia and stores kinetic energy.  \n- **Spring element** stores potential energy and provides restoring force.  \n- **Dash-pot** (damper) dissipates energy as heat, representing viscous friction.  \n\nA complete mechanical translational system model typically uses all three elements to capture the full dynamic behavior (mass-spring-damper systems).  \n\nFinal answer: (D)"
-}

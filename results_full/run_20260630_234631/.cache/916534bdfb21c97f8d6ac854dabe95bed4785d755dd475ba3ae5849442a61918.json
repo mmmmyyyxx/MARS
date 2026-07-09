@@ -1,3 +1,0 @@
-{
-  "content": "Under overvoltage conditions, a voltage clamping device (such as a Zener diode, MOV, or TVS diode) enters a conducting state to limit the voltage by diverting excess current.  \nThis means its impedance drops significantly from its normal high-impedance state to a low-impedance state during clamping.  \n\nFinal answer: (B)"
-}

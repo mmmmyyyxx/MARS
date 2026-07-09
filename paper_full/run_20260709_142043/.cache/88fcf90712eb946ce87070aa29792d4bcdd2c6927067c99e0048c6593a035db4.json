@@ -1,0 +1,3 @@
+{
+  "content": "What patterns in the SVG path commands might help you distinguish between a polygon and a curved shape before completing the coordinate mapping phase?\n\nConsidering the current classification steps, how could you refine the quadrilateral analysis to more reliably differentiate between a kite and a rectangle using only the mapped coordinates?"
+}

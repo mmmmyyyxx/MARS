@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\nExpression:  \nTrue and True and not not not False  \n\n1. **Innermost NOT** (highest precedence):  \nnot False → True  \n\nNow: True and True and not not True  \n\n2. **Next NOT**:  \nnot True → False  \n\nNow: True and True and not False  \n\n3. **Next NOT**:  \nnot False → True  \n\nNow: True and True and True  \n\n4. **AND from left to right**:  \nTrue and True → True  \nTrue and True → True  \n\nFinal result: **true**  \n\nFinal answer: true"
-}

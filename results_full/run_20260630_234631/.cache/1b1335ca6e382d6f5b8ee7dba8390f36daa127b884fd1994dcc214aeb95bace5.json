@@ -1,3 +1,0 @@
-{
-  "content": "REVISE. The Teacher question shifts focus from optimizing multiple-choice accuracy to modifying elimination strategies for historical confusion, which diverges from the core task of generating/refining a prompt for MMLU questions. Feedback: Stay aligned with the Planner's goal—craft a prompt that directly improves answer accuracy, such as specifying steps like \"Compare key details in options to eliminate distractors.\""
-}

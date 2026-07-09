@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nExpression:  \n```\nnot False or False or ( False )\n```\n\n**Step 1 – Handle parentheses**  \nInside parentheses: `( False )` is just `False`.  \nSo expression becomes:  \n```\nnot False or False or False\n```\n\n**Step 2 – Apply NOT (highest precedence)**  \n`not False` = `True`  \nExpression becomes:  \n```\nTrue or False or False\n```\n\n**Step 3 – Apply OR from left to right**  \n`True or False` = `True`  \n`True or False` = `True`  \n\nFinal result: `True`  \n\n**Final answer: true**"
-}

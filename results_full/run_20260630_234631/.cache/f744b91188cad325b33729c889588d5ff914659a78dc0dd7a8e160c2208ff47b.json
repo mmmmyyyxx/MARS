@@ -1,3 +1,0 @@
-{
-  "content": "Step 1: Evaluate innermost parentheses: not (True) → False  \nStep 2: Expression becomes: True or (False)  \nStep 3: True or False → True  \n\nFinal answer: true"
-}

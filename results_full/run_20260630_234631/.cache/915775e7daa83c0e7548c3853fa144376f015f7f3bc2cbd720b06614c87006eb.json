@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step (internally) without showing the steps in the final output.\n\nExpression:  \n( False or not False or False )\n\n1. **not False** = True  \n2. Replace: ( False or True or False )  \n3. OR is left-associative:  \n   - False or True → True  \n   - True or False → True  \n\nFinal result: **true**\n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s reason through each option:  \n\n- **Shunt capacitor**: Used to supply reactive power, improve voltage profile, and reduce losses — clearly a method for reactive/voltage compensation.  \n- **Series capacitor**: Used in long transmission lines to reduce inductive reactance, thereby improving voltage regulation and power transfer capability — also a voltage/reactive compensation method.  \n- **Generation excitation control**: By controlling the generator field current, the terminal voltage and reactive power output can be regulated — another method for voltage/reactive compensation.  \n\nSince all three are valid methods, the correct choice is **all of the above**.  \n\nFinal answer: (D)"
-}

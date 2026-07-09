@@ -1,3 +1,0 @@
-{
-  "content": "The superposition theorem applies to linear systems regardless of the type of excitation, because linearity implies both homogeneity (scaling) and additivity (superposition).  \n- (A) and (B) are incorrect because they restrict the excitation to only one type, but superposition works for any combination of independent sources (DC, AC, or mixed).  \n- (D) is incorrect because an impulse is just one specific AC-type signal; the theorem is not limited to impulses.  \n- (C) is correct because \"either AC or DC\" means any independent source type, which is consistent with the general statement of the superposition theorem for linear networks.  \n\nFinal answer: (C)"
-}

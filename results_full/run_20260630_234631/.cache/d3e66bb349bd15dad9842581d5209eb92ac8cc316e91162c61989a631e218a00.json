@@ -1,3 +1,0 @@
-{
-  "content": "REVISE\n\nThe Teacher question introduces reasoning process guidance which contradicts the Planner's minimal output format requirement. Adding internal reasoning steps would complicate the prompt rather than maximizing accuracy through simplicity. The Planner's approach of clear task specification with strict output formatting is more aligned with the goal of maximizing accuracy for multiple-choice questions."
-}

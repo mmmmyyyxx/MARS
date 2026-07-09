@@ -1,3 +1,0 @@
-{
-  "content": "How can the prompt more explicitly guide the model to distinguish between directly stated numbers and those that must be derived through implicit relationships, such as \"twice as many\" or \"half of the remaining,\" to prevent premature calculations?"
-}

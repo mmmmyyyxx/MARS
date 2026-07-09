@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\n( True or False ) or not True  \n\n1. **Parentheses first**:  \n   True or False → True  \n\n2. **Replace parentheses result**:  \n   True or not True  \n\n3. **Evaluate not True**:  \n   not True → False  \n\n4. **Final expression**:  \n   True or False → True  \n\nFinal answer: true"
-}

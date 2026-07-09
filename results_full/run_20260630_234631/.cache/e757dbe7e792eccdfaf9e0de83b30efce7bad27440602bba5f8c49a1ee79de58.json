@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the path:  \n\nThe `d` attribute contains a sequence of `M` (move to) and `L` (line to) commands:  \n\n- M 27.00,30.00 → start point  \n- L 83.00,62.00 → line to  \n- L 95.00,60.00 → line to  \n- L 94.00,49.00 → line to  \n- L 82.00,41.00 → line to  \n- L 27.00,30.00 → line back to start  \n\nCounting the points:  \n1. (27.00,30.00)  \n2. (83.00,62.00)  \n3. (95.00,60.00)  \n4. (94.00,49.00)  \n5. (82.00,41.00)  \n\nThat’s 5 distinct vertices, and the path closes back to the first point.  \nA 5-sided polygon is a pentagon.  \n\nFinal answer: (G)"
-}

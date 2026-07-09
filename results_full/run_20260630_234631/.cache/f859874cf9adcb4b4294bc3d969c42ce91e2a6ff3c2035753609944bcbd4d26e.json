@@ -1,3 +1,0 @@
-{
-  "content": "In force–voltage analogy, mechanical force is analogous to voltage, and velocity is analogous to current.  \nThe mass element in a mechanical system is governed by \\( F = m \\frac{dv}{dt} \\).  \nIn an electrical system, \\( v = L \\frac{di}{dt} \\).  \nComparing, force \\( F \\) (analogous to voltage \\( v \\)) and velocity \\( v \\) (analogous to current \\( i \\)), the mass \\( m \\) corresponds to inductance \\( L \\).  \n\nFinal answer: (B)"
-}

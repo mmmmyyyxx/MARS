@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt's constraints on avoiding external knowledge are strictly enforced when testing with sample sentences, and what specific test cases would reveal if the model is relying on implicit assumptions?\n\n2. Considering the current step of validating the prompt, what optimization could be made to the output format or constraints to reduce the risk of the model generating explanations or incorrect responses under edge-case scenarios?"
+}

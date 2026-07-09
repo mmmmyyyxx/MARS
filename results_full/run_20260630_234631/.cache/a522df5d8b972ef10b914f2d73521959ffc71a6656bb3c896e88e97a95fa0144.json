@@ -1,3 +1,0 @@
-{
-  "content": "A D-flip-flop is called transparent when the output follows the input, which occurs when the clock signal is high in a level-triggered D-flip-flop.  \nThis means the input changes are directly reflected at the output without waiting for a clock edge.  \n\nFinal answer: (D)"
-}

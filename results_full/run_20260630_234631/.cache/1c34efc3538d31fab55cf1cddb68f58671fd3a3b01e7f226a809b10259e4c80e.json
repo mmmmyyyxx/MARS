@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n```\nnot ( True ) and ( True )\n```\n\n1. **Operator precedence**: `not` has higher precedence than `and`.  \n2. Evaluate `not (True)` → `False`.  \n3. Now we have: `False and True`.  \n4. `False and True` → `False`.  \n\nFinal answer: false"
-}

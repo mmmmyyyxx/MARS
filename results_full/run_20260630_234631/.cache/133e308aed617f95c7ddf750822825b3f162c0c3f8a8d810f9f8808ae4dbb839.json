@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\n1. Start with `True and False` → `False`.  \n2. `not False` → `True`.  \n3. `not True` → `False`.  \n4. `not False` → `True`.  \n\nFinal answer: true"
-}

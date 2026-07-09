@@ -1,0 +1,12 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Analyze the task requirements to understand the goal of generating a prompt that maximizes the correctness rate for identifying geometric shapes from SVG path elements.",
+    "Examine the provided example SVG path element and the list of shape options to identify key commands, patterns, and features that define each geometric shape.",
+    "Design a clear and structured prompt that explicitly instructs the language model to analyze the SVG path, trace the shape it draws, and select the correct geometric shape from the given options.",
+    "Incorporate the example SVG path and its correct shape identification into the prompt to demonstrate the expected reasoning process and output format.",
+    "Include additional guidelines in the prompt, such as focusing on the number of sides, symmetry, angles, and closure of the path, to enhance the model's accuracy.",
+    "Test the prompt with multiple sample SVG paths, evaluate the correctness of the model's responses, and refine the prompt iteratively for clarity, precision, and alignment with the correctness goal."
+  ]
+}

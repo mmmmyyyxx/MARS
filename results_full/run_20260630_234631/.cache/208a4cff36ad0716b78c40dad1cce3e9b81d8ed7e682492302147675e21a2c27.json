@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n1. **Parentheses first**:  \n   \\( \\text{False and True} \\)  \n   Since `False` and `True` is `False` (AND requires both to be true),  \n   → \\( \\text{False} \\)\n\n2. **Apply `not`**:  \n   \\( \\text{not (False)} \\)  \n   → \\( \\text{True} \\)\n\nFinal answer: true"
-}

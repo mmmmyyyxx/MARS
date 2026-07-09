@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nExpression:  \n( False or not False or False )  \n\n**Step 1: Handle NOT**  \n`not False` = `True`  \n\nSo now:  \n( False or True or False )  \n\n**Step 2: Apply OR from left to right**  \n`False or True` = `True`  \n`True or False` = `True`  \n\n**Step 3: Final result**  \nThe whole expression evaluates to `True`.  \n\nFinal answer: true"
-}

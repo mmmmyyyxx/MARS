@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis question effectively targets the core reasoning needed for clinical medicine multiple-choice questions. It pushes the model to identify critical logical fallacies like:\n- Pathophysiological contradictions (e.g., symptoms that don't match the disease mechanism)\n- Pharmacological implausibilities (e.g., drug side effects misattributed to wrong conditions)\n- Diagnostic mismatches (e.g., test results inconsistent with a proposed diagnosis)\n- Temporal or demographic impossibilities (e.g., diseases that can't occur in certain age groups)\n\nThese distinctions are precisely what separates strong clinical reasoning from simple pattern matching."
-}

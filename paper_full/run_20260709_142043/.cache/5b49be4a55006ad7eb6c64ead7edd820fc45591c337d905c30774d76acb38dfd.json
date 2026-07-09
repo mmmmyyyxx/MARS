@@ -1,0 +1,3 @@
+{
+  "content": "Given your current prompt focuses heavily on geometric analysis, what specific test cases would you design to validate its effectiveness against common SVG path misinterpretations?\n\nConsidering your goal to maximize correctness rate, how might you systematically measure and compare the performance of different prompt variations across the same set of SVG paths?"
+}

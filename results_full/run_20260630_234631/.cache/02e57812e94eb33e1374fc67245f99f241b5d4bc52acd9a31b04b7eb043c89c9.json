@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n**False or not ( False ) or True**\n\n---\n\n**Step 1: Resolve parentheses and negations**  \nInside parentheses: `False` → `False`  \nApply `not (False)` → `True`  \n\nExpression becomes:  \n**False or True or True**\n\n---\n\n**Step 2: Apply logical operators in precedence order**  \nPrecedence: NOT already done, no AND, so now OR (left-to-right).  \n\n- First OR: `False or True` → `True`  \n- Second OR: `True or True` → `True`  \n\n---\n\n**Final answer: true**"
-}

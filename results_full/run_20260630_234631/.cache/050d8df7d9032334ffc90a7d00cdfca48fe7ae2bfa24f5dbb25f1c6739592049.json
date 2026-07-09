@@ -1,3 +1,0 @@
-{
-  "content": "REVISE\n\nThe Teacher question is relevant but not sufficiently Socratic. It asks for a solution (\"how can you ensure\") rather than guiding discovery through probing questions. A better approach would ask questions like: \"What are the trade-offs between allowing reasoning steps and maintaining format purity?\" or \"How might we structure the prompt to implicitly enforce accuracy without explicit explanations?\" This would encourage deeper analysis of prompt engineering strategies."
-}

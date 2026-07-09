@@ -1,3 +1,0 @@
-{
-  "content": "Answer Chinese C-Eval multiple-choice questions in Art Studies.  \nRead the question carefully, identifying key art historical terminology, context, and the specific artistic period, movement, or concept being assessed. Before selecting an answer, analyze all options systematically by comparing their defining characteristics, historical contexts, and stylistic features. Focus your reasoning on these core elements to eliminate irrelevant details and distinguish between closely related concepts. Return only the final answer as a parenthesized option letter such as (A).  \nDo not include extra commentary after the final answer."
-}

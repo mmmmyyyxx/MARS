@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Original expression:**  \n`not not not ( False ) and False`\n\n---\n\n**Step 1 — Resolve parentheses (innermost first)**  \nInside parentheses: `False`  \nExpression becomes:  \n`not not not False and False`\n\n---\n\n**Step 2 — Apply all NOT operators from left to right**  \n\nFirst NOT: `not False` → `True`  \nExpression: `not not True and False`\n\nSecond NOT: `not True` → `False`  \nExpression: `not False and False`\n\nThird NOT: `not False` → `True`  \nExpression: `True and False`\n\n---\n\n**Step 3 — Apply all AND operators**  \n\n`True and False` → `False`\n\n---\n\n**Step 4 — Apply all OR operators**  \nNone left.\n\n---\n\n**Final answer:** `false`\n\nFinal answer: false"
-}

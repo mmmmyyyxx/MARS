@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\n**Expression:**  \nnot False or not not False and False  \n\n**Step 1 – Replace `not False` with `True`:**  \nTrue or not not False and False  \n\n**Step 2 – `not not False` = `not True` = `False`:**  \nTrue or False and False  \n\n**Step 3 – `and` has higher precedence than `or`:**  \nTrue or (False and False)  \n\n**Step 4 – `False and False` = `False`:**  \nTrue or False  \n\n**Step 5 – `True or False` = `True`:**  \nTrue  \n\nFinal answer: true"
-}

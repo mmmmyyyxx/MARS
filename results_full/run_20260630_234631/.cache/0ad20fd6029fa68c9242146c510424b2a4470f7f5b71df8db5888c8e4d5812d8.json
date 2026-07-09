@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nWe start with:  \nnot not not not not not not True  \n\nCount the number of \"not\" operators: there are 7 \"not\"s.  \n\nEach \"not\" flips the boolean value:  \n- not True → False  \n- not False → True  \n\nSo we can think of it as:  \nIf the number of \"not\"s is odd → final value is opposite of the original.  \nIf the number of \"not\"s is even → final value is same as the original.  \n\nHere:  \nOriginal value = True  \nNumber of \"not\"s = 7 (odd)  \nOdd means opposite of True → False  \n\nFinal answer: false  \n\nFinal answer: false"
-}

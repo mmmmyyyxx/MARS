@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\nThe SVG path command `M 32.95,20.92 L 31.65,35.07` means:  \n\n- **M** = move to the starting point (32.95, 20.92)  \n- **L** = draw a line to the point (31.65, 35.07)  \n\nSo this path draws a single straight line segment between two points.  \n\nLooking at the options:  \n- (A) circle → no  \n- (B) heptagon → no  \n- (C) hexagon → no  \n- (D) kite → no  \n- (E) line → yes  \n- (F) octagon → no  \n- (G) pentagon → no  \n- (H) rectangle → no  \n- (I) sector → no  \n- (J) triangle → no  \n\nThe only match is **line**.  \n\nFinal answer: (E)"
-}

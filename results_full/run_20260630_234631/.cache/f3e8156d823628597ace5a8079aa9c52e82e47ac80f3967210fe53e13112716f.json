@@ -1,3 +1,0 @@
-{
-  "content": "An analog signal is defined by its continuous range of values over time, not merely by whether it takes positive or negative values.  \nA sinusoidal signal is analog because its amplitude varies smoothly between its minimum and maximum values — it can take **any** value between the negative and positive peaks.  \n\n- (B), (C), and (D) describe characteristics of a sine wave but do not define why it is analog; a digital signal could also alternate between positive and negative values if encoded that way.  \n- (A) correctly captures the continuous amplitude property that makes it analog.  \n\nFinal answer: (A)"
-}

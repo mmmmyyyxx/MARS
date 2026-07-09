@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path step by step.  \n\nThe path commands:  \n\n1. `M 47.84,53.33` — Move to starting point.  \n2. `L 50.68,45.65` — Line to second point.  \n3. `L 67.09,40.91` — Line to third point.  \n4. `L 56.00,53.91` — Line to fourth point.  \n5. `L 47.84,53.33` — Line back to first point.  \n\nThat’s **5 points** in total, and the path closes back to the start (last point connects to first).  \n\nA shape with 5 vertices is a **pentagon**.  \n\nFinal answer: (G)"
-}

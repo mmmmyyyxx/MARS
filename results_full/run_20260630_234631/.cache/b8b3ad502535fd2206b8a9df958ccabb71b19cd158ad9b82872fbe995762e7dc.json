@@ -1,3 +1,0 @@
-{
-  "content": "Let's break this down step by step.  \nThe expression is:  \n\n**True and not not False and not False**\n\n---\n\n**Step 1: Handle negations (NOT) from innermost outward**  \n- `not False` → `True`  \nSo `not not False` means: `not (not False)` = `not (True)` → `False`  \nAlso, `not False` = `True`\n\nNow the expression becomes:  \n\nTrue **and** False **and** True\n\n---\n\n**Step 2: Apply AND from left to right**  \nAND is associative, but let’s compute strictly left-to-right:  \n- `True and False` → `False`  \n- `False and True` → `False`\n\nFinal truth value: **False**\n\n---\n\n**Final answer: false**"
-}

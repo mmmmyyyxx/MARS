@@ -1,0 +1,3 @@
+{
+  "content": "How can you verify that the procedure for counting unique vertices accurately distinguishes between overlapping points and distinct geometric corners in complex SVG paths?\n\nWhat specific refinements to the prompt would ensure the model consistently identifies key shape properties, such as symmetry or side equalities, before final classification?"
+}

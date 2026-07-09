@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Clearly define the task objective, which is to determine a person's free time during the day based on a series of completed events and activities, ensuring the model understands the context of scheduling and time management.",
+    "Design a structured prompt that includes an example input (e.g., a list of events with times) and an example output (e.g., identified free time slots), guiding the model on how to analyze gaps between activities.",
+    "Ensure the prompt explicitly instructs the model to identify time intervals not occupied by any listed events, considering duration, overlaps, and logical sequencing of activities.",
+    "Incorporate validation mechanisms in the prompt, such as asking the model to justify its reasoning for the identified free times, to enhance correctness and reliability.",
+    "Test the prompt with diverse scenarios and adjust based on model performance to maximize accuracy and consistency in identifying free time slots."
+  ]
+}

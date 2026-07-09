@@ -1,3 +1,0 @@
-{
-  "content": "V/f control in inverters driving induction motors maintains a constant ratio between voltage and frequency. This ensures that the magnetic flux in the motor remains approximately constant, which is necessary for maintaining constant torque over a range of speeds, especially below the rated frequency.  \n\n- (B) Speed reversal is not inherently a result of V/f control — it depends on the inverter’s output phase sequence.  \n- (C) Reduced magnetic loss is not the primary purpose; rather, it prevents magnetic saturation.  \n- (D) Harmonic elimination is not directly achieved by V/f control — it requires additional techniques like PWM.  \n\nThus, the main outcome is constant torque operation in the constant torque region.  \n\nFinal answer: (A)"
-}

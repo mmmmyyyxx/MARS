@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression: **False or not True or True and False**  \n\n1. **Order of operations**: `not` > `and` > `or`  \n2. Evaluate `not True` → `False`  \n   Expression becomes: **False or False or True and False**  \n3. Evaluate `True and False` → `False`  \n   Expression becomes: **False or False or False**  \n4. Evaluate left to right (all `or` operations):  \n   - `False or False` → `False`  \n   - `False or False` → `False`  \n\nFinal result: **False**  \n\nFinal answer: false"
-}

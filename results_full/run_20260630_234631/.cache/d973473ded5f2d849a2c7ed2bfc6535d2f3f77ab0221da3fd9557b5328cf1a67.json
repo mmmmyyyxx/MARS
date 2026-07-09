@@ -1,3 +1,0 @@
-{
-  "content": "In a DC motor, speed is inversely proportional to field flux for a given armature voltage.  \nWhen field flux is reduced to increase speed, the motor develops less torque for the same armature current (since torque ∝ flux × armature current), but the product of torque and speed (power) remains approximately constant if losses are neglected.  \nThus, speed control by field flux variation is known as **constant power drive**.  \n\nFinal answer: (A)"
-}

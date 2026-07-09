@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence rules:  \n**Precedence**: parentheses → NOT → AND → OR  \n\nExpression:  \n`not False and False and False or False`\n\n1. **NOT first**:  \n`not False` = `True`  \nSo expression becomes:  \n`True and False and False or False`\n\n2. **AND is left-associative**:  \n`True and False` = `False`  \nNow: `False and False` = `False`  \nSo after all ANDs: `False or False`\n\n3. **OR**:  \n`False or False` = `False`\n\nFinal answer: false"
-}

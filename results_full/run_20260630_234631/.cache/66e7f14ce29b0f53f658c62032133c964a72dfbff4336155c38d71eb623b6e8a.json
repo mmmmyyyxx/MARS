@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:  \n\nThe path contains two arc commands (`A`).  \n- First arc:  \n  `M 90.00,36.00 A 25.00,25.00 0.00 1,0 40.00,36.00`  \n  This draws an arc from (90,36) to (40,36) with radii (25,25), no rotation (0°), large-arc flag 1, sweep flag 0 — meaning it’s the larger half of an ellipse (or circle) going counterclockwise between those two points.  \n\n- Second arc:  \n  `A 25.00,25.00 0.00 1,0 90.00,36.00`  \n  Same radii, same flags, returns from (40,36) back to (90,36) along the other half.  \n\nSince both radii are equal (25,25), this is a circle, not an ellipse.  \nThe path traces the full circumference, so it’s a circle, not a sector.  \n\nFinal answer: (A)"
-}

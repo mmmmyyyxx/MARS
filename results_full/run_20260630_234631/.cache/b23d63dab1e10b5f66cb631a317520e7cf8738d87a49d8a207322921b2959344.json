@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nExpression:  \n**False or ( True ) or not True**\n\n1. **Resolve parentheses** — `( True )` is just `True`.  \n   Expression becomes:  \n   `False or True or not True`\n\n2. **Apply NOT** — `not True` = `False`.  \n   Expression becomes:  \n   `False or True or False`\n\n3. **Apply AND** — No AND here, skip.\n\n4. **Apply OR** — Left to right:  \n   - `False or True` → `True`  \n   - `True or False` → `True`\n\nFinal result: **true**\n\nFinal answer: true"
-}

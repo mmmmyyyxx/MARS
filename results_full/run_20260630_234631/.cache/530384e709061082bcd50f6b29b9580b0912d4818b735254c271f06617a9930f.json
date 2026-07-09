@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step according to the order of operations:  \n**Parentheses → NOT → AND → OR**\n\nOriginal expression:  \n`True and not False and True or True`\n\n---\n\n**Step 1: Resolve parentheses**  \nThere are no parentheses, so expression remains:  \n`True and not False and True or True`\n\n---\n\n**Step 2: Apply NOT operators**  \n`not False` → `True`  \nExpression becomes:  \n`True and True and True or True`\n\n---\n\n**Step 3: Apply AND operators (left to right)**  \nFirst `True and True` → `True`  \nExpression: `True and True or True`  \n\nNext `True and True` → `True`  \nExpression: `True or True`\n\n---\n\n**Step 4: Apply OR operators**  \n`True or True` → `True`\n\n---\n\nFinal answer: true"
-}

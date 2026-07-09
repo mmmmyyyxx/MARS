@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step, following the order of operations for logical operators:  \n**NOT first, then AND, then OR** (left-to-right for equal precedence).  \n\nThe expression is:  \n\n```\nTrue and not True and True and True\n```\n\n---\n\n**Step 1: Apply NOT**  \n`not True` = `False`  \n\nSo the expression becomes:  \n```\nTrue and False and True and True\n```\n\n---\n\n**Step 2: Apply AND from left to right**  \n\nFirst: `True and False` = `False`  \n\nNow we have:  \n```\nFalse and True and True\n```\n\nSecond: `False and True` = `False`  \n\nNow we have:  \n```\nFalse and True\n```\n\nThird: `False and True` = `False`  \n\n---\n\n**Final result:** `False`\n\n---\n\nFinal answer: false"
-}

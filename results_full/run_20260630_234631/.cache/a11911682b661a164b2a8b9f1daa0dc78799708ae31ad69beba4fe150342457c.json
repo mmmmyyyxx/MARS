@@ -1,3 +1,0 @@
-{
-  "content": "REVISE. The current prompt lacks explicit reasoning guidance, which could lead to the model skipping critical analysis or relying on superficial pattern matching. Clarify by adding: \"Before selecting your answer, briefly reason through the problem step-by-step to ensure accuracy.\" This enforces structured thinking while maintaining the required output format."
-}

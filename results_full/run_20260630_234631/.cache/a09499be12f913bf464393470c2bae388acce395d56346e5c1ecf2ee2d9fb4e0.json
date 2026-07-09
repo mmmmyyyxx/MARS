@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis is a strong Socratic question that pushes for concrete implementation details. It correctly focuses on:\n- Requiring explicit reference standards (valid logical forms like modus ponens, common fallacies like affirming the consequent)\n- Ensuring consistency in evaluation criteria\n- Moving beyond abstract definitions to practical comparison mechanisms\n\nThe question would help create a more robust prompt by forcing specification of canonical examples the model should internally reference."
-}

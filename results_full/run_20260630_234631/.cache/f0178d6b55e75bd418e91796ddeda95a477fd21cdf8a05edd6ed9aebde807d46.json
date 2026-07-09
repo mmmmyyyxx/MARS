@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n\n**True or False or not True or False**\n\n---\n\n**Step 1 – Operator precedence**  \nLogical `not` has higher precedence than `or`.  \n\nSo `not True` = `False`.  \n\nExpression becomes:  \nTrue or False or False or False  \n\n---\n\n**Step 2 – Evaluate left to right** (since all are `or` operations, order doesn’t change result):  \n\n- True or False → True  \n- True or False → True  \n- True or False → True  \n\n---\n\n**Final truth value:** `true`  \n\nFinal answer: true"
-}

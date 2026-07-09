@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step, following operator precedence (NOT before OR).\n\nExpression:  \n`( not False ) or not not False`\n\n1. **Evaluate innermost NOTs first**  \n   - `not False` → `True`  \n   So now: `True or not not False`\n\n2. **Next NOT**  \n   - `not False` → `True`  \n   So now: `True or not True`\n\n3. **Next NOT**  \n   - `not True` → `False`  \n   So now: `True or False`\n\n4. **Evaluate OR**  \n   - `True or False` → `True`\n\nFinal answer: true"
-}

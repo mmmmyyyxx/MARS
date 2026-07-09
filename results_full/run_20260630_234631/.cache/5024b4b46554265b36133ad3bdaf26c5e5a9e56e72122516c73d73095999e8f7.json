@@ -1,3 +1,0 @@
-{
-  "content": "A high rate of change of voltage (dV/dt) can cause unwanted turn-on of an SCR even without a gate signal, due to capacitive current in the device.  \nTo prevent this, a snubber circuit (typically a series RC network across the SCR) is used to limit dV/dt.  \nFuses protect against overcurrent, circuit breakers interrupt overcurrent or faults, and equalizing circuits help with voltage sharing in series-connected devices — none of these directly address high dV/dt.  \n\nFinal answer: (A)"
-}

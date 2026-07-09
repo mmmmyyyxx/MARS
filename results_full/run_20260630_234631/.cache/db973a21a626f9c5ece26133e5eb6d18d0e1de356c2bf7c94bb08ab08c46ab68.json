@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step according to the order of operations.\n\n**Original expression:**  \nFalse or not False or False or False\n\n---\n\n**Step 1 — Apply NOT operators**  \nnot False = True  \nExpression becomes:  \nFalse or True or False or False\n\n---\n\n**Step 2 — Apply AND operators**  \nThere are no AND operators here, so skip.\n\n---\n\n**Step 3 — Apply OR operators** (left to right)  \n\nFirst: False or True → True  \nExpression becomes: True or False or False  \n\nSecond: True or False → True  \nExpression becomes: True or False  \n\nThird: True or False → True  \n\n---\n\n**Final answer:** true  \n\nFinal answer: true"
-}

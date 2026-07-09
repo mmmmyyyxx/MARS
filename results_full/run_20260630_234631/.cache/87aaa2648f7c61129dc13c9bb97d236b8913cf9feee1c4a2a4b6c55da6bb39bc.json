@@ -1,3 +1,0 @@
-{
-  "content": "The instantaneous power in an inductor is given by  \n\\[\np(t) = v(t) \\, i(t)\n\\]  \nFor an inductor, \\( v(t) = L \\frac{di}{dt} \\).  \nSubstituting:  \n\\[\np(t) = L \\, i(t) \\, \\frac{di}{dt}\n\\]  \nSo \\( p(t) \\) is proportional to the product of instantaneous current \\( i(t) \\) and the rate of change of current \\( \\frac{di}{dt} \\).  \n\nFinal answer: (A)"
-}

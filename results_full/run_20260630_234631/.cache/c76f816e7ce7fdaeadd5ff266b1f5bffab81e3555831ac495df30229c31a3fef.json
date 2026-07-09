@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\n1. The SVG path starts with `M 98.96,92.35` — this is a **Move** command to the starting point.  \n2. Then `L 44.27,28.27` — this is a **Line** command to the specified point.  \n3. So the path consists of only two points connected by a straight line.  \n4. That means the shape drawn is simply a **line segment**.  \n\nLooking at the options, the match is **line**.  \n\nFinal answer: (E)"
-}

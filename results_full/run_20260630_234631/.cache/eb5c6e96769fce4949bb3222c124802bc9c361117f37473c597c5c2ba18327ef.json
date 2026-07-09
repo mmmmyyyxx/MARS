@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\nExpression:  \n( False ) or not False or True  \n\n1. **not False** = True  \n2. Replace: ( False ) or True or True  \n3. Evaluate left to right:  \n   - False or True → True  \n   - True or True → True  \n\nFinal answer: True"
-}

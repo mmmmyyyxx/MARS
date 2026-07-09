@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\n1. Start with the innermost parentheses:  \n   \\( \\text{not True} \\) → \\( \\text{False} \\)  \n\n2. Apply the next “not” outside:  \n   \\( \\text{not (not True)} \\) → \\( \\text{not False} \\) → \\( \\text{True} \\)  \n\n3. Apply the remaining “not” outside:  \n   \\( \\text{not not (not True)} \\) → \\( \\text{not True} \\) → \\( \\text{False} \\)  \n\n4. Now the expression is:  \n   \\( \\text{False or False} \\)  \n\n5. \\( \\text{False or False} \\) → \\( \\text{False} \\)  \n\nFinal answer: false"
-}

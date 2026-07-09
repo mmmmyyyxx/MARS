@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the model accurately distinguishes between shapes with similar vertex counts, such as a kite versus other quadrilaterals, when the SVG path contains curves or redundant points?\n\n2. Considering the goal of maximizing correctness rate, what specific elements in your prompt could be optimized to reduce ambiguity and guide the model more directly toward evaluating key geometric features like symmetry, side lengths, and angles?"
+}

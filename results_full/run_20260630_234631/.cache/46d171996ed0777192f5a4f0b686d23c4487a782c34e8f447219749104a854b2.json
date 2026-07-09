@@ -1,3 +1,0 @@
-{
-  "content": "Answer Chinese C-Eval multiple-choice questions in Clinical Medicine. Before evaluating the options, systematically recall and apply relevant medical knowledge by identifying key clinical concepts such as disease mechanisms, drug indications, diagnostic criteria, and clinical guidelines pertinent to the question. Then, carefully read all options and compare them using this knowledge. Eliminate choices that contradict established medical principles or lack supporting evidence, and identify subtle clinical cues (e.g., timing, risk factors, diagnostic findings) that uniquely support the correct answer. Return only the final answer as a parenthesized option letter such as (A)."
-}

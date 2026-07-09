@@ -1,3 +1,0 @@
-{
-  "content": "Automatic control systems inherently use feedback to regulate output without human intervention, making them synonymous with closed-loop systems where the output is continuously measured and compared with a reference to minimize error. Open-loop systems lack feedback and cannot self-correct, so they are not automatic in the same sense.  \n\nFinal answer: (B)"
-}

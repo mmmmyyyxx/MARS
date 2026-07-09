@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path commands:  \n\n- `M 24.95,59.83 L 44.01,58.16 L 57.11,51.31` — first segment with three points.  \n- `M 57.11,51.31 L 75.01,32.90 L 72.80,18.81` — second segment with three points.  \n- `M 72.80,18.81 L 36.38,22.58 L 24.95,59.83` — third segment with three points.  \n\nEach `M` starts a new subpath, but the last point of each subpath is the first point of the next subpath, so the whole path is connected.  \n\nCounting distinct vertices in order:  \n1. (24.95,59.83)  \n2. (44.01,58.16)  \n3. (57.11,51.31)  \n4. (75.01,32.90)  \n5. (72.80,18.81)  \n6. (36.38,22.58)  \nThen back to vertex 1.  \n\nThat’s 6 vertices → hexagon.  \n\nFinal answer: (C)"
-}

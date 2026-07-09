@@ -1,3 +1,0 @@
-{
-  "content": "Total steps: 5  \nStep 1: Instruct the model to carefully read the question and all options before selecting an answer.  \nStep 2: Specify that the model should apply reasoning based on College Biology knowledge, avoiding guessing.  \nStep 3: Require the model to eliminate incorrect options by identifying contradictions or implausible details.  \nStep 4: Direct the model to output only the final answer in the exact format: a parenthesized letter, e.g., (A).  \nStep 5: Include an example question with reasoning and correct formatting to illustrate the process."
-}

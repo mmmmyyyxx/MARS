@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the prompt be modified to ensure the model strictly outputs only \"True\" or \"False\" without any additional text, even in cases of invalid expressions, while still maintaining correctness?\n\n2. Considering the current step focuses on simplifying the output format, what specific wording or constraints could be added to the prompt to prevent the model from generating explanations, while also handling edge cases like ambiguous expressions effectively?"
+}

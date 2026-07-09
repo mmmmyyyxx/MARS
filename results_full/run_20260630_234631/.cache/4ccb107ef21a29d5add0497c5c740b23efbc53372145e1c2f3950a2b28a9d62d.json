@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not not not True and False and False`\n\n---\n\n**Step 1 — Resolve `not` operations from left to right**  \n`not True` → `False`  \n`not False` → `True`  \n`not True` → `False`\n\nSo `not not not True` = `False`.\n\n---\n\n**Step 2 — Apply `and` from left to right**  \n`False and False` → `False`  \n`False and False` → `False`\n\n---\n\nFinal result: `False`\n\n---\n\nFinal answer: false"
-}

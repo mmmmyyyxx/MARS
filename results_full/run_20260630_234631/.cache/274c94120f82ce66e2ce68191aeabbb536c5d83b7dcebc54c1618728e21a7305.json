@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n1. **Innermost parentheses**:  \n   \\( \\text{True or False} \\)  \n   OR operation: True or False → True  \n   Expression becomes: \\( \\text{not (True)} \\)\n\n2. **Apply NOT**:  \n   \\( \\text{not True} \\) → False\n\n3. **Final expression**: False\n\nFinal answer: false"
-}

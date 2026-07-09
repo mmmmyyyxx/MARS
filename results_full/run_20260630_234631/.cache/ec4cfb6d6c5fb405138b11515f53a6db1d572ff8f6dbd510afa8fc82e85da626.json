@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the innermost parentheses:  \n( not ( True ) )  \nnot True = False  \nIntermediate result: False  \n\nNow, resolve the outermost parentheses:  \n( False )  \nIntermediate result: False  \n\nFinal answer: false"
-}

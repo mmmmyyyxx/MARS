@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**False and not True and True or False**\n\n---\n\n**Step 1 – Apply operator precedence:**  \nNOT has highest precedence, so `not True` = `False`.  \n\nExpression becomes:  \n**False and False and True or False**\n\n---\n\n**Step 2 – AND has higher precedence than OR:**  \nWe evaluate left-to-right for ANDs (since AND is associative).  \n\n`False and False` → `False`  \n`False and True` → `False`  \n\nSo `False and False and True` = `False`.\n\n---\n\n**Step 3 – Now handle OR:**  \n`False or False` → `False`\n\n---\n\n**Final answer: false**\n\nFinal answer: false"
-}

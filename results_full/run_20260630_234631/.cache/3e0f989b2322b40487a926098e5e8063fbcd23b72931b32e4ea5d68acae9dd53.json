@@ -1,3 +1,0 @@
-{
-  "content": "First, count the number of distinct points in the path:  \nM 53.73,61.64 → L 50.59,49.13 → L 61.50,52.50 → L 66.59,62.74 → L 53.73,61.64.  \n\nThat’s 5 unique vertices (the last one closes back to the first).  \n\nA 5-sided polygon is a pentagon.  \n\nFinal answer: (G)"
-}

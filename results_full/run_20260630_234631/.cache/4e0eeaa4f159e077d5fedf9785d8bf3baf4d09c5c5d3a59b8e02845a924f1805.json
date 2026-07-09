@@ -1,3 +1,0 @@
-{
-  "content": "A stack is a data structure where the last element added is the first one to be removed. This is known as Last In, First Out (LIFO).  \nFIFO (First In, First Out) refers to a queue, not a stack.  \nFlash memory is a type of storage, not related to the stack data structure.  \nLILO is not a standard term for stack; it is sometimes used interchangeably with FIFO.  \n\nFinal answer: (C)"
-}

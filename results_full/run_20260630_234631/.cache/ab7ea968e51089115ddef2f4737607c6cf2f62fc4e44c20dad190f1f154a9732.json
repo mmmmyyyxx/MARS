@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\n1. **Innermost negation**:  \n   \\( \\text{not True} = \\text{False} \\)\n\n2. **Inside parentheses**:  \n   \\( \\text{False and False} = \\text{False} \\)\n\n3. **First outer negation**:  \n   \\( \\text{not False} = \\text{True} \\)\n\n4. **Second outer negation**:  \n   \\( \\text{not True} = \\text{False} \\)\n\nFinal answer: false"
-}

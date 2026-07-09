@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the model strictly avoids relying on implicit world knowledge or typical scenarios when determining pronoun antecedents, and what specific grammatical or structural cues does it prioritize instead?\n\n2. Considering the goal of maximizing correctness rate, how might you refine the prompt to more explicitly define and differentiate between \"explicit linguistic dependencies\" and \"implicit inferences,\" and could adding another contrasting example help clarify this distinction?"
+}

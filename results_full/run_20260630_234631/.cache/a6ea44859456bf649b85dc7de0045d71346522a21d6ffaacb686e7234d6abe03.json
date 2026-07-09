@@ -1,3 +1,0 @@
-{
-  "content": "REVISE. The Teacher question shifts focus from prompt optimization to analyzing potential pitfalls in reasoning, which diverges from the Planner's goal of maximizing accuracy. It introduces a meta-discussion about model behavior rather than refining the instructional prompt for the MMLU task. A more aligned question would directly address improving prompt clarity, domain context, or answer formatting."
-}

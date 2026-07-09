@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the example input and output in your prompt clearly demonstrate the tiered validation approach—showing both straightforward gap identification and complex hidden constraint handling—without making the example overly complicated?\n\n2. Considering the current step of designing a structured prompt with examples, what specific elements in the example output would most effectively guide the model to distinguish between explicit and implicit free periods while maintaining practical validation checks?"
+}

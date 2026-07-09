@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:\n\n- `M 53.87,61.90` — move to starting point.\n- `L 52.73,49.16` — draw a line to another point.\n- `A 12.80,12.80 207.60 0,1 63.98,54.06` — arc with radius 12.80, rotation 207.60°, large-arc-flag 0, sweep-flag 1, to endpoint (63.98,54.06).\n- `L 53.87,61.90` — line back to start.\n\nThis describes:  \n1. A line from start to point (52.73,49.16).  \n2. An arc from that point to (63.98,54.06).  \n3. A line back to start.\n\nSo the path has three segments: line–arc–line, forming a closed shape with a curved side and two straight sides.  \nThat’s a **sector** (a portion of a circle bounded by two radii and an arc).\n\nFinal answer: (I)"
-}

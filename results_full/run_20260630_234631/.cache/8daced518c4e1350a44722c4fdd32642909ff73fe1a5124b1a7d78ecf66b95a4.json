@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\n1. **Parentheses and negations first**  \n   `not False` → `True`\n\n2. **Substitute back into the expression**  \n   `(True) or (True)`\n\n3. **Apply OR**  \n   `True or True` → `True`\n\nFinal answer: true"
-}

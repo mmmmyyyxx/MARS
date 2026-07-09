@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not not not False and True and False`\n\n---\n\n### Step 1: Handle the `not` operations from right to left (highest precedence)\n- `not False` → `True`\n- `not True` → `False`\n- `not False` → `True`\n\nSo `not not not False` = `not not (not False)`  \n= `not not (True)`  \n= `not (not True)`  \n= `not (False)`  \n= `True`\n\n---\n\n### Step 2: Substitute back into the expression\nNow we have:  \n`True and True and False`\n\n---\n\n### Step 3: Apply `and` from left to right (associative)\n- `True and True` → `True`\n- `True and False` → `False`\n\n---\n\n**Final result:** `False`\n\n---\n\nFinal answer: false"
-}

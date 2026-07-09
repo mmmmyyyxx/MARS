@@ -1,3 +1,0 @@
-{
-  "content": "How might the prompt be strengthened to ensure the model consistently handles expressions with multiple XOR or equivalence operators in sequence, given that these are evaluated left-to-right and are prone to misinterpretation if not explicitly reinforced?"
-}

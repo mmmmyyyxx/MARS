@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path has a sequence of points connected by lines:  \n\n1. M 60.00,77.00 → starting point  \n2. L 75.00,55.00  \n3. L 6.00,60.00  \n4. L 22.00,78.00  \n5. L 3.00,96.00  \n6. L 93.00,90.00  \n7. L 60.00,77.00 → back to start  \n\nCounting the vertices:  \n(60,77), (75,55), (6,60), (22,78), (3,96), (93,90), (60,77)  \n\nThat’s 7 distinct points before closing back to the first.  \nA polygon with 7 sides is a **heptagon**.  \n\nFinal answer: (B)"
-}

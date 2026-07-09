@@ -1,3 +1,0 @@
-{
-  "content": "This scenario describes enzyme kinetics reaching \\( V_{\\max} \\), where all active sites are saturated with substrate.  \n\n- (B) is incorrect because activation energy is determined by the enzyme’s catalytic mechanism and does not change with substrate concentration.  \n- (C) is incorrect because the change in free energy (\\( \\Delta G \\)) of the reaction is a thermodynamic constant, unaffected by enzyme saturation.  \n- (D) is incorrect because enzyme specificity is an intrinsic property and does not change at high substrate concentration.  \n- (A) is correct because at \\( V_{\\max} \\), the enzyme active sites are fully occupied by substrate molecules.  \n\nFinal answer: (A)"
-}

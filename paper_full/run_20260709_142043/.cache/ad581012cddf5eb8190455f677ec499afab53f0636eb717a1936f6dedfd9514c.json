@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the current prompt might lead the model to deviate from the required output format, and how could you refine the instructions to prevent this?\n\nConsidering the goal of maximizing correctness, how might simplifying or restructuring the prompt's constraints improve the model's ability to consistently produce the correct answer without introducing ambiguity?"
+}

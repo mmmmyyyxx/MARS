@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n\n**True or False and not False and True**\n\n---\n\n### 1. Interpret the precedence  \nStandard Boolean precedence:  \n1. Parentheses (none here)  \n2. **NOT**  \n3. **AND**  \n4. **OR**  \n\nSo:  \nTrue **or** (False **and** (not False) **and** True)\n\n---\n\n### 2. Apply **NOT**  \nnot False = True  \n\nIntermediate:  \nTrue **or** (False **and** True **and** True)\n\n---\n\n### 3. Apply **AND** from left to right  \nFalse **and** True = False  \n\nIntermediate:  \nTrue **or** (False **and** True)  \n\nFalse **and** True = False  \n\nIntermediate:  \nTrue **or** False\n\n---\n\n### 4. Apply **OR**  \nTrue **or** False = True\n\n---\n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the innermost parentheses:  \n(True or not False)  \nApply NOT: not False = True  \nNow: (True or True)  \nApply OR: True or True = True  \nIntermediate: True  \n\nNow the expression is: True or False  \nApply OR: True or False = True  \nIntermediate: True  \n\nFinal answer: true"
-}

@@ -1,0 +1,108 @@
+{
+  "expected_pairs": 24,
+  "completed_pairs": 24,
+  "coverage_fraction": 1.0,
+  "completed": [
+    {
+      "task_id": "boolean_expressions",
+      "method_id": "cot_fs"
+    },
+    {
+      "task_id": "boolean_expressions",
+      "method_id": "cot_zs"
+    },
+    {
+      "task_id": "boolean_expressions",
+      "method_id": "mars_official"
+    },
+    {
+      "task_id": "boolean_expressions",
+      "method_id": "origin"
+    },
+    {
+      "task_id": "disambiguation_qa",
+      "method_id": "cot_fs"
+    },
+    {
+      "task_id": "disambiguation_qa",
+      "method_id": "cot_zs"
+    },
+    {
+      "task_id": "disambiguation_qa",
+      "method_id": "mars_official"
+    },
+    {
+      "task_id": "disambiguation_qa",
+      "method_id": "origin"
+    },
+    {
+      "task_id": "formal_fallacies",
+      "method_id": "cot_fs"
+    },
+    {
+      "task_id": "formal_fallacies",
+      "method_id": "cot_zs"
+    },
+    {
+      "task_id": "formal_fallacies",
+      "method_id": "mars_official"
+    },
+    {
+      "task_id": "formal_fallacies",
+      "method_id": "origin"
+    },
+    {
+      "task_id": "geometric_shapes",
+      "method_id": "cot_fs"
+    },
+    {
+      "task_id": "geometric_shapes",
+      "method_id": "cot_zs"
+    },
+    {
+      "task_id": "geometric_shapes",
+      "method_id": "mars_official"
+    },
+    {
+      "task_id": "geometric_shapes",
+      "method_id": "origin"
+    },
+    {
+      "task_id": "ruin_names",
+      "method_id": "cot_fs"
+    },
+    {
+      "task_id": "ruin_names",
+      "method_id": "cot_zs"
+    },
+    {
+      "task_id": "ruin_names",
+      "method_id": "mars_official"
+    },
+    {
+      "task_id": "ruin_names",
+      "method_id": "origin"
+    },
+    {
+      "task_id": "sports_understanding",
+      "method_id": "cot_fs"
+    },
+    {
+      "task_id": "sports_understanding",
+      "method_id": "cot_zs"
+    },
+    {
+      "task_id": "sports_understanding",
+      "method_id": "mars_official"
+    },
+    {
+      "task_id": "sports_understanding",
+      "method_id": "origin"
+    }
+  ],
+  "partial": [],
+  "failed": [],
+  "skipped_complete": [],
+  "skipped": [],
+  "missing_pairs": []
+}

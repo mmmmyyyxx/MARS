@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the path:  \n\nThe path starts at `M 2.00,80.00`, then goes to:  \n1. `L 51.00,59.00`  \n2. `L 86.00,84.00`  \n3. `L 53.00,15.00`  \n4. `L 28.00,48.00`  \n5. `L 41.00,50.00`  \n6. `L 2.00,80.00` (back to start)  \n\nCounting the distinct vertices:  \n(2,80), (51,59), (86,84), (53,15), (28,48), (41,50) → 6 vertices.  \n\nA closed shape with 6 vertices is a hexagon.  \n\nFinal answer: (C)"
-}

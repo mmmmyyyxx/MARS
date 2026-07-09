@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\n1. The communication process generally involves a sender encoding a message, transmitting it through a channel, and a receiver decoding it.  \n2. The question describes the receiver’s action — “unpacking the various components of the message” and “making sense and giving the message meaning.”  \n3. That action is the definition of **decoding**, where the receiver interprets the message.  \n4. Encoding is the sender’s process of creating the message. Transfer and noise are unrelated to this specific step.  \n\nFinal answer: (B)"
-}

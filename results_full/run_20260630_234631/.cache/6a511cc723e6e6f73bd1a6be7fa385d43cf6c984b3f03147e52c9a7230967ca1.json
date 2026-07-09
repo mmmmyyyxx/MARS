@@ -1,3 +1,0 @@
-{
-  "content": "Total steps: 4  \nStep 1: Introduce the task clearly, specifying that the model must answer BIG-Bench Hard questions about geometric shapes and output the answer as a parenthesized letter like (A).  \nStep 2: Include explicit instructions to reason step-by-step before selecting the final answer, ensuring accuracy by verifying geometric properties and relationships.  \nStep 3: Add examples of correct question-answer pairs to illustrate the expected format and reasoning process.  \nStep 4: Emphasize checking for common geometric misconceptions (e.g., shape definitions, symmetry, angles) and require the model to confirm its choice aligns with the question’s context."
-}

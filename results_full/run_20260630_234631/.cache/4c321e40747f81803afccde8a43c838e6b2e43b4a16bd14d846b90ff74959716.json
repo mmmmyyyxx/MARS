@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\n1. **Inside the parentheses:**  \n   - `True or not False`  \n   - `not False` is `True`  \n   - So `True or True` → `True`  \n\n2. **Outside the parentheses:**  \n   - `(True) or False`  \n   - `True or False` → `True`  \n\nFinal answer: true"
-}

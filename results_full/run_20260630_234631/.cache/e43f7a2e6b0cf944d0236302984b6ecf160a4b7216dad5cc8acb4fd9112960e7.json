@@ -1,3 +1,0 @@
-{
-  "content": "A dynamometer wattmeter measures power using a fixed current coil and a moving potential coil.  \nThe moving coil is connected across the supply voltage, so it must have a high resistance to:  \n- Draw minimal current from the circuit  \n- Avoid altering the load current being measured  \n- Ensure most of the supply voltage appears across the load, not the wattmeter’s potential coil  \n\nThus, the resistance should be **high**.  \n\nFinal answer: (C)"
-}

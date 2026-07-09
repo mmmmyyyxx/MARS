@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n\\[\n( \\text{False or not False and False} )\n\\]\n\n1. **Operator precedence**: `not` > `and` > `or`.  \n   So `not False and False` is evaluated first.\n\n2. `not False` = `True`.  \n   So `not False and False` = `True and False` = `False`.\n\n3. Now we have:  \n   `False or False` = `False`.\n\nFinal answer: false"
-}

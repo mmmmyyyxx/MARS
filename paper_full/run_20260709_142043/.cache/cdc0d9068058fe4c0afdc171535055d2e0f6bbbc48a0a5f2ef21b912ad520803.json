@@ -1,0 +1,3 @@
+{
+  "content": "What potential issues might arise if the model is required to output only the final truth value without any intermediate steps, and how could this affect the correctness rate?\n\nConsidering the goal of maximizing correctness, what alternative approaches could simplify the prompt while still ensuring accurate evaluation of Boolean expressions?"
+}

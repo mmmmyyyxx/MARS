@@ -1,3 +1,0 @@
-{
-  "content": "The surge current rating is inversely proportional to the square root of time for an SCR.  \n\nFor a half-cycle surge at 50 Hz:  \nHalf-cycle duration = \\( \\frac{1}{2 \\times 50} = 0.01 \\ \\text{s} \\)  \nOne-cycle duration = \\( \\frac{1}{50} = 0.02 \\ \\text{s} \\)  \n\nThe relationship is:  \n\\[\nI^2 t = \\text{constant}\n\\]  \nSo:  \n\\[\nI_{\\text{1-cycle}} = I_{\\text{half-cycle}} \\times \\sqrt{\\frac{t_{\\text{half}}}{t_{\\text{full}}}}\n\\]  \n\\[\nI_{\\text{1-cycle}} = 3000 \\times \\sqrt{\\frac{0.01}{0.02}}\n\\]  \n\\[\nI_{\\text{1-cycle}} = 3000 \\times \\sqrt{\\frac{1}{2}} \\approx 3000 \\times 0.7071 \\approx 2121.32 \\ \\text{A}\n\\]  \n\nFinal answer: (C)"
-}

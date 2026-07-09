@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not not not ( True and False )`\n\n---\n\n**Step 1: Resolve parentheses**  \n`( True and False )` → `False`\n\nNow we have:  \n`not not not False`\n\n---\n\n**Step 2: Apply NOT operators from right to left** (since NOT is right-associative in logic, but here we can evaluate stepwise from the innermost logical grouping — but here there’s no parentheses, so we start with the rightmost NOT first in strict left-to-right reading? Actually, in many programming languages, `not not not False` is evaluated as `not (not (not False))`.)\n\nLet’s compute carefully:\n\n1. `not False` → `True`  \n2. `not True` → `False`  \n3. `not False` → `True`\n\n---\n\n**Final result:** `True`\n\n---\n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( ( not True ) or True )`\n\n---\n\n**Step 1: Resolve parentheses and negations**  \nInside the parentheses: `( not True )`  \n`not True` = `False`  \n\nSo now we have:  \n`( False or True )`\n\n---\n\n**Step 2: Apply logical OR**  \n`False or True` = `True`\n\n---\n\n**Step 3: Final truth value**  \nThe expression evaluates to `True`.\n\n---\n\nFinal answer: true"
-}

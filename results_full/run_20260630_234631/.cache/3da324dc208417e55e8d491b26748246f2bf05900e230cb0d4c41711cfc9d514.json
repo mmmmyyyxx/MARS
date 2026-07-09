@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe SVG path has these points in order:  \n\n1. M 73.43,27.01 → start point  \n2. L 6.90,79.25 → line to  \n3. L 49.09,84.71 → line to  \n4. L 69.21,97.37 → line to  \n5. L 69.96,76.08 → line to  \n6. M 69.96,76.08 → move to same point (redundant)  \n7. L 90.27,46.02 → line to  \n8. L 73.43,27.01 → line back to start  \n\nSo the connected vertices in order are:  \n\n(73.43,27.01) → (6.90,79.25) → (49.09,84.71) → (69.21,97.37) → (69.96,76.08) → (90.27,46.02) → (73.43,27.01)  \n\nThat’s **6 distinct vertices** connected in a closed loop.  \n\nA shape with 6 vertices is a **hexagon**.  \n\nFinal answer: (C)"
-}

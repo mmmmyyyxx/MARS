@@ -1,3 +1,0 @@
-{
-  "content": "For capacitors in series, the equivalent capacitance \\( C_{eq} \\) is given by:\n\n\\[\n\\frac{1}{C_{eq}} = \\frac{1}{C_1} + \\frac{1}{C_2} + \\dots + \\frac{1}{C_n}\n\\]\n\nHere, \\( n = 5 \\) and \\( C = 5\\ \\mu\\text{F} \\):\n\n\\[\n\\frac{1}{C_{eq}} = \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{5}{5} = 1\n\\]\n\n\\[\nC_{eq} = 1\\ \\mu\\text{F}\n\\]\n\nFinal answer: (D)"
-}

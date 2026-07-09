@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step according to the rules:  \n\n**Expression:**  \n`not False and False and False or False`  \n\n---\n\n**Step 1 — Apply `not` operators first**  \n`not False` → `True`  \n\nSo the expression becomes:  \n`True and False and False or False`  \n\n---\n\n**Step 2 — Apply `and` operators from left to right**  \n`True and False` → `False`  \n\nNow:  \n`False and False or False`  \n\n`False and False` → `False`  \n\nNow:  \n`False or False`  \n\n---\n\n**Step 3 — Apply `or` operators**  \n`False or False` → `False`  \n\n---\n\n**Final answer:** false"
-}

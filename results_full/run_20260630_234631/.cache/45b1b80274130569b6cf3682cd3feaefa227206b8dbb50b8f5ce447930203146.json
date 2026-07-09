@@ -1,3 +1,0 @@
-{
-  "content": "First, the short circuit level at the busbar for generators in parallel is the sum of their individual short circuit capacities.  \n\nEach alternator:  \nRating = 20 MVA  \nSubtransient reactance \\( X_d'' = 16\\% = 0.16 \\, \\text{p.u.} \\)  \n\nShort circuit MVA for one machine = \\( \\frac{\\text{Base MVA}}{X_d''} = \\frac{20}{0.16} = 125 \\, \\text{MVA} \\)  \n\nFour machines in parallel:  \nTotal short circuit MVA = \\( 4 \\times 125 = 500 \\, \\text{MVA} \\)  \n\nFinal answer: (A)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let's break it down step by step.  \n\nThe expression is:  \n\n**not ( False ) or not not True**  \n\n---\n\n**Step 1: Evaluate innermost parentheses and negations (NOT first)**  \n- `not (False)` → `True`  \n- `not not True` → `not (not True)` → `not (False)` → `True`  \n\nNow the expression is:  \n\n`True or True`  \n\n---\n\n**Step 2: Apply OR**  \n`True or True` → `True`  \n\n---\n\n**Final answer: true**"
-}

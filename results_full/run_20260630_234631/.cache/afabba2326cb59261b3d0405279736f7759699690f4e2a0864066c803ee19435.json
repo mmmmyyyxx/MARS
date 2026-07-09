@@ -1,3 +1,0 @@
-{
-  "content": "The path has four points: M (move to) starts at (62,77), then lines to (17,31), then to (96,39), then back to (62,77).  \nThat’s three line segments connecting four distinct points, but the first and last points are the same, so there are only three unique vertices.  \nThree vertices connected by straight lines form a triangle.  \n\nFinal answer: (J)"
-}

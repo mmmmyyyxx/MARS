@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not not not not not not not True`\n\n---\n\n**Step 1:** Start with the innermost `not` (rightmost operator applied first in logical evaluation).  \n`not True` → `False`\n\n**Step 2:** Apply the next `not` (moving left):  \n`not False` → `True`\n\n**Step 3:** Apply the next `not`:  \n`not True` → `False`\n\n**Step 4:** Apply the next `not`:  \n`not False` → `True`\n\n**Step 5:** Apply the next `not`:  \n`not True` → `False`\n\n**Step 6:** Apply the next `not`:  \n`not False` → `True`\n\n**Step 7:** Apply the last (leftmost) `not`:  \n`not True` → `False`\n\n---\n\n**Final answer:** false"
-}

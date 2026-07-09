@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**False or ( False ) or not True**\n\n1. Evaluate `not True`:  \n   `not True` = **False**  \n\n2. Replace in the expression:  \n   `False or False or False`  \n\n3. Evaluate left to right:  \n   - `False or False` → **False**  \n   - `False or False` → **False**  \n\nSo the whole expression evaluates to **False**.  \n\nFinal answer: false"
-}

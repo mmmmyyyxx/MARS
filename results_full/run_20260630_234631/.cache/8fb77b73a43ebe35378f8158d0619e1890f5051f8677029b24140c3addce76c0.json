@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or False or not True and True**\n\n---\n\n**Step 1: Identify precedence**  \nPrecedence: NOT > AND > OR  \n\nSo `not True` is evaluated first, then `and`, then `or`.\n\n---\n\n**Step 2: Replace `not True`**  \n`not True` = `False`  \n\nExpression becomes:  \n`True or False or False and True`\n\n---\n\n**Step 3: Evaluate `False and True`** (AND before OR)  \n`False and True` = `False`  \n\nExpression becomes:  \n`True or False or False`\n\n---\n\n**Step 4: Evaluate left to right** (OR is associative)  \n`True or False` = `True`  \n`True or False` = `True`  \n\n---\n\n**Final result:** `True`\n\nFinal answer: true"
-}

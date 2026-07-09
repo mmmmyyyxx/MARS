@@ -1,3 +1,0 @@
-{
-  "content": "The ALU (Arithmetic Logic Unit) and the control section of a CPU both use registers for temporary storage of data, addresses, and control signals.  \nBuffers are for temporary data holding during transfers, decoders convert coded inputs to outputs, and accumulators are a type of register specifically for arithmetic results, but the general special-purpose storage locations used by both ALU and control unit are registers.  \n\nFinal answer: (D)"
-}

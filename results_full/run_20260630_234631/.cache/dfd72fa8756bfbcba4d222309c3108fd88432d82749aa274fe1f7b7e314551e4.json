@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\n**Expression:**  \nnot False or ( not not False )  \n\n1. **not False** → True  \n2. **not not False** → not (not False) → not (True) → False  \n3. So the expression becomes: **True or False**  \n4. **True or False** → True  \n\nFinal answer: true"
-}

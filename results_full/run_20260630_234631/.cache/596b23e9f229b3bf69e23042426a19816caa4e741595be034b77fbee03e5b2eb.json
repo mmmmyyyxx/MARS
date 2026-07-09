@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Resolve innermost parentheses**  \n`( not False )` → `not False` means logical NOT applied to `False`, which gives `True`.  \nSo we have:  \n`not not not not True`\n\n**Step 2: Apply NOT operators from right to left** (since NOT is right-associative in logic, but here we can just count carefully).  \n\nLet’s count the `not`s before `True`:  \n`not not not not True` means `not ( not ( not ( not True ) ) )`.\n\n- `not True` = `False`  \n- `not False` = `True`  \n- `not True` = `False`  \n- `not False` = `True`\n\nSo:  \n`not not not not True`  \n= `not not not False`  \n= `not not True`  \n= `not False`  \n= `True`\n\n**Step 3: Final answer**  \n`True`\n\nFinal answer: true"
-}

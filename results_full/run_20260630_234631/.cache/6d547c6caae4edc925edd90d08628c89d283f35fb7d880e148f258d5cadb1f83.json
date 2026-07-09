@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\n- **PLD** stands for Programmable Logic Device — a general term that includes PROM, PAL, PLA, etc.  \n- **PROM** has a fixed AND array (address decoder) and programmable OR array, but it’s used primarily as memory, not generic logic.  \n- **PAL** has a programmable AND array and a fixed OR array.  \n- **PLA** has both programmable AND and programmable OR arrays.  \n\nThe question specifies **fixed AND array** and **programmable OR array**, which matches **PROM** in structure when used as a logic device.  \n\nFinal answer: (B)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nThe expression is:  \n\n**True and not True and True and True**\n\n---\n\n**Step 1: Apply NOT (highest precedence after parentheses)**  \n`not True` = `False`  \n\nExpression becomes:  \n**True and False and True and True**\n\n---\n\n**Step 2: Apply AND from left to right**  \n`True and False` = `False`  \n\nExpression becomes:  \n**False and True and True**\n\n---\n\n**Step 3: Continue AND**  \n`False and True` = `False`  \n\nExpression becomes:  \n**False and True**\n\n---\n\n**Step 4: Final AND**  \n`False and True` = `False`  \n\n---\n\n**Final answer: false**"
-}

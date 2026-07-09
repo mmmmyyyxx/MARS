@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step by step.\n\nExpression:  \n( False or True and not True )\n\n---\n\n**Step 1: Identify innermost parentheses**  \nThere is only one set of parentheses, so we evaluate inside them first.\n\nInside:  \nFalse or True and not True\n\n---\n\n**Step 2: Apply operator precedence: NOT first**  \nnot True = False\n\nNow we have:  \nFalse or True and False\n\n---\n\n**Step 3: Apply AND before OR**  \nTrue and False = False\n\nNow we have:  \nFalse or False\n\n---\n\n**Step 4: Apply OR**  \nFalse or False = False\n\n---\n\nFinal answer: false"
-}

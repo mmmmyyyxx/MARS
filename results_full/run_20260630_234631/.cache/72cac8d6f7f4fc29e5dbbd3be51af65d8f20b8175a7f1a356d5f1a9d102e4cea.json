@@ -1,3 +1,0 @@
-{
-  "content": "The acceleration of an object on an inclined plane with friction is determined by the component of gravity along the incline minus the frictional force.  \nThe component of gravity parallel to the incline is \\( g \\sin \\theta \\).  \nThe normal force is \\( mg \\cos \\theta \\), so the friction force is \\( \\mu mg \\cos \\theta \\).  \nThus, net acceleration along the incline is:  \n\n\\[\na = g \\sin \\theta - \\mu g \\cos \\theta\n\\]\n\\[\na = g (\\sin \\theta - \\mu \\cos \\theta)\n\\]\n\nThis matches option (D).  \n\nFinal answer: (D)"
-}

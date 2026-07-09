@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not not not not not not not False**  \n\nOperator precedence: `not` is right-associative, so we evaluate from right to left.  \n\n1. Start with `False`.  \n2. `not False` → `True`  \n3. `not True` → `False`  \n4. `not False` → `True`  \n5. `not True` → `False`  \n6. `not False` → `True`  \n7. `not True` → `False`  \n\nWe have 7 `not`s, so the final result is `False`.  \n\nFinal answer: false"
-}

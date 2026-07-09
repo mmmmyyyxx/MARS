@@ -1,3 +1,0 @@
-{
-  "content": "Crystal oscillators require external quartz crystals, which are not easily integrated into a monolithic IC.  \nHartley and Wien bridge oscillators typically need inductors or precise resistor-capacitor pairs, which are difficult to fabricate accurately in IC form without external components.  \nRelaxation oscillators (e.g., using a Schmitt trigger and RC network) can be implemented with comparators, digital gates, and on-chip capacitors/resistors, making them relatively easy to fabricate in monolithic ICs.  \n\nFinal answer: (D)"
-}

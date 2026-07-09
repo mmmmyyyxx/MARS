@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down:  \n\n1. **Premise 1:** Carmen is a daughter of Hattie.  \n2. **Premise 2:** Being a niece of Shona is sufficient for not being a daughter of Hattie.  \n   - This means: If someone is a niece of Shona → then they are **not** a daughter of Hattie.  \n\nFrom premise 1, Carmen **is** a daughter of Hattie.  \nIf Carmen were a niece of Shona, then by premise 2 she would not be a daughter of Hattie — but premise 1 says she is.  \nSo Carmen cannot be a niece of Shona.  \n\nThis is deductively valid reasoning (modus tollens in effect: If P then not Q; Q is true; therefore not P).  \n\nFinal answer: valid"
-}

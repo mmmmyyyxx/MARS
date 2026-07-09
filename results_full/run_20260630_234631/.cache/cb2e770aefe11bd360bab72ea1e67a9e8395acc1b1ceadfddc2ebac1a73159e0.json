@@ -1,3 +1,0 @@
-{
-  "content": "In DNA, complementary base pairing follows A–T and G–C.  \nThe given strand is **5′ CGA TTG 3′**.  \nComplementary strand must be antiparallel, so it will run **3′ → 5′** relative to the given strand.  \n\nStep-by-step pairing:  \nGiven: 5′ C G A T T G 3′  \nComplement: 3′ G C T A A C 5′  \n\nNow write complement in 5′ → 3′ direction (reverse it):  \n5′ C A A T C G 3′  \n\nThat matches option **(D)** 5′ CAA TCG 3′.  \n\nFinal answer: (D)"
-}

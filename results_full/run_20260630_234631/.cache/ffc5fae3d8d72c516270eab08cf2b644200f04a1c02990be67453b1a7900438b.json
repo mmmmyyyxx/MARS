@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**( False or not False or False )**\n\n---\n\n**Step 1: Resolve `not False`**  \n`not False` = `True`\n\nExpression becomes:  \n**( False or True or False )**\n\n---\n\n**Step 2: Evaluate `False or True`**  \n`False or True` = `True`\n\nExpression becomes:  \n**( True or False )**\n\n---\n\n**Step 3: Evaluate `True or False`**  \n`True or False` = `True`\n\n---\n\n**Final answer: true**"
-}

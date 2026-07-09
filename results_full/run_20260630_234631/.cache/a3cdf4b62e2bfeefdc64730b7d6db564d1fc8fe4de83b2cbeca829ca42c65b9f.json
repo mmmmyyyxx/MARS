@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nExpression:  \n`not False and not False and not False`\n\n**Step 1 – Evaluate `not False`**  \n`not False` = `True`  \n\nSo the expression becomes:  \n`True and True and True`\n\n**Step 2 – Apply `and` from left to right** (since `and` is left-associative and has the same precedence in this case)  \n`True and True` = `True`  \n`True and True` = `True`  \n\nFinal result: **True**  \n\nFinal answer: true"
-}

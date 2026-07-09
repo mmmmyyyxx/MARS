@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n1. **Innermost parentheses first**:  \n   \\( \\text{True or False} \\)  \n   OR yields True if at least one operand is True.  \n   → \\( \\text{True or False} = \\text{True} \\)\n\n2. **Apply NOT**:  \n   \\( \\text{not (True)} \\)  \n   → \\( \\text{False} \\)\n\n3. **Final value**:  \n   \\( \\text{False} \\)\n\nFinal answer: false"
-}

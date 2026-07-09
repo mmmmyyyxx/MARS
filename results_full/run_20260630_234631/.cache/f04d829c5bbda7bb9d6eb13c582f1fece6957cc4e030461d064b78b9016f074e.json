@@ -1,3 +1,0 @@
-{
-  "content": "An SCR (Silicon Controlled Rectifier) can be protected from overcurrent using circuit breakers (CB) and fuses, which interrupt excessive current.  \nA heat sink protects against overheating but not directly overcurrent.  \nA snubber circuit protects against voltage transients.  \nA voltage clamping device protects against overvoltage, not overcurrent.  \n\nFinal answer: (A)"
-}

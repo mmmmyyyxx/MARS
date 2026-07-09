@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\n**Expression:**  \n`True and not not not not not True`\n\n---\n\n**Step 1 — Handle the `not not not not not True` part**  \nWe start from the innermost `True` and apply each `not` from right to left.\n\n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`\n\nSo `not not not not not True` = `False`.\n\n---\n\n**Step 2 — Combine with `True and ...`**  \n`True and False` → `False`\n\n---\n\n**Final answer:** false"
-}

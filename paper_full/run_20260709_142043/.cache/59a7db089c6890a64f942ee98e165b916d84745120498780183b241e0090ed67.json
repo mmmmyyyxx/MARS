@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly requires the model to output only the final truth value without any intermediate steps or explanations, while still maintaining the step-by-step reasoning internally for accuracy?\n\n2. What specific wording or structure could you add to the prompt to minimize the risk of the model including unnecessary commentary or intermediate results in its final output?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path has these points in order:  \n\n1. (51.00, 18.00)  \n2. (5.00, 62.00)  \n3. (37.00, 63.00)  \n4. (53.00, 71.00)  \n5. (52.00, 55.00)  \n6. (65.00, 31.00)  \n7. Back to (51.00, 18.00)  \n\nCounting the distinct vertices:  \n- There are 7 distinct coordinate pairs before returning to the start.  \n- So the shape has 7 sides.  \n\nA polygon with 7 sides is called a **heptagon**.  \n\nFinal answer: (B)"
-}

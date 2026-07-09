@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Write the expression**  \nExpression: `( not True and False or True )`\n\n**Step 2: Resolve innermost parentheses**  \nThere’s only one set of parentheses, so we evaluate `not True and False` first.\n\n**Step 3: Apply NOT**  \n`not True` = `False`  \nSo `not True and False` becomes `False and False`.\n\n**Step 4: Apply AND**  \n`False and False` = `False`  \nSo now the expression is: `False or True`.\n\n**Step 5: Apply OR**  \n`False or True` = `True`.\n\n**Step 6: Verification with truth tables**  \n\n- `not True` = `False`  \n- `False and False` = `False`  \n- `False or True` = `True`  \n\nAll steps match truth table rules.\n\n**Final answer: true**"
-}

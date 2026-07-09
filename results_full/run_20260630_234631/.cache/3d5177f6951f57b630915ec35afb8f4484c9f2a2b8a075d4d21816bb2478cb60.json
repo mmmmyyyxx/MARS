@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n\\[\n\\text{not not ( False or not True )}\n\\]\n\n**Step 1 – Inner parentheses first**  \nInside: \\( \\text{False or not True} \\)  \n\n- First, \\( \\text{not True} = \\text{False} \\)  \n- So \\( \\text{False or False} = \\text{False} \\)  \n\nNow the expression is:  \n\\[\n\\text{not not False}\n\\]\n\n**Step 2 – Apply NOT from right to left**  \n- \\( \\text{not False} = \\text{True} \\)  \n- \\( \\text{not True} = \\text{False} \\)  \n\nFinal result: **False**  \n\n\\[\n\\boxed{\\text{false}}\n\\]  \n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not not False and not not not False`\n\n---\n\n**Step 1 – Resolve innermost NOTs**  \nWe have no parentheses, so we start with NOT operators from right to left (as per precedence).\n\nFirst `not False` → `True`  \nSo `not not False` becomes `not (not False)` = `not True` → `False`.\n\nSimilarly, `not not not False` = `not not (not False)` = `not not True` = `not (not True)` = `not False` → `True`.\n\nIntermediate:  \n`False and True`\n\n---\n\n**Step 2 – Apply AND**  \n`False and True` → `False`\n\n---\n\n**Step 3 – Apply OR**  \nNo OR operators present, so skip.\n\nFinal truth value: **False**  \n\n---\n\nFinal answer: false"
-}

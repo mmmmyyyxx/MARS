@@ -1,3 +1,0 @@
-{
-  "content": "The path has six distinct points: (60,20), (75,25), (87,12), (82,4), (71,8), and back to (60,20).  \nCounting the vertices: 1: (60,20), 2: (75,25), 3: (87,12), 4: (82,4), 5: (71,8), 6: (60,20) — the last point closes the shape to the first.  \nThat gives 5 unique vertices plus the return to start, so it’s a closed polygon with 5 sides.  \nA 5-sided polygon is a pentagon.  \n\nFinal answer: (G)"
-}

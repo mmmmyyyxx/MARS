@@ -1,3 +1,0 @@
-{
-  "content": "The resistance \\( R \\) of a conductor is given by \\( R = \\rho \\frac{l}{A} \\), where \\( A = \\frac{\\pi d^2}{4} \\).  \nInitially: \\( R = \\rho \\frac{l}{\\pi d^2 / 4} \\).  \n\nIf diameter is halved (\\( d' = d/2 \\)), area becomes \\( A' = \\pi (d/2)^2 / 4 = \\pi d^2 / 16 \\), so \\( A' = A/4 \\).  \nLength is doubled (\\( l' = 2l \\)).  \n\nNew resistance:  \n\\[\nR' = \\rho \\frac{2l}{A/4} = \\rho \\frac{2l}{A} \\times 4 = 8 \\times \\rho \\frac{l}{A} = 8R\n\\]  \n\nFinal answer: (D)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True and False or ( not False )**\n\n---\n\n**Step 1 — Resolve parentheses (innermost first)**  \nInside parentheses: `not False`  \nTruth table principle: `not False = True`  \n\nExpression becomes:  \n**True and False or True**\n\n---\n\n**Step 2 — Apply AND operators**  \n`True and False`  \nTruth table: `True and False = False`  \n\nExpression becomes:  \n**False or True**\n\n---\n\n**Step 3 — Apply OR operators**  \n`False or True`  \nTruth table: `False or True = True`  \n\n---\n\n**Final answer: true**"
-}

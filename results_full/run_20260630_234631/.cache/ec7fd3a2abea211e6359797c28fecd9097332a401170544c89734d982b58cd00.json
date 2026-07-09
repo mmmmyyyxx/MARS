@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n**not False and not True and not False**  \n\nOperator precedence: **NOT** first, then **AND**.  \n\n1. Apply **NOT** operations:  \n   - not False → True  \n   - not True → False  \n   - not False → True  \n\nSo the expression becomes:  \n**True and False and True**  \n\n2. Evaluate **AND** from left to right (AND is associative):  \n   - True and False → False  \n   - False and True → False  \n\nFinal result: **False**  \n\nFinal answer: false"
-}

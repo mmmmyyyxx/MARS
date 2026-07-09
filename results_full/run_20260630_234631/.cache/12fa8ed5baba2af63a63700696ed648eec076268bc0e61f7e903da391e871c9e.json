@@ -1,3 +1,0 @@
-{
-  "content": "The full-scale reading is 100 V, and the guaranteed accuracy is 2% of full scale, so the maximum possible error is:  \n\n\\[\n\\text{Error} = 2\\% \\times 100 = 2 \\text{ V}\n\\]\n\nWhen measuring 75 V, the limiting error as a percentage of the reading is:  \n\n\\[\n\\frac{2}{75} \\times 100\\% \\approx 2.666\\%\n\\]\n\nThat matches 2.66% in the options.  \n\nFinal answer: (B)"
-}

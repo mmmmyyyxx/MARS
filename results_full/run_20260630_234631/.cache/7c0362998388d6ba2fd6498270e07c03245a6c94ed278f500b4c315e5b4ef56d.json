@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the innermost parentheses and negations:  \n- `( True )` evaluates to `True`.  \n- `not ( True )` evaluates to `False`.  \n\nNow the expression becomes:  \n`( ( False ) )` → `False`.  \n\nFinal answer: false"
-}

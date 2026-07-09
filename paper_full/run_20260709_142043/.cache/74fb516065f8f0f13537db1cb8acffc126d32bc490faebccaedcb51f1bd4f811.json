@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of the current prompt might lead to incorrect shape identification if the SVG path contains repeated coordinates that don't create distinct vertices?\n\nHow could you modify the prompt to ensure the model consistently distinguishes between shapes with similar vertex counts but different geometric properties?"
+}

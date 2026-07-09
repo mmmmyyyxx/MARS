@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n`not ( True ) and ( True )`\n\n**Step 1:** Handle parentheses and `not` (highest precedence after parentheses).  \n`not ( True )` → `False`  \n\nNow the expression becomes:  \n`False and True`  \n\n**Step 2:** Apply `and` operator.  \n`False and True` → `False`  \n\n**Final result:** `False`  \n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( False or ( False ) )`\n\n**Step 1 — Resolve innermost parentheses**  \nInside the outer parentheses, we have `False or (False)`.  \nThe `(False)` is just `False`.  \nSo: `False or False` → `False`.\n\n**Step 2 — Apply NOT**  \nNow we have `not (False)` → `True`.\n\n**Step 3 — No AND or OR left**  \nWe’re done.\n\nFinal answer: true"
-}

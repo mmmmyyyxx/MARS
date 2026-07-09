@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \nTrue and not False or False and False\n\n**Step 1 – Handle NOT (highest precedence)**  \nnot False → True  \n\nExpression becomes:  \nTrue and True or False and False\n\n**Step 2 – Handle AND (next precedence)**  \nTrue and True → True  \nFalse and False → False  \n\nExpression becomes:  \nTrue or False\n\n**Step 3 – Handle OR (lowest precedence)**  \nTrue or False → True\n\nFinal answer: true"
-}

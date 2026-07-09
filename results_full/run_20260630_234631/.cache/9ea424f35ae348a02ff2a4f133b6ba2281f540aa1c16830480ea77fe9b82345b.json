@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:\n\n- It starts at `M 22.62,15.54` (move to point).\n- Then `L 38.01,2.85` (line to point).\n- Then `A 19.95,19.95 34.02 0,1 41.62,21.64` — this is an elliptical arc with:\n  - rx = 19.95, ry = 19.95 (so it’s a circular arc, since rx = ry)\n  - x-axis rotation = 34.02°\n  - large-arc-flag = 0\n  - sweep-flag = 1 (positive angle direction)\n  - end point = (41.62,21.64)\n- Then `L 22.62,15.54` (line back to start).\n\nSo the path is:  \nLine → Arc → Line back to start.  \nThat’s a closed shape with two straight sides and one arc.\n\nA closed shape with two equal straight sides (from start to arc start, and arc end back to start) and one arc is a **circular sector** — a pie slice of a circle.\n\nFinal answer: (I)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate the expression:  \n( not False ) or ( False )  \n\n1. **not False** = True  \n2. So the expression becomes: True or False  \n3. **True or False** = True  \n\nFinal answer: true"
-}

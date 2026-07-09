@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n```\nnot not not False and True or False\n```\n\n---\n\n**Step 1: Handle parentheses and negations (NOT operations)**  \nPrecedence: NOT > AND > OR.  \n\nFirst, `not False` = `True`.  \n\nNow:  \n`not not True and True or False`  \n\nNext: `not True` = `False`.  \n\nNow:  \n`not False and True or False`  \n\nNext: `not False` = `True`.  \n\nSo after all NOTs:  \n`True and True or False`  \n\n---\n\n**Step 2: Apply AND**  \n`True and True` = `True`.  \n\nNow:  \n`True or False`  \n\n---\n\n**Step 3: Apply OR**  \n`True or False` = `True`.  \n\n---\n\n**Final answer: true**  \n\nFinal answer: true"
-}

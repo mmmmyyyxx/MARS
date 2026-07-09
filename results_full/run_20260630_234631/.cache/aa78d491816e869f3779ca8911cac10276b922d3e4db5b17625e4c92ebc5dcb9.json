@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the path commands:  \n\n- `M 73.43,27.01` — move to starting point  \n- `L 6.90,79.25` — line to point 2  \n- `L 49.09,84.71` — line to point 3  \n- `L 69.21,97.37` — line to point 4  \n- `L 69.96,76.08` — line to point 5  \n- `M 69.96,76.08` — move to point 5 again (likely closing part of shape)  \n- `L 90.27,46.02` — line to point 6  \n- `L 73.43,27.01` — line back to start  \n\nCounting distinct vertices in order:  \n1. (73.43,27.01)  \n2. (6.90,79.25)  \n3. (49.09,84.71)  \n4. (69.21,97.37)  \n5. (69.96,76.08)  \n6. (90.27,46.02)  \nThen back to 1.  \n\nThat’s 6 vertices → hexagon.  \n\nFinal answer: (C)"
-}

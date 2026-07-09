@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence: **NOT** first, then **AND**, then **OR**.\n\nExpression:  \n`False or not ( True ) and False`\n\n1. **NOT** has highest precedence:  \n`not ( True )` → `False`  \nSo the expression becomes:  \n`False or False and False`\n\n2. **AND** has higher precedence than **OR**:  \n`False and False` → `False`  \nSo the expression becomes:  \n`False or False`\n\n3. **OR**:  \n`False or False` → `False`\n\nFinal answer: false"
-}

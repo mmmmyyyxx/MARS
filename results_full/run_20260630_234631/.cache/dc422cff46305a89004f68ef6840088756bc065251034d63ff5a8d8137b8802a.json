@@ -1,3 +1,0 @@
-{
-  "content": "A closed-loop control system uses feedback, meaning the output affects the input to regulate system behavior.  \nAn open-loop system has no feedback; the output does not influence the input.  \nThe question states: \"The output of the system has an effect upon the input quantity\" — this is the definition of feedback, so it must be a closed-loop system.  \nOption (A) is incorrect because open-loop systems lack this feature.  \nOption (C) is incorrect because it cannot be open-loop.  \nOption (D) is incorrect because closed-loop is the correct match.  \n\nFinal answer: (B)"
-}

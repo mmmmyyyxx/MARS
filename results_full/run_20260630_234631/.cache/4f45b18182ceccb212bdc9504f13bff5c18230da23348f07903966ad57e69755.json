@@ -1,3 +1,0 @@
-{
-  "content": "A truth table lists all possible combinations of inputs and the corresponding output.  \nFor \\( n \\) inputs, the number of possible input combinations is \\( 2^n \\).  \nHere \\( n = 3 \\), so \\( 2^3 = 8 \\) combinations.  \nThus, the truth table will have 8 rows (entries).  \n\nFinal answer: (C)"
-}

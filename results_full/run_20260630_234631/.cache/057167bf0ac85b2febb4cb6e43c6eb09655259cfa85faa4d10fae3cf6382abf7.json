@@ -1,3 +1,0 @@
-{
-  "content": "Voltage clamping devices (like Zener diodes, MOVs, or TVS diodes) operate by becoming highly conductive when the voltage exceeds a certain threshold.  \nUnder normal voltage, they present high impedance to avoid affecting the circuit.  \nUnder overvoltage conditions, they \"clamp\" the voltage by drastically reducing their impedance to shunt excess current away from the protected circuit.  \n\nThus, during overvoltage, the impedance offered is **low**.  \n\nFinal answer: (B)"
-}

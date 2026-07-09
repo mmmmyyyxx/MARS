@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n**False or not not True or not False**\n\n---\n\n**Step 1: Handle parentheses and negations from left to right**  \nNo parentheses, so apply **NOT** operators in order of precedence.\n\n- `not True` → False  \n- `not False` → True  \n\nBut we have `not not True` first:  \n`not True` → False  \n`not False` → True  \n\nSo `not not True` = True.\n\nNow substitute back:  \n**False or True or True**\n\n---\n\n**Step 2: Apply OR from left to right**  \n- `False or True` → True  \n- `True or True` → True  \n\n---\n\n**Final answer: true**"
-}

@@ -1,0 +1,3 @@
+{
+  "content": "What specific grammatical or contextual cues in the sentence would help you decide whether the pronoun refers unambiguously to one antecedent, and how might the absence of such cues lead you to choose \"ambiguous\"?\n\nHow could you refine the output format instructions to ensure the model consistently produces only the required letter choice without any additional reasoning, while still guiding it to weigh grammatical and contextual evidence systematically?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let's extract the logical structure:\n\n1. Every occasional purchaser of Matrix shampoo is an occasional purchaser of Organix Hair shampoo.  \n   → If someone is a Matrix purchaser (M), then they are an Organix purchaser (O).  \n   Symbolic: **If M then O**\n\n2. Linda is an occasional purchaser of Organix Hair shampoo.  \n   → O(Linda)\n\nConclusion: Linda is an occasional purchaser of Matrix shampoo.  \n→ M(Linda)\n\nSymbolic form:  \nPremise 1: If M then O  \nPremise 2: O  \nConclusion: M  \n\nThis matches the pattern:  \nIf P then Q  \nQ  \nTherefore P  \n\nThat is **affirming the consequent**, which is **invalid** because knowing Q is true does not guarantee P is true — there could be other reasons for Q.\n\n**Final answer: invalid**"
-}

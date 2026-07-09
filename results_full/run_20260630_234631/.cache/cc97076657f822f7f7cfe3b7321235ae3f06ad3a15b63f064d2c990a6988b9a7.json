@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n\n**not not True and True and not True**\n\n---\n\n**Step 1 – Apply NOT operators from left to right according to precedence**  \n- `not not True` → `not (not True)` → `not False` → **True**  \n\nSo the expression becomes:  \n**True and True and not True**\n\n---\n\n**Step 2 – Evaluate `not True`**  \n`not True` → **False**  \n\nExpression now:  \n**True and True and False**\n\n---\n\n**Step 3 – Apply AND from left to right**  \n`True and True` → **True**  \n`True and False` → **False**  \n\n---\n\nFinal result: **False**  \n\nFinal answer: false"
-}

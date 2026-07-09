@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step (internally) without showing the steps in the final output.  \n\nThe expression is:  \n\nTrue or not not ( not False )  \n\n1. **Innermost parentheses**: not False → True  \n2. **First not**: not True → False  \n3. **Second not**: not False → True  \n4. **Outermost**: True or True → True  \n\nFinal answer: true"
-}

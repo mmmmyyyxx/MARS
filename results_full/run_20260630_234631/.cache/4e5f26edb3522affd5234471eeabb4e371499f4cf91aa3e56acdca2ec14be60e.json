@@ -1,3 +1,0 @@
-{
-  "content": "First, calculate the total luminous flux needed for the room.  \n\nIlluminance \\( E \\) in lux is lumens per square meter:  \n\\[\nE = \\frac{\\text{Total luminous flux (lumens)}}{\\text{Area (m}^2\\text{)}}\n\\]  \nArea = \\( 4 \\times 3 = 12 \\ \\text{m}^2 \\)  \n\\[\n\\text{Total luminous flux} = E \\times \\text{Area} = 50 \\times 12 = 600 \\ \\text{lm}\n\\]  \n\nEach lamp produces 300 lm, so:  \n\\[\n\\text{Number of lamps} = \\frac{600}{300} = 2\n\\]  \n\nCheck: 2 lamps → total flux = \\( 2 \\times 300 = 600 \\ \\text{lm} \\) → illuminance = \\( 600 / 12 = 50 \\ \\text{lux} \\).  \n\nNo contradictions with energy conservation or dimensional errors; illuminance is correctly averaged over the area.  \n\nFinal answer: (A)"
-}

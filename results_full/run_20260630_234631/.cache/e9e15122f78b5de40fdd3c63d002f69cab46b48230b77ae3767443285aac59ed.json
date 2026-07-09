@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \nnot ( False or False and False )  \n\n**Step 1: Apply operator precedence**  \nIn Boolean logic, `and` has higher precedence than `or`.  \nSo `False or False and False` means `False or (False and False)`.  \n\n**Step 2: Evaluate `False and False`**  \n`False and False` = `False`.  \n\n**Step 3: Evaluate `False or False`**  \n`False or False` = `False`.  \n\n**Step 4: Apply the `not`**  \nnot (False) = `True`.  \n\nFinal answer: True"
-}

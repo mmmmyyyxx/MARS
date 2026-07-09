@@ -1,3 +1,0 @@
-{
-  "content": "Total steps: 5\nStep 1: Create a clear instruction that defines formal fallacies and specifies the binary classification task (valid/invalid)\nStep 2: Include concrete examples of valid and invalid arguments with explanations to establish patterns\nStep 3: Add explicit output formatting requirements to ensure consistent \"valid\" or \"invalid\" responses\nStep 4: Incorporate reasoning guidance asking the model to identify the specific fallacy type when applicable\nStep 5: Implement error prevention by addressing common confusion points between formal and informal fallacies"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( True and not True and True )`\n\n---\n\n**Step 1: Handle parentheses and negation (NOT)**  \nInside the parentheses: `True and not True and True`  \nFirst, `not True` = `False`\n\nSo now:  \n`True and False and True`\n\n---\n\n**Step 2: Apply AND from left to right**  \nAND is associative, so we evaluate left-to-right:  \n`True and False` → `False`  \nThen `False and True` → `False`\n\n---\n\n**Step 3: Final value**  \nThe expression inside parentheses evaluates to `False`.\n\n---\n\nFinal answer: false"
-}

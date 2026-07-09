@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step by step according to the order of operations.  \n\nExpression:  \n`not ( True ) and ( False )`\n\n1. **Resolve parentheses from innermost to outermost**  \n   Inside parentheses: `(True)` → `True`, `(False)` → `False`.  \n   Expression becomes: `not True and False`\n\n2. **Apply NOT operators**  \n   `not True` → `False`  \n   Expression becomes: `False and False`\n\n3. **Apply AND operators**  \n   `False and False` → `False`\n\n4. **Apply OR operators**  \n   None present.\n\nFinal truth value: **False**  \n\nFinal answer: false"
-}

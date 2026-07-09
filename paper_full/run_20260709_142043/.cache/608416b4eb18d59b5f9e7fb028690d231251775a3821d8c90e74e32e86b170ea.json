@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to make assumptions about the shape before fully tracing the path commands?\n\nHow could the prompt be restructured to encourage the model to first map the exact sequence of coordinates before attempting any geometric classification?"
+}

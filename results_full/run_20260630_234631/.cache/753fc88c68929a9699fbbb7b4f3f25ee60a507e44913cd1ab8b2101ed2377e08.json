@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**False or ( False or not False )**\n\n---\n\n**Step 1:** Handle the innermost parentheses first.  \nInside: `False or not False`\n\n- `not False` = `True` (NOT has highest precedence)  \nSo: `False or True` = `True` (OR rule: if either is True, result is True)\n\nNow the expression becomes:  \n**False or ( True )**\n\n---\n\n**Step 2:** Evaluate `False or True`  \n= `True` (since OR gives True if at least one operand is True)\n\n---\n\n**Final answer: true**"
-}

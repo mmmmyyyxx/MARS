@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( not not not True and True )`\n\n---\n\n**Step 1: Resolve `not not not True`**  \nPrecedence: NOT is right-associative, so `not not not True` = `not (not (not True))`.\n\n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`\n\nSo `not not not True` = `False`.\n\n---\n\n**Step 2: Apply AND**  \n`(False and True)` → `False`\n\n---\n\n**Step 3: Final result**  \n`False`\n\n---\n\nFinal answer: false"
-}

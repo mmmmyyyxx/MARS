@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can the current prompt be improved to ensure the model correctly handles expressions with multiple nested parentheses and mixed operators without explicit precedence rules, while maintaining clarity in step-by-step evaluation?\n\nSecond question: What specific modifications could make the prompt more robust for edge cases, such as expressions with redundant parentheses or unconventional formatting, while still guiding the model to produce a step-by-step evaluation?"
+}

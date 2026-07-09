@@ -1,3 +1,0 @@
-{
-  "content": "In force-current analogy:  \n- Force (F) is analogous to current (I).  \n- Velocity (v) is analogous to voltage (V).  \n- Dash-pot (damper) in mechanical systems: \\( F = B v \\), where \\( B \\) is damping coefficient.  \n- In electrical terms, \\( I = G V \\) (Ohm’s law form), where \\( G \\) is conductance.  \n- So \\( B \\) (damping coefficient) is analogous to conductance \\( G \\).  \n\nFinal answer: (B)"
-}

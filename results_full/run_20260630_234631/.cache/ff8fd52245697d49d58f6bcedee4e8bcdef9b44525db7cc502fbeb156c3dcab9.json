@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not False and False or True or False**\n\n---\n\n**Step 1: Handle `not False`**  \n`not False` = `True`  \n\nSo the expression becomes:  \n**True and False or True or False**\n\n---\n\n**Step 2: Handle `True and False`**  \n`True and False` = `False`  \n\nExpression becomes:  \n**False or True or False**\n\n---\n\n**Step 3: Evaluate left to right (OR is left-associative in standard logic)**  \n`False or True` = `True`  \n\nExpression becomes:  \n**True or False**\n\n---\n\n**Step 4: Evaluate `True or False`**  \n`True or False` = `True`  \n\n---\n\n**Final answer: true**"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "MROM (Mask ROM) is programmed during the manufacturing process using a mask, so it is fixed at the time of production.  \nPROM is programmable by the user but only once.  \nEPROM and EEPROM are both erasable and reprogrammable by the user.  \n\nThus, the ROM programmed during manufacturing is MROM.  \n\nFinal answer: (A)"
-}

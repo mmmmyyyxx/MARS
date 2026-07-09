@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not False or not not not not True**\n\n---\n\n**Step 1: Evaluate `not False`**  \n`not False` = `True`\n\nSo far: `True or not not not not True`\n\n---\n\n**Step 2: Evaluate `not not not not True`**  \n\n- `not True` = `False`  \n- `not False` = `True`  \n- `not True` = `False`  \n- `not False` = `True`  \n\nSo `not not not not True` = `True`\n\n---\n\n**Step 3: Substitute back**  \nExpression becomes: `True or True`\n\n---\n\n**Step 4: Evaluate `True or True`**  \n`True or True` = `True`\n\n---\n\nFinal answer: true"
-}

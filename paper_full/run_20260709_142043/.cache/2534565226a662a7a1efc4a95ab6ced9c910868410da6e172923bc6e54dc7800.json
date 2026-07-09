@@ -1,0 +1,3 @@
+{
+  "content": "What elements in your current prompt might be too specific or restrictive for guiding the model toward recognizing humor in a one-character edit?\n\nConsidering the task's goal of maximizing correctness, how could you structure the prompt to encourage the model to evaluate options based on both humor and the minimal edit constraint, without overly prescribing the type of humor?"
+}

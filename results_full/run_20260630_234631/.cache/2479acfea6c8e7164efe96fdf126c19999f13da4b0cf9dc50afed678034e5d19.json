@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step according to operator precedence (NOT first, then OR).\n\nExpression:  \n`( True or False ) or not True`\n\n1. **Evaluate `not True`**  \n   `not True` = `False`\n\n2. **Evaluate `( True or False )`**  \n   `True or False` = `True`\n\n3. **Combine results**  \n   `True or False` = `True`\n\nFinal answer: true"
-}

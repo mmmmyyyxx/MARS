@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path:  \n`M 93.00,66.00 L 40.00,65.00 L 20.00,19.00 L 93.00,66.00`  \n\n- `M` moves to (93, 66)  \n- `L` draws a line to (40, 65)  \n- `L` draws a line to (20, 19)  \n- `L` draws a line back to (93, 66)  \n\nThat’s **three distinct points** plus returning to the start:  \n1. (93, 66)  \n2. (40, 65)  \n3. (20, 19)  \n4. back to (93, 66)  \n\nSo the shape has **3 vertices** — it’s a triangle.  \n\nFinal answer: (J)"
-}

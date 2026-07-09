@@ -1,3 +1,0 @@
-{
-  "content": "Let’s trace the path coordinates step by step:\n\n1. Start at (64, 63)  \n2. Line to (44, 63)  \n3. Line to (44, 50)  \n4. Line to (64, 50)  \n5. Line to (64, 37)  \n6. Line to (83, 57)  \n7. Line to (64, 76)  \n8. Line to (64, 63) — closing back to start.\n\nList of vertices in order:  \n(64,63) → (44,63) → (44,50) → (64,50) → (64,37) → (83,57) → (64,76) → (64,63)\n\nThat’s 7 distinct line segments, but the first and last vertex are the same (closed shape).  \nNumber of unique vertices before closing: (64,63), (44,63), (44,50), (64,50), (64,37), (83,57), (64,76) → 7 vertices.\n\nA 7-sided polygon is a heptagon.\n\nFinal answer: (B)"
-}

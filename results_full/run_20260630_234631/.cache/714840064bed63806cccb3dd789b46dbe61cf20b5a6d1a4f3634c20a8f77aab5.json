@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step with the given operator precedence: **NOT** first, then **AND**, then **OR**.\n\nExpression:  \n`False or ( not False ) and True`\n\n1. **NOT** first:  \n`not False` → `True`  \nSo the expression becomes:  \n`False or (True) and True`\n\n2. **AND** next:  \n`True and True` → `True`  \nSo the expression becomes:  \n`False or True`\n\n3. **OR** last:  \n`False or True` → `True`\n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "The Barkhausen criterion requires two conditions for sustained oscillations:  \n1. The magnitude of the loop gain must be exactly 1 at the oscillation frequency (|Aβ| = 1).  \n2. The phase shift around the loop must be 0° or a multiple of 360° (i.e., positive feedback).  \n\nOption (A) is incomplete because it ignores the phase requirement.  \nOption (B) is incorrect because gain < 1 would cause oscillations to decay.  \nOption (C) is incomplete because it ignores the gain requirement.  \nOption (D) correctly combines both necessary conditions.  \n\nFinal answer: (D)"
-}

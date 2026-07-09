@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n\\[\n(\\text{not False} \\ \\text{or} \\ \\text{False} \\ \\text{and} \\ \\text{True})\n\\]\n\n**Step 1: Handle parentheses first**  \nInside parentheses:  \n\\[\n\\text{not False} = \\text{True}\n\\]  \nSo the expression becomes:  \n\\[\n\\text{True} \\ \\text{or} \\ (\\text{False} \\ \\text{and} \\ \\text{True})\n\\]\n\n**Step 2: Apply AND before OR**  \n\\[\n\\text{False} \\ \\text{and} \\ \\text{True} = \\text{False}\n\\]  \nSo now:  \n\\[\n\\text{True} \\ \\text{or} \\ \\text{False}\n\\]\n\n**Step 3: Apply OR**  \n\\[\n\\text{True} \\ \\text{or} \\ \\text{False} = \\text{True}\n\\]\n\nFinal answer: true"
-}

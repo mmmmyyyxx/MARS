@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the rules: parentheses first, then NOT, then AND, then OR.\n\n**Expression:**  \n`False and not False and ( False )`\n\n---\n\n**Step 1: Resolve parentheses**  \n`( False )` is just `False`.  \nExpression becomes:  \n`False and not False and False`\n\n---\n\n**Step 2: Apply NOT operators**  \n`not False` = `True`  \nExpression becomes:  \n`False and True and False`\n\n---\n\n**Step 3: Apply AND operators (left to right)**  \nFirst: `False and True` = `False`  \nExpression becomes:  \n`False and False`  \n\nSecond: `False and False` = `False`\n\n---\n\n**Step 4: No OR operators**  \nFinal result is `False`.\n\n---\n\n**Final answer: false**"
-}

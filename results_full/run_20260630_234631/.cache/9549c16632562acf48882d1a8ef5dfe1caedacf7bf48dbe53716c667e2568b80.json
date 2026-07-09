@@ -1,3 +1,0 @@
-{
-  "content": "The ratio of frequencies is given by the number of tangencies:  \n\n\\[\n\\frac{f_v}{f_h} = \\frac{\\text{horizontal tangencies}}{\\text{vertical tangencies}} = \\frac{5}{2}\n\\]\n\nGiven \\( f_h = 100 \\ \\text{Hz} \\):\n\n\\[\nf_v = \\frac{5}{2} \\times 100 = 250 \\ \\text{Hz}\n\\]\n\nFinal answer: (B)"
-}

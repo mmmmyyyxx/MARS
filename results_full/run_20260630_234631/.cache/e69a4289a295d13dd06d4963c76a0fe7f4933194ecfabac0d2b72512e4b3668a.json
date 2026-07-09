@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Identify the innermost parentheses**  \nExpression: `False or ( True and not True )`  \nInside parentheses: `True and not True`\n\n**Step 2: Apply NOT**  \n`not True = False`  \nSo inside parentheses becomes: `True and False`\n\n**Step 3: Apply AND**  \n`True and False = False` (AND is true only if both are true)  \nSo now the expression is: `False or False`\n\n**Step 4: Apply OR**  \n`False or False = False` (OR is true if at least one is true; here both are false)\n\n**Final answer: false**"
-}

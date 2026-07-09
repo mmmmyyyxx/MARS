@@ -1,3 +1,0 @@
-{
-  "content": "A three-state buffer has three output states: high (logic 1), low (logic 0), and high-impedance (float).  \nBoth (A) and (B) describe these states, just using different notation.  \n(C) correctly captures that both are valid representations.  \n\nFinal answer: (C)"
-}

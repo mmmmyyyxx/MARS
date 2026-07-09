@@ -1,3 +1,0 @@
-{
-  "content": "The Wien bridge oscillator uses a lead-lag network (RC network) in the feedback path.  \nFor oscillations to occur, the loop gain must satisfy the Barkhausen criterion.  \nThe feedback network’s transfer function at the resonant frequency \\( f = \\frac{1}{2\\pi RC} \\) gives a phase shift of 0° and a feedback factor \\( \\beta = \\frac{1}{3} \\).  \nThus, the amplifier must have a gain of 3 to make \\( A\\beta = 1 \\).  \n\nFinal answer: (A)"
-}

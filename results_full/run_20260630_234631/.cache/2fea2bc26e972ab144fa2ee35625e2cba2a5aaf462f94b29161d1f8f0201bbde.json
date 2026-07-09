@@ -1,3 +1,0 @@
-{
-  "content": "The short circuit MVA for one alternator is \\( \\frac{20}{0.16} = 125 \\text{ MVA} \\).  \nFor four identical alternators in parallel, the total short circuit MVA is \\( 4 \\times 125 = 500 \\text{ MVA} \\).  \n\nFinal answer: (A)"
-}

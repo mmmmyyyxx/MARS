@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step-by-step according to precedence rules (NOT first, then AND, then OR).\n\nExpression:  \n**not True or not False and not True**\n\n---\n\n**Step 1: Resolve all NOT operations**  \n- not True → False  \n- not False → True  \n- not True → False  \n\nSo the expression becomes:  \n**False or True and False**\n\n---\n\n**Step 2: Apply AND (higher precedence than OR)**  \nTrue and False → False  \n\nExpression becomes:  \n**False or False**\n\n---\n\n**Step 3: Apply OR**  \nFalse or False → False  \n\n---\n\nFinal answer: false"
-}

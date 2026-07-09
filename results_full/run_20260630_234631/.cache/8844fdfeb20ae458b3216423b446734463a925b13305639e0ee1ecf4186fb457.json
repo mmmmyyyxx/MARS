@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis question effectively targets a key challenge in disambiguation tasks—distinguishing between superficially plausible distractors and the genuinely correct answer. By prompting the model to define \"resolving the ambiguity,\" it encourages deeper analysis of semantic nuances and contextual cues, which directly supports the goal of improving accuracy in BIG-Bench Hard questions. The question is Socratic as it guides the model toward self-reflection on its reasoning process rather than requesting a procedural fix."
-}

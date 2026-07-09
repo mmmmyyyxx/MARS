@@ -1,0 +1,14 @@
+official_compatible: true
+agents: Manager,UserProxy,Planner,Teacher,Critic,Student,Target
+planner_enabled: True
+socratic_enabled: True
+critic_enabled: True
+max_critic_revisions: 1
+early_stop_delta: 0.01
+initial_prompt_source: provided
+planner_strict_mode: True
+max_answer_retries: 5
+legacy_target_prompt_mode: True
+target_call_count_limit: 10
+target_call_count: 2
+runtime_seconds: 562.7178

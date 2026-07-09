@@ -1,3 +1,0 @@
-{
-  "content": "In a DC machine, the number of parallel paths in the armature winding depends on the type of winding:  \n\n- **Lap winding**: Number of parallel paths = number of poles.  \n- **Wave winding**: Number of parallel paths = 2, regardless of the number of poles (except for some special multiplex windings).  \n\nGiven:  \n- 6 poles  \n- Wave winding  \n\nSo, parallel paths = 2.  \n\nFinal answer: (C)"
-}

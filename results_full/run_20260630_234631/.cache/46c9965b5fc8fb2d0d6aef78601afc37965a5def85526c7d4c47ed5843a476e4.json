@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step-by-step according to the rules.\n\nExpression:  \n`True and not not ( not False )`\n\n---\n\n**Step 1 — Innermost parentheses**  \nInside parentheses: `not False`  \n`not False` = `True`  \nIntermediate: `True and not not (True)`\n\n---\n\n**Step 2 — Apply NOT operators from right to left (order matters for consecutive NOTs)**  \nFirst NOT after parentheses: `not True` = `False`  \nIntermediate: `True and not False`\n\nNext NOT: `not False` = `True`  \nIntermediate: `True and True`\n\n---\n\n**Step 3 — Apply AND**  \n`True and True` = `True`\n\n---\n\nFinal truth value: `True`\n\n---\n\nFinal answer: true"
-}

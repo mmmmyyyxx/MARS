@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\n1. **First premise**: Everyone who is a son of Andres is a son of Bruce.  \n   This means:  \n   If someone is a son of Andres → he is a son of Bruce.  \n   In logical form:  \n   \\( S_A \\rightarrow S_B \\)  \n\n2. **Second premise**: Jeffrey is not a son of Bruce.  \n   \\( \\neg S_B(J) \\)  \n\n3. **Conclusion**: It is false that Jeffrey is a son of Andres.  \n   \\( \\neg S_A(J) \\)  \n\n---\n\n**Reasoning**:  \nFrom \\( S_A \\rightarrow S_B \\), we can take the contrapositive:  \n\\( \\neg S_B \\rightarrow \\neg S_A \\).  \n\nThe second premise says \\( \\neg S_B(J) \\).  \nBy modus tollens, we can conclude \\( \\neg S_A(J) \\).  \n\nThis is a deductively valid inference.  \n\n---\n\nFinal answer: valid"
-}

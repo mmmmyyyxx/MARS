@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression: `not True and ( False ) and False`  \n\n1. `not True` → `False`  \n2. So the expression becomes: `False and False and False`  \n3. `False and False` → `False`  \n4. `False and False` → `False`  \n\nFinal result: **False**  \n\nFinal answer: false"
-}

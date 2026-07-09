@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step, following operator precedence (NOT before OR):\n\n1. **Innermost `not True`**:  \n   `not True` → `False`\n\n2. **Outer `not` on that result**:  \n   `not False` → `True`\n\n   So `(not not True)` → `True`\n\n3. **Evaluate `not False`**:  \n   `not False` → `True`\n\n4. **Combine with OR**:  \n   `True or True` → `True`\n\nFinal answer: true"
-}

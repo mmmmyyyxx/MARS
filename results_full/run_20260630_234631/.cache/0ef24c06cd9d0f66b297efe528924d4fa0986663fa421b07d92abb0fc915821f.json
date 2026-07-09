@@ -1,3 +1,0 @@
-{
-  "content": "In the Intel 8085A microprocessor, the first machine cycle of any instruction is always the **op-code fetch cycle**, during which the processor fetches the instruction opcode from memory.  \n\nFinal answer: (A)"
-}

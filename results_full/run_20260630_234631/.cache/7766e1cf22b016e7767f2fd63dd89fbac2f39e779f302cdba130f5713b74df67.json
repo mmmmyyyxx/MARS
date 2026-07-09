@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:  \n**False and False and False or not False**\n\n---\n\n**Step 1 – Identify precedence order**  \nPrecedence: NOT > AND > OR\n\nSo first handle `not False`.\n\n`not False` = `True`\n\nExpression becomes:  \nFalse and False and False or True\n\n---\n\n**Step 2 – AND is left-associative**  \nEvaluate `False and False` first:  \nFalse and False = False\n\nNow:  \nFalse and False or True  \n→ (False and False) = False  \nSo: False or True\n\n---\n\n**Step 3 – Evaluate OR**  \nFalse or True = True\n\n---\n\n**Final answer: true**"
-}

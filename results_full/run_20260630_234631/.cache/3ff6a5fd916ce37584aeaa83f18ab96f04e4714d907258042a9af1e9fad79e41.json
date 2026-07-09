@@ -1,3 +1,0 @@
-{
-  "content": "The path draws a closed shape with four vertices: (99,97), (10,97), (10,49), (99,49).  \nThese points form a quadrilateral with all angles 90° (since lines are vertical/horizontal) and opposite sides equal in length.  \nThis matches the definition of a rectangle.  \n\nFinal answer: (H)"
-}

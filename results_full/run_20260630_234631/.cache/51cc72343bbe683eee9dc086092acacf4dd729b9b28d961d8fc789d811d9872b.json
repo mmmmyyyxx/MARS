@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nExpression:  \n`not not not False and True or False`\n\n1. **Innermost `not False`**:  \n   `not False` = `True`\n\n2. **Next `not True`**:  \n   `not True` = `False`\n\n3. **Next `not False`**:  \n   `not False` = `True`\n\nSo `not not not False` = `True`.\n\n4. **Now `True and True`**:  \n   `True and True` = `True`\n\n5. **Now `True or False`**:  \n   `True or False` = `True`\n\nFinal answer: True"
-}

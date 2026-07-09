@@ -1,3 +1,0 @@
-{
-  "content": "In DC machines, windings must form closed loops to allow for continuous current flow and proper commutation. Open windings would not function in a DC machine because they would interrupt current flow and prevent proper operation.  \n\n- **Closed winding** refers to windings that form complete electrical circuits, which is essential for DC machines.  \n- **Lap winding** and **wave winding** are types of closed windings, but they are specific configurations, not universal necessities.  \n- **Open type winding** would not work in a DC machine because it does not provide a continuous path for current.  \n\nThus, the necessary feature is that the winding must be closed.  \n\nFinal answer: (A)"
-}

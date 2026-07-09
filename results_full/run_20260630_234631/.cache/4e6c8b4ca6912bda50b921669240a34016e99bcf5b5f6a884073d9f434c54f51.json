@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n1. **Innermost parentheses**:  \n   `( not False or True )`  \n   - `not False` = `True`  \n   - So: `True or True` = `True`  \n\n2. **Apply outer `not not`**:  \n   - `not True` = `False`  \n   - `not False` = `True`  \n\nFinal answer: **true**  \n\nFinal answer: true"
-}

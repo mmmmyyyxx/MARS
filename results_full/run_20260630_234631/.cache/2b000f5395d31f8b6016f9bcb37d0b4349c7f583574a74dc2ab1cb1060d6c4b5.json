@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe premise says:  \n> being a frequent consumer of Dove soap is sufficient for being an owner of a Bumble and bumble shampoo.  \n\nIn logic:  \nIf \\( D \\) = frequent consumer of Dove soap,  \n\\( B \\) = owner of a Bumble and bumble shampoo,  \nthen \\( D \\rightarrow B \\) (sufficient condition means: if D then B).  \n\nThe conclusion says:  \n> everyone who is an owner of a Bumble and bumble shampoo is a frequent consumer of Dove soap.  \n\nThat is \\( B \\rightarrow D \\).  \n\nBut from \\( D \\rightarrow B \\), we cannot deduce \\( B \\rightarrow D \\) unless the premise said “necessary and sufficient.”  \nThis is the fallacy of affirming the consequent.  \n\nSo the argument is **invalid**.  \n\nFinal answer: invalid"
-}

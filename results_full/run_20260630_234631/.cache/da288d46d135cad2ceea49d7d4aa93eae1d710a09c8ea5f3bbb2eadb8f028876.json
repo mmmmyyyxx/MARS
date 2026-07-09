@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go step-by-step.\n\n**Expression:**  \n( True or not False ) or False\n\n---\n\n**Step 1 — Resolve innermost parentheses**  \nInside parentheses: `True or not False`\n\nFirst, `not False` = `True` (since NOT False = True).  \nSo inside parentheses: `True or True` = `True` (OR: True if at least one operand is True).\n\nSo after resolving parentheses:  \nExpression becomes `True or False`.\n\n---\n\n**Step 2 — Apply final OR**  \n`True or False` = `True` (since OR with True is always True).\n\n---\n\n**Step 3 — Verification with truth table principles**  \nLet A = True, B = False.\n\nInside parentheses:  \nnot B = True  \nA or (not B) = True or True = True  \nThen (True) or B = True or False = True.\n\n---\n\n**Final answer: true**"
-}

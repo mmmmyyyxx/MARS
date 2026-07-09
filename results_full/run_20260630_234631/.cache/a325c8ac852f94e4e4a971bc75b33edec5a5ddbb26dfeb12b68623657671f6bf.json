@@ -1,3 +1,0 @@
-{
-  "content": "Let’s reason through this.  \n\n1. **Poles and zeros alternating on the negative real axis** means they are on the real axis in the s-plane, interleaved.  \n2. For **LC networks** (lossless), poles and zeros are on the **imaginary axis**, not the negative real axis — so (A) is out.  \n3. For **RC networks**, poles and zeros are distinct, lie on the negative real axis, and alternate — this is a known property.  \n4. For **RL networks**, by duality, poles and zeros also lie on the negative real axis and alternate — so RL networks also have this property.  \n5. Therefore, both RC and RL networks satisfy the condition.  \n\nFinal answer: (D)"
-}

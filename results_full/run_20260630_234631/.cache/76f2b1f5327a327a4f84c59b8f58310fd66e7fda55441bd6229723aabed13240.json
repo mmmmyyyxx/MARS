@@ -1,3 +1,0 @@
-{
-  "content": "A JK flip-flop toggles its output state when both J and K inputs are high (J = 1, K = 1).  \nIn this condition, on the active clock edge, the output Q becomes the complement of its previous state.  \n\nFinal answer: (B)"
-}

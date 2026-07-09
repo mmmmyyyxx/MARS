@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`False and not ( ( True ) )`\n\n---\n\n**Step 1 — Resolve innermost parentheses**  \n`( True )` is `True`.  \nExpression becomes:  \n`False and not ( True )`\n\n---\n\n**Step 2 — Apply NOT operator**  \n`not ( True )` → `False`.  \nExpression becomes:  \n`False and False`\n\n---\n\n**Step 3 — Apply AND operator**  \n`False and False` → `False`\n\n---\n\n**Final answer:** false"
-}

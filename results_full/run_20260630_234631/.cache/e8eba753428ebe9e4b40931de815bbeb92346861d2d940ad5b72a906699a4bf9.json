@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go step-by-step.\n\n**Expression:**  \n`( not not not False or True )`\n\n---\n\n**Step 1: Resolve `not False`**  \n`not False` = `True`  \nSo `not not not False` becomes `not not True`.\n\n---\n\n**Step 2: Resolve `not True`**  \n`not True` = `False`  \nSo `not not True` becomes `not False`.\n\n---\n\n**Step 3: Resolve `not False`**  \n`not False` = `True`  \nSo `not not not False` = `True`.\n\n---\n\n**Step 4: Substitute back into the OR expression**  \n`( not not not False or True )` = `( True or True )`\n\n---\n\n**Step 5: Apply OR**  \n`True or True` = `True`\n\n---\n\n**Final answer: true**"
-}

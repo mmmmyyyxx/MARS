@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\nExpression: `not not not not not not not True`  \n\n1. Start with `True`.  \n2. Apply first `not`: `not True` → `False`  \n3. Apply second `not`: `not False` → `True`  \n4. Apply third `not`: `not True` → `False`  \n5. Apply fourth `not`: `not False` → `True`  \n6. Apply fifth `not`: `not True` → `False`  \n7. Apply sixth `not`: `not False` → `True`  \n8. Apply seventh `not`: `not True` → `False`  \n\nFinal answer: false"
-}

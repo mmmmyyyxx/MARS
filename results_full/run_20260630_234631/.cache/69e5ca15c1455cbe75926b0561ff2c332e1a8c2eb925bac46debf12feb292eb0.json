@@ -1,3 +1,0 @@
-{
-  "content": "Let’s reason through this.  \n\nDirect core type induction furnaces have the primary and secondary windings with the molten metal acting as the secondary, and they are linked by a magnetic core.  \n- At normal (higher) frequencies, electromagnetic forces would cause vigorous stirring of the molten metal, which is often undesirable in certain metallurgical processes.  \n- Also, because of the closed-core design, magnetic coupling is inherently poor unless the frequency is low enough to allow time for flux to fully link with the charge.  \n\nBoth points (A) and (B) are correct and together explain why low frequency is used.  \n\nFinal answer: (C)"
-}

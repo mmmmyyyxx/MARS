@@ -1,3 +1,0 @@
-{
-  "content": "In a DC motor, speed is given by \\( N \\propto \\frac{V - I_a R_a}{\\phi} \\), where \\( \\phi \\) is the field flux.  \nIf field flux is reduced to increase speed, the armature current tends to rise, but to avoid overloading, we reduce armature current to keep \\( I_a \\) within limits.  \nSince torque \\( T \\propto \\phi I_a \\), if \\( \\phi \\) decreases and \\( I_a \\) is limited, torque decreases.  \nPower \\( P = T \\times \\omega \\) — if torque decreases and speed increases, power can remain roughly constant (for constant \\( V \\) and rated \\( I_a \\) limits).  \nThus, field weakening provides constant power drive.  \n\nFinal answer: (A)"
-}

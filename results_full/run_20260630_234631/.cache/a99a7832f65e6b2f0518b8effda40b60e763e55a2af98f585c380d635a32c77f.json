@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**False or ( not False ) and True**  \n\n1. Evaluate `not False`:  \n   `not False` = `True`  \n\n2. Now we have:  \n   `False or True and True`  \n\n3. Logical AND (`and`) has higher precedence than OR (`or`), so do `True and True` first:  \n   `True and True` = `True`  \n\n4. Now we have:  \n   `False or True`  \n\n5. `False or True` = `True`  \n\nFinal answer: true"
-}

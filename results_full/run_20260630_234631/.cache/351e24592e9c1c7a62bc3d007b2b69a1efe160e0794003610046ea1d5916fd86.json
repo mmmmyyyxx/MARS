@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`( ( not False ) and False )`\n\n1. **Parentheses first** — inside the outer parentheses, we have `( not False ) and False`.  \n   But inside that, `not False` is the first operation due to precedence.\n\n2. **Apply `not`**:  \n   `not False` → `True`\n\n3. **Now the expression is**:  \n   `( True ) and False`\n\n4. **Apply `and`**:  \n   `True and False` → `False`\n\nFinal result: **false**\n\nFinal answer: false"
-}

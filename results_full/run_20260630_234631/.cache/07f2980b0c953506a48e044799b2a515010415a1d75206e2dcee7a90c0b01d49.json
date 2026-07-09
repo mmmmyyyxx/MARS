@@ -1,3 +1,0 @@
-{
-  "content": "This is a fluid dynamics problem using the principle of continuity (A₁v₁ = A₂v₂) for incompressible flow.  \n\nGiven:  \n- v₁ = 2 m/s  \n- A₂ = (1/3) A₁  \n- A₁v₁ = A₂v₂  \n- A₁ × 2 = (A₁/3) × v₂  \n\nCancel A₁:  \n2 = v₂ / 3  \nv₂ = 6 m/s  \n\nFinal answer: (D)"
-}

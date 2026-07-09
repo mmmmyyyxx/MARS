@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step-by-step.\n\nExpression:  \n**False or not True or False or False**\n\n---\n\n**Step 1: Apply NOT operators**  \nnot True → False  \n\nExpression becomes:  \nFalse or False or False or False\n\n---\n\n**Step 2: Apply OR operators left to right**  \nFalse or False → False  \nFalse or False → False  \nFalse or False → False  \n\nResult: **False**\n\n---\n\nFinal answer: false"
-}

@@ -1,7 +1,0 @@
-{
-  "method": "opro",
-  "num_candidates": 10,
-  "best_accuracy": 0.804,
-  "best_prompt": "Evaluate the given Boolean expression step by step, applying logical operators strictly according to precedence rules (parentheses first, then NOT, then AND, then OR). After deriving the final truth value, output only \"true\" or \"false\" in lowercase, without any additional explanation or formatting.",
-  "exactness_level": "best_effort_reimplementation"
-}

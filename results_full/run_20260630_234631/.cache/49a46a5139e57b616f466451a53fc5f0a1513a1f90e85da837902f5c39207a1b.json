@@ -1,3 +1,0 @@
-{
-  "content": "Let’s reason through this.  \n\nA purely mechanical instrument relies on physical movement of components (springs, masses, levers), which have significant mass.  \n- High inertia means the system cannot quickly follow rapid changes in the measured quantity.  \n- Higher response time is a direct consequence of high inertia.  \n- Large time constant is another way of expressing sluggish response due to mechanical inertia and possibly damping.  \n\nSince all three options essentially describe the same underlying limitation in different terms, the correct choice is \"all of the above.\"  \n\nFinal answer: (D)"
-}

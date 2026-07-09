@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**False and False and not not not True**\n\n---\n\n**Step 1: Resolve the innermost negation**  \nnot True → False\n\nNow we have:  \nFalse and False and not not False\n\n---\n\n**Step 2: Resolve next negation**  \nnot False → True\n\nNow:  \nFalse and False and not True\n\n---\n\n**Step 3: Resolve final negation**  \nnot True → False\n\nNow:  \nFalse and False and False\n\n---\n\n**Step 4: Apply AND from left to right**  \nFalse and False → False  \nFalse and False → False\n\n---\n\nFinal result: **False**\n\n---\n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "The voltage across an inductor is given by Faraday’s law of electromagnetic induction:  \n\\[\nv = L \\frac{di}{dt}\n\\]  \nwhere \\(L\\) is the inductance and \\(\\frac{di}{dt}\\) is the rate of change of current.  \n\nThis means the induced voltage is the **product of its inductance and the rate of change of current through it**.  \n\nComparing with the options:  \n- (A) says product of inductance and current — incorrect.  \n- (B) and (C) involve ratios — incorrect.  \n- (D) matches \\(L \\frac{di}{dt}\\).  \n\nFinal answer: (D)"
-}

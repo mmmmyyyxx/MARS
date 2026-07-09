@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:  \n\n- `M 60.00,33.00 L 55.42,43.00` → Move to (60,33), draw line to (55.42,43)  \n- `A 11.00,11.00 0.00 0,1 52.81,24.68` → Arc with radius 11, sweep flag 1, to (52.81,24.68)  \n- `L 60.00,33.00` → Line back to start  \n\nThis forms a closed shape with two straight lines and one arc — that’s a **circular sector** (a portion of a circle bounded by two radii and an arc).  \n\nFinal answer: (I)"
-}

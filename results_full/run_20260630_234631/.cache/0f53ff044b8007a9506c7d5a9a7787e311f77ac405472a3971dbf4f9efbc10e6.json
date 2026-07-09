@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence rules:  \nParentheses → NOT → AND → OR.\n\nExpression:  \n**( False or not False and False )**\n\n---\n\n**Step 1: Resolve parentheses**  \nInside parentheses: `False or not False and False`  \nNo nested parentheses, so we proceed with precedence inside parentheses.\n\n---\n\n**Step 2: Apply NOT**  \n`not False` = `True`  \nExpression becomes: `False or True and False`\n\n---\n\n**Step 3: Apply AND**  \n`True and False` = `False`  \nExpression becomes: `False or False`\n\n---\n\n**Step 4: Apply OR**  \n`False or False` = `False`\n\n---\n\nFinal result: **False**\n\nFinal answer: false"
-}

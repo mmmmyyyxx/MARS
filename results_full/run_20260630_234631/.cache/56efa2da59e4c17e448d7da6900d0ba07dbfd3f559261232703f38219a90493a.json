@@ -1,3 +1,0 @@
-{
-  "content": "SRAM typically uses six transistors per memory cell (4 for the storage latch and 2 for access control), while DRAM uses one transistor and one capacitor per cell.  \nThat means the description matches DRAM only, not SRAM.  \n\nFinal answer: (B)"
-}

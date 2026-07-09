@@ -1,3 +1,0 @@
-{
-  "content": "The illumination \\( E \\) in lux is given by the formula:  \n\\[\nE = \\frac{I}{d^2}\n\\]\nwhere \\( I \\) is the luminous intensity in candela (candle power) and \\( d \\) is the distance in meters.\n\nGiven:  \n\\( E = 6 \\ \\text{lux} \\)  \n\\( d = 5 \\ \\text{m} \\)\n\n\\[\nI = E \\times d^2 = 6 \\times 25 = 150 \\ \\text{candela}\n\\]\n\nSo the candle power is 150.\n\nFinal answer: (C)"
-}

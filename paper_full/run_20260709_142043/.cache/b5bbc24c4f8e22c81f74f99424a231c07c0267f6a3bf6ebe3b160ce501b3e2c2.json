@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the closure detection rules in your current prompt might lead to misclassification when the path is visually closed but the coordinates don't exactly match?\n\nConsidering your goal to maximize correctness rate, how could you refine the pattern recognition criteria to better distinguish between quadrilaterals like rectangles and kites while maintaining efficiency?"
+}

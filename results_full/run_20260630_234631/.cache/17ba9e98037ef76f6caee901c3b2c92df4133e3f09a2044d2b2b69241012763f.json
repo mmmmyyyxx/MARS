@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:  \n\n- `M 72.13,55.74 L 66.37,76.94` → Move to point, then draw a **line** to another point.  \n- `A 21.97,21.97 105.19 0,1 74.83,33.93` → Arc command with radius ~21.97, large-arc-flag=0, sweep-flag=1, ending at (74.83,33.93).  \n- `L 72.13,55.74` → Line back to the starting point.  \n\nSo the path is:  \n1. Line from start to (66.37,76.94)  \n2. Arc to (74.83,33.93)  \n3. Line back to start  \n\nThat’s a closed shape with two straight sides and one curved side — which matches a **sector** (a portion of a circle bounded by two radii and an arc).  \n\nFinal answer: (I)"
-}

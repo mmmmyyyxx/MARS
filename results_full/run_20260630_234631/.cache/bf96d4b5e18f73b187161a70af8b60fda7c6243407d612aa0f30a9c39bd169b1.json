@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\n**Expression:**  \n`not False or not not not not True`\n\n---\n\n**Step 1 — Handle `not` operations from left to right**  \nPrecedence: `not` is highest, then `and`, then `or`.\n\nFirst term: `not False`  \n- `not False` = `True`\n\nSecond term: `not not not not True`  \n- `not True` = `False`  \n- `not False` = `True`  \n- `not True` = `False`  \n- `not False` = `True`\n\nSo `not not not not True` = `True`.\n\n---\n\n**Step 2 — Combine with `or`**  \nExpression now: `True or True`  \n- `True or True` = `True`\n\n---\n\n**Final answer: true**"
-}

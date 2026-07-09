@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\n1. The SVG path starts with `M 93.43,69.32` — this means **Move** to that coordinate.  \n2. Then `L 68.06,88.58` — this means **Line** to that coordinate.  \n3. So the path draws a straight line from the first point to the second point.  \n4. That matches the geometric shape: a **line segment**.  \n\nFrom the options, the correct one is **line**.  \n\nFinal answer: (E)"
-}

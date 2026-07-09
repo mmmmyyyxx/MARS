@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the rules: parentheses first, then NOT, then AND, then OR.\n\n**Step 1: Resolve parentheses**  \nInside parentheses: `( not False or True )`  \n- First, `not False` → `True` (since NOT False = True).  \n- Now parentheses become: `True or True` → `True` (OR operation: True or True = True).  \n\nSo after parentheses step: `True and True`.\n\n**Step 2: Apply NOT operators**  \nNo NOT outside parentheses now.\n\n**Step 3: Apply AND operators**  \n`True and True` → `True`.\n\n**Step 4: Apply OR operators**  \nNo OR outside AND now.\n\n**Step 5: Final evaluation**  \nThe expression simplifies to `True`.\n\nFinal answer: true"
-}

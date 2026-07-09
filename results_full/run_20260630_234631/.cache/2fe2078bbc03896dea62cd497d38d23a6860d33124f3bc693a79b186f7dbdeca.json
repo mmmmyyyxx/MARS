@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n```\nnot not True and not True or True\n```\n\n**Step 1 – Operator precedence**  \nBoolean operator precedence (highest to lowest):  \n1. `not`  \n2. `and`  \n3. `or`  \n\nSo we apply `not` first.\n\n**Step 2 – Evaluate `not not True`**  \n`not True` → `False`  \n`not False` → `True`  \nSo `not not True` = `True`.\n\n**Step 3 – Evaluate `not True`**  \n`not True` = `False`.\n\n**Step 4 – Substitute back**  \nExpression becomes:  \n`True and False or True`\n\n**Step 5 – Apply `and` before `or`**  \n`True and False` → `False`  \nExpression now: `False or True`\n\n**Step 6 – Apply `or`**  \n`False or True` → `True`\n\nFinal answer: **true**\n\nFinal answer: true"
-}

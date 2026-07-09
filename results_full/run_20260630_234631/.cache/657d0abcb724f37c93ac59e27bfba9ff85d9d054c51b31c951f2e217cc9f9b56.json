@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \nTrue or ( ( not True ) )\n\n---\n\n**Step 1: Resolve innermost parentheses**  \n( not True ) → False  \n\nExpression becomes:  \nTrue or ( False )\n\n---\n\n**Step 2: Apply OR operator**  \nTrue or False → True  \n\n---\n\n**Step 3: Verify logical consistency**  \nOR operator yields True if at least one operand is True.  \nHere, first operand is True, so result is True regardless of second operand.\n\n---\n\n**Final answer: true**"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n**False and not True and True and False**\n\n---\n\n**Step 1: Apply `not`**  \nPrecedence: `not` is highest.  \n`not True` = `False`  \n\nExpression becomes:  \n**False and False and True and False**\n\n---\n\n**Step 2: Apply `and` from left to right**  \n`and` is associative and has higher precedence than `or` (none here).  \n\n- `False and False` → `False`  \n- `False and True` → `False`  \n- `False and False` → `False`  \n\n---\n\n**Final result:** `False`\n\n---\n\nFinal answer: false"
-}

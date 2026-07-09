@@ -1,3 +1,0 @@
-{
-  "content": "In the 8086/8088 microprocessor, wait states (Tw) are inserted when the memory or I/O device is not ready to complete the data transfer in the standard bus cycle.  \nThe T3 clock cycle is when data is normally read from the bus. If the READY signal is low at the beginning of T3, wait states are inserted between T3 and T4 until READY becomes high.  \n\nThus, wait states are inserted between T3 and T4.  \n\nFinal answer: (C)"
-}

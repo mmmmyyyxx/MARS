@@ -1,3 +1,0 @@
-{
-  "content": "Total steps: 5  \nStep 1: Begin with a clear instruction to analyze the logical constraints and relationships in the given scenario before evaluating answer choices.  \nStep 2: Incorporate explicit guidance to eliminate options that violate any stated constraints or lead to contradictions.  \nStep 3: Add a requirement to justify the selected answer by referencing specific constraints or logical deductions from the setup.  \nStep 4: Include a reminder to output only the parenthesized letter (e.g., (A)) without additional text after reasoning.  \nStep 5: Test and refine the prompt with sample LSAT-AR questions to ensure clarity and adherence to formatting rules."
-}

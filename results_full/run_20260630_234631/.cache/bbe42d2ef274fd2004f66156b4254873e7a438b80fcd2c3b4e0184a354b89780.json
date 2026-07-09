@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path given is:  \n`M 58.33,52.18 L 34.28,31.10`  \n\n- `M` means \"move to\" the starting point (58.33, 52.18).  \n- `L` means \"line to\" the point (34.28, 31.10).  \n\nSo this path draws a straight line segment between two points.  \n\nLooking at the options:  \n(A) circle — no, needs curves or many points.  \n(B) heptagon — no, needs 7 sides.  \n(C) hexagon — no, needs 6 sides.  \n(D) kite — no, needs 4 sides.  \n(E) line — yes, exactly two points connected.  \n(F) octagon — no, needs 8 sides.  \n(G) pentagon — no, needs 5 sides.  \n(H) rectangle — no, needs 4 sides.  \n(I) sector — no, needs an arc.  \n(J) triangle — no, needs 3 sides.  \n\nFinal answer: (E)"
-}

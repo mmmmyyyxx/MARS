@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n**True and not not False and not False**\n\n---\n\n**Step 1 – Precedence rules**  \nHighest precedence: `not`  \nSo first evaluate all `not` operations from left to right.\n\n- `not False` → `True`  \n- `not not False` = `not (not False)` = `not True` → `False`\n\nSo the expression becomes:  \n**True and False and True**\n\n---\n\n**Step 2 – Apply `and` from left to right**  \n`True and False` → `False`  \n`False and True` → `False`\n\n---\n\n**Final answer: false**"
-}

@@ -1,0 +1,33 @@
+Answer BIG-Bench Hard questions for Ruin Names.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).
+
+Example question:
+Which of the following is a humorous edit of this artist or movie name: 'the beatles'?
+Options:
+(A) the beatlis
+(B) the beagles
+(C) the ubeatles
+(D) the beatlies
+Example answer:
+Final answer: (B)
+
+Example question:
+Which of the following is a humorous edit of this artist or movie name: 'the rolling stones'?
+Options:
+(A) the rolling scones
+(B) the rolling stone
+(C) the tolling stones
+(D) the rollizng stones
+Example answer:
+Final answer: (A)
+
+Example question:
+Which of the following is a humorous edit of this artist or movie name: 'the sting'?
+Options:
+(A) the stink
+(B) thegsting
+(C) the soing
+(D) the mting
+Example answer:
+Final answer: (A)

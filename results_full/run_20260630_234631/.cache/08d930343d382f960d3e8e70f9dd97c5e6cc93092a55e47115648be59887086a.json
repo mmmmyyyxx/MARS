@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( True and not True and False )\n\n---\n\n**Step 1: Handle parentheses**  \nThe entire expression is inside parentheses, so we evaluate inside first.\n\nInside:  \nTrue and not True and False\n\n---\n\n**Step 2: Apply NOT operator**  \nnot True = False  \n\nNow we have:  \nTrue and False and False\n\n---\n\n**Step 3: Apply AND from left to right**  \nAND is left-associative, so:  \n\nFirst: True and False → False  \n\nThen: False and False → False\n\n---\n\n**Step 4: Final result**  \nThe expression evaluates to False.\n\n---\n\nFinal answer: false"
-}

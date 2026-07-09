@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe SVG path has the following sequence of points:  \n\n1. (31.00, 73.00)  \n2. (26.00, 55.00)  \n3. (37.00, 39.00)  \n4. (61.00, 34.00)  \n5. (77.00, 50.00)  \n6. (82.00, 65.00)  \n7. (62.00, 83.00)  \n8. Back to (31.00, 73.00)  \n\nCounting the distinct vertices:  \n(31,73) → (26,55) → (37,39) → (61,34) → (77,50) → (82,65) → (62,83) → back to start.  \n\nThat’s **7 distinct vertices** before closing back to the first point.  \n\nA polygon with 7 sides is called a **heptagon**.  \n\nFinal answer: (B)"
-}

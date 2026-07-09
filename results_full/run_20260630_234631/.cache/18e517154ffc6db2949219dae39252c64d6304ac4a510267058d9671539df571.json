@@ -1,3 +1,0 @@
-{
-  "content": "The SVG path contains only two points connected by a line:  \nM 81.33,89.86 (move to starting point)  \nL 65.20,41.90 (line to ending point)  \n\nThis describes a single straight segment between two points, which is a line.\n\nFinal answer: (E)"
-}

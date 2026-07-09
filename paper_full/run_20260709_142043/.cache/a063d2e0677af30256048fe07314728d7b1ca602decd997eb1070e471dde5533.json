@@ -1,0 +1,3 @@
+{
+  "content": "1. In your current prompt, you specify that the model should \"strictly avoid using any external knowledge, world assumptions, or implicit reasoning beyond what is explicitly stated or logically implied by the sentence structure.\" How might this restriction affect the model's ability to resolve cases where real-world knowledge is typically needed to disambiguate pronouns, and what adjustments could ensure both strict adherence and high correctness?  \n\n2. Considering the current step of refining the prompt for consistent output formatting, how could you further optimize the instructions to prevent the model from occasionally including reasoning or explanations in its final answer, while still ensuring it performs the necessary internal analysis?"
+}

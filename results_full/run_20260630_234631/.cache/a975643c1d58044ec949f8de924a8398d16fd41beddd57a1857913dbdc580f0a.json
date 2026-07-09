@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path.  \n\nThe path contains two arc commands (`A`):  \n- First arc: `M 50.00,40.00 A 18.00,18.00 0.00 1,0 14.00,40.00`  \n  - Start: (50,40)  \n  - End: (14,40)  \n  - Radius: (18,18) → same x and y radius means it’s a circular arc.  \n  - Large-arc flag = 1, sweep flag = 0 → draws the larger portion of the circle from (50,40) to (14,40).  \n\n- Second arc: `A 18.00,18.00 0.00 1,0 50.00,40.00`  \n  - Start: (14,40)  \n  - End: (50,40)  \n  - Same radius, same flags → draws the other larger portion back to start.  \n\nTogether, these two arcs form a full circle (two 180° arcs of the same circle).  \n\nFinal answer: (A)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThe question effectively targets a critical refinement area by focusing on unit consistency—a common source of errors in multi-step problems. It encourages adding explicit guidance for verification, which aligns with Step 4's goal of reducing mistakes through constraints. This specificity will help improve prompt clarity and model accuracy."
-}

@@ -1,0 +1,3 @@
+{
+  "content": "What specific grammatical or structural cues in the student's prompt would help the model correctly resolve the example sentence \"My parent called their secretary for more information\" without relying on implicit world knowledge?  \n\nHow could the student test whether their current prompt consistently produces accurate outputs across different types of ambiguous sentences, such as those involving reflexives or possessives?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to distinguish between fixed and flexible activities in complex schedules, and what specific wording would make this distinction most actionable for the model?\n\n2. Considering the current step focuses on defining task objectives and context, what elements could be added to the prompt to optimize the model's ability to recognize and adapt to varying levels of schedule complexity without overcomplicating straightforward cases?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n`not False or False or ( False )`  \n\n**Step 1 – Apply operator precedence (NOT first)**  \n`not False` = `True`  \n\nSo now:  \n`True or False or ( False )`  \n\n**Step 2 – Evaluate left to right (OR is left-associative)**  \n`True or False` → `True`  \n\nNow:  \n`True or ( False )` → `True`  \n\n**Step 3 – Final result**  \n`True`  \n\nFinal answer: true"
-}

@@ -1,0 +1,3 @@
+{
+  "content": "1. In the student's current prompt, what specific grammatical or contextual cues would you prioritize to determine if a pronoun's antecedent can be deduced without relying on external knowledge?\n\n2. Considering the task's goal of maximizing correctness rate, how might refining the criteria for \"explicit cues\" in the prompt reduce ambiguity in the model's output while maintaining strict adherence to sentence-internal evidence?"
+}

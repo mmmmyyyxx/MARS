@@ -1,2 +1,0 @@
-best_effort_reimplementation
-runtime_seconds: 11361.3461

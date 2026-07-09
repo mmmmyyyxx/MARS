@@ -1,3 +1,0 @@
-{
-  "content": "The resistance of a conductor is given by \\( R = \\rho \\frac{l}{A} \\), where \\( A = \\frac{\\pi d^2}{4} \\).  \n\nInitially:  \n\\( R = \\rho \\frac{l}{\\pi d^2 / 4} = \\frac{4\\rho l}{\\pi d^2} \\).  \n\nAfter changes:  \nDiameter halved → \\( d' = d/2 \\) → \\( A' = \\pi (d/2)^2 / 4 = \\pi d^2 / 16 \\).  \nLength doubled → \\( l' = 2l \\).  \n\nNew resistance:  \n\\( R' = \\rho \\frac{2l}{\\pi d^2 / 16} = \\rho \\cdot 2l \\cdot \\frac{16}{\\pi d^2} = \\frac{32 \\rho l}{\\pi d^2} \\).  \n\nCompare with original \\( R = \\frac{4\\rho l}{\\pi d^2} \\):  \n\\( R' / R = \\frac{32}{4} = 8 \\).  \n\nSo \\( R' = 8R \\).  \n\nFinal answer: (D)"
-}

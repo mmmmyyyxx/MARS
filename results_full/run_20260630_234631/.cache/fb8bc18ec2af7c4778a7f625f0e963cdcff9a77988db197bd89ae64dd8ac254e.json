@@ -1,3 +1,0 @@
-{
-  "content": "A JK flip-flop in toggle mode changes state (toggles) on every clock pulse.  \nFrom the JK flip-flop truth table:  \n\n- \\( J = 0, K = 0 \\) → No change (hold state)  \n- \\( J = 1, K = 0 \\) → Set (\\( Q = 1 \\))  \n- \\( J = 0, K = 1 \\) → Reset (\\( Q = 0 \\))  \n- \\( J = 1, K = 1 \\) → Toggle  \n\nThus, toggle mode occurs when \\( J = 1 \\) and \\( K = 1 \\).  \n\nFinal answer: (B)"
-}

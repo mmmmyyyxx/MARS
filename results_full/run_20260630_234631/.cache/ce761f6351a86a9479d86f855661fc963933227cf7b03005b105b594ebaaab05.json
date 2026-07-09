@@ -1,3 +1,0 @@
-{
-  "content": "Solve LSAT analytical reasoning questions by applying the stated logical constraints.  \nFirst, carefully read the scenario and all constraints. Then, follow these steps:  \n1. Identify and list all explicit logical constraints from the problem.  \n2. Determine any implicit constraints or inferences that follow from the explicit ones.  \n3. Systematically apply the constraints to eliminate impossible or invalid options.  \n4. Check each remaining option against all constraints to ensure full compliance.  \n5. Select the correct answer based on this thorough analysis.  \nReturn only the final answer as a parenthesized option letter such as (A). Do not include extra commentary after the final answer."
-}

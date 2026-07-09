@@ -1,3 +1,0 @@
-{
-  "content": "Evaluate the given Boolean expression by first resolving all parentheses from the innermost to the outermost, then applying the operators in strict precedence order: NOT, AND, OR. After completing the evaluation, output only \"true\" or \"false\" based on the final result."
-}

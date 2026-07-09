@@ -1,3 +1,0 @@
-{
-  "content": "This is a fluid dynamics problem using the principle of continuity (A₁v₁ = A₂v₂).  \n\nGiven:  \nv₁ = 2 m/s  \nA₂ = (1/3) A₁  \nA₁v₁ = A₂v₂  \nA₁ × 2 = (A₁/3) × v₂  \n2 = v₂/3  \nv₂ = 6 m/s  \n\nFinal answer: (D)"
-}

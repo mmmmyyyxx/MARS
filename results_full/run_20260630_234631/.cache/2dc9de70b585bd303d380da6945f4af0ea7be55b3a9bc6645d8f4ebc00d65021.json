@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not False and False or True and True**\n\n---\n\n**Step 1: Identify operator precedence**  \nOrder:  \n1. Parentheses (none here)  \n2. **NOT**  \n3. **AND**  \n4. **OR**  \n\n---\n\n**Step 2: Apply NOT**  \n`not False` → `True`  \n\nExpression becomes:  \n**True and False or True and True**\n\n---\n\n**Step 3: Apply AND from left to right**  \nFirst `True and False` → `False`  \n\nExpression becomes:  \n**False or True and True**\n\n---\n\n**Step 4: Apply next AND**  \n`True and True` → `True`  \n\nExpression becomes:  \n**False or True**\n\n---\n\n**Step 5: Apply OR**  \n`False or True` → `True`  \n\n---\n\n**Final answer: true**"
-}

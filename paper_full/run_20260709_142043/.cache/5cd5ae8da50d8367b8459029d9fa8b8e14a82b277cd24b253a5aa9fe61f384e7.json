@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in your current prompt might lead the model to overcomplicate straightforward schedules, and how could you simplify them without losing accuracy?\n\nConsidering the current step of adding example input-output pairs, what key details should the examples include to best illustrate both simple and complex reasoning paths without making the prompt overly long?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe farad (F) is the SI unit of capacitance.  \nCapacitance \\( C \\) is defined by the equation:  \n\\[\nC = \\frac{Q}{V}\n\\]\nwhere \\( Q \\) is charge in coulombs (C) and \\( V \\) is voltage in volts (V).  \n\nThus:  \n\\[\n1 \\text{ F} = \\frac{1 \\text{ C}}{1 \\text{ V}}\n\\]  \n\nChecking the options:  \n- (A) 1 ohm of resistance → wrong dimension; resistance is volt/ampere, unrelated to farad.  \n- (B) ratio of 1 V to 1 C → that would be \\( V/C \\), which is \\( 1/C \\) (inverse capacitance), not capacitance.  \n- (C) ratio of 1 C to 1 V → matches \\( C = Q/V \\), correct definition.  \n- (D) none of these → incorrect because (C) is correct.  \n\nFinal answer: (C)"
-}

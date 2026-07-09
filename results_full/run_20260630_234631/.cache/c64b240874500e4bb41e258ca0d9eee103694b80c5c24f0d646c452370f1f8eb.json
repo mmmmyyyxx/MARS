@@ -1,3 +1,0 @@
-{
-  "content": "Let's break this down step by step.  \n\nThe expression is:  \n\n**True or False and not True and False**  \n\nIn Boolean logic, **AND** has higher precedence than **OR**, and **NOT** has higher precedence than **AND**. So we interpret it as:  \n\nTrue or (False and (not True) and False)  \n\n---\n\n**Step 1: Apply NOT**  \nnot True → False  \n\nExpression becomes:  \nTrue or (False and False and False)  \n\n---\n\n**Step 2: Apply AND from left to right**  \nFirst: False and False → False  \n\nExpression becomes:  \nTrue or (False and False)  \n\nSecond: False and False → False  \n\nExpression becomes:  \nTrue or False  \n\n---\n\n**Step 3: Apply OR**  \nTrue or False → True  \n\n---\n\n**Final answer: true**"
-}

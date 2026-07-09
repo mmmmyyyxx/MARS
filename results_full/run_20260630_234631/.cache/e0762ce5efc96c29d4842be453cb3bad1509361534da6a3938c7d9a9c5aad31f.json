@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate the Boolean expression step by step.  \n\nThe expression is:  \n\n**not True or not False and not False**\n\n---\n\n**Step 1: Replace logical constants with their Boolean values**  \n- `True` = `True`  \n- `False` = `False`  \n\nSo the expression becomes:  \n`not True or not False and not False`\n\n---\n\n**Step 2: Apply `not` operations**  \n- `not True` = `False`  \n- `not False` = `True`  \n- `not False` = `True`  \n\nExpression becomes:  \n`False or True and True`\n\n---\n\n**Step 3: Apply operator precedence (AND before OR)**  \n- `True and True` = `True`  \n\nExpression becomes:  \n`False or True`\n\n---\n\n**Step 4: Apply OR**  \n- `False or True` = `True`  \n\n---\n\n**Final answer: true**"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**True or not False and False and False**  \n\n1. **Operator precedence**: `not` > `and` > `or`  \n2. Evaluate `not False` → `True`  \n   Expression becomes:  \n   **True or True and False and False**  \n\n3. Evaluate `True and False` → `False`  \n   Expression becomes:  \n   **True or False and False**  \n\n4. Evaluate `False and False` → `False`  \n   Expression becomes:  \n   **True or False**  \n\n5. Evaluate `True or False` → `True`  \n\nFinal answer: True"
-}

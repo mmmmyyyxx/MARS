@@ -1,3 +1,0 @@
-{
-  "content": "The path consists of three points: (14.44,11.99), (76.77,22.48), and (40.71,55.25).  \nThe \"M\" command moves to the first point, then \"L\" draws lines to the second and third points.  \nThe final \"M\" is actually a \"Z\" equivalent in effect because it closes the path by drawing from the third point back to the first point.  \nThus, the path draws a closed shape with three vertices — a triangle.  \n\nFinal answer: (J)"
-}

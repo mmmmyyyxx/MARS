@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nThe expression is:  \n\n**True and not not False and not False**\n\n---\n\n**Step 1: Operator precedence**  \nNOT has the highest precedence, so we evaluate `not` operations first from left to right.\n\n- `not False` → `True`  \n- `not not False` = `not (not False)` = `not (True)` → `False`\n\nSo the expression becomes:  \n\n**True and False and True**\n\n---\n\n**Step 2: AND is left-associative**  \n`True and False` → `False`  \n`False and True` → `False`\n\n---\n\n**Final answer: false**"
-}

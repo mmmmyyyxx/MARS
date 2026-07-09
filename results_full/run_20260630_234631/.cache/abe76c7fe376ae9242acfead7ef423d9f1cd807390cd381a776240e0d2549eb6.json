@@ -1,3 +1,0 @@
-{
-  "content": "Analyze the Boolean expression by systematically resolving parentheses and negations first, then apply logical operators in strict precedence order (NOT, AND, OR), verify each intermediate step for logical consistency, and output only \"true\" or \"false\" as the final result."
-}

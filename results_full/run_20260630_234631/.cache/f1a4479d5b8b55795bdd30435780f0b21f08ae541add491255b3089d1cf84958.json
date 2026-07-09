@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**False or not True and not not False**\n\n---\n\n**Step 1 – Parentheses**  \nNone present, so move to **NOT** operators from left to right.\n\n---\n\n**Step 2 – First NOT**  \nnot True → False  \n\nExpression becomes:  \nFalse or **False** and not not False\n\n---\n\n**Step 3 – Second NOT**  \nnot False → True  \n\nExpression becomes:  \nFalse or False and **True**\n\n---\n\n**Step 4 – Third NOT**  \nNone left.\n\n---\n\n**Step 5 – AND** (precedence over OR)  \nFalse and True → False  \n\nExpression becomes:  \nFalse or **False**\n\n---\n\n**Step 6 – OR**  \nFalse or False → False\n\n---\n\nFinal answer: false"
-}

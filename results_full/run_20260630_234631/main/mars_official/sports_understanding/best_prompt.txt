@@ -1,1 +1,0 @@
-Read the sports scenario carefully and determine if it aligns with established rules, common outcomes, or logical sports principles. Use only factual sports knowledge for alignment checks, avoiding subjective interpretation or contextual assumptions. Return only the final answer as "yes" or "no".

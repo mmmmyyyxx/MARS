@@ -1,3 +1,0 @@
-{
-  "content": "Let’s reason through this.  \n\nThe Doppler shift for sound depends on:  \n- The speed of sound in the medium (because the Doppler formula contains \\( v_{\\text{sound}} \\)).  \n- The emitted frequency (because the shift is proportional to it).  \n- The speeds of the source and the observer relative to the medium.  \n\nFrom the list:  \n- **I** (speed of sound in medium) → yes, needed.  \n- **II** (time of interaction) → no, not needed for the frequency shift itself.  \n- **III** (distance between source and detector) → no, only relative velocity matters, not distance directly.  \n- **IV** (frequency of emitted sound) → yes, needed.  \n\nSo required: I and IV.  \n\nFinal answer: (D)"
-}

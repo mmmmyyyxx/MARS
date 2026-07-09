@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down:  \n\n1. **Premise 1:** Jose is an admirer of AEK Athens FC.  \n2. **Premise 2:** Every admirer of AEK Athens FC is an expert of Feyenoord.  \n\nFrom these premises, if Jose is in the group “admirer of AEK Athens FC,” then by premise 2, he must also be in the group “expert of Feyenoord.”  \n\nThis is a straightforward application of universal instantiation and modus ponens, so the conclusion follows necessarily from the premises.  \n\nFinal answer: valid"
-}

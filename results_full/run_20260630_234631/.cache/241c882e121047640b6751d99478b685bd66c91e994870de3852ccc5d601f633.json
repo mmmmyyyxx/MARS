@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go through each option:  \n\n- **(A) Reduces the overall gain** — True, because feedback in a closed-loop system generally reduces gain compared to an open-loop system.  \n- **(B) Complex and costly** — True, due to the need for sensors, feedback paths, and more components.  \n- **(C) Oscillatory response** — True, closed-loop systems can exhibit oscillations, especially if not properly tuned.  \n\nSince all three are valid disadvantages, the correct choice is **(D) All of the above**.  \n\nFinal answer: (D)"
-}

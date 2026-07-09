@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:  \n**True or True or not False or False**\n\n---\n\n**Step 1 — Identify operator precedence**  \nNOT has highest precedence, then AND, then OR.  \nHere we only have OR and NOT.\n\nSo first apply **not False**:\n\nnot False = True\n\nNow the expression becomes:  \nTrue or True or **True** or False\n\n---\n\n**Step 2 — Apply OR from left to right**  \nTrue or True → True  \nTrue or True → True  \nTrue or False → True\n\n---\n\n**Step 3 — Final result**  \nThe entire expression evaluates to **True**.\n\n---\n\n**Final answer: true**"
-}

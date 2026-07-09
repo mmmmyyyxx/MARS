@@ -1,3 +1,0 @@
-{
-  "content": "In force-current analogy, mechanical force is analogous to electrical current, and velocity is analogous to voltage.  \nA dash-pot in mechanical systems provides a damping force proportional to velocity: \\( F = B v \\), where \\( B \\) is the damping coefficient.  \nIn force-current analogy, force \\( F \\) maps to current \\( i \\), and velocity \\( v \\) maps to voltage \\( V \\).  \nSo \\( i = B v \\) becomes \\( i = B V \\), which is Ohm’s law \\( i = G V \\) where \\( G \\) is conductance.  \nThus, the dash-pot is analogous to electrical conductance.  \n\nFinal answer: (B)"
-}

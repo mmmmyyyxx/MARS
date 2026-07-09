@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis is a strong Socratic question because it:\n1. Directly addresses the core challenge in formal fallacy detection\n2. Forces consideration of the distinction between validity and soundness\n3. Prompts thinking about how to design instructions that prevent the model from conflating logical form with factual truth\n4. Encourages development of clear criteria for what constitutes a purely structural evaluation\n\nThe question effectively guides prompt refinement toward the essential requirement that validity judgments must be based solely on argument form, regardless of premise truthfulness."
-}

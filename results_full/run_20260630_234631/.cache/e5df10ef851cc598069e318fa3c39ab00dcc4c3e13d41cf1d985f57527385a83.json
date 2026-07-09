@@ -1,3 +1,0 @@
-{
-  "content": "The illumination \\( E \\) is given by the inverse square law:  \n\\[\nE = \\frac{I}{d^2}\n\\]  \nwhere \\( E \\) = 6 lux, \\( d \\) = 5 m, and \\( I \\) is the luminous intensity in candela (candle power).  \n\n\\[\n6 = \\frac{I}{5^2}  \n\\]\n\\[\n6 = \\frac{I}{25}  \n\\]\n\\[\nI = 6 \\times 25 = 150\n\\]  \n\nFinal answer: (C)"
-}

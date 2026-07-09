@@ -1,3 +1,0 @@
-{
-  "content": "First, evaluate the inner expression:  \n`not (False)` → `True`  \n\nNow substitute back:  \n`(True) or False` → `True`  \n\nFinal answer: true"
-}

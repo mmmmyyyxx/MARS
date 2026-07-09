@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\n1. **True and True** → `True`  \n2. **not not not False**  \n   - `not False` → `True`  \n   - `not True` → `False`  \n   - `not False` → `True`  \n   So `not not not False` = `True`  \n\n3. Now combine: `True and True and True`  \n   - `True and True` → `True`  \n   - `True and True` → `True`  \n\nFinal result: **true**  \n\nFinal answer: true"
-}

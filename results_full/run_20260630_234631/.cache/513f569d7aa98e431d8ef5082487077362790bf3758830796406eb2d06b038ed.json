@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break down the SVG path:  \n\n- `M 22.62,15.54 L 38.01,2.85` → Move to point, then draw a line.  \n- `A 19.95,19.95 34.02 0,1 41.62,21.64` → Arc command with radius 19.95, rotation 34.02°, large-arc-flag 0, sweep-flag 1, to point (41.62,21.64).  \n- `L 22.62,15.54` → Line back to starting point.  \n\nThis describes a shape with two straight sides and one curved arc, which is a **sector** (a portion of a circle bounded by two radii and an arc).  \n\nFinal answer: (I)"
-}

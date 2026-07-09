@@ -1,0 +1,3 @@
+{
+  "content": "How can the current prompt be improved to handle cases where parentheses are nested at multiple levels, ensuring clarity in the order of operations without relying solely on operator precedence?\n\nConsidering the goal of maximizing correctness rate, what specific modifications could be made to the prompt to reduce ambiguity when expressions mix uppercase and lowercase Boolean constants (e.g., \"True\" vs \"true\")?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "The SVG path draws a line segment between two points: (93.43,69.32) and (68.06,88.58).  \nIt is not a closed shape, so it cannot be a polygon (heptagon, hexagon, kite, octagon, pentagon, rectangle, triangle) or a sector.  \nIt is also not a circle.  \nThe only option that matches a straight segment between two points is \"line\".  \n\nFinal answer: (E)"
-}

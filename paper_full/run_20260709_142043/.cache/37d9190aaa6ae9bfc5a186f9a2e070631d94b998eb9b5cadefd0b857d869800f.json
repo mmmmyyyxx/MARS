@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt's strict focus on grammatical and explicit contextual cues does not inadvertently lead the model to overlook valid, implicit linguistic patterns that could resolve ambiguity in some cases?\n\n2. What specific test sentences would you design to validate whether the prompt consistently guides the model to distinguish between truly ambiguous cases and those resolvable through explicit cues alone?"
+}

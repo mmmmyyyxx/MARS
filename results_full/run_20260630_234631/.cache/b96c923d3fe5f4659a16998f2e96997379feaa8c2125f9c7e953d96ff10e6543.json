@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step-by-step:\n\n1. **Innermost parentheses**:  \n   \\( \\text{False and True} \\) → \\( \\text{False} \\)  \n   (since AND is true only if both are true)\n\n2. **Apply NOT**:  \n   \\( \\text{not (False)} \\) → \\( \\text{True} \\)\n\nFinal answer: true"
-}

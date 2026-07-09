@@ -1,3 +1,0 @@
-{
-  "content": "The latching current is the minimum anode current required to maintain the SCR in the on-state immediately after it has been turned on and the gate signal is removed.  \nThe holding current is the minimum anode current required to maintain the SCR in the on-state under steady-state conditions.  \n\nBy definition:  \nLatching current > Holding current.  \n\nGiven latching current = 20 mA, the holding current must be less than 20 mA.  \nAmong the options, only 10 mA is less than 20 mA.  \n\nFinal answer: (C)"
-}

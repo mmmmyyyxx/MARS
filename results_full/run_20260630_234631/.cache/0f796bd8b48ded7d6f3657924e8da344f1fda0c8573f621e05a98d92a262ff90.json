@@ -1,3 +1,0 @@
-{
-  "content": "In the Ward-Leonard speed control system, the generator’s field is excited by residual magnetism to initiate voltage buildup.  \nIf residual magnetism is absent, the generator fails to produce the required voltage for the motor, thus imposing a lower limit on the achievable speed.  \nField resistance and armature resistance affect speed control range but do not impose the lower limit in the same fundamental way as residual magnetism.  \n\nFinal answer: (C)"
-}

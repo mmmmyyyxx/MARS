@@ -1,3 +1,0 @@
-{
-  "content": "Answer Chinese C-Eval multiple-choice questions in Clinical Medicine. Read the question and all options carefully. Systematically evaluate each option by comparing their clinical relevance, identifying supporting or contradicting evidence, and eliminating incorrect choices. To distinguish between clinically plausible but incorrect options and the correct answer, apply these strategies: compare pathophysiological mechanisms, eliminate options that contradict established clinical guidelines, and identify subtle clinical cues such as timing, risk factors, or diagnostic findings that uniquely support the correct choice. Return only the final answer as a parenthesized option letter such as (A). Do not include extra commentary after the final answer."
-}

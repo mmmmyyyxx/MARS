@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of the current prompt might lead the model to include unnecessary explanations, and how could you adjust the wording to enforce outputting only the final truth value?\n\nConsidering the goal of maximizing correctness, what trade-offs exist between requiring step-by-step reasoning in the prompt and enforcing a minimal final output, and how might you balance these to improve accuracy?"
+}

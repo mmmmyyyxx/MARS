@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n`not not True and True and not True`  \n\n---\n\n**Step 1 – Order of operations**  \nPrecedence: `not` > `and` > `or`.  \nSo we evaluate `not` first, left to right.\n\n---\n\n**Step 2 – First `not`**  \n`not True` → `False`  \nSo `not not True` = `not False` → `True`.  \n\nExpression becomes:  \n`True and True and not True`\n\n---\n\n**Step 3 – Evaluate `not True`**  \n`not True` → `False`  \n\nExpression becomes:  \n`True and True and False`\n\n---\n\n**Step 4 – Evaluate `and` left to right**  \n`True and True` → `True`  \nThen `True and False` → `False`\n\n---\n\n**Final result:** `False`\n\n---\n\nFinal answer: false"
-}

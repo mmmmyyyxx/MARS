@@ -1,3 +1,0 @@
-{
-  "content": "The path has four vertices: (36.48,46.06), (35.35,54.14), (73.45,59.46), (74.58,51.38).  \nFour vertices means it is a quadrilateral.  \nChecking side lengths:  \n- First side: √[(35.35−36.48)² + (54.14−46.06)²] ≈ √[1.2769 + 65.3056] ≈ √66.5825 ≈ 8.16  \n- Second side: √[(73.45−35.35)² + (59.46−54.14)²] ≈ √[1452.25 + 28.3024] ≈ √1480.5524 ≈ 38.47  \n- Third side: √[(74.58−73.45)² + (51.38−59.46)²] ≈ √[1.2769 + 65.3056] ≈ √66.5825 ≈ 8.16  \n- Fourth side: √[(36.48−74.58)² + (46.06−51.38)²] ≈ √[1452.25 + 28.3024] ≈ √1480.5524 ≈ 38.47  \n\nTwo pairs of adjacent sides equal → kite.  \n\nFinal answer: (D)"
-}

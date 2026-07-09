@@ -1,0 +1,12 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Analyze the given task requirements to understand the goal of creating a prompt that maximizes correctness for pronoun disambiguation in a large language model.",
+    "Identify key components of the task: ambiguous pronoun identification, antecedent deduction, and distinguishing between resolvable and inherently ambiguous cases.",
+    "Design a clear, structured prompt that includes explicit instructions, definitions (e.g., \"inherently ambiguous,\" \"antecedent\"), and a representative example to guide the model.",
+    "Incorporate formatting guidelines in the prompt to ensure the model outputs answers in a consistent, easy-to-evaluate manner (e.g., matching given options like A, B, C).",
+    "Review and refine the prompt for clarity, specificity, and alignment with the task’s objectives, avoiding ambiguity in instructions.",
+    "Validate the prompt by testing it with sample sentences to confirm it elicits accurate, high-correctness responses from the model."
+  ]
+}

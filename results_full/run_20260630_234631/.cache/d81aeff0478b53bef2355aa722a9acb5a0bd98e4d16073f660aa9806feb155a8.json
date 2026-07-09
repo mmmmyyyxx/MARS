@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis question effectively targets a key prompt engineering strategy for disambiguation tasks. By asking about specifying ambiguity types with examples, it directly addresses how to improve systematic reasoning and reduce misinterpretation. The focus on concrete examples is particularly valuable for helping models generalize patterns. This aligns well with maximizing accuracy in disambiguation QA."
-}

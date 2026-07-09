@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the inclusion of explicit example inputs and outputs in your prompt help the model better understand the expected reasoning process for identifying free time?\n\n2. Considering the current step of designing a structured prompt with examples, what specific elements of the example input and output would most effectively guide the model to handle both simple and complex schedules accurately?"
+}

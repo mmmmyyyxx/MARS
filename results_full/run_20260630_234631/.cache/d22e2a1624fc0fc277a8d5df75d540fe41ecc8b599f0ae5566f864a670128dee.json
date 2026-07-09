@@ -1,3 +1,0 @@
-{
-  "content": "The path consists of four points: (21.10,97.94), (22.14,97.44), (10.48,73.34), (9.43,73.84), and returns to the first point.  \nThat is four distinct vertices connected in sequence, forming a quadrilateral.  \nChecking side lengths:  \n- First side: between (21.10,97.94) and (22.14,97.44) → short length  \n- Second side: between (22.14,97.44) and (10.48,73.34) → long length  \n- Third side: between (10.48,73.34) and (9.43,73.84) → short length  \n- Fourth side: between (9.43,73.84) and (21.10,97.94) → long length  \n\nTwo pairs of adjacent equal sides → kite.  \n\nFinal answer: (D)"
-}

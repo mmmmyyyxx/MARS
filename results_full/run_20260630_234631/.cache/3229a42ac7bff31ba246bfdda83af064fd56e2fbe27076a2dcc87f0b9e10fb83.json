@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\n( not False and False and False )  \n\n1. **not False** → True  \n2. **True and False** → False  \n3. **False and False** → False  \n\nSo the expression simplifies to **False**.  \n\nFinal answer: false"
-}

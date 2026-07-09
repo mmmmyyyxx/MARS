@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the order of operations:  \n\nExpression:  \n**( False or not False and False )**\n\n---\n\n**Step 1 — Parentheses**  \nWe start with the innermost parentheses, but here there’s only one set, so we evaluate inside directly.\n\nInside:  \n**False or not False and False**\n\n---\n\n**Step 2 — NOT operators**  \n`not False` = `True`  \n\nNow:  \n**False or True and False**\n\n---\n\n**Step 3 — AND operators**  \n`True and False` = `False`  \n\nNow:  \n**False or False**\n\n---\n\n**Step 4 — OR operators**  \n`False or False` = `False`  \n\n---\n\nFinal truth value: **false**  \n\nFinal answer: false"
-}

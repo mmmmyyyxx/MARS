@@ -1,3 +1,0 @@
-{
-  "content": "How can the prompt be structured to ensure the model naturally applies left-to-right evaluation for all operators without needing explicit step-by-step instructions for each type?"
-}

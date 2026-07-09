@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( False or False and False )`\n\n---\n\n**Step 1 – Identify operator precedence**  \nPrecedence: NOT > AND > OR, but parentheses first.\n\nInside parentheses: `False or False and False`  \nAND before OR:  \n`False and False` = `False`\n\nSo:  \n`False or (False and False)` → `False or False` → `False`\n\n---\n\n**Step 2 – Apply NOT**  \n`not (False)` → `True`\n\n---\n\n**Final answer: true**"
-}

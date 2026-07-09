@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\nExpression:  \n**False or ( False or not False )**\n\n1. **Operator precedence**: `not` has higher precedence than `or`.  \n   - `not False` → `True`\n\n2. Replace `not False` with `True`:  \n   Expression becomes:  \n   **False or ( False or True )**\n\n3. Evaluate parentheses first:  \n   `False or True` → `True`\n\n4. Now we have:  \n   **False or True**\n\n5. `False or True` → `True`\n\nFinal answer: true"
-}

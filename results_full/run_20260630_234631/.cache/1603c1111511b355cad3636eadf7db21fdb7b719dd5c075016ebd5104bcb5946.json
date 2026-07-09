@@ -1,3 +1,0 @@
-{
-  "content": "The surge current rating for an SCR is typically given in terms of \\( I^2 t \\), where \\( I \\) is the current and \\( t \\) is the time.  \n\nFor a half-cycle surge at 50 Hz:  \n- Half-cycle duration = \\( \\frac{1}{2 \\times 50} = 0.01 \\ \\text{s} \\)  \n- Given \\( I_{\\text{half}} = 3000 \\ \\text{A} \\),  \n\\[\nI^2 t = (3000)^2 \\times 0.01 = 9000000 \\times 0.01 = 90000\n\\]  \n\nFor one full cycle:  \n- Duration = \\( 0.02 \\ \\text{s} \\)  \n- Same \\( I^2 t \\) rating:  \n\\[\nI_{\\text{full}}^2 \\times 0.02 = 90000\n\\]  \n\\[\nI_{\\text{full}}^2 = \\frac{90000}{0.02} = 4.5 \\times 10^6\n\\]  \n\\[\nI_{\\text{full}} = \\sqrt{4.5 \\times 10^6} = \\sqrt{4500000} \\approx 2121.32 \\ \\text{A}\n\\]  \n\nFinal answer: (C)"
-}

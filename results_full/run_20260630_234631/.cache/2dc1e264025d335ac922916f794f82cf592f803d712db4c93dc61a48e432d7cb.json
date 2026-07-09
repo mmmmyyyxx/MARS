@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n1. **Innermost parentheses**:  \n   \\( \\text{True and False} \\) → \\( \\text{False} \\)\n\n2. **Negations from the inside out**:  \n   \\( \\text{not False} \\) → \\( \\text{True} \\)  \n   \\( \\text{not True} \\) → \\( \\text{False} \\)  \n   \\( \\text{not False} \\) → \\( \\text{True} \\)\n\nFinal answer: **true**  \n\nFinal answer: true"
-}

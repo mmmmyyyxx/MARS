@@ -1,3 +1,0 @@
-{
-  "content": "Each hexadecimal digit represents a value from 0 to 15 in decimal.  \nIn binary, values from 0 to 15 can be represented with 4 bits (since \\( 2^4 = 16 \\) possible values).  \nTherefore, each hex digit corresponds to exactly 4 binary bits.  \n\nFinal answer: (C)"
-}

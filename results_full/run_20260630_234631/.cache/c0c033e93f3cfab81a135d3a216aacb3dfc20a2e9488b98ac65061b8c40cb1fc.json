@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\nExpression:  \n`not True or False and True and True`  \n\n**Step 1 – Handle `not` (highest precedence after parentheses, but there are none here)**  \n`not True` = `False`  \n\nSo expression becomes:  \n`False or False and True and True`  \n\n**Step 2 – Handle `and` (precedence over `or`)**  \n`False and True` = `False`  \n`False and True` = `False`  \n\nActually, `and` is left-associative:  \n`False and True and True`  \n= `(False and True) and True`  \n= `False and True`  \n= `False`  \n\n**Step 3 – Handle `or`**  \n`False or False` = `False`  \n\nFinal answer: false"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n`not ( True ) and ( True )`  \n\n1. **Parentheses** — already just around `True`, so no change in grouping.  \n2. **NOT** — `not ( True )` → `False`.  \n   Now we have: `False and ( True )`  \n3. **AND** — `False and True` → `False`.  \n\nFinal result: **false**  \n\nFinal answer: false"
-}

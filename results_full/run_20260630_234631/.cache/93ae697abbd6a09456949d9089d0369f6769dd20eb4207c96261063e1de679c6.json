@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step-by-step.\n\nExpression:  \n`not ( False or False or True )`\n\n**Step 1 — Evaluate inside parentheses**  \nOperator `or` is left-associative and has lower precedence than `not`.  \n\n- `False or False` → `False`  \n- `False or True` → `True`  \n\nSo `(False or False or True)` = `True`.\n\n**Step 2 — Apply `not`**  \n`not (True)` → `False`\n\nFinal answer: false"
-}

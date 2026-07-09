@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step (even though I won’t show the steps in the final answer).\n\nThe expression is:  \nTrue or False or not True or True\n\nOperator precedence: **not** first, then **or** left to right.\n\n1. **not True** = False  \nExpression becomes: True or False or False or True\n\n2. Evaluate left to right:  \nTrue or False → True  \nTrue or False → True  \nTrue or True → True\n\nFinal result: **true**\n\nFinal answer: true"
-}

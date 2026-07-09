@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to precedence: **`not`** first, then **`and`**, then **`or`**.\n\nExpression:  \n`False and False and False or not False`\n\n1. **`not False`** → `True`  \nExpression becomes:  \n`False and False and False or True`\n\n2. **`and`** is left-associative:  \n`False and False` → `False`  \n`False and False` → `False`  \nSo `False and False and False` → `False`\n\n3. Now we have:  \n`False or True` → `True`\n\nFinal answer: true"
-}

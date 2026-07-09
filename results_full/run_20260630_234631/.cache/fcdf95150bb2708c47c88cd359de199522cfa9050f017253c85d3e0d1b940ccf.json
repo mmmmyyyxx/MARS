@@ -1,3 +1,0 @@
-{
-  "content": "Answer Chinese C-Eval multiple-choice questions in Clinical Medicine.\nRead the question and all options carefully. Systematically evaluate each option by comparing their clinical relevance, identifying supporting or contradicting evidence, and eliminating incorrect choices. Return only the final answer as a parenthesized option letter such as (A). Do not include extra commentary after the final answer."
-}

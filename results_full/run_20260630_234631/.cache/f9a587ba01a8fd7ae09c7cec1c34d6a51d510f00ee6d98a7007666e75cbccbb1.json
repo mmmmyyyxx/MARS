@@ -1,3 +1,0 @@
-{
-  "content": "In force-current analogy:  \n- Force (F) is analogous to current (I)  \n- Velocity (v) is analogous to voltage (V)  \n\nDash-pot equation: \\( F = B \\, v \\)  \nwhere \\( B \\) is the damping coefficient.  \n\nIn electrical terms, \\( I = G \\, V \\)  \nwhere \\( G \\) is conductance.  \n\nThus, \\( B \\) (dash-pot constant) → \\( G \\) (conductance).  \n\nFinal answer: (B)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step (internally) according to precedence rules:  \n\nThe expression is:  \n**True or False and not False and True**  \n\nOperator precedence: **not** > **and** > **or**  \n\n1. **not False** = True  \nExpression becomes:  \nTrue or False and True and True  \n\n2. **False and True** = False  \nExpression becomes:  \nTrue or False and True  \n\n3. **False and True** = False  \nExpression becomes:  \nTrue or False  \n\n4. **True or False** = True  \n\nFinal answer: true"
-}

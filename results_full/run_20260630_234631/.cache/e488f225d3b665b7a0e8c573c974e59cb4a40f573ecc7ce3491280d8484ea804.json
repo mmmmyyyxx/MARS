@@ -1,3 +1,0 @@
-{
-  "content": "A null type instrument uses a feedback mechanism to adjust a variable until the net deflection is zero, effectively comparing the measured quantity against a known reference. This inherently reduces errors due to nonlinearities, friction, and hysteresis in the movement, leading to higher accuracy compared to deflected type instruments, where the reading is taken directly from pointer deflection.  \n\nSensitivity is not necessarily lower — in fact, null instruments can be very sensitive to small deviations from balance. Response time is often slower because the system must achieve balance, not faster.  \n\nThus, only higher accuracy is correct.  \n\nFinal answer: (C)"
-}

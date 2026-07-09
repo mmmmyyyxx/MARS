@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Expression:**  \n`not ( not not not not False )`\n\n---\n\n**Step 1 — Start with the innermost `False`**  \nWe have `not not not not False` inside the parentheses.\n\n---\n\n**Step 2 — Apply `not` operators from right to left** (since they have the same precedence and are right-associative in logic, but here we can just evaluate sequentially from the inside outward):\n\n- `not False` → `True`\n- `not True` → `False`\n- `not False` → `True`\n- `not True` → `False`\n\nSo `not not not not False` = `False`.\n\n---\n\n**Step 3 — Apply the outer `not`**  \n`not ( False )` → `True`\n\n---\n\n**Final answer:** `true`\n\n---\n\nFinal answer: true"
-}

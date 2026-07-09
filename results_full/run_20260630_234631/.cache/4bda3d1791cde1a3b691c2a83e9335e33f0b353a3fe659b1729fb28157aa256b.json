@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not not True and not True or True**\n\n---\n\n**Step 1 – Interpret precedence**  \nIn Python (and similar logic), precedence is:  \n1. `not`  \n2. `and`  \n3. `or`  \n\nSo it’s equivalent to:  \n`((not not True) and (not True)) or True`\n\n---\n\n**Step 2 – Evaluate `not not True`**  \n`not True` → `False`  \n`not False` → `True`  \nSo `not not True` = `True`\n\n---\n\n**Step 3 – Evaluate `not True`**  \n`not True` = `False`\n\n---\n\n**Step 4 – Evaluate `True and False`**  \n`True and False` = `False`\n\n---\n\n**Step 5 – Evaluate `False or True`**  \n`False or True` = `True`\n\n---\n\n**Final answer: true**"
-}

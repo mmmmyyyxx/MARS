@@ -1,3 +1,0 @@
-{
-  "content": "RC oscillators are typically used for low-frequency applications because they can generate stable oscillations at lower frequencies without requiring impractically large inductor values, which would be needed in LC oscillators at low frequencies. LC oscillators are better suited for higher frequency ranges due to their reliance on inductive and capacitive components that are more practical at those frequencies.  \n\nFinal answer: (B)"
-}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to handle operator precedence and nested parentheses without relying on the model's implicit knowledge?  \n\n2. What specific wording in the prompt could minimize ambiguity when the model encounters expressions with multiple operators of equal precedence?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.\n\nThe expression is:  \n**not False and not not True and True**\n\n---\n\n**Step 1 – Resolve innermost NOTs**  \nWe have `not False` and `not not True`.  \n\n- `not False` = **True**  \n- `not not True` = `not (not True)` → `not False` = **True**\n\nSo after replacing:  \n**True and True and True**\n\n---\n\n**Step 2 – Apply AND operators left to right**  \n`True and True` = **True**  \n`True and True` = **True**\n\nSo final result = **True**\n\n---\n\n**Final answer: true**"
-}

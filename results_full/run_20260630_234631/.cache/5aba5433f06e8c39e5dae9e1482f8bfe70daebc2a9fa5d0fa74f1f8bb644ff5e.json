@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**False or False and False or not True**  \n\n1. **Order of operations**: In Boolean logic, `and` has higher precedence than `or`.  \n   So group `False and False` first:  \n   `False or (False and False) or not True`  \n\n2. `False and False` = **False**  \n\n3. Now we have:  \n   `False or False or not True`  \n\n4. `not True` = **False**  \n\n5. Now:  \n   `False or False or False`  \n\n6. Evaluate left to right:  \n   `False or False` = **False**  \n   `False or False` = **False**  \n\nFinal result: **False**  \n\nFinal answer: false"
-}

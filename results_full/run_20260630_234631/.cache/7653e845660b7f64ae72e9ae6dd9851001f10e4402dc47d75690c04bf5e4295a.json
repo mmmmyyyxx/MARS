@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step according to the rules.\n\n**Original expression:**  \n`False and False and not not not True`\n\n---\n\n**Step 1 — Resolve `not not not True`**  \nWe start with the innermost logical `not` operations (no parentheses here, so we handle `not` first from right to left).\n\n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`\n\nSo `not not not True` = `False`.\n\nNow the expression becomes:  \n`False and False and False`\n\n---\n\n**Step 2 — Apply AND operators**  \nAND is associative, so we can evaluate left to right:\n\n- `False and False` → `False`  \n- `False and False` → `False`\n\nSo the final result is `False`.\n\n---\n\n**Final answer: false**"
-}

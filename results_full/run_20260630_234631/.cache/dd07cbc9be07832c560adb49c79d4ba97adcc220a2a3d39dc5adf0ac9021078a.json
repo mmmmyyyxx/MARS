@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve parentheses: (True or False) = True  \nThen resolve negation: not True = False  \nNow evaluate: True or False = True  \n\nFinal answer: true"
-}

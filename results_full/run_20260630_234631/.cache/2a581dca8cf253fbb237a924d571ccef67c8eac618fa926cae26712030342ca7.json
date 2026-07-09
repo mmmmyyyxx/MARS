@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\n**Expression:**  \n`not not not not True or not True`\n\n1. Start with the left side: `not not not not True`  \n   - `not True` → False  \n   - `not False` → True  \n   - `not True` → False  \n   - `not False` → True  \n   So `not not not not True` = **True**.\n\n2. Right side: `not True` = **False**.\n\n3. Combine with `or`:  \n   `True or False` → **True**.\n\nFinal answer: true"
-}

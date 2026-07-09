@@ -1,3 +1,0 @@
-{
-  "content": "The question describes a scenario where the conductor is stationary but the magnetic field changes with time. This directly corresponds to Faraday’s law of electromagnetic induction:  \nA changing magnetic field induces an electromotive force (emf) in a stationary conductor.  \n\nIn electrical engineering terminology:  \n- **Dynamically induced emf** occurs when the conductor moves through a stationary magnetic field.  \n- **Statically induced emf** (often called *transformer emf*) occurs when the conductor is stationary but the magnetic field varies with time.  \n\nThe given option “static induced emf” matches this principle, while “dynamically induced emf” does not.  \n“Virtually induced emf” is not a standard term.  \n\nFinal answer: (C)"
-}

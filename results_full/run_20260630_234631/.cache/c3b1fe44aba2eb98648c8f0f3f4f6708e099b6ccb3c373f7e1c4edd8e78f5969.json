@@ -1,3 +1,0 @@
-{
-  "content": "The 8086/8088 bus cycle consists of T1 (address output), T2 (data bus direction change and read data setup), T3 (data available), and T4 (cycle end). Wait states (Tw) are inserted when the memory or I/O device needs more time to provide valid data.  \nThey extend the read/write cycle by inserting extra clock cycles **between T3 and T4**, because T3 is when the CPU samples the data, and if the device isn’t ready, Tw cycles are added before T4 to give more time.  \n\nThus, the correct placement is between **T3 and T4**.  \n\nFinal answer: (C)"
-}

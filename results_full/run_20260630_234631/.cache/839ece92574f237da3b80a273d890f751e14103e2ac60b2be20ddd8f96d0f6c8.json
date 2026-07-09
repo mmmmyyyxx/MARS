@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.\n\nExpression:  \n`not not False or not False or True`\n\n1. **Innermost `not False`**  \n   `not False` = `True`\n\n2. **`not not False`**  \n   `not not False` = `not (not False)` = `not (True)` = `False`\n\n3. **`not False`**  \n   `not False` = `True`\n\n4. Expression now:  \n   `False or True or True`\n\n5. Evaluate left to right (logical OR is associative):  \n   `False or True` → `True`  \n   `True or True` → `True`\n\nFinal answer: true"
-}

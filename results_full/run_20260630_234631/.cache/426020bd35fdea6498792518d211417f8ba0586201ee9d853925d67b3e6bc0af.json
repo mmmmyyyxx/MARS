@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \nTrue and not not not not not True\n\n---\n\n**Step 1:** Handle the sequence of NOT operators from right to left (highest precedence after parentheses, but there are none here).\n\nStart with the rightmost `not True`:  \nnot True = False\n\nNow apply the next `not` to that result:  \nnot False = True\n\nNext `not`:  \nnot True = False\n\nNext `not`:  \nnot False = True\n\nNext `not`:  \nnot True = False\n\nSo `not not not not not True` = False\n\n---\n\n**Step 2:** Now evaluate the AND:\n\nTrue and False = False\n\n---\n\nFinal answer: false"
-}

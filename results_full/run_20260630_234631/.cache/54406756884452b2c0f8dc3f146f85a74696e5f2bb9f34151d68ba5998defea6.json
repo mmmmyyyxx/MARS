@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n`not not not not True and not True`\n\n---\n\n**Step 1 – Precedence:**  \n`not` has higher precedence than `and`, so we evaluate all `not` operations first from right to left.\n\n---\n\n**Step 2 – Evaluate `not True`:**  \n`not True = False`\n\nSo the expression becomes:  \n`not not not not True and False`\n\n---\n\n**Step 3 – Evaluate `not not not not True`:**  \nWork from the innermost `not` outward (right to left):\n\n- `not True = False`  \n- `not False = True`  \n- `not True = False`  \n- `not False = True`\n\nSo `not not not not True = True`\n\n---\n\n**Step 4 – Combine with `and`:**  \nNow we have:  \n`True and False`  \n`True and False = False`\n\n---\n\n**Final answer: false**"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the innermost NOT:  \nnot False → True  \nIntermediate: (False or not not True)  \n\nSecond, resolve the next NOT:  \nnot True → False  \nIntermediate: (False or not False)  \n\nThird, resolve the next NOT:  \nnot False → True  \nIntermediate: (False or True)  \n\nFourth, resolve the OR:  \nFalse or True → True  \n\nFinal answer: true"
-}

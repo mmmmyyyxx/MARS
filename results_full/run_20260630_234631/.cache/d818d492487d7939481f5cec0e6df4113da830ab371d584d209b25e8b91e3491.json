@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.  \n\nExpression:  \n( False ) and ( not False )\n\n1. **Parentheses first** — each side is already in parentheses.  \n   - Left side: False  \n   - Right side: not False  \n\n2. **NOT operation** (highest precedence):  \n   not False = True  \n\n3. **AND operation**:  \n   False and True = False  \n\nFinal answer: false"
-}

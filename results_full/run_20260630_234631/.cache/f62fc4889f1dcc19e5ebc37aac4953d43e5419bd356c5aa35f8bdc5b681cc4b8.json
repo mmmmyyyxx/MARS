@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step-by-step:\n\n1. Start with the expression:  \n   `( ( not True ) or True )`\n\n2. Resolve the innermost parentheses first:  \n   `not True` → `False`\n\n3. Substitute back:  \n   `( False or True )`\n\n4. Apply the OR operator:  \n   `False or True` → `True`\n\nFinal answer: true"
-}

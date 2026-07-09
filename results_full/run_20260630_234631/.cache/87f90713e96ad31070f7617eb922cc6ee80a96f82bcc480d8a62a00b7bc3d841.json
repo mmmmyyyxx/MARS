@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( False ) and ( False )`\n\n---\n\n**Step 1:** Apply `not` (highest precedence).  \n`not (False)` → `True`\n\nNow we have:  \n`True and False`\n\n---\n\n**Step 2:** Apply `and`.  \n`True and False` → `False`\n\n---\n\n**Final answer: false**"
-}

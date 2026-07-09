@@ -1,3 +1,0 @@
-{
-  "content": "Total steps: 5  \nStep 1: Analyze the GSM8K dataset to identify common problem types, error patterns, and required reasoning steps.  \nStep 2: Draft an initial prompt that clearly specifies the output format (numeric answer only) and includes explicit instructions to show step-by-step reasoning before the final answer.  \nStep 3: Incorporate examples of solved problems in the prompt to demonstrate the expected reasoning process and format.  \nStep 4: Refine the prompt by adding constraints to avoid common mistakes (e.g., unit conversions, arithmetic errors) and encourage verification of intermediate steps.  \nStep 5: Test the prompt on a subset of GSM8K problems, analyze failures, and iteratively adjust instructions or examples to improve accuracy."
-}

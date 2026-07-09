@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n```\nnot not not True and False and False\n```\n\n**Step 1 – Operator precedence**  \nIn Boolean logic: `not` has the highest precedence, then `and`, then `or`.  \nSo `not not not True` is evaluated first.\n\n**Step 2 – Evaluate `not not not True`**  \n- `not True` → `False`  \n- `not False` → `True`  \n- `not True` → `False`  \n\nSo `not not not True` = `False`.\n\n**Step 3 – Combine with `and False and False`**  \nNow the expression is:  \n`False and False and False`  \n\n`and` is left-associative:  \n- `False and False` → `False`  \n- `False and False` → `False`  \n\nSo the whole expression evaluates to `False`.\n\nFinal answer: false"
-}

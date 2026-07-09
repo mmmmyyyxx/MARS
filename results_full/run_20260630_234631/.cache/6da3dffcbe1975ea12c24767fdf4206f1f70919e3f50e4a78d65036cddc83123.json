@@ -1,3 +1,0 @@
-{
-  "content": "A combinational PLD with a **fixed AND array** and a **programmable OR array** matches the definition of a **PAL (Programmable Array Logic)**.  \n\n- **PLD** is too generic — it includes all types (PROM, PAL, PLA).  \n- **PROM** has a fixed AND array (address decoder) and programmable OR array, but it is used as a memory device, not typically classified under general-purpose combinational PLD in this context; also, PROMs are usually for truth table storage.  \n- **PAL** fits the given structure exactly: fixed AND array, programmable OR connections.  \n- **PLA** has both arrays programmable (AND and OR), so it does not match.  \n\nFinal answer: (C)"
-}

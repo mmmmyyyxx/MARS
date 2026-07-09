@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \nTrue or ( not ( True ) )\n\n1. **Resolve parentheses and negations first**  \n   Inside parentheses: not ( True ) → False  \n   So expression becomes: True or False\n\n2. **Apply logical operators in precedence order**  \n   OR: True or False → True\n\n3. **Final logical value**  \n   True\n\nFinal answer: true"
-}

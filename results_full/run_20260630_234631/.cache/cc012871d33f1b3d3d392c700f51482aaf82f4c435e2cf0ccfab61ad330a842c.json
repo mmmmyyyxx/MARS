@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step:  \n\nExpression:  \n**not False or ( True ) and True**  \n\n1. **not False** = True  \n2. **True and True** = True (parentheses first, but here parentheses just isolate `True`, so `(True) and True` = `True and True` = True)  \n3. Now we have: **True or True**  \n4. **True or True** = True  \n\nFinal answer: True"
-}

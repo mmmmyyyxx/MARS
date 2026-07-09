@@ -1,3 +1,0 @@
-{
-  "content": "In control systems, a \"state box\" typically represents the part of a system model that defines the effect of inputs on the control subsystem by describing state transitions and outputs based on current state and inputs.  \nA \"data box\" is not standard terminology for this role.  \nA \"logical box\" is vague and not specific to control system modeling.  \nA \"decision box\" usually refers to a conditional branch in flowcharts, not the overall input–state–output relationship.  \n\nThus, the correct term is **state box**.\n\nFinal answer: (D)"
-}

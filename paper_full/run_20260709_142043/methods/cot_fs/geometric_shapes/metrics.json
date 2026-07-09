@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.4979919678714859,
+  "num_samples": 249,
+  "num_correct": 124,
+  "num_failed": 125,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "geometric_shapes",
+  "method_id": "cot_fs",
+  "method_display_name": "CoT(FS)",
+  "answer_format": "option_letter",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.4979919678714859,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "best_effort_reimplementation",
+  "exactness_level": "best_effort_reimplementation",
+  "runtime_seconds": 266.35308170318604
+}

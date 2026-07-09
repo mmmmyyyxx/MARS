@@ -1,3 +1,0 @@
-{
-  "content": "A snubber circuit (typically an RC network) is used across an SCR to limit the rate of rise of voltage (dV/dt) and prevent false triggering.  \nFuses, circuit breakers, and equalizing circuits serve other protection roles (overcurrent, overvoltage sharing), but not primarily for high dV/dt.  \n\nFinal answer: (A)"
-}

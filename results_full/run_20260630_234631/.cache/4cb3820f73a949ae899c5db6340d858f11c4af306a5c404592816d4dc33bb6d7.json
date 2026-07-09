@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step:  \n\nExpression:  \n( not False ) or not not False  \n\n1. **Parentheses first**:  \n( not False ) → not False = True  \nExpression becomes: True or not not False  \n\n2. **NOT operations from left to right**:  \nnot not False → not (not False) → not (True) → False  \n\n3. Expression now: True or False  \n\n4. **OR**:  \nTrue or False → True  \n\nFinal answer: true"
-}

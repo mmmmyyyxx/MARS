@@ -1,3 +1,0 @@
-{
-  "content": "Let’s go step by step.\n\n**Original expression:**  \n`not not not not True or not True`\n\n---\n\n**Step 1 – Resolve `not not not not True` from left to right**  \nEach `not` flips the truth value.\n\n- `not True` → `False`\n- `not False` → `True`\n- `not True` → `False`\n- `not False` → `True`\n\nSo `not not not not True` simplifies to `True`.\n\n---\n\n**Step 2 – Substitute back into the expression**  \nExpression becomes:  \n`True or not True`\n\n---\n\n**Step 3 – Apply `not True`**  \n`not True` → `False`\n\nExpression becomes:  \n`True or False`\n\n---\n\n**Step 4 – Apply OR**  \n`True or False` → `True`\n\n---\n\n**Final answer: true**"
-}

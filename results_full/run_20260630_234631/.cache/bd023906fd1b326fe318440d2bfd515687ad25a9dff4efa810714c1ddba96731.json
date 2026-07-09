@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n1. **Inside parentheses first** (OR has higher precedence than NOT here):  \n   \\( \\text{True or False or True} \\)  \n   = \\( \\text{True or False} \\) → \\( \\text{True} \\)  \n   = \\( \\text{True or True} \\) → \\( \\text{True} \\)\n\n2. **Apply NOT**:  \n   \\( \\text{not (True)} \\) → \\( \\text{False} \\)\n\nFinal answer: false"
-}

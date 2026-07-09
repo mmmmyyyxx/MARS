@@ -1,3 +1,0 @@
-{
-  "content": "The Hardy-Weinberg principle describes a theoretical situation in which allele and genotype frequencies remain constant from generation to generation in the absence of evolutionary influences.  \nThe required conditions are:  \n- Large population size (no genetic drift)  \n- No gene flow (no migration into or out of the population)  \n- No mutations  \n- Random mating  \n- No natural selection  \n\nOption (A) says \"Genes are exchanged with other populations\" — this is gene flow, which violates Hardy-Weinberg equilibrium, so it is the condition that must **not** occur.  \n\nFinal answer: (A)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let's break down the SVG path step by step:\n\n- **M 64.00,63.00** → Move to (64, 63)  \n- **L 44.00,63.00** → Line to (44, 63)  \n- **L 44.00,50.00** → Line to (44, 50)  \n- **L 64.00,50.00** → Line to (64, 50)  \n- **L 64.00,37.00** → Line to (64, 37)  \n- **L 83.00,57.00** → Line to (83, 57)  \n- **L 64.00,76.00** → Line to (64, 76)  \n- **L 64.00,63.00** → Line back to (64, 63)  \n\nCounting the distinct vertices:  \n(64,63), (44,63), (44,50), (64,50), (64,37), (83,57), (64,76), (64,63) — but (64,63) is repeated at start and end, so distinct points are:  \n1. (64,63)  \n2. (44,63)  \n3. (44,50)  \n4. (64,50)  \n5. (64,37)  \n6. (83,57)  \n7. (64,76)  \n\nThat’s **7 distinct vertices**, so it’s a **heptagon**.\n\nFinal answer: (B)"
-}

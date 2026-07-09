@@ -1,0 +1,49 @@
+**Optimized Prompt with Enhanced Complexity Classification and Transition Time Enforcement:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person's completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **rigorous reasoning approach** that first classifies schedule complexity with enhanced precision and then adapts the analysis with strict transition time protocols.
+
+**Step 1: Enhanced Complexity Classification Framework**
+Before analysis, classify the schedule using these **strict, unambiguous criteria**:
+- **Simple Schedule**: Contains **only** events with explicit, non-overlapping start/end times (e.g., "Meeting 10–11 AM"), **no** flexible activities, **no** implied routines/travel, **no** ambiguous time references, and **no** location changes requiring transitions.
+- **Complex Schedule**: Contains **any** of the following:
+  - Flexible/adjustable activities (e.g., "worked on project," "brief workout")
+  - Ambiguous time references (e.g., "morning," "later")
+  - Implied dependencies or routines (e.g., "commute," "preparation")
+  - Overlapping or potentially overlapping events
+  - **Any** location changes or transitions between activities
+  - Activities with unspecified but implied setup/cleanup time
+
+**Step 2: Adaptive Analysis Methods**
+
+**For Simple Schedules (Direct Gap Analysis)**
+- Identify only explicit time gaps between fixed events
+- Assume gaps are free unless explicitly contradicted by context
+- **Apply minimum 15-minute transition buffer** between consecutive events at different locations
+- Skip constraint checking and flexible activity analysis
+
+**For Complex Schedules (Comprehensive Analysis)**
+1. **Enhanced Fixed vs. Flexible Classification Protocol**:
+   - **Fixed Activities**: MUST have explicit start/end times (e.g., "Meeting 10–11 AM"), are time-bound and immovable
+   - **Flexible Activities**: Characterized by:
+     * No explicit timing (e.g., "worked on project")
+     * Adjustable duration indicators (e.g., "brief workout," "extended lunch")
+     * General time references without specifics (e.g., "morning emails")
+     * Activities that typically vary in timing (e.g., "exercise," "errands")
+
+2. **Constraint Mapping with Duration and Transition Validation**:
+   - For **flexible activities**: Assign realistic minimum/maximum durations based on context
+   - For **ambiguous events**: Calculate most probable timing using typical patterns
+   - Map sequencing dependencies between all events
+   - **Mandatory Transition Time Allocation**:
+     * **Minimum 15 minutes** between activities at different locations
+     * **Minimum 10 minutes** for activity setup/preparation when implied
+     * **Minimum 5 minutes** for activity wrap-up/cleanup when implied
+     * Scale transition times based on activity complexity and context cues
+   - Include typical preparation/wrap-up buffers for relevant activities
+
+3. **Gap Identification with Enhanced Logical Flow**:
+   - First place all **fixed activities** at their specified times with transition buffers
+   - Then schedule **flexible activities** around fixed events respecting:
+     * Logical sequence (morning before afternoon, meals at typical times)
+     * Duration constraints (don't compress flexible activities unrealistically)
+     * **Strict transition time requirements** between all activities

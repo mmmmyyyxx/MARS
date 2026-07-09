@@ -1,3 +1,0 @@
-{
-  "content": "not not ( True ) or not True  \n= not not True or not True  \n= not False or not True  \n= True or False  \n= True  \n\nFinal answer: true"
-}

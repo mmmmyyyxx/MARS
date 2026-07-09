@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt's instructions for analyzing grammatical relationships and semantic plausibility are specific enough to prevent the model from introducing external knowledge or assumptions?\n\n2. What steps can you take to test the prompt with a diverse set of sample sentences, including edge cases, to verify that it consistently produces the correct output without requiring explanations?"
+}

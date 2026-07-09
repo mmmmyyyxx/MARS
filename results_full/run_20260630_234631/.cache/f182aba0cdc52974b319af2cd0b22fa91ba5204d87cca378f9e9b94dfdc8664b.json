@@ -1,3 +1,0 @@
-{
-  "content": "Let's evaluate step by step.\n\nExpression:  \n**False and not True and True and False**\n\n---\n\n### Step 1: Apply **NOT** operator first (highest precedence after parentheses, but there are none here)\n`not True` = **False**\n\nSo the expression becomes:  \n**False and False and True and False**\n\n---\n\n### Step 2: Apply **AND** from left to right (AND is left-associative and has higher precedence than OR, but there’s no OR here)\n\n- First: `False and False` → **False**  \n- Then: `False and True` → **False**  \n- Then: `False and False` → **False**\n\n---\n\nFinal result: **False**\n\n---\n\n**Final answer: false**"
-}

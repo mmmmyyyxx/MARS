@@ -1,3 +1,0 @@
-{
-  "content": "A D-flip-flop is transparent when the clock enable (or clock signal in level-triggered flip-flops) allows the input to pass directly to the output.  \nIn level-sensitive D flip-flops (often called D-latches), transparency occurs when the clock is at a specific level (usually high), making the output follow the input in real time.  \n- (A) and (B) describe output states, not transparency.  \n- (C) is incorrect because the output does not follow the clock; the clock only enables the latch.  \n- (D) matches the definition: output follows input during transparency.  \n\nFinal answer: (D)"
-}

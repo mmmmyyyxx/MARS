@@ -1,0 +1,26 @@
+|task_id|display_name|method|accuracy|num_samples|num_correct|num_failed|api_errors|parse_errors|runtime_seconds|tokens_prompt|tokens_completion|tokens_total|cost_estimate|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|boolean_expressions|Boolean Expressions|Origin|0.891566265060241|249|222|27|0|0||||||
+|boolean_expressions|Boolean Expressions|CoT(ZS)|0.9196787148594378|249|229|20|0|0||||||
+|boolean_expressions|Boolean Expressions|CoT(FS)|0.9799196787148594|249|244|5|0|0||||||
+|boolean_expressions|Boolean Expressions|MARS-official|0.9156626506024096|249|228|21|0|0||||||
+|disambiguation_qa|Disambiguation QA|Origin|0.46184738955823296|249|115|134|0|0||||||
+|disambiguation_qa|Disambiguation QA|CoT(ZS)|0.6184738955823293|249|154|95|0|0||||||
+|disambiguation_qa|Disambiguation QA|CoT(FS)|0.7831325301204819|249|195|54|16|0|146.23677563667297|43578|208|43786|0.0|
+|disambiguation_qa|Disambiguation QA|MARS-official|0.6867469879518072|249|171|78|0|0|3246.1745727062225|1283043|32884|1315927|0.0|
+|formal_fallacies|Formal Fallacies|Origin|0.7670682730923695|249|191|58|0|0|149.6590712070465|99661|491|100152|0.0|
+|formal_fallacies|Formal Fallacies|CoT(ZS)|0.7228915662650602|249|180|69|0|0|146.27031588554382|47346|642|47988|0.0|
+|formal_fallacies|Formal Fallacies|CoT(FS)|0.8112449799196787|249|202|47|0|0|193.14849138259888|145203|996|146199|0.0|
+|formal_fallacies|Formal Fallacies|MARS-official|0.7550200803212851|249|188|61|0|0|562.7544274330139|251917|3690|255607|0.0|
+|geometric_shapes|Geometric Shapes|Origin|0.3855421686746988|249|96|153|0|0|217.4524326324463|68601|585|69186|0.0|
+|geometric_shapes|Geometric Shapes|CoT(ZS)|0.5100401606425703|249|127|122|0|0|261.0351896286011|56125|498|56623|0.0|
+|geometric_shapes|Geometric Shapes|CoT(FS)|0.4979919678714859|249|124|125|0|0|266.35308170318604|161701|498|162199|0.0|
+|geometric_shapes|Geometric Shapes|MARS-official|0.4457831325301205|249|111|138|4|0|3739.9748589992523|1878582|42340|1920922|0.0|
+|ruin_names|Ruin Names|Origin|0.8795180722891566|249|219|30|0|0|115.49779963493347|66964|653|67617|0.0|
+|ruin_names|Ruin Names|CoT(ZS)|0.7108433734939759|249|177|72|0|0|103.72923612594604|37883|498|38381|0.0|
+|ruin_names|Ruin Names|CoT(FS)|0.8755020080321285|249|218|31|0|0|103.37118315696716|88430|498|88928|0.0|
+|ruin_names|Ruin Names|MARS-official|0.9076305220883534|249|226|23|0|0|488.9058082103729|301404|5098|306502|0.0|
+|sports_understanding|Sports Understanding|Origin|0.7228915662650602|249|180|69|0|0|108.89710092544556|27913|562|28475|0.0|
+|sports_understanding|Sports Understanding|CoT(ZS)|0.8192771084337349|249|204|45|0|0|112.23733353614807|19090|988|20078|0.0|
+|sports_understanding|Sports Understanding|CoT(FS)|0.8473895582329317|249|211|38|0|0|132.1282262802124|41814|988|42802|0.0|
+|sports_understanding|Sports Understanding|MARS-official|0.7871485943775101|249|196|53|0|0|2005.9831175804138|1571230|46069|1617299|0.0|

@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the SVG path data are most critical for accurately determining the geometric shape, and how might focusing on these aspects improve the correctness rate?\n\nHow could you structure the prompt to encourage the model to systematically evaluate both the path's closure and its defining geometric features before making a selection?"
+}

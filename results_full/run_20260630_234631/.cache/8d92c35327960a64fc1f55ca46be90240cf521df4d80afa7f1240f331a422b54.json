@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step according to the rules:  \n\n**Expression:**  \nnot ( False or False and False )  \n\n---\n\n**Step 1 — Identify innermost grouping and precedence**  \nInside parentheses: `False or False and False`  \nPrecedence: AND before OR, so first compute `False and False`.  \n\n`False and False` = **False**  \n\nNow expression inside parentheses becomes:  \n`False or False`  \n\n---\n\n**Step 2 — Evaluate OR**  \n`False or False` = **False**  \n\nSo parentheses simplify to:  \nnot ( **False** )  \n\n---\n\n**Step 3 — Apply NOT**  \nnot (False) = **True**  \n\n---\n\n**Final answer: true**"
-}

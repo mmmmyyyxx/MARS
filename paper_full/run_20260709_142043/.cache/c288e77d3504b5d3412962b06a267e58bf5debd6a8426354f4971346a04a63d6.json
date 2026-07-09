@@ -1,0 +1,3 @@
+{
+  "content": "What patterns in the SVG path commands help you determine whether the shape is regular or irregular, and how might focusing on command repetition versus variation guide your classification?\n\nConsidering the goal of creating a prompt that maximizes correctness, how could you structure the instructions to ensure the model systematically checks for both the presence of curves and the number of vertices before making a final selection?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n`not ( False or ( False ) )`\n\n1. **Parentheses first**  \nInside: `False or (False)` → `False or False` → `False`\n\n2. **Apply NOT**  \n`not (False)` → `True`\n\nFinal answer: true"
-}

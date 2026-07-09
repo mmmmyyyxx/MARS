@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**False or True and not False or True**\n\n---\n\n**Step 1: Handle `not` (highest precedence)**  \n`not False` → `True`  \n\nExpression becomes:  \nFalse or True and True or True  \n\n---\n\n**Step 2: Handle `and` (next precedence)**  \n`True and True` → `True`  \n\nExpression becomes:  \nFalse or True or True  \n\n---\n\n**Step 3: Handle `or` (lowest precedence, left to right)**  \n`False or True` → `True`  \n\nExpression becomes:  \nTrue or True → `True`  \n\n---\n\n**Final answer: true**"
-}

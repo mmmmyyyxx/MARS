@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**True or True or not False or False**  \n\n1. **Order of operations**: In Boolean logic, `not` has higher precedence than `or`.  \n   So `not False` is evaluated first:  \n   `not False = True`  \n\n2. Now the expression becomes:  \n   `True or True or True or False`  \n\n3. **Evaluate left to right** (though for `or`, any `True` makes the whole thing `True`):  \n   - `True or True` → `True`  \n   - `True or True` → `True`  \n   - `True or False` → `True`  \n\nSo the final result is **True**.  \n\nFinal answer: true"
-}

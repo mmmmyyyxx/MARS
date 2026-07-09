@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not True or not False and not False**  \n\n---\n\n**Step 1 – Interpret operator precedence**  \nIn Boolean logic, `not` has higher precedence than `and`, which has higher precedence than `or`.  \nSo:  \n\nnot True = **False**  \nnot False = **True**  \nnot False = **True**  \n\nExpression becomes:  \n\n**False or (True and True)**  \n\n---\n\n**Step 2 – Evaluate `and` first**  \nTrue and True = **True**  \n\nExpression now:  \n\n**False or True**  \n\n---\n\n**Step 3 – Evaluate `or`**  \nFalse or True = **True**  \n\n---\n\nFinal answer: true"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Determine the truth value of the given Boolean expression by carefully evaluating each logical operator and operand. If the expression simplifies to true, output \"true\"; if it simplifies to false, output \"false\". Ensure your reasoning is precise and step-by-step before providing the final answer."
-}

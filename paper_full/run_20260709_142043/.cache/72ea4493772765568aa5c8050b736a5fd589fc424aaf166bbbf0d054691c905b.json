@@ -1,0 +1,3 @@
+{
+  "content": "How can the current prompt be improved to ensure the model correctly handles expressions with multiple levels of parentheses and nested operators without skipping intermediate steps?\n\nConsidering the goal of maximizing correctness rate, what specific modifications could be made to the prompt structure to reduce ambiguity in operator precedence interpretation while maintaining clarity for the language model?"
+}

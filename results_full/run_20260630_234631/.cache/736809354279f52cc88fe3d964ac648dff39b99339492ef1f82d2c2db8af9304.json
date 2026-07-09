@@ -1,3 +1,0 @@
-{
-  "content": "The illumination \\( E \\) is given by the inverse square law:  \n\\[\nE = \\frac{I}{d^2}\n\\]\nwhere \\( I \\) is the candle power (in candelas) and \\( d \\) is the distance in meters.\n\nGiven:  \n\\( E = 6 \\ \\text{lux} \\)  \n\\( d = 5 \\ \\text{m} \\)\n\n\\[\nI = E \\times d^2 = 6 \\times 25 = 150 \\ \\text{cd}\n\\]\n\nSo the correct option is (C).  \n\nFinal answer: (C)"
-}

@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down.  \n\nThe premise says:  \n> \"not being an opponent to FC Utrecht is sufficient for not being an admirer of St Johnstone FC.\"\n\nIn logical terms:  \nIf **not opponent(FC Utrecht)** → **not admirer(St Johnstone FC)**.  \n\nThis is equivalent to:  \n**Admirer(St Johnstone FC)** → **opponent(FC Utrecht)**.  \n\nThe conclusion says:  \n> \"everyone who is an admirer of St Johnstone FC is an opponent to FC Utrecht, too.\"\n\nThat is exactly the contrapositive of the premise, so the reasoning is deductively valid.  \n\nFinal answer: valid"
-}

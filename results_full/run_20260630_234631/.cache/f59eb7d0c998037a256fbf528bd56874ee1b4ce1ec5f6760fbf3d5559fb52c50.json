@@ -1,3 +1,0 @@
-{
-  "content": "Induction heating relies on eddy currents induced in a conductor by a changing magnetic field, which generates heat due to resistive losses.  \nIt works in conducting materials, whether magnetic or non-magnetic — magnetic materials can also have additional heating from hysteresis losses, but the basic requirement is that the material must be electrically conductive.  \nThus:  \n\n- (A) is incorrect because it excludes magnetic conductors.  \n- (C) is wrong because insulating materials do not support eddy currents.  \n- (D) is incomplete because it excludes non-magnetic conductors.  \n- (B) is correct because it includes all conductors (magnetic or non-magnetic).  \n\nFinal answer: (B)"
-}

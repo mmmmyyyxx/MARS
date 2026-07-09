@@ -1,3 +1,0 @@
-{
-  "content": "A voltage clamping device, such as a Zener diode or a varistor, operates by becoming conductive when the voltage exceeds a certain threshold. Under normal voltage conditions, it presents high impedance, but under overvoltage conditions, its impedance drops significantly to shunt excess current and clamp the voltage.  \n\nFinal answer: (B)"
-}

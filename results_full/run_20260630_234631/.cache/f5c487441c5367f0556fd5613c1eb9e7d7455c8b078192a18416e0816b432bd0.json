@@ -1,3 +1,0 @@
-{
-  "content": "Wait states (Tw) in the 8086/8088 microprocessor are inserted between T3 and T4 if the READY signal is not active by the end of T3, to allow more time for slow memory or I/O devices to provide data.  \n\nThus, the correct option is between T3 and T4.  \n\nFinal answer: (C)"
-}

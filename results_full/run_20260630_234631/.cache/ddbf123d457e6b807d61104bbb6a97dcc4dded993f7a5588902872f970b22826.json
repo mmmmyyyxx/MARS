@@ -1,3 +1,0 @@
-{
-  "content": "How could the prompt more explicitly guide the model to first identify the most critical clinical concept or \"diagnostic anchor\" from the question stem itself before even considering the options, to prevent premature narrowing of focus?"
-}

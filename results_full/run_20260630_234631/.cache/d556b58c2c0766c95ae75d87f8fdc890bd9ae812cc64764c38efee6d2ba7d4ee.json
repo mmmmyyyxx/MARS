@@ -1,3 +1,0 @@
-{
-  "content": "The reciprocity theorem states that in a linear bilateral network, the interchange of an ideal voltage source and an ideal ammeter (detector) does not change the ammeter reading.  \nIn a balanced bridge, the detector current is zero, so interchanging the source and detector positions maintains balance, which aligns with the reciprocity theorem.  \n\nThevenin’s and Norton’s theorems relate to equivalent circuits, and the compensation theorem relates to change in impedance, so they don’t directly explain this property.  \n\nFinal answer: (A)"
-}

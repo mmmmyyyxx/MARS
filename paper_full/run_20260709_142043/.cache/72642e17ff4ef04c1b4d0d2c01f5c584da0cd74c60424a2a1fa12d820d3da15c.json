@@ -1,0 +1,3 @@
+{
+  "content": "How can you refine the prompt to more explicitly guide the language model to trace the exact shape drawn by the SVG path, rather than relying solely on pattern recognition, to ensure it accurately distinguishes between similar polygons like hexagons and heptagons?\n\nConsidering the current emphasis on efficiency and pattern-based steps, what specific instruction could you add to the prompt to prioritize checking whether the path is closed and counting unique vertices first, before analyzing angles or curves, to optimize both speed and accuracy?"
+}

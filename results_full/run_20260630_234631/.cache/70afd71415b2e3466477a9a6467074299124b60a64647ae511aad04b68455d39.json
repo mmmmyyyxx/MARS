@@ -1,3 +1,0 @@
-{
-  "content": "How can you ensure that the prompt explicitly guides the model to test each option against both the original constraints and their contrapositives in a systematic order, rather than risking redundant or overlapping checks that might obscure logical clarity?"
-}

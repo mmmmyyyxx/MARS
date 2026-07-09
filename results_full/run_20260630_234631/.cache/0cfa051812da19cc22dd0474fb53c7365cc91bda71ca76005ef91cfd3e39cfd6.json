@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\n**Step 1: Identify the expression**  \nExpression: `( True and not True and False )`\n\n**Step 2: Apply NOT operators first**  \n`not True` = `False`  \nSo the expression becomes:  \n`( True and False and False )`\n\n**Step 3: Apply AND operators left to right**  \n`True and False` = `False`  \nNow we have: `( False and False )`  \n`False and False` = `False`\n\n**Step 4: Final result**  \nThe entire expression simplifies to `False`.\n\n---\n\n**Truth table check**  \nLet A = True, B = True, C = False.  \nWe want `A and (not B) and C`.  \n`not B` = False.  \n`A and False` = False.  \n`False and C` = False.  \nMatches our step-by-step evaluation.\n\n---\n\nFinal answer: false"
-}

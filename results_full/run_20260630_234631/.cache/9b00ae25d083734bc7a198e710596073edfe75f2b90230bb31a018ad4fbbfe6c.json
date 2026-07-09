@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\n1. The Intel 8085 microprocessor has several registers.  \n2. Most registers in the 8085 are 8-bit (like A, B, C, D, E, H, L).  \n3. However, it does have two 16-bit registers:  \n   - **Stack Pointer (SP)** — holds the address of the stack top.  \n   - **Program Counter (PC)** — holds the address of the next instruction to execute.  \n4. The question asks for the name/names of the 16-bit registers in the 8085.  \n5. Both SP and PC are 16-bit registers.  \n\nTherefore, the correct option is **both A and B**.  \n\nFinal answer: (C)"
-}

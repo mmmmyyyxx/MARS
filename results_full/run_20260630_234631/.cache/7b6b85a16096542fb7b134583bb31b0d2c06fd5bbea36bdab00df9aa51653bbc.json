@@ -1,3 +1,0 @@
-{
-  "content": "First, resolve the NOT operator:  \nnot False → True  \nExpression becomes: True or True and False and False  \n\nNext, apply AND operators from left to right:  \nTrue and False → False  \nExpression becomes: True or False and False  \n\nFalse and False → False  \nExpression becomes: True or False  \n\nFinally, apply OR operator:  \nTrue or False → True  \n\nFinal answer: true"
-}

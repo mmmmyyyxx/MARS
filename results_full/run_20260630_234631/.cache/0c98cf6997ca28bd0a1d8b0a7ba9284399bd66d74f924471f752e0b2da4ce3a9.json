@@ -1,3 +1,0 @@
-{
-  "content": "How can you ensure the prompt explicitly guides the model to first verify whether the altered word is a valid dictionary entry before analyzing phonetic similarity?"
-}

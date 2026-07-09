@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down:  \n\nThe SVG path command `M 51.00,18.00 L 5.00,62.00` means:  \n\n- **M** = move to the starting point (51.00, 18.00)  \n- **L** = draw a line to the point (5.00, 62.00)  \n\nSo this path draws a single straight line between two points.  \n\nLooking at the options:  \n- (A) circle → no  \n- (B) heptagon → 7-sided polygon, no  \n- (C) hexagon → 6-sided polygon, no  \n- (D) kite → quadrilateral, no  \n- (E) line → yes, matches  \n- (F) octagon → 8-sided polygon, no  \n- (G) pentagon → 5-sided polygon, no  \n- (H) rectangle → 4-sided, no  \n- (I) sector → part of a circle, no  \n- (J) triangle → 3-sided, no  \n\nThe correct answer is **line**.  \n\nFinal answer: (E)"
-}

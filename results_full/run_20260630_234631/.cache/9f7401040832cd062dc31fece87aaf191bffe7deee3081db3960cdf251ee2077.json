@@ -1,3 +1,0 @@
-{
-  "content": "ACCEPT\n\nThis question effectively targets a critical vulnerability in LSAT-AR reasoning—conditional and interdependent constraints are notoriously challenging for models to handle correctly. By asking the Teacher to identify specific problematic aspects of the current constraint application process, it prompts a diagnostic approach that could reveal issues like cascading errors, failure to maintain transitive relationships, or improper handling of contrapositives. This specificity aligns perfectly with the goal of refining the prompt for maximum accuracy."
-}

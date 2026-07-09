@@ -1,3 +1,0 @@
-{
-  "content": "A three-state buffer (tri-state buffer) can output high (1), low (0), or a high-impedance (float) state.  \nBoth (A) and (B) describe these states correctly, just using different naming conventions.  \n\nFinal answer: (C)"
-}

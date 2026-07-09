@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe premise says:  \n- Whoever is a schoolmate of Sondra is **not** a stepsister of Pricilla.  \n\nIn logical form:  \nIf \\( X \\) is a schoolmate of Sondra, then \\( X \\) is not a stepsister of Pricilla.  \nThat is: \\( S(x) \\rightarrow \\neg P(x) \\).  \n\nThe conclusion says:  \n- Whoever is **not** a stepsister of Pricilla is a schoolmate of Sondra.  \nThat is: \\( \\neg P(x) \\rightarrow S(x) \\).  \n\nThis is the **fallacy of affirming the consequent** — the premise \\( S \\rightarrow \\neg P \\) does **not** logically entail \\( \\neg P \\rightarrow S \\).  \nIt confuses a conditional statement with its converse.  \n\nSo the argument is **invalid**.  \n\nFinal answer: invalid"
-}

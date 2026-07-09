@@ -1,3 +1,0 @@
-{
-  "content": "Let’s evaluate step by step.\n\nExpression:  \n**False or ( False or not False )**\n\n1. **Resolve innermost parentheses first**  \nInside: `False or not False`\n\n2. **Apply NOT first**  \n`not False` = **True**  \nSo: `False or True`\n\n3. **Apply OR**  \n`False or True` = **True**  \nNow parentheses resolved: `False or (True)`\n\n4. **Final OR**  \n`False or True` = **True**\n\nFinal answer: true"
-}

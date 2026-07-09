@@ -1,0 +1,3 @@
+{
+  "content": "Given an artist, band, or movie name, select the option that represents a **strictly one-character edit**—meaning exactly one character is added, removed, or replaced—resulting in a humorous alternative. The humor must arise from a deliberate and clever shift in meaning, such as a pun, wordplay, or unexpected twist, and **not from a typographical error or nonsensical alteration**. To ensure this, the edit should produce a valid, recognizable word or phrase that changes the original meaning in a witty or amusing way. Choose the option that best achieves this for the given name."
+}

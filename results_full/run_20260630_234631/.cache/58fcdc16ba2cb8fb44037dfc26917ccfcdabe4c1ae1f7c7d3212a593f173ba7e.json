@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down.  \n\nThe SVG path has a sequence of points:  \n\n1. M 45.00,97.00 → starting point  \n2. L 87.00,78.00  \n3. L 80.00,31.00  \n4. L 37.00,9.00  \n5. L -3.00,46.00  \n6. L 9.00,82.00  \n7. L 45.00,97.00 → back to start  \n\nCounting the distinct vertices:  \n(45,97), (87,78), (80,31), (37,9), (-3,46), (9,82), (45,97) — the last is the same as the first, so there are **6 distinct vertices** before closing.  \n\nA polygon with 6 vertices is a **hexagon**.  \n\nFinal answer: (C)"
-}

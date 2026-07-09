@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break it down step by step.  \n\n**Premise 1:**  \nThere is somebody who is a devotee of FC Krasnodar and not a backer of SCR Altach.  \n→ ∃x (K(x) ∧ ¬A(x))  \n\n**Premise 2:**  \nEvery opponent to FC Augsburg is a backer of SCR Altach.  \n→ ∀y (O(y) → A(y))  \n\n**Conclusion:**  \nSome devotee of FC Krasnodar is not an opponent to FC Augsburg.  \n→ ∃x (K(x) ∧ ¬O(x))  \n\n---\n\n**Reasoning:**  \nFrom premise 1, we have some individual (call it *a*) such that:  \nK(a) = true, A(a) = false.  \n\nFrom premise 2: O(a) → A(a).  \nSince A(a) is false, O(a) must be false (modus tollens).  \n\nSo K(a) is true and O(a) is false.  \nThus, ∃x (K(x) ∧ ¬O(x)) is true.  \n\nThe conclusion follows necessarily from the premises.  \n\n---\n\nFinal answer: valid"
-}

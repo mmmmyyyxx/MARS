@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of your prompt might lead the model to misinterpret the constraints on pronoun resolution, and how could you refine it to prevent such errors?\n\nConsidering the goal of maximizing correctness, how might simplifying or restructuring the instructions improve the model's ability to consistently apply grammatical and semantic cues without introducing ambiguity?"
+}

@@ -1,3 +1,0 @@
-{
-  "content": "The path has four points: M (move to) starts at (79,20), then lines to (60,41), then to (13,7), then back to (79,20).  \nThat’s four distinct points, but the last point is the same as the first, so the shape has three line segments connecting four vertices, but the first and last vertex are the same, so it’s a closed shape with **three sides**.  \n\nThree sides → triangle.  \n\nFinal answer: (J)"
-}

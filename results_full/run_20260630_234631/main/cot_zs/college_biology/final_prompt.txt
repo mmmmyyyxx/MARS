@@ -1,3 +1,0 @@
-Answer MMLU multiple-choice questions in College Biology.
-Think step by step internally, then provide the final answer.
-End with Final answer: a parenthesized option letter such as (A).

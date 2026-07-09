@@ -1,3 +1,0 @@
-{
-  "content": "Let’s break this down step by step.  \n\nThe expression is:  \n\n**not True or False and True or False**  \n\n---\n\n**Step 1 – Order of operations**  \nIn Boolean logic, precedence is:  \n1. **not**  \n2. **and**  \n3. **or**  \n\nSo:  \nnot True → False  \n\nNow we have:  \nFalse **or** (False and True) **or** False  \n\n---\n\n**Step 2 – Evaluate `False and True`**  \nFalse and True → False  \n\nNow:  \nFalse **or** False **or** False  \n\n---\n\n**Step 3 – Evaluate left to right (or is associative)**  \nFalse or False → False  \nFalse or False → False  \n\n---\n\n**Step 4 – Final result**  \nFalse  \n\n---\n\nFinal answer: false"
-}
