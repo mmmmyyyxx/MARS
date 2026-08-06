@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the process of filtering vertices to remove collinear points accurately preserves the defining corners of the shape without inadvertently altering its geometric classification?\n\n2. Considering the goal of maximizing correctness rate, what specific refinements could be made to the geometric checks for four-vertex shapes to better distinguish between kites, rectangles, and other quadrilaterals, especially when visual outlines are ambiguous?"
+}

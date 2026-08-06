@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be improved to more explicitly guide the model in distinguishing between semantic constraints derived solely from the sentence structure and those that might inadvertently rely on external world knowledge?\n\n2. Considering the goal of maximizing correctness, what specific refinements to the step-by-step reasoning process could help minimize ambiguity in cases where grammatical and semantic cues are equally balanced between multiple candidates?"
+}

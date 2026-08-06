@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might lead the model to overlook subtle grammatical or semantic cues when resolving pronoun ambiguity?\n\nHow could you refine the prompt to better guide the model in distinguishing between cases where the antecedent is logically deducible versus inherently ambiguous?"
+}

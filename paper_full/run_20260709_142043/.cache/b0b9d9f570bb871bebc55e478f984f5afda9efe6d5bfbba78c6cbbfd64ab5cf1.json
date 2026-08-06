@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be modified to more explicitly enforce the correct order of operations for Boolean expressions, especially when parentheses are omitted or nested?\n\n2. What specific elements could be added to the prompt to ensure the model consistently validates each intermediate step against fundamental Boolean logic rules before proceeding to the next operation?"
+}

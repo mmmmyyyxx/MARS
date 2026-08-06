@@ -1,1 +1,0 @@
-Evaluate the given Boolean expression step by step, applying logical operators strictly according to precedence rules (parentheses first, then NOT, then AND, then OR). After deriving the final truth value, output only "true" or "false" in lowercase, without any additional explanation or formatting.

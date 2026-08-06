@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt's strict exclusion of implicit world knowledge affect its ability to handle cases where grammatical cues alone are insufficient for accurate pronoun resolution?\n\n2. What specific elements could be added to the prompt structure to better guide the model toward leveraging syntactic patterns while maintaining high correctness rates across varied sentence types?"
+}

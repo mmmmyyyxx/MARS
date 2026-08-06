@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of your current prompt might still allow for unintended interpretations by the model, and how could you clarify them to ensure the model focuses only on explicit grammatical and contextual cues?\n\nConsidering the goal of maximizing correctness, how might simplifying or restructuring the steps in your prompt improve the model's ability to consistently identify the correct antecedent or recognize ambiguity?"
+}

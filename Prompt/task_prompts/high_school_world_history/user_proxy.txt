@@ -1,5 +1,7 @@
-Here is a topic for High School World History:
-Answer MMLU multiple-choice questions in High School World History.
+Here is a topic for high school world history:
+Answer multiple-choice questions about world history, including civilizations, political changes, wars, revolutions, cultural developments, trade, and historical interpretation.
 
-The model must output the answer as a parenthesized option letter such as (A).
-Generate or refine a prompt that maximizes accuracy for this task.
+The input question contains answer options. The model should choose the single best option and output only the option letter.
+
+I want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate.
+Please generate the most suitable prompt according to the requirements I just mentioned.

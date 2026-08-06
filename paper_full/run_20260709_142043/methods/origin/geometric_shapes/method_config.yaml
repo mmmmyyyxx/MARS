@@ -1,0 +1,26 @@
+display_name: Origin
+type: direct
+exactness: prompt_dependent
+exactness_level: prompt_dependent
+exactness_note: Prompt-dependent; exact only when the local origin prompt matches
+  the original paper prompt.
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 8195091fa6192b9d8c0c04416a380703e8a563f2175d9840e76627c1c407d10f
+eval_protocol: paper_mode
+initial_prompt_source: legacy_student_generated
+legacy_skip_first_data_row: true
+max_answer_retries: 5
+planner_strict_mode: true
+legacy_target_prompt_mode: true
+target_call_count_limit: 10
+num_opt_samples: 249
+num_val_samples: 249
+num_test_samples: 249
+opt_hash: f80dc26fbdc9cfb82afc499920ae59a2f850301608ade3a5dfa98b3c1691042e
+val_hash: f80dc26fbdc9cfb82afc499920ae59a2f850301608ade3a5dfa98b3c1691042e
+test_hash: f80dc26fbdc9cfb82afc499920ae59a2f850301608ade3a5dfa98b3c1691042e
+initial_prompt_hash: f74373d42931bd43d23582c36ecd17c1de67808eed8b61b5e92e2f1523c1f6c3

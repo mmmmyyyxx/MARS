@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the current prompt might lead the model to include reasoning or explanations in its final output, and how could the formatting instructions be refined to prevent this?\n\nConsidering the goal of maximizing correctness, how might simplifying the step-by-step reasoning requirement affect both the model's accuracy and its adherence to the desired output format?"
+}

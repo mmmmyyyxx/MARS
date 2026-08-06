@@ -1,0 +1,3 @@
+{
+  "content": "1. In the student's current prompt, how does the requirement to \"identify the pronoun and all possible antecedents\" before assessing ambiguity help or hinder the model's ability to produce a single correct output without reasoning?  \n\n2. Considering the goal of maximizing correctness rate, what specific wording in the instructions could be adjusted to reduce potential misinterpretation by the model while maintaining clarity about when to choose \"Ambiguous\"?"
+}

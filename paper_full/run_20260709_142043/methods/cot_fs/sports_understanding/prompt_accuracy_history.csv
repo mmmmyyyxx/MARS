@@ -1,0 +1,19 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer BIG-Bench Hard questions for Sports Understanding.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: yes or no.
+
+Example question:
+Is the following sentence plausible? ""Dejounte Murray took a side-step three.""
+Example answer:
+Final answer: yes
+
+Example question:
+Is the following sentence plausible? ""Giorgio Chiellini committed a handball in the FA Cup.""
+Example answer:
+Final answer: yes
+
+Example question:
+Is the following sentence plausible? ""Paulinho earned an indirect kick in the FA Cup.""
+Example answer:
+Final answer: yes",0.8473895582329317,249,211,38

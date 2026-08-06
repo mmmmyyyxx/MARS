@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can you ensure that the prompt explicitly emphasizes the \"one-character edit\" constraint to prevent the model from considering edits that involve more than one character change?\n\nSecond question: What specific elements from the example provided (e.g., \"fall out boy\" to \"fall out bot\") can be incorporated into the prompt to better illustrate the desired balance between humor and minimal alteration?"
+}

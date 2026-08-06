@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the requirement for the model to output only a letter choice without reasoning affect its ability to resolve ambiguity when contextual cues are subtle or conflicting?\n\n2. Considering the current step of refining the prompt for higher correctness, what specific elements in the prompt could be adjusted to better guide the model in weighing grammatical versus contextual cues when they point to different antecedents?"
+}

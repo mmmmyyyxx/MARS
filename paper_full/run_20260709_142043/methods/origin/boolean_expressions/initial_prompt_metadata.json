@@ -1,0 +1,9 @@
+{
+  "label": "p0",
+  "source": "legacy_student_generated",
+  "seed_prompt": "Think step by step and solve the question.",
+  "system_message": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\nNote that you should only output the new prompt you generated.",
+  "user_message": "Here is the task definition:\nHere is a topic for Boolean Expressions:\nEvaluate the truth value of a random Boolean expression consisting of Boolean constants (True, False) and basic Boolean operators (and, or, not).\n\nFor example:\nnot ( True ) and ( True ) is\n\nI want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. \nPlease generate the most suitable prompt according to the requirements I just mentioned.\n\nPlease generate a more appropriate prompt based on the following prompt and task definition:\nThink step by step and solve the question.",
+  "task_id": "boolean_expressions",
+  "prompt_hash": "024e4916d5dc7c94038c16a2d85179384f6a7a1c1f09a390824273b2911568f1"
+}

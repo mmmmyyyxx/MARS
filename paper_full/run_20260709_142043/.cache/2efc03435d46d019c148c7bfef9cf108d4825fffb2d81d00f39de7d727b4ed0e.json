@@ -1,0 +1,3 @@
+{
+  "content": "1. In the student's current prompt, what specific grammatical or contextual cues are identified that could help the model definitively choose one antecedent over another, and how might these be made more explicit to reduce ambiguity?  \n\n2. Considering the goal of maximizing correctness, how could the prompt's instructions be refined to more clearly guide the model to rely solely on explicit sentence cues and avoid external assumptions, without adding unnecessary complexity?"
+}

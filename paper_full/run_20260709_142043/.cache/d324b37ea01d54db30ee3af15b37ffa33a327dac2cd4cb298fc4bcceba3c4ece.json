@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you verify that the simplification step in your prompt accurately preserves the defining geometric features of the original SVG path, especially when dealing with curves or redundant points?\n\n2. What specific metrics or criteria would you use to evaluate the correctness rate of the model's responses when testing your prompt with multiple sample SVG paths?"
+}

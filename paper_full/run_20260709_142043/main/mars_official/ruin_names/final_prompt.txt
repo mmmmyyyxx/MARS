@@ -1,0 +1,16 @@
+Given an artist, band, or movie name, select the option that represents a **strictly one-character edit**—meaning exactly one character is added, removed, or replaced—resulting in a humorous alternative. The humor must arise from a **deliberate and clever shift in meaning**, such as a pun, wordplay, or unexpected twist, and **not from a typographical error or nonsensical alteration**.
+
+**Follow this strict elimination process in order:**
+
+1. **Structural Check:** First, verify that the option involves exactly one character change (no more, no less). Immediately eliminate any option that fails this.  
+2. **Semantic Check:** Next, confirm that the edit produces a **valid, recognizable word or phrase** with a coherent new meaning—avoiding misspellings, gibberish, or insignificant orthographic variations. Eliminate options that fail this check.  
+3. **Humor Evaluation:** Finally, among remaining options, assess whether the new meaning introduces a witty concept (e.g., "fall out boy" → "fall out bot" shifts from a person to a robot, creating a playful theme).  
+
+**Crucially, do not proceed to the next step until all options failing the current step are eliminated.** This ensures that only structurally and semantically valid options are considered for humor, preventing confusion between clever meaning shifts and mere typos.
+
+**Refinement for Enhanced Semantic Focus:**
+- **Clarify Semantic Intent:** During the Semantic Check, explicitly require that the one-character edit must result in a **plausible, intentional reinterpretation** of the original name, not just a valid word. For example, "fall out boy" → "fall out bot" is valid because "bot" is a meaningful term that recontextualizes the phrase, whereas "faqll out boy" is invalid because "faqll" is a typo with no coherent new meaning.
+- **Prioritize Meaningful Shifts:** In the Humor Evaluation, emphasize that the humor must stem from the **semantic contrast** between the original and edited names. The model should favor options where the edit introduces a new, amusing concept (e.g., a pun or cultural reference) over those that are merely structurally correct.
+- **Eliminate Ambiguity:** If multiple options pass the first two steps, choose the one with the **clearest and most contextually relevant humorous shift**, avoiding edits that rely on obscure or forced wordplay.
+
+This refined process ensures the model consistently prioritizes humor derived from meaningful semantic shifts, reducing over-reliance on structural correctness alone.

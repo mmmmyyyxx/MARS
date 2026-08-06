@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might lead to inconsistent evaluations if the Boolean expression contains unusual formatting or unconventional syntax?\n\nConsidering the goal of maximizing correctness rate, how could the prompt be refined to better guide the model in handling edge cases or ambiguous expressions without relying on external normalization steps?"
+}

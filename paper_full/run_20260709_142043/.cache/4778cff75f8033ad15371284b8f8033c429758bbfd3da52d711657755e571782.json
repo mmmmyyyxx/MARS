@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the model strictly avoids relying on implicit world knowledge when evaluating semantic plausibility, and what specific wording might be added to reinforce this restriction?\n\n2. What steps can you take to optimize the prompt's clarity and effectiveness by testing it with sentences that have known ambiguous and unambiguous pronoun references?"
+}

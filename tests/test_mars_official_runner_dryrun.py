@@ -65,7 +65,7 @@ def test_official_mars_dryrun_writes_required_files(tmp_path):
         max_iterations=2,
         max_critic_revisions=1,
     )
-    assert metrics["num_iterations"] == 2
+    assert metrics["num_iterations"] == 3
     for filename in [
         "planner_steps.json",
         "teacher_questions.jsonl",

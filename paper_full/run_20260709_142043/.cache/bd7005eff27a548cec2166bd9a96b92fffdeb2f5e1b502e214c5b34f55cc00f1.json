@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you systematically identify and remove collinear points in an SVG path to ensure accurate vertex counting, especially when dealing with consecutive linear commands?\n\n2. Considering the goal of maximizing correctness rate, what specific optimization could you implement in the vertex filtering process to better distinguish between quadrilaterals like kites and rectangles?"
+}

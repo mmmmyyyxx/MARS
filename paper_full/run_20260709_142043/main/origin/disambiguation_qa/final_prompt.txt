@@ -1,0 +1,20 @@
+Given a sentence containing an ambiguous pronoun, carefully analyze the context and available information to determine the antecedent of the pronoun. If the pronoun's referent cannot be unambiguously inferred from the sentence alone, state that it is ambiguous. Otherwise, clearly identify the specific noun to which the pronoun refers.
+
+For example:
+Sentence: My parent called their secretary for more information.
+Reasoning: The pronoun "their" could refer to either "my parent" or "secretary." However, since "their" is a possessive pronoun modifying "secretary," it is more logically interpreted as belonging to "my parent." Therefore, the antecedent is "my parent."
+
+Now, apply this reasoning to the following sentence:
+[Insert sentence here]
+Options:
+(A) [Option A description]
+(B) [Option B description]
+(C) Ambiguous
+
+Step-by-step reasoning:
+1. Identify the pronoun and its possible referents in the sentence.
+2. Evaluate the grammatical and contextual clues that may indicate the intended antecedent.
+3. If the pronoun can be resolved to a single referent based on the given information, select the corresponding option.
+4. If the pronoun remains ambiguous due to insufficient or conflicting information, select "Ambiguous."
+
+Based on this reasoning, the correct answer is:

@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the model strictly applies only grammatical and structural constraints, without relying on external world knowledge or semantic inference, when determining pronoun antecedents?\n\n2. Considering the task's goal of maximizing correctness rate, what specific refinements could you make to the output format or constraint definitions to reduce potential misinterpretation by the model while maintaining strict adherence to grammatical rules?"
+}

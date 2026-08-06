@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can your current prompt be modified to more explicitly guide the language model through a step-by-step tracing of the SVG path commands, ensuring it visually reconstructs the shape before classifying it, rather than primarily focusing on vertex filtering and boundary analysis?\n\nSecond question: What specific elements could be added to your prompt to optimize the model's accuracy by reducing ambiguity—such as clarifying how to handle overlapping points, zero-length segments, or implicit path closure—based on common misinterpretations in geometric shape identification tasks?"
+}

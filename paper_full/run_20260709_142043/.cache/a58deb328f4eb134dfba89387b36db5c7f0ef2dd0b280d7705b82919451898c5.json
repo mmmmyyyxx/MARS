@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the phrase \"using only explicit grammatical and structural cues\" in your prompt create ambiguity when distinguishing between linguistic dependencies and implicit world knowledge, especially in cases like possessive forms where real-world roles often influence interpretation?\n\n2. Considering your goal to maximize correctness rates, what specific wording could you add or modify in the prompt to more strictly prevent the model from relying on unstated role-based assumptions while still allowing valid syntactic analysis?"
+}

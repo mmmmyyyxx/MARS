@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
+from typing import Any
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -30,6 +32,201 @@ def task_group_lookup(config_path: Path = Path("configs/tasks.yaml")) -> dict[st
         return {}
     data = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
     return {task_id: str(config.get("group", "")) for task_id, config in data.items()}
+
+
+def _load_yaml(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data if isinstance(data, dict) else {}
+
+
+def _load_json(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _parse_csv_set(value: Any) -> set[str] | None:
+    if value is None:
+        return None
+    if isinstance(value, (list, tuple, set)):
+        items = [str(item).strip() for item in value]
+    else:
+        text = str(value).strip()
+        if not text or text.lower() == "all":
+            return None
+        items = [item.strip() for item in text.split(",")]
+    return {item for item in items if item}
+
+
+def _to_int(value: Any) -> int | None:
+    if value is None:
+        return None
+    try:
+        if pd.isna(value):
+            return None
+    except TypeError:
+        pass
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _task_expected_counts(config_path: Path = Path("configs/tasks.yaml")) -> dict[str, int]:
+    data = _load_yaml(config_path)
+    counts: dict[str, int] = {}
+    for task_id, config in data.items():
+        if not isinstance(config, dict):
+            continue
+        dataset_path = config.get("test_path") or config.get("dataset_path")
+        if not dataset_path:
+            continue
+        path = Path(str(dataset_path))
+        if not path.exists():
+            continue
+        try:
+            counts[str(task_id)] = len(pd.read_csv(path))
+        except Exception:
+            continue
+    return counts
+
+
+def _selected_expected_count(
+    task_id: str, task_counts: dict[str, int], max_samples: Any
+) -> int | None:
+    full_count = task_counts.get(task_id)
+    max_count = _to_int(max_samples)
+    if full_count is None:
+        return max_count
+    if max_count is None:
+        return full_count
+    return min(full_count, max_count)
+
+
+def _summary_key(row: pd.Series) -> tuple[str, str, str]:
+    suite = str(row.get("suite") or "main")
+    method_id = str(row.get("method_id") or "")
+    task_id = str(row.get("task_id") or "")
+    return suite, method_id, task_id
+
+
+def augment_with_completed_method_metrics(
+    summary: pd.DataFrame,
+    run_dir: Path,
+    *,
+    methods_config_path: Path = Path("configs/methods.yaml"),
+) -> pd.DataFrame:
+    methods_root = run_dir / "methods"
+    if not methods_root.exists():
+        return summary
+
+    run_config = _load_yaml(run_dir / "run_config.yaml")
+    selected_tasks = _parse_csv_set(run_config.get("tasks"))
+    selected_methods = _parse_csv_set(run_config.get("methods"))
+    summary_methods = (
+        set(summary["method_id"].dropna().astype(str))
+        if "method_id" in summary
+        else set()
+    )
+    include_methods = set(summary_methods)
+    if selected_methods is not None:
+        include_methods.update(selected_methods)
+    include_methods.add("mars_official")
+
+    methods_config = _load_yaml(methods_config_path)
+    task_config = _load_yaml(Path("configs/tasks.yaml"))
+    task_counts = _task_expected_counts()
+    existing = {_summary_key(row) for _, row in summary.iterrows()}
+    rows: list[dict[str, Any]] = []
+
+    for metrics_path in sorted(methods_root.glob("*/*/metrics.json")):
+        task_id = metrics_path.parent.name
+        method_id = metrics_path.parent.parent.name
+        if method_id not in include_methods:
+            continue
+        if selected_tasks is not None and task_id not in selected_tasks:
+            continue
+
+        metrics = _load_json(metrics_path)
+        if not metrics:
+            continue
+        state = _load_json(metrics_path.parent / "run_state.json")
+        if state and state.get("status") not in {None, "", "completed"}:
+            continue
+
+        num_samples = _to_int(metrics.get("num_samples"))
+        expected_count = _selected_expected_count(
+            task_id, task_counts, run_config.get("max_samples")
+        )
+        if expected_count is not None and num_samples != expected_count:
+            continue
+
+        expected_ids = state.get("expected_sample_ids") if state else None
+        if isinstance(expected_ids, list) and num_samples != len(expected_ids):
+            continue
+
+        suite = str(state.get("suite") or run_config.get("suite") or "main")
+        key = (suite, method_id, task_id)
+        if key in existing:
+            continue
+
+        method_config = methods_config.get(method_id) or {}
+        task_meta = task_config.get(task_id) or {}
+        split_hashes = state.get("split_hashes") if isinstance(state, dict) else {}
+        if not isinstance(split_hashes, dict):
+            split_hashes = {}
+        rows.append(
+            {
+                "accuracy": metrics.get("accuracy"),
+                "api_calls": metrics.get("api_calls", ""),
+                "api_errors": metrics.get("api_errors", 0),
+                "cache_hits": metrics.get("cache_hits", ""),
+                "cost_estimate": metrics.get("cost_estimate", ""),
+                "display_name": task_meta.get("paper_display_name", task_id),
+                "eval_protocol": run_config.get("eval_protocol", ""),
+                "exactness_level": metrics.get(
+                    "exactness_level", method_config.get("exactness_level", "")
+                ),
+                "exactness_note": method_config.get("exactness_note", ""),
+                "exactness_notes": method_config.get("exactness_note", ""),
+                "method": metrics.get(
+                    "method_display_name",
+                    method_config.get("display_name", method_id),
+                ),
+                "method_id": method_id,
+                "model": state.get("model") or run_config.get("model", ""),
+                "num_correct": metrics.get("num_correct", ""),
+                "num_failed": metrics.get("num_failed", ""),
+                "num_iterations": metrics.get("num_iterations", ""),
+                "num_opt_samples": metrics.get("num_opt_samples", num_samples),
+                "num_samples": num_samples,
+                "num_test_samples": metrics.get("num_test_samples", num_samples),
+                "num_val_samples": metrics.get("num_val_samples", num_samples),
+                "opt_hash": split_hashes.get("opt", ""),
+                "paper_method_id": method_config.get("paper_method_id", method_id),
+                "parse_errors": metrics.get("parse_errors", 0),
+                "runtime_seconds": metrics.get("runtime_seconds", ""),
+                "status": "completed",
+                "suite": suite,
+                "task_id": task_id,
+                "test_hash": split_hashes.get("test", ""),
+                "tokens_completion": metrics.get("tokens_completion", ""),
+                "tokens_prompt": metrics.get("tokens_prompt", ""),
+                "tokens_total": metrics.get("tokens_total", ""),
+                "val_hash": split_hashes.get("val", ""),
+            }
+        )
+        existing.add(key)
+
+    if not rows:
+        return summary
+    return pd.concat([summary, pd.DataFrame(rows)], ignore_index=True, sort=False)
 
 
 def load_paper_results(
@@ -348,6 +545,7 @@ def main() -> int:
     if not summary_path.exists():
         raise FileNotFoundError(summary_path)
     summary = pd.read_csv(summary_path)
+    summary = augment_with_completed_method_metrics(summary, run_dir)
     task_groups = task_group_lookup()
     if task_groups and "task_id" in summary:
         summary = summary.copy()

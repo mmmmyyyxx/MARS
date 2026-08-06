@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be refined to more explicitly prevent the model from relying on external knowledge or world assumptions when evaluating semantic plausibility, while still allowing for structurally implied typical linguistic patterns?\n\n2. Considering the goal of maximizing correctness rate, what specific formatting or structural changes could be made to the prompt to reduce potential output variability and ensure the model strictly adheres to the required output format?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the prompt be refined to more explicitly guide the model to distinguish between cases where grammatical cues alone resolve the ambiguity versus those requiring external knowledge, based on the example provided?  \n\n2. What specific structural elements in the prompt could be optimized to reduce the risk of the model relying on implicit assumptions while maintaining accuracy in identifying unambiguous cases?"
+}

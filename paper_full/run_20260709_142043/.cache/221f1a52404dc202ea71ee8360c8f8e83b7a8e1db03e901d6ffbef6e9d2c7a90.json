@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to handle variations in capitalization (e.g., \"True\" vs. \"true\") and spacing in Boolean expressions, given that the examples show inconsistent formatting?\n\n2. Considering the current emphasis on step-by-step verification, what specific wording could be added to the prompt to encourage the model to double-check each intermediate result against Boolean logic rules before proceeding, thereby minimizing cumulative errors?"
+}

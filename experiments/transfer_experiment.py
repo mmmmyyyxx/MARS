@@ -80,7 +80,11 @@ def run_transfer_suite(
         source_best_prompt = (
             run_dir / "methods" / "mars_official" / task.task_id / "best_prompt.txt"
         ).read_text(encoding="utf-8")
-        all_rows = load_dataset(task.dataset_path, settings.max_samples)
+        all_rows = load_dataset(
+            task.dataset_path,
+            settings.max_samples,
+            skip_first_data_row=settings.legacy_skip_first_data_row,
+        )
         splits = split_dataset(all_rows, settings.eval_protocol, settings.split_seed)
         for target in targets:
             for method in suite_config["methods"]:
@@ -91,7 +95,16 @@ def run_transfer_suite(
                 if method == "mars_official":
                     prompt = source_best_prompt
                 elif method == "origin":
-                    prompt = prompts.origin
+                    initial_prompt_path = (
+                        run_dir / "tasks" / task.task_id / "initial_prompt.txt"
+                    )
+                    prompt = (
+                        initial_prompt_path.read_text(encoding="utf-8")
+                        if settings.initial_prompt_source
+                        == "legacy_student_generated"
+                        and initial_prompt_path.exists()
+                        else prompts.origin
+                    )
                 elif method == "cot_zs":
                     prompt = prompts.cot_zero_shot
                 else:
@@ -121,6 +134,10 @@ def run_transfer_suite(
                         "split_seed": settings.split_seed,
                         "dry_run": settings.dry_run,
                         "concurrency": settings.concurrency,
+                        "legacy_skip_first_data_row": settings.legacy_skip_first_data_row,
+                        "initial_prompt_source": settings.initial_prompt_source,
+                        "max_answer_retries": settings.max_answer_retries,
+                        "legacy_target_prompt_mode": settings.legacy_target_prompt_mode,
                     }
                 )
                 client = _target_client(settings, model_config, run_dir, target, method)
@@ -132,6 +149,8 @@ def run_transfer_suite(
                     method=method,
                     method_config=method_config,
                     out_dir=method_dir,
+                    max_answer_retries=settings.max_answer_retries,
+                    legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
                 )
                 metrics["num_iterations"] = 0
                 write_json(method_dir / "metrics.json", metrics)

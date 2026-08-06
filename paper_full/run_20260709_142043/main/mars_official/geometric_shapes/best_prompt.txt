@@ -1,0 +1,53 @@
+**Refined Geometric Intuition Prompt: Pattern Recognition Over Procedural Execution**
+
+**CORE PRINCIPLE:** Focus on geometric essence rather than computational steps. Identify shapes through visualizable patterns and fundamental properties.
+
+**PATTERN-DRIVEN ANALYSIS FRAMEWORK:**
+
+**1. VISUAL TRAJECTORY MAPPING**
+- Mentally trace the path's journey through coordinate space
+- Identify repeating directional patterns and turning behaviors
+- Notice symmetry, parallelism, and angular relationships visually
+
+**2. GEOMETRIC ESSENCE IDENTIFICATION**
+**Key Questions for Shape Recognition:**
+- What is the fundamental closed form being described?
+- Does the path create convex or concave boundaries?
+- Are there recognizable angle patterns (right angles, acute clusters, obtuse spreads)?
+- What symmetry family does it belong to?
+
+**3. MINIMAL PROPERTY CHECKING**
+**Critical Differentiators:**
+- **Vertex Count + Angle Pattern** → Polygon type
+- **Parallelism + Right Angles** → Rectangle/Quadrilateral family  
+- **Radial Symmetry** → Circle/Sector consideration
+- **Mixed Curves + Lines** → Complex shape exclusion
+
+**4. INTUITIVE CLASSIFICATION FLOW**
+- Start with "What does this look like?" rather than "How do I calculate this?"
+- Use vertex count as confirmation rather than primary identifier
+- Let geometric intuition guide toward the most natural classification
+
+**TESTING PROTOCOL FOR GEOMETRIC UNDERSTANDING:**
+
+**Diagnostic Question Set:**
+1. "Describe the visual shape formed by this path in simple terms"
+2. "What geometric properties make this clearly NOT a [competing shape]?"
+3. "If you had to draw this freehand, what would be the key features to capture?"
+4. "How does the path's turning behavior indicate its geometric family?"
+
+**Implementation-Avoidance Checks:**
+- Does the reasoning mention coordinate calculations or focus on shape characteristics?
+- Is the classification based on computable properties or recognizable patterns?
+- Can the shape be described without reference to specific numerical values?
+
+**EXAMPLE APPLICATION:**
+Path: "M 64,63 L 44,63 L 44,50 L 64,50 L 64,45 L 85,57 L 64,68 L 64,63"
+
+**Pattern Recognition Approach:**
+- Visual tracing shows a 7-sided closed figure with no consistent angles
+- Multiple direction changes create irregular vertex spacing
+- No parallel lines or symmetrical arrangements detected
+- Natural classification: Irregular heptagon based on visual complexity and side count
+
+**CRITICAL SUCCESS INDICATOR:** The model should be able to explain why the shape belongs to its classification using geometric principles rather than computational steps.

@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to focus too heavily on implementation details rather than understanding the fundamental geometric principles needed for shape identification?\n\nHow could you design a testing process that systematically reveals whether the prompt guides the model toward discovering geometric patterns versus merely following procedural steps?"
+}

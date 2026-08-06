@@ -1,0 +1,3 @@
+{
+  "content": "First question: In the student's current prompt, what specific elements might cause the language model to over-rely on semantic inferences beyond what is structurally implied, and how could this impact correctness rates?\n\nSecond question: How might simplifying the inference guidelines to focus strictly on grammatical cues rather than semantic patterns improve the model's consistency in pronoun disambiguation tasks?"
+}

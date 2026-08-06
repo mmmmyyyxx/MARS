@@ -1,8 +1,0 @@
-method_id,model,api_call_records,prompt_tokens,completion_tokens,total_tokens
-ape,deepseek-chat,2760,238649,300175,538824
-cot_fs,deepseek-chat,250,33000,26061,59061
-cot_zs,deepseek-chat,250,17250,34691,51941
-mars_official,deepseek-chat,9446,2271434,744219,3015653
-opro,deepseek-chat,2760,277179,388015,665194
-origin,deepseek-chat,250,18250,5879,24129
-protegi,deepseek-chat,2760,268162,446672,714834

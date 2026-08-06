@@ -1,8 +1,0 @@
-|task_id|display_name|method|accuracy|num_samples|num_correct|num_failed|api_errors|parse_errors|runtime_seconds|tokens_prompt|tokens_completion|tokens_total|cost_estimate|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|college_biology|College Biology|MARS-official|0.8680555555555556|144|125|19|0|0|396.38801741600037|125660|37671|163331|0.0|
-|college_medicine|College Medicine|MARS-official|0.8497109826589595|173|147|26|0|0|741.2831964492798|112116|69520|181636|0.0|
-|electrical_engineering|Electrical Engineering|MARS-official|0.8551724137931035|145|124|21|0|0|561.1026937961578|83950|54926|138876|0.0|
-|high_school_world_history|High School World History|MARS-official|0.8860759493670886|237|210|27|0|0|517.0525102615356|333205|21552|354757|0.0|
-|human_aging|Human Aging|MARS-official|0.8071748878923767|223|180|43|0|0|174.9498701095581|105076|2664|107740|0.0|
-|marketing|Marketing|MARS-official|0.9444444444444444|234|221|13|0|0|441.02387285232544|353425|9775|363200|0.0|

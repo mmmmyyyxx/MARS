@@ -1,0 +1,3 @@
+{
+  "content": "1. How can your prompt ensure the language model accurately distinguishes between shapes with the same vertex count, such as a kite versus a rectangle, when analyzing the geometric properties of the filtered vertices?\n\n2. What specific instructions or constraints could you add to your prompt to optimize the model's efficiency in filtering vertices while maintaining accuracy, particularly in handling overlapping or collinear points?"
+}

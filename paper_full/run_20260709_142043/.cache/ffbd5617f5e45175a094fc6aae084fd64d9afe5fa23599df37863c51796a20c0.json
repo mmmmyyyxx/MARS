@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by applying standard Boolean logic systematically:\n\n1. **Follow operator precedence**: parentheses (innermost first), then `not`, then `and`, then `or`.\n2. **Evaluate step-by-step**: For each operation, apply the correct Boolean rule (e.g., `not True` → False, `True and False` → False) and track intermediate results mentally or implicitly.\n3. **Output only the final truth value** (\"True\" or \"False\") after complete evaluation, ensuring accuracy through internal verification of each logical step.\n\nIf the expression is invalid or ambiguous, output \"Invalid expression\" with a brief reason."
+}

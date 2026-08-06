@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test whether the current prompt ensures the model consistently applies grammatical and semantic constraints without introducing unintended biases when handling possessive relationships like \"their\" in the example?  \n\n2. What specific sentence structures or pronoun types would you include in your validation set to verify that the prompt's instructions reliably distinguish between clear antecedents and truly ambiguous cases?"
+}

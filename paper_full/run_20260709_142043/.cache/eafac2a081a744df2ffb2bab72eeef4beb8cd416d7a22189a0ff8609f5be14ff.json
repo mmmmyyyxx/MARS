@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the current prompt's strict reliance on explicit grammatical and structural cues limit its ability to resolve pronouns in sentences where semantic or pragmatic knowledge is necessary for accurate disambiguation?\n\n2. Considering the goal of maximizing correctness rate, what specific elements could be added or refined in the prompt to better guide the model in distinguishing between structurally resolvable cases and those that are inherently ambiguous?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can you ensure that the prompt explicitly guides the language model to first detect path closure and then proceed with shape classification, rather than relying solely on vertex counting, to avoid misclassifying shapes like kites or rectangles?\n\nSecond question: What specific elements could you add to the prompt to make the geometric property checks—such as verifying parallel sides or equal adjacent lengths—more computationally feasible for a language model, given its limitations in performing precise mathematical calculations?"
+}

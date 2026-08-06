@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be improved to more explicitly define and distinguish between \"inherently ambiguous\" cases versus those where the antecedent can be deduced from grammatical and contextual relationships?\n\n2. What specific elements could be added to the prompt structure to better guide the model in systematically evaluating each option before selecting an answer?"
+}

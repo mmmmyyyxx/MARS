@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might limit the model's ability to recognize when contextual cues are genuinely insufficient for disambiguation?\n\nHow could the structure of your prompt be refined to better guide the model toward weighing grammatical and contextual evidence without introducing bias toward a specific resolution?"
+}

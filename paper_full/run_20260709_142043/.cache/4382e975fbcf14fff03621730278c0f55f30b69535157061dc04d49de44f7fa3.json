@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to focus more on procedural correctness than on understanding the underlying logic of Boolean expressions?\n\nConsidering the goal of maximizing correctness rate, how could the prompt be refined to encourage the model to verify its own reasoning at each step without relying on explicit verification instructions?"
+}

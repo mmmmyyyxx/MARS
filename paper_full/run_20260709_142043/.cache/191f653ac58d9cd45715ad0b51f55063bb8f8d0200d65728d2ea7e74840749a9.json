@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the model strictly avoids relying on implicit world knowledge when evaluating semantic plausibility, and what specific wording might be added to prevent such inferences?\n\n2. Considering the goal of maximizing correctness, how could the prompt's structure be optimized to more explicitly guide the model through a step-by-step disambiguation process without allowing it to skip directly to an answer?"
+}

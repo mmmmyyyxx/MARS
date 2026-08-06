@@ -1,0 +1,9 @@
+{
+  "label": "p0",
+  "source": "legacy_student_generated",
+  "seed_prompt": "Think step by step and solve the question.",
+  "system_message": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\nNote that you should only output the new prompt you generated.",
+  "user_message": "Here is the task definition:\nHere is a topic for sports understanding:\nGiven a series of events and activities a person has completed in the course of a day, determine what time, during the day, they might have been free to perform another activity.\n\nFor example:\n\"Is the following sentence plausible? \"\"Neymar did a maradona on the defender in the Champions Leage Semifinal.\"\n\nI want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. \nPlease generate the most suitable prompt according to the requirements I just mentioned.\n\nPlease generate a more appropriate prompt based on the following prompt and task definition:\nThink step by step and solve the question.",
+  "task_id": "sports_understanding",
+  "prompt_hash": "7baa2994ac0a04d436c331c43457c06d8441410246d9692c8cbeada0999eaa62"
+}

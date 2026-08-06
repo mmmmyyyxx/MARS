@@ -1,8 +1,0 @@
-method_id,model,api_call_records,mean_latency_seconds,max_latency_seconds,cache_hit_rate
-ape,deepseek-chat,2760,3.1381164601449214,7.140903,0.0
-cot_fs,deepseek-chat,250,3.227463048000001,4.895041,0.0
-cot_zs,deepseek-chat,250,4.003442399999997,7.7651,0.0
-mars_official,deepseek-chat,9446,3.0424609237772833,164.714044,0.346390006351895
-opro,deepseek-chat,2760,4.284921229347818,48.402408,0.0
-origin,deepseek-chat,250,1.975601804,4.023017,0.0
-protegi,deepseek-chat,2760,4.116377657971022,46.919942,0.0

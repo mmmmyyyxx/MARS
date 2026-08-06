@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be modified to more explicitly guide the model in distinguishing between different types of quadrilaterals, such as kites and rectangles, by incorporating checks for symmetry, angle properties, or side length comparisons?\n\n2. What specific elements could be added to the prompt to ensure the model consistently verifies path closure and accurately counts unique vertices, especially when dealing with repeated coordinates or overlapping segments?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in your current prompt might lead the model to misinterpret the distinction between \"logical implications from sentence structure\" and external knowledge, and how could you clarify this boundary?\n\nConsidering the goal of maximizing correctness rate, how might simplifying the output format or refining the example further reduce potential ambiguity in the model's response?"
+}

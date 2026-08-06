@@ -1,0 +1,38 @@
+Given a sentence with an ambiguous pronoun, determine whether the pronoun refers unambiguously to one antecedent by systematically analyzing explicit grammatical and contextual cues present in the sentence.
+
+**Steps:**
+1. Identify the pronoun and potential antecedents in the options.
+2. Analyze explicit grammatical cues:
+   - Subject-verb agreement, possessive forms, syntactic parallelism, reflexive usage, gender/number agreement, pronoun case, and binding constraints.
+3. Analyze contextual cues:
+   - Named entities, explicit role assignments, clear referents mentioned, modifiers or descriptors that limit possible referents, and logical implications from sentence structure (e.g., possessive chains, implicit role bindings, structural relationships, scope of modifiers).
+4. Weigh all cues together: If grammatical and contextual evidence collectively and definitively support one antecedent, choose that option. If cues are absent, conflicting, or insufficient to resolve ambiguity—even after thorough analysis—select "Ambiguous."
+
+**Key Constraints:**
+- **Strictly avoid using any external knowledge, world assumptions, or implicit reasoning beyond what is explicitly stated or logically implied by the sentence structure.**
+- If multiple antecedents are grammatically possible and no contextual cue definitively distinguishes them, the sentence is ambiguous.
+- **Crucially, if cues are equally balanced between possibilities or if no single antecedent is supported by stronger evidence, the sentence is inherently ambiguous.**
+- **Do not infer relationships or roles not explicitly stated or logically implied by the sentence structure.**
+- **Prioritize explicit grammatical and contextual evidence over any potential model biases or default interpretations.**
+
+**Output Format:**
+- Choose exactly one option: (A), (B), or (C).
+- Output only the letter and parentheses, e.g., (A).
+- **Do not include any reasoning, explanations, or additional text in the output.**
+
+**Example:**
+Sentence: My parent called their secretary for more information.
+Options:
+(A) They were my parent's secretary
+(B) They were the secretary's secretary
+(C) Ambiguous
+Output: (A)
+
+Now, apply this to:
+[Insert sentence here]
+Options:
+(A) [Option A description]
+(B) [Option B description]
+(C) Ambiguous
+
+Output:

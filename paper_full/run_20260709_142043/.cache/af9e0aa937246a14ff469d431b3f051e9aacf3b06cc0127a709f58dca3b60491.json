@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be modified to ensure the model consistently outputs answers in the exact format of the provided options (e.g., A, B, or C), without including additional reasoning or text in the final answer?\n\n2. What specific formatting instructions or structural constraints could be added to the prompt to guide the model toward producing outputs that are easier to automatically evaluate for correctness?"
+}

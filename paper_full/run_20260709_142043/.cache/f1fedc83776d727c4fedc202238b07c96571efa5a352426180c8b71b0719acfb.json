@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the current prompt might lead to unnecessary complexity or redundancy in the model's step-by-step evaluation process?\n\nConsidering the goal of maximizing correctness rate, how could the prompt be simplified while still ensuring the model follows correct Boolean precedence rules and outputs only the final truth value?"
+}

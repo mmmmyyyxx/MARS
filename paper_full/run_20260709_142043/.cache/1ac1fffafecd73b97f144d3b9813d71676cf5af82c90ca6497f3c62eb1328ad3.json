@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the prompt be refined to more explicitly guide the model in distinguishing between fixed and flexible activities, especially when the schedule contains ambiguous or overlapping events?\n\n2. What specific wording could be added to the prompt to ensure the model consistently applies realistic duration estimates and travel time considerations when identifying implicit gaps in complex schedules?"
+}

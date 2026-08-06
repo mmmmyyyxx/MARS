@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the instruction \"Use only the information within the sentence\" conflict with the need to evaluate semantic plausibility, which often relies on external world knowledge?\n\n2. Considering the goal of maximizing correctness rate, what specific wording could be added to the prompt to prevent the model from generating explanations while still ensuring it performs the necessary internal reasoning steps?"
+}

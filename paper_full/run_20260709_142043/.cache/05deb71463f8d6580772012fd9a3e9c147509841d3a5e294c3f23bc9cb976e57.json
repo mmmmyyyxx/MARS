@@ -1,0 +1,3 @@
+{
+  "content": "1. In the student's current prompt, what specific grammatical or semantic cues would you test with a sample sentence like \"The manager told the assistant that they would handle the report\" to ensure the model correctly identifies the antecedent or ambiguity without relying on external assumptions?\n\n2. How could you refine the prompt's instructions to more explicitly guide the model in distinguishing between inferences that are structurally implied by the sentence (like possessive relationships) and those that require external world knowledge, in order to optimize correctness across varied sentence structures?"
+}

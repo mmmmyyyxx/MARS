@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does the current prompt ensure that the model distinguishes between a humorous meaning shift and a simple typo, and what specific wording could be strengthened to prevent misinterpretation?\n\nSecond question: Considering the goal of maximizing correctness rate, what elements could be added to the prompt to explicitly guide the model in evaluating both the structural constraint (single-character edit) and the semantic humor requirement simultaneously?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the model strictly uses grammatical and contextual cues within the sentence, without relying on external knowledge or assumptions, to determine pronoun reference?  \n\n2. Considering the goal of maximizing correctness, what specific refinements could be made to the prompt's instructions or output format to reduce ambiguity in the model's decision process?"
+}

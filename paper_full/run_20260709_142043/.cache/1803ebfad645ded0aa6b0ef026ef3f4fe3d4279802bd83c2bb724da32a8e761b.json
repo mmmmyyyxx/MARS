@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt's validation process for hidden constraints remains both rigorous and practical, avoiding over-assumption of unstated routines while still capturing plausible daily patterns that could affect free time?\n\n2. What specific metrics or test scenarios would you use to measure the correctness rate of the model's output, and how would you iteratively refine the prompt based on these results to optimize for both accuracy and consistency?"
+}

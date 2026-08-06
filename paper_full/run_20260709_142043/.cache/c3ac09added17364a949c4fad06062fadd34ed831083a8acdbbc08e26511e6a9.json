@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can you modify the prompt to explicitly guide the language model to trace the shape by connecting the coordinates in sequence, rather than relying solely on command pattern analysis, to ensure accurate identification of the shape's geometry?\n\nSecond question: What specific elements could you add to the prompt to prioritize a step-by-step coordinate tracing process, ensuring the model counts vertices accurately and distinguishes between convex and concave shapes?"
+}

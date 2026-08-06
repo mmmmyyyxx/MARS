@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of the current prompt might lead the model to rely on implicit reasoning, despite the instruction to avoid external knowledge?\n\nHow could you adjust the prompt to more explicitly guide the model to weigh grammatical and contextual cues without introducing unintended ambiguity in the output format?"
+}

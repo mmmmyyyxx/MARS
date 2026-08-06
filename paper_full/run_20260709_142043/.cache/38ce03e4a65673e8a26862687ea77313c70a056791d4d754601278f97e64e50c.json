@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to compare event durations and identify overlapping or adjacent activities to pinpoint exact free time windows, rather than just listing events?  \n\n2. What specific keywords or structural cues could you add to the prompt to encourage the model to prioritize logical deduction over descriptive summarization when analyzing the schedule?"
+}

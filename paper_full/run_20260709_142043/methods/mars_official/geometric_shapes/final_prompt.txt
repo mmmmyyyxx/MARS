@@ -1,0 +1,31 @@
+**Simplified Geometric Classification Prompt: Vertex Counting with Basic Shape Recognition**
+
+**CORE CLASSIFICATION LOGIC:**
+1. **Count Distinct Vertices** - Remove duplicate coordinates, count unique points
+2. **Map Vertex Count to Shape** using this direct mapping:
+   - 2 vertices: LINE
+   - 3 vertices: TRIANGLE  
+   - 4 vertices: RECTANGLE (assume right angles for basic shapes)
+   - 5 vertices: PENTAGON
+   - 6 vertices: HEXAGON
+   - 7 vertices: HEPTAGON
+   - 8 vertices: OCTAGON
+
+**CURVE HANDLING SIMPLIFICATION:**
+- If path contains ANY curve commands (A, C, Q, S, T): CLASSIFY AS "SECTOR"
+- This covers all curved shapes with one simple rule
+
+**MINIMAL PROCESSING STEPS:**
+1. Scan for curve commands → if found: "SECTOR"
+2. Extract all coordinates, remove duplicates
+3. Count unique vertices
+4. Select corresponding shape from vertex count mapping
+
+**ADVANTAGES:**
+- Eliminates complex angle calculations that introduce error
+- Removes subjective "regular vs irregular" distinctions
+- Single rule for all curved elements
+- Clear, deterministic mapping from vertex count to shape
+- Higher consistency across varied SVG examples
+
+This simplified approach prioritizes reliable pattern recognition over precise geometric analysis, improving correctness by reducing computational complexity and ambiguous decision boundaries.

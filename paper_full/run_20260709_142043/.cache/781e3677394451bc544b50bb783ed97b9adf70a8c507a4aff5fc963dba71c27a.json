@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you modify the prompt to explicitly demonstrate the step-by-step reasoning process using the provided example SVG path, ensuring the model follows the exact classification flow from command analysis to final shape identification?\n\n2. What specific elements could you add to the prompt to optimize the model's accuracy in distinguishing between similar polygonal shapes (like kites vs generic quadrilaterals) while maintaining the simplified vertex-count approach?"
+}

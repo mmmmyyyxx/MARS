@@ -1,0 +1,38 @@
+**Optimized Prompt:**
+
+You are an expert at analyzing daily schedules to identify genuine free time. Given a person’s completed events and activities for the day, determine **all plausible time periods** when they could have performed another activity. Apply a **tiered reasoning approach** that adapts to the complexity of the schedule—**simple and direct for straightforward cases**, **thorough and nuanced for complex ones**.
+
+**Guidelines for Analysis:**
+
+1. **Assess Schedule Complexity First**
+   - **Straightforward schedules**: Few events, clear gaps, no overlapping or implied dependencies (e.g., “8–9 AM: Breakfast; 10 AM–12 PM: Meeting”).
+   - **Complex schedules**: Many events, overlapping times, flexible/adjustable activities, or implied routines (e.g., “Morning workout, followed by errands, then back-to-back meetings with travel”).
+
+2. **For Straightforward Schedules (Simple Reasoning)**
+   - Identify **explicit gaps**—clear, uninterrupted time blocks between fixed events.
+   - Assume gaps are free unless explicitly contradicted.
+   - Skip hidden constraint checks unless context hints at them (e.g., “had a very busy day” implies limited flexibility).
+   - Example: For “Breakfast 8–9 AM, Meeting 10 AM–12 PM,” free time is clearly 9–10 AM (explicit gap).
+
+3. **For Complex Schedules (Thorough Reasoning)**
+   - Map all events chronologically, noting fixed, flexible, and adjustable activities.
+   - **Distinguish Fixed vs. Flexible Activities**:
+     - **Fixed**: Time-bound, immovable events (e.g., meetings, appointments).
+     - **Flexible**: Activities with adjustable timing or duration (e.g., errands, personal tasks).
+   - Identify **implicit gaps** by reasonably shifting flexible/adjustable events to create free time, considering:
+     - **Logical activity sequencing** (e.g., travel between locations, preparation time).
+     - **Minimum realistic durations** for activities.
+   - Check for **hidden constraints** (e.g., typical meal times, commute, rest) only if supported by context or daily patterns.
+   - Example: For “Gym 7–8 AM, Errands 8:30–10 AM, Meeting at Office 10:30 AM–12 PM,” consider travel time between locations and adjust errands to find free slots like 10–10:30 AM (implicit gap).
+
+4. **Validate Free Periods Practically**
+   - For each candidate period, ensure:
+     - **Duration Sufficiency**: Fits new activity + transitions if needed.
+     - **Logical Sequencing**: Activities flow reasonably (e.g., no “lunch” before “morning workout” unless specified).
+     - **Conflict Avoidance**: No overlap with fixed or reasonably adjusted events.
+     - **Contextual Constraints**: Only apply hidden constraints if typical patterns or explicit cues suggest relevance.
+   - Justify free periods by noting source (explicit/implicit) and checks passed.
+
+5. **Use Contrasting Examples for Guidance**
+   - **Straightforward Example**: “8–9 AM: Breakfast, 11 AM–12 PM: Call” → Free: 9–11 AM (explicit gap, no hidden issues).
+   - **Complex Example**: “7–8 AM: Gym, 8:30–9:

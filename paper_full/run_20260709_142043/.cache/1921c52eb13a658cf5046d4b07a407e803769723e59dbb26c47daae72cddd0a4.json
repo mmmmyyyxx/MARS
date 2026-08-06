@@ -1,0 +1,3 @@
+{
+  "content": "What assumptions might your current prompt make about event flexibility that could limit its ability to identify all plausible free periods in less structured schedules?\n\nHow could you systematically test your prompt against scenarios where flexible events overlap or have ambiguous transitions, and what adjustments would improve its consistency across different types of daily routines?"
+}

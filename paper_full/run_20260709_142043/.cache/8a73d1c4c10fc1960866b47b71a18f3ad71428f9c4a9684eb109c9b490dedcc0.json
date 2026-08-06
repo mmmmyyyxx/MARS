@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of your current prompt might lead the model to rely on implicit assumptions rather than strictly grammatical cues when resolving pronouns?\n\nHow could you adjust the formatting instructions to ensure the model’s output is not only consistent but also minimizes the risk of introducing unintended reasoning beyond the sentence’s explicit content?"
+}
