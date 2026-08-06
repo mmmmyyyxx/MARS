@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can you design a test to verify that your prompt consistently selects edits that rely on clever wordplay or cultural references rather than phonetic misspellings, using examples like \"fall out boy\" and its options?\n\nSecond question: What specific elements in your prompt could be refined to better guide the model toward recognizing and prioritizing semantic shifts that create humor, while minimizing ambiguity in its decision-making process?"
+}

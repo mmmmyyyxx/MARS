@@ -1,0 +1,3 @@
+{
+  "content": "False, because `False and ...` short-circuits to False regardless of the rest of the expression."
+}

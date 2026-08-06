@@ -1,0 +1,3 @@
+{
+  "content": "Can you explain how your current prompt ensures the model focuses solely on logical form rather than being influenced by the semantic content of the statements?\n\nWhat specific changes could you make to your prompt to reduce potential ambiguity and increase the model's accuracy in distinguishing between valid and invalid arguments?"
+}

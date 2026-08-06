@@ -1,0 +1,3 @@
+{
+  "content": "Can you explain how your prompt ensures the model focuses specifically on whether the conclusion must be true if the premises are, rather than just identifying patterns or keywords?\n\nConsidering the task's emphasis on negations and deductive validity, how might you refine your prompt to more directly guide the model to test whether negations in the premises actually eliminate all possible counterexamples where the conclusion could be false?"
+}

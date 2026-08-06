@@ -1,0 +1,4 @@
+method_id,model,api_call_records,prompt_tokens,completion_tokens,total_tokens
+cot_fs,deepseek-chat,750,290251,2250,292501
+mars_official,deepseek-chat,4223,2131709,142617,2274326
+origin,deepseek-chat,756,191320,2098,193418

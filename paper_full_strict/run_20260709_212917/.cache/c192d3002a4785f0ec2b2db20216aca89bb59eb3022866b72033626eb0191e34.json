@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by reasoning step-by-step, ensuring the final result is logically consistent with standard Boolean logic. Use clear, concise reasoning at each step, and output only `True` or `False` as the final answer."
+}

@@ -1,0 +1,18 @@
+{
+  "protocol": "strict_mode",
+  "split_seed": 42,
+  "splits": {
+    "opt": {
+      "num_samples": 1,
+      "hash": "40820cde639318fda571aae6347340b01a7c73e7a50594948ed2bbc377dabd6a"
+    },
+    "val": {
+      "num_samples": 1,
+      "hash": "b84d795896134c10c9abae1d66244d246d072de1e24a30e0ec32d4fcfed82db4"
+    },
+    "test": {
+      "num_samples": 3,
+      "hash": "5094253d13a28f036d7bcae0f5e2e86a1839e4c51abd6ba0a4c12928e65d3f14"
+    }
+  }
+}

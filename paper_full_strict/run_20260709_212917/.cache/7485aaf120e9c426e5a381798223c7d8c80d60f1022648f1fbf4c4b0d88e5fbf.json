@@ -1,0 +1,3 @@
+{
+  "content": "Given the student's current prompt, what specific linguistic elements in the example sentences could be made more explicit to reduce reliance on implicit reasoning?\n\nConsidering the goal of maximizing correctness rate, how might the prompt's structure be optimized to more clearly separate syntactic and semantic resolution steps without introducing ambiguity?"
+}

@@ -1,0 +1,15 @@
+method_id,display_name,exactness_level,notes
+origin,Origin,prompt_dependent,Prompt-dependent; exact only when the local origin prompt matches the original paper prompt.
+cot_zs,CoT(ZS),best_effort_reimplementation,Local CoT baseline; paper reports baseline numbers but the original repository does not provide a complete executable baseline protocol.
+cot_fs,CoT(FS),best_effort_reimplementation,Local CoT baseline; paper reports baseline numbers but the original repository does not provide a complete executable baseline protocol.
+cot_fs_fixed,CoT(FS-fixed),best_effort_reimplementation,Diagnostic CoT few-shot baseline using fixed prompt-file demonstrations filtered to exclude current test sample_ids; not a paper baseline.
+ape,APE,best_effort_reimplementation,Generic candidate-generation search; pending original APE search details.
+protegi,ProTeGi,best_effort_reimplementation,Generic textual-gradient-inspired search; pending full ProTeGi beam protocol.
+opro,OPRO,best_effort_reimplementation,Generic optimizer-history search; pending full OPRO optimizer protocol.
+pe2,PE2,best_effort_reimplementation,Generic meta-prompt search; pending exact PE2 prompt-engineer protocol.
+mars_official,MARS-official,legacy_aligned_partial,"Legacy-aligned partial reproduction: uses original UserProxy/Planner task blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and target call-count limit; remaining differences may include framework wrappers, local baseline protocol, and model/API behavior."
+mars,MARS,legacy_aligned_partial,"Legacy-aligned partial reproduction: uses original UserProxy/Planner task blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and target call-count limit; remaining differences may include framework wrappers, local baseline protocol, and model/API behavior."
+mars_light,MARS-light,best_effort_reimplementation,Simplified local MARS variant retained for diagnostics.
+mars_wo_plan,w/oPlan,legacy_aligned_partial,"Legacy-aligned partial reproduction: uses original UserProxy/Planner task blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and target call-count limit; remaining differences may include framework wrappers, local baseline protocol, and model/API behavior."
+mars_wo_soc,w/oSoc,legacy_aligned_partial,"Legacy-aligned partial reproduction: uses original UserProxy/Planner task blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and target call-count limit; remaining differences may include framework wrappers, local baseline protocol, and model/API behavior."
+mars_wo_critic,w/oCri,legacy_aligned_partial,"Legacy-aligned partial reproduction: uses original UserProxy/Planner task blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and target call-count limit; remaining differences may include framework wrappers, local baseline protocol, and model/API behavior."

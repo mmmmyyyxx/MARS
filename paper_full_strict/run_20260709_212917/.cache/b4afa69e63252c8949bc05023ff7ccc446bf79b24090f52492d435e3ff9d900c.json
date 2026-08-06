@@ -1,0 +1,3 @@
+{
+  "content": "True, because the expression contains multiple `True` values connected by `or`, and `not False` also evaluates to `True`, making the entire expression true."
+}

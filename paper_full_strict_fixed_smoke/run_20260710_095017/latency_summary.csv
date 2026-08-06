@@ -1,0 +1,2 @@
+method_id,model,api_call_records,mean_latency_seconds,max_latency_seconds,cache_hit_rate
+cot_fs_fixed,deepseek-chat,125,0.000539064,0.001271,0.0

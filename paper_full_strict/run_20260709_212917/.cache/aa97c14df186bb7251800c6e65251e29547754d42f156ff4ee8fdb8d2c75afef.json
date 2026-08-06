@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test the effectiveness of your prompt with a variety of Boolean expressions to ensure it consistently leads to correct evaluations?  \n\n2. What specific steps would you take to optimize the prompt further if you notice the model still makes errors on expressions involving nested parentheses or mixed operators?"
+}

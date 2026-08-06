@@ -1,0 +1,32 @@
+display_name: MARS-official
+type: mars_official
+paper_method_id: mars
+exactness: legacy_aligned_partial
+exactness_level: legacy_aligned_partial
+exactness_note: 'Legacy-aligned partial reproduction: uses original UserProxy/Planner
+  task blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and
+  target call-count limit; remaining differences may include framework wrappers, local
+  baseline protocol, and model/API behavior.'
+planner_enabled: true
+socratic_enabled: true
+critic_enabled: true
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 37aba8f48f3bb7f4eefa81214161a696a2a48b59f22db9cec25887da212f0d85
+eval_protocol: strict_mode
+initial_prompt_source: legacy_student_generated
+legacy_skip_first_data_row: false
+max_answer_retries: 5
+planner_strict_mode: true
+legacy_target_prompt_mode: true
+target_call_count_limit: 10
+num_opt_samples: 75
+num_val_samples: 50
+num_test_samples: 125
+opt_hash: e954f34eb0be52dbd979ddf8893f27ab046ce424c023a8e543fc35d4b41c0898
+val_hash: 3967c96041e1c140d43c8aad6287fc31702c05a5a8428293f019a1bcac5a8433
+test_hash: bad5aac39243238f042244efbc75535c9fce53b0eb03b793ba15bc4d10902384
+initial_prompt_hash: 666171fca59d8b69b3dee474381bceb79923a3e3253f02e0d785fbdc0ac947ef

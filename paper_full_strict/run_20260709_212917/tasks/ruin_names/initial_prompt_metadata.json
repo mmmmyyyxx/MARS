@@ -1,0 +1,9 @@
+{
+  "label": "p0",
+  "source": "legacy_student_generated",
+  "seed_prompt": "Think step by step and solve the question.",
+  "system_message": "You are a prompt generator, please proceed to iterate over the existing prompts as required.\nNote that you should only output the new prompt you generated.",
+  "user_message": "Here is the task definition:\nHere is a topic for  ruin names:\nGiven an artist, band, or movie name, identify a one-character edit to the name that changes the meaning of the input and makes it humorous.\n\nFor example:\nWhich of the following is a humorous edit of this artist or movie name: 'fall out boy'?\nOptions:\n(A) faqll out boy\n(B) fall out bot\n(C) falbl out boy\n(D) fall outt boy\n\nI want to input a prompt and this topic into the big language model so that the big language model outputs the highest correctness rate. \nPlease generate the most suitable prompt according to the requirements I just mentioned.\n\nPlease generate a more appropriate prompt based on the following prompt and task definition:\nThink step by step and solve the question.",
+  "task_id": "ruin_names",
+  "prompt_hash": "fd33823e7234ff9bca3806aca4537172e70f9966c213e458a1b97f26f6349896"
+}

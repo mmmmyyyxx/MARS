@@ -7,7 +7,16 @@ import time
 from pathlib import Path
 from typing import Any
 
-from baselines import ape, cot_few_shot, cot_zero_shot, opro, origin, pe2, protegi
+from baselines import (
+    ape,
+    cot_few_shot,
+    cot_few_shot_fixed,
+    cot_zero_shot,
+    opro,
+    origin,
+    pe2,
+    protegi,
+)
 from mars_core.api_client import API_CALL_COLUMNS, LLMClient
 from mars_core.cache import DiskCache
 from mars_core.logging_utils import append_jsonl, write_csv, write_json, write_text
@@ -15,11 +24,14 @@ from mars_core.mars_runner import (
     RunSettings,
     TaskSpec,
     evaluate_prompt,
+    generate_initial_prompt_legacy,
     hash_rows,
     load_dataset,
+    manual_origin_initial_prompt,
     method_table_row,
     split_dataset,
     split_info,
+    write_initial_prompt_artifacts,
     write_method_outputs,
 )
 from mars_core.mars_variants import run_mars_variant
@@ -43,6 +55,7 @@ BASELINE_RUNNERS = {
     "origin": origin.run,
     "cot_zs": cot_zero_shot.run,
     "cot_fs": cot_few_shot.run,
+    "cot_fs_fixed": cot_few_shot_fixed.run,
     "ape": ape.run,
     "protegi": protegi.run,
     "opro": opro.run,
@@ -119,9 +132,64 @@ def _method_prompt_hash(method: str, prompts) -> str:
         return prompt_hash(prompts.origin)
     if method == "cot_zs":
         return prompt_hash(prompts.cot_zero_shot)
-    if method == "cot_fs":
+    if method in {"cot_fs", "cot_fs_fixed"}:
         return prompt_hash(prompts.cot_few_shot)
     return prompt_hash(prompts.origin)
+
+
+def _legacy_initial_prompt_enabled(settings: RunSettings) -> bool:
+    return settings.initial_prompt_source == "legacy_student_generated"
+
+
+def _method_needs_initial_prompt(method: str, method_config: dict[str, Any]) -> bool:
+    return (
+        method == "origin"
+        or method in {"ape", "protegi", "opro", "pe2"}
+        or method_config.get("type") == "mars_official"
+    )
+
+
+def _resolve_initial_prompt(
+    *,
+    client: LLMClient,
+    task: TaskSpec,
+    prompts,
+    task_dir: Path,
+    method_dir: Path,
+    settings: RunSettings,
+) -> tuple[str, dict[str, Any]]:
+    metadata_path = task_dir / "initial_prompt_metadata.json"
+    prompt_path = task_dir / "initial_prompt.txt"
+    if prompt_path.exists() and metadata_path.exists():
+        try:
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            metadata = {}
+        if metadata.get("source") == settings.initial_prompt_source:
+            initial_prompt = prompt_path.read_text(encoding="utf-8")
+            write_initial_prompt_artifacts(
+                task_dir=task_dir,
+                method_dir=method_dir,
+                initial_prompt=initial_prompt,
+                metadata=metadata,
+            )
+            return initial_prompt, metadata
+
+    if _legacy_initial_prompt_enabled(settings):
+        initial_prompt, metadata = generate_initial_prompt_legacy(client, task, prompts)
+    elif settings.initial_prompt_source == "manual_origin":
+        initial_prompt, metadata = manual_origin_initial_prompt(task, prompts)
+    else:
+        raise ValueError(
+            f"Unsupported initial_prompt_source: {settings.initial_prompt_source}"
+        )
+    write_initial_prompt_artifacts(
+        task_dir=task_dir,
+        method_dir=method_dir,
+        initial_prompt=initial_prompt,
+        metadata=metadata,
+    )
+    return initial_prompt, metadata
 
 
 def _empty_api_log(method_dir: Path) -> None:
@@ -245,6 +313,8 @@ def _try_resume_partial_predictions(
         prompt=best_prompt,
         method=method,
         iteration=len(history) or 1,
+        max_answer_retries=settings.max_answer_retries,
+        legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
     )
     existing = read_predictions(predictions_path)
     merged = _merge_predictions(existing=existing, fresh=fresh, test_rows=test_rows)
@@ -276,7 +346,11 @@ def run_task_method(
 ) -> dict[str, Any]:
     method_dir = run_dir / "methods" / method / task.task_id
     prompts = prompt_loader.load(task.task_id)
-    all_rows = load_dataset(task.dataset_path, settings.max_samples)
+    all_rows = load_dataset(
+        task.dataset_path,
+        settings.max_samples,
+        skip_first_data_row=settings.legacy_skip_first_data_row,
+    )
     splits = split_dataset(all_rows, settings.eval_protocol, settings.split_seed)
     split_row = _split_summary(splits)
     method_type = method_config.get("type", "")
@@ -294,6 +368,12 @@ def run_task_method(
             "split_seed": settings.split_seed,
             "dry_run": settings.dry_run,
             "concurrency": settings.concurrency,
+            "initial_prompt_source": settings.initial_prompt_source,
+            "legacy_skip_first_data_row": settings.legacy_skip_first_data_row,
+            "max_answer_retries": settings.max_answer_retries,
+            "planner_strict_mode": settings.planner_strict_mode,
+            "legacy_target_prompt_mode": settings.legacy_target_prompt_mode,
+            "target_call_count_limit": settings.target_call_count_limit,
         }
     )
     expected_ids = expected_sample_ids(splits["test"])
@@ -363,7 +443,25 @@ def run_task_method(
     )
     method_config["config_hash"] = config_hash
     method_config["eval_protocol"] = settings.eval_protocol
+    method_config["initial_prompt_source"] = settings.initial_prompt_source
+    method_config["legacy_skip_first_data_row"] = settings.legacy_skip_first_data_row
+    method_config["max_answer_retries"] = settings.max_answer_retries
+    method_config["planner_strict_mode"] = settings.planner_strict_mode
+    method_config["legacy_target_prompt_mode"] = settings.legacy_target_prompt_mode
+    method_config["target_call_count_limit"] = settings.target_call_count_limit
     method_config.update(split_row)
+    initial_prompt = None
+    initial_metadata: dict[str, Any] = {}
+    if _method_needs_initial_prompt(method, method_config):
+        initial_prompt, initial_metadata = _resolve_initial_prompt(
+            client=client,
+            task=task,
+            prompts=prompts,
+            task_dir=task_dir,
+            method_dir=method_dir,
+            settings=settings,
+        )
+        method_config["initial_prompt_hash"] = initial_metadata.get("prompt_hash", "")
 
     start = time.time()
     print(
@@ -386,7 +484,7 @@ def run_task_method(
         pass
     elif method in BASELINE_RUNNERS:
         runner = BASELINE_RUNNERS[method]
-        if method in {"origin", "cot_zs", "cot_fs"}:
+        if method in {"origin", "cot_zs", "cot_fs", "cot_fs_fixed"}:
             metrics = runner(
                 client=client,
                 task=task,
@@ -395,6 +493,11 @@ def run_task_method(
                 method_config=method_config,
                 out_dir=method_dir,
                 few_shot_rows=splits["opt"],
+                initial_prompt=initial_prompt
+                if method == "origin" and _legacy_initial_prompt_enabled(settings)
+                else None,
+                max_answer_retries=settings.max_answer_retries,
+                legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
             )
         else:
             metrics = runner(
@@ -407,6 +510,11 @@ def run_task_method(
                 method_config=method_config,
                 out_dir=method_dir,
                 max_iterations=settings.max_iterations,
+                initial_prompt=initial_prompt
+                if _legacy_initial_prompt_enabled(settings)
+                else None,
+                max_answer_retries=settings.max_answer_retries,
+                legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
             )
     elif method_type == "mars_official":
         metrics = run_mars_official(
@@ -422,6 +530,13 @@ def run_task_method(
             max_iterations=settings.max_iterations,
             early_stop_delta=settings.early_stop_delta,
             max_critic_revisions=settings.max_critic_revisions,
+            initial_prompt=initial_prompt
+            if _legacy_initial_prompt_enabled(settings)
+            else None,
+            max_answer_retries=settings.max_answer_retries,
+            planner_strict_mode=settings.planner_strict_mode,
+            legacy_target_prompt_mode=settings.legacy_target_prompt_mode,
+            target_call_count_limit=settings.target_call_count_limit,
         )
     elif method_type == "mars_light" or method.startswith("mars"):
         metrics = run_mars_variant(
@@ -448,6 +563,14 @@ def run_task_method(
 
     runtime = time.time() - start
     metrics["runtime_seconds"] = runtime
+    state_prompt_hash = (
+        str(method_config.get("initial_prompt_hash") or "")
+        if (
+            _legacy_initial_prompt_enabled(settings)
+            and _method_needs_initial_prompt(method, method_config)
+        )
+        else _method_prompt_hash(method, prompts)
+    )
     state = build_run_state(
         run_id=run_dir.name,
         suite=suite_name,
@@ -457,7 +580,7 @@ def run_task_method(
         temperature=settings.temperature,
         max_samples=settings.max_samples,
         dataset_hash=hash_rows(all_rows),
-        prompt_hash_value=_method_prompt_hash(method, prompts),
+        prompt_hash_value=state_prompt_hash,
         config_hash=config_hash,
         expected_ids=expected_ids,
         predictions_path=method_dir / "predictions.csv",

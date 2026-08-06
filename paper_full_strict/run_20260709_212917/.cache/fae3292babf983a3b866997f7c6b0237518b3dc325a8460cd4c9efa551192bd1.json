@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the large language model correctly handles nested parentheses and operator precedence when evaluating complex Boolean expressions?\n\n2. Considering the goal of maximizing correctness rate, what specific elements could be added to the prompt to explicitly prevent common evaluation errors such as incorrect short-circuit application or precedence misunderstandings?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can the prompt be refined to explicitly guide the large language model in handling nested parentheses and operator precedence without relying on implicit assumptions?\n\nSecond question: What specific elements in the prompt could be adjusted to minimize ambiguity while maintaining clarity, ensuring the model consistently applies logical rules step-by-step?"
+}

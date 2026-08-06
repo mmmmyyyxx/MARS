@@ -1,0 +1,3 @@
+{
+  "content": "True, because `not False` is `True`, `not not True` is `True`, and `True and True and True` is `True`."
+}

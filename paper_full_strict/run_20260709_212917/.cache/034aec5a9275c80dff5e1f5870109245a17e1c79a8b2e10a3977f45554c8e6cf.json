@@ -1,0 +1,3 @@
+{
+  "content": "Given your current focus on vertex consolidation and edge case handling, how might you refine the coordinate normalization process to better distinguish between true geometric vertices and path traversal artifacts?\n\nConsidering the goal of optimizing the prompt for the highest correctness rate, what specific constraints or guidelines could you add to the geometric classification step to reduce ambiguity when dealing with shapes that have overlapping segments or near-miss closures?"
+}

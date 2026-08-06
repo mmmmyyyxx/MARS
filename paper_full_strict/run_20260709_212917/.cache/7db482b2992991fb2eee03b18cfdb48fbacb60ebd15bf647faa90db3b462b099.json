@@ -1,0 +1,3 @@
+{
+  "content": "False, because `not False and False` simplifies to `False`, making the overall expression `False or False`."
+}

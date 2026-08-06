@@ -100,6 +100,16 @@ python visualize_full_results.py --run-dir results_full/run_<timestamp>
 
 `paper_mode` follows paper-style evaluation and may use identical opt/val/test formatted rows. `strict_mode` splits rows into opt/val/test to avoid prompt-search leakage.
 
+## Strict Splits
+
+`strict_mode` loads `Dataset_format` rows, assigns zero-based `sample_id`, shuffles with `random.Random(split_seed)`, then writes 30% `opt`, 20% `val`, and 50% `test`. Export the same split files for another experiment with:
+
+```bash
+python scripts/export_strict_splits.py --tasks boolean_expressions,disambiguation_qa,formal_fallacies,geometric_shapes,ruin_names,sports_understanding --output-dir strict_splits_bbh_seed42 --split-seed 42
+```
+
+Each task directory contains `opt.csv`, `val.csv`, `test.csv`, and `split_info.json`. Keep the exported `sample_id` values unchanged when comparing against MARS runs.
+
 ## Legacy Code
 
 The original manual scripts (`run.sh`, `main_MARS.py`, `Config.py`) are retained as upstream reference code. The active reproduction workflow is `reproduce_paper.py`.

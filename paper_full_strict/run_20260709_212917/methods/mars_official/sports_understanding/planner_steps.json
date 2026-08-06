@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Clearly define the task objective, which is to determine a person's free time during the day based on a series of completed events and activities, ensuring the model understands the temporal reasoning required.",
+    "Design a structured prompt that includes the task description, an illustrative example (e.g., the Neymar sentence plausibility check), and explicit instructions for the model to analyze event sequences and identify potential free time slots.",
+    "Specify that the prompt must guide the model to output the time or time range when the person could have performed another activity, based on gaps in the schedule and logical temporal constraints.",
+    "Incorporate validation mechanisms within the prompt, such as asking the model to justify its reasoning or check for conflicts, to enhance correctness and reliability.",
+    "Test the prompt with diverse scenarios and event sequences to ensure the model consistently produces accurate and contextually appropriate free-time determinations."
+  ]
+}

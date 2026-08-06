@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead to ambiguity when distinguishing between shapes with the same number of vertices?\n\nHow could you structure the prompt to ensure the model systematically checks both geometric properties and logical consistency before selecting an answer?"
+}

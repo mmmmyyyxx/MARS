@@ -1,0 +1,3 @@
+{
+  "content": "What assumptions might you be making about the LLM's ability to follow explicit step-by-step instructions without introducing its own reasoning shortcuts?\n\nHow could you structure the prompt to encourage the LLM to not only follow the correct evaluation order but also to detect and explain potential pitfalls in Boolean logic?"
+}

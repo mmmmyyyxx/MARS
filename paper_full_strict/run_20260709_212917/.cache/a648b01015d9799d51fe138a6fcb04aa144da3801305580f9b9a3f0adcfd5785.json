@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by strictly following standard logical precedence: resolve parentheses from innermost to outermost, then apply `not`, followed by `and`, and finally `or`. For each step, compute intermediate results internally, ensuring that `not` inverts truth values correctly and that `and`/`or` follow their definitions. Avoid common pitfalls such as misapplying operator precedence or mishandling negations. After completing all operations, output only the final truth value (True or False). This focused approach ensures accuracy while eliminating unnecessary explanations."
+}

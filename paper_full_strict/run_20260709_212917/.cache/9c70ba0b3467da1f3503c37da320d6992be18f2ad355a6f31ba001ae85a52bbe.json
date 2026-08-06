@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to prioritize explicit linguistic cues over implicit semantic relationships when resolving pronoun ambiguity?\n\n2. What specific elements could be added to the output format to reduce potential misinterpretation by the model while maintaining clarity and conciseness?"
+}

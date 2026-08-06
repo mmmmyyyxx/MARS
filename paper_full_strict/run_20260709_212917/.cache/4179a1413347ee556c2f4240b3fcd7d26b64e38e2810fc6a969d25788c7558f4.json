@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the current prompt be tested with sample Boolean expressions to determine if it consistently leads to accurate evaluations by the model?\n\n2. What alternative approaches could make the prompt more effective in guiding the model to evaluate complex Boolean expressions correctly, without relying on step-by-step instructions?"
+}

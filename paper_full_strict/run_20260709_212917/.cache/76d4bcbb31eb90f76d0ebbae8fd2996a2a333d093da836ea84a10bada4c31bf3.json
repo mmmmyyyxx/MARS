@@ -1,0 +1,3 @@
+{
+  "content": "Focus explicitly on how negations in the premises affect the logical flow to the conclusion. Identify any instances where a negation might reverse, block, or alter the expected deductive path, and verify whether the conclusion is entailed under all interpretations of the premises—especially when negations are present. If the presence or absence of a negation in the premises creates a scenario where the premises could be true and the conclusion false, judge the argument as invalid; otherwise, judge it as valid."
+}

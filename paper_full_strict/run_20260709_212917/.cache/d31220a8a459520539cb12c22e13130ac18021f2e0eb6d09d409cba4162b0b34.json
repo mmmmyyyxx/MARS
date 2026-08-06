@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the student's current prompt might limit the model's ability to generalize beyond the provided examples?\n\nHow could the structure of the prompt be refined to more naturally guide the model toward discovering syntactic and semantic patterns without relying on explicit step-by-step instructions?"
+}

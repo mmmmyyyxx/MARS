@@ -1,0 +1,3 @@
+{
+  "content": "Given a series of events and activities a person has completed throughout the day, identify all time slots when they were free to perform another activity. Use the start and end times of each event to determine gaps between them, focusing only on explicit time intervals without considering implicit factors like travel or preparation. For example, just as you would assess whether Neymar had a moment to perform a specific move during a match by checking the timing of game events, here you should check the daily timeline for clear, uninterrupted periods between scheduled events. List each free time slot explicitly, ensuring no overlaps with existing activities."
+}

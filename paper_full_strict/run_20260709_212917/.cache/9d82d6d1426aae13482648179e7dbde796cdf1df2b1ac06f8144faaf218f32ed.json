@@ -1,0 +1,3 @@
+{
+  "content": "How can you refine the prompt to ensure the model explicitly outputs the specific time or time range when the person was free, rather than just describing the reasoning process?\n\nWhat elements could be added to the prompt to guide the model in prioritizing the most usable free slots based on duration, location, and personal routines, without making the instructions overly complex?"
+}

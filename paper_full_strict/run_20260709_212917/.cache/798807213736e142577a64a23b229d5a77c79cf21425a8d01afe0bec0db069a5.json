@@ -1,0 +1,3 @@
+{
+  "content": "What specific patterns in the coordinate sequence of the SVG path would help you distinguish between polygons with the same number of vertices, such as a heptagon versus a concave seven-sided shape?\n\nHow can you structure the prompt to ensure the language model systematically traces the shape from the path commands before comparing it to the geometric options, rather than relying solely on vertex count?"
+}

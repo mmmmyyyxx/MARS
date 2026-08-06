@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test the current prompt with sample Boolean expressions to identify potential weaknesses in guiding the model toward correct evaluations?\n\n2. What specific elements could be added to the prompt to explicitly prevent common evaluation errors, such as misordering operations or mishandling nested parentheses?"
+}

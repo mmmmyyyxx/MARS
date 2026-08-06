@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly requires the model to apply short-circuit evaluation only when it leads to simplification, without introducing unnecessary complexity in cases where full evaluation is straightforward?\n\n2. Considering the goal of maximizing correctness rate, what specific wording in the prompt would prevent the model from including any intermediate reasoning steps while still enforcing strict adherence to Boolean logic rules?"
+}

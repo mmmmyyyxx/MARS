@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does the current prompt ensure that the model correctly handles operator precedence and nested parentheses without explicitly showing intermediate steps, and what potential issues might arise from omitting these steps?\n\nSecond question: Considering the goal of maximizing correctness rate, how could the prompt be optimized to guide the model's internal reasoning process more effectively while still restricting the output to only the final truth value?"
+}

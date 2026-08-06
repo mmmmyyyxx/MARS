@@ -1,0 +1,3 @@
+{
+  "content": "Trace the SVG path sequentially, plotting each coordinate to visualize the shape's outline. Identify key features such as repeated vertices, collinear segments, or inward/outward bends that indicate convexity or concavity. For polygons with identical vertex counts, distinguish them by analyzing: (1) symmetry—check if vertices form mirrored pairs; (2) angle consistency—determine if interior angles are uniform (regular polygon) or varied (irregular); and (3) specific traits—e.g., a kite has two distinct pairs of adjacent equal sides, while a concave shape has at least one interior angle >180°. Compare the traced shape against these criteria before selecting the geometric option."
+}

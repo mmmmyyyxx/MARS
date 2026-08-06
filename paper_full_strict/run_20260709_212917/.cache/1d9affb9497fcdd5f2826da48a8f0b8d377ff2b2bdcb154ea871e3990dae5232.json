@@ -1,0 +1,3 @@
+{
+  "content": "Given a sentence with an ambiguous pronoun, first resolve the pronoun strictly based on grammatical agreement (number and gender) and syntactic constraints (structural possibilities like c-command). Only if these steps do not yield a unique antecedent, then consider semantic plausibility using conventional, widely accepted inferences. If no unique antecedent is determined after all steps, output \"Ambiguous.\" Avoid using semantic cues prematurely—grammar and syntax must be exhausted first."
+}

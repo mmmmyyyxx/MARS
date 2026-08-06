@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be adjusted to more clearly distinguish between \"strongly supported\" implicit cues and weaker inferences, especially in cases where typical roles or world knowledge might vary across contexts?\n\n2. Considering the goal of maximizing correctness rate, what specific modifications could be made to the output format or justification requirements to reduce potential misinterpretation by the language model?"
+}

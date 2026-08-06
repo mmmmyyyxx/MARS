@@ -1,0 +1,3 @@
+{
+  "content": "How can you ensure the language model accurately distinguishes between implicit closure (when start and end coordinates match) and explicit closure (using the Z command) when processing SVG paths?\n\nWhat specific instructions could be added to the prompt to optimize the classification process by prioritizing closure detection before vertex counting and geometric analysis?"
+}

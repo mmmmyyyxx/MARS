@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might lead the model to overlook subtle constraints, such as varying activity intensities or personal energy levels, when determining feasible time slots?\n\nHow could you refine the prompt to encourage the model to prioritize time slots not only by availability but also by contextual suitability for the specific activity being considered?"
+}

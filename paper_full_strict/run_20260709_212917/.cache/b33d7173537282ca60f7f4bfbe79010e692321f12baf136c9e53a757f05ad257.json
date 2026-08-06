@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does your prompt ensure that the model focuses specifically on the role of negations when determining whether the conclusion logically follows from the premises, rather than just translating statements into logic?\n\nSecond question: In what ways could your prompt be optimized to more directly guide the model to test for the most common formal fallacies involving negation, such as illicit negation shifts or scope errors, without adding unnecessary complexity?"
+}

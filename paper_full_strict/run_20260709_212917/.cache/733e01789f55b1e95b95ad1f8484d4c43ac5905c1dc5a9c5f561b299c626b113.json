@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the current prompt's strict reliance on explicit linguistic cues limit its ability to handle cases where implicit semantic relationships are necessary for accurate pronoun resolution?\n\n2. Considering the goal of maximizing correctness rates, what specific refinements could be made to the prompt structure or examples to better guide the model toward distinguishing between truly ambiguous cases and resolvable ones?"
+}

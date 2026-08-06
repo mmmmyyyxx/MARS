@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the prompt be refined to explicitly guide the model in parsing the input expression, especially when dealing with nested parentheses and operator precedence, to avoid ambiguity in evaluation order?\n\n2. Considering the goal of maximizing correctness, what specific wording or structural changes could make the prompt more effective at ensuring the model consistently applies short-circuit evaluation and early constant resolution across varied Boolean expressions?"
+}

@@ -1,0 +1,4 @@
+Case,Condition,Status,Evidence,Interpretation
+A,cot_fs_fixed clearly below strict CoT-FS,pending,cot_fs_fixed real results are not available yet.,Run cot_fs_fixed to test whether split-selected opt examples drive CoT-FS strength.
+B,cot_fs_fixed close to strict CoT-FS,pending,cot_fs_fixed real results are not available yet.,Run cot_fs_fixed to test whether few-shot prompting itself is the main driver.
+C,cot_fs_fixed below strict MARS,pending,cot_fs_fixed real results are not available yet.,Run cot_fs_fixed to test whether MARS beats fixed non-overlapping demonstrations.

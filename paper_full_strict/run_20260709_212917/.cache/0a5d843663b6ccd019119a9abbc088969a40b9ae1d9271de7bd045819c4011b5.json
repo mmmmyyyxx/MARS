@@ -1,0 +1,3 @@
+{
+  "content": "What steps would you take to trace the sequence of coordinates and commands in the SVG path to determine the overall shape it forms?\n\nHow might you structure the prompt to guide the model through identifying closure, counting vertices, and applying geometric checks without explicitly listing shape-specific rules?"
+}

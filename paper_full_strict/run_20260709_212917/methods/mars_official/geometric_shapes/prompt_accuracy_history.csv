@@ -1,0 +1,279 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+0,"Given an SVG path element with multiple commands, carefully trace the sequence of points and movements to reconstruct the geometric shape. Begin by listing all coordinates in order, noting where the path starts, moves, and closes. Identify any repeated points, straight segments, or curves. Then, count the number of distinct vertices and analyze the arrangement—check for parallel lines, equal sides, or symmetrical patterns. Compare the resulting polygon or shape to the options provided, considering properties like vertex count, angles, and overall form. Finally, select the most accurate geometric shape from the choices. 
+
+For the example path:  
+Start at (64,63) → (44,63) → (44,50) → (64,50) → (64,45) → (85,57) → (64,68) → back to (64,63).  
+Plotting these points reveals a shape with 7 distinct vertices: (64,63), (44,63), (44,50), (64,50), (64,45), (85,57), (64,68). This forms a heptagon, matching option (B).",0.42,50,21,29
+1,"To accurately determine the geometric shape from an SVG path, follow this refined procedure:
+
+1. **Extract and count unique vertices**: Parse all path commands to collect coordinate pairs. Ignore duplicates only if they occur at the start/end when the path explicitly closes with ""Z"" or returns to the initial point; otherwise, treat all points as distinct to avoid miscounting in non-closing or self-intersecting paths.
+
+2. **Prioritize vertex count for polygon identification**: Use the unique vertex count as the primary discriminator. For example, 6 vertices indicate a hexagon, 7 a heptagon—this alone resolves most cases without further computation.
+
+3. **Apply targeted checks for ambiguous shapes**: If vertex counts are similar (e.g., hexagon vs. heptagon), quickly assess:
+   - **Side-length patterns**: Note if consecutive edges have consistent lengths (suggesting regularity) or vary (irregular), but avoid precise calculations; instead, infer from coordinate differences.
+   - **Angle cues**: Observe if the path direction changes uniformly (e.g., constant turns for regular polygons) without complex angle computations.
+
+Focus on simplicity: Vertex count suffices for most decisions, and only use qualitative observations for edge cases to ensure efficiency and accuracy.",0.48,50,24,26
+2,"To maximize correctness in identifying geometric shapes from SVG paths, focus on this streamlined prompt:
+
+**""Analyze the SVG path by executing these steps in order:**
+1. **Closure Check:** Determine if the path is closed—either by a 'Z' command or if the last point matches the first exactly. If open, output 'line' (E) unless arcs suggest a sector; otherwise, proceed.
+2. **Vertex Extraction:** List all unique coordinates from move (M) and line (L) commands, ignoring duplicates and collinear points. Count these as distinct vertices.
+3. **Shape Matching:**  
+   - If closed: Match vertex count to options (3→triangle, 4→quadrilateral, 5→pentagon, etc.).  
+   - For 4 vertices: If two pairs of adjacent sides are equal, output 'kite' (D); if all angles are ~90° and opposite sides equal, output 'rectangle' (H).  
+   - If an arc command is present and the path is closed with exactly two lines and one arc forming a wedge, output 'sector' (I).  
+   - Default to the polygon name by vertex count if no special conditions apply.
+
+Prioritize closure and vertex counting—these are critical to avoid misclassifying open paths or overcounting vertices. Simplify by merging redundant checks and emphasizing clear vertex identification over angle calculations unless necessary for quadrilaterals.""",0.26,50,13,37
+3,"**""Execute the SVG path and classify the resulting shape using this streamlined process:**
+
+1. **Closure Check:**  
+   - If the path ends with 'Z' or the last coordinate matches the first (within 0.01 units), proceed to shape analysis.  
+   - If open and contains no arcs, output 'line' (E). If open with an arc connected to the start by lines, output 'sector' (I).
+
+2. **Vertex Extraction:**  
+   - Collect coordinates from M and L commands.  
+   - For curves (C/S/Q/T/A), use only start and end points as vertices—ignore control points unless they create a distinct corner (direction change > 30°).  
+   - Remove collinear points (within 0.1 units of the line between neighbors).
+
+3. **Shape Identification:**  
+   - **Priority Check:**  
+     - If exactly 4 vertices with two distinct pairs of equal adjacent sides, output 'kite' (D).  
+     - If a single arc is connected by two lines to the start point, output 'sector' (I).  
+   - **Vertex Count:**  
+     - 3 vertices → triangle (J)  
+     - 4 vertices → rectangle (H) if all angles ≈90° and opposite sides equal; otherwise quadrilateral  
+     - 5→pentagon (G), 6→hexagon (C), 7→heptagon (B), 8→octagon (F)  
+   - If no match, default to the closest polygon by vertex count.
+
+**Validation Rule:**  
+When curves are present, compare the simplified vertex shape to the original command sequence—curves should not create new polygon vertices unless they form sharp corners.""",0.34,50,17,33
+4,"**""Execute a systematic geometric analysis of SVG paths using this decision tree:**
+
+**Step 1: Vertex Count & Closure Check**
+- Count unique vertices from all path commands
+- Verify path closure (start/end coordinates match)
+- Map vertex count to shape candidates:
+  * 3 vertices → triangle (J)
+  * 4 vertices → proceed to Step 2A
+  * 5 vertices → pentagon (G)
+  * 6 vertices → hexagon (C)
+  * 7 vertices → heptagon (B)
+  * 8 vertices → octagon (F)
+
+**Step 2A: 4-Vertex Shape Discrimination**
+For exactly 4 vertices, perform parallel property checks:
+
+**Angle Analysis:**
+- Calculate all internal angles using vector dot products
+- If all angles ≈90° (±2° tolerance) → rectangle (H)
+- If two acute and two obtuse angles → kite candidate
+
+**Side-Length Analysis:**
+- Compute distances between consecutive vertices
+- Check these patterns simultaneously:
+  * Rectangle pattern: Opposite sides equal (AB=CD, BC=DA)
+  * Kite pattern: Two distinct pairs of adjacent equal sides
+  * Square: All sides equal AND all angles ≈90°
+
+**Step 2B: Logical Consistency Verification**
+- Cross-validate angle and side-length results
+- If angle analysis suggests rectangle but side pattern doesn't match, re-check calculations
+- If kite side pattern exists but angles don't show characteristic acute/obtuse pairs, reconsider
+
+**Step 3: Final Decision Logic**
+- Rectangle: Requires 90° angles AND opposite sides equal
+- Kite: Requires two pairs of adjacent equal sides AND characteristic angle pattern
+- Reject ambiguous cases where properties conflict
+
+**Example Application:**
+Path: `M 64,63 L 44,63 L 44,50 L 64,50 L 64,45 L 85,57 L 64,68 L 64,63`
+- Step 1: 7 unique vertices → immediate classification as heptagon (B)
+- No need for further geometric checks
+
+This structured approach eliminates ambiguity by requiring multiple consistent geometric properties before final classification.""**",0.44,50,22,28
+5,"**Simplified Geometric Analysis for SVG Path Classification**
+
+**Step 1: Essential Coordinate Processing**
+- Extract all coordinates maintaining original precision
+- **Smart Vertex Consolidation**:
+  * Group coordinates within 0.01 units as single vertices
+  * Preserve coordinate sequence to distinguish path traversal from geometry
+  * Remove consecutive duplicate coordinates automatically
+
+**Step 2: Streamlined Shape Identification**
+- **Vertex Counting & Pattern Recognition**:
+  * Count distinct vertices after consolidation
+  * Check path closure (first and last coordinates within 0.01 units)
+- **Direct Shape Mapping**:
+  * 3 vertices → triangle
+  * 4 vertices → analyze for rectangle, kite, or other quadrilateral
+  * 5 vertices → pentagon
+  * 6 vertices → hexagon
+  * 7 vertices → heptagon
+  * 8 vertices → octagon
+
+**Step 3: Quick Geometric Validation**
+- **Simple Angle Check**: Verify vertices form convex polygon
+- **Closure Confirmation**: Ensure path forms closed shape
+- **Shape-Specific Tests**:
+  * For quadrilaterals: Check right angles for rectangles
+  * For kites: Verify two distinct pairs of adjacent equal sides
+
+**Step 4: Confidence-Based Classification**
+- High confidence when:
+  * Clear vertex count matches standard polygon
+  * Path is properly closed
+  * No complex overlapping patterns
+- Default to simplest consistent polygon when multiple interpretations exist
+
+**Example Application**:
+Path: `M 64,63 L 44,63 L 44,50 L 64,50 L 64,45 L 85,57 L 64,68 L 64,63`
+- 7 distinct vertices after consolidation
+- Path properly closed
+- Direct classification: heptagon",0.38,50,19,31
+6,"**Enhanced Geometric Analysis for SVG Path Classification: Feature-Driven Shape Identification**
+
+**Step 1: Primary Feature Extraction**
+- **Vertex Isolation**: ""Extract all coordinate pairs from path commands, removing duplicate consecutive points""
+- **Collinearity Elimination**: ""Filter out intermediate points that lie on straight segments between non-adjacent vertices""
+- **Essential Vertex Count**: ""Count remaining distinct vertices that form actual shape corners""
+
+**Step 2: Distinctive Geometric Feature Hierarchy**
+- **Closure Verification**: ""Confirm path starts and ends at same coordinate → closed shape requirement""
+- **Vertex Count Categorization**: 
+  * ""3 vertices → triangle candidate""
+  * ""4 vertices → quadrilateral family (rectangle, kite, square)""
+  * ""5+ vertices → polygon classification""
+  * ""Curved segments → circle/sector candidates""
+
+**Step 3: Irregularity Detection Before Regularity Assumption**
+- **Side Length Variance Analysis**: ""Calculate all consecutive vertex distances → if >2 distinct lengths present → irregular polygon""
+- **Angle Inconsistency Check**: ""Compute interior angles → significant variation (>10°) confirms irregularity""
+- **Symmetry Assessment**: ""Check for reflective/rotational symmetry patterns""
+
+**Step 4: Shape-Specific Feature Verification**
+- **For 4 vertices**: 
+  * ""Check parallel sides → rectangle candidate""
+  * ""Check adjacent equal sides → kite candidate""
+  * ""Verify right angles → rectangle confirmation""
+- **For 5+ vertices**:
+  * ""Equal sides + equal angles → regular polygon""
+  * ""Mixed measurements → irregular polygon""
+  * ""Specific counts: 5→pentagon, 6→hexagon, 7→heptagon, 8→octagon""
+
+**Decision Protocol**:
+1. ""Always classify as irregular polygon first when vertex count >4 and side lengths vary""
+2. ""Only consider regular polygon classification if all sides and angles are equal within tolerance""
+3. ""For ambiguous cases, prioritize the most specific shape that matches distinctive features""
+
+**Example Application**: ""Path with 7 vertices having side lengths [20,13,20,5,37,24,5] → immediate irregular classification → vertex count confirms heptagon → no need for angle calculations once irregularity established""
+
+**Critical Enhancement**: The model must default to irregular polygon classification when vertex count >4 and side length variance exists, only pursuing regular polygon analysis when equal measurements are detected. This prevents misclassification by prioritizing distinctive irregular features over assumed regularity.",0.36,50,18,32
+7,"**Simplified Geometric Reasoning for SVG Path Classification**
+
+**Core Geometric Principles**
+- **Focus on Visual Shape Recognition**: ""Analyze the overall shape formed by the path commands rather than precise coordinate calculations""
+- **Key Geometric Patterns**: ""Identify fundamental shapes through their distinctive visual characteristics: triangles (3 sides), quadrilaterals (4 sides), polygons (5+ sides), and curved shapes""
+
+**Streamlined Decision Process**
+
+**Step 1: Path Closure Check**
+- ""Determine if the path forms a closed shape by checking if the last point connects back to the starting point (either explicitly with Z command or implicitly)""
+- ""Use visual continuity assessment rather than strict coordinate matching""
+
+**Step 2: Vertex Counting & Shape Identification**
+- ""Count distinct turning points/corners in the path""
+- ""3 vertices → Triangle""
+- ""4 vertices → Quadrilateral family (rectangle, kite, etc.)""
+- ""5 vertices → Pentagon""
+- ""6 vertices → Hexagon""
+- ""7 vertices → Heptagon"" 
+- ""8 vertices → Octagon""
+
+**Step 3: Quadrilateral Differentiation**
+- **Rectangle Detection**: ""Look for four right angles and opposite sides of equal length""
+- **Kite Detection**: ""Identify two distinct pairs of adjacent equal-length sides""
+- **Simple Heuristic**: ""If all four sides equal and angles appear right → Rectangle; if two pairs of adjacent sides equal → Kite""
+
+**Step 4: Special Case Handling**
+- **Curved Shapes**: ""If path contains arc commands (A) or appears circular → Circle/Sector""
+- **Open Paths**: ""If path doesn't close and has only straight segments → Line""
+
+**Visual Pattern Recognition Emphasis**
+- ""Focus on the overall silhouette created by connecting all path points in sequence""
+- ""Ignore minor coordinate variations and focus on the macro geometric structure""
+- ""Use relative position relationships rather than absolute coordinate calculations""
+
+**Error Reduction Strategy**
+- ""Avoid over-reliance on precise floating-point comparisons""
+- ""Prioritize shape characteristics over computational geometry""
+- ""Cross-verify by mentally tracing the path from start to end""
+
+**Final Decision Flow**: ""Closure Check → Vertex Count → Shape Pattern Recognition → Confidence-based Selection""",0.26,50,13,37
+8,"**Enhanced Geometric Shape Recognition from SVG Paths**
+
+**Core Principle**: ""Identify shapes by analyzing geometric properties and spatial relationships of distinct vertices, disregarding path execution mechanics and redundant segments.""
+
+**Step 1: Robust Vertex Extraction**
+""Extract geometrically significant vertices by:
+- Tracking coordinate changes that form angles >15° (filtering out collinear points)
+- Eliminating duplicate coordinates and overlapping segments
+- Confirming path closure only when start/end points are geometrically distinct vertices""
+
+**Step 2: Geometric Property Classification**
+""Classify shapes using vertex count enhanced with spatial analysis:
+- 3 vertices → Triangle (verify non-collinearity)
+- 4 vertices → Apply quadrilateral hierarchy:
+  * Two distinct pairs of adjacent equal sides with perpendicular diagonals → Rectangle
+  * Two pairs of adjacent equal sides with diagonals intersecting at right angles → Kite
+  * Otherwise → General quadrilateral
+- 5+ vertices → Regular polygon only if vertices are equidistant from center with equal angles
+- Curved elements require explicit arc commands to qualify as circle/sector""
+
+**Step 3: Geometric Constraint Verification**
+""Apply strict geometric validation:
+- Verify polygon closure with distinct corner vertices
+- Calculate interior angles to confirm shape classification
+- Check side length ratios and diagonal properties
+- Discard any path that retraces or overlaps without creating new geometric corners""
+
+**Decision Priority**: ""When vertex counts are similar, prioritize geometric properties (side lengths, angles, symmetry) over vertex count alone. A shape is defined by its spatial configuration, not its drawing method.""",0.36,50,18,32
+9,"**Simplified Geometric Shape Recognition from SVG Paths**
+
+**Core Directive**: ""Focus on identifying the final geometric shape created by the complete SVG path, prioritizing visual pattern recognition over technical implementation details.""
+
+**Step 1: Visual Closure Analysis**
+""Trace the complete path mentally and observe:
+- Does the path form a closed shape? (Check if final point connects to starting point)
+- Count distinct corners where direction clearly changes
+- Ignore intermediate points that don't create actual vertices""
+
+**Step 2: Shape Pattern Matching**
+""Compare the resulting polygon against common geometric shapes:
+- **3 distinct corners** → Triangle
+- **4 distinct corners** → Quadrilateral family (rectangle, kite, etc.)
+- **5 distinct corners** → Pentagon
+- **6 distinct corners** → Hexagon
+- **7 distinct corners** → Heptagon
+- **8 distinct corners** → Octagon
+
+**Special Cases**:
+- Single continuous segment → Line
+- Circular arc patterns → Circle or Sector""
+
+**Step 3: Quick Geometric Property Check**
+""For shapes with identical corner counts, apply simple visual tests:
+- **Kite vs Hexagon**: Does it look like a diamond with tails? (Kite)
+- **Rectangle**: Are opposite sides parallel and angles approximately 90°?
+- **Regular Polygons**: Do all sides appear equal length?""
+
+**Key Simplification Principles**:
+""- Focus on the complete shape, not individual path commands
+- Count only meaningful direction changes as vertices
+- Use visual estimation rather than precise mathematical calculations
+- Prioritize the overall silhouette over coordinate-level details""
+
+**Output**: ""Based on the complete path, select the geometric shape that best matches the final closed form from the provided options.""",0.36,50,18,32

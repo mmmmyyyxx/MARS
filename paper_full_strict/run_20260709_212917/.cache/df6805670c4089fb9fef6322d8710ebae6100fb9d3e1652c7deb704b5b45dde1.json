@@ -1,0 +1,3 @@
+{
+  "content": "Analyze the SVG path by first extracting and counting all unique coordinate pairs from the path commands, ignoring duplicate points at path closure. For shapes with similar vertex sequences like hexagons and heptagons, systematically: (1) Verify the vertex count—hexagons have exactly 6 unique vertices, heptagons have 7; (2) Check side-length consistency—measure Euclidean distances between consecutive unique vertices to identify equal (regular polygons) or variable lengths (irregular); and (3) Assess angle patterns—calculate interior angles at each vertex to detect uniformity or specific sequences. Use vertex count as the primary differentiator before evaluating other geometric properties to avoid confusion between polygons with overlapping features."
+}

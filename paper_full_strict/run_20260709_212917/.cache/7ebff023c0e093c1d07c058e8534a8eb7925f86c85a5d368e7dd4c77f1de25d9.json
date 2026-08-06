@@ -1,0 +1,3 @@
+{
+  "content": "Analyze the argument by identifying the core logical relationships and patterns, especially focusing on how negations and quantifiers interact within the premises and conclusion. Determine deductive validity by reasoning whether the conclusion must necessarily follow from the premises in all possible scenarios, without relying on predefined procedural steps. If you can conceive of any situation where the premises hold true but the conclusion does not, classify the argument as invalid; otherwise, classify it as valid."
+}

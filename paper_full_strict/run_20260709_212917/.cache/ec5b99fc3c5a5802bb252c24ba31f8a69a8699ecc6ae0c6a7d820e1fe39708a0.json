@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can the prompt be refined to ensure the model consistently applies the correct operator precedence—especially when parentheses are absent—without relying solely on the innermost parentheses rule?\n\nSecond question: What specific wording in the prompt would minimize ambiguity when the model encounters nested negations or mixed operators outside parentheses, while maintaining clarity and brevity?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt you design explicitly guides the large language model to prioritize short-circuit evaluation and early resolution of constants, given that these strategies are key to maximizing correctness in Boolean logic problems?\n\n2. What specific elements in your current prompt might be adjusted to more directly align the model's output format with the requirement of providing both the final result and a concise justification, without encouraging unnecessary intermediate steps?"
+}

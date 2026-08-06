@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to handle nested parentheses correctly, especially when they contain mixed operators like `not`, `and`, and `or`?\n\n2. What specific wording could you add to the prompt to prevent the model from skipping operator precedence rules or outputting intermediate steps, while still maintaining clarity for the large language model?"
+}

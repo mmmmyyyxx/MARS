@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by breaking it down step by step. First, identify and resolve any parentheses, applying the `not` operator where necessary. Then, compute the `and` and `or` operations in the correct logical order, remembering that `and` has precedence over `or`. Finally, state the final truth value clearly."
+}

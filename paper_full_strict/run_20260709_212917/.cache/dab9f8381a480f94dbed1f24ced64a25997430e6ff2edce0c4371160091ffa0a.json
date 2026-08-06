@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be modified to more explicitly guide the model to prioritize syntactic constraints over semantic cues, especially in cases where syntactic rules alone might resolve the ambiguity without needing semantic evaluation?\n\n2. Considering the goal of maximizing correctness rate, what specific refinements could be made to the prompt's structure or wording to reduce potential misinterpretations by the model, such as clarifying the conditions under which semantic evaluation should be triggered?"
+}

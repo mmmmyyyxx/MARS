@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the student's current prompt might lead the model to misinterpret the geometric properties of the SVG path, particularly when distinguishing between irregular polygons and other shape categories?\n\nConsidering the goal of maximizing correctness, how could the prompt be restructured to prioritize the most decisive geometric features first, ensuring the model avoids unnecessary calculations when the shape can be identified through simpler, more reliable indicators?"
+}

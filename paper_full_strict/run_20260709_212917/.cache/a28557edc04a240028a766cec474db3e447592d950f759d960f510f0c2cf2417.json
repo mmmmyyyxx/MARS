@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the student's current prompt be improved to more directly guide the LLM to translate informal statements into formal logical notation before evaluating validity, especially when negation affects quantifier scope?\n\n2. What specific elements could be added to the prompt structure to ensure the LLM systematically checks for counterexamples in cases where negation might create ambiguity between universal and existential claims?"
+}

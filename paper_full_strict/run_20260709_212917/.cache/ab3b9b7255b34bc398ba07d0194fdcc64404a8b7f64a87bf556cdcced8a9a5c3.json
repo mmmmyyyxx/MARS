@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you modify the prompt to more explicitly guide the model in distinguishing between valid and invalid arguments when negations are present, especially in cases involving quantifiers like \"not all\" or negated predicates?\n\n2. What specific wording or structural changes could make the prompt more effective in helping the model systematically avoid common formal fallacies related to negation, while maintaining clarity and logical rigor?"
+}

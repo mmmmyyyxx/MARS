@@ -1,0 +1,3 @@
+{
+  "content": "Given your current prompt focuses on distinguishing polygons through symmetry and angle patterns, what specific criteria would you use to differentiate between a kite and a rectangle when both have four vertices?\n\nConsidering the goal of maximizing correctness, how could you structure the prompt to systematically guide the model through vertex counting, closure checks, and geometric property analysis before selecting the final answer?"
+}

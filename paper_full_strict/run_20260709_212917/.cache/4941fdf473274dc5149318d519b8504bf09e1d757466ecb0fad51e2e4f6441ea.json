@@ -1,0 +1,3 @@
+{
+  "content": "Given your current step of analyzing vertex count and path closure to classify the shape, what specific geometric property could help distinguish between a regular and irregular polygon when the vertex count alone is insufficient?\n\nConsidering the goal of optimizing the prompt for higher correctness rates, how might explicitly incorporating checks for collinearity or redundant points in the vertex list improve the model's accuracy in shape classification?"
+}

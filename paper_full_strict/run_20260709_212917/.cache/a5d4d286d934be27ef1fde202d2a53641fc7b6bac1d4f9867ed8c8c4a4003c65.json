@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the prompt be refined to more explicitly guide the model to handle nested parentheses and ensure that the step-by-step reasoning clearly distinguishes between resolving inner expressions first versus outer ones?\n\n2. What specific wording could be added to the prompt to encourage the model to verify each intermediate truth value against the definitions of the logical operators before proceeding to the next step?"
+}

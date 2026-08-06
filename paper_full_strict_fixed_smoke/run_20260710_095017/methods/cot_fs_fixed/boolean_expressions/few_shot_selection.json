@@ -1,0 +1,15 @@
+{
+  "selection_strategy": "fixed_prompt_file_non_test",
+  "num_shots": 3,
+  "prompt_file": "Prompt/task_prompts/boolean_expressions/few_shot.jsonl",
+  "num_prompt_examples": 5,
+  "num_test_overlap_filtered": 1,
+  "selected_sample_ids": [
+    0,
+    2,
+    3
+  ],
+  "filtered_test_overlap_sample_ids": [
+    1
+  ]
+}

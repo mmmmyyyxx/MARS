@@ -1,0 +1,2 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+0,"Analyze the argument step by step by first identifying the explicit premises and the conclusion. Then, check if the conclusion follows necessarily from the premises using logical deduction, paying special attention to the role of negations and quantifiers. If the conclusion must be true whenever the premises are true, the argument is valid; otherwise, it is invalid.",0.776,125,97,28

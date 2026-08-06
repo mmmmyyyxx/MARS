@@ -1,0 +1,3 @@
+{
+  "content": "False, because `not True` is `False`, making `False or False` evaluate to `False`, and the rest of the expression does not change this result."
+}

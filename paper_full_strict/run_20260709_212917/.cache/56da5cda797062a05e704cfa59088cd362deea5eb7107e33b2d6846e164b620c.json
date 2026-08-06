@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the symbolic abstraction process in your prompt ensures that negation scope ambiguities are properly exposed and analyzed?\n\nHow might you refine the prompt to more directly guide the model to check for possible counterexamples where premises are true but the conclusion is false, especially when negations are involved?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your prompt ensure that the disambiguation hierarchy is applied strictly in sequence, and what specific test cases would you use to verify that the model does not skip directly to semantic plausibility without first exhausting grammatical and syntactic checks?\n\n2. Considering the goal of maximizing correctness rates, what steps would you take to systematically evaluate and refine the prompt's performance across a diverse set of ambiguous pronoun examples before final deployment?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of your prompt ensure that the model will correctly handle nested parentheses and operator precedence when evaluating Boolean expressions?\n\nHow might you refine your prompt to encourage the model to not only follow steps but also verify its own reasoning for potential logical errors?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in your current prompt might lead the model to over-rely on probabilistic reasoning instead of strictly following linguistic cues?\n\nConsidering the current emphasis on syntactic and semantic tests, how could you restructure the prompt to ensure the model consistently prioritizes explicit linguistic constraints before considering implicit cues?"
+}

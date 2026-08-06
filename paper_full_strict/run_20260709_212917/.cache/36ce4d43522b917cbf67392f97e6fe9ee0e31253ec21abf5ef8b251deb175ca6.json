@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test whether your prompt consistently guides the model to prioritize humorous meaning shifts over trivial spelling changes, using examples like \"fall out boy\"?  \n\n2. What specific elements in your current prompt might be simplified or clarified to reduce ambiguity and improve the model's accuracy in selecting the funniest option?"
+}

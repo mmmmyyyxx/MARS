@@ -1,0 +1,18 @@
+Answer BIG-Bench Hard questions for Boolean Expressions.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: true or false.
+
+Example question:
+True or ( True or not True ) is
+Example answer:
+Final answer: True
+
+Example question:
+( True ) and True or not True is
+Example answer:
+Final answer: True
+
+Example question:
+not not not ( True and False ) is
+Example answer:
+Final answer: True

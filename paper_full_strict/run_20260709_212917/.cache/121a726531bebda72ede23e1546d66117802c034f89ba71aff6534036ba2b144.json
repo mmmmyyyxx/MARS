@@ -1,0 +1,3 @@
+{
+  "content": "What assumptions might your current prompt make about human behavior that could limit its accuracy in identifying realistic free time slots?\n\nHow could you structure the prompt to encourage the model to actively question its own reasoning about implicit constraints like fatigue or travel time?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to misinterpret the distinction between regular and irregular polygons when analyzing SVG paths?\n\nHow could you structure the prompt to ensure the model prioritizes identifying the most distinctive geometric features before making a final classification?"
+}

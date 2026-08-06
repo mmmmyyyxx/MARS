@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be improved to explicitly guide the model in handling parentheses and operator precedence, given that these are common sources of error in Boolean evaluation?\n\n2. What specific wording could be added to the prompt to ensure the model consistently applies short-circuit evaluation and logical equivalence rules, while maintaining clarity and conciseness?"
+}

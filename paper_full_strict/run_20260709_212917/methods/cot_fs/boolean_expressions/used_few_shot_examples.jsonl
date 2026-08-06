@@ -1,0 +1,3 @@
+{"sample_id": 44, "question": "True or ( True or not True ) is", "answer": "True"}
+{"sample_id": 98, "question": "( True ) and True or not True is", "answer": "True"}
+{"sample_id": 184, "question": "not not not ( True and False ) is", "answer": "True"}

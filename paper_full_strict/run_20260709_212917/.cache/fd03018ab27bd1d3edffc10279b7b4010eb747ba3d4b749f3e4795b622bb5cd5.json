@@ -1,0 +1,3 @@
+{
+  "content": "What specific simplification could you apply first to the expression \"not ( True ) and ( True )\" based on the operator precedence and simplification strategies you listed?\n\nConsidering the goal of maximizing correctness rate, how might explicitly including examples of short-circuit evaluation in the prompt help guide the model's reasoning process?"
+}

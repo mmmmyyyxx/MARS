@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to prioritize syntactic constraints over semantic cues without introducing unnecessary complexity in the instructions?\n\n2. Considering the current emphasis on strict sequential steps, what specific elements could be added to the prompt to minimize the model's reliance on probabilistic reasoning while maintaining clarity in the output format?"
+}

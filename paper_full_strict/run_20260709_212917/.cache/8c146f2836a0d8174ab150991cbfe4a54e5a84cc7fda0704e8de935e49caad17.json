@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does your prompt specifically guide the model to avoid generating concrete counterexamples, and what mechanism ensures it remains in the domain of abstract logical constraints?\n\nSecond question: Considering the current emphasis on negation handling and fallacy detection, how could you further optimize the prompt to explicitly address quantifier-negation interactions, such as distinguishing between \"not all\" and \"none,\" without relying on real-world scenarios?"
+}

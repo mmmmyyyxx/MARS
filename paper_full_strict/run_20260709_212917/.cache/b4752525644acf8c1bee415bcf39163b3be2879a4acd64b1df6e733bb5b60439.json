@@ -1,0 +1,3 @@
+{
+  "content": "Given a person's daily events and activities, determine realistic time slots when they could have performed another specific activity. To guide your reasoning, analyze the sequence and context of events—similar to checking the plausibility of a sports scenario like \"Neymar did a maradona in the Champions League Semifinal\"—by assessing whether the timing and circumstances logically allow for the activity. Focus on identifying gaps between events, considering factors like duration, transitions, energy levels, and personal routines. Clearly explain your choices, highlighting why certain time slots are feasible based on the event flow and the activity's demands, while ruling out implausible periods."
+}

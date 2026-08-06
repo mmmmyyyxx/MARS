@@ -1,0 +1,34 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer BIG-Bench Hard questions for Ruin Names.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).
+
+Example question:
+Which of the following is a humorous edit of this artist or movie name: 'hope floats'?
+Options:
+(A) hopes floats
+(B) pope floats
+(C) hope float
+(D) hopge floats
+Example answer:
+Final answer: (B)
+
+Example question:
+Which of the following is a humorous edit of this artist or movie name: 'love story'?
+Options:
+(A) live story
+(B) love stoery
+(C) love storey
+(D) lrve story
+Example answer:
+Final answer: (A)
+
+Example question:
+Which of the following is a humorous edit of this artist or movie name: 'jurassic park'?
+Options:
+(A) jurassic mark
+(B) jurassic pack
+(C) jurassic pairk
+(D) jurassic pork
+Example answer:
+Final answer: (D)",0.896,125,112,13

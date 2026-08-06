@@ -1,0 +1,278 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+0,"Given a sentence containing an ambiguous pronoun, carefully analyze the context and available information to determine the antecedent of the pronoun. If the pronoun's referent cannot be unambiguously inferred from the sentence alone, state that it is ambiguous. Otherwise, clearly identify the specific noun to which the pronoun refers.
+
+For example:
+Sentence: My parent called their secretary for more information.
+Reasoning: The pronoun ""their"" could refer to either ""my parent"" or ""secretary."" However, since ""their"" is a possessive pronoun modifying ""secretary,"" it is more logically interpreted as belonging to ""my parent."" Therefore, the antecedent is ""my parent.""
+
+Now, apply this reasoning to the following sentence:
+[Insert sentence here]
+
+Step-by-step reasoning:
+1. Identify the pronoun in the sentence.
+2. List all possible antecedents based on the sentence structure and context.
+3. Evaluate each potential antecedent for logical consistency and grammatical fit.
+4. If only one antecedent fits logically and grammatically, state it as the referent.
+5. If multiple antecedents are equally plausible or insufficient information is provided, conclude that the pronoun is ambiguous.
+
+Based on this analysis, provide your final answer as either the identified antecedent or ""Ambiguous.""",0.64,50,32,18
+1,"Given a sentence with an ambiguous pronoun, analyze the context and determine whether the pronoun's referent can be clearly identified or if the sentence is inherently ambiguous. Use the following disambiguation hierarchy strictly in sequence, without skipping steps:
+
+**Step 1: Grammatical Agreement Check**  
+- Verify if the pronoun agrees in number and gender (if explicitly marked) with potential antecedents.  
+- If only one antecedent matches, select it and stop.  
+- If multiple antecedents match, proceed to Step 2.
+
+**Step 2: Syntactic Constraints Check**  
+- Apply syntactic rules (e.g., binding theory, c-command) to eliminate antecedents that are structurally impossible.  
+- If only one antecedent remains, select it and stop.  
+- If multiple antecedents remain, proceed to Step 3.
+
+**Step 3: Semantic Plausibility Check**  
+- Only if Steps 1 and 2 do not yield a unique antecedent, consider semantic cues that reflect widely accepted, conventional inferences (e.g., typical roles or scenarios).  
+- Avoid subjective or context-dependent interpretations.  
+- If semantic cues uniquely determine one antecedent, select it; otherwise, conclude ""Ambiguous.""
+
+**Verification Test Cases to Ensure Strict Sequence Adherence:**  
+1. **Test Case A (Grammatical Resolution):** ""The girl saw her mother.""  
+   - Step 1: ""Her"" agrees only with ""girl"" (singular, feminine).  
+   - Output: girl (stops at Step 1; must not proceed to syntax/semantics).
+
+2. **Test Case B (Syntactic Resolution):** ""John said he won.""  
+   - Step 1: ""He"" agrees with ""John"" and possibly others (if present).  
+   - Step 2: Binding theory rules out non-c-commanding NPs; if only ""John"" is eligible, output: John (stops at Step 2).
+
+3. **Test Case C (Semantic Resolution Only After Exhausting Prior Steps):** ""The key opened the door because it was well-made.""  
+   - Step 1: ""It"" agrees with both ""key"" and ""door.""  
+   - Step 2: No syntactic constraints resolve.  
+   - Step 3: Semantic cue (""well-made"" conventionally applies to keys) yields: key.
+
+4. **Test Case D (Ambiguity After All Steps):** ""The manager told the employee that he would receive a bonus.""  
+   - Step 1: ""He"" agrees with both.  
+   - Step 2: No syntactic constraints resolve.  
+   - Step 3: No unique semantic cue.  
+   - Output: Ambiguous.
+
+**Systematic Evaluation for Maximizing Correctness:**  
+- **Phase 1: Benchmarking** – Test the prompt on a curated dataset covering all hierarchy scenarios (grammatical-only, syntactic-only, semantic-only, ambiguous cases).  
+- **Phase 2: Error Analysis** – Identify failures (e.g., skipping steps, overusing semantics) and adjust prompt clarity or examples.  
+- **Phase 3: Iterative Refinement** – Incorporate edge cases (e.g., reflexive pronouns, implicit gender) and re-test until accuracy stabilizes.  
+- **Phase 4: Validation** – Use held-out examples with known correct answers to confirm generalization before deployment.
+
+Now, apply this reasoning to the following sentence:",0.6,50,30,20
+2,"Given a sentence with an ambiguous pronoun, follow a structured reasoning process that integrates grammatical, syntactic, semantic, and pragmatic cues in a balanced manner. Proceed as follows:
+
+1. **Check grammatical agreement** (number, gender, person) between the pronoun and potential antecedents, noting exceptions like singular ""their"" where applicable.
+2. **Apply syntactic constraints** (e.g., binding principles) to eliminate structurally invalid candidates.
+3. If steps 1–2 yield a unique antecedent, state it. If not, or if multiple candidates remain, proceed to **semantic and pragmatic analysis**, considering:
+   - Conventional real-world knowledge and typical scenarios implied by the sentence.
+   - Contextual cues such as possessive relationships, roles, or actions described.
+   - Avoid over-reliance on rigid linguistic rules if they conflict with strong contextual evidence.
+4. If a single antecedent is most plausible based on this integrated analysis, state it; otherwise, conclude ""Ambiguous.""
+
+Example reasoning for ""My parent called their secretary for more information"":
+- Step 1: ""Their"" can be singular; both ""My parent"" and ""secretary"" are candidates.
+- Step 2: Syntax does not rule out either.
+- Step 3: Semantics/pragmatics: In typical office contexts, ""their"" as a possessive pronoun most naturally refers to ""My parent"" (the caller), not the secretary.
+- Step 4: Unique antecedent is ""My parent,"" so output (A) They were my parent's secretary.
+
+This approach ensures systematic analysis while prioritizing contextual plausibility where linguistic rules are inconclusive, enhancing adaptability across varied real-world sentences.",0.7,50,35,15
+3,"Given a sentence with an ambiguous pronoun, determine whether the pronoun refers to a specific antecedent or if the sentence is inherently ambiguous. Follow these steps:
+
+1. **Identify potential antecedents**—list all nouns or noun phrases in the sentence that match the pronoun in number and gender (if applicable), based solely on explicit linguistic elements.
+2. **Check for syntactic constraints**—using grammatical rules (e.g., binding principles, structural positions), eliminate any candidates that are syntactically invalid as antecedents.
+3. **Evaluate semantic and pragmatic plausibility**—only if multiple syntactically valid candidates remain, assess real-world likelihood using explicit contextual cues (e.g., verb roles, possessive markers) present in the sentence. Avoid relying on implicit assumptions or external knowledge.
+4. **Decide**:
+   - If syntactic constraints leave only one valid candidate, select it.
+   - If multiple candidates are syntactically valid and one is semantically favored by explicit cues, select that candidate.
+   - If multiple candidates are equally valid syntactically and no explicit cues resolve the ambiguity, conclude ""Ambiguous.""
+
+**Output Format**:
+- If the pronoun refers to a specific antecedent, output the corresponding option (e.g., A, B) or state the antecedent.
+- If ambiguous, output ""Ambiguous"" or the corresponding option (e.g., C).
+- Provide a **brief justification** only if the decision relies on semantic evaluation, to clarify the explicit cues used.
+
+Example reasoning for ""My parent called their secretary for more information"":
+- Step 1: ""Their"" can refer to ""My parent"" or ""secretary.""
+- Step 2: No syntactic constraints eliminate either.
+- Step 3: Explicit possessive ""their"" and verb ""called"" favor ""My parent"" as the antecedent.
+- Step 4: Output (A) They were my parent's secretary.
+
+Example reasoning for ""The manager told the assistant that they would handle the report"":
+- Step 1: ""They"" can refer to ""manager"" or ""assistant.""
+- Step 2: No syntactic constraints.
+- Step 3: No explicit cues favor one candidate over the other.
+- Step 4: Output ""Ambiguous"" with justification: ""No explicit linguistic cues resolve ambiguity.""",0.66,50,33,17
+4,"Given a sentence with an ambiguous pronoun, determine whether the pronoun refers to a specific antecedent or if the sentence is inherently ambiguous. **Use only explicit linguistic cues present in the sentence—do not rely on implicit assumptions, world knowledge, or inferences beyond the given text.**
+
+**Steps**:
+1. **Identify potential antecedents**: List all nouns or noun phrases in the sentence that match the pronoun in number and gender (if applicable).
+2. **Apply syntactic constraints**: Eliminate any candidates that are syntactically invalid (e.g., due to binding principles, structural positions).
+3. **Resolve with explicit semantic cues**: If multiple candidates remain, use only explicit cues (e.g., possessive markers, verb roles, modifiers) to select the most plausible antecedent. If no explicit cues favor one candidate, conclude ""Ambiguous.""
+
+**Output**:
+- If a specific antecedent is determined, output the corresponding option (e.g., A, B) or state the antecedent.
+- If ambiguous, output ""Ambiguous"" or the corresponding option (e.g., C).
+- Provide a **brief justification** only if semantic cues were used to resolve ambiguity.
+
+**Examples**:
+- ""My parent called their secretary for more information"" → (A) They were my parent's secretary (justification: explicit possessive ""their"").
+- ""The manager told the assistant that they would handle the report"" → Ambiguous (justification: no explicit cues resolve ambiguity).
+- ""The dog chased the cat until it was tired"" → Ambiguous (justification: no explicit cues distinguish between dog and cat).
+- ""John gave his book to Mary"" → (A) They were John's book (justification: explicit possessive ""his"").",0.7,50,35,15
+5,"Given a sentence with an ambiguous pronoun, determine whether the pronoun refers to a specific antecedent or if the sentence is inherently ambiguous. **Use only explicit linguistic cues present in the sentence—do not rely on implicit assumptions, world knowledge, or inferences beyond the given text.**
+
+**Steps**:
+1. **Identify potential antecedents**: List all nouns or noun phrases in the sentence that match the pronoun in number and gender (if applicable).
+2. **Apply syntactic constraints**: Eliminate any candidates that are syntactically invalid (e.g., due to binding principles, structural positions). If syntactic constraints alone resolve the ambiguity, proceed to output.
+3. **Resolve with explicit semantic cues**: If multiple candidates remain, use only explicit cues (e.g., possessive markers, verb roles, modifiers, reflexives, or syntactic parallelism) to select the most plausible antecedent. If no explicit cues favor one candidate, conclude ""Ambiguous.""
+
+**Output**:
+- If a specific antecedent is determined, output the corresponding option (e.g., A, B) or state the antecedent.
+- If ambiguous, output ""Ambiguous"" or the corresponding option (e.g., C).
+- Provide a **brief justification** only if semantic cues were used to resolve ambiguity.
+
+**Examples**:
+- ""My parent called their secretary for more information"" → (A) They were my parent's secretary (justification: explicit possessive ""their"").
+- ""The manager told the assistant that they would handle the report"" → Ambiguous (justification: no explicit cues resolve ambiguity).
+- ""The dog chased the cat until it was tired"" → Ambiguous (justification: no explicit cues distinguish between dog and cat).
+- ""John gave his book to Mary"" → (A) They were John's book (justification: explicit possessive ""his"").
+- ""The chef praised the waiter because they were efficient"" → Ambiguous (justification: no explicit cues link ""they"" to either noun).
+- ""Sarah blamed herself for the mistake"" → (A) They were Sarah (justification: explicit reflexive pronoun ""herself"" requires coreference with subject).
+- ""The team celebrated its victory"" → (A) They were the team (justification: explicit possessive ""its"" matches singular antecedent).
+- ""The teacher and the student discussed their project"" → Ambiguous (justification: ""their"" could refer to either or both; no explicit cue specifies).
+
+**Key Reminder**: Avoid implicit reasoning; rely strictly on explicit linguistic elements such as possessives, reflexives, verb arguments, or syntactic parallelism present in the sentence. If cues are absent or equally applicable, the case is ambiguous. **Do not infer based on plausibility, typical roles, or common sense.**",0.6,50,30,20
+6,"Given a sentence with an ambiguous pronoun, determine whether the pronoun refers to a specific antecedent or if the sentence is inherently ambiguous. Use **only** explicit linguistic cues (e.g., possessives, reflexives, syntactic binding constraints) or implicit semantic relationships that are **strongly and unambiguously** supported by typical roles, event coherence, or world knowledge **clearly signaled in the sentence**. Avoid any reliance on weak, speculative, or contextually unsupported inferences.
+
+**Steps**:
+1. **Identify potential antecedents**: List all nouns or noun phrases matching the pronoun in number and gender.
+2. **Apply syntactic constraints**: Eliminate candidates that violate syntactic rules (e.g., binding theory, c-command, locality).
+3. **Resolve with cues**:
+   - **Explicit cues**: Use possessives, reflexives, or grammatical dependencies that directly link the pronoun to an antecedent.
+   - **Implicit cues**: Apply **only if** the sentence structure or typical role/event knowledge provides a **clear, unambiguous** link. To ensure consistent interpretation of ""strongly and unambiguously supported,"" apply these linguistic tests:
+     - **Role-Event Consistency Test**: The antecedent must be the typical agent or experiencer of the action/state described (e.g., ""The surgeon scrubbed before they operated"" → surgeon operates).
+     - **Plausibility Exclusion Test**: If the implicit cue could plausibly apply to multiple candidates with similar likelihood, treat as ambiguous (e.g., ""The chef praised the waiter because they were efficient"" → ambiguous, as efficiency could describe either).
+     - **World Knowledge Baseline Test**: Use only widely accepted, default scenarios (e.g., doctors perform surgeries, clients review contracts in legal contexts). Avoid niche or variable interpretations.
+     - **Negation Test**: If negating the typical role/event makes the sentence nonsensical or highly improbable, the cue is strong (e.g., ""The lawyer advised the client after they reviewed the contract"" → negating client reviewing contract is implausible in context).
+4. **Conclude**: If one candidate is strongly favored by explicit or strongly implicit cues, select it; otherwise, output ""Ambiguous.""
+
+**Output**:
+- If a specific antecedent is determined, output the corresponding option (e.g., A, B) or state the antecedent.
+- If ambiguous, output ""Ambiguous"" or the corresponding option (e.g., C).
+- Provide a **brief justification** specifying the cue type used (explicit or implicit strongly supported) or ""no strong cues,"" including which test was applied for implicit cues.
+
+**Systematic Validation Approach**:
+To measure whether this prompt reduces ambiguity errors compared to simpler methods, implement the following:
+- **Controlled Dataset**: Use a benchmark dataset with sentences covering varied syntactic structures and implicit cue strengths, labeled with ground-truth antecedents or ambiguity.
+- **A/B Testing**: Compare outputs from this prompt against a baseline (e.g., a prompt relying only on syntactic proximity or naive role assignments).
+- **Error Analysis**: Categorize discrepancies into:
+  - **False Positives**: Cases where the prompt incorrectly resolves ambiguity.
+  - **False Negatives**: Cases where the prompt labels as ambiguous when a clear antecedent exists.
+  - **Cue Misapplication**: Instances where implicit cues were over/under-applied.
+- **Metrics**: Calculate precision, recall, and F1-score for antecedent resolution, and measure",0.72,50,36,14
+7,"Given a sentence with an ambiguous pronoun, determine whether the pronoun refers to a specific antecedent or if the sentence is inherently ambiguous. Follow this decision process strictly, using only explicit syntactic and semantic cues present in the sentence:
+
+**Step 1: Identify Potential Antecedents**
+- List all nouns/noun phrases that grammatically match the pronoun in number and gender.
+
+**Step 2: Apply Explicit Syntactic Constraints**
+- Use only explicit syntactic rules (e.g., binding principles, subject-verb agreement, possessive structures, clause boundaries) to eliminate candidates.
+- If these rules identify a single valid antecedent, select it and proceed to Step 4.
+- If no candidates remain, or if multiple candidates remain, proceed to Step 3.
+
+**Step 3: Evaluate Semantic Cues (Only If Syntactic Analysis Is Inconclusive)**
+- Only if Step 2 yields multiple valid candidates, assess semantic relationships present in the sentence.
+- Use only explicit semantic cues (e.g., role consistency, event plausibility) that are directly supported by the sentence content.
+- If semantic cues strongly and unambiguously favor one candidate—without relying on world knowledge or probabilistic reasoning—select it.
+- If cues are weak, conflicting, or require external assumptions, conclude ambiguity.
+
+**Step 4: Output Decision**
+- If a clear antecedent is identified through syntactic or unambiguous semantic cues, state it explicitly.
+- Otherwise, output ""Ambiguous.""
+- Provide a brief justification specifying the type of cue used (syntactic or semantic) or the reason for ambiguity.
+
+**Key Principles:**
+- Prioritize syntactic constraints; use semantics only when syntactic analysis is inconclusive.
+- Default to ambiguity whenever syntactic or semantic cues do not decisively favor one candidate.
+- Avoid probabilistic reasoning, world knowledge, or assumptions—rely only on information explicitly present or structurally implied in the sentence.
+
+**Validation Test Set Design:**
+To validate this prompt, construct a test set with the following categories:
+1. **Syntactic-Only Cases:** Sentences where syntactic rules (e.g., binding principles, subject-verb agreement) alone resolve the pronoun (e.g., ""John told Bill that he was late"").
+2. **Semantic-Required Cases:** Sentences where syntactic analysis is inconclusive, but explicit semantic cues (e.g., role consistency) resolve the pronoun without world knowledge (e.g., ""The chef served the customer his meal"").
+3. **Ambiguous Cases:** Sentences where neither syntactic nor semantic cues provide a decisive resolution (e.g., ""The lawyer advised the client before he left"").
+4. **World Knowledge Traps:** Sentences that tempt the use of implicit world knowledge but lack explicit cues (e.g., ""The nurse helped the doctor because she was busy""—no explicit cue indicates which role ""she"" aligns with).
+
+This test set ensures the model distinguishes between reliance on explicit cues versus implicit assumptions, improving correctness by adhering strictly to the prompt’s constraints.",0.58,50,29,21
+8,"Given a sentence with an ambiguous pronoun, determine whether the pronoun refers to a specific antecedent or if the sentence is inherently ambiguous. Follow this decision process strictly, using only explicit syntactic and semantic cues present in the sentence:
+
+**Step 1: Identify Potential Antecedents**
+- List all nouns/noun phrases that grammatically match the pronoun in number and gender.
+
+**Step 2: Apply Explicit Syntactic Constraints**
+- Use only explicit syntactic rules (e.g., binding principles, subject-verb agreement, possessive structures, clause boundaries) to eliminate candidates.
+- If these rules identify a single valid antecedent, select it and proceed to Step 4.
+- If no candidates remain, or if multiple candidates remain, proceed to Step 3.
+
+**Step 3: Evaluate Semantic Cues (Only If Syntactic Analysis Is Inconclusive)**
+- Only if Step 2 yields multiple valid candidates, assess semantic relationships present in the sentence.
+- Use only explicit semantic cues (e.g., role consistency, event plausibility, explicit verb or prepositional relationships) that are directly supported by the sentence content.
+- If semantic cues strongly and unambiguously favor one candidate—without relying on world knowledge, probabilistic reasoning, or implicit context—select it.
+- If cues are weak, conflicting, or require external assumptions, conclude ambiguity.
+
+**Step 4: Output Decision**
+- If a clear antecedent is identified through syntactic or unambiguous semantic cues, state it explicitly.
+- Otherwise, output ""Ambiguous.""
+- Provide a brief justification specifying the type of cue used (syntactic or semantic) or the reason for ambiguity.
+
+**Key Principles:**
+- Prioritize syntactic constraints; use semantics only when syntactic analysis is inconclusive.
+- Default to ambiguity whenever syntactic or semantic cues do not decisively favor one candidate.
+- Avoid probabilistic reasoning, world knowledge, or assumptions—rely only on information explicitly present or structurally implied in the sentence.
+- If the sentence lacks explicit cues to resolve the pronoun, it is inherently ambiguous.
+
+**Examples to Illustrate the Process:**
+
+Example 1:
+Sentence: ""The manager told the employee that he would get a promotion.""
+- Step 1: Potential antecedents for ""he"": manager, employee.
+- Step 2: Syntactic analysis: Both match in gender/number; no syntactic constraints eliminate either.
+- Step 3: Semantic cues: No explicit semantic relationship (e.g., role hierarchy, verb roles) decisively favors one candidate without world knowledge.
+- Step 4: Output: ""Ambiguous"" (justification: Syntactic and explicit semantic cues do not resolve between manager and employee).
+
+Example 2:
+Sentence: ""Mary saw her mother and waved to her.""
+- Step 1: Potential antecedents for ""her"": Mary, mother.
+- Step 2: Syntactic analysis: Both match; possessive ""her"" could refer to Mary, but ""waved to her"" allows either.
+- Step 3: Semantic cues: No explicit cue (e.g., action specificity) resolves without assumption.
+- Step 4: Output: ""Ambiguous"" (justification: No decisive syntactic or semantic cue).
+
+Example 3:
+Sentence: ""John blamed himself for the mistake.""
+- Step 1: Potential antecedent for ""himself"": John.
+- Step 2: Syntactic analysis: Reflexive pronoun ""himself"" requires a local antecedent; only ""John"" is syntactically valid.
+- Step 4",0.52,50,26,24
+9,"Given a sentence with an ambiguous pronoun and a set of options, determine the pronoun's antecedent or conclude that it is ambiguous by prioritizing semantic coherence and contextual plausibility, while using syntactic rules as secondary support. Follow this reasoning process:
+
+1. **Identify potential antecedents** by first considering semantic roles, world knowledge, and discourse context (e.g., typical scenarios, implied relationships, verb meanings) to assess which candidate makes the most coherent sense.
+2. **Apply syntactic constraints** (e.g., agreement, binding principles) only if semantic cues are insufficient or to confirm plausibility.
+3. **If semantic evidence strongly supports one antecedent**, select the corresponding option (e.g., (A) or (B)), even if syntax alone might suggest ambiguity.
+4. **If semantic cues are weak, conflicting, or absent**, then rely on syntactic rules; if no unique antecedent emerges, conclude ambiguity and select (C).
+
+**Output Format:**
+- Choose the correct option: (A), (B), or (C).
+- Provide a brief justification emphasizing semantic coherence or the lack of decisive contextual evidence.
+
+**Examples:**
+1. Sentence: ""My parent called their secretary for more information.""  
+   Options: (A) They were my parent's secretary, (B) They were the secretary's secretary, (C) Ambiguous.  
+   Output: (C) Ambiguous. Semantically, ""their"" could refer to either ""parent"" or ""secretary"" without clear contextual cues, and syntax alone does not resolve this.
+
+2. Sentence: ""John blamed himself for the mistake.""  
+   Options: (A) Himself refers to John, (B) Himself refers to the mistake, (C) Ambiguous.  
+   Output: (A) Himself refers to John. Semantically, blaming oneself is coherent for ""John,"" and syntax (reflexive requirement) supports this.
+
+3. Sentence: ""The teacher gave the student her notes.""  
+   Options: (A) Her refers to the teacher, (B) Her refers to the student, (C) Ambiguous.  
+   Output: (A) Her refers to the teacher. Semantically, it is more plausible for a teacher to provide their own notes, even though syntax allows either interpretation.",0.62,50,31,19

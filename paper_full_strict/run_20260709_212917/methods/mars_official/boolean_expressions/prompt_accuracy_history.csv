@@ -1,0 +1,58 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+0,"Evaluate the truth value of the given Boolean expression by breaking it down step by step. First, identify and resolve any parentheses, applying the `not` operator where necessary. Then, compute the `and` and `or` operations in the correct logical order, remembering that `and` has precedence over `or`. Finally, state the final truth value clearly.",0.88,50,44,6
+1,"Evaluate the truth value of the given Boolean expression by applying logical operators strictly according to standard precedence rules: first resolve parentheses and `not`, then `and`, and finally `or`. Ensure accuracy by verifying each step against logical rules, and output only the final truth value.",0.92,50,46,4
+2,"Evaluate the truth value of the given Boolean expression by strictly following these steps:  
+1. Resolve parentheses from innermost to outermost.  
+2. Apply `not` operators.  
+3. Apply `and` operators.  
+4. Apply `or` operators.  
+
+At each step, compute intermediate results internally. Output only the final truth value (True or False).",0.88,50,44,6
+3,"Evaluate the truth value of the given Boolean expression by applying the fundamental rules of Boolean logic:  
+- **Negation (`not`)** inverts the truth value.  
+- **Conjunction (`and`)** is true only if both operands are true.  
+- **Disjunction (`or`)** is true if at least one operand is true.  
+- **Parentheses** define sub-expressions that must be fully evaluated first, from innermost to outermost.  
+
+Instead of following a fixed sequence, identify the most efficient evaluation path by prioritizing operations that simplify the expression quickly—such as resolving constants (`True`, `False`) early or leveraging short-circuiting properties (e.g., `False and ...` simplifies directly to `False`).  
+
+To balance efficiency with clarity, **output the final result (True or False) along with a concise justification** that highlights the key logical steps or simplifications used, without detailing every intermediate operation.  
+
+**Example:**  
+For `not (True and False) or True`, the result is `True` because `True and False` simplifies to `False`, and `not False` is `True`, making the overall expression `True`.  
+
+This approach ensures the model demonstrates understanding while maintaining efficiency, and allows verification of correct reasoning across expressions of varying complexity and nesting.",0.82,50,41,9
+4,"Evaluate the truth value of the given Boolean expression by applying the fundamental principles of Boolean logic:
+
+- **Negation (`not`)** inverts the truth value.
+- **Conjunction (`and`)** is true only if both operands are true.
+- **Disjunction (`or`)** is true if at least one operand is true.
+- **Parentheses** define sub-expressions that must be evaluated first, from innermost to outermost, respecting operator precedence.
+
+**Prioritize short-circuit evaluation and early resolution of constants** to maximize correctness and efficiency:
+- For `and`, if the first operand is `False`, immediately conclude `False` without evaluating the second operand.
+- For `or`, if the first operand is `True`, immediately conclude `True` without evaluating the second operand.
+- Resolve constants (`True`, `False`) as early as possible to simplify the expression.
+- In nested expressions, apply short-circuiting at each level as soon as the outcome is determined, even within parentheses.
+
+**Additionally, recognize common patterns and pitfalls** to enhance accuracy and generalization:
+- Avoid unnecessary evaluations by leveraging short-circuit logic fully.
+- Be cautious with nested negations; simplify `not not X` to `X`.
+- Watch for tautologies (e.g., `True or X` always `True`) and contradictions (e.g., `False and X` always `False`), resolving them immediately.
+- Ensure proper handling of operator precedence, especially when mixing `not`, `and`, and `or` without parentheses.
+
+**Output only the final result (True or False)** without any justification or explanation.",0.96,50,48,2
+5,"Evaluate the truth value of the given Boolean expression by systematically applying simplification and short-circuit evaluation, ensuring strict adherence to operator precedence (`not` > `and` > `or`) and parentheses grouping. Follow these steps precisely:
+
+1. **Simplify constants and negations immediately** (e.g., `not True` → `False`, `not False` → `True`).
+2. **Use short-circuit evaluation**:
+   - For `A and B`, if `A` is `False`, output `False` without evaluating `B`.
+   - For `A or B`, if `A` is `True`, output `True` without evaluating `B`.
+3. **Evaluate from innermost parentheses outward**, resolving all operations within parentheses before combining with outer expressions.
+4. **Iterate simplification** until a single truth value remains.
+
+Example: For `not ( True ) and ( True )`, simplify `not (True)` to `False`, then apply short-circuit: `False and (True)` → `False`. Output: `False`.
+
+**Output only `True` or `False`.**",0.98,50,49,1
+6,"Evaluate the truth value of the given Boolean expression by applying a single core principle: always resolve the innermost parentheses first, then apply `not`, `and`, and `or` in that order, moving outward step-by-step. At each step, verify the intermediate result before proceeding. After completing all steps, output only `True` or `False`.",0.92,50,46,4
+7,"Evaluate the truth value of the given Boolean expression by applying standard Boolean logic rules: parentheses first, then `not`, then `and`, then `or`. After computation, output only `True` or `False`.",0.92,50,46,4

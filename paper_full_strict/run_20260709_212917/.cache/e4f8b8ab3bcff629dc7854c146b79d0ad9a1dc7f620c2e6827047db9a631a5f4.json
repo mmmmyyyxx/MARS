@@ -1,0 +1,3 @@
+{
+  "content": "Given the example SVG path provided, how would you systematically identify and verify the distinct vertices to determine the final geometric shape?\n\nConsidering the current step-by-step classification approach, what specific enhancements could be made to the prompt to better handle edge cases like nearly collinear points or shapes with overlapping vertices?"
+}

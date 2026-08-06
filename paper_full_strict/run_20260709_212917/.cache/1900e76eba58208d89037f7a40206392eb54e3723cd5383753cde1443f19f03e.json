@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of your prompt might lead the model to rely on implicit assumptions rather than explicit linguistic cues, and how could you refine it to prevent this?\n\nConsidering your goal of achieving the highest correctness rate, how might simplifying or restructuring the steps in your prompt improve the model's consistency in distinguishing between resolvable and ambiguous cases?"
+}

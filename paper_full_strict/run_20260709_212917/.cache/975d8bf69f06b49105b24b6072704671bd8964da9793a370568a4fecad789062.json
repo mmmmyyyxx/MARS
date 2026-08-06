@@ -1,0 +1,3 @@
+{
+  "content": "False, because `not True` simplifies to `False`, making the expression `False or False or True`, which evaluates to `True` due to the last term."
+}

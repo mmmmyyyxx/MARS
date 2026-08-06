@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the model strictly follows the disambiguation hierarchy without prematurely applying semantic cues, especially in cases where grammatical or syntactic constraints alone should resolve the ambiguity?\n\n2. Considering the goal of maximizing correctness, what specific refinements could be made to the prompt's examples or instructions to better handle edge cases where syntactic constraints are subtle or semantic cues are weakly conventional?"
+}

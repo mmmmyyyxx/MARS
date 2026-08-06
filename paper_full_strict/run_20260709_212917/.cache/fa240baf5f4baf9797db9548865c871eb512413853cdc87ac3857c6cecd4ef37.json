@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the model focuses exclusively on logical constraints rather than semantic interpretations when evaluating negation-rich syllogisms?\n\n2. What specific modifications could make your prompt more effective at guiding the model to systematically trace how negations restrict logical possibilities without relying on counterexample generation?"
+}

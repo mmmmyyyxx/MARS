@@ -1,0 +1,3 @@
+{
+  "content": "Analyze the premises by first identifying all negations and their scope. For each negation, determine whether it directly modifies a term in a categorical proposition (e.g., \"not all,\" \"no,\" \"some are not\") or appears in a conditional or quantified statement. Then, trace the logical flow by mapping how these negations interact with other premises using formal rules (e.g., contraposition, De Morgan's laws, or quantifier negation). Explicitly check for counterexamples by considering interpretations where the premises are true but the conclusion is false, particularly focusing on cases where a negation alters the truth conditions of a key premise. If any such counterexample exists, judge the argument as invalid; otherwise, judge it as valid."
+}

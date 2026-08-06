@@ -1,0 +1,23 @@
+{
+  "accuracy": 0.84,
+  "num_samples": 125,
+  "num_correct": 105,
+  "num_failed": 20,
+  "api_errors": 0,
+  "parse_errors": 0,
+  "task_id": "sports_understanding",
+  "method_id": "cot_fs",
+  "method_display_name": "CoT(FS)",
+  "answer_format": "yes_no",
+  "metric": "accuracy",
+  "best_prompt_path": "best_prompt.txt",
+  "final_prompt_path": "final_prompt.txt",
+  "num_history_rows": 1,
+  "best_validation_accuracy": 0.84,
+  "best_iteration": 1,
+  "final_iteration": 1,
+  "num_iterations": 1,
+  "exactness": "best_effort_reimplementation",
+  "exactness_level": "best_effort_reimplementation",
+  "runtime_seconds": 93.41102147102356
+}

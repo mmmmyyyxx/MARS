@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test the current prompt with sample Boolean expressions to verify if it consistently produces correct results, especially in cases involving nested parentheses and short-circuit evaluation?\n\n2. What specific modifications could make the prompt more effective at guiding the model to prioritize short-circuit evaluation and early constant resolution, while ensuring clarity and avoiding ambiguity?"
+}

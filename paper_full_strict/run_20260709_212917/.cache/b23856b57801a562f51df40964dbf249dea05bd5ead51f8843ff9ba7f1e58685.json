@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the step-by-step decision process in your prompt minimizes reliance on probabilistic reasoning or external world knowledge when evaluating semantic cues in Step 3?\n\n2. What specific modifications could you make to the prompt to better guide the model in distinguishing between structurally implied information and assumptions based on world knowledge, especially when applying syntactic and semantic constraints?"
+}

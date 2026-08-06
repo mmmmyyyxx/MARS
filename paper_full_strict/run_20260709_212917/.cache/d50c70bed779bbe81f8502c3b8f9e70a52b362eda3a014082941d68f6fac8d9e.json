@@ -1,0 +1,3 @@
+{
+  "content": "1. In the student's current prompt, what specific logical structure or rule ensures that the step \"map these elements into a formal logical structure\" correctly captures the meaning of negations and quantifiers from the informal statements?  \n\n2. How can the prompt be optimized to guide the model to explicitly check for counterexamples where premises are true but the conclusion is false, especially when dealing with negations and universal quantifiers?"
+}

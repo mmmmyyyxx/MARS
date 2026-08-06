@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Clearly define the task as generating a prompt that, when input into a large language model along with the Boolean Expressions topic, maximizes the model's correctness rate in evaluating Boolean expressions.",
+    "Specify the prompt requirements, including that it must guide the model to handle Boolean constants (True, False), operators (and, or, not), and expressions with parentheses, following logical rules.",
+    "Design the prompt to include explicit instructions for parsing the input, adhering to operator precedence (not, and, or), and evaluating expressions step by step.",
+    "Ensure the prompt directs the model to output only the final truth value (True or False) without extraneous explanations, maintaining clarity and precision.",
+    "Validate the prompt by testing it with sample Boolean expressions to confirm it leads to high correctness rates in the model's responses."
+  ]
+}

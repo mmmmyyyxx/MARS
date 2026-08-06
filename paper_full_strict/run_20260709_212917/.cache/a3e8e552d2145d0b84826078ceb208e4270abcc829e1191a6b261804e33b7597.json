@@ -1,0 +1,3 @@
+{
+  "content": "False, because the expression contains `False` in a conjunction, making the entire `and` chain false regardless of other terms."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "What specific geometric properties from the SVG path data would allow you to distinguish between a hexagon and a heptagon when both have similar vertex sequences?\n\nHow could you optimize the prompt to explicitly guide the model to first count the unique vertices before analyzing side lengths and angles, ensuring it doesn't confuse shapes with overlapping vertex counts?"
+}

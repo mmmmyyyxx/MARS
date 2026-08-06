@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does your current prompt ensure that the model focuses on identifying whether the premises logically necessitate the conclusion, rather than just following a checklist of technical steps?\n\nSecond question: What specific elements could you add to your prompt to encourage the model to actively search for counterexamples where the premises are true but the conclusion could still be false?"
+}

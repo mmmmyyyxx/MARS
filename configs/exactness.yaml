@@ -1,24 +1,39 @@
 levels:
   exact_official:
-    description: Uses the original official implementation logic with only engineering wrappers.
+    description: Uses the original official implementation logic with only engineering
+      wrappers.
   faithful_reimplementation:
-    description: Reimplements the published algorithm closely, including search strategy and key hyperparameters.
+    description: Reimplements the published algorithm closely, including search strategy
+      and key hyperparameters.
   best_effort_reimplementation:
-    description: Uses a simplified local approximation; not suitable for claiming exact reproduction.
+    description: Uses a simplified local approximation; not suitable for claiming
+      exact reproduction.
   reference_only:
-    description: Paper value used only for comparison, never substituted for local results.
+    description: Paper value used only for comparison, never substituted for local
+      results.
   prompt_dependent:
-    description: Exactness depends on whether local prompt resources match the paper/original prompts.
+    description: Exactness depends on whether local prompt resources match the paper/original
+      prompts.
+  legacy_aligned_partial:
+    description: Core MARS flow and legacy prompt/Target conventions are aligned where
+      source evidence is available, but the run is not an exact official reproduction.
 methods:
   origin:
     exactness_level: prompt_dependent
-    notes: Prompt-dependent; exact only when the local origin prompt matches the original paper prompt.
+    notes: Prompt-dependent; exact only when the local origin prompt matches the original
+      paper prompt.
   cot_zs:
-    exactness_level: faithful_reimplementation
-    notes: Local zero-shot chain-of-thought template.
+    exactness_level: best_effort_reimplementation
+    notes: Local CoT baseline; paper reports baseline numbers but the original repository
+      does not provide a complete executable baseline protocol.
   cot_fs:
-    exactness_level: faithful_reimplementation
-    notes: Local few-shot construction.
+    exactness_level: best_effort_reimplementation
+    notes: Local CoT baseline; paper reports baseline numbers but the original repository
+      does not provide a complete executable baseline protocol.
+  cot_fs_fixed:
+    exactness_level: best_effort_reimplementation
+    notes: Diagnostic CoT few-shot baseline using fixed prompt-file demonstrations filtered
+      to exclude current test sample_ids; not a paper baseline.
   ape:
     exactness_level: best_effort_reimplementation
     notes: Generic candidate-generation search; pending original APE search details.
@@ -32,20 +47,35 @@ methods:
     exactness_level: best_effort_reimplementation
     notes: Generic meta-prompt search; pending exact PE2 prompt-engineer protocol.
   mars_official:
-    exactness_level: faithful_reimplementation
-    notes: Official-compatible Manager/UserProxy/Planner/Teacher/Critic/Student/Target flow without Prompt/ mutation.
+    exactness_level: legacy_aligned_partial
+    notes: 'Legacy-aligned partial reproduction: uses original UserProxy/Planner task
+      blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and
+      target call-count limit; remaining differences may include framework wrappers,
+      local baseline protocol, and model/API behavior.'
   mars:
-    exactness_level: faithful_reimplementation
-    notes: Alias for the official-compatible MARS runner.
+    exactness_level: legacy_aligned_partial
+    notes: 'Legacy-aligned partial reproduction: uses original UserProxy/Planner task
+      blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and
+      target call-count limit; remaining differences may include framework wrappers,
+      local baseline protocol, and model/API behavior.'
   mars_light:
     exactness_level: best_effort_reimplementation
     notes: Simplified local MARS variant retained for diagnostics.
   mars_wo_plan:
-    exactness_level: faithful_reimplementation
-    notes: Official-compatible ablation with Planner disabled.
+    exactness_level: legacy_aligned_partial
+    notes: 'Legacy-aligned partial reproduction: uses original UserProxy/Planner task
+      blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and
+      target call-count limit; remaining differences may include framework wrappers,
+      local baseline protocol, and model/API behavior.'
   mars_wo_soc:
-    exactness_level: faithful_reimplementation
-    notes: Official-compatible ablation with Socratic Teacher/Critic loop disabled.
+    exactness_level: legacy_aligned_partial
+    notes: 'Legacy-aligned partial reproduction: uses original UserProxy/Planner task
+      blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and
+      target call-count limit; remaining differences may include framework wrappers,
+      local baseline protocol, and model/API behavior.'
   mars_wo_critic:
-    exactness_level: faithful_reimplementation
-    notes: Official-compatible ablation with Critic disabled.
+    exactness_level: legacy_aligned_partial
+    notes: 'Legacy-aligned partial reproduction: uses original UserProxy/Planner task
+      blocks, agent system prompts, legacy Target prompt format, p0 evaluation, and
+      target call-count limit; remaining differences may include framework wrappers,
+      local baseline protocol, and model/API behavior.'

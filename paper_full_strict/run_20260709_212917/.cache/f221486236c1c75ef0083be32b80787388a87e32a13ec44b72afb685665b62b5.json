@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the model strictly avoids probabilistic reasoning or world knowledge when evaluating semantic cues, and what specific wording could be strengthened to prevent such reliance?\n\n2. Considering the goal of maximizing correctness, how might simplifying the decision process—for instance, by merging or reordering steps—reduce potential confusion for the model while maintaining adherence to syntactic and semantic constraints?"
+}

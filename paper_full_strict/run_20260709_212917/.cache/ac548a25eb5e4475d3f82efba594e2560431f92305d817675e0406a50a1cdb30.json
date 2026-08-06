@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the structured reasoning process in the prompt be adjusted to better handle cases where semantic and pragmatic cues are weak or conflicting, potentially increasing the model's correctness rate?\n\n2. Considering the goal of maximizing correctness, what specific elements in the prompt could be optimized to reduce ambiguity in the model's output without oversimplifying the reasoning process?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How might testing the prompt with a variety of Boolean expressions reveal whether the instructions consistently guide the model toward correct evaluations, and what types of expressions would be most revealing?  \n\n2. Considering the goal of maximizing correctness rates, what aspects of the prompt could be refined to better align with how the model processes logical operations and operator precedence?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "False, because `not True` is False, and `False` in a conjunction makes the entire expression False."
+}

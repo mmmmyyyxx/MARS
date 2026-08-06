@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does your current prompt guide the model to specifically identify formal fallacies involving negation, rather than just general logical validity?\n\nSecond question: What elements could you add to your prompt to ensure the model consistently distinguishes between valid syllogisms and invalid ones when negation alters the scope of universal or existential claims?"
+}

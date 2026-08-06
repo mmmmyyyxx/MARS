@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that your prompt explicitly guides the model to handle operator precedence and nested parentheses without leaving room for ambiguity or misinterpretation?\n\n2. Considering the goal of maximizing correctness, what specific elements could you add to the prompt to prevent common errors, such as misordering operations or mishandling the `not` operator, while keeping instructions concise and directly actionable?"
+}

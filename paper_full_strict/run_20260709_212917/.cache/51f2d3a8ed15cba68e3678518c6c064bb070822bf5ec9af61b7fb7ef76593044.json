@@ -1,0 +1,3 @@
+{
+  "content": "First question: How does your proposed prompt specifically address the risk of the model introducing imaginative bias when evaluating negation-rich syllogisms, given that your protocol explicitly prohibits counterexample imagination?\n\nSecond question: Considering the current step requires incorporating an illustrative example, how would you optimize the prompt to ensure the model consistently applies your structured evaluation process without merely mimicking the example’s surface features?"
+}

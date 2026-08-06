@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test the current prompt with sample Boolean expressions to identify potential weaknesses in its instructions for achieving high correctness rates?\n\n2. What specific elements in the prompt could be optimized to reduce ambiguity and ensure the model consistently follows the correct order of operations?"
+}

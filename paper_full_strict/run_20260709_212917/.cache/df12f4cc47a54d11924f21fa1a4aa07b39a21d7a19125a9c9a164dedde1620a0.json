@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by reasoning step-by-step, strictly following operator precedence rules (parentheses first, then `not`, then `and`, then `or`). At each step, check your reasoning for accuracy and correct any errors if detected. If the expression contains nested structures or ambiguous phrasing, carefully parse and resolve them before proceeding. After completing all steps, confirm the final result and output only `True` or `False`."
+}

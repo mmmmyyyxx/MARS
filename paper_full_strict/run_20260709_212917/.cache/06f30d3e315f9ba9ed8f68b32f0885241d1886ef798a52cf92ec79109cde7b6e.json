@@ -1,0 +1,3 @@
+{
+  "content": "What specific geometric features in the traced path from the example SVG would help you distinguish between a hexagon and other polygons with similar vertex counts?\n\nHow could you optimize the prompt to systematically guide the model through vertex counting, angle analysis, and symmetry checks without relying on visual plotting?"
+}

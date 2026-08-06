@@ -1,0 +1,26 @@
+display_name: CoT(FS-fixed)
+type: direct
+num_shots: 3
+exactness: best_effort_reimplementation
+exactness_level: best_effort_reimplementation
+exactness_note: Diagnostic CoT few-shot baseline using fixed prompt-file demonstrations
+  filtered to exclude current test sample_ids; not a paper baseline.
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 2d7b4bc3ee7e10edd3e2cb06549984a0dd6bf9acbe0048e59d1d01d4b167d8f4
+eval_protocol: strict_mode
+initial_prompt_source: legacy_student_generated
+legacy_skip_first_data_row: false
+max_answer_retries: 5
+planner_strict_mode: true
+legacy_target_prompt_mode: true
+target_call_count_limit: 10
+num_opt_samples: 75
+num_val_samples: 50
+num_test_samples: 125
+opt_hash: 16d533aa443d5eb4bd8bfc88e8c35cb3592e4c160eb58a687bb655e6c389a38c
+val_hash: f8f0703341ce52544e4f5b8a422a2bec80e36f815ace751b8f4eb898371b33f9
+test_hash: d1efaafb003e1d6da90dbf552d1d88d0d235968969966389a4d71908d41bf07d

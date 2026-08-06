@@ -1,0 +1,4 @@
+Protocol,Few-shot source,Test overlap,Role
+paper_mode CoT-FS,"splits[""opt""]",yes,Paper-aligned main result; CoT-FS is strongest but opt/val/test share rows.
+strict_mode CoT-FS,"splits[""opt""]",no,Removes exact opt/test overlap while preserving split-selected demonstrations.
+strict_mode CoT-FS-fixed,few_shot.jsonl filtered by test sample_ids,no,Fixed demonstrations; removes split-specific demonstration selection.

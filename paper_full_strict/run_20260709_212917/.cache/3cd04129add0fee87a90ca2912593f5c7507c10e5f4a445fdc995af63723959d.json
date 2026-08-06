@@ -1,0 +1,3 @@
+{
+  "content": "What might be the potential drawbacks of specifying a rigid sequence of operations in your prompt, and how could this impact the model's ability to handle varied Boolean expressions?\n\nConsidering the goal of maximizing correctness, how could you refine your prompt to encourage the model to verify its own reasoning internally while still producing only the final output?"
+}

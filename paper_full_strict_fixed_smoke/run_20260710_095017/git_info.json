@@ -1,0 +1,5 @@
+{
+  "commit": "d56e73d9ac0db000c1e6c1c8a51d0ae2398f4f24",
+  "branch": "div",
+  "status_short": "M README.md\n M configs/exactness.yaml\n M configs/methods.yaml\n M experiments/__pycache__/common.cpython-313.pyc\n M experiments/common.py\n M mars_core/__pycache__/mars_runner.cpython-313.pyc\n M mars_core/mars_runner.py\n M tests/test_legacy_alignment.py\n?? baselines/__pycache__/cot_few_shot_fixed.cpython-313.pyc\n?? baselines/cot_few_shot_fixed.py\n?? paper_full_strict/\n?? paper_full_strict_fixed_smoke/\n?? scripts/__pycache__/export_strict_splits.cpython-313.pyc\n?? scripts/export_strict_splits.py\n?? strict_splits_bbh_seed42/\n?? tests/__pycache__/test_legacy_alignment.cpython-313-pytest-8.4.2.pyc\n?? tests/__pycache__/test_task_config.cpython-313-pytest-8.4.2.pyc"
+}

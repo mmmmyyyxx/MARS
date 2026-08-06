@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by applying standard Boolean logic rules: parentheses first, then `not`, then `and`, then `or`. After computation, output only `True` or `False`."
+}

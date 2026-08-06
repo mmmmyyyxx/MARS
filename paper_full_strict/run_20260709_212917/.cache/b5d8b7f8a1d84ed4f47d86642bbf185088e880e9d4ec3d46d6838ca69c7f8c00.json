@@ -1,0 +1,3 @@
+{
+  "content": "Can you explain how your current prompt ensures the model focuses specifically on whether the conclusion logically follows from the premises, especially when dealing with negations?\n\nWhat modifications could make your prompt more effective at guiding the model to distinguish between deductively valid arguments and formal fallacies involving negation?"
+}

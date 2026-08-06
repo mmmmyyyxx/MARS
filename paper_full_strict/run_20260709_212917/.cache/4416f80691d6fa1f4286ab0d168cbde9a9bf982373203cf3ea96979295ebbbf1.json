@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the clarity of the pronoun resolution steps be improved to ensure the model consistently applies syntactic constraints before considering semantic plausibility, especially in cases where structural positions might eliminate candidates?\n\n2. What specific elements in the output format could be optimized to reduce ambiguity in the model's final decision, such as requiring explicit mention of which syntactic rule or semantic cue determined the outcome?"
+}

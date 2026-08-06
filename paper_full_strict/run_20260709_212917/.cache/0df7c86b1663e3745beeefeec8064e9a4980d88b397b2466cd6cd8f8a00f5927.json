@@ -1,0 +1,3 @@
+{
+  "content": "False, because `not (False)` simplifies to `True`, and `True and False` evaluates to `False`."
+}

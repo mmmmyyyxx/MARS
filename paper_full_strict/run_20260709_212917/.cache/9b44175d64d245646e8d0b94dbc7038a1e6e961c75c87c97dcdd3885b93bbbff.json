@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in your current prompt might lead the language model to focus on abstract geometric principles rather than systematically tracing the SVG path commands to identify the drawn shape?\n\nConsidering the need for a clear, step-by-step approach, how could you restructure your prompt to explicitly guide the model through parsing each path command, plotting coordinates, and then classifying the resulting shape based on its visible properties?"
+}

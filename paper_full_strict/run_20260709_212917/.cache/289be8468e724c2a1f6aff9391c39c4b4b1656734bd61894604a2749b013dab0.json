@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the step-by-step decision process in your prompt remains strictly limited to explicit syntactic and semantic cues, without inadvertently allowing the model to rely on implicit world knowledge or probabilistic reasoning?\n\n2. Considering the current draft includes a detailed process but lacks example sentences with correct answers and a specified output format, how would integrating concrete examples and clear output instructions improve the model's adherence to the task and correctness rate?"
+}

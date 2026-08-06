@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by applying logical operators strictly according to standard precedence rules: first resolve parentheses and `not`, then `and`, and finally `or`. Ensure accuracy by verifying each step against logical rules, and output only the final truth value."
+}

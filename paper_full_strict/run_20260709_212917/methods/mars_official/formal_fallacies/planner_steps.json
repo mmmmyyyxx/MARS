@@ -1,0 +1,12 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Clearly define the task's focus on formal fallacies, syllogisms, and negations, emphasizing deductive validity evaluation.",
+    "Structure the prompt to include a context with premises, an argument to evaluate, and a clear question about deductive validity.",
+    "Ensure the prompt explicitly instructs the model to determine if the argument logically follows from the premises, highlighting the role of negations.",
+    "Format the prompt to include clear instructions and predefined options (e.g., \"valid\" or \"invalid\") for the model's response.",
+    "Incorporate an example (like the Sophie/Nioxin scenario) to illustrate the expected reasoning process and output format.",
+    "Test and refine the prompt to maximize clarity and correctness rate in the model's evaluations."
+  ]
+}

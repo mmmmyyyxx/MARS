@@ -1,0 +1,26 @@
+display_name: CoT(FS)
+type: direct
+num_shots: 3
+exactness: best_effort_reimplementation
+exactness_level: best_effort_reimplementation
+exactness_note: Local CoT baseline; paper reports baseline numbers but the original
+  repository does not provide a complete executable baseline protocol.
+model: deepseek-chat
+temperature: 0.6
+pricing:
+  prompt_per_1k: 0.0
+  completion_per_1k: 0.0
+config_hash: 7dc6d2993c90f85a4163a6549bc544586a2287e3cd9c07eceb03626db58dd8ba
+eval_protocol: strict_mode
+initial_prompt_source: legacy_student_generated
+legacy_skip_first_data_row: false
+max_answer_retries: 5
+planner_strict_mode: true
+legacy_target_prompt_mode: true
+target_call_count_limit: 10
+num_opt_samples: 75
+num_val_samples: 50
+num_test_samples: 125
+opt_hash: f59e9139d98c2cd733d54059c13bfd80267bbb08fee60e2a1194d34fc675cd94
+val_hash: c83a0e20739a2ba515ceebabf7785be8b244df3e307132b5b0d7d1162bc15b00
+test_hash: 7545b6980341cb6c8c99518c85fce9c9f4004895e32fafa3fb6951fb1caed2c4

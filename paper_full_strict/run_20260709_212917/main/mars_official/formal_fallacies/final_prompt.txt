@@ -1,0 +1,37 @@
+**Logical Entailment Assessment Protocol for Negation-Rich Syllogisms (v21)**
+
+**Core Validity Principle**: An argument is deductively valid if and only if the premises' truth logically guarantees the conclusion's truth—meaning there exists no logically consistent interpretation where all premises are true and the conclusion is false.
+
+**Enhanced Logical Following Focus**:
+- **Premise-Conclusion Dependency Analysis**: Explicitly trace how each premise contributes to constraining possible truth values
+- **Necessity Verification Protocol**: Systematically check if conclusion MUST be true given the premise constraints
+- **Logical Following Criterion**: Valid ONLY if conclusion cannot be false while premises are true—no exceptions
+
+**Demonstrative Symbolic Abstraction Protocol**:
+- **Example-Driven Content Neutralization**: 
+  *Sophie Example Transformation*: 
+  - "Sophie is an infrequent user of Nioxin shampoo" → "A is B"
+  - "Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo" → "All C and all B are D"
+  - "Sophie is a frequent consumer of Schwarzkopf shampoo" → "A is D"
+  - **Structural Preservation Mechanism**: The symbolic mapping preserves logical relationships by maintaining all logical operators (universal quantification "all", conjunction "and", property attribution "is") while replacing specific content with abstract placeholders—this eliminates real-world plausibility biases by forcing analysis of pure formal structure
+  - **Bias Elimination Key**: The transformation ensures that judgments are based solely on logical form rather than semantic content or real-world likelihood
+
+**Symbolic Abstraction Anti-Plausibility Mechanism**:
+- **Content-to-Form Isolation**: Concrete entities (Sophie, Nioxin shampoo) become abstract symbols (A, B) while preserving logical operators—this specifically prevents real-world plausibility from influencing validity judgments
+- **Semantic Decoupling**: By transforming domain-specific content to abstract properties, the analysis focuses exclusively on logical relationships, eliminating judgments based on domain knowledge or semantic associations
+- **Negation Plausibility Neutralization**: When arguments involve negations, symbolic abstraction prevents the model from being misled by whether negated statements seem "likely" or "unlikely" in reality—only formal logical relationships matter
+
+**Enhanced Negation Scope Clarification Protocol**:
+- **Negation Isolation via Symbolic Abstraction**: 
+  - **Explicit Negation Marker Preservation**: When translating to abstract symbols, maintain all negation operators ("not", "no", "never", etc.) in their original positions with clear scope indicators
+  - **Scope Boundary Identification**: Use explicit phrasing and logical notation to demarcate negation scope in symbolic representation
+  - **Ambiguity Exposure Method**: The abstract symbolic form eliminates content-based plausibility, forcing analysis of whether negation applies to individual terms, entire predicates, or complex propositions
+
+**Negation Validity Discrimination Framework**:
+- **Valid Negation Application Guide**: 
+  - **Direct Logical Following**: Check if negation in conclusion follows necessarily from negations in premises through established logical rules
+  - **Scope Consistency Verification**: Ensure negation scope remains consistent between premises and conclusion
+  - **Universal Quantification + Negation Rules**: Apply specific rules for how negations interact with universal quantifiers ("all", "every")
+  
+- **Invalid Negation Application Detection**:
+  - **Illicit Negation

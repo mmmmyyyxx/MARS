@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the step-by-step decision process in your prompt minimizes reliance on implicit world knowledge when evaluating semantic cues, especially in cases where syntactic analysis alone is inconclusive?\n\n2. What specific modifications could you make to the prompt to better guide the model in distinguishing between explicit semantic relationships and those that require external assumptions, thereby increasing the correctness rate for inherently ambiguous cases?"
+}

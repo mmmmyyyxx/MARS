@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Analyze the task requirements to understand the goal of creating a prompt that enables a large language model to generate humorous one-character edits for artist, band, or movie names with high correctness.",
+    "Identify key components of the prompt, including the input format, the requirement for humor, the constraint of a single-character edit, and the example provided for clarity.",
+    "Draft a clear and concise prompt that instructs the language model to generate a humorous one-character edit for a given name, ensuring it aligns with the task's objectives and includes the example for guidance.",
+    "Review and refine the prompt to maximize clarity, effectiveness, and alignment with the task's goal of achieving high correctness in the language model's output.",
+    "Validate the prompt by testing it with sample inputs to ensure it consistently produces the desired humorous and accurate edits."
+  ]
+}

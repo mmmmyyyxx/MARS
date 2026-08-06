@@ -1,0 +1,3 @@
+{
+  "content": "False, because `True and not True` simplifies to `False`, and `False or True and True` evaluates to `True` only if the `and` is evaluated first, but standard precedence makes `False or (True and True)` = `False or True` = `True`. Wait — correction: the expression is `(True and not True) or (True and True)` by precedence rules, so `False or True` = `True`.  \n\nFinal answer: **True**"
+}

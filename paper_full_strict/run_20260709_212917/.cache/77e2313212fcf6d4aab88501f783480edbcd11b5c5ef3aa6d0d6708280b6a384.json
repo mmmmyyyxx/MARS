@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by first resolving the innermost parentheses, then applying `not`, `and`, and `or` in that order, moving outward step-by-step. At each step, explicitly verify the intermediate result by referencing the fundamental Boolean logic principles: `not` inverts truth values, `and` requires both operands to be `True`, and `or` requires at least one operand to be `True`. Ensure each operation aligns with these rules before proceeding. After completing all steps, output only `True` or `False`."
+}

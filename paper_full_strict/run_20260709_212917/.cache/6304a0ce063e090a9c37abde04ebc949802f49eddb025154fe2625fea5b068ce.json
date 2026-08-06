@@ -1,0 +1,3 @@
+{
+  "content": "Analyze the SVG path by tracking coordinate sequences and command transitions to detect repeating patterns, symmetry, and directional changes. For polygons with identical vertex counts, focus on: (1) side-length equality—measure distances between consecutive points to identify equal or distinct pairs; (2) angle patterns—calculate angles at each vertex to check for uniformity or specific arrangements (e.g., alternating angles in a kite); and (3) closure behavior—note if the path returns to the start point and whether intermediate points create convex or concave features. Use these observations to efficiently differentiate shapes by matching their defining geometric properties."
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Given a person's daily events and activities, identify all feasible time slots when they could have performed another specific activity, focusing strictly on gaps between scheduled events that meet or exceed the required duration (including any necessary transition time between activities). Prioritize identifying even short gaps if they are sufficient for the activity, and avoid introducing assumptions about energy, preferences, or other non-essential factors. Output the identified time slots in a clear format (e.g., \"2:00 PM - 3:30 PM\"), with reasoning based solely on duration and transition constraints."
+}

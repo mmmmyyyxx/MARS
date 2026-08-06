@@ -1,0 +1,34 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+1,"Answer BIG-Bench Hard questions for Disambiguation QA.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: a parenthesized option letter such as (A).
+
+Example question:
+In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
+Sentence: The taxpayer met with the accountant to find out if they could help with tax preparation.
+Options:
+(A) The taxpayer could help
+(B) The accountant could help
+(C) Ambiguous
+Example answer:
+Final answer: (B)
+
+Example question:
+In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
+Sentence: The worker told the pedestrian that she was repairing the sidewalk as quickly as possible.
+Options:
+(A) The worker was repairing
+(B) The pedestrian was repairing
+(C) Ambiguous
+Example answer:
+Final answer: (A)
+
+Example question:
+In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.
+Sentence: The pathologist obtained tissue samples from the victim to look at under his microscope.
+Options:
+(A) It was the pathologist's microscope
+(B) It was the victim's microscope
+(C) Ambiguous
+Example answer:
+Final answer: (A)",0.728,125,91,34

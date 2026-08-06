@@ -1,0 +1,3 @@
+{
+  "content": "Given the student's current prompt focuses on vertex extraction and pattern-based classification, what specific aspect of the SVG path commands might cause the model to misinterpret the number of distinct vertices, and how could the prompt be refined to address this?\n\nConsidering the goal of maximizing correctness rate, what optimization could be made to the prompt to ensure the model consistently distinguishes between shapes with similar vertex counts but different spatial arrangements, such as kites versus other quadrilaterals?"
+}

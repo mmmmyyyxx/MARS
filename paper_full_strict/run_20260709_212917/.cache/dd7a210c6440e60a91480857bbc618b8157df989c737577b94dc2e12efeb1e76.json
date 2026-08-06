@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can the current prompt be modified to more explicitly guide the model to directly compare the logical constraints from the premises against the conclusion, rather than relying on abstract constraint analysis?\n\nSecond question: What specific elements could be added to the prompt to ensure the model consistently outputs only \"valid\" or \"invalid\" without any explanatory text, while maintaining high accuracy?"
+}

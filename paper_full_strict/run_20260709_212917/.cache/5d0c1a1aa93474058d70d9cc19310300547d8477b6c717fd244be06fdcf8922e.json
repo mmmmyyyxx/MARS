@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to handle nested parentheses recursively without leaving room for ambiguity or misinterpretation?\n\n2. What specific wording could you add to the prompt to prevent the model from outputting intermediate steps or explanations, while still ensuring it follows the correct order of operations internally?"
+}

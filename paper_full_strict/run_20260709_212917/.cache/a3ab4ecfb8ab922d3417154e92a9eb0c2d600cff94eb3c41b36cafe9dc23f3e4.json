@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the current prompt's strict reliance on grammatical agreement first, before semantics, affect its performance on sentences where conventional semantic inferences are necessary from the start to resolve ambiguity?\n\n2. Considering the goal of maximizing correctness rate, what specific elements could be optimized in the prompt structure—such as clarifying the task description, refining the example's reasoning steps, or adjusting the output format instructions—to better guide the model toward accurate disambiguation?"
+}

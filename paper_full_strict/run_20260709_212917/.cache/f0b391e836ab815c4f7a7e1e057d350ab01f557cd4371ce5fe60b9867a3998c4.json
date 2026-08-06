@@ -1,0 +1,3 @@
+{
+  "content": "Given your current prompt emphasizes collinear filtering and geometric property analysis, what specific test cases would you design to validate whether the model correctly eliminates collinear points before vertex counting?\n\nConsidering the dual-phase approach in your prompt, how might you optimize the sequence of geometric property checks to minimize computational steps while ensuring accurate shape differentiation among polygons with identical vertex counts?"
+}

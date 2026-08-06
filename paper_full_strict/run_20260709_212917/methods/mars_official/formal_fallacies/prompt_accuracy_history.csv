@@ -1,0 +1,264 @@
+iteration,prompt,accuracy,num_samples,num_correct,num_failed
+0,"Analyze the argument step by step by first identifying the explicit premises and the conclusion. Then, check if the conclusion follows necessarily from the premises using logical deduction, paying special attention to the role of negations and quantifiers. If the conclusion must be true whenever the premises are true, the argument is valid; otherwise, it is invalid.",0.76,50,38,12
+1,"To determine whether an argument is deductively valid, focus on the logical structure underlying the premises and conclusion, rather than relying solely on procedural transformations. Begin by interpreting the informal statements in terms of their core logical relationships—such as universal or existential claims, conditional dependencies, and the role of negation in altering truth conditions. Ask: ""If all premises are true, must the conclusion also be true?"" To test this, consider whether any conceivable scenario satisfies the premises while falsifying the conclusion, paying special attention to how negation affects scope and inference (e.g., negating a universal claim introduces existential possibilities, while negating a predicate may restrict or alter set membership). Avoid getting distracted by surface language; instead, reason through necessity by asking what the premises logically guarantee. If the conclusion is guaranteed in all cases, the argument is valid; otherwise, it is invalid. This approach emphasizes understanding over procedure, fostering deeper logical analysis and reducing errors from complex negation patterns or informal phrasing.",0.8,50,40,10
+2,"To enhance accuracy in assessing deductive validity, especially with nuanced negations and quantifiers, follow this refined protocol:
+
+1. **Contextualize Predicate Definitions**: Before translating, clarify any ambiguous terms (e.g., ""infrequent user"") by incorporating explicit definitions into the logical framework. For instance, if ""infrequent user of Nioxin"" means ""uses Nioxin less than once per month,"" define a predicate like \( L(x, Nioxin) \) for this specific usage threshold, ensuring the negation (if present) aligns with the definition (e.g., ¬FrequentUse(x, Nioxin) where FrequentUse implies regular use). This prevents misrepresentation of premises and preserves validity—if the original argument relied on a broader negation, reassess logical connections using the precise definition.
+
+2. **Augment Logical Translation with Scope Tracking**: When converting statements, explicitly annotate the scope of negations and quantifiers to avoid errors. For example, use brackets and labels:  
+   - Premise: ∀x [ (O(x, Nexxus) ∨ ¬U(x, Nioxin)) → C(x, Schwarzkopf) ]  
+   Here, note that ¬ applies only to U(x, Nioxin), not the entire disjunction. For double negations, simplify stepwise (e.g., ¬¬P ≡ P) and document each step in a table.
+
+3. **Implement a Fallacy-Checking Step**: After translation, add a targeted query: ""Scan for quantifier scope conflicts or double negation oversights—could the premises be true while the conclusion is false due to misplaced negations?"" For instance, in cases like ∀x ¬(P(x) → Q(x)) misread as ∀x (¬P(x) → Q(x)), highlight the scope error explicitly. Use counterexample generation: ""If Sophie were a frequent user of Nioxin but not an owner of Nexxus, would Premise 2 still force the conclusion?""
+
+4. **Visualize with Enhanced Diagrams**: Extend tables to include a ""Negation Impact"" column, listing how each negation affects variables and quantifiers. For the Sophie example:
+   - Premise 1: ¬U(s, Nioxin) → [Impact: Excludes s from frequent Nioxin use]
+   - Premise 2: ∀x [(O(x, Nexxus) ∨ ¬U(x, Nioxin)) → C(x, Schwarzkopf)] → [Impact: ¬U(x, Nioxin) grants access to the consequent]
+   - Validity Check: Confirm that Premise 1 satisfies the condition in Premise 2, necessitating C(s, Schwarzkopf).
+
+By integrating definitional clarity, scope annotation, and fallacy-specific checks, this prompt reduces ambiguities and boosts consistency in identifying formal fallacies.",0.7,50,35,15
+3,"**Enhanced Prompt for Formal Fallacy Detection with Negations:**
+
+**Step 1: Ambiguity-Aware Logical Translation**  
+- Translate the argument into predicate logic, explicitly marking quantifier scope and negation placement using brackets.  
+- **Ambiguity Diagnosis**: Generate both the intended formalization and the *most plausible misinterpretation* based on common parsing errors in natural language:  
+  - Example:  
+    - Intended: ∀x[(Owner(x, Nexxus) ∨ ¬User(x, Nioxin)) → Consumer(x, Schwarzkopf)]  
+    - Plausible Misinterpretation: ∀x[Owner(x, Nexxus) ∨ (¬User(x, Nioxin) → Consumer(x, Schwarzkopf))]  
+- **Plausibility Filter**: Only retain misinterpretations that could reasonably arise from syntactic/semantic ambiguity (e.g., quantifier scope, negation attachment). Discard implausible ones to avoid false ambiguity flags.
+
+**Step 2: Systematic Counterexample Testing**  
+- **Apply Two-Part Counterexample Protocol**:  
+  1. **General Consistency Check**: Construct a minimal scenario (1–2 elements) satisfying all premises.  
+  2. **Negation-Boundary Test**: Design a scenario targeting edge cases involving negated predicates (e.g., empty categories, partial overlaps, De Morgan applications).  
+- **Validation Calibration**: Verify that these tests reliably distinguish valid deductions from fallacies by ensuring:  
+  - Valid arguments withstand all counterexample tests  
+  - Fallacies fail at least one test, particularly the negation-boundary case  
+
+**Step 3: Decision Synthesis**  
+- Confirm:  
+  ✓ Logical translation accounts for plausible ambiguities without overgenerating  
+  ✓ Counterexamples are both minimal and negation-sensitive  
+  ✓ Reasoning chain is structurally sound under the intended interpretation  
+
+**Final Output**:  
+- ""valid"" only if the argument passes all checks under the intended formalization  
+- ""invalid"" if structural flaws exist or plausible ambiguities undermine deductive certainty",0.46,50,23,27
+4,"**Optimized Prompt for Formal Fallacy Detection with Streamlined Negation Analysis**
+
+**Step 1: Logical Translation with Focused Negation Check**
+- Translate premises and conclusion into predicate logic using natural interpretations
+- **Essential Negation Test**: Identify whether negations in premises directly block potential counterexamples to the conclusion
+- **Minimal Scope Analysis**: Check only whether negations create logical gaps that prevent necessary deduction
+
+**Step 2: Efficient Counterexample Testing**
+- **Single Violation Principle**: If any logically consistent scenario satisfies all premises while making the conclusion false, the argument is invalid
+- **Targeted Counterexample Search**: Construct the simplest possible scenario where:
+  - All premises remain true
+  - Conclusion is false
+  - Focus specifically on how negations might fail to force the conclusion
+- **Common Fallacy Patterns**: Check for these frequent negation-related issues:
+  - Negations that don't cover all paths to conclusion failure
+  - Overlapping categories where negations leave logical gaps
+  - Boundary cases where negations don't apply
+
+**Step 3: Binary Validity Decision**
+- **Logical Force Criterion**: Argument valid only if conclusion must be true whenever premises are true
+- **Streamlined Assessment**: If any counterexample exists—no matter how simple—the argument is invalid
+- **Output**: ""valid"" only if no counterexample scenario is possible; otherwise ""invalid""
+
+**Key Efficiency Guidelines**:
+- Avoid overcomplicating translation—use simplest logical forms
+- Counterexamples need only be logically possible, not probable
+- Focus on finding one clear violation rather than exhaustive scenario elimination
+- Common issues: missing universal quantifier coverage, negation scope too narrow, category overlaps not addressed by negations",0.4,50,20,30
+5,"**Refined Universal Counterexample Testing Protocol for Complex Negation-Rich Syllogisms**
+
+**Enhanced Core Testing Principle**: 
+Systematically construct logically consistent scenarios where all premises are strictly true while the conclusion is explicitly false. The impossibility of such construction—not its difficulty—determines validity.
+
+**Multi-Negation Handling Protocol**:
+1. **Negation Stack Analysis**: Identify all negation terms and map their logical scope hierarchies
+2. **Constraint Propagation**: Treat each negation as eliminating specific logical possibilities, then verify no contradictions arise between negations
+3. **Overlap Resolution**: When negations overlap, ensure the intersection of their eliminated possibilities doesn't create logical inconsistencies in the counterexample construction
+
+**Logical Consistency Verification Step**:
+- **Explicit Consistency Check**: Before accepting any counterexample, verify that all premise constraints can be simultaneously satisfied without internal contradictions
+- **Negation Compatibility Test**: Ensure overlapping negations don't mutually exclude all possible states required for premises to be true
+
+**Impossibility vs. Difficulty Distinction Framework**:
+- **Logical Barrier Detection**: A counterexample is logically impossible only if the premises mathematically preclude the conclusion being false
+- **Imagination Barrier Filter**: If you can describe the counterexample scenario without logical contradiction—even if counterintuitive—the argument is invalid
+- **Key Question**: ""Does any logically consistent world exist where premises are true and conclusion false?"" Not ""Is this world easy to imagine?""
+
+**Systematic Construction with Consistency Guarantee**:
+1. **Premise Satisfaction First**: Build scenarios that strictly satisfy all premises
+2. **Conclusion Falsification Test**: Within those valid premise-worlds, attempt to make conclusion false
+3. **Consistency Audit**: Verify no logical rules are violated in the constructed scenario
+4. **Decision Criterion**: If any logically consistent scenario passes steps 1-3 → Invalid. If all consistent scenarios force conclusion true → Valid.
+
+**Execution Command**: For each argument, systematically answer: ""Can I describe a logically consistent scenario where every premise is undeniably true while the conclusion is definitely false, without violating any logical rules?"" The answer determines validity.",0.5,50,25,25
+6,"**Enhanced Logical Entailment Protocol for Negation-Rich Syllogisms (v3)**
+
+**Core Validity Principle**: An argument is deductively valid if and only if the conclusion's truth is logically guaranteed by the premises' truth—meaning the premises cannot all be true while the conclusion is false, regardless of how many negations are involved.
+
+**Logical Entailment Enforcement Framework**:
+1. **Direct Necessity Assessment**: Bypass counterexample imagination entirely—focus exclusively on whether the premises' logical structure mathematically requires the conclusion
+2. **Negation Constraint Mapping**: Systematically trace how each negation in the premises restricts the logical space, then determine if these constraints collectively eliminate all possible worlds where conclusion is false
+3. **Logical Force Calculation**: Compute whether the premises' combined logical content necessarily produces the conclusion through formal relationships
+
+**Structured Evaluation Process**:
+1. **Logical Parsing Phase**: 
+   - Identify all logical operators (especially negations) and their scope
+   - Map the formal structure of premises and conclusion
+   - **Negation Operator Isolation**: Treat negations exclusively as truth-functional operators that reverse truth values—never interpret them as positive content or substantive claims. Explicitly recognize that ""not-P"" asserts nothing about what is true, only what is false.
+
+2. **Constraint Integration Phase**:
+   - Calculate how each premise restricts the set of possible truth assignments
+   - Combine these restrictions to determine the logically possible scenarios
+   - **Negation Symmetry Enforcement**: Verify that reasoning remains identical when statements are logically equivalent but differ in negation placement (e.g., ""not-all"" vs ""some-not"")
+
+3. **Necessity Verification Phase**:
+   - Apply the formal test: ""Is there any logically consistent interpretation where all premises are true and conclusion is false?""
+   - If no logically consistent interpretation exists → Valid
+   - If at least one logically consistent interpretation exists → Invalid
+
+**Imaginative Bias Prevention System**:
+- **Counterexample Prohibition**: Explicitly forbid generating concrete scenarios or real-world examples
+- **Abstract Constraint Analysis**: Operate exclusively in the domain of logical constraints and truth tables
+- **Pattern-Based Detection**: Use formal fallacy patterns as detection templates rather than scenario-based reasoning
+- **Syntax-Over-Semantics Priority**: Prioritize logical form over interpretive meaning
+
+**Formal Fallacy Detection & Prevention Framework**:
+- **Illicit Negation Distribution Alert**: Check for improper movement of negation across logical operators (e.g., confusing ""not-(A and B)"" with ""not-A and not-B"")
+- **Quantifier-Negation Fallacy Detection**: Specifically monitor for errors in negating quantified statements (e.g., misinterpreting ""not-all"" as ""all-not"")
+- **Double Negation Validation**: Ensure double negations are properly eliminated according to logical equivalence rules
+- **Fallacy Pattern Library**: Reference common negation-related fallacies as negative templates without generating counterexamples:
+  * Affirming the Consequent: If P then Q, Q therefore P
+  * Denying the Antecedent: If P then Q, not-P therefore not-Q  
+  * Illicit Conversion: All S are P therefore All P are S
+  * Negation Scope Errors: Confusing ¬∀xP(x) with ∀x¬P(x)
+
+**Critical Guidance for Model**:
+- **Pure Logical Analysis**: Treat the problem as a formal system of",0.7,50,35,15
+7,"**Logical Entailment Assessment Protocol for Negation-Rich Syllogisms (v9)**
+
+**Core Validity Principle**: An argument is deductively valid if and only if the premises' truth logically guarantees the conclusion's truth—meaning there exists no logically consistent interpretation where all premises are true and the conclusion is false.
+
+**Strict Formalization Process**:
+1. **Complete Symbolic Abstraction**: Replace ALL content words (names, objects, properties) with abstract symbols (P, Q, R, etc.)—treat these as meaningless placeholders
+2. **Logical Form Isolation**: Extract ONLY the logical structure (quantifiers, connectives, negation scope)
+3. **Constraint Mapping**: Identify how each premise restricts possible truth assignments to abstract symbols
+4. **Constraint Integration**: Combine restrictions to determine all logically possible scenarios
+5. **Necessity Verification**: Check if conclusion's truth is unavoidable given combined constraints
+
+**Sophie/Nioxin Example Analysis**:
+- Symbolic form: A(S), ∀x[(B(x)∨A(x))→C(x)], ∴ C(S)
+- **Content Erasure**: ""Sophie,"" ""Nioxin,"" ""Nexxus,"" ""Schwarzkopf"" replaced with abstract symbols
+- Constraint analysis: A(S) + universal premise eliminates all scenarios where ¬C(S)
+- Result: No scenario exists where premises are true and conclusion false → Valid
+
+**Form-Exclusive Directives**:
+- **Treat symbols as meaningless**: After abstraction, symbols have no semantic content
+- **Ignore real-world plausibility**: Do not consider whether statements make sense in reality
+- **Focus on structural relationships**: Only analyze how logical operators connect symbols
+- **No semantic substitution**: Do not mentally replace symbols with other meaningful content
+
+**Negation-Specific Formalization**:
+- Map negation scope strictly to symbolic elements
+- Propagate negation constraints through logical operators
+- Verify double negation elimination in symbolic form only
+- Assess whether negation constraints structurally force conclusion
+
+**Ambiguity Reduction Enhancements**:
+- **Explicit Symbol Replacement**: Systematically replace each distinct term with unique symbols
+- **Structural Pattern Recognition**: Identify common valid/invalid logical patterns
+- **Constraint Exhaustion Check**: Ensure all premise constraints are fully integrated
+- **Counterexample Construction Test**: Attempt to construct symbolic counterexamples
+
+**Output Determination**:
+- If premises' symbolic constraints eliminate all ¬conclusion scenarios → Valid
+- If any symbolic scenario exists where premises true and conclusion false → Invalid
+
+This version ensures complete semantic detachment by emphasizing that abstract symbols are meaningless placeholders and focusing exclusively on structural relationships between them.",0.72,50,36,14
+8,"**Logical Entailment Assessment Protocol for Negation-Rich Syllogisms (v15)**
+
+**Core Validity Principle**: An argument is deductively valid if and only if the premises' truth logically guarantees the conclusion's truth—meaning there exists no logically consistent interpretation where all premises are true and the conclusion is false.
+
+**Enhanced Logical Following Focus**:
+- **Premise-Conclusion Dependency Analysis**: Explicitly trace how each premise contributes to constraining possible truth values
+- **Necessity Verification Protocol**: Systematically check if conclusion MUST be true given the premise constraints
+- **Logical Following Criterion**: Valid ONLY if conclusion cannot be false while premises are true—no exceptions
+
+**Demonstrative Symbolic Abstraction Protocol**:
+- **Example-Driven Content Neutralization**: 
+  *Sophie Example Transformation*: 
+  - ""Sophie is an infrequent user of Nioxin shampoo"" → ""A is B""
+  - ""Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo"" → ""All C and all B are D""
+  - ""Sophie is a frequent consumer of Schwarzkopf shampoo"" → ""A is D""
+  - **Key Insight**: The symbolic mapping (A,B,C,D) eliminates shampoo brands and usage patterns while perfectly preserving the logical structure of universal quantification and property attribution
+
+- **Structure Preservation Verification**: The abstract symbols maintain all logical relationships (universal quantification, conjunction in premises, property inheritance) while removing any real-world plausibility biases
+
+**Content Neutrality Enforcement Enhancements**:
+- **Symbolic Randomization Mandate**: After initial translation, systematically replace all symbols with randomly generated meaningless tokens (e.g., A→X7, B→P42, C→Z19) to eliminate residual semantic associations
+- **Double-Blind Abstraction**: Perform symbolic translation twice with different symbol sets and verify identical logical analysis results
+- **Semantic Contamination Check**: Explicitly confirm no symbol carries any inherent meaning or real-world plausibility before proceeding
+
+**Generalizable Reasoning Process**:
+1. **Example-Informed Symbolic Translation**: Apply the Sophie demonstration method—convert ALL content to simple abstract symbols (A, B, C, etc.)
+2. **Symbolic Randomization**: Replace initial symbols with randomly generated meaningless tokens
+3. **Structure-Only Processing**: Analyze ONLY formal relationships between randomized symbols, ignoring any real-world meaning
+4. **Negation Pattern Isolation**: Use symbolic abstraction to expose negation scope ambiguities by eliminating content-based plausibility
+
+**Simplified Formalization Process**:
+1. **Symbolic Translation**: Convert ALL statements to abstract symbolic form using the demonstrated placeholder method
+2. **Symbolic Randomization**: Replace all symbols with randomly generated meaningless tokens
+3. **Logical Structure Extraction**: Identify quantifiers, connectives, and precise negation scope
+4. **Constraint Mapping**: Determine how each premise restricts possible truth assignments
+5. **Logical Following Test**: Check if conclusion's truth is unavoidable given combined constraints
+
+**Structural Focus Enforcement**:
+- **Content Blindness Mandate**: Explicitly disregard any real-world meaning or plausibility—focus exclusively on symbolic relationships
+- **Syntax-Only Analysis**: Process ONLY the formal syntactic structure between randomized abstract symbols
+- **Meaning Erasure Confirmation**: Verify symbols carry no semantic content before proceeding
+
+**Logical Following Verification Clarification**:
+- **Exhaustive",0.7,50,35,15
+9,"**Logical Entailment Assessment Protocol for Negation-Rich Syllogisms (v21)**
+
+**Core Validity Principle**: An argument is deductively valid if and only if the premises' truth logically guarantees the conclusion's truth—meaning there exists no logically consistent interpretation where all premises are true and the conclusion is false.
+
+**Enhanced Logical Following Focus**:
+- **Premise-Conclusion Dependency Analysis**: Explicitly trace how each premise contributes to constraining possible truth values
+- **Necessity Verification Protocol**: Systematically check if conclusion MUST be true given the premise constraints
+- **Logical Following Criterion**: Valid ONLY if conclusion cannot be false while premises are true—no exceptions
+
+**Demonstrative Symbolic Abstraction Protocol**:
+- **Example-Driven Content Neutralization**: 
+  *Sophie Example Transformation*: 
+  - ""Sophie is an infrequent user of Nioxin shampoo"" → ""A is B""
+  - ""Every owner of a Nexxus shampoo and every infrequent user of Nioxin shampoo is a frequent consumer of Schwarzkopf shampoo"" → ""All C and all B are D""
+  - ""Sophie is a frequent consumer of Schwarzkopf shampoo"" → ""A is D""
+  - **Structural Preservation Mechanism**: The symbolic mapping preserves logical relationships by maintaining all logical operators (universal quantification ""all"", conjunction ""and"", property attribution ""is"") while replacing specific content with abstract placeholders—this eliminates real-world plausibility biases by forcing analysis of pure formal structure
+  - **Bias Elimination Key**: The transformation ensures that judgments are based solely on logical form rather than semantic content or real-world likelihood
+
+**Symbolic Abstraction Anti-Plausibility Mechanism**:
+- **Content-to-Form Isolation**: Concrete entities (Sophie, Nioxin shampoo) become abstract symbols (A, B) while preserving logical operators—this specifically prevents real-world plausibility from influencing validity judgments
+- **Semantic Decoupling**: By transforming domain-specific content to abstract properties, the analysis focuses exclusively on logical relationships, eliminating judgments based on domain knowledge or semantic associations
+- **Negation Plausibility Neutralization**: When arguments involve negations, symbolic abstraction prevents the model from being misled by whether negated statements seem ""likely"" or ""unlikely"" in reality—only formal logical relationships matter
+
+**Enhanced Negation Scope Clarification Protocol**:
+- **Negation Isolation via Symbolic Abstraction**: 
+  - **Explicit Negation Marker Preservation**: When translating to abstract symbols, maintain all negation operators (""not"", ""no"", ""never"", etc.) in their original positions with clear scope indicators
+  - **Scope Boundary Identification**: Use explicit phrasing and logical notation to demarcate negation scope in symbolic representation
+  - **Ambiguity Exposure Method**: The abstract symbolic form eliminates content-based plausibility, forcing analysis of whether negation applies to individual terms, entire predicates, or complex propositions
+
+**Negation Validity Discrimination Framework**:
+- **Valid Negation Application Guide**: 
+  - **Direct Logical Following**: Check if negation in conclusion follows necessarily from negations in premises through established logical rules
+  - **Scope Consistency Verification**: Ensure negation scope remains consistent between premises and conclusion
+  - **Universal Quantification + Negation Rules**: Apply specific rules for how negations interact with universal quantifiers (""all"", ""every"")
+  
+- **Invalid Negation Application Detection**:
+  - **Illicit Negation",0.6,50,30,20

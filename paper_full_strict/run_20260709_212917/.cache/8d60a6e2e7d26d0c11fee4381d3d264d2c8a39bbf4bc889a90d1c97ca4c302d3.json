@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to prioritize grammatical and syntactic analysis over semantic cues, while still allowing for semantic reasoning when necessary, without creating ambiguity in the instructions?\n\n2. Considering the current focus on step-by-step resolution, what specific elements could be added to the prompt to optimize the model's output format—such as requiring intermediate reasoning steps or a final structured answer—to improve correctness and clarity?"
+}

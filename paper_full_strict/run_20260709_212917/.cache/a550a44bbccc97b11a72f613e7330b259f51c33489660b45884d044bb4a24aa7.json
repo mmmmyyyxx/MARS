@@ -1,0 +1,3 @@
+{
+  "content": "How can you refine the prompt to more explicitly guide the model to prioritize short-circuit evaluation and early constant resolution, based on the specific example \"not ( True ) and ( True )\"?\n\nWhat elements in your current prompt might be redundant or could be simplified to make the instructions clearer and more focused for the model?"
+}

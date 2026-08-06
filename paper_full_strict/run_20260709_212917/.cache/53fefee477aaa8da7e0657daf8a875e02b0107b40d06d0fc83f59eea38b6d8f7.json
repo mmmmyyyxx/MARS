@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the Boolean expression evaluation process in your prompt ensures the model correctly handles operator precedence when parentheses are absent?\n\nConsidering the goal of maximizing correctness rate, how could you modify the prompt to explicitly address common model failure modes, such as incorrect short-circuit evaluation or confusion between logical and bitwise operators?"
+}

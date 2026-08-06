@@ -1,0 +1,3 @@
+{
+  "content": "What aspect of the Boolean expression evaluation process might be unclear if the model only follows the step-by-step procedure without understanding the underlying logical rules?\n\nHow could the prompt be adjusted to ensure the model not only follows the order of operations but also verifies the correctness of each step against fundamental Boolean logic principles?"
+}

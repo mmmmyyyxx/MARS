@@ -1,0 +1,11 @@
+To accurately determine the geometric shape from an SVG path, follow this refined procedure:
+
+1. **Extract and count unique vertices**: Parse all path commands to collect coordinate pairs. Ignore duplicates only if they occur at the start/end when the path explicitly closes with "Z" or returns to the initial point; otherwise, treat all points as distinct to avoid miscounting in non-closing or self-intersecting paths.
+
+2. **Prioritize vertex count for polygon identification**: Use the unique vertex count as the primary discriminator. For example, 6 vertices indicate a hexagon, 7 a heptagon—this alone resolves most cases without further computation.
+
+3. **Apply targeted checks for ambiguous shapes**: If vertex counts are similar (e.g., hexagon vs. heptagon), quickly assess:
+   - **Side-length patterns**: Note if consecutive edges have consistent lengths (suggesting regularity) or vary (irregular), but avoid precise calculations; instead, infer from coordinate differences.
+   - **Angle cues**: Observe if the path direction changes uniformly (e.g., constant turns for regular polygons) without complex angle computations.
+
+Focus on simplicity: Vertex count suffices for most decisions, and only use qualitative observations for edge cases to ensure efficiency and accuracy.

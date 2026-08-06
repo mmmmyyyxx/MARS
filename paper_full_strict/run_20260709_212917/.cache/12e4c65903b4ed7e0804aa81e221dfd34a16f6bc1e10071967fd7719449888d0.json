@@ -1,0 +1,3 @@
+{
+  "content": "Given that your current prompt focuses heavily on kite identification through geometric properties, what specific elements from the provided SVG path example could you explicitly incorporate to demonstrate the step-by-step reasoning process for shape classification?\n\nConsidering your goal to maximize correctness rates, how might you restructure the prompt to first guide the model through general shape identification—such as counting vertices and checking closure—before narrowing down to specific quadrilateral properties like those for a kite?"
+}

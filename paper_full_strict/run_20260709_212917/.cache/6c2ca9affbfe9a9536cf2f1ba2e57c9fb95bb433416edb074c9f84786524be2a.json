@@ -1,0 +1,3 @@
+{
+  "content": "1. Considering the complexity of your current prompt, how might simplifying the decision logic—especially around curve handling and closure detection—reduce potential misclassifications when tested on ambiguous SVG paths?\n\n2. What specific metrics or test cases would you prioritize to evaluate whether your prompt's \"Critical Optimization\" step effectively distinguishes kites and sectors from polygons before vertex counting?"
+}

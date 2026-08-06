@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of your prompt might lead the model to overlook implicit daily constraints, such as fatigue or personal routines, when identifying usable free time?\n\nHow could you refine your prompt to encourage the model to not only identify free time but also prioritize the most suitable slots based on contextual factors like energy levels or location proximity?"
+}

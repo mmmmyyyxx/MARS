@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in your current prompt ensure that the model considers implicit daily constraints, such as travel time, without relying on external information?\n\nHow might you refine the structure of your prompt to guide the model in systematically validating each identified free time slot against both explicit event boundaries and implicit contextual factors?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "True\n\nThe expression simplifies because `not False` is `True`, and `False and ...` short-circuits to `False`, but the `or True` part ensures the overall result is `True`."
+}

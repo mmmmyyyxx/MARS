@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might lead the model to overlook the importance of operator precedence when evaluating nested Boolean expressions?\n\nHow could the prompt be refined to encourage the model to identify opportunities for simplification before fully evaluating each sub-expression?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be refined to more explicitly define what constitutes an \"explicit semantic cue\" versus relying on implicit world knowledge, especially in cases where semantic plausibility might be inferred rather than directly stated in the sentence?\n\n2. Considering the goal of maximizing correctness, what specific adjustments could be made to the output formatting instructions to ensure the model consistently follows the decision hierarchy and clearly distinguishes between syntactic and semantic resolutions in its justifications?"
+}

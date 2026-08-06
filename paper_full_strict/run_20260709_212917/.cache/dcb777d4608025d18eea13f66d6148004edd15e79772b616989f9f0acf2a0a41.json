@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you test the current prompt with sample Boolean expressions to verify that it consistently produces correct truth values, and what specific examples would you choose to challenge potential weaknesses in the prompt's instructions?\n\n2. Considering the goal of maximizing correctness rates, what modifications could you make to the prompt to reduce ambiguity and ensure the model always follows the intended order of operations without relying on external knowledge?"
+}

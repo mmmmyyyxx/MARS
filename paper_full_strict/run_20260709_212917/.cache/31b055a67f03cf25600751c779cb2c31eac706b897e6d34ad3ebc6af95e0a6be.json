@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be improved to ensure that the model strictly avoids implicit assumptions, given that the justification in the example \"John gave his book to Mary\" might inadvertently encourage world knowledge (e.g., assuming books are typically owned by the subject)?\n\n2. Considering the goal of maximizing correctness, what specific refinements to the output format or step-by-step constraints would minimize ambiguity in the model's reasoning process without introducing external inferences?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the model strictly avoids using implicit world knowledge when resolving ambiguous pronouns, and what specific wording in the prompt reinforces this constraint?\n\n2. Considering the goal of maximizing correctness rates, what modifications could be made to the prompt's structure or examples to better guide the model toward consistent application of syntactic and semantic cues without introducing ambiguity from external knowledge?"
+}

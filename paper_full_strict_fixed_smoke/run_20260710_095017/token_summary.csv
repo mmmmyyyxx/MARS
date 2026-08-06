@@ -1,0 +1,2 @@
+method_id,model,api_call_records,prompt_tokens,completion_tokens,total_tokens
+cot_fs_fixed,deepseek-chat,125,0,0,0

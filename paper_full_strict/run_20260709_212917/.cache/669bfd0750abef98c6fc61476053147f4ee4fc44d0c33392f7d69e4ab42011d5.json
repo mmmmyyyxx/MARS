@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the model correctly handles cases where semantic and pragmatic cues are necessary but might conflict with grammatical or syntactic rules, such as in sentences involving collective nouns or idiomatic expressions?\n\n2. What specific elements in your prompt could be optimized to reduce the risk of the model relying on speculative or culture-specific inferences during semantic analysis, and how might you refine those elements to improve consistency across diverse contexts?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the provided examples and reasoning steps might help the model generalize to new sentences, and which might limit its accuracy?\n\nConsidering the current prompt structure, how could the instructions be refined to better guide the model in distinguishing between ambiguous and resolvable cases without over-relying on subjective logical consistency?"
+}

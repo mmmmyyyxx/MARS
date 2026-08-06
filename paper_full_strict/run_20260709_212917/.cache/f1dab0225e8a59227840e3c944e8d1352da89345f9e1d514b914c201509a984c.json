@@ -1,0 +1,3 @@
+{
+  "content": "1. How can the current prompt be modified to more explicitly restrict the model from using implicit world knowledge or plausible inferences when resolving pronoun antecedents, especially in cases where syntactic or semantic cues are minimal?\n\n2. Considering the goal of maximizing correctness rate, what specific adjustments to the prompt's structure or examples would help the model better distinguish between cases that are truly ambiguous versus those resolvable through explicit linguistic cues alone?"
+}

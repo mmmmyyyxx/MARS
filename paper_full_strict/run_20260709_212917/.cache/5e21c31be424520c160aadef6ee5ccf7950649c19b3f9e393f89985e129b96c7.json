@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might lead the model to overlook implicit constraints, such as fatigue or unstated dependencies between events, and how could the prompt be refined to encourage the model to consider these factors?\n\nHow can the prompt be structured to prompt the model to self-assess its reasoning for potential biases or overlooked contextual cues, thereby improving correctness without relying on external validation?"
+}

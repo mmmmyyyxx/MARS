@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to overlook overlapping or simultaneous events when identifying free time?\n\nHow could you refine the prompt to encourage the model to consider both explicit time gaps and implicit scheduling constraints?"
+}

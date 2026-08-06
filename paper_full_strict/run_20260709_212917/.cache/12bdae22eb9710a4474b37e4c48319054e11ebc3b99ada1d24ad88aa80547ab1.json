@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure accurate identification of shapes when SVG paths contain arc commands or curves, which might not fit neatly into vertex counting alone?\n\n2. Considering the goal of maximizing correctness, what specific elements in your prompt could be optimized to reduce ambiguity when distinguishing between similar polygons like hexagons and heptagons?"
+}

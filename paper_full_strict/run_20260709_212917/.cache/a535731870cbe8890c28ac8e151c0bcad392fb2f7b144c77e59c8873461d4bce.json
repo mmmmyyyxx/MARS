@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the prompt explicitly guides the model to handle cases where events might be described with varying time formats or durations, without relying on implicit conversions or assumptions?\n\n2. Considering the current step of reconstructing the daily timeline, what specific wording could be added to the prompt to prevent the model from misinterpreting events that end at midnight or span across days, while maintaining strict chronological ordering?"
+}

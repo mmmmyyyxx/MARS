@@ -1,0 +1,3 @@
+{
+  "content": "What specific elements in the student's current prompt could be refined to more directly guide the language model through a step-by-step parsing of SVG path commands, rather than relying on visual pattern recognition?\n\nConsidering the goal of maximizing correctness, how might you restructure the prompt to explicitly prioritize command sequence analysis and vertex counting before introducing efficiency optimizations or visual interpretation?"
+}

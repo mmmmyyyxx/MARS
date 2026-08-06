@@ -1,0 +1,3 @@
+{
+  "content": "First question: How can the prompt be refined to more explicitly guide the parsing of nested parentheses while maintaining clarity and avoiding redundancy?\n\nSecond question: What specific wording could be added to the prompt to encourage the model to verify each intermediate result against a truth table or logical equivalence, without making the instructions overly complex?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "1. How does the current prompt ensure that the large language model avoids relying on probabilistic reasoning or world knowledge when resolving ambiguous pronouns, and what specific wording could be added to strengthen this constraint?\n\n2. Considering the task's goal of maximizing correctness, how might simplifying the decision process—for instance, by merging syntactic and semantic analysis into a single step—improve the model's consistency and accuracy in identifying antecedents or declaring ambiguity?"
+}

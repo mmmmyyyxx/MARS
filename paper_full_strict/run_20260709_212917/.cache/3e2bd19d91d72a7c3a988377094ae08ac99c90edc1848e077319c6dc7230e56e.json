@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the current prompt might lead the model to rely on implicit assumptions rather than explicit linguistic cues, and how could the instructions be refined to prevent this?\n\nConsidering the goal of maximizing correctness rate, how might the inclusion of multiple diverse examples or counterexamples improve the model's ability to generalize across different types of ambiguous sentences?"
+}

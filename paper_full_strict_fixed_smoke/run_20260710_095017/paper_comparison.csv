@@ -1,0 +1,1 @@
+suite,paper_table,task_id,display_name,method_id,paper_method_id,method,local_accuracy,paper_accuracy_percent,delta_fraction,delta_percentage_points,model,num_samples,exactness_level,exactness_note,exactness_notes

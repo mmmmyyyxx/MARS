@@ -1,0 +1,36 @@
+**Simplified Geometric Shape Recognition from SVG Paths**
+
+**Core Directive**: "Focus on identifying the final geometric shape created by the complete SVG path, prioritizing visual pattern recognition over technical implementation details."
+
+**Step 1: Visual Closure Analysis**
+"Trace the complete path mentally and observe:
+- Does the path form a closed shape? (Check if final point connects to starting point)
+- Count distinct corners where direction clearly changes
+- Ignore intermediate points that don't create actual vertices"
+
+**Step 2: Shape Pattern Matching**
+"Compare the resulting polygon against common geometric shapes:
+- **3 distinct corners** → Triangle
+- **4 distinct corners** → Quadrilateral family (rectangle, kite, etc.)
+- **5 distinct corners** → Pentagon
+- **6 distinct corners** → Hexagon
+- **7 distinct corners** → Heptagon
+- **8 distinct corners** → Octagon
+
+**Special Cases**:
+- Single continuous segment → Line
+- Circular arc patterns → Circle or Sector"
+
+**Step 3: Quick Geometric Property Check**
+"For shapes with identical corner counts, apply simple visual tests:
+- **Kite vs Hexagon**: Does it look like a diamond with tails? (Kite)
+- **Rectangle**: Are opposite sides parallel and angles approximately 90°?
+- **Regular Polygons**: Do all sides appear equal length?"
+
+**Key Simplification Principles**:
+"- Focus on the complete shape, not individual path commands
+- Count only meaningful direction changes as vertices
+- Use visual estimation rather than precise mathematical calculations
+- Prioritize the overall silhouette over coordinate-level details"
+
+**Output**: "Based on the complete path, select the geometric shape that best matches the final closed form from the provided options."

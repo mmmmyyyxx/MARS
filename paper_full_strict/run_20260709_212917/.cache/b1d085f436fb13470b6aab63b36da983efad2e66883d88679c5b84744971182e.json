@@ -1,0 +1,3 @@
+{
+  "content": "Given your detailed geometric analysis framework, what specific preprocessing step would you prioritize to ensure the vertex count accurately reflects the intended geometric shape before proceeding to classification?\n\nConsidering the current structured approach, how might you optimize the prompt to explicitly guide the language model in distinguishing between similar quadrilaterals like kites and rectangles using both angle and side-length constraints?"
+}

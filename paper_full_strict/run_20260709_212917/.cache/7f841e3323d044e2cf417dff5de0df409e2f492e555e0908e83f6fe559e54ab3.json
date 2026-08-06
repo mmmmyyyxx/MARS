@@ -1,0 +1,3 @@
+{
+  "content": "Given your current step of analyzing coordinate patterns and geometric properties, what specific aspect of the SVG path commands would you prioritize to efficiently determine the number of distinct vertices in the shape?\n\nConsidering the goal of optimizing the prompt for the highest correctness rate, how would you structure the instructions to ensure the language model systematically checks for closure and vertex count before proceeding to more detailed geometric property analysis?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Given the example SVG path element and the multiple-choice options, what specific visual pattern or sequence of direction changes would you look for to distinguish between a kite and other quadrilaterals like a rectangle?\n\nConsidering the current step focuses on optimizing the prompt for the highest correctness rate, how could you refine the elimination-based decision framework to more efficiently handle edge cases or ambiguous path sequences?"
+}

@@ -1,0 +1,18 @@
+Answer BIG-Bench Hard questions for Sports Understanding.
+Use the examples as guidance for reasoning style and answer format.
+End with Final answer: yes or no.
+
+Example question:
+Is the following sentence plausible? "Deshaun Watson was called for the goal tend in the Eastern Conference Finals."
+Example answer:
+Final answer: no
+
+Example question:
+Is the following sentence plausible? "Pepe converted the first down."
+Example answer:
+Final answer: no
+
+Example question:
+Is the following sentence plausible? "Robert Lewandowski threw a touchdown."
+Example answer:
+Final answer: no

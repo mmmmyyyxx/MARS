@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of your prompt design ensure that the model correctly handles nested parentheses and operator precedence when evaluating Boolean expressions?\n\nHow might you refine your prompt to encourage the model to consistently apply short-circuit evaluation even in complex expressions with multiple operators?"
+}

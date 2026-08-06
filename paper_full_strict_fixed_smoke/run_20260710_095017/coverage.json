@@ -1,0 +1,16 @@
+{
+  "expected_pairs": 1,
+  "completed_pairs": 1,
+  "coverage_fraction": 1.0,
+  "completed": [
+    {
+      "task_id": "boolean_expressions",
+      "method_id": "cot_fs_fixed"
+    }
+  ],
+  "partial": [],
+  "failed": [],
+  "skipped_complete": [],
+  "skipped": [],
+  "missing_pairs": []
+}

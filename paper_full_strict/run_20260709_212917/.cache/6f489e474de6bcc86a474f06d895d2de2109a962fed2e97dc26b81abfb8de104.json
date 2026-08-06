@@ -1,0 +1,3 @@
+{
+  "content": "What specific aspect of the current prompt might lead the model to rely on implicit world knowledge rather than explicit syntactic or semantic cues?\n\nHow could you restructure the prompt to more clearly prioritize syntactic constraints before considering semantic cues, ensuring the model defaults to ambiguity when cues are not decisive?"
+}

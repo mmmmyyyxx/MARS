@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might influence how the model handles parentheses and operator precedence in Boolean expressions?\n\nHow could the prompt be refined to encourage the model to verify its own reasoning for logical consistency before giving a final answer?"
+}

@@ -1,0 +1,3 @@
+{
+  "content": "Given the student's current step of refining the prompt for shape identification, what potential ambiguities in the vertex extraction process could lead to misclassification when handling curved segments?  \n\nConsidering the goal of maximizing correctness rate, how might simplifying the classification logic to prioritize direct geometric properties over multi-step conditional checks improve the model's accuracy?"
+}

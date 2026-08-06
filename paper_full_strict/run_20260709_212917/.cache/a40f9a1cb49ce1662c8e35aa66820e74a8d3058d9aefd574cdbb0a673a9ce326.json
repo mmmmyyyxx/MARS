@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your current prompt ensure that the language model accurately interprets and executes each SVG path command in sequence to reconstruct the exact geometric shape, rather than relying solely on inferred symmetry or vertex patterns?\n\n2. Considering the need for both accuracy and efficiency, what specific steps could you incorporate into your prompt to prioritize command-by-command tracing and coordinate mapping before applying symmetry-based classification, while still maintaining streamlined processing?"
+}

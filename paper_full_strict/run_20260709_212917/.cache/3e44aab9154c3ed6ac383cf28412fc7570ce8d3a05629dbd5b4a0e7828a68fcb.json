@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure the prompt explicitly guides the model to distinguish between \"free time\" and \"usable free time\" when incorporating factors like fatigue or travel, without making the instructions overly complex?\n\n2. Considering the current emphasis on holistic usability, what specific wording could prioritize energy compatibility and location proximity more directly in the ranking step, while keeping the prompt concise?"
+}

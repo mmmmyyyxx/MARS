@@ -1,0 +1,19 @@
+task_id,display_name,method,accuracy,num_samples,num_correct,num_failed,api_errors,parse_errors,runtime_seconds,tokens_prompt,tokens_completion,tokens_total,cost_estimate
+boolean_expressions,Boolean Expressions,Origin,0.896,125,112,13,0,0,76.30530261993408,14029,197,14226,0.0
+boolean_expressions,Boolean Expressions,CoT(FS),0.968,125,121,4,0,0,65.12077021598816,16625,500,17125,0.0
+boolean_expressions,Boolean Expressions,MARS-official,0.92,125,115,10,0,0,943.7540373802185,155319,13733,169052,0.0
+disambiguation_qa,Disambiguation QA,Origin,0.536,125,67,58,0,0,69.09434962272644,47021,498,47519,0.0
+disambiguation_qa,Disambiguation QA,CoT(FS),0.728,125,91,34,0,0,72.91352772712708,53405,250,53655,0.0
+disambiguation_qa,Disambiguation QA,MARS-official,0.704,125,88,37,0,0,1460.5021533966064,535942,30638,566580,0.0
+formal_fallacies,Formal Fallacies,Origin,0.776,125,97,28,0,0,60.36120939254761,28474,193,28667,0.0
+formal_fallacies,Formal Fallacies,CoT(FS),0.8,125,100,25,0,0,66.50074744224548,76075,500,76575,0.0
+formal_fallacies,Formal Fallacies,MARS-official,0.76,125,95,30,0,0,1930.8431792259216,492562,35437,527999,0.0
+geometric_shapes,Geometric Shapes,Origin,0.384,125,48,77,0,0,66.8066737651825,52812,482,53294,0.0
+geometric_shapes,Geometric Shapes,CoT(FS),0.496,125,62,63,0,0,54.73243451118469,80537,250,80787,0.0
+geometric_shapes,Geometric Shapes,MARS-official,0.504,125,63,62,0,0,1816.27796459198,461583,34313,495896,0.0
+ruin_names,Ruin Names,Origin,0.912,125,114,11,0,0,98.45928907394409,33786,405,34191,0.0
+ruin_names,Ruin Names,CoT(FS),0.896,125,112,13,0,0,241.81032514572144,43339,250,43589,0.0
+ruin_names,Ruin Names,MARS-official,0.936,125,117,8,0,0,380.94787788391113,117727,3528,121255,0.0
+sports_understanding,Sports Understanding,Origin,0.768,125,96,29,0,0,132.39490699768066,15198,323,15521,0.0
+sports_understanding,Sports Understanding,CoT(FS),0.84,125,105,20,0,0,93.41102147102356,20270,500,20770,0.0
+sports_understanding,Sports Understanding,MARS-official,0.824,125,103,22,0,0,2050.3627347946167,368576,24968,393544,0.0

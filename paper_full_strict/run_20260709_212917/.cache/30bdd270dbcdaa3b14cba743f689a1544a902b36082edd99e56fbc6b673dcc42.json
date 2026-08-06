@@ -1,0 +1,3 @@
+{
+  "content": "Evaluate the truth value of the given Boolean expression by applying logical operators in the correct order: first resolve parentheses and `not` operations, then `and`, and finally `or`. Ensure each step is clearly reasoned, and conclude with the final truth value. This approach balances structured evaluation with adaptability to varied expression forms."
+}

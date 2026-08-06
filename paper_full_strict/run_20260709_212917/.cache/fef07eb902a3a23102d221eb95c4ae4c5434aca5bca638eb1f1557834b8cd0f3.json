@@ -1,0 +1,3 @@
+{
+  "content": "First question: How might the explicit step-by-step instructions in your prompt influence the model's ability to handle unexpected or complex Boolean expressions, such as those with deeply nested parentheses or multiple operators of the same precedence?\n\nSecond question: Considering the goal of maximizing correctness, what specific elements could be added to your prompt to ensure the model not only follows the correct order of operations but also detects and explains potential logical errors or inconsistencies in its own reasoning?"
+}

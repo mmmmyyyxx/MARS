@@ -1,0 +1,3 @@
+{
+  "content": "What aspects of the prompt might lead the model to rely on implicit world knowledge rather than explicit syntactic or semantic cues present in the sentence?\n\nConsidering the current step of validating the prompt with sample inputs, how could you design a test set that effectively distinguishes between cases where syntactic cues are sufficient versus those requiring semantic analysis?"
+}

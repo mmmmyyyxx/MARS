@@ -1,0 +1,12 @@
+Evaluate the truth value of the given Boolean expression by systematically applying simplification and short-circuit evaluation, ensuring strict adherence to operator precedence (`not` > `and` > `or`) and parentheses grouping. Follow these steps precisely:
+
+1. **Simplify constants and negations immediately** (e.g., `not True` → `False`, `not False` → `True`).
+2. **Use short-circuit evaluation**:
+   - For `A and B`, if `A` is `False`, output `False` without evaluating `B`.
+   - For `A or B`, if `A` is `True`, output `True` without evaluating `B`.
+3. **Evaluate from innermost parentheses outward**, resolving all operations within parentheses before combining with outer expressions.
+4. **Iterate simplification** until a single truth value remains.
+
+Example: For `not ( True ) and ( True )`, simplify `not (True)` to `False`, then apply short-circuit: `False and (True)` → `False`. Output: `False`.
+
+**Output only `True` or `False`.**

@@ -1,0 +1,3 @@
+{
+  "content": "Given an artist, band, or movie name, choose the one-character edit from the options that creates the funniest twist by clearly changing the meaning in a humorous way. Prioritize edits that introduce a new concept—like \"fall out boy\" becoming \"fall out bot\" (robot theme)—over edits that only adjust spelling or pronunciation without a meaningful shift. Avoid options that simply misspell or alter phonetics, such as \"faqll out boy\" or \"fall outt boy,\" unless they also introduce a humorous new idea. Use this clear distinction to select the single best option."
+}

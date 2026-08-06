@@ -1,0 +1,11 @@
+{
+  "agent": "Planner",
+  "planner_enabled": true,
+  "steps": [
+    "Analyze the task requirements to understand the goal of generating a prompt that maximizes correctness for pronoun disambiguation in a large language model.",
+    "Identify key components of an effective prompt, including clear instructions, examples, and explicit output formatting.",
+    "Draft a prompt that includes the task description, example sentences with correct answers, and specifies the required output format (e.g., selecting from given options).",
+    "Refine the prompt by ensuring it minimizes ambiguity, provides sufficient context, and aligns with the model's expected input structure.",
+    "Validate the prompt by testing it with sample inputs to confirm it yields high correctness rates before final deployment."
+  ]
+}

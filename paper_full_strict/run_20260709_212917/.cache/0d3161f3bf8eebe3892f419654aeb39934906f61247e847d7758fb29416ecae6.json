@@ -1,0 +1,3 @@
+{
+  "content": "1. How does your procedure ensure accurate identification of shapes like kites or sectors, which may have the same number of vertices as polygons but require distinguishing features beyond vertex count?\n\n2. Considering the goal of maximizing correctness, how could your prompt explicitly guide the model to first check for path closure and then systematically eliminate shape options based on both vertex count and qualitative geometric relationships?"
+}

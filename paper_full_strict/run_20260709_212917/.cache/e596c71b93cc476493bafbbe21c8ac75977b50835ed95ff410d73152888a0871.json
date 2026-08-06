@@ -1,0 +1,3 @@
+{
+  "content": "1. How might the emphasis on short-circuit evaluation and early resolution of constants in your prompt influence the model's ability to handle complex nested Boolean expressions, and what potential limitations could arise if the model does not fully grasp these concepts?\n\n2. In what ways could you refine your prompt to encourage the model to not only apply Boolean logic rules correctly but also to recognize patterns or common pitfalls in expression evaluation, thereby improving both accuracy and generalization?"
+}

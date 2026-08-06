@@ -1,0 +1,3 @@
+{
+  "content": "1. How can you ensure that the symbolic abstraction process in your prompt design effectively eliminates real-world plausibility biases while preserving the logical structure necessary for evaluating deductive validity, especially when dealing with negation-rich syllogisms?\n\n2. Considering the current step of structuring the prompt to include context, premises, and a clear validity question, what specific elements would you optimize to maximize the model's focus on logical form rather than semantic content?"
+}

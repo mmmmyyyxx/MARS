@@ -1,0 +1,3 @@
+{
+  "content": "First question: In the student's current prompt, how might the inclusion of multiple examples with varying outcomes help or hinder the model's ability to generalize to new, unseen sentences?\n\nSecond question: Considering the goal of maximizing correctness, what specific elements could be added to the prompt to more explicitly guide the model toward using syntactic and semantic cues before defaulting to \"ambiguous\"?"
+}

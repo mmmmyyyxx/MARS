@@ -1,0 +1,3 @@
+{
+  "content": "How can you refine the prompt to explicitly prioritize checking for closure and vertex count before considering more complex properties like symmetry or angles, ensuring the model follows a consistent decision hierarchy?\n\nWhat specific constraints or guidelines could you add to the prompt to prevent the model from misclassifying shapes with curves or arcs, especially when the vertex count might be ambiguous?"
+}
